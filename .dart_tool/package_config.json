@@ -56,7 +56,7 @@
       "languageVersion": "2.9"
     },
     {
-      "name": "flutter_arteck",
+      "name": "flutter_artech",
       "rootUri": "../../flutter_artech",
       "packageUri": "lib/",
       "languageVersion": "2.7"
@@ -146,7 +146,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2020-10-20T11:38:00.343897Z",
+  "generated": "2020-10-20T12:15:41.285775Z",
   "generator": "pub",
   "generatorVersion": "2.9.2"
 }
