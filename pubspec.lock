@@ -65,7 +65,7 @@ packages:
   flutter_arteck:
     dependency: "direct main"
     description:
-      path: "../../flutter_artech"
+      path: "../flutter_artech"
       relative: true
     source: path
     version: "0.0.1"
