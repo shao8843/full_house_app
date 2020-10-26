@@ -6,7 +6,7 @@ import 'package:logging/logging.dart';
 
 class FullHouseLocalizations {
 
-  static final Logger log = Logger("AppLocalizations");
+  static final Logger log = Logger("FullHouseLocalizations");
 
   static Future<FullHouseLocalizations> load(Locale locale) {
     // Get name

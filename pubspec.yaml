@@ -27,19 +27,29 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^0.1.3
+  cupertino_icons: ^1.0.0
   logging: ^0.11.4
   flutter_artech:
     path: ../flutter_artech
+  FastBraiin:
+    path: ../FB/fastbraiin_app
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   intl_translation: ^0.17.10
 
-# For information on the generic Dart part of this file, see the
-# following page: https://dart.dev/tools/pub/pubspec
 
+
+# For information on the generic Dart part of this file, see the
+dependency_overrides:
+  analyzer: '0.39.14'
+  petitparser: ^3.0.0
+  gql_http_link:
+    git:
+      url: https://github.com/gql-dart/gql.git
+      ref: master
+      path: links/gql_http_link
 # The following section is specific to Flutter.
 flutter:
 

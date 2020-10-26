@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/artech_app.dart';
 import 'package:full_house_app/home_page.dart';
+import 'package:logging/logging.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
 
+  Logger.root.level = Level('ALL', 0);
+  Logger.root.onRecord.listen((LogRecord rec) {
+    print(
+        '[${rec.level.name}][${rec.time}][${rec.loggerName}]: ${rec.message}');
+  });
+
   runApp(ArtechApp(child: MaterialApp(
+      supportedLocales: [
+        const Locale('en'), // English
+        const Locale('zh'),
+      ],
       title: 'Full House',
       theme: ThemeData(
         // This is the theme of your application.
@@ -23,6 +33,7 @@ void main() async {
         // the app on. For desktop platforms, the controls will be smaller and
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
+
       ),
       home: HomePage()
   ),));
