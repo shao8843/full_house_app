@@ -1,0 +1,3367 @@
+{
+  "@@last_modified": "2019-02-25T23:14:44.837786",
+  "about": "关于",
+  "@about": {
+    "description": "About application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "登录",
+  "@login": {
+    "description": "登录火箭宝宝",
+    "type": "text",
+    "placeholders": {}
+  },
+  "title": "火箭宝宝",
+    "@title": {
+      "description": "火箭宝宝-儿童注意",
+      "type": "text",
+      "placeholders": {}
+  },
+
+ "home": "首页",
+   "@home": {
+     "description": "首页",
+     "type": "text",
+     "placeholders": {}
+   },
+   "exercise": "训练",
+   "@training": {
+     "description": "训练",
+     "type": "text",
+     "placeholders": {}
+   },
+   "coach": "RoChat",
+   "@coach": {
+     "description": "教练",
+     "type": "text",
+     "placeholders": {}
+   },
+   "me": "我的",
+   "@me": {
+     "description": "我的",
+     "type": "text",
+     "placeholders": {}
+   },
+   "logout": "登出",
+   "@logout": {
+     "description": "Logout applications",
+     "type": "text",
+     "placeholders": {}
+   },
+   "settings": "设置",
+   "@settings": {
+     "description": "Applications settings",
+     "type": "text",
+     "placeholders": {}
+   },
+   "startAssessment": "开始测试",
+   "@startAssessment": {
+     "description": "Start assessment",
+     "type": "text",
+     "placeholders": {}
+   },
+  "continueAssessment": "继续未完成的测试",
+  "@continueAssessment": {
+    "description": "Continue Unfinished Assessment",
+    "type": "text",
+    "placeholders": {}
+  },
+   "startAnswer": "开始回答",
+   "@startAnswer": {
+     "description": "Start to answer",
+     "type": "text",
+     "placeholders": {}
+   },
+   "finished": "已完成",
+   "@finished": {
+     "description": "Finished questions",
+     "type": "text",
+     "placeholders": {}
+   },
+   "submit": "提交",
+   "@submit": {
+     "description": "Submit to system",
+     "type": "text",
+     "placeholders": {}
+   },
+   "email": "邮箱",
+   "@email": {
+     "description": "Email address",
+     "type": "text",
+     "placeholders": {}
+   },
+   "password": "密码",
+   "@password": {
+     "description": "Password",
+     "type": "text",
+     "placeholders": {}
+   },
+   "forgotPassword": "忘记密码",
+     "@forgotPassword": {
+       "description": "Forgot Password",
+       "type": "text",
+       "placeholders": {}
+     },
+   "registerNow": "马上注册?",
+   "@registerNow": {
+     "description": "Register to system",
+     "type": "text",
+     "placeholders": {}
+   },
+    "kidsInfo": "选择孩子",
+    "@kidsInfo": {
+      "description": "Kids information",
+      "type": "text",
+      "placeholders": {}
+    },
+  "add": "添加",
+  "@add": {
+    "description": "Add element",
+    "type": "text",
+    "placeholders": {}
+  },
+  "remove": "删除",
+  "@remove": {
+    "description": "Remove the element",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kids": "孩子们",
+  "@kids": {
+    "description": "Kids application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "coacher": "心理师",
+  "@coacher": {
+    "description": "Coach",
+    "type": "text",
+    "placeholders": {}
+  },
+  "teacher": "学校老师",
+  "@teacher": {
+    "description": "Teacher",
+    "type": "text",
+    "placeholders": {}
+  },
+  "parent": "家长",
+  "@parent": {
+    "description": "Parent",
+    "type": "text",
+    "placeholders": {}
+  },
+   "emailPhone": "邮箱/电话",
+   "@emailPhone": {
+     "description": "Email or Phone",
+     "type": "text",
+     "placeholders": {}
+   },
+   "codeLogin": "验证码",
+   "@codeLogin": {
+     "description": "Code",
+     "type": "text",
+     "placeholders": {}
+   },
+   "send": "发送验证码",
+       "@send": {
+         "description": "Send",
+         "type": "text",
+         "placeholders": {}
+    },
+    "mobile": "手机",
+     "@mobile": {
+       "description": "Mobile",
+       "type": "text",
+       "placeholders": {}
+     },
+   "passwordConfirm": "确认密码",
+   "@passwordConfirm": {
+     "description": "Confirm Password",
+     "type": "text",
+     "placeholders": {}
+   },
+   "register": "新用户注册",
+   "@register": {
+     "description": "Register",
+     "type": "text",
+     "placeholders": {}
+   },
+
+  "requestLoginCode": "获取登录码",
+  "@requestLoginCode": {
+    "description": "Request Code",
+    "type": "text",
+    "placeholders": {}
+  },
+
+  "freeTestTitle": "开始免费测试!",
+  "@freeTestTitle": {
+    "description": "Free Test Now",
+    "type": "text",
+    "placeholders": {}
+  },
+  "freeTestSubTitle": "个性化的培训计划",
+  "@freeTestSubTitle": {
+    "description": "Personalize your trainig plan",
+    "type": "text",
+    "placeholders": {}
+  },
+   "kidGrowth": "成长轨迹",
+   "@kidGrowth": {
+     "description": "Kid growth",
+     "type": "text",
+     "placeholders": {}
+   },
+ "addKid": "添加儿童",
+   "@addKid": {
+     "description": "添加儿童",
+     "type": "text",
+     "placeholders": {}
+   },
+
+  "dateOfBirth": "生日",
+    "@dateOfBirth": {
+      "description": "DateOfBirth",
+      "type": "text",
+      "placeholders": {}
+    },
+   "childColor": "卡片主题色",
+     "@childColor": {
+       "description": "ChildColor",
+       "type": "text",
+       "placeholders": {}
+     },
+   "gender": "性别",
+   "@gender": {
+     "description": "Gender",
+     "type": "text",
+     "placeholders": {}
+   },
+   "relationship":  "与儿童关系",
+     "@relationship": {
+       "description": "Relationship",
+       "type": "text",
+       "placeholders": {}
+     },
+
+   "boy": "男孩",
+   "@boy": {
+     "description": "Boy",
+     "type": "text",
+     "placeholders": {}
+   },
+   "girl": "女孩",
+   "@girl": {
+     "description": "Girl",
+     "type": "text",
+     "placeholders": {}
+   },
+   "other": "其他",
+   "@other": {
+     "description": "Other",
+     "type": "text",
+     "placeholders": {}
+   },
+   "son": "儿子",
+   "@son": {
+     "description": "Son",
+     "type": "text",
+     "placeholders": {}
+   },
+   "daughter": "女儿",
+   "@daughter": {
+     "description": "Daughter",
+     "type": "text",
+     "placeholders": {}
+   },
+   "student": "学生",
+   "@student": {
+     "description": "Student",
+     "type": "text",
+     "placeholders": {}
+   },
+   "youngerSister": "妹妹",
+   "@youngerSister": {
+     "description": "Younger Sister",
+     "type": "text",
+     "placeholders": {}
+   },
+   "youngerBrother": "弟弟",
+   "@youngerBrother": {
+     "description": "Younger Brother",
+     "type": "text",
+     "placeholders": {}
+   },
+   "termsOfService": "服务条款",
+     "@termsOfService": {
+       "description": "Terms of Service",
+       "type": "text",
+       "placeholders": {}
+   },
+   "father": "父亲",
+     "@father": {
+       "description": "Father",
+       "type": "text",
+       "placeholders": {}
+     },
+     "mother": "母亲",
+     "@mother": {
+       "description": "Mother",
+       "type": "text",
+       "placeholders": {}
+     },
+     "cannotBeEmpty": "不能为空",
+     "@cannotBeEmpty": {
+       "description": "Cannot be empty",
+       "type": "text",
+       "placeholders": {}
+     },
+     "invalidInput": "请输入正确的手机号",
+     "@invalidInput": {
+       "description": "Invalid input",
+       "type": "text",
+       "placeholders": {}
+     },
+     "region": "地区",
+       "@region": {
+         "description": "Region",
+         "type": "text",
+         "placeholders": {}
+     },
+   "next": "下一步",
+     "@next": {
+       "description": "Next",
+       "type": "text",
+       "placeholders": {}
+     },
+   "unitedStates": "美国",
+     "@unitedStates": {
+       "description": "United States",
+       "type": "text",
+       "placeholders": {}
+     },
+     "china": "中国",
+     "@china": {
+       "description": "China",
+       "type": "text",
+       "placeholders": {}
+     },
+     "setPassword": "设置密码",
+       "@setPassword": {
+         "description": "SetPassword",
+         "type": "text",
+         "placeholders": {}
+       },
+    "signUp": "注册",
+     "@signUp": {
+       "description": "SignUp",
+       "type": "text",
+       "placeholders": {}
+     },
+     "passwordDoNotMatch": "密码不一致",
+     "@passwordDoNotMatch": {
+       "description": "PasswordDoNotMatch",
+       "type": "text",
+       "placeholders": {}
+     },
+     "passwordInputFormat": "请输入6~20位数字或字母",
+       "@passwordInputFormat": {
+         "description": "PasswordInputFormat",
+         "type": "text",
+         "placeholders": {}
+       },
+ "incorrectVerificationCode": "验证码不正确",
+   "@incorrectVerificationCode": {
+     "description": "IncorrectVerificationCode",
+     "type": "text",
+     "placeholders": {}
+   },
+  "verificationCode": "验证码",
+    "@verificationCode": {
+      "description": "VerificationCode",
+      "type": "text",
+      "placeholders": {}
+    },
+ "name": "名字",
+   "@name": {
+     "description": "Name",
+     "type": "text",
+     "placeholders": {}
+   },
+   "save": "保存",
+       "@save": {
+         "description": "Save",
+         "type": "text",
+         "placeholders": {}
+       },
+ "invalidBirthdayInput": "请输入正确的日期",
+   "@invalidBirthdayInput": {
+     "description": "InvalidBirthdayInput",
+     "type": "text",
+     "placeholders": {}
+   },
+  "grandparent": "（外）祖父母",
+    "@grandparent": {
+      "description": "Grandparent",
+      "type": "text",
+      "placeholders": {}
+    },
+    "legalGuardian": "法定监护人",
+    "@legalGuardian": {
+      "description": "LegalGuardian",
+      "type": "text",
+      "placeholders": {}
+    },
+  "launcher": "首页",
+    "@launcher": {
+      "description": "Launcher",
+      "type": "text",
+      "placeholders": {}
+    },
+    "all": "全部",
+    "@all": {
+      "description": "All",
+      "type": "text",
+      "placeholders": {}
+    },
+   "free": "免费",
+   "@free": {
+     "description": "Free of Charge",
+     "type": "text",
+     "placeholders": {}
+   },
+   "growthDiary": "成长记录",
+     "@growthDiary": {
+       "description": "GrowthDiary",
+       "type": "text",
+       "placeholders": {}
+     },
+   "changePassword": "更改密码",
+     "@changePassword": {
+       "description": "ChangePassword",
+       "type": "text",
+       "placeholders": {}
+     },
+     "logFile": "日志文件",
+     "@logFile": {
+       "description": "LogFile",
+       "type": "text",
+       "placeholders": {}
+     },
+    "clearCache": "清除缓存",
+    "@clearCache": {
+     "description": "清除缓存",
+     "type": "text",
+     "placeholders": {}
+    },
+   "versionUpdate": "版本更新",
+     "@versionUpdate": {
+       "description": "VersionUpdate",
+       "type": "text",
+       "placeholders": {}
+     },
+   "nextPage": "下一页",
+   "@nextPage": {
+     "description": "下一页",
+     "type": "text",
+     "placeholders": {}
+   },
+   "previousPage": "上一页",
+   "@previousPage": {
+     "description": "上一页",
+     "type": "text",
+     "placeholders": {}
+   },
+   "numberOfPage":  "第 # 页",
+   "@numberOfPage": {
+     "description": "Previous Page",
+     "type": "text",
+     "placeholders": {}
+   },
+   "totalPages": "共 # 页",
+   "@totalPages": {
+     "description": "Previous Page",
+     "type": "text",
+     "placeholders": {}
+   },
+   "changeLanguage": "切换语言",
+     "@changeLanguage": {
+       "description": "Change language",
+       "type": "text",
+       "placeholders": {}
+     },
+  "assessmentIsFor": "测试对象",
+    "@assessmentIsFor": {
+      "description": "This assessment is for",
+      "type": "text",
+      "placeholders": {}
+    },
+ "go": "开始",
+   "@go": {
+     "description": "GO",
+     "type": "text",
+     "placeholders": {}
+   },
+
+   "okGo": "同意，继续",
+     "@okGo": {
+       "description": "OkGo",
+       "type": "text",
+       "placeholders": {}
+     },
+  "termOfAssessment": "测前须知",
+    "@termOfAssessment": {
+      "description": "Terms of Assessment",
+      "type": "text",
+      "placeholders": {}
+    },
+    "confirmLogout": "确认登出",
+      "@confirmLogout": {
+        "description": "Confirm logout",
+        "type": "text",
+        "placeholders": {}
+      },
+ "reallyLogout": "确定退出登录吗？",
+   "@reallyLogout": {
+     "description": "Do you really want to log out?",
+     "type": "text",
+     "placeholders": {}
+   },
+    "yes": "确认",
+     "@yes": {
+       "description": "Yes",
+       "type": "text",
+       "placeholders": {}
+     },
+     "close": "关闭",
+     "@close": {
+       "description": "Close",
+       "type": "text",
+       "placeholders": {}
+     },
+  "assessmentReport": "测试报告",
+    "@assessmentReport": {
+      "description": "Assessment report",
+      "type": "text",
+      "placeholders": {}
+    },
+  "viewTheReport": "看报告",
+    "@viewTheReport": {
+      "description": "View the report",
+      "type": "text",
+      "placeholders": {}
+    },
+  "report": "报告",
+    "@report": {
+      "description": "Report",
+      "type": "text",
+      "placeholders": {}
+    },
+    "sendAgain": "再次发送",
+      "@sendAgain": {
+        "description": "Send again",
+        "type": "text",
+        "placeholders": {}
+      },
+    "resetPassword": "重置密码",
+      "@resetPassword": {
+        "description": "Reset password",
+        "type": "text",
+        "placeholders": {}
+      },
+    "phoneNumberMayBeWrong": "电话号码可能错误",
+      "@phoneNumberMayBeWrong": {
+        "description": "Phone number may be wrong",
+        "type": "text",
+        "placeholders": {}
+      },
+      "passwordMayBeWrong": "密码可能错误",
+      "@passwordMayBeWrong": {
+        "description": "Password may be wrong",
+        "type": "text",
+        "placeholders": {}
+      },
+      "hasBeenRegistered": "手机号已经被注册",
+        "@hasBeenRegistered": {
+          "description": "This phone number has been registered",
+          "type": "text",
+          "placeholders": {}
+        },
+        "incorrectCode": "验证码不正确",
+        "@incorrectCode": {
+          "description": "Incorrect verification code",
+          "type": "text",
+          "placeholders": {}
+        },
+  "requiredQuestion": "请回答此问题",
+    "@requiredQuestion": {
+      "description": "Please answer this question",
+      "type": "text",
+      "placeholders": {}
+    },
+ "failedToLoad": "加载失败",
+    "@failedToLoad": {
+      "description": "Failed to load",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tryAgain": "再试一次",
+    "@tryAgain": {
+      "description": "Try Again",
+      "type": "text",
+      "placeholders": {}
+    },
+    "completeQuestion":"请完成所有问题",
+    "@completeQuestion": {
+      "description": "Please answer this question",
+      "type": "text",
+      "placeholders": {}
+    },
+  "errorConnectionToServer": "暂时无网络连接",
+  "@errorConnectionToServer": {
+    "description": "Error Connection To Server",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pullDownToRefresh": "下拉刷新",
+    "@pullDownToRefresh": {
+      "description": "Pull down to refresh",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshWhenRelease": "松开刷新",
+    "@refreshWhenRelease": {
+      "description": "Refresh when release",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshing": "正在刷新",
+    "@refreshing": {
+      "description": "Refreshing",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshComplete": "刷新完成",
+    "@refreshComplete": {
+      "description": "Refresh complete",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshFailed": "刷新失败",
+    "@refreshFailed": {
+      "description": "Refresh failed",
+      "type": "text",
+      "placeholders": {}
+    },
+    "signingUpAgreement": "注册即表示你同意",
+      "@signingUpAgreement": {
+        "description": "By signing up, you agree to the",
+        "type": "text",
+        "placeholders": {}
+      },
+   "isNotRegistered": "号码未注册",
+     "@isNotRegistered": {
+       "description": "The phone number is not registered",
+       "type": "text",
+       "placeholders": {}
+     },
+     "invalidPhoneNumber": "无效号码",
+     "@invalidPhoneNumber": {
+       "description": "Invalid phone number",
+       "type": "text",
+       "placeholders": {}
+     },
+   "codeExpired": "验证码过期",
+     "@codeExpired": {
+       "description": "Code expired",
+       "type": "text",
+       "placeholders": {}
+     },
+   "videoPlayerHadError": "视频播放出错",
+     "@videoPlayerHadError": {
+       "description": "Video player had error",
+       "type": "text",
+       "placeholders": {}
+     },
+  "assessmentRecord": "检测记录",
+    "@assessmentRecord": {
+      "description": "Assessment record",
+      "type": "text",
+      "placeholders": {}
+    },
+   "assessmentlist": "检测列表",
+       "@assessmentlist": {
+         "description": "Assessment list",
+         "type": "text",
+         "placeholders": {}
+       },
+       "assessment": "检测",
+       "@assessment": {
+         "description": "The assessment application",
+         "type": "text",
+         "placeholders": {}
+       },
+   "sendingAnswers": "发送答案",
+     "@sendingAnswers": {
+       "description": "Sending answers",
+       "type": "text",
+       "placeholders": {}
+     },
+     "ok": "确认",
+     "@ok": {
+       "description": "Ok",
+       "type": "text",
+       "placeholders": {}
+     },
+     "getQuestionnaire": "获取问卷",
+     "@getQuestionnaire": {
+       "description": "Get questionnaire",
+       "type": "text",
+       "placeholders": {}
+     },
+      "sendReport": "发送报告",
+       "@sendReport": {
+         "description": "Send Report",
+         "type": "text",
+         "placeholders": {}
+       },
+    "done": "确认",
+     "@done": {
+       "description": "Done",
+       "type": "text",
+       "placeholders": {}
+     },
+   "y": "岁",
+     "@y": {
+       "description": "y",
+       "type": "text",
+       "placeholders": {}
+     },
+   "invalidNumber": "请输入正确数字",
+   "@invalidNumber": {
+     "description": "Invalid Number",
+     "type": "text",
+     "placeholders": {}
+   },
+  "serviceIsNotAvailable": "服务不可用",
+    "@serviceIsNotAvailable": {
+      "description": "Service is not available",
+      "type": "text",
+      "placeholders": {}
+    },
+    "pleaseTryAgainLater": "操作过于频繁，请稍后再试",
+    "@pleaseTryAgainLater": {
+      "description": "Please try again later",
+      "type": "text",
+      "placeholders": {}
+    },
+  "changingLanguage": "语言设置中...",
+    "@changingLanguage": {
+      "description": "Changing language",
+      "type": "text",
+      "placeholders": {}
+    },
+  "myProfile": "个人信息",
+    "@myProfile": {
+      "description": "My profile",
+      "type": "text",
+      "placeholders": {}
+    },
+  "nickname": "昵称",
+    "@nickname": {
+      "description": "Nickname",
+      "type": "text",
+      "placeholders": {}
+    },
+  "latestVersion": "已是最新版",
+    "@latestVersion": {
+      "description": "This is the latest version",
+      "type": "text",
+      "placeholders": {}
+    },
+  "weChatLogin": "微信登录",
+  "@weChatLogin": {
+    "description": "WeChat Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordLogin": "密码登录",
+  "@passwordLogin": {
+    "description": "Password Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "messageLogin": "短信登录/注册",
+  "@messageLogin": {
+    "description": "Message Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bindPhone":  "绑定手机号",
+  "@bindPhone": {
+    "description": "Bind Phone",
+    "type": "text",
+    "placeholders": {}
+  },
+  "inValidPhoneNumber": "手机号格式错误",
+  "@inValidPhoneNumber": {
+    "description": "InValid PhoneNumber",
+    "type": "text",
+    "placeholders": {}
+  },
+  "autoRegisterNote": "未注册的手机号验证后自动注册",
+  "@autoRegisterNote": {
+    "description": "Auto Register Note",
+    "type": "text",
+    "placeholders": {}
+  },
+  "routeLogin": "有账号？去登录",
+  "@routeLogin": {
+    "description": "Route Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bindDuplicate": "此手机号已绑定其他微信",
+  "@bindDuplicate": {
+    "description": "bindDuplicate",
+    "type": "text",
+    "placeholders": {}
+    },
+   "rangeDown": "以下",
+     "@rangeDown": {
+       "description": "rangeDown",
+       "type": "text",
+       "placeholders": {}
+     },
+     "rangeUp": "以上",
+     "@rangeUp": {
+       "description": "rangeUp",
+       "type": "text",
+       "placeholders": {}
+     },
+  "course": "课程",
+       "@course": {
+         "description": "Course",
+         "type": "text",
+         "placeholders": {}
+       },
+       "courseList": "课程列表",
+         "@courseList": {
+           "description": "CourseList",
+           "type": "text",
+           "placeholders": {}
+         },
+       "more": "更多",
+       "@more": {
+         "description": "More",
+         "type": "text",
+         "placeholders": {}
+       },
+  "m": "个月",
+    "@m": {
+      "description": "m",
+      "type": "text",
+      "placeholders": {}
+    },
+    "recommendation": "精选推荐",
+    "@recommendation": {
+      "description": "recommendation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "introduction": "介绍",
+    "@introduction": {
+      "description": "introduction",
+      "type": "text",
+      "placeholders": {}
+    },
+    "catalogue": "目录",
+    "@catalogue": {
+      "description": "catalogue",
+      "type": "text",
+      "placeholders": {}
+    },
+  "addBabyTips": "快快添加家中宝贝，开启陪伴之旅吧~",
+      "@addBabyTips": {
+        "description": "addBabyTips",
+        "type": "text",
+        "placeholders": {}
+      },
+  "baby": "宝贝",
+    "@baby": {
+      "description": "baby",
+      "type": "text",
+      "placeholders": {}
+    },
+  "loginSuccessful": "登录成功",
+    "@loginSuccessful": {
+      "description": "loginSuccessful",
+      "type": "text",
+      "placeholders": {}
+    },
+    "addBabySuccessful": "儿童添加成功",
+    "@addBabySuccessful": {
+      "description": "addBabySuccessful",
+      "type": "text",
+      "placeholders": {}
+    },
+    "addBabyForStartAssessment": "需要先添加儿童，才能开始检测",
+    "@addBabyForStartAssessment": {
+      "description": "addBabyForStartAssessment",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loginForStartAssessment": "需要先登录，才能开始检测",
+    "@loginForStartAssessment": {
+      "description": "loginForStartAssessment",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loginForAddBaby": "需要先登录，才能添加儿童",
+    "@loginForAddBaby": {
+      "description": "loginForAddBaby",
+      "type": "text",
+      "placeholders": {}
+    },
+    "goToInstallWeChat": "该手机未安装微信，请安装后重试",
+    "@goToInstallWeChat": {
+      "description": "goToInstallWeChat",
+      "type": "text",
+      "placeholders": {}
+    },
+    "addNewBaby": "添加小孩",
+    "@addNewBaby": {
+      "description": "addNewBaby",
+      "type": "text",
+      "placeholders": {}
+    },
+    "allAge": "所有年龄",
+      "@allAge": {
+        "description": "allAge",
+        "type": "text",
+        "placeholders": {}
+      },
+   "confirm": "确定",
+     "@confirm": {
+       "description": "Confirm",
+       "type": "text",
+       "placeholders": {}
+     },
+     "cancel": "取消",
+     "@cancel": {
+       "description": "Cancel",
+       "type": "text",
+       "placeholders": {}
+     },
+  "veryEasy": "非常简单",
+        "@veryEasy": {
+          "description": "Training level",
+          "type": "text",
+          "placeholders": {}
+    },
+    "easy": "简单",
+    "@easy": {
+      "description": "Training level",
+      "type": "text",
+      "placeholders": {}
+    },
+    "moderate": "适中",
+    "@moderate": {
+      "description": "Training level",
+      "type": "text",
+      "placeholders": {}
+    },
+    "difficult": "困难",
+    "@difficult": {
+      "description": "Training level",
+      "type": "text",
+      "placeholders": {}
+    },
+    "veryDifficult": "非常困难",
+    "@veryDifficult": {
+      "description": "Training level",
+      "type": "text",
+      "placeholders": {}
+    },
+
+    "@@last_modified": "2019-10-09T17:09:54.661936",
+      "planStatusNone": "未创建",
+      "@planStatusNone": {
+        "description": "Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "planStatusCreated": "待开启",
+      "@planStatusCreated": {
+        "description": "Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "planStatusStarted": "未完成",
+      "@planStatusStarted": {
+        "description": "Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "planStatusEnded": "还没有反馈",
+      "@planStatusEnded": {
+        "description": "Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "planSatesFeedbacked": "完成",
+      "@planSatesFeedbacked": {
+        "description": "Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "createPlan": "立即开启",
+      "@createPlan": {
+        "description": "Create Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "startPlan": "开启训练",
+      "@startPlan": {
+        "description": "Start Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "goPunch": "直接打卡",
+      "@goPunch": {
+        "description": "Go Punch",
+        "type": "text",
+        "placeholders": {}
+      },
+      "punched": "已打卡",
+      "@punched": {
+        "description": "Punched",
+        "type": "text",
+        "placeholders": {}
+      },
+      "personTypeOne": "单人",
+      "@personTypeOne": {
+        "description": "Type One",
+        "type": "text",
+        "placeholders": {}
+      },
+      "personTypeMany": "多人",
+      "@personTypeMany": {
+        "description": "Type Many",
+        "type": "text",
+        "placeholders": {}
+      },
+      "personTypeTwo": "双人",
+      "@personTypeTwo": {
+        "description": "Type Two",
+        "type": "text",
+        "placeholders": {}
+      },
+      "trainingContent": "训练内容",
+      "@trainingContent": {
+        "description": "Training Content",
+        "type": "text",
+        "placeholders": {}
+      },
+      "kidSelectionTitle": "训练对象",
+      "@kidSelectionTitle": {
+        "description": "Kid Selection Title",
+        "type": "text",
+        "placeholders": {}
+      },
+      "kidSelectionDone": "选好了，开始",
+      "@kidSelectionDone": {
+        "description": "Kid Selection Done",
+        "type": "text",
+        "placeholders": {}
+      },
+      "trainingMaterial": "训练器材",
+      "@trainingMaterial": {
+        "description": "Training Material",
+        "type": "text",
+        "placeholders": {}
+      },
+      "trainingPreAssessment": "训练前检测",
+      "@trainingPreAssessment": {
+        "description": "Training Assessment",
+        "type": "text",
+        "placeholders": {}
+      },
+      "preAssessmentDone": "已完成",
+      "@preAssessmentDone": {
+        "description": "Pre-Assessment Done",
+        "type": "text",
+        "placeholders": {}
+      },
+      "preAssessmentNotDone": "未完成",
+      "@preAssessmentNotDone": {
+        "description": "Pre-Assessment NotDone",
+        "type": "text",
+        "placeholders": {}
+      },
+      "materialDone": "已备好",
+      "@materialDone": {
+        "description": "Material Done",
+        "type": "text",
+        "placeholders": {}
+      },
+      "materialNotDone": "未备好",
+      "@materialNotDone": {
+        "description": "Material NotDone",
+        "type": "text",
+        "placeholders": {}
+      },
+      "feedbackComments": "记录精彩表现...",
+      "@feedbackComments": {
+        "description": "Feedback Comments",
+        "type": "text",
+        "placeholders": {}
+      },
+      "feedbackInput": "请输入",
+      "@feedbackInput": {
+        "description": "Feedback Input",
+        "type": "text",
+        "placeholders": {}
+      },
+      "feedbackSelect": "请选择",
+      "@feedbackSelect": {
+        "description": "Feedback Selection",
+        "type": "text",
+        "placeholders": {}
+      },
+      "punch": "打卡",
+      "@punch": {
+        "description": "Punch",
+        "type": "text",
+        "placeholders": {}
+      },
+      "punchPageDescription": "反馈训练情况，提供更精准训练内容",
+      "@punchPageDescription": {
+        "description": "Punch Page Description",
+        "type": "text",
+        "placeholders": {}
+      },
+      "selectNumber": "请选连续次数",
+      "@selectNumber": {
+        "description": "Select Number",
+        "type": "text",
+        "placeholders": {}
+      },
+      "cancel": "取消",
+      "@cancel": {
+        "description": "Cancel",
+        "type": "text",
+        "placeholders": {}
+      },
+      "confirm": "确认",
+      "@confirm": {
+        "description": "Confirm",
+        "type": "text",
+        "placeholders": {}
+      },
+      "ratingDescription": "完成难度",
+      "@ratingDescription": {
+        "description": "Rating Description",
+        "type": "text",
+        "placeholders": {}
+      },
+      "trainingAgreementTitle": "训练须知",
+      "@trainingAgreementTitle": {
+        "description": "Training Agreement Title",
+        "type": "text",
+        "placeholders": {}
+      },
+      "agreeAndGo": "同意，继续",
+      "@agreeAndGo": {
+        "description": "Agree And Go",
+        "type": "text",
+        "placeholders": {}
+      },
+      "forceEndTitle": "提前结束",
+      "@forceEndTitle": {
+        "description": "Force End Title",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reasonConflicted": "与其他训练有重合",
+      "@reasonConflicted": {
+        "description": "Reason Conflicted",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reasonNotConvenient": "最近不方便",
+      "@reasonNotConvenient": {
+        "description": "Reason Not Convenient",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reasonTooEasy": "太容易",
+      "@reasonTooEasy": {
+        "description": "Reason Too Easy",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reasonTooDifficult": "太难",
+      "@reasonTooDifficult": {
+        "description": "Reason Too Difficult",
+        "type": "text",
+        "placeholders": {}
+      },
+      "forceEndDescription": "确定提前结束吗，请问原因是",
+      "@forceEndDescription": {
+        "description": "Force End Description",
+        "type": "text",
+        "placeholders": {}
+      },
+      "forceEndDescriptionDetail": "您的反馈将帮助我们为您推荐更合适的训练",
+      "@forceEndDescriptionDetail": {
+        "description": "Force End Description Detail",
+        "type": "text",
+        "placeholders": {}
+      },
+      "forceEndConfirmed": "确定提前结束",
+      "@forceEndConfirmed": {
+        "description": "Force End Confirm",
+        "type": "text",
+        "placeholders": {}
+      },
+      "assessmentStatusNotDone": "未测",
+      "@assessmentStatusNotDone": {
+        "description": "Assessment Status Not Done",
+        "type": "text",
+        "placeholders": {}
+      },
+      "assessmentStatusDone": "已测",
+      "@assessmentStatusDone": {
+        "description": "Assessment Status Done",
+        "type": "text",
+        "placeholders": {}
+      },
+      "preAssessmentPageDescription": "评估儿童训练前的情况，请7天内完成",
+      "@preAssessmentPageDescription": {
+        "description": "Pre Assessment Page Description",
+        "type": "text",
+        "placeholders": {}
+      },
+      "tutorial": "教程",
+      "@tutorial": {
+        "description": "Tutorial",
+        "type": "text",
+        "placeholders": {}
+      },
+      "record": "记录",
+      "@record": {
+        "description": "Record",
+        "type": "text",
+        "placeholders": {}
+      },
+      "materialNotReady": "没备好",
+      "@materialNotReady": {
+        "description": "Material Not Ready",
+        "type": "text",
+        "placeholders": {}
+      },
+      "materialReady": "备好了",
+      "@materialReady": {
+        "description": "Material Ready",
+        "type": "text",
+        "placeholders": {}
+      },
+      "materialTitle": "训练器材",
+      "@materialTitle": {
+        "description": "Material Title",
+        "type": "text",
+        "placeholders": {}
+      },
+      "trainingPostAssessment": "训练后检测",
+      "@trainingPostAssessment": {
+        "description": "Training Post Assessment",
+        "type": "text",
+        "placeholders": {}
+      },
+      "finishPlan": "结束训练",
+      "@finishPlan": {
+        "description": "Finish Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "finishPlanConfirm": "确定结束训练吗?",
+      "@finishPlanConfirm": {
+        "description": "Finish Plan Confirm",
+        "type": "text",
+        "placeholders": {}
+      },
+      "finishPlanConfirmContext": "建议打完卡再结束",
+      "@finishPlanConfirmContext": {
+        "description": "Finish Plan Confirm",
+        "type": "text",
+        "placeholders": {}
+      },
+      "currentPlan": "当前计划",
+      "@currentPlan": {
+        "description": "Current Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "finishedPlan": "往期计划",
+      "@finishedPlan": {
+        "description": "Finished Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "createNextPlan": "开启下个计划",
+      "@createNextPlan": {
+        "description": "Create Next Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "continueTraining": "继续执行计划",
+      "@continueTraining": {
+        "description": "Continue Training",
+        "type": "text",
+        "placeholders": {}
+      },
+      "closePlan": "完成",
+      "@closePlan": {
+        "description": "Close Plan",
+        "type": "text",
+        "placeholders": {}
+      },
+        "sunday": "日",
+        "@sunday": {
+          "description": "sunday",
+          "type": "text",
+          "placeholders": {}
+        },
+        "monday": "一",
+        "@monday": {
+          "description": "monday",
+          "type": "text",
+          "placeholders": {}
+        },
+        "tuesday": "二",
+        "@tuesday": {
+          "description": "tuesday",
+          "type": "text",
+          "placeholders": {}
+        },
+        "wednesday": "三",
+        "@wednesday": {
+          "description": "wednesday",
+          "type": "text",
+          "placeholders": {}
+        },
+        "thursday": "四",
+        "@thursday": {
+          "description": "thursday",
+          "type": "text",
+          "placeholders": {}
+        },
+        "friday": "五",
+        "@friday": {
+          "description": "friday",
+          "type": "text",
+          "placeholders": {}
+        },
+        "saturday": "六",
+        "@saturday": {
+          "description": "saturday",
+          "type": "text",
+          "placeholders": {}
+        },
+    "perseverancePrevails": "日积月累，厚积薄发。请坚持训练~",
+      "@perseverancePrevails": {
+        "description": "perseverancePrevails",
+        "type": "text",
+        "placeholders": {}
+      },
+      "startTrainingNow": "开启实用的训练吧~",
+      "@startTrainingNow": {
+        "description": "startTrainingNow",
+        "type": "text",
+        "placeholders": {}
+      },
+      "enterTraining": "进入训练>",
+      "@enterTraining": {
+        "description": "enterTraining",
+        "type": "text",
+        "placeholders": {}
+      },
+      "learnMore": "了解详情",
+      "@learnMore": {
+        "description": "learnMore",
+        "type": "text",
+        "placeholders": {}
+      },
+      "haveNoTrainingYet": "暂无计划",
+        "@haveNoTrainingYet": {
+          "description": "haveNoTrainingYet",
+          "type": "text",
+          "placeholders": {}
+        },
+        "startTrainingForYourChild": "开启计划让宝贝更加优秀~",
+        "@startTrainingForYourChild": {
+          "description": "startTrainingForYourChild",
+          "type": "text",
+          "placeholders": {}
+        },
+      "completeTheFollowingSteps": "请先完成以下环节，以正式开始执行计划",
+        "@completeTheFollowingSteps": {
+          "description": "completeTheFollowingSteps",
+          "type": "text",
+          "placeholders": {}
+        },
+        "equipment": "器材",
+        "@equipment": {
+          "description": "equipment",
+          "type": "text",
+          "placeholders": {}
+        },
+        "equipmentNeeded": "计划过程中需要用到的器材",
+        "@equipmentNeeded": {
+          "description": "equipmentNeeded",
+          "type": "text",
+          "placeholders": {}
+        },
+       "preTips": "温馨提示:",
+        "@preTips": {
+          "description": "preTips",
+          "type": "text",
+          "placeholders": {}
+        },
+        "preTips1": "1.检测结果7天内有效，如超过7天未全部完成需重测",
+        "@preTips1": {
+          "description": "preTips1",
+          "type": "text",
+          "placeholders": {}
+        },
+        "preTips2": "2.如打开即标注了已测的，是此儿童在检测模块7天内做过的，结果可调用，无需再测",
+        "@preTips2": {
+          "description": "preTips2",
+          "type": "text",
+          "placeholders": {}
+        },
+      "followingEquipments": "训练中需要用到以下器材",
+      "@followingEquipments": {
+        "description": "followingEquipments",
+        "type": "text",
+        "placeholders": {}
+      },
+      "enhanceAndControl": "运用动作、平衡、多感官的统合来提升专注力和冲动控制力",
+      "@enhanceAndControl": {
+        "description": "enhanceAndControl",
+        "type": "text",
+        "placeholders": {}
+      },
+      "startSuccessfully": "训练开启成功",
+        "@startSuccessfully": {
+          "description": "startSuccessfully",
+          "type": "text",
+          "placeholders": {}
+        },
+        "haveUnfinishedPostAssessments": "有未完成的后测，快去完成以评估儿童训练效果吧",
+        "@haveUnfinishedPostAssessments": {
+          "description": "haveUnfinishedPostAssessments",
+          "type": "text",
+          "placeholders": {}
+        },
+        "trainingDetails": "计划详情",
+        "@trainingDetails": {
+          "description": "trainingDetails",
+          "type": "text",
+          "placeholders": {}
+        },
+      "unitGe": "个",
+        "@unitGe": {
+          "description": "unitGe",
+          "type": "text",
+          "placeholders": {}
+        },
+        "optional": " 选填",
+        "@optional": {
+          "description": "optional",
+          "type": "text",
+          "placeholders": {}
+        },
+        "difficultForChild": "对儿童来说困难吗",
+        "@difficultForChild": {
+          "description": "difficultForChild",
+          "type": "text",
+          "placeholders": {}
+        },
+        "hasEnded": "训练已结束",
+        "@hasEnded": {
+          "description": "hasEnded",
+          "type": "text",
+          "placeholders": {}
+        },
+        "completeWithin7Days": "评估儿童训练后变化，请7天内完成，否则不可再测",
+        "@completeWithin7Days": {
+          "description": "completeWithin7Days",
+          "type": "text",
+          "placeholders": {}
+        },
+        "postTips": "提示:",
+        "@postTips": {
+          "description": "postTips",
+          "type": "text",
+          "placeholders": {}
+        },
+        "postTips1": "1.建议7天内完成，否则不可再测，将不可进行训练前后的结果对比",
+        "@postTips1": {
+          "description": "postTips1",
+          "type": "text",
+          "placeholders": {}
+        },
+        "postTips2": "2.打开即标注了已测的，是此儿童从训练结束当天00:00开始到之后的第7天24:00，在检测模块做过了的，结果可调用，无需再测",
+        "@postTips2": {
+          "description": "postTips2",
+          "type": "text",
+          "placeholders": {}
+        },
+     "training": "训练",
+      "@training": {
+        "description": "training",
+        "type": "text",
+        "placeholders": {}
+      },
+      "leave": "离开",
+      "@leave": {
+        "description": "leave",
+        "type": "text",
+        "placeholders": {}
+      },
+      "continueTxt": "继续",
+      "@continueTxt": {
+        "description": "continueTxt",
+        "type": "text",
+        "placeholders": {}
+      },
+   "addChild": "添加宝贝",
+    "@addChild": {
+      "description": "addChild",
+      "type": "text",
+      "placeholders": {}
+      },
+   "showMore": "展开",
+    "@showMore": {
+      "description": "showMore",
+      "type": "text",
+      "placeholders": {}
+    },
+    "showLess": "收起",
+    "@showLess": {
+      "description": "showLess",
+      "type": "text",
+      "placeholders": {}
+    },
+ "submitSuccessfully": "提交成功",
+  "@submitSuccessfully": {
+    "description": "submitSuccessfully",
+    "type": "text",
+    "placeholders": {}
+  },
+   "continueToPunch": "继续打卡",
+    "@continueToPunch": {
+      "description": "continueToPunch",
+      "type": "text",
+      "placeholders": {}
+    },
+  "progressEvaluation": "效果评估",
+    "@progressEvaluation": {
+      "description": "progressEvaluation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "trainingRecord": "打卡记录",
+    "@trainingRecord": {
+      "description": "trainingRecord",
+      "type": "text",
+      "placeholders": {}
+    },
+  "noData": "暂无数据",
+    "@noData": {
+      "description": "noData",
+      "type": "text",
+      "placeholders": {}
+    },
+  "isCorrectYes": "是",
+    "@isCorrectYes": {
+      "description": "isCorrectYes",
+      "type": "text",
+      "placeholders": {}
+    },
+    "isCorrectNo": "否",
+    "@isCorrectNo": {
+      "description": "isCorrectNo",
+      "type": "text",
+      "placeholders": {}
+    },
+  "punchSureToLeave": "确定离开吗?",
+    "@punchSureToLeave": {
+      "description": "punchSureToLeave",
+      "type": "text",
+      "placeholders": {}
+    },
+    "punchSureToLeaveAdd": "尚未保存，离开后数据将不会保存",
+    "@punchSureToLeaveAdd": {
+      "description": "punchSureToLeaveAdd",
+      "type": "text",
+      "placeholders": {}
+    },
+  "within7Days": "请7天内完成",
+    "@within7Days": {
+      "description": "within7Days",
+      "type": "text",
+      "placeholders": {}
+    },
+    "evaluateChildAfterTraining": "评估儿童训练后变化,",
+    "@evaluateChildAfterTraining": {
+      "description": "evaluateChildAfterTraining",
+      "type": "text",
+      "placeholders": {}
+    },
+    "otherwiseItCanNotBeRetested": ",否则不可再测",
+    "@otherwiseItCanNotBeRetested": {
+      "description": "otherwiseItCanNotBeRetested",
+      "type": "text",
+      "placeholders": {}
+    },
+    "noRecord": "暂无记录",
+      "@noRecord": {
+        "description": "noRecord",
+        "type": "text",
+        "placeholders": {}
+      },
+  "accountCancellation": "注销账号",
+    "@accountCancellation": {
+      "description": "accountCancellation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cancellationNote": "注意事项如下：",
+    "@cancellationNote": {
+      "description": "cancellationNote",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cancellationNote2": "2. 您已注销的手机号可用于注册新账号",
+      "@cancellationNote2": {
+        "description": "cancellationNote2",
+        "type": "text",
+        "placeholders": {}
+      },
+    "personalData": "• 个人资料",
+    "@personalData": {
+      "description": "personalData",
+      "type": "text",
+      "placeholders": {}
+    },
+    "childrenInformation": "• 儿童信息",
+    "@childrenInformation": {
+      "description": "childrenInformation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "assessmentRecords": "• 检测记录",
+    "@assessmentRecords": {
+      "description": "assessmentRecords",
+      "type": "text",
+      "placeholders": {}
+    },
+    "openedTrainingPlan": "• 已开启的训练计划",
+    "@openedTrainingPlan": {
+      "description": "openedTrainingPlan",
+      "type": "text",
+      "placeholders": {}
+    },
+    "otherInformation": "• 以及您在Rocket baby留存的其他信息",
+    "@otherInformation": {
+      "description": "otherInformation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "confirmToCancel": "确定注销账号",
+    "@confirmToCancel": {
+      "description": "confirmToCancel",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tip": "提示",
+    "@tip": {
+      "description": "tip",
+      "type": "text",
+      "placeholders": {}
+    },
+    "no": "取消",
+      "@no": {
+        "description": "no",
+        "type": "text",
+        "placeholders": {}
+      },
+    "cancellation": "注销",
+    "@cancellation": {
+      "description": "cancellation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reconfirm": "注销账号会清空所有信息和数据，您是否确认注销",
+    "@reconfirm": {
+      "description": "reconfirm",
+      "type": "text",
+      "placeholders": {}
+    },
+    "failed": "失败",
+    "@failed": {
+      "description": "failed",
+      "type": "text",
+      "placeholders": {}
+    },
+    "accountCancelled": "已注销",
+    "@accountCancelled": {
+      "description": "accountCancelled",
+      "type": "text",
+      "placeholders": {}
+    },
+  "termsOfServiceAndPrivacyPolicy": "服务条款与隐私政策",
+    "@termsOfServiceAndPrivacyPolicy": {
+      "description": "termsOfServiceAndPrivacyPolicy",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfServiceAndPrivacyPolicyLink": "《服务条款与隐私政策》",
+    "@termsOfServiceAndPrivacyPolicyLink": {
+      "description": "termsOfServiceAndPrivacyPolicyLink",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfServiceAndPrivacyPolicy1": "感谢您选择Rocket Baby！我们非常重视您的个人信息和隐私保护。为了更好地保证您的个人权益，在您使用我们的产品前，请您认真阅读",
+    "@termsOfServiceAndPrivacyPolicy1": {
+      "description": "termsOfServiceAndPrivacyPolicy1",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfServiceAndPrivacyPolicy2": "的全部内容，点击同意并接受全部条款后开始使用我们的产品和服务。",
+    "@termsOfServiceAndPrivacyPolicy2": {
+      "description": "termsOfServiceAndPrivacyPolicy2",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tips": "温馨提示",
+    "@tips": {
+      "description": "tips",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tipsDetail": "请同意并接受《服务条款与隐私政策》全部条款后再开始使用我们的服务。",
+    "@tipsDetail": {
+      "description": "tipsDetail",
+      "type": "text",
+      "placeholders": {}
+    },
+    "disagree": "不同意",
+    "@disagree": {
+      "description": "disagree",
+      "type": "text",
+      "placeholders": {}
+    },
+    "agree": "同意",
+    "@agree": {
+      "description": "agree",
+      "type": "text",
+      "placeholders": {}
+    },
+   "total": "共",
+    "@total": {
+      "description": "total",
+      "type": "text",
+      "placeholders": {}
+    },
+    "times": "次",
+    "@times": {
+      "description": "times",
+      "type": "text",
+      "placeholders": {}
+    },
+    "oneTime": "次",
+      "@oneTime": {
+        "description": "oneTime",
+        "type": "text",
+        "placeholders": {}
+      },
+    "unTested": "未测试",
+    "@unTested": {
+      "description": "unTested",
+      "type": "text",
+      "placeholders": {}
+    },
+    "testing": "测试中",
+    "@testing": {
+      "description": "testing",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tested": "已测试",
+    "@tested": {
+      "description": "tested",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reportGenerating": "报告生成中",
+    "@reportGenerating": {
+      "description": "reportGenerating",
+      "type": "text",
+      "placeholders": {}
+    },
+    "centerAddress": "中心地址",
+    "@centerAddress": {
+      "description": "centerAddress",
+      "type": "text",
+      "placeholders": {}
+    },
+  "doOtherAssessment": "做其他检测",
+    "@doOtherAssessment": {
+      "description": "doOtherAssessment",
+      "type": "text",
+      "placeholders": {}
+    },
+  "versionUpgrade": "版本升级",
+    "@versionUpgrade": {
+      "description": "versionUpgrade",
+      "type": "text",
+      "placeholders": {}
+    },
+    "released": "上线啦！",
+    "@released": {
+      "description": "released",
+      "type": "text",
+      "placeholders": {}
+    },
+    "notYet": "先不了",
+    "@notYet": {
+      "description": "notYet",
+      "type": "text",
+      "placeholders": {}
+    },
+    "upgradeNow": "马上升级",
+    "@upgradeNow": {
+      "description": "upgradeNow",
+      "type": "text",
+      "placeholders": {}
+    },
+    "upgradeContent": "增加了新功能，优化了设计和体验，快快升级吧！",
+    "@upgradeContent": {
+      "description": "upgradeContent",
+      "type": "text",
+      "placeholders": {}
+    },
+    "scan": "扫一扫",
+    "@scan": {
+      "description": "scan",
+      "type": "text",
+      "placeholders": {}
+    },
+    "alignQRCode": "请对准要识别的二维码",
+    "@alignQRCode": {
+      "description": "alignQRCode",
+      "type": "text",
+      "placeholders": {}
+    },
+    "thankYouFor": "感谢您关注",
+    "@thankYouFor": {
+      "description": "thankYouFor",
+      "type": "text",
+      "placeholders": {}
+    },
+    "selectChildrenToAuthorize": "请选择要授权或更新给此中心的儿童",
+    "@selectChildrenToAuthorize": {
+      "description": "selectChildrenToAuthorize",
+      "type": "text",
+      "placeholders": {}
+    },
+    "center": "中心！",
+    "@center": {
+      "description": "center",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorizedInformation1": "• 授权的信息：您的微信号和头像（如已绑定微信）、昵称、手机号；及所选儿童的名字、性别、年龄、头像",
+    "@authorizedInformation1": {
+      "description": "authorizedInformation1",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorizedInformation2": "• 更新的信息：您的相关信息及已授权儿童的名字、卡片主题色",
+    "@authorizedInformation2": {
+      "description": "authorizedInformation2",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorizedInformation3": "• 对于您已授权给此中心的儿童，如取消勾选，则不更新，也不会取消授权",
+    "@authorizedInformation3": {
+      "description": "authorizedInformation3",
+      "type": "text",
+      "placeholders": {}
+    },
+    "readAndAgree": "阅读并同意",
+    "@readAndAgree": {
+      "description": "readAndAgree",
+      "type": "text",
+      "placeholders": {}
+    },
+    "userLicenseAgreement": "《用户授权协议》",
+    "@userLicenseAgreement": {
+      "description": "userLicenseAgreement",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorization": "授权",
+    "@authorization": {
+      "description": "authorization",
+      "type": "text",
+      "placeholders": {}
+    },
+    "confirmAuthorization": "确定授权",
+    "@confirmAuthorization": {
+      "description": "confirmAuthorization",
+      "type": "text",
+      "placeholders": {}
+    },
+    "deAuthorization": "不再授权",
+    "@deAuthorization": {
+      "description": "deAuthorization",
+      "type": "text",
+      "placeholders": {}
+    },
+    "areYouSureToDeAuthorized": "确定不再授权？",
+    "@areYouSureToDeAuthorized": {
+      "description": "areYouSureToDeAuthorized",
+      "type": "text",
+      "placeholders": {}
+    },
+    "ifYouDeAuthorizeToTheCenter": "如不再授权，则无法继续享有中心为此儿童提供的注意力和情绪方案的服务",
+    "@ifYouDeAuthorizeToTheCenter": {
+      "description": "ifYouDeAuthorizeToTheCenter",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorizedCenters": "授权中心",
+    "@authorizedCenters": {
+      "description": "authorizedCenters",
+      "type": "text",
+      "placeholders": {}
+    },
+    "deAuthorized": "已不再授权",
+    "@deAuthorized": {
+      "description": "deAuthorized",
+      "type": "text",
+      "placeholders": {}
+    },
+    "youCanScanAgain": "已取消授权，可重新扫码",
+    "@youCanScanAgain": {
+      "description": "youCanScanAgain",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorizationSuccessful": "授权成功",
+    "@authorizationSuccessful": {
+      "description": "authorizationSuccessful",
+      "type": "text",
+      "placeholders": {}
+    },
+    "authorizationFailed": "授权失败",
+    "@authorizationFailed": {
+      "description": "authorizationFailed",
+      "type": "text",
+      "placeholders": {}
+    },
+    "childInformation": "儿童信息",
+    "@childInformation": {
+      "description": "childInformation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "editedSuccessfully": "编辑成功",
+    "@editedSuccessfully": {
+      "description": "editedSuccessfully",
+      "type": "text",
+      "placeholders": {}
+    },
+    "editChild": "编辑儿童",
+    "@editChild": {
+      "description": "editChild",
+      "type": "text",
+      "placeholders": {}
+    },
+    "edit": "编辑",
+    "@edit": {
+      "description": "edit",
+      "type": "text",
+      "placeholders": {}
+    },
+  "addChildTips": "保存后仅儿童头像和名字可修改，其余项不可修改",
+    "@addChildTips": {
+      "description": "addChildTips",
+      "type": "text",
+      "placeholders": {}
+    },
+    "lastName": "姓",
+      "@lastName": {
+        "description": "Last Name",
+        "type": "text",
+        "placeholders": {}
+      },
+      "firstName": "名",
+      "@firstName": {
+        "description": "First Name",
+        "type": "text",
+        "placeholders": {}
+      },
+    "loadMore": "加载更多",
+    "@loadMore": {
+      "description": "loadMore",
+      "type": "text",
+      "placeholders": {}
+    },
+    "noMoreData": "没有更多了",
+    "@noMoreData": {
+      "description": "noMoreData",
+      "type": "text",
+      "placeholders": {}
+    },
+   "profilePhoto": "档案头像",
+    "@profilePhoto": {
+      "description": "Profile Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "photo": "照片",
+    "@photo": {
+      "description": "Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "takePhoto": "照像机",
+    "@takePhoto": {
+      "description": "Take Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "fromAlbum": "从相册选择",
+    "@fromAlbum": {
+      "description": "Take Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "unreceivedCode": "未收到验证码",
+      "@unreceivedCode": {
+        "description": "unreceivedCode",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTitle": "如未收到验证码，可能是以下情况导致，请注意：",
+      "@unreceivedCodeTitle": {
+        "description": "unreceivedCodeTitle",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTips1": "· 在[拦截/过滤短信]中",
+      "@unreceivedCodeTips1": {
+        "description": "unreceivedCodeTips1",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTips2": "· 所输入的手机号码不是您的",
+      "@unreceivedCodeTips2": {
+        "description": "unreceivedCodeTips2",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTips3": "· 信号出错，60s后再发一次试试",
+      "@unreceivedCodeTips3": {
+        "description": "unreceivedCodeTips3",
+        "type": "text",
+        "placeholders": {}
+      },
+  "reminderEdit": "编辑提醒",
+    "@reminderEdit": {
+      "description": "Reminder Edit",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTitle": "事件",
+    "@reminderTitle": {
+      "description": "Reminder Title",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderBody": "描述",
+    "@reminderBody": {
+      "description": "Reminder Content",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTarget": "相关人员",
+    "@reminderTarget": {
+      "description": "Reminder Target",
+      "type": "text",
+      "placeholders": {}
+    },
+    "alarm": "闹钟",
+    "@alarm": {
+      "description": "Alarm",
+      "type": "text",
+      "placeholders": {}
+    },
+    "day": "日期",
+    "@day": {
+      "description": "Day",
+      "type": "text",
+      "placeholders": {}
+    },
+    "time": "时间",
+    "@time": {
+      "description": "Time",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTypeWeekly": "每周重复",
+    "@reminderTypeWeekly": {
+      "description": "Time",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTypeDaily": "每天重复",
+    "@reminderTypeDaily": {
+      "description": "Time",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTypeSchedule": "不重复",
+    "@reminderTypeSchedule": {
+      "description": "Time",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTypeNormal": "马上",
+    "@reminderTypeNormal": {
+      "description": "Time",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminderTypeSelection": "请选择重复方式",
+    "@reminderTypeSelection": {
+      "description": "Time",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reminder": "提醒",
+    "@reminder": {
+      "description": "reminder",
+      "type": "text",
+      "placeholders": {}
+    },
+   "ring": "铃声",
+    "@ring": {
+      "description": "Ring",
+      "type": "text",
+      "placeholders": {}
+    },
+    "vibrate": "震动",
+    "@vibrate": {
+      "description": "vibrate",
+      "type": "text",
+      "placeholders": {}
+    },
+    "daily": "每天",
+    "@daily": {
+      "description": "daily",
+      "type": "text",
+      "placeholders": {}
+    },
+  "sendNotification": "发送通知",
+  "@sendNotification": {
+    "description": "sendNotification",
+    "type": "text",
+    "placeholders": {}
+  },
+  "reminderEvents": "提醒事件",
+    "@reminderEvents": {
+      "description": "reminderEvents",
+      "type": "text",
+      "placeholders": {}
+    },
+  "deleted": "已删除",
+    "@deleted": {
+      "description": "deleted",
+      "type": "text",
+      "placeholders": {}
+    },
+    "delete": "删除",
+    "@delete": {
+      "description": "delete",
+      "type": "text",
+      "placeholders": {}
+    },
+  "myReminder": "我的提醒",
+    "@myReminder": {
+      "description": "myReminder",
+      "type": "text",
+      "placeholders": {}
+    },
+  "vratReportTitle": "Cognitive Leap VRAT检测报告",
+    "@vratReportTitle": {
+      "description": "vratReportTitle",
+      "type": "text",
+      "placeholders": {}
+    },
+  "dioCancel": "请求被服务器取消",
+  "@dioCancel": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioConnectionTimeout": "与服务器连接过时",
+  "@dioConnectionTimeout": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioReceiveCancel": "接受服务器过时",
+  "@dioReceiveCancel": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioResponse": "收到错误码:}",
+  "@dioResponse": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioSendTimeout": "发送到服务器过时",
+  "@dioSendTimeout": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioDefault": "网络原因与服务器交流失败",
+  "@dioDefault": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioError": "网络交流错误",
+  "@dioError": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "unknownError": "不明错误",
+  "@unknownError": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "internalErrorTitle": "不明内部错误",
+  "@internalErrorTitle": {
+    "description": "Error",
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueTesting": "继续测",
+    "@continueTesting": {
+      "description": "continueTesting",
+      "type": "text",
+      "placeholders": {}
+    },
+    "newVersionForNewFeature": "火箭宝宝为您提供了新的功能帮助您，请您下载最新版本火箭宝宝。祝您愉快！",
+    "@newVersionForNewFeature": {
+      "description": "New Version",
+      "type": "text",
+      "placeholders": {}
+    },
+   "male": "男",
+   "@male": {
+     "description": "Sex",
+     "type": "text",
+     "placeholders": {}
+   },
+   "female": "女",
+   "@female": {
+     "description": "Sex",
+     "type": "text",
+     "placeholders": {}
+   },
+     "nutritionTitle": "营养",
+     "@nutritionTitle": {
+       "description": "Nutrition",
+       "type": "text",
+       "placeholders": {}
+     },
+   "needLoginForPlan": "请先登录去开启计划",
+   "@needLoginForPlan": {
+     "description": "Plan",
+     "type": "text",
+     "placeholders": {}
+   },
+   "needAddKidForPlan": "请添加孩子去开启计划",
+   "@needAddKidForPlan": {
+     "description": "Plan",
+     "type": "text",
+     "placeholders": {}
+   },
+   "sleep": "睡眠",
+     "@sleep": {
+       "description": "sleep",
+       "type": "text",
+       "placeholders": {}
+     },
+  "applicationType": "应用类型",
+   "@applicationType": {
+     "description": "Application",
+     "type": "text",
+     "placeholders": {}
+   },
+  "interventionTitle": "儿童注意力干预系列",
+  "@interventionTitle": {
+    "description": "Intervention",
+    "type": "text",
+    "placeholders": {}
+  },
+ "notLoggedInForALongTimeMsg": "您的登录信息已过期，请重新登录",
+ "@notLoggedInForALongTimeMsg": {
+   "description": "Exception",
+   "type": "text",
+   "placeholders": {}
+ },
+ "timeOut": "操作超时",
+    "@timeOut": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "timeOutMessage": "操作超时，请稍后再试",
+    "@timeOutMessage": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "notLogin": "未登录",
+    "@notLogin": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "notLoginMsg": "用户未登录，请先登录",
+    "@notLoginMsg": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "insufficientPermissions": "权限不足",
+    "@insufficientPermissions": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "insufficientPermissionsMsg": "您没有此操作的权限",
+    "@insufficientPermissionsMsg": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "serverError": "服务器异常",
+    "@serverError": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "serverErrorMsg": "服务器异常，请稍后再试",
+    "@serverErrorMsg": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "unknownErrorMsg": "未知错误，请稍后再试",
+    "@unknownErrorMsg": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "versionError": "版本错误",
+    "@versionError": {
+      "description": "Exception",
+      "type": "text",
+      "placeholders": {}
+    },
+    "versionUnsupported": "版本不支持，请更新应用版本到 ",
+      "@versionUnsupported": {
+        "description": "Version unsupported",
+        "type": "text",
+        "placeholders": {}
+      },
+    "today": "今",
+    "@today": {
+      "description": "today",
+      "type": "text",
+      "placeholders": {}
+    },
+    "daySingular": "天",
+     "@daySingular": {
+       "description": "daySingular",
+       "type": "text",
+       "placeholders": {}
+     },
+     "dayPlural": "天",
+     "@dayPlural": {
+       "description": "dayPlural",
+       "type": "text",
+       "placeholders": {}
+     },
+  "goodEnvironmentTitle": "良好环境",
+    "@goodEnvironmentTitle": {
+      "description": "Good Environment",
+      "type": "text",
+      "placeholders": {}
+    },
+    "keepPunchingTitle": "持续打卡",
+    "@keepPunchingTitle": {
+      "description": "Keep Punching",
+      "type": "text",
+      "placeholders": {}
+    },
+    "planCardFoot": "日积月累，厚积薄发",
+    "@planCardFoot": {
+      "description": "Keep Punching",
+      "type": "text",
+      "placeholders": {}
+    },
+   "addSubjectConfirmTitle": "确定保存儿童信息吗？",
+   "@addSubjectConfirmTitle": {
+     "description": "Add Subject Confirm Title",
+     "type": "text",
+     "placeholders": {}
+   },
+   "nonEditableSubject": "以下信息保存后不可修改",
+   "@nonEditableSubject": {
+     "description": "Non Editable Subject",
+     "type": "text",
+     "placeholders": {}
+   },
+      "openAll": "开启",
+      "@openAll": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "closeAll": "关闭",
+      "@closeAll": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "openSuccess": "开启成功",
+      "@openSuccess": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "closeSuccess": "关闭成功",
+      "@closeSuccess": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "pleaseWait": "请稍等",
+      "@pleaseWait": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "openMsg": "开启后，将收到提醒的通知，包括所有的默认事件和自建事件",
+      "@openMsg": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "closeMsg": "关闭后，将收不到提醒通知，包括所有的默认事件和自建事件",
+      "@closeMsg": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "closeTitle": "确定关闭所有提醒的通知吗？",
+      "@closeTitle": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "openTitle": "确定开启所有提醒的通知吗？",
+      "@openTitle": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "confirmOpen": "确定开启",
+      "@confirmOpen": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+      "confirmClose": "确定关闭",
+      "@confirmClose": {
+        "description": "option",
+        "type": "text",
+        "placeholders": {}
+      },
+ "continuousPunch": "连续打卡",
+   "@continuousPunch": {
+     "description": "continuousPunch",
+     "type": "text",
+     "placeholders": {}
+   },
+   "cumulativePunch": "累计打卡",
+   "@cumulativePunch": {
+     "description": "cumulativePunch",
+     "type": "text",
+     "placeholders": {}
+   },
+ "punchMessage": "打卡次数越多，分析越准确",
+   "@punchMessage": {
+     "description": "Punch Message",
+     "type": "text",
+     "placeholders": {}
+   },
+   "sleepStatisticsAnalysis": "睡眠统计及分析",
+   "@sleepStatisticsAnalysis": {
+     "description": "option",
+     "type": "text",
+     "placeholders": {}
+   },
+   "nutritionStatisticsAnalysis": "饮食统计及分析",
+   "@nutritionStatisticsAnalysis": {
+     "description": "option",
+     "type": "text",
+     "placeholders": {}
+   },
+ "toComplete": "去完善",
+   "@toComplete": {
+     "description": "toComplete",
+     "type": "text",
+     "placeholders": {}
+   },
+   "toPunch": "去打卡",
+   "@toPunch": {
+     "description": "toPunch",
+     "type": "text",
+     "placeholders": {}
+   },
+   "view": "查看",
+   "@view": {
+     "description": "view",
+     "type": "text",
+     "placeholders": {}
+   },
+  "audioPlayError": "音频播放错误",
+  "@audioPlayError": {
+    "description": "Audio",
+    "type": "text",
+    "placeholders": {}
+  },
+  "thirdPartyLogin": "第三方登录/注册",
+  "@thirdPartyLogin": {
+    "description": "Third PartyLogin",
+    "type": "text",
+    "placeholders": {}
+  },
+ "quitAssessment": "秒后自动跳出此检测",
+    "@quitAssessment": {
+      "description": "quitAssessment",
+      "type": "text",
+      "placeholders": {}
+  },
+  "confirmQuit": "尚未完成，确定退出吗",
+    "@confirmQuit": {
+      "description": "confirmQuit",
+      "type": "text",
+      "placeholders": {}
+  },
+    "carefully": "请认真填写",
+    "@carefully": {
+      "description": "carefully",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loginFailed": "登录失败",
+      "@loginFailed": {
+        "description": "loginFailed",
+        "type": "text",
+        "placeholders": {}
+    },
+    "codeSendFailed": "验证码发送失败",
+      "@codeSendFailed": {
+        "description": "codeSendFailed",
+        "type": "text",
+        "placeholders": {}
+    },
+    "weChatLoginFailed": "微信登录失败",
+      "@weChatLoginFailed": {
+        "description": "weChatLoginFailed",
+        "type": "text",
+        "placeholders": {}
+    },
+    "networkConnectError": "无法连接到网络，请检查网络设置",
+      "@networkConnectError": {
+        "description": "networkConnectError",
+        "type": "text",
+        "placeholders": {}
+      },
+      "gotIt": "知道了",
+      "@gotIt": {
+        "description": "gotIt",
+        "type": "text",
+        "placeholders": {}
+      },
+      "operationTimeOut": "操作超时了，请稍后重试",
+      "@operationTimeOut": {
+        "description": "operationTimeOut",
+        "type": "text",
+        "placeholders": {}
+      },
+      "someError": "请求出了点问题，请稍后重试",
+      "@someError": {
+        "description": "someError",
+        "type": "text",
+        "placeholders": {}
+      },
+      "versionNotSupported": "当前APP版本不支持",
+      "@versionNotSupported": {
+        "description": "versionNotSupported",
+        "type": "text",
+        "placeholders": {}
+      },
+      "updateTo": "请更新APP到最新版本V",
+      "@updateTo": {
+        "description": "updateTo",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorityInsufficient": "很抱歉，此操作目前不对您开放",
+      "@authorityInsufficient": {
+        "description": "authorityInsufficient",
+        "type": "text",
+        "placeholders": {}
+      },
+     "statisticalAnalysis": "统计分析",
+     "@statisticalAnalysis": {
+       "description": "statisticalAnalysis",
+       "type": "text",
+       "placeholders": {}
+     },
+     "trainerFeedback": "训练师反馈",
+     "@trainerFeedback": {
+       "description": "trainerFeedback",
+       "type": "text",
+       "placeholders": {}
+     },
+     "theTrainingType": "该训练类型",
+     "@theTrainingType": {
+       "description": "theTrainingType",
+       "type": "text",
+       "placeholders": {}
+     },
+     "theGender": "该性别",
+     "@theGender": {
+       "description": "theGender",
+       "type": "text",
+       "placeholders": {}
+     },
+     "punchCompleted": "已经完成该打卡",
+     "@punchCompleted": {
+       "description": "punchCompleted",
+       "type": "text",
+       "placeholders": {}
+     },
+     "viewCourseContent": "查看课程内容",
+     "@viewCourseContent": {
+       "description": "viewCourseContent",
+       "type": "text",
+       "placeholders": {}
+     },
+     "typeOfAssessment": "测评类型",
+     "@typeOfAssessment": {
+       "description": "typeOfAssessment",
+       "type": "text",
+       "placeholders": {}
+     },
+     "openPlan": "开启计划",
+     "@openPlan": {
+       "description": "openPlan",
+       "type": "text",
+       "placeholders": {}
+     },
+     "testStatus": "测试状态",
+     "@testStatus": {
+       "description": "testStatus",
+       "type": "text",
+       "placeholders": {}
+     },
+       "upPage": "向上",
+       "@upPage": {
+         "description": "Next Page",
+         "type": "text",
+         "placeholders": {}
+       },
+       "downPage": "向下",
+       "@downPage": {
+         "description": "Previous Page",
+         "type": "text",
+         "placeholders": {}
+       },
+       "buy": "立即购买",
+       "@buy": {
+         "description": "Payment",
+         "type": "text",
+         "placeholders": {}
+       },
+       "scheduleVisit": "Find Schedule?",
+       "@scheduleVisit": {
+         "description": "Clinic",
+         "type": "text",
+         "placeholders": {}
+       },
+       "userNamePlaceHolder": "用户名",
+       "@userNamePlaceHolder": {
+         "description": "User info",
+         "type": "text",
+         "placeholders": {}
+       },
+       "userEmailPlaceHolder": "电子邮件",
+       "@userEmailPlaceHolder": {
+         "description": "Clinic",
+         "type": "text",
+         "placeholders": {}
+       },
+       "signIn": "登录",
+       "@signIn": {
+         "description": "Sign In",
+         "type": "text",
+         "placeholders": {}
+       },
+       "fullNamePlaceholder": "全名",
+       "@fullNamePlaceholder": {
+         "description": "fullNamePlaceholder",
+         "type": "text",
+         "placeholders": {}
+       },
+       "sex": "性别",
+       "@sex": {
+         "description": "sex",
+         "type": "text",
+         "placeholders": {}
+       },
+       "sibling": "兄妹",
+       "@sibling": {
+         "description": "Sibling",
+         "type": "text",
+         "placeholders": {}
+       },
+       "subscribe": "订阅",
+       "@subscribe": {
+         "description": "Subscribe",
+         "type": "text",
+         "placeholders": {}
+       },
+       "shoppingCartTitle": "Shopping Cart",
+       "@shoppingCartTitle": {
+         "description": "Shopping Cart",
+         "type": "text",
+         "placeholders": {}
+       },
+       "accountTitle": "Account",
+       "@accountTitle": {
+         "description": "Account",
+         "type": "text",
+         "placeholders": {}
+       },
+       "planTitle": "医疗计划",
+       "@planTitle": {
+         "description": "Plan",
+         "type": "text",
+         "placeholders": {}
+       },
+       "doctorTitle": "医生",
+       "@doctorTitle": {
+         "description": "Doctor",
+         "type": "text",
+         "placeholders": {}
+       },
+       "nurseTitle": "护士",
+       "@nurseTitle": {
+         "description": "Nurse",
+         "type": "text",
+         "placeholders": {}
+       },
+       "teacherTitle": "老师",
+       "@teacherTitle": {
+         "description": "Teacher",
+         "type": "text",
+         "placeholders": {}
+       },
+       "counselorTitle": "治疗顾问",
+       "@counselorTitle": {
+         "description": "Counselor",
+         "type": "text",
+         "placeholders": {}
+       },
+       "please": "Please",
+       "@please": {
+         "description": "Please",
+         "type": "text",
+         "placeholders": {}
+       },
+       "loginRequired": "Login is Required",
+       "@loginRequired": {
+         "description": "Login isRequired",
+         "type": "text",
+         "placeholders": {}
+       },
+       "loginNow": "Login now?",
+       "@loginNow": {
+         "description": "Login now?",
+         "type": "text",
+         "placeholders": {}
+       },
+       "supplements": "保养品",
+       "@supplements": {
+         "description": "Supplements",
+         "type": "text",
+         "placeholders": {}
+       },
+       "articles": "文章",
+       "@articles": {
+         "description": "Articles",
+         "type": "text",
+         "placeholders": {}
+       },
+       "locations": "线下机构",
+       "@locations": {
+         "description": "Locations",
+         "type": "text",
+         "placeholders": {}
+       },
+       "payment": "支付",
+       "@payment": {
+         "description": "Payment",
+         "type": "text",
+         "placeholders": {}
+       },
+       "counseling": "Counseling ",
+       "@counseling": {
+         "description": "Counseling",
+         "type": "text",
+         "placeholders": {}
+       },
+       "onlineMedical": "线上医疗会",
+       "@onlineMedical": {
+         "description": "线上医疗",
+         "type": "text",
+         "placeholders": {}
+       },
+       "onlineTreatment": "线上治疗",
+       "@onlineTreatment": {
+         "description": "Online Treatment",
+         "type": "text",
+         "placeholders": {}
+       },
+       "userInfoTitle": "用户资料",
+       "@userInfoTitle": {
+         "description": "User Profile",
+         "type": "text",
+         "placeholders": {}
+       },
+       "address": "地址",
+       "@address": {
+         "description": "Address",
+         "type": "text",
+         "placeholders": {}
+       },
+       "medicalRecord": "医疗记录",
+       "@medicalRecord": {
+         "description": "Medical Record",
+         "type": "text",
+         "placeholders": {}
+       },
+       "deleteAccout": "删除帐户",
+       "@deleteAccout": {
+         "description": "Delete Account",
+         "type": "text",
+         "placeholders": {}
+       },
+       "search": "搜索",
+       "@search": {
+         "description": "Search",
+         "type": "text",
+         "placeholders": {}
+       },
+       "sortingBy": "排序",
+       "@sortingBy": {
+         "description": "Sorting By",
+         "type": "text",
+         "placeholders": {}
+       },
+       "patient": "患者",
+       "@patient": {
+         "description": "Patient",
+         "type": "text",
+         "placeholders": {}
+       },
+       "orders": "订单",
+       "@orders": {
+         "description": "Orders",
+         "type": "text",
+         "placeholders": {}
+       },
+       "payment_unpaid": "未付",
+       "@payment_unpaid": {
+         "description": "Unpaid",
+         "type": "text",
+         "placeholders": {}
+       },
+       "payment_closed": "关闭",
+       "@payment_closed": {
+         "description": "Closed",
+         "type": "text",
+         "placeholders": {}
+       },
+       "payment_paid": "已付",
+       "@payment_paid": {
+         "description": "Paid",
+         "type": "text",
+         "placeholders": {}
+       },
+       "english": "英语",
+       "@english": {
+         "description": "English",
+         "type": "text",
+         "placeholders": {}
+       },
+       "chinese": "中文",
+       "@chinese": {
+         "description": "Chinese",
+         "type": "text",
+         "placeholders": {}
+       },
+       "child": "孩子",
+       "@child": {
+         "description": "Child",
+         "type": "text",
+         "placeholders": {}
+       },
+   "userTitle": "用户",
+     "@userTitle": {
+       "description": "User",
+       "type": "text",
+       "placeholders": {}
+     },
+ "parentingClass": "家长课堂",
+  "@parentingClass": {
+    "description": "Parenting Class",
+    "type": "text",
+    "placeholders": {}
+  },
+  "medicalHelper": "医务人员",
+  "@medicalHelper": {
+    "description": "Helper",
+    "type": "text",
+    "placeholders": {}
+  },
+ "pleaseSignIn": "请您登录",
+   "@pleaseSignIn": {
+     "description": "Please Sign in",
+     "type": "text",
+     "placeholders": {}
+   },
+  "admin": "管理",
+   "@admin": {
+     "description": "Please Sign in",
+     "type": "text",
+     "placeholders": {}
+   },
+  "allUsers": "所有用户",
+   "@allUsers": {
+     "description": "All Users",
+     "type": "text",
+     "placeholders": {}
+   },
+ "completeLogin": "请完成您的个人信息",
+   "@completeLogin": {
+     "description": "Please complete your profile",
+     "type": "text",
+     "placeholders": {}
+   },
+   "secondEmail": "备用邮箱",
+   "@secondEmail": {
+     "description": "Backup phone",
+     "type": "text",
+     "placeholders": {}
+   },
+   "onlineMeeting": "网上医疗",
+   "@onlineMeeting": {
+     "description": "Meeting",
+     "type": "text",
+     "placeholders": {}
+   },
+   "placeOrder": "下订单",
+   "@placeOrder": {
+     "description": "Place Order",
+     "type": "text",
+     "placeholders": {}
+   },
+ "userNameOrEmail": "用户名或邮箱地址",
+   "@userNameOrEmail": {
+     "description": "Username or email",
+     "type": "text",
+     "placeholders": {}
+   },
+   "usePrefix": "使用",
+   "@usePrefix": {
+     "description": "Use",
+     "type": "text",
+     "placeholders": {}
+   },
+    "parentingClassDescription": "家长课堂系列",
+    "@parentingClassDescription": {
+      "description": "Use",
+      "type": "text",
+      "placeholders": {}
+    },
+    "onlineMeetingSetting": "线上会议",
+    "@onlineMeetingSetting": {
+      "description": "Online Meeting",
+      "type": "text",
+      "placeholders": {}
+    },
+    "joinMeeting": "加入视频会议",
+    "@joinMeeting": {
+      "description": "Join Meeting",
+      "type": "text",
+      "placeholders": {}
+    },
+  "book": "专家书集",
+   "@book": {
+     "description": "Book",
+     "type": "text",
+     "placeholders": {}
+   },
+   "city": "城市",
+   "@city": {
+     "description": "城市",
+     "type": "text",
+     "placeholders": {}
+   },
+   "postCode": "邮编",
+   "@postCode": {
+     "description": "Code",
+     "type": "text",
+     "placeholders": {}
+   },
+   "country": "国家",
+   "@country": {
+     "description": "country",
+     "type": "text",
+     "placeholders": {}
+   },
+   "state": "州",
+   "@state": {
+     "description": "州",
+     "type": "text",
+     "placeholders": {}
+   },
+   "shippingAddress": "送货地址",
+   "@shippingAddress": {
+     "description": "Shipping Address",
+     "type": "text",
+     "placeholders": {}
+   },
+   "cannotBeNull": "请输入正确内容",
+   "@cannotBeNull": {
+     "description": "Cannot be empty",
+     "type": "text",
+     "placeholders": {}
+   },
+ "orderItemTitle": "货单",
+   "@orderItemTitle": {
+     "description": "Manifest",
+     "type": "text",
+     "placeholders": {}
+   },
+  "billingAddress": "帐单地址",
+  "@billingAddress": {
+    "description": "Billing Address",
+    "type": "text",
+    "placeholders": {}
+  },
+  "homeAddress": "家庭地址",
+  "@homeAddress": {
+    "description": "Home Address",
+    "type": "text",
+    "placeholders": {}
+  },
+
+  "paymentPolicy": "支付条款",
+  "@paymentPolicy": {
+    "description": "paymentPolicy",
+    "type": "text",
+    "placeholders": {}
+  },
+  "updatedAt": "更新日期",
+  "@updatedAt": {
+    "description": "updatedAt",
+    "type": "text",
+    "placeholders": {}
+  },
+ "planner": "诊疗方案",
+  "@planner": {
+    "description": "Planner",
+    "type": "text",
+    "placeholders": {}
+  },
+  "summary": "健康摘要",
+  "@summary": {
+    "description": "Summary",
+    "type": "text",
+    "placeholders": {}
+  },
+
+ "workshop": "工作室",
+  "@workshop": {
+    "description": "Workshop",
+    "type": "text",
+    "placeholders": {}
+  },
+  "webinar": "线上报告会",
+  "@webinar": {
+    "description": "webinar",
+    "type": "text",
+    "placeholders": {}
+  },
+  "homeExercise": "Home Exercise",
+  "@homeExercise": {
+    "description": "家中练习",
+    "type": "text",
+    "placeholders": {}
+  },
+  "schoolExercise": "学校练习",
+  "@schoolExercise": {
+    "description": "schoolExercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "onlineExercise": "线上练习",
+  "@onlineExercise": {
+    "description": "onlineExercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "siteExercise": "诊所练习",
+  "@siteExercise": {
+    "description": "siteExercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "exerciseBalance": "平衡",
+  "@exerciseBalance": {
+    "description": "exerciseBalance",
+    "type": "text",
+    "placeholders": {}
+  },
+  "exerciseMemory": "记忆力",
+  "@exerciseMemory": {
+    "description": "exerciseMemory",
+    "type": "text",
+    "placeholders": {}
+  },
+
+
+  "pleaseInputRight": "请输入正确",
+  "@pleaseInputRight": {
+    "description": "pleaseInputRight",
+    "type": "text",
+    "placeholders": {}
+  },
+  "subtitle": "副标题",
+  "@subtitle": {
+    "description": "subtitle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "content": "内容",
+  "@content": {
+    "description": "subtitle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "titleDisplay": "标题",
+  "@titleDisplay": {
+    "description": "titleDisplay",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vendor": "供应商",
+  "@vendor": {
+    "description": "vendor",
+    "type": "text",
+    "placeholders": {}
+  },
+  "provider": "提供",
+  "@provider": {
+    "description": "vendor",
+    "type": "text",
+    "placeholders": {}
+  },
+  "version": "版本",
+  "@version": {
+    "description": "version",
+    "type": "text",
+    "placeholders": {}
+  },
+  "forAgeFrom": "最小适合年龄",
+  "@forAgeFrom": {
+    "description": "forAgeFrom",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cpt": "持续注意力测试",
+  "@cpt": {
+    "description": "Continuous Performance Tests",
+    "type": "text",
+    "placeholders": {}
+  },
+  "target": "对象",
+  "@target": {
+    "description": "target",
+    "type": "text",
+    "placeholders": {}
+  },
+  "subject": "科目",
+  "@subject": {
+    "description": "subject",
+    "type": "text",
+    "placeholders": {}
+  },
+
+    "level": "等级",
+    "@level": {
+      "description": "subject",
+      "type": "text",
+      "placeholders": {}
+    },
+  "questionnaire": "问卷",
+   "@questionnaire": {
+     "description": "questionnaire",
+     "type": "text",
+     "placeholders": {}
+   },
+  "meetingServer": "Server",
+    "@meetingServer": {
+      "description": "Server",
+      "type": "text",
+      "placeholders": {}
+    },
+    "meetingRoomId": "会议地址",
+    "@meetingRoomId": {
+      "description": "meetingRoomId",
+      "type": "text",
+      "placeholders": {}
+    },
+    "audio": "语音",
+    "@audio": {
+      "description": "audio",
+      "type": "text",
+      "placeholders": {}
+    },
+    "video": "视频",
+    "@video": {
+      "description": "video",
+      "type": "text",
+      "placeholders": {}
+    },
+  "hangup": "挂断",
+    "@hangup": {
+      "description": "hangup",
+      "type": "text",
+      "placeholders": {}
+    },
+    "leaveRoom": "确定离开会议吗?",
+    "@leaveRoom": {
+      "description": "leaveRoom",
+      "type": "text",
+      "placeholders": {}
+    },
+     "waitingForOthers": "等待其他人员加入...",
+      "@waitingForOthers": {
+        "description": "waitingForOthers",
+        "type": "text",
+        "placeholders": {}
+      },
+
+    "cardNumber": "信用卡号",
+    "@cardNumber": {
+      "description": "cardNumber",
+      "type": "text",
+      "placeholders": {}
+    },
+    "expiredDate": "过期日期",
+    "@expiredDate": {
+      "description": "expiredDate",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cardHolder": "姓名",
+    "@cardHolder": {
+      "description": "cardHolder",
+      "type": "text",
+      "placeholders": {}
+    },
+    "creditCard": "信用卡",
+    "@creditCard": {
+      "description": "creditCard",
+      "type": "text",
+      "placeholders": {}
+    },
+    "submitted": "已经提交",
+    "@submitted": {
+      "description": "submitted",
+      "type": "text",
+      "placeholders": {}
+    },
+
+
+  "ehr": "电子健康记录",
+  "@ehr": {
+    "description": "ehr",
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdAt": "创建时间",
+  "@createdAt": {
+    "description": "createdAt",
+    "type": "text",
+    "placeholders": {}
+  },
+  "health": "健康",
+  "@health": {
+    "description": "health",
+    "type": "text",
+    "placeholders": {}
+  },
+  "education": "教育",
+  "@education": {
+    "description": "education",
+    "type": "text",
+    "placeholders": {}
+  }
+}

@@ -1,0 +1,3363 @@
+{
+  "@@last_modified": "2019-02-25T23:14:44.837786",
+  "about": "About",
+  "@about": {
+    "description": "About application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "login": "Log In",
+  "@login": {
+    "description": "Login application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "title": "Rocket App",
+    "@title": {
+      "description": "Rocket application",
+      "type": "text",
+      "placeholders": {}
+  },
+  "home": "Home",
+    "@home": {
+      "description": "Home application",
+      "type": "text",
+      "placeholders": {}
+    },
+    "exercise": "Exercise",
+    "@training": {
+      "description": "Exercise application",
+      "type": "text",
+      "placeholders": {}
+    },
+    "coach": "RoChat",
+    "@coach": {
+      "description": "Coach application",
+      "type": "text",
+      "placeholders": {}
+    },
+    "me": "Me",
+    "@me": {
+      "description": "Me application",
+      "type": "text",
+      "placeholders": {}
+    },
+  "logout": "Log Out",
+  "@logout": {
+    "description": "Logout applications",
+    "type": "text",
+    "placeholders": {}
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Applications settings",
+    "type": "text",
+    "placeholders": {}
+  },
+  "startAssessment": "Start",
+  "@startAssessment": {
+    "description": "Start assessment",
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueAssessment": "Continue Unfinished Assessment",
+  "@continueAssessment": {
+    "description": "Continue Unfinished Assessment",
+    "type": "text",
+    "placeholders": {}
+  },
+  "startAnswer": "Start to answer",
+  "@startAnswer": {
+    "description": "Start to answer",
+    "type": "text",
+    "placeholders": {}
+  },
+  "finished": "Finished",
+  "@finished": {
+    "description": "Finished questions",
+    "type": "text",
+    "placeholders": {}
+  },
+  "submit": "Submit",
+  "@submit": {
+    "description": "Submit to system",
+    "type": "text",
+    "placeholders": {}
+  },
+  "email": "Email",
+  "@email": {
+    "description": "Email address",
+    "type": "text",
+    "placeholders": {}
+  },
+  "password": "Password",
+  "@password": {
+    "description": "Password",
+    "type": "text",
+    "placeholders": {}
+  },
+  "forgotPassword": "Forgot Password",
+    "@forgotPassword": {
+      "description": "Forgot Password",
+      "type": "text",
+      "placeholders": {}
+    },
+  "registerNow": "Register?",
+  "@registerNow": {
+    "description": "Register to system",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kidsInfo": "Select Child",
+  "@kidsInfo": {
+    "description": "Kids information",
+    "type": "text",
+    "placeholders": {}
+  },
+  "add": "Add",
+  "@add": {
+    "description": "Add element",
+    "type": "text",
+    "placeholders": {}
+  },
+  "remove": "Remove",
+  "@remove": {
+    "description": "Remove the element",
+    "type": "text",
+    "placeholders": {}
+  },
+  "kids": "Kids",
+  "@kids": {
+    "description": "Kids application",
+    "type": "text",
+    "placeholders": {}
+  },
+  "coacher": "Coach",
+  "@coacher": {
+    "description": "Coach",
+    "type": "text",
+    "placeholders": {}
+  },
+  "teacher": "Teacher",
+  "@teacher": {
+    "description": "Teacher",
+    "type": "text",
+    "placeholders": {}
+  },
+  "parent": "Parent",
+  "@parent": {
+    "description": "Parent",
+    "type": "text",
+    "placeholders": {}
+  },
+  "emailPhone": "Email/Phone",
+  "@emailPhone": {
+    "description": "Email or Phone",
+    "type": "text",
+    "placeholders": {}
+  },
+  "codeLogin": "Code",
+  "@codeLogin": {
+    "description": "Code",
+    "type": "text",
+    "placeholders": {}
+  },
+  "send": "Send",
+    "@send": {
+      "description": "Send",
+      "type": "text",
+      "placeholders": {}
+    },
+   "mobile": "Mobile",
+    "@mobile": {
+      "description": "Mobile",
+      "type": "text",
+      "placeholders": {}
+    },
+   "passwordConfirm": "Confirm Password",
+   "@passwordConfirm": {
+     "description": "Confirm Password",
+     "type": "text",
+     "placeholders": {}
+   },
+   "register": "Register",
+   "@register": {
+     "description": "Register",
+     "type": "text",
+     "placeholders": {}
+   },
+   "requestLoginCode": "Request Code",
+   "@requestLoginCode": {
+     "description": "Request Code",
+     "type": "text",
+     "placeholders": {}
+   },
+  "freeTestTitle": "Free Assessment Now!",
+  "@freeTestTitle": {
+    "description": "Free Test Now",
+    "type": "text",
+    "placeholders": {}
+  },
+  "freeTestSubTitle": "Personalize your exercise plan",
+  "@freeTestSubTitle": {
+    "description": "Personalize your exercise plan",
+    "type": "text",
+    "placeholders": {}
+  },
+   "kidGrowth": "Growth Track",
+   "@kidGrowth": {
+     "description": "Kid growth",
+     "type": "text",
+     "placeholders": {}
+   },
+  "addKid": "Add kid",
+    "@addKid": {
+      "description": "Add kid",
+      "type": "text",
+      "placeholders": {}
+    },
+    "childColor": "What is his/her favorite color?",
+      "@childColor": {
+        "description": "ChildColor",
+        "type": "text",
+        "placeholders": {}
+      },
+    "gender": "Gender",
+    "@gender": {
+      "description": "Gender",
+      "type": "text",
+      "placeholders": {}
+    },
+    "relationship": "Relationship",
+      "@relationship": {
+        "description": "Relationship",
+        "type": "text",
+        "placeholders": {}
+      },
+    "boy": "Boy",
+    "@boy": {
+      "description": "Boy",
+      "type": "text",
+      "placeholders": {}
+    },
+    "girl": "Girl",
+    "@girl": {
+      "description": "Girl",
+      "type": "text",
+      "placeholders": {}
+    },
+    "other": "Other",
+    "@other": {
+      "description": "Other",
+      "type": "text",
+      "placeholders": {}
+    },
+    "son": "Son",
+    "@son": {
+      "description": "Son",
+      "type": "text",
+      "placeholders": {}
+    },
+    "daughter": "Daughter",
+    "@daughter": {
+      "description": "Daughter",
+      "type": "text",
+      "placeholders": {}
+    },
+    "student": "Student",
+    "@student": {
+      "description": "Student",
+      "type": "text",
+      "placeholders": {}
+    },
+    "youngerSister": "Younger Sister",
+    "@youngerSister": {
+      "description": "Younger Sister",
+      "type": "text",
+      "placeholders": {}
+    },
+    "youngerBrother": "Younger Brother",
+    "@youngerBrother": {
+      "description": "Younger Brother",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfService": "Terms of Service",
+      "@termsOfService": {
+        "description": "Terms of Service",
+        "type": "text",
+        "placeholders": {}
+    },
+    "father": "Father",
+      "@father": {
+        "description": "Father",
+        "type": "text",
+        "placeholders": {}
+      },
+      "mother": "Mother",
+      "@mother": {
+        "description": "Mother",
+        "type": "text",
+        "placeholders": {}
+      },
+      "cannotBeEmpty": "Cannot be empty",
+      "@cannotBeEmpty": {
+        "description": "Cannot be empty",
+        "type": "text",
+        "placeholders": {}
+      },
+      "invalidInput": "Please enter a valid phone number",
+      "@invalidInput": {
+        "description": "Invalid input",
+        "type": "text",
+        "placeholders": {}
+      },
+      "region": "Region",
+        "@region": {
+          "description": "Region",
+          "type": "text",
+          "placeholders": {}
+       },
+     "next": "Next",
+       "@next": {
+         "description": "Next",
+         "type": "text",
+         "placeholders": {}
+       },
+  "unitedStates": "United States",
+    "@unitedStates": {
+      "description": "United States",
+      "type": "text",
+      "placeholders": {}
+    },
+    "china": "China",
+    "@china": {
+      "description": "China",
+      "type": "text",
+      "placeholders": {}
+    },
+    "setPassword": "Set password",
+      "@setPassword": {
+        "description": "SetPassword",
+        "type": "text",
+        "placeholders": {}
+      },
+   "signUp": "Sign up",
+    "@signUp": {
+      "description": "SignUp",
+      "type": "text",
+      "placeholders": {}
+    },
+    "passwordDoNotMatch": "Passwords do not match",
+    "@passwordDoNotMatch": {
+      "description": "PasswordDoNotMatch",
+      "type": "text",
+      "placeholders": {}
+    },
+    "passwordInputFormat": "Please enter 6~20 digits or letters",
+      "@passwordInputFormat": {
+        "description": "PasswordInputFormat",
+        "type": "text",
+        "placeholders": {}
+      },
+  "incorrectVerificationCode": "Incorrect verification code",
+    "@incorrectVerificationCode": {
+      "description": "IncorrectVerificationCode",
+      "type": "text",
+      "placeholders": {}
+    },
+  "verificationCode": "Verification Code",
+    "@verificationCode": {
+      "description": "VerificationCode",
+      "type": "text",
+      "placeholders": {}
+    },
+    "name": "Name",
+      "@name": {
+        "description": "Name",
+        "type": "text",
+        "placeholders": {}
+      },
+  "dateOfBirth": "Date of Birth",
+    "@dateOfBirth": {
+      "description": "DateOfBirth",
+      "type": "text",
+      "placeholders": {}
+    },
+  "save": "Save",
+    "@save": {
+      "description": "Save",
+      "type": "text",
+      "placeholders": {}
+    },
+    "invalidBirthdayInput": "Please enter a valid birthday",
+      "@invalidBirthdayInput": {
+        "description": "InvalidBirthdayInput",
+        "type": "text",
+        "placeholders": {}
+      },
+  "grandparent": "Grandparent",
+    "@grandparent": {
+      "description": "Grandparent",
+      "type": "text",
+      "placeholders": {}
+    },
+    "legalGuardian": "Legal Guardian",
+    "@legalGuardian": {
+      "description": "LegalGuardian",
+      "type": "text",
+      "placeholders": {}
+    },
+
+  "launcher": "Launcher",
+    "@launcher": {
+      "description": "Launcher",
+      "type": "text",
+      "placeholders": {}
+     },
+
+    "all": "All",
+    "@all": {
+      "description": "All",
+      "type": "text",
+      "placeholders": {}
+    },
+    "free": "Free",
+    "@free": {
+      "description": "Free of Charge",
+      "type": "text",
+      "placeholders": {}
+    },
+    "growthDiary": "Growth Track",
+      "@growthDiary": {
+        "description": "GrowthDiary",
+        "type": "text",
+        "placeholders": {}
+    },
+  "changePassword": "Change password",
+    "@changePassword": {
+      "description": "ChangePassword",
+      "type": "text",
+      "placeholders": {}
+    },
+    "logFile": "Log file",
+    "@logFile": {
+      "description": "LogFile",
+      "type": "text",
+      "placeholders": {}
+    },
+    "clearCache": "Clear Cache",
+    "@clearCache": {
+    "description": "Clear cache",
+    "type": "text",
+    "placeholders": {}
+    },
+  "versionUpdate": "Version Update",
+    "@versionUpdate": {
+      "description": "VersionUpdate",
+      "type": "text",
+      "placeholders": {}
+    },
+   "nextPage": "Next Page",
+   "@nextPage": {
+     "description": "Next Page",
+     "type": "text",
+     "placeholders": {}
+   },
+   "previousPage": "Previous Page",
+   "@previousPage": {
+     "description": "Previous Page",
+     "type": "text",
+     "placeholders": {}
+   },
+   "numberOfPage": "Current Page #",
+   "@numberOfPage": {
+     "description": "Previous Page",
+     "type": "text",
+     "placeholders": {}
+   },
+   "totalPages": "Total Page #",
+   "@totalPages": {
+     "description": "Previous Page",
+     "type": "text",
+     "placeholders": {}
+   },
+   "changeLanguage": "Change Language",
+     "@changeLanguage": {
+       "description": "Change language",
+       "type": "text",
+       "placeholders": {}
+     },
+  "assessmentIsFor": "This assessment is for",
+    "@assessmentIsFor": {
+      "description": "This assessment is for",
+      "type": "text",
+      "placeholders": {}
+    },
+   "go": "GO",
+     "@go": {
+       "description": "GO",
+       "type": "text",
+       "placeholders": {}
+     },
+   "okGo": "OK. Let's go!",
+     "@okGo": {
+       "description": "OkGo",
+       "type": "text",
+       "placeholders": {}
+     },
+     "termOfAssessment": "Terms of Assessment",
+       "@termOfAssessment": {
+         "description": "Terms of Assessment",
+         "type": "text",
+         "placeholders": {}
+       },
+   "confirmLogout": "Confirm logout",
+     "@confirmLogout": {
+       "description": "Confirm logout",
+       "type": "text",
+       "placeholders": {}
+     },
+  "reallyLogout": "Do you really want to log out?",
+    "@reallyLogout": {
+      "description": "Do you really want to log out?",
+      "type": "text",
+      "placeholders": {}
+    },
+     "yes": "Yes",
+      "@yes": {
+        "description": "Yes",
+        "type": "text",
+        "placeholders": {}
+      },
+      "close": "Close",
+      "@close": {
+        "description": "Close",
+        "type": "text",
+        "placeholders": {}
+      },
+  "assessmentReport": "Assessment report",
+    "@assessmentReport": {
+      "description": "Assessment report",
+      "type": "text",
+      "placeholders": {}
+    },
+    "viewTheReport": "Report",
+      "@viewTheReport": {
+        "description": "View the report",
+        "type": "text",
+        "placeholders": {}
+      },
+  "report": "Report",
+    "@report": {
+      "description": "Report",
+      "type": "text",
+      "placeholders": {}
+    },
+    "sendAgain": "Send again",
+      "@sendAgain": {
+        "description": "Send again",
+        "type": "text",
+        "placeholders": {}
+      },
+  "resetPassword": "Reset password",
+    "@resetPassword": {
+      "description": "Reset password",
+      "type": "text",
+      "placeholders": {}
+    },
+    "phoneNumberMayBeWrong": "Phone number may be wrong",
+      "@phoneNumberMayBeWrong": {
+        "description": "Phone number may be wrong",
+        "type": "text",
+        "placeholders": {}
+      },
+      "passwordMayBeWrong": "Password may be wrong",
+      "@passwordMayBeWrong": {
+        "description": "Password may be wrong",
+        "type": "text",
+        "placeholders": {}
+      },
+    "hasBeenRegistered": "This phone number has been registered",
+      "@hasBeenRegistered": {
+        "description": "This phone number has been registered",
+        "type": "text",
+        "placeholders": {}
+      },
+      "incorrectCode": "Incorrect verification code",
+      "@incorrectCode": {
+        "description": "Incorrect verification code",
+        "type": "text",
+        "placeholders": {}
+      },
+   "requiredQuestion": "Please answer this question",
+   "@requiredQuestion": {
+     "description": "Please answer this question",
+     "type": "text",
+     "placeholders": {}
+   },
+   "failedToLoad": "Failed to load",
+     "@failedToLoad": {
+       "description": "Failed to load",
+       "type": "text",
+       "placeholders": {}
+     },
+     "tryAgain": "Try Again",
+     "@tryAgain": {
+       "description": "Try Again",
+       "type": "text",
+       "placeholders": {}
+     },
+   "completeQuestion": "Please complete this question",
+   "@completeQuestion": {
+     "description": "Please answer this question",
+     "type": "text",
+     "placeholders": {}
+   },
+  "errorConnectionToServer": "Network unavailable",
+  "@errorConnectionToServer": {
+    "description": "Network unavailable",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pullDownToRefresh": "Pull down to refresh",
+    "@pullDownToRefresh": {
+      "description": "Pull down to refresh",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshWhenRelease": "Refresh when release",
+    "@refreshWhenRelease": {
+      "description": "Refresh when release",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshing": "Refreshing",
+    "@refreshing": {
+      "description": "Refreshing",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshComplete": "Refresh complete",
+    "@refreshComplete": {
+      "description": "Refresh complete",
+      "type": "text",
+      "placeholders": {}
+    },
+    "refreshFailed": "Refresh failed",
+    "@refreshFailed": {
+      "description": "Refresh failed",
+      "type": "text",
+      "placeholders": {}
+    },
+    "signingUpAgreement": "By signing up, you agree to the",
+      "@signingUpAgreement": {
+        "description": "By signing up, you agree to the",
+        "type": "text",
+        "placeholders": {}
+      },
+  "isNotRegistered": "The phone number is not registered",
+    "@isNotRegistered": {
+      "description": "The phone number is not registered",
+      "type": "text",
+      "placeholders": {}
+    },
+    "invalidPhoneNumber": "Invalid phone number",
+    "@invalidPhoneNumber": {
+      "description": "Invalid phone number",
+      "type": "text",
+      "placeholders": {}
+    },
+    "codeExpired": "Code expired",
+      "@codeExpired": {
+        "description": "Code expired",
+        "type": "text",
+        "placeholders": {}
+      },
+  "videoPlayerHadError": "Video player had error",
+    "@videoPlayerHadError": {
+      "description": "Video player had error",
+      "type": "text",
+      "placeholders": {}
+    },
+    "assessmentRecord": "Assessment record",
+      "@assessmentRecord": {
+        "description": "Assessment record",
+        "type": "text",
+        "placeholders": {}
+      },
+  "assessmentlist": "Assessment list",
+    "@assessmentlist": {
+      "description": "Assessment list",
+      "type": "text",
+      "placeholders": {}
+    },
+    "assessment": "Assessment",
+    "@assessment": {
+      "description": "The assessment application",
+      "type": "text",
+      "placeholders": {}
+    },
+  "sendingAnswers": "Sending answers",
+    "@sendingAnswers": {
+      "description": "Sending answers",
+      "type": "text",
+      "placeholders": {}
+    },
+    "ok": "Ok",
+    "@ok": {
+      "description": "Ok",
+      "type": "text",
+      "placeholders": {}
+    },
+    "getQuestionnaire": "Get questionnaire",
+    "@getQuestionnaire": {
+      "description": "Get questionnaire",
+      "type": "text",
+      "placeholders": {}
+    },
+     "sendReport": "Send Report",
+      "@sendReport": {
+        "description": "Send Report",
+        "type": "text",
+        "placeholders": {}
+      },
+   "done": "Done",
+    "@done": {
+      "description": "Done",
+      "type": "text",
+      "placeholders": {}
+    },
+   "y": "y",
+      "@y": {
+       "description": "y",
+       "type": "text",
+       "placeholders": {}
+    },
+    "invalidNumber": "Invalid Number",
+    "@invalidNumber": {
+      "description": "Invalid Number",
+      "type": "text",
+      "placeholders": {}
+    },
+  "serviceIsNotAvailable": "Service is not available",
+    "@serviceIsNotAvailable": {
+      "description": "Service is not available",
+      "type": "text",
+      "placeholders": {}
+    },
+    "pleaseTryAgainLater": "Please try again later",
+    "@pleaseTryAgainLater": {
+      "description": "Please try again later",
+      "type": "text",
+      "placeholders": {}
+    },
+   "changingLanguage": "Changing language...",
+     "@changingLanguage": {
+       "description": "Changing language",
+       "type": "text",
+       "placeholders": {}
+     },
+   "myProfile": "My Profile",
+     "@myProfile": {
+       "description": "My profile",
+       "type": "text",
+       "placeholders": {}
+     },
+  "nickname": "Nick Name",
+    "@nickname": {
+      "description": "Nickname",
+      "type": "text",
+      "placeholders": {}
+    },
+  "latestVersion": "This is the latest version",
+    "@latestVersion": {
+      "description": "This is the latest version",
+      "type": "text",
+      "placeholders": {}
+    },
+  "weChatLogin": "WeChat Login",
+  "@weChatLogin": {
+    "description": "WeChat Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "passwordLogin": "Password Login",
+  "@passwordLogin": {
+    "description": "Password Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "messageLogin": "Message Login/Register",
+  "@messageLogin": {
+    "description": "Message Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bindPhone": "Bind Phone",
+  "@bindPhone": {
+    "description": "Bind Phone",
+    "type": "text",
+    "placeholders": {}
+  },
+  "inValidPhoneNumber": "Invalid Phone Number",
+  "@inValidPhoneNumber": {
+    "description": "InValid PhoneNumber",
+    "type": "text",
+    "placeholders": {}
+  },
+   "rangeDown": "-",
+   "@rangeDown": {
+     "description": "rangeDown",
+     "type": "text",
+     "placeholders": {}
+   },
+   "rangeUp": "+",
+   "@rangeUp": {
+     "description": "rangeUp",
+     "type": "text",
+     "placeholders": {}
+   },
+   "course": "Session",
+     "@course": {
+       "description": "Course",
+       "type": "text",
+       "placeholders": {}
+     },
+     "courseList": "Course list",
+       "@courseList": {
+         "description": "CourseList",
+         "type": "text",
+         "placeholders": {}
+       },
+     "more": "More",
+     "@more": {
+       "description": "More",
+       "type": "text",
+       "placeholders": {}
+  },
+  "autoRegisterNote": "Auto register after submitting a new phone number",
+  "@autoRegisterNote": {
+    "description": "Auto Register Note",
+    "type": "text",
+    "placeholders": {}
+  },
+  "routeLogin": "Registered? Go login",
+  "@routeLogin": {
+    "description": "Route Login",
+    "type": "text",
+    "placeholders": {}
+  },
+  "bindDuplicate": "Other WeChat account had already bound this phone number",
+  "@bindDuplicate": {
+    "description": "bindDuplicate",
+    "type": "text",
+    "placeholders": {}
+    },
+    "m": "m",
+    "@m": {
+      "description": "m",
+      "type": "text",
+      "placeholders": {}
+    },
+    "recommendation": "Featured",
+    "@recommendation": {
+      "description": "recommendation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "introduction": "Introduction",
+    "@introduction": {
+      "description": "introduction",
+      "type": "text",
+      "placeholders": {}
+    },
+    "catalogue": "Catalogue",
+    "@catalogue": {
+      "description": "catalogue",
+      "type": "text",
+      "placeholders": {}
+    },
+  "addBabyTips": "Start your connection trip with your baby!",
+    "@addBabyTips": {
+      "description": "addBabyTips",
+      "type": "text",
+      "placeholders": {}
+    },
+  "baby": "Baby",
+    "@baby": {
+      "description": "baby",
+      "type": "text",
+      "placeholders": {}
+    },
+  "loginSuccessful": "Login Successful",
+    "@loginSuccessful": {
+      "description": "loginSuccessful",
+      "type": "text",
+      "placeholders": {}
+    },
+    "addBabySuccessful": "Your baby has been added successfully!",
+    "@addBabySuccessful": {
+      "description": "addBabySuccessful",
+      "type": "text",
+      "placeholders": {}
+    },
+    "addBabyForStartAssessment": "You need to add baby before you can start the assessment.",
+    "@addBabyForStartAssessment": {
+      "description": "addBabyForStartAssessment",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loginForStartAssessment": "You need to log in before you can start the assessment.",
+    "@loginForStartAssessment": {
+      "description": "loginForStartAssessment",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loginForAddBaby": "You need to log in before you can add baby",
+    "@loginForAddBaby": {
+      "description": "loginForAddBaby",
+      "type": "text",
+      "placeholders": {}
+    },
+    "goToInstallWeChat": "WeChat is not installed on this phone, please try again after installation",
+    "@goToInstallWeChat": {
+      "description": "goToInstallWeChat",
+      "type": "text",
+      "placeholders": {}
+    },
+    "addNewBaby": "Add new",
+    "@addNewBaby": {
+      "description": "addNewBaby",
+      "type": "text",
+      "placeholders": {}
+    },
+    "allAge": "All Age",
+      "@allAge": {
+        "description": "allAge",
+        "type": "text",
+        "placeholders": {}
+      },
+  "confirm": "Confirm",
+    "@confirm": {
+      "description": "Confirm",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cancel": "Cancel",
+    "@cancel": {
+      "description": "Cancel",
+      "type": "text",
+      "placeholders": {}
+    },
+    "veryEasy": "Very easy",
+      "@veryEasy": {
+        "description": "Exercise level",
+        "type": "text",
+        "placeholders": {}
+      },
+      "easy": "easy",
+      "@easy": {
+        "description": "Exercise level",
+        "type": "text",
+        "placeholders": {}
+      },
+      "moderate": "medium",
+      "@moderate": {
+        "description": "Exercise level",
+        "type": "text",
+        "placeholders": {}
+      },
+      "difficult": "hard",
+      "@difficult": {
+        "description": "Exercise level",
+        "type": "text",
+        "placeholders": {}
+      },
+      "veryDifficult": "very hard",
+      "@veryDifficult": {
+        "description": "Exercise level",
+        "type": "text",
+        "placeholders": {}
+      },
+
+       "@@last_modified": "2019-10-09T17:09:54.661936",
+        "planStatusNone": "Not Created",
+        "@planStatusNone": {
+          "description": "Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "planStatusCreated": "To be launched",
+        "@planStatusCreated": {
+          "description": "Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "planStatusStarted": "Not Completed",
+        "@planStatusStarted": {
+          "description": "Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "planStatusEnded": "No feedback yet",
+        "@planStatusEnded": {
+          "description": "Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "planSatesFeedbacked": "Completed",
+        "@planSatesFeedbacked": {
+          "description": "Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "createPlan": "Start Now",
+        "@createPlan": {
+          "description": "Create Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "startPlan": "Start a plan",
+        "@startPlan": {
+          "description": "Start Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "goPunch": "Punch",
+        "@goPunch": {
+          "description": "Go Punch",
+          "type": "text",
+          "placeholders": {}
+        },
+        "punched": "Punched",
+        "@punched": {
+          "description": "Punched",
+          "type": "text",
+          "placeholders": {}
+        },
+        "personTypeOne": "one",
+        "@personTypeOne": {
+          "description": "Type One",
+          "type": "text",
+          "placeholders": {}
+        },
+        "personTypeMany": "many",
+        "@personTypeMany": {
+          "description": "Type Many",
+          "type": "text",
+          "placeholders": {}
+        },
+        "personTypeTwo": "two",
+        "@personTypeTwo": {
+          "description": "Type Two",
+          "type": "text",
+          "placeholders": {}
+        },
+        "trainingContent": "Exercise content",
+        "@trainingContent": {
+          "description": "Exercise Content",
+          "type": "text",
+          "placeholders": {}
+        },
+        "kidSelectionTitle": "This exercise is for",
+        "@kidSelectionTitle": {
+          "description": "Kid Selection Title",
+          "type": "text",
+          "placeholders": {}
+        },
+        "kidSelectionDone": "It's done, let's go.",
+        "@kidSelectionDone": {
+          "description": "Kid Selection Done",
+          "type": "text",
+          "placeholders": {}
+        },
+        "trainingMaterial": "Exercise equipment",
+        "@trainingMaterial": {
+          "description": "Exercise Material",
+          "type": "text",
+          "placeholders": {}
+        },
+        "trainingPreAssessment": "Pre-assessment",
+        "@trainingPreAssessment": {
+          "description": "Exercise Assessment",
+          "type": "text",
+          "placeholders": {}
+        },
+        "preAssessmentDone": "done",
+        "@preAssessmentDone": {
+          "description": "Pre-Assessment Done",
+          "type": "text",
+          "placeholders": {}
+        },
+        "preAssessmentNotDone": "not done",
+        "@preAssessmentNotDone": {
+          "description": "Pre-Assessment NotDone",
+          "type": "text",
+          "placeholders": {}
+        },
+        "materialDone": "Ready",
+        "@materialDone": {
+          "description": "Material Done",
+          "type": "text",
+          "placeholders": {}
+        },
+        "materialNotDone": "Not ready",
+        "@materialNotDone": {
+          "description": "Material NotDone",
+          "type": "text",
+          "placeholders": {}
+        },
+        "feedbackComments": "Please record your child's wonderful performance...",
+        "@feedbackComments": {
+          "description": "Feedback Comments",
+          "type": "text",
+          "placeholders": {}
+        },
+        "feedbackInput": "Please enter",
+        "@feedbackInput": {
+          "description": "Feedback Input",
+          "type": "text",
+          "placeholders": {}
+        },
+        "feedbackSelect": "Please choose",
+        "@feedbackSelect": {
+          "description": "Feedback Selection",
+          "type": "text",
+          "placeholders": {}
+        },
+        "punch": "Punch",
+        "@punch": {
+          "description": "Punch",
+          "type": "text",
+          "placeholders": {}
+        },
+        "punchPageDescription": "Your feedback will help us provide more accurate exercise for your child.",
+        "@punchPageDescription": {
+          "description": "Punch Page Description",
+          "type": "text",
+          "placeholders": {}
+        },
+        "selectNumber": "Please choose",
+        "@selectNumber": {
+          "description": "Select Number",
+          "type": "text",
+          "placeholders": {}
+        },
+        "cancel": "Cancel",
+        "@cancel": {
+          "description": "Cancel",
+          "type": "text",
+          "placeholders": {}
+        },
+        "confirm": "OK",
+        "@confirm": {
+          "description": "Confirm",
+          "type": "text",
+          "placeholders": {}
+        },
+        "ratingDescription": "Difficulty Level",
+        "@ratingDescription": {
+          "description": "Rating Description",
+          "type": "text",
+          "placeholders": {}
+        },
+        "trainingAgreementTitle": "Term of Service",
+        "@trainingAgreementTitle": {
+          "description": "Exercise Agreement Title",
+          "type": "text",
+          "placeholders": {}
+        },
+        "agreeAndGo": "Agree to Continue",
+        "@agreeAndGo": {
+          "description": "Agree And Go",
+          "type": "text",
+          "placeholders": {}
+        },
+        "forceEndTitle": "Terminate",
+        "@forceEndTitle": {
+          "description": "Force End Title",
+          "type": "text",
+          "placeholders": {}
+        },
+        "reasonConflicted": "Similar to other exercise",
+        "@reasonConflicted": {
+          "description": "Reason Conflicted",
+          "type": "text",
+          "placeholders": {}
+        },
+        "reasonNotConvenient": "No time for exercise.",
+        "@reasonNotConvenient": {
+          "description": "Reason Not Convenient",
+          "type": "text",
+          "placeholders": {}
+        },
+        "reasonTooEasy": "Too easy",
+        "@reasonTooEasy": {
+          "description": "Reason Too Easy",
+          "type": "text",
+          "placeholders": {}
+        },
+        "reasonTooDifficult": "Too hard",
+        "@reasonTooDifficult": {
+          "description": "Reason Too Difficult",
+          "type": "text",
+          "placeholders": {}
+        },
+        "forceEndDescription": "Are you sure to end early? What is the reason?",
+        "@forceEndDescription": {
+          "description": "Force End Description",
+          "type": "text",
+          "placeholders": {}
+        },
+        "forceEndDescriptionDetail": "Your feedback will help us provide more accurate exercise for your child.",
+        "@forceEndDescriptionDetail": {
+          "description": "Force End Description Detail",
+          "type": "text",
+          "placeholders": {}
+        },
+        "forceEndConfirmed": "Yes, end early.",
+        "@forceEndConfirmed": {
+          "description": "Force End Confirm",
+          "type": "text",
+          "placeholders": {}
+        },
+        "assessmentStatusNotDone": "Not tested",
+        "@assessmentStatusNotDone": {
+          "description": "Assessment Status Not Done",
+          "type": "text",
+          "placeholders": {}
+        },
+        "assessmentStatusDone": "Tested",
+        "@assessmentStatusDone": {
+          "description": "Assessment Status Done",
+          "type": "text",
+          "placeholders": {}
+        },
+        "preAssessmentPageDescription": "Evaluate your child before exercise. Please complete within 7 days",
+        "@preAssessmentPageDescription": {
+          "description": "Pre Assessment Page Description",
+          "type": "text",
+          "placeholders": {}
+        },
+        "tutorial": "Tutorial",
+        "@tutorial": {
+          "description": "Tutorial",
+          "type": "text",
+          "placeholders": {}
+        },
+        "record": "Record",
+        "@record": {
+          "description": "Record",
+          "type": "text",
+          "placeholders": {}
+        },
+        "materialNotReady": "Not Ready",
+        "@materialNotReady": {
+          "description": "Material Not Ready",
+          "type": "text",
+          "placeholders": {}
+        },
+        "materialReady": "Ready",
+        "@materialReady": {
+          "description": "Material Ready",
+          "type": "text",
+          "placeholders": {}
+        },
+        "materialTitle": "Plan Equipment",
+        "@materialTitle": {
+          "description": "Material Title",
+          "type": "text",
+          "placeholders": {}
+        },
+        "trainingPostAssessment": "Post-assessment",
+        "@trainingPostAssessment": {
+          "description": "Training Post Assessment",
+          "type": "text",
+          "placeholders": {}
+        },
+        "finishPlan": "End Plan",
+        "@finishPlan": {
+          "description": "Finish Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "finishPlanConfirm": "Are you sure to end the plan?",
+        "@finishPlanConfirm": {
+          "description": "Finish Plan Confirm",
+          "type": "text",
+          "placeholders": {}
+        },
+        "finishPlanConfirmContext": "It is recommended to complete today's punch before doing this.",
+        "@finishPlanConfirmContext": {
+          "description": "Finish Plan Confirm",
+          "type": "text",
+          "placeholders": {}
+        },
+        "currentPlan": "Current Plan",
+        "@currentPlan": {
+          "description": "Current Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "finishedPlan": "Past Plan",
+        "@finishedPlan": {
+          "description": "Finished Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "createNextPlan": "Start Next Plan",
+        "@createNextPlan": {
+          "description": "Create Next Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "continueTraining": "Go To Plan",
+        "@continueTraining": {
+          "description": "Continue Training",
+          "type": "text",
+          "placeholders": {}
+        },
+        "closePlan": "Completed",
+        "@closePlan": {
+          "description": "Close Plan",
+          "type": "text",
+          "placeholders": {}
+        },
+        "sunday": "Sun",
+          "@sunday": {
+            "description": "sunday",
+            "type": "text",
+            "placeholders": {}
+          },
+          "monday": "Mon",
+          "@monday": {
+            "description": "monday",
+            "type": "text",
+            "placeholders": {}
+          },
+          "tuesday": "Tue",
+          "@tuesday": {
+            "description": "tuesday",
+            "type": "text",
+            "placeholders": {}
+          },
+          "wednesday": "Wed",
+          "@wednesday": {
+            "description": "wednesday",
+            "type": "text",
+            "placeholders": {}
+          },
+          "thursday": "Thu",
+          "@thursday": {
+            "description": "thursday",
+            "type": "text",
+            "placeholders": {}
+          },
+          "friday": "Fri",
+          "@friday": {
+            "description": "friday",
+            "type": "text",
+            "placeholders": {}
+          },
+          "saturday": "Sat",
+          "@saturday": {
+            "description": "saturday",
+            "type": "text",
+            "placeholders": {}
+          },
+         "perseverancePrevails": "Perseverance Prevails!",
+           "@perseverancePrevails": {
+             "description": "perseverancePrevails",
+             "type": "text",
+             "placeholders": {}
+           },
+           "startTrainingNow": "Start exercise now!",
+           "@startTrainingNow": {
+             "description": "startTrainingNow",
+             "type": "text",
+             "placeholders": {}
+           },
+           "enterTraining": "Enter",
+           "@enterTraining": {
+             "description": "enterTraining",
+             "type": "text",
+             "placeholders": {}
+           },
+           "learnMore": "Learn more",
+           "@learnMore": {
+             "description": "learnMore",
+             "type": "text",
+             "placeholders": {}
+           },
+       "haveNoTrainingYet": "No Plan",
+           "@haveNoTrainingYet": {
+             "description": "haveNoTrainingYet",
+             "type": "text",
+             "placeholders": {}
+           },
+           "startTrainingForYourChild": "Start exercise to make your child more excellent~",
+           "@startTrainingForYourChild": {
+             "description": "startTrainingForYourChild",
+             "type": "text",
+             "placeholders": {}
+           },
+       "completeTheFollowingSteps": "Please complete the following steps to start exercise.",
+           "@completeTheFollowingSteps": {
+             "description": "completeTheFollowingSteps",
+             "type": "text",
+             "placeholders": {}
+           },
+           "equipment": "Equipment",
+           "@equipment": {
+             "description": "equipment",
+             "type": "text",
+             "placeholders": {}
+           },
+           "equipmentNeeded": "Equipment needed during exercise",
+           "@equipmentNeeded": {
+             "description": "equipmentNeeded",
+             "type": "text",
+             "placeholders": {}
+           },
+        "preTips": "Tips:",
+         "@preTips": {
+           "description": "preTips",
+           "type": "text",
+           "placeholders": {}
+         },
+         "preTips1": "1. Unfinished assessment is kept within 7 days. If not completed within 7 days, it needs to be done again.",
+         "@preTips1": {
+           "description": "preTips1",
+           "type": "text",
+           "placeholders": {}
+         },
+         "preTips2": "2.  If the assessment is marked 'tested', you may have already taken it in the Assessment Module.",
+         "@preTips2": {
+           "description": "preTips2",
+           "type": "text",
+           "placeholders": {}
+         },
+       "followingEquipments": "The following equipments are needed for exercise.",
+       "@followingEquipments": {
+         "description": "followingEquipments",
+         "type": "text",
+         "placeholders": {}
+       },
+       "enhanceAndControl": "Please use the combination of action, balance, and multi-sensory to enhance concentration and impulsive control.",
+       "@enhanceAndControl": {
+         "description": "enhanceAndControl",
+         "type": "text",
+         "placeholders": {}
+       },
+       "startSuccessfully": "Start successfully",
+         "@startSuccessfully": {
+           "description": "startSuccessfully",
+           "type": "text",
+           "placeholders": {}
+         },
+         "haveUnfinishedPostAssessments": "You have unfinished post-assessments. Please finish them to evaluate the effect of training.",
+         "@haveUnfinishedPostAssessments": {
+           "description": "haveUnfinishedPostAssessments",
+           "type": "text",
+           "placeholders": {}
+         },
+         "trainingDetails": "Plan Details",
+         "@trainingDetails": {
+           "description": "trainingDetails",
+           "type": "text",
+           "placeholders": {}
+         },
+       "unitGe": "",
+         "@unitGe": {
+           "description": "unitGe",
+           "type": "text",
+           "placeholders": {}
+         },
+         "optional": " optional",
+         "@optional": {
+           "description": "optional",
+           "type": "text",
+           "placeholders": {}
+         },
+         "difficultForChild": "Is it difficult for your child?",
+         "@difficultForChild": {
+           "description": "difficultForChild",
+           "type": "text",
+           "placeholders": {}
+         },
+         "hasEnded": "Has ended",
+         "@hasEnded": {
+           "description": "hasEnded",
+           "type": "text",
+           "placeholders": {}
+         },
+         "completeWithin7Days": "Evaluate your child after exercise. Please complete within 7 days, otherwise it can not be retested.",
+         "@completeWithin7Days": {
+           "description": "completeWithin7Days",
+           "type": "text",
+           "placeholders": {}
+         },
+         "postTips": "Tips:",
+         "@postTips": {
+           "description": "postTips",
+           "type": "text",
+           "placeholders": {}
+         },
+         "postTips1": "1.Please complete within 7 days, otherwise it can not be retested，and the assessment effect before and after training can not be compared.",
+         "@postTips1": {
+           "description": "postTips1",
+           "type": "text",
+           "placeholders": {}
+         },
+         "postTips2": "2.During from 00:00 of the ended exercise day to the 7th day 24:00, if the assessment has been tested in Assessment, the assessment result can be used here and displayed “tested”.",
+         "@postTips2": {
+           "description": "postTips2",
+           "type": "text",
+           "placeholders": {}
+         },
+      "training": "Exercise",
+       "@training": {
+         "description": "training",
+         "type": "text",
+         "placeholders": {}
+       },
+       "leave": "Leave",
+       "@leave": {
+         "description": "leave",
+         "type": "text",
+         "placeholders": {}
+       },
+       "continueTxt": "Continue",
+       "@continueTxt": {
+         "description": "continueTxt",
+         "type": "text",
+         "placeholders": {}
+       },
+         "addChild": "Add Child",
+  "@addChild": {
+    "description": "addChild",
+    "type": "text",
+    "placeholders": {}
+    },
+    "showMore": "Show More",
+     "@showMore": {
+       "description": "showMore",
+       "type": "text",
+       "placeholders": {}
+     },
+     "showLess": "Show Less",
+     "@showLess": {
+       "description": "showLess",
+       "type": "text",
+       "placeholders": {}
+     },
+   "submitSuccessfully": "Submit successfully",
+     "@submitSuccessfully": {
+       "description": "submitSuccessfully",
+       "type": "text",
+       "placeholders": {}
+     },
+   "continueToPunch": "Continue to punch",
+    "@continueToPunch": {
+      "description": "continueToPunch",
+      "type": "text",
+      "placeholders": {}
+    },
+  "progressEvaluation": "Evaluation",
+    "@progressEvaluation": {
+      "description": "progressEvaluation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "trainingRecord": "Punch History",
+    "@trainingRecord": {
+      "description": "trainingRecord",
+      "type": "text",
+      "placeholders": {}
+    },
+  "noData": "No data",
+    "@noData": {
+      "description": "noData",
+      "type": "text",
+      "placeholders": {}
+    },
+  "isCorrectYes": "Yes",
+    "@isCorrectYes": {
+      "description": "isCorrectYes",
+      "type": "text",
+      "placeholders": {}
+    },
+    "isCorrectNo": "No",
+    "@isCorrectNo": {
+      "description": "isCorrectNo",
+      "type": "text",
+      "placeholders": {}
+    },
+  "punchSureToLeave": "Are you sure to leave?",
+    "@punchSureToLeave": {
+      "description": "punchSureToLeave",
+      "type": "text",
+      "placeholders": {}
+    },
+    "punchSureToLeaveAdd": "Not saved yet, data will not be saved after leaving",
+    "@punchSureToLeaveAdd": {
+      "description": "punchSureToLeaveAdd",
+      "type": "text",
+      "placeholders": {}
+    },
+  "within7Days": "Please complete within 7 days",
+    "@within7Days": {
+      "description": "within7Days",
+      "type": "text",
+      "placeholders": {}
+    },
+    "evaluateChildAfterTraining": "Evaluate your child after exercise.",
+    "@evaluateChildAfterTraining": {
+      "description": "evaluateChildAfterTraining",
+      "type": "text",
+      "placeholders": {}
+    },
+    "otherwiseItCanNotBeRetested": ",otherwise it can not be retested",
+    "@otherwiseItCanNotBeRetested": {
+      "description": "otherwiseItCanNotBeRetested",
+      "type": "text",
+      "placeholders": {}
+    },
+  "noRecord": "No record",
+    "@noRecord": {
+      "description": "noRecord",
+      "type": "text",
+      "placeholders": {}
+    },
+  "accountCancellation": "Account Cancellation",
+    "@accountCancellation": {
+      "description": "accountCancellation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cancellationNote": "Caution：",
+    "@cancellationNote": {
+      "description": "cancellationNote",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cancellationNote2": "2. The cancelled mobile number can be used to register a new account again",
+      "@cancellationNote2": {
+        "description": "cancellationNote2",
+        "type": "text",
+        "placeholders": {}
+      },
+    "personalData": "• Personal data",
+    "@personalData": {
+      "description": "personalData",
+      "type": "text",
+      "placeholders": {}
+    },
+    "childrenInformation": "• Children's information",
+    "@childrenInformation": {
+      "description": "childrenInformation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "assessmentRecords": "• Assessment records",
+    "@assessmentRecords": {
+      "description": "assessmentRecords",
+      "type": "text",
+      "placeholders": {}
+    },
+    "openedTrainingPlan": "• Opened exercise plan",
+    "@openedTrainingPlan": {
+      "description": "openedTrainingPlan",
+      "type": "text",
+      "placeholders": {}
+    },
+    "otherInformation": "• And other information in Rocket baby",
+    "@otherInformation": {
+      "description": "otherInformation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "confirmToCancel": "Confirm to cancel the account",
+    "@confirmToCancel": {
+      "description": "confirmToCancel",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tip": "Tip",
+    "@tip": {
+      "description": "tip",
+      "type": "text",
+      "placeholders": {}
+    },
+    "no": "No",
+      "@no": {
+        "description": "no",
+        "type": "text",
+        "placeholders": {}
+      },
+    "cancellation": "Cancel",
+    "@cancellation": {
+      "description": "cancellation",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reconfirm": "If you cancel the account, all information and data will be cleared. Do you confirm to cancel account?",
+    "@reconfirm": {
+      "description": "reconfirm",
+      "type": "text",
+      "placeholders": {}
+    },
+    "failed": "failed",
+    "@failed": {
+      "description": "Failed",
+      "type": "text",
+      "placeholders": {}
+    },
+    "accountCancelled": "Account Cancelled",
+    "@accountCancelled": {
+      "description": "accountCancelled",
+      "type": "text",
+      "placeholders": {}
+    },
+  "termsOfServiceAndPrivacyPolicy": "Terms of service and privacy policy",
+    "@termsOfServiceAndPrivacyPolicy": {
+      "description": "termsOfServiceAndPrivacyPolicy",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfServiceAndPrivacyPolicyLink": "\"Terms of Service and Privacy Policy\"",
+    "@termsOfServiceAndPrivacyPolicyLink": {
+      "description": "termsOfServiceAndPrivacyPolicyLink",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfServiceAndPrivacyPolicy1": " Thank you for choosing Rocket Baby! We take your personal information and privacy very seriously. In order to better protect your personal rights, before you use our products, please read the entire contents of the ",
+    "@termsOfServiceAndPrivacyPolicy1": {
+      "description": "termsOfServiceAndPrivacyPolicy1",
+      "type": "text",
+      "placeholders": {}
+    },
+    "termsOfServiceAndPrivacyPolicy2": " carefully, click to agree and accept all the terms and start using our products and services. ",
+    "@termsOfServiceAndPrivacyPolicy2": {
+      "description": "termsOfServiceAndPrivacyPolicy2",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tips": "Tip",
+    "@tips": {
+      "description": "tips",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tipsDetail": " Please agree and accept all terms of the \"Terms of Service and Privacy Policy\" before using our services. ",
+    "@tipsDetail": {
+      "description": "tipsDetail",
+      "type": "text",
+      "placeholders": {}
+    },
+    "disagree": "Disagree",
+    "@disagree": {
+      "description": "disagree",
+      "type": "text",
+      "placeholders": {}
+    },
+    "agree": "Agree",
+    "@agree": {
+      "description": "agree",
+      "type": "text",
+      "placeholders": {}
+    },
+
+   "total": "total of",
+    "@total": {
+      "description": "total",
+      "type": "text",
+      "placeholders": {}
+    },
+    "times": "times",
+    "@times": {
+      "description": "times",
+      "type": "text",
+      "placeholders": {}
+    },
+    "oneTime": "time",
+      "@oneTime": {
+        "description": "oneTime",
+        "type": "text",
+        "placeholders": {}
+      },
+    "unTested": "untested",
+    "@unTested": {
+      "description": "unTested",
+      "type": "text",
+      "placeholders": {}
+    },
+    "testing": "testing",
+    "@testing": {
+      "description": "testing",
+      "type": "text",
+      "placeholders": {}
+    },
+    "tested": "tested",
+    "@tested": {
+      "description": "tested",
+      "type": "text",
+      "placeholders": {}
+    },
+    "reportGenerating": "report is generating",
+    "@reportGenerating": {
+      "description": "reportGenerating",
+      "type": "text",
+      "placeholders": {}
+    },
+    "centerAddress": "center address",
+    "@centerAddress": {
+      "description": "centerAddress",
+      "type": "text",
+      "placeholders": {}
+    },
+    "doOtherAssessment": "Find More",
+      "@doOtherAssessment": {
+        "description": "doOtherAssessment",
+        "type": "text",
+        "placeholders": {}
+      },
+  "versionUpgrade": "Version Upgrade",
+      "@versionUpgrade": {
+        "description": "versionUpgrade",
+        "type": "text",
+        "placeholders": {}
+      },
+      "released": "released!",
+      "@released": {
+        "description": "released",
+        "type": "text",
+        "placeholders": {}
+      },
+      "notYet": "Not Yet",
+      "@notYet": {
+        "description": "notYet",
+        "type": "text",
+        "placeholders": {}
+      },
+      "upgradeNow": "Upgrade Now",
+      "@upgradeNow": {
+        "description": "upgradeNow",
+        "type": "text",
+        "placeholders": {}
+      },
+      "upgradeContent": "More flexible，more features！ Upgrade performance！",
+      "@upgradeContent": {
+        "description": "upgradeContent",
+        "type": "text",
+        "placeholders": {}
+      },
+      "scan": "Scan",
+      "@scan": {
+        "description": "scan",
+        "type": "text",
+        "placeholders": {}
+      },
+      "alignQRCode": "Align the QR Code within the frame to scan",
+      "@alignQRCode": {
+        "description": "alignQRCode",
+        "type": "text",
+        "placeholders": {}
+      },
+      "thankYouFor": "thank you for your interest in ",
+      "@thankYouFor": {
+        "description": "thankYouFor",
+        "type": "text",
+        "placeholders": {}
+      },
+      "selectChildrenToAuthorize": "Please select children to authorize or update to this center",
+      "@selectChildrenToAuthorize": {
+        "description": "selectChildrenToAuthorize",
+        "type": "text",
+        "placeholders": {}
+      },
+      "center": "center！",
+      "@center": {
+        "description": "center",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorizedInformation1": "• Authorized information: your WeChat and avatar (if WeChat is bound),nickname, mobile phone number; and the names, gender, age, avatars of selected children.",
+      "@authorizedInformation1": {
+        "description": "authorizedInformation1",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorizedInformation2": "• Updated information: information about you, nicknames、card theme colors of authorized children.",
+      "@authorizedInformation2": {
+        "description": "authorizedInformation2",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorizedInformation3": "• For children you have authorized to this center, if you uncheck them, their information will not be updated and they will not be deauthorized.",
+      "@authorizedInformation3": {
+        "description": "authorizedInformation3",
+        "type": "text",
+        "placeholders": {}
+      },
+      "readAndAgree": "Read and agree to",
+      "@readAndAgree": {
+        "description": "readAndAgree",
+        "type": "text",
+        "placeholders": {}
+      },
+      "userLicenseAgreement": " The Terms of User Authorization Agreement ",
+      "@userLicenseAgreement": {
+        "description": "userLicenseAgreement",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorization": "Authorization",
+      "@authorization": {
+        "description": "authorization",
+        "type": "text",
+        "placeholders": {}
+      },
+      "confirmAuthorization": "Confirm authorization",
+      "@confirmAuthorization": {
+        "description": "confirmAuthorization",
+        "type": "text",
+        "placeholders": {}
+      },
+      "deAuthorization": "Deauthorization",
+      "@deAuthorization": {
+        "description": "deAuthorization",
+        "type": "text",
+        "placeholders": {}
+      },
+      "areYouSureToDeAuthorized": "Are you sure to deauthorized?",
+      "@areYouSureToDeAuthorized": {
+        "description": "areYouSureToDeAuthorized",
+        "type": "text",
+        "placeholders": {}
+      },
+      "ifYouDeAuthorizeToTheCenter": "If you deauthorize to the center, your child will no longer have access to the services of the center's attention and emotion plans",
+      "@ifYouDeAuthorizeToTheCenter": {
+        "description": "ifYouDeAuthorizeToTheCenter",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorizedCenters": "Authorized Centers",
+      "@authorizedCenters": {
+        "description": "authorizedCenters",
+        "type": "text",
+        "placeholders": {}
+      },
+      "deAuthorized": "Deauthorized",
+      "@deAuthorized": {
+        "description": "deAuthorized",
+        "type": "text",
+        "placeholders": {}
+      },
+      "youCanScanAgain": "Authorization canceled, you can scan again",
+      "@youCanScanAgain": {
+        "description": "youCanScanAgain",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorizationSuccessful": "Authorization Successful",
+      "@authorizationSuccessful": {
+        "description": "authorizationSuccessful",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorizationFailed": "Authorization Failed",
+      "@authorizationFailed": {
+        "description": "authorizationFailed",
+        "type": "text",
+        "placeholders": {}
+      },
+      "childInformation": "Child's Profile",
+      "@childInformation": {
+        "description": "childInformation",
+        "type": "text",
+        "placeholders": {}
+      },
+      "editedSuccessfully": "Edited Successfully",
+      "@editedSuccessfully": {
+        "description": "editedSuccessfully",
+        "type": "text",
+        "placeholders": {}
+      },
+      "editChild": "Edit Child's Profile",
+      "@editChild": {
+        "description": "editChild",
+        "type": "text",
+        "placeholders": {}
+      },
+      "edit": "Edit",
+      "@edit": {
+        "description": "edit",
+        "type": "text",
+        "placeholders": {}
+      },
+  "addChildTips": "You can only modify the child's photo and name after submitting.",
+      "@addChildTips": {
+        "description": "addChildTips",
+        "type": "text",
+        "placeholders": {}
+      },
+  "lastName": "Last Name",
+    "@lastName": {
+      "description": "Last Name",
+      "type": "text",
+      "placeholders": {}
+    },
+    "firstName": "First Name",
+    "@firstName": {
+      "description": "First Name",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loadMore": "Load more",
+    "@loadMore": {
+      "description": "loadMore",
+      "type": "text",
+      "placeholders": {}
+    },
+    "noMoreData": "No more data",
+    "@noMoreData": {
+      "description": "noMoreData",
+      "type": "text",
+      "placeholders": {}
+    },
+   "profilePhoto": "Profile Photo",
+    "@profilePhoto": {
+      "description": "Profile Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "photo": "Photo",
+    "@photo": {
+      "description": "Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "takePhoto": "Camera",
+    "@takePhoto": {
+      "description": "Take Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "fromAlbum": "Choose from Album",
+    "@fromAlbum": {
+      "description": "Take Photo",
+      "type": "text",
+      "placeholders": {}
+    },
+    "unreceivedCode": "No verification code received",
+      "@unreceivedCode": {
+        "description": "unreceivedCode",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTitle": "If you haven't received your verification code, it may be due to:",
+      "@unreceivedCodeTitle": {
+        "description": "unreceivedCodeTitle",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTips1": "· In [Blocked / Junk SMS]",
+      "@unreceivedCodeTips1": {
+        "description": "unreceivedCodeTips1",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTips2": "· The phone number entered is not yours",
+      "@unreceivedCodeTips2": {
+        "description": "unreceivedCodeTips2",
+        "type": "text",
+        "placeholders": {}
+      },
+      "unreceivedCodeTips3": "· Signal error. Try again after 60s",
+      "@unreceivedCodeTips3": {
+        "description": "unreceivedCodeTips3",
+        "type": "text",
+        "placeholders": {}
+      },
+    "reminderEdit": "Edit Reminder",
+      "@reminderEdit": {
+        "description": "Reminder Edit",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTitle": "Event, Please Input",
+      "@reminderTitle": {
+        "description": "Reminder Title",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderBody": "Description, Please Input",
+      "@reminderBody": {
+        "description": "Reminder Content",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTarget": "Please Select a Kid",
+      "@reminderTarget": {
+        "description": "Reminder Target",
+        "type": "text",
+        "placeholders": {}
+      },
+      "alarm": "Alarm",
+      "@alarm": {
+        "description": "Alarm",
+        "type": "text",
+        "placeholders": {}
+      },
+      "day": "Day",
+      "@day": {
+        "description": "Day",
+        "type": "text",
+        "placeholders": {}
+      },
+      "time": "Time",
+      "@time": {
+        "description": "Time",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTypeWeekly": "Repeat Every Week",
+      "@reminderTypeWeekly": {
+        "description": "Time",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTypeDaily": "Repeat Every Day",
+      "@reminderTypeDaily": {
+        "description": "Time",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTypeSchedule": "Not repeat",
+      "@reminderTypeSchedule": {
+        "description": "Time",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTypeNormal": "Right Now",
+      "@reminderTypeNormal": {
+        "description": "Time",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminderTypeSelection": "Select Reminder Repeat",
+      "@reminderTypeSelection": {
+        "description": "Time",
+        "type": "text",
+        "placeholders": {}
+      },
+      "reminder": "Reminder",
+      "@reminder": {
+        "description": "reminder",
+        "type": "text",
+        "placeholders": {}
+      },
+   "ring": "Ring",
+    "@ring": {
+      "description": "Ring",
+      "type": "text",
+      "placeholders": {}
+    },
+    "vibrate": "Vibrate",
+    "@vibrate": {
+      "description": "vibrate",
+      "type": "text",
+      "placeholders": {}
+    },
+    "daily": "Daily",
+    "@daily": {
+      "description": "daily",
+      "type": "text",
+      "placeholders": {}
+    },
+      "sendNotification": "Notification",
+      "@sendNotification": {
+        "description": "sendNotification",
+        "type": "text",
+        "placeholders": {}
+      },
+  "reminderEvents": "Reminder Events",
+    "@reminderEvents": {
+      "description": "reminderEvents",
+      "type": "text",
+      "placeholders": {}
+    },
+  "deleted": "Deleted",
+    "@deleted": {
+      "description": "deleted",
+      "type": "text",
+      "placeholders": {}
+    },
+    "delete": "Delete",
+    "@delete": {
+      "description": "delete",
+      "type": "text",
+      "placeholders": {}
+    },
+  "myReminder": "My Reminder",
+    "@myReminder": {
+      "description": "myReminder",
+      "type": "text",
+      "placeholders": {}
+    },
+   "vratReportTitle": "Cognitive Leap VRAT Report",
+     "@vratReportTitle": {
+       "description": "vratReportTitle",
+       "type": "text",
+       "placeholders": {}
+     },
+  "dioCancel": "Request to API server was cancelled",
+  "@dioCancel": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioConnectionTimeout": "Connection timeout with API server",
+  "@dioConnectionTimeout": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioReceiveCancel": "Receive timeout in connection with API server",
+  "@dioReceiveCancel": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioResponse": "Received invalid status code:}",
+  "@dioResponse": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioSendTimeout": "Send timeout in connection with API server",
+  "@dioSendTimeout": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioDefault": "Connection to API server failed due to internet",
+  "@dioDefault": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "dioError": "Internet Communication Error",
+  "@dioError": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "unknownError": "Unknown Error",
+  "@unknownError": {
+    "description": "DIO",
+    "type": "text",
+    "placeholders": {}
+  },
+  "internalErrorTitle": "Unknown Error",
+  "@internalErrorTitle": {
+    "description": "Error",
+    "type": "text",
+    "placeholders": {}
+  },
+  "continueTesting": "Continue",
+      "@continueTesting": {
+        "description": "continueTesting",
+        "type": "text",
+        "placeholders": {}
+      },
+    "newVersionForNewFeature": "Rocket Baby has new features can help you on this. Please update your Rocket Baby. Happy day to you!",
+    "@newVersionForNewFeature": {
+      "description": "New Version",
+      "type": "text",
+      "placeholders": {}
+    },
+   "male": "Male",
+   "@male": {
+     "description": "Sex",
+     "type": "text",
+     "placeholders": {}
+   },
+   "female": "Female",
+   "@female": {
+     "description": "Sex",
+     "type": "text",
+     "placeholders": {}
+   },
+  "nutritionTitle": "Nutrition",
+  "@nutritionTitle": {
+    "description": "Nutrition",
+    "type": "text",
+    "placeholders": {}
+  },
+  "needLoginForPlan": "Need to Login for Creating a Plan",
+  "@needLoginForPlan": {
+    "description": "Plan",
+    "type": "text",
+    "placeholders": {}
+  },
+  "needAddKidForPlan": "Need to Add a Kid for Creating a Plan",
+  "@needAddKidForPlan": {
+    "description": "Plan",
+    "type": "text",
+    "placeholders": {}
+  },
+  "sleep": "Sleep",
+    "@sleep": {
+      "description": "sleep",
+      "type": "text",
+      "placeholders": {}
+    },
+  "applicationType": "Application Type",
+   "@applicationType": {
+     "description": "Application",
+     "type": "text",
+     "placeholders": {}
+   },
+ "notLoggedInForALongTimeMsg": "Your login information has expired, please log in again",
+ "@notLoggedInForALongTimeMsg": {
+   "description": "Exception",
+   "type": "text",
+   "placeholders": {}
+ },
+ "timeOut": "Operation TimedOut",
+   "@timeOut": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "timeOutMessage": "your operation timed out, please try again later",
+   "@timeOutMessage": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "notLogin": "Not Logged In",
+   "@notLogin": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "notLoginMsg": "Operation requires login, please login and try again",
+   "@notLoginMsg": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "insufficientPermissions": "Insufficient Permissions",
+   "@insufficientPermissions": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "insufficientPermissionsMsg": "You do not have permission to perform this operation",
+   "@insufficientPermissionsMsg": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "serverError": "Server Exception",
+   "@serverError": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "serverErrorMsg": "Server error, please try again later",
+   "@serverErrorMsg": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "unknownErrorMsg": "Unknown error, please try again later",
+   "@unknownErrorMsg": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "versionError": "Version Error",
+   "@versionError": {
+     "description": "Exception",
+     "type": "text",
+     "placeholders": {}
+   },
+   "interventionTitle": "Intervention Series",
+   "@interventionTitle": {
+     "description": "Intervention",
+     "type": "text",
+     "placeholders": {}
+   },
+   "versionUnsupported": "Version unsupported! Please update your app to ",
+     "@versionUnsupported": {
+       "description": "Version unsupported",
+       "type": "text",
+       "placeholders": {}
+     },
+   "today": "Today",
+   "@today": {
+     "description": "today",
+     "type": "text",
+     "placeholders": {}
+   },
+    "daySingular": "day",
+    "@daySingular": {
+      "description": "daySingular",
+      "type": "text",
+      "placeholders": {}
+    },
+    "dayPlural": "days",
+    "@dayPlural": {
+      "description": "dayPlural",
+      "type": "text",
+      "placeholders": {}
+    },
+ "goodEnvironmentTitle": "Improve Sleep Environment",
+   "@goodEnvironmentTitle": {
+     "description": "Improve Sleep Environment",
+     "type": "text",
+     "placeholders": {}
+   },
+   "keepPunchingTitle": "Keep Punching",
+   "@keepPunchingTitle": {
+     "description": "Keep Punching",
+     "type": "text",
+     "placeholders": {}
+   },
+   "planCardFoot": "Perseverance Prevails",
+   "@planCardFoot": {
+     "description": "Keep Punching",
+     "type": "text",
+     "placeholders": {}
+   },
+  "addSubjectConfirmTitle": "Do You Want to Save？",
+  "@addSubjectConfirmTitle": {
+    "description": "Add Subject Confirm Title",
+    "type": "text",
+    "placeholders": {}
+  },
+  "nonEditableSubject": "Information is Permanent after Saving",
+  "@nonEditableSubject": {
+    "description": "Non Editable Subject",
+    "type": "text",
+    "placeholders": {}
+  },
+     "openAll": "Turn on",
+     "@openAll": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "closeAll": "Turn off",
+     "@closeAll": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "openSuccess": "open success",
+     "@openSuccess": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "closeSuccess": "close success",
+     "@closeSuccess": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "pleaseWait": "please wait",
+     "@pleaseWait": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "openMsg": "When turned on, you will receive reminder notifications, including all default events and self-built events",
+     "@openMsg": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "closeMsg": "After closing, you will not receive reminder notifications, including all default events and self-built events",
+     "@closeMsg": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "closeTitle": "Are you sure you want to turn off all reminder notifications？",
+     "@closeTitle": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "openTitle": "Are you sure to turn on notifications for all reminders？",
+     "@openTitle": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "confirmOpen": "confirm open?",
+     "@confirmOpen": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+     "confirmClose": "confirm close?",
+     "@confirmClose": {
+       "description": "option",
+       "type": "text",
+       "placeholders": {}
+     },
+  "continuousPunch": "Consecutive Punch",
+    "@continuousPunch": {
+      "description": "continuousPunch",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cumulativePunch": "Total Punch",
+    "@cumulativePunch": {
+      "description": "cumulativePunch",
+      "type": "text",
+      "placeholders": {}
+    },
+ "punchMessage": "The more you punch, the more accurate",
+   "@punchMessage": {
+     "description": "Punch Message",
+     "type": "text",
+     "placeholders": {}
+   },
+   "sleepStatisticsAnalysis": "Statistics & Analysis",
+   "@sleepStatisticsAnalysis": {
+     "description": "option",
+     "type": "text",
+     "placeholders": {}
+   },
+   "nutritionStatisticsAnalysis": "Statistics & Analysis",
+   "@nutritionStatisticsAnalysis": {
+     "description": "option",
+     "type": "text",
+     "placeholders": {}
+   },
+"toComplete": "Continue",
+   "@toComplete": {
+     "description": "toComplete",
+     "type": "text",
+     "placeholders": {}
+   },
+   "toPunch": "Punch",
+   "@toPunch": {
+     "description": "toPunch",
+     "type": "text",
+     "placeholders": {}
+   },
+   "view": "View",
+   "@view": {
+     "description": "view",
+     "type": "text",
+     "placeholders": {}
+   },
+  "audioPlayError": "Audio Data Error",
+  "@audioPlayError": {
+    "description": "Audio",
+    "type": "text",
+    "placeholders": {}
+  },
+  "thirdPartyLogin": "Other Login/Register",
+  "@thirdPartyLogin": {
+    "description": "Third PartyLogin",
+    "type": "text",
+    "placeholders": {}
+  },
+  "quitAssessment": "seconds, the test will automatically jump out",
+    "@quitAssessment": {
+      "description": "quitAssessment",
+      "type": "text",
+      "placeholders": {}
+  },
+  "confirmQuit": "Not finished yet, are you sure to quit",
+    "@confirmQuit": {
+      "description": "confirmQuit",
+      "type": "text",
+      "placeholders": {}
+  },
+  "carefully": "Please fill in carefully",
+    "@carefully": {
+      "description": "carefully",
+      "type": "text",
+      "placeholders": {}
+    },
+    "loginFailed": "Login failed",
+      "@loginFailed": {
+        "description": "loginFailed",
+        "type": "text",
+        "placeholders": {}
+    },
+    "codeSendFailed": "Failed to send verification code",
+      "@codeSendFailed": {
+        "description": "codeSendFailed",
+        "type": "text",
+        "placeholders": {}
+    },
+    "weChatLoginFailed": "WeChat login failed",
+      "@weChatLoginFailed": {
+        "description": "weChatLoginFailed",
+        "type": "text",
+        "placeholders": {}
+    },
+    "networkConnectError": "Unable to connect to the network, please check the network settings",
+      "@networkConnectError": {
+        "description": "networkConnectError",
+        "type": "text",
+        "placeholders": {}
+      },
+      "gotIt": "Got it",
+      "@gotIt": {
+        "description": "gotIt",
+        "type": "text",
+        "placeholders": {}
+      },
+      "operationTimeOut": "Operation timed out, please try again later",
+      "@operationTimeOut": {
+        "description": "operationTimeOut",
+        "type": "text",
+        "placeholders": {}
+      },
+      "someError": "Something went wrong with the request, please try again later",
+      "@someError": {
+        "description": "someError",
+        "type": "text",
+        "placeholders": {}
+      },
+      "versionNotSupported": "The current APP version does not support",
+      "@versionNotSupported": {
+        "description": "versionNotSupported",
+        "type": "text",
+        "placeholders": {}
+      },
+      "updateTo": "Please update the APP to the latest version V",
+      "@updateTo": {
+        "description": "updateTo",
+        "type": "text",
+        "placeholders": {}
+      },
+      "authorityInsufficient": "Sorry, this operation is currently not open to you",
+      "@authorityInsufficient": {
+        "description": "authorityInsufficient",
+        "type": "text",
+        "placeholders": {}
+    },
+   "statisticalAnalysis": "Statistical Analysis",
+   "@statisticalAnalysis": {
+     "description": "statisticalAnalysis",
+     "type": "text",
+     "placeholders": {}
+   },
+   "trainerFeedback": "Trainer feedback",
+   "@trainerFeedback": {
+     "description": "trainerFeedback",
+     "type": "text",
+     "placeholders": {}
+   },
+   "theTrainingType": "The training type",
+   "@theTrainingType": {
+     "description": "theTrainingType",
+     "type": "text",
+     "placeholders": {}
+   },
+   "theGender": "The gender",
+   "@theGender": {
+     "description": "theGender",
+     "type": "text",
+     "placeholders": {}
+   },
+   "punchCompleted": "The punch card has been completed",
+   "@punchCompleted": {
+     "description": "punchCompleted",
+     "type": "text",
+     "placeholders": {}
+   },
+   "viewCourseContent": "View course content",
+   "@viewCourseContent": {
+     "description": "viewCourseContent",
+     "type": "text",
+     "placeholders": {}
+   },
+   "typeOfAssessment": "Type of assessment",
+   "@typeOfAssessment": {
+     "description": "typeOfAssessment",
+     "type": "text",
+     "placeholders": {}
+   },
+   "openPlan": "Open plan",
+   "@openPlan": {
+     "description": "openPlan",
+     "type": "text",
+     "placeholders": {}
+   },
+   "testStatus": "Test status",
+   "@testStatus": {
+     "description": "testStatus",
+     "type": "text",
+     "placeholders": {}
+   },
+     "upPage": "Page Up",
+     "@upPage": {
+       "description": "Next Page",
+       "type": "text",
+       "placeholders": {}
+     },
+     "downPage": "Page Down",
+     "@downPage": {
+       "description": "Previous Page",
+       "type": "text",
+       "placeholders": {}
+     },
+     "buy": "Buy Now",
+     "@buy": {
+       "description": "Payment",
+       "type": "text",
+       "placeholders": {}
+     },
+     "scheduleVisit": "Find Schedule?",
+     "@scheduleVisit": {
+       "description": "Clinic",
+       "type": "text",
+       "placeholders": {}
+     },
+     "userNamePlaceHolder": "User name",
+     "@userNamePlaceHolder": {
+       "description": "User info",
+       "type": "text",
+       "placeholders": {}
+     },
+     "userEmailPlaceHolder": "User email address",
+     "@userEmailPlaceHolder": {
+       "description": "Clinic",
+       "type": "text",
+       "placeholders": {}
+     },
+     "signIn": "Sign In",
+     "@signIn": {
+       "description": "Sign In",
+       "type": "text",
+       "placeholders": {}
+     },
+     "fullNamePlaceholder": "Full name",
+     "@fullNamePlaceholder": {
+       "description": "fullNamePlaceholder",
+       "type": "text",
+       "placeholders": {}
+     },
+     "sex": "Sex",
+     "@sex": {
+       "description": "sex",
+       "type": "text",
+       "placeholders": {}
+     },
+     "sibling": "Sibling",
+     "@sibling": {
+       "description": "Sibling",
+       "type": "text",
+       "placeholders": {}
+     },
+     "subscribe": "Subscribe",
+     "@subscribe": {
+       "description": "Subscribe",
+       "type": "text",
+       "placeholders": {}
+     },
+     "shoppingCartTitle": "Shopping Cart",
+     "@shoppingCartTitle": {
+       "description": "Shopping Cart",
+       "type": "text",
+       "placeholders": {}
+     },
+     "accountTitle": "Account",
+     "@accountTitle": {
+       "description": "Account",
+       "type": "text",
+       "placeholders": {}
+     },
+     "planTitle": "Plan",
+     "@planTitle": {
+       "description": "Plan",
+       "type": "text",
+       "placeholders": {}
+     },
+     "doctorTitle": "Doctor",
+     "@doctorTitle": {
+       "description": "Doctor",
+       "type": "text",
+       "placeholders": {}
+     },
+     "nurseTitle": "Nurse",
+     "@nurseTitle": {
+       "description": "Nurse",
+       "type": "text",
+       "placeholders": {}
+     },
+     "teacherTitle": "Teacher",
+     "@teacherTitle": {
+       "description": "Teacher",
+       "type": "text",
+       "placeholders": {}
+     },
+     "counselorTitle": "Counselor",
+     "@counselorTitle": {
+       "description": "Counselor",
+       "type": "text",
+       "placeholders": {}
+     },
+     "please": "Please",
+     "@please": {
+       "description": "Please",
+       "type": "text",
+       "placeholders": {}
+     },
+     "loginRequired": "Login is Required",
+     "@loginRequired": {
+       "description": "Login isRequired",
+       "type": "text",
+       "placeholders": {}
+     },
+     "loginNow": "Login now?",
+     "@loginNow": {
+       "description": "Login now?",
+       "type": "text",
+       "placeholders": {}
+     },
+     "supplements": "Supplements",
+     "@supplements": {
+       "description": "Supplements",
+       "type": "text",
+       "placeholders": {}
+     },
+     "articles": "Articles",
+     "@articles": {
+       "description": "Articles",
+       "type": "text",
+       "placeholders": {}
+     },
+     "locations": "Locations",
+     "@locations": {
+       "description": "Locations",
+       "type": "text",
+       "placeholders": {}
+     },
+     "payment": "Payment",
+     "@payment": {
+       "description": "Payment",
+       "type": "text",
+       "placeholders": {}
+     },
+     "counseling": "Counseling ",
+     "@counseling": {
+       "description": "Counseling",
+       "type": "text",
+       "placeholders": {}
+     },
+     "onlineMedical": "Online Meeting",
+     "@onlineMedical": {
+       "description": "Online Medical",
+       "type": "text",
+       "placeholders": {}
+     },
+     "onlineTreatment": "Online Treatment",
+     "@onlineTreatment": {
+       "description": "Online Treatment",
+       "type": "text",
+       "placeholders": {}
+     },
+     "userInfoTitle": "User Profile",
+     "@userInfoTitle": {
+       "description": "User Profile",
+       "type": "text",
+       "placeholders": {}
+     },
+     "address": "Address",
+     "@address": {
+       "description": "Address",
+       "type": "text",
+       "placeholders": {}
+     },
+     "medicalRecord": "Medical Record",
+     "@medicalRecord": {
+       "description": "Medical Record",
+       "type": "text",
+       "placeholders": {}
+     },
+     "deleteAccout": "Delete Account",
+     "@deleteAccout": {
+       "description": "Delete Account",
+       "type": "text",
+       "placeholders": {}
+     },
+     "search": "Search",
+     "@search": {
+       "description": "Search",
+       "type": "text",
+       "placeholders": {}
+     },
+     "sortingBy": "Sorting By",
+     "@sortingBy": {
+       "description": "Sorting By",
+       "type": "text",
+       "placeholders": {}
+     },
+     "patient": "Patient",
+     "@patient": {
+       "description": "Patient",
+       "type": "text",
+       "placeholders": {}
+     },
+     "orders": "Orders",
+     "@orders": {
+       "description": "Orders",
+       "type": "text",
+       "placeholders": {}
+     },
+     "payment_unpaid": "Unpaid",
+     "@payment_unpaid": {
+       "description": "Unpaid",
+       "type": "text",
+       "placeholders": {}
+     },
+     "payment_closed": "Closed",
+     "@payment_closed": {
+       "description": "Closed",
+       "type": "text",
+       "placeholders": {}
+     },
+     "payment_paid": "Paid",
+     "@payment_paid": {
+       "description": "Paid",
+       "type": "text",
+       "placeholders": {}
+     },
+     "english": "English",
+     "@english": {
+       "description": "English",
+       "type": "text",
+       "placeholders": {}
+     },
+     "chinese": "Chinese",
+     "@chinese": {
+       "description": "Chinese",
+       "type": "text",
+       "placeholders": {}
+     },
+     "child": "Child",
+     "@child": {
+       "description": "Child",
+       "type": "text",
+       "placeholders": {}
+     },
+
+   "userTitle": "User",
+     "@userTitle": {
+       "description": "User",
+       "type": "text",
+       "placeholders": {}
+     },
+
+     "parentingClass": "Parenting Class",
+      "@parentingClass": {
+        "description": "Parenting Class",
+        "type": "text",
+        "placeholders": {}
+      },
+  "medicalHelper": "Professionals",
+  "@medicalHelper": {
+    "description": "Helper",
+    "type": "text",
+    "placeholders": {}
+  },
+ "pleaseSignIn": "Please Sign in",
+   "@pleaseSignIn": {
+     "description": "Please sign in",
+     "type": "text",
+     "placeholders": {}
+   },
+  "admin": "Admin",
+   "@admin": {
+     "description": "Please Sign in",
+     "type": "text",
+     "placeholders": {}
+   },
+  "allUsers": "All Users",
+   "@allUsers": {
+     "description": "All Users",
+     "type": "text",
+     "placeholders": {}
+   },
+ "completeLogin": "Please complete your profile",
+   "@completeLogin": {
+     "description": "Please complete your profile",
+     "type": "text",
+     "placeholders": {}
+   },
+   "secondEmail": "Backup email",
+   "@secondEmail": {
+     "description": "Backup email",
+     "type": "text",
+     "placeholders": {}
+   },
+    "onlineMeeting": "Meeting",
+    "@onlineMeeting": {
+      "description": "Meeting",
+      "type": "text",
+      "placeholders": {}
+    },
+    "placeOrder": "Place Order",
+    "@placeOrder": {
+      "description": "Place Order",
+      "type": "text",
+      "placeholders": {}
+    },
+  "userNameOrEmail": "Username or email",
+    "@userNameOrEmail": {
+      "description": "Username or email",
+      "type": "text",
+      "placeholders": {}
+    },
+    "usePrefix": "Use ",
+    "@usePrefix": {
+      "description": "Use",
+      "type": "text",
+      "placeholders": {}
+    },
+    "parentingClassDescription": "Series of Parenting Course",
+    "@parentingClassDescription": {
+      "description": "Use",
+      "type": "text",
+      "placeholders": {}
+    },
+    "onlineMeetingSetting": "Online Meeting",
+    "@onlineMeetingSetting": {
+      "description": "Online Meeting",
+      "type": "text",
+      "placeholders": {}
+    },
+    "joinMeeting": "Join Online Meeting",
+    "@joinMeeting": {
+      "description": "Join Meeting",
+      "type": "text",
+      "placeholders": {}
+    },
+   "book": "Expert Book Collection",
+    "@book": {
+      "description": "Book",
+      "type": "text",
+      "placeholders": {}
+    },
+    "city": "City",
+    "@city": {
+      "description": "City",
+      "type": "text",
+      "placeholders": {}
+    },
+    "postCode": "Code",
+    "@postCode": {
+      "description": "Code",
+      "type": "text",
+      "placeholders": {}
+    },
+    "country": "Country",
+    "@country": {
+      "description": "country",
+      "type": "text",
+      "placeholders": {}
+    },
+    "state": "State",
+    "@state": {
+      "description": "State",
+      "type": "text",
+      "placeholders": {}
+    },
+   "shippingAddress": "Shipping Address",
+   "@shippingAddress": {
+     "description": "Shipping Address",
+     "type": "text",
+     "placeholders": {}
+   },
+   "cannotBeNull": "Cannot be empty",
+   "@cannotBeNull": {
+     "description": "Cannot be empty",
+     "type": "text",
+     "placeholders": {}
+   },
+ "orderItemTitle": "Manifest",
+   "@orderItemTitle": {
+     "description": "Manifest",
+     "type": "text",
+     "placeholders": {}
+   },
+  "billingAddress": "Billing Address",
+  "@billingAddress": {
+    "description": "Billing Address",
+    "type": "text",
+    "placeholders": {}
+  },
+  "homeAddress": "Home Address",
+  "@homeAddress": {
+    "description": "Home Address",
+    "type": "text",
+    "placeholders": {}
+  },
+"paymentPolicy": "Payment Policy",
+  "@paymentPolicy": {
+    "description": "paymentPolicy",
+    "type": "text",
+    "placeholders": {}
+  },
+  "updatedAt": "Updated",
+  "@updatedAt": {
+    "description": "updatedAt",
+    "type": "text",
+    "placeholders": {}
+  },
+ "planner": "Planner",
+  "@planner": {
+    "description": "Planner",
+    "type": "text",
+    "placeholders": {}
+  },
+
+  "summary": "Health Summary",
+  "@summary": {
+    "description": "Summary",
+    "type": "text",
+    "placeholders": {}
+  },
+ "workshop": "Workshop",
+  "@workshop": {
+    "description": "Workshop",
+    "type": "text",
+    "placeholders": {}
+  },
+  "Webinar": "Webinar",
+  "@webinar": {
+    "description": "webinar",
+    "type": "text",
+    "placeholders": {}
+  },
+  "homeExercise": "Home Exercise",
+  "@homeExercise": {
+    "description": "Home Exercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "schoolExercise": "School Exercise",
+  "@schoolExercise": {
+    "description": "schoolExercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "onlineExercise": "Online Exercise",
+  "@onlineExercise": {
+    "description": "onlineExercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "siteExercise": "Clinical Exercise",
+  "@siteExercise": {
+    "description": "siteExercise",
+    "type": "text",
+    "placeholders": {}
+  },
+  "exerciseBalance": "Balance",
+  "@exerciseBalance": {
+    "description": "exerciseBalance",
+    "type": "text",
+    "placeholders": {}
+  },
+  "exerciseMemory": "Memory",
+  "@exerciseMemory": {
+    "description": "exerciseMemory",
+    "type": "text",
+    "placeholders": {}
+  },
+  "pleaseInputRight": "Please input correct",
+  "@pleaseInputRight": {
+    "description": "pleaseInputRight",
+    "type": "text",
+    "placeholders": {}
+  },
+  "subtitle": "Subtitle",
+  "@subtitle": {
+    "description": "subtitle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "content": "Content",
+  "@content": {
+    "description": "subtitle",
+    "type": "text",
+    "placeholders": {}
+  },
+  "titleDisplay": "Title",
+  "@titleDisplay": {
+    "description": "titleDisplay",
+    "type": "text",
+    "placeholders": {}
+  },
+  "vendor": "Vendor",
+  "@vendor": {
+    "description": "vendor",
+    "type": "text",
+    "placeholders": {}
+  },
+  "provider": "Provider",
+  "@provider": {
+    "description": "vendor",
+    "type": "text",
+    "placeholders": {}
+  },
+  "version": "Version",
+  "@version": {
+    "description": "version",
+    "type": "text",
+    "placeholders": {}
+  },
+  "forAgeFrom": "For age from",
+  "@forAgeFrom": {
+    "description": "forAgeFrom",
+    "type": "text",
+    "placeholders": {}
+  },
+  "cpt": "Continuous Performance Tests",
+  "@cpt": {
+    "description": "Continuous Performance Tests",
+    "type": "text",
+    "placeholders": {}
+  },
+  "target": "Target",
+  "@target": {
+    "description": "target",
+    "type": "text",
+    "placeholders": {}
+  },
+  "subject": "Subject",
+  "@subject": {
+    "description": "subject",
+    "type": "text",
+    "placeholders": {}
+  },
+
+   "level": "Level",
+   "@level": {
+     "description": "subject",
+     "type": "text",
+     "placeholders": {}
+   },
+  "questionnaire": "Questionnaire",
+   "@questionnaire": {
+     "description": "questionnaire",
+     "type": "text",
+     "placeholders": {}
+   },
+ "meetingServer": "Server",
+   "@meetingServer": {
+     "description": "Server",
+     "type": "text",
+     "placeholders": {}
+   },
+   "meetingRoomId": "Room ID",
+   "@meetingRoomId": {
+     "description": "meetingRoomId",
+     "type": "text",
+     "placeholders": {}
+   },
+   "audio": "Use Audio",
+   "@audio": {
+     "description": "audio",
+     "type": "text",
+     "placeholders": {}
+   },
+   "video": "Use Video",
+   "@video": {
+     "description": "video",
+     "type": "text",
+     "placeholders": {}
+   },
+ "hangup": "Hangup",
+   "@hangup": {
+     "description": "hangup",
+     "type": "text",
+     "placeholders": {}
+   },
+   "leaveRoom": "Are you sure to leave the room?",
+   "@leaveRoom": {
+     "description": "leaveRoom",
+     "type": "text",
+     "placeholders": {}
+   },
+   "waitingForOthers": "Waiting for others to join...",
+    "@waitingForOthers": {
+      "description": "waitingForOthers",
+      "type": "text",
+      "placeholders": {}
+    },
+
+    "cardNumber": "Card Number",
+    "@cardNumber": {
+      "description": "cardNumber",
+      "type": "text",
+      "placeholders": {}
+    },
+    "expiredDate": "Expired Date",
+    "@expiredDate": {
+      "description": "expiredDate",
+      "type": "text",
+      "placeholders": {}
+    },
+    "cardHolder": "Card Holder",
+    "@cardHolder": {
+      "description": "cardHolder",
+      "type": "text",
+      "placeholders": {}
+    },
+    "creditCard": "Credit Card",
+    "@creditCard": {
+      "description": "creditCard",
+      "type": "text",
+      "placeholders": {}
+    },
+    "submitted": "Submitted",
+    "@submitted": {
+      "description": "submitted",
+      "type": "text",
+      "placeholders": {}
+    },
+
+  "ehr": "Electronic Health Record",
+  "@ehr": {
+    "description": "ehr",
+    "type": "text",
+    "placeholders": {}
+  },
+  "createdAt": "Created at",
+  "@createdAt": {
+    "description": "createdAt",
+    "type": "text",
+    "placeholders": {}
+  },
+  "health": "Health",
+  "@health": {
+    "description": "health",
+    "type": "text",
+    "placeholders": {}
+  },
+  "education": "Education",
+  "@education": {
+    "description": "education",
+    "type": "text",
+    "placeholders": {}
+  }
+
+}
