@@ -68,3 +68,5 @@ _ReSharper*/
 #Nuget packages folder
 packages/
 /android/.gradle
+/ios/Flutter/flutter_export_environment.sh
+/ios/Flutter/Generated.xcconfig
