@@ -31,15 +31,13 @@ dependencies:
   logging: ^0.11.4
   flutter_artech:
     path: ../flutter_artech
-  FastBraiin:
-    path: ../FB/fastbraiin_app
+#  FastBraiin:
+#    path: ../FB/fastbraiin_app
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   intl_translation: ^0.17.10
-
-
 
 # For information on the generic Dart part of this file, see the
 dependency_overrides:

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_artech/artech_app.dart';
+import 'package:flutter_artech/flutter_arteck.dart';
 import 'package:full_house_app/home_page.dart';
 import 'package:logging/logging.dart';
 
@@ -11,6 +11,8 @@ void main() async {
     print(
         '[${rec.level.name}][${rec.time}][${rec.loggerName}]: ${rec.message}');
   });
+
+  MyDatabase();
 
   runApp(ArtechApp(child: MaterialApp(
       supportedLocales: [
