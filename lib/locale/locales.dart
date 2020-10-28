@@ -6,16 +6,16 @@ import 'package:logging/logging.dart';
 
 class FullHouseLocalizations {
 
-  static final Logger log = Logger("FullHouseLocalizations");
+  static final Logger _log = Logger("FullHouseLocalizations");
 
   static Future<FullHouseLocalizations> load(Locale locale) {
     // Get name
     final String name =
     locale.countryCode == null ? locale.languageCode : locale.toString();
     // Get Locale name
-    log.info(locale.toString());
+    _log.info(locale.toString());
     final String localeName = Intl.canonicalizedLocale(name);
-    log.info(localeName);
+    _log.info(localeName);
     return initializeMessages(localeName).then((bool _) {
       Intl.defaultLocale = localeName;
       return FullHouseLocalizations();
@@ -26,14 +26,18 @@ class FullHouseLocalizations {
     return Localizations.of<FullHouseLocalizations>(context, FullHouseLocalizations);
   }
 
+  String get userCenter {
+    return Intl.message('User Center',
+        name: 'userCenter', desc: 'userCenter');
+  }
+
 }
 
 class FullHouseLocalizationDelegate extends
     LocalizationsDelegate<FullHouseLocalizations> {
   @override
-  bool isSupported(Locale locale){
-    return true;
-    //LocaleSetting.supportedLanguage.contains(locale.languageCode);
+  bool isSupported(Locale locale) {
+    return locale.languageCode=='en'||locale.languageCode=='zh';
   }
 
   @override
