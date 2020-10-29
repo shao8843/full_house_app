@@ -29,10 +29,9 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   logging: ^0.11.4
+  graphql_flutter: ^3.1.0
   flutter_artech:
     path: ../flutter_artech
-#  FastBraiin:
-#    path: ../FB/fastbraiin_app
 
 dev_dependencies:
   flutter_test:
