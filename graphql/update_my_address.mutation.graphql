@@ -1,0 +1,7 @@
+mutation  UpdateMyAddress($input:updateMyAddressInput){
+    updateMyAddress(input: $input){
+        userAddress{
+            ...MyAddress
+        }
+    }
+}

@@ -1,0 +1,7 @@
+mutation DeleteMyAddress($input:deleteUserAddressInput){
+    deleteMyAddress(input:$input){
+        userAddress{
+            ...MyAddress
+        }
+    }
+}

@@ -1,0 +1,31 @@
+query AssessmentQuestionnaire($id:ID!){
+    assessmentQuestionnaire(id:$id){
+        ...AssessmentQuestionnaireSimple
+        media{
+            __typename
+            id
+            url
+            formats
+            width
+            height
+            ext
+            caption
+            name
+            size
+        }
+        content
+        questionnaire{
+            ...QuestionnaireSimple
+        }
+        #    created_at
+        #    updated_at
+        subject{
+            type
+        }
+        level
+        forPerson{
+            type
+        }
+        period_length
+    }
+}

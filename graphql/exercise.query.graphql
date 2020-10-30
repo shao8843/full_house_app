@@ -1,0 +1,15 @@
+query Exercise($id:ID!) {
+    exercise (id:$id){
+        ...ExerciseSimple
+        content
+        age
+        type
+        level
+        questionnaire{
+            ...QuestionnaireSimple
+        }
+        subject{
+            type
+        }
+    }
+}

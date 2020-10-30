@@ -1,0 +1,5 @@
+query Books($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    books(sort: $sort, limit: $limit, start: $start, where: $where) {
+        ...BookSimple
+    }
+}

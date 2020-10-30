@@ -1,0 +1,9 @@
+query Children($sort: String, $limit: Int, $start: Int, $where:JSON) {
+#   TODO  filter children with role
+    users(sort: $sort, limit: $limit, start: $start, where: $where){
+        ...UserSimple
+        childInfo{
+            ...ChildInfoSimple
+        }
+    }
+}

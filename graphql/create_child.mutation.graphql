@@ -1,0 +1,10 @@
+mutation createChild($input:createChildInput!){
+    createChild(input: $input){
+        user{
+            ...UserSimple
+            childInfo{
+                ...ChildInfoSimple
+            }
+        }
+    }
+}

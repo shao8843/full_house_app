@@ -1,0 +1,11 @@
+query Parent($id:ID!){
+    user(id: $id){
+        ...UserDetail
+        parentInfo{
+            ...ParentInfoSimple
+        }
+        patientInfo{
+            ...PatientInfoDetail
+        }
+    }
+}

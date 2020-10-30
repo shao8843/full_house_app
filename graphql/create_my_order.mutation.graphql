@@ -1,0 +1,7 @@
+mutation CreateMyOrder($input:createMyOrderInput){
+    createMyOrder(input: $input){
+        order{
+            ...OrderDetail
+        }
+    }
+}

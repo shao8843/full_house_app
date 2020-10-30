@@ -1,0 +1,30 @@
+query Ehr($id:ID!) {
+    ehr (id:$id){
+        ...EhrSimple
+        source
+        source_id
+        medias{
+            ...MediaSimple
+        }
+        data
+        questionnaire_answer{
+            ...QuestionnaireAnswerSimple
+        }
+        summaries {
+            id
+            rating
+            type
+            subject
+        }
+        office_comments
+        position{
+            latitude
+            longitude
+            altitude
+            timestamp
+            speed
+            head
+        }
+
+    }
+}

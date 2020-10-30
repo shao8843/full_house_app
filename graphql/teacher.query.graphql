@@ -1,0 +1,11 @@
+query Teacher($id:ID!){
+    user(id: $id){
+        ...UserDetail
+        teacherInfo{
+            ...TeacherInfoSimple
+        }
+        patientInfo{
+            ...PatientInfoSimple
+        }
+    }
+}

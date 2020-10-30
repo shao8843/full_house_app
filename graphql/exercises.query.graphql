@@ -1,0 +1,5 @@
+query Exercises($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    exercises(sort: $sort, limit: $limit, start: $start, where: $where){
+        ...ExerciseSimple
+    }
+}

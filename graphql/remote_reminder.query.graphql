@@ -1,0 +1,16 @@
+query RemoteReminder ($id:ID!) {
+    reminder(id: $id){
+        id
+        name
+        body
+        dateTime
+        related{
+            __typename
+        }
+        user{
+            ...UserSimple
+        }
+        source
+        sourceId
+    }
+}

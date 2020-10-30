@@ -1,0 +1,725 @@
+fragment PostSimple on Post{
+    id
+    title
+    subtitle
+    medias:image{
+        __typename
+        id
+        url
+        formats
+        width
+        height
+        ext
+        caption
+        name
+        size
+    }
+    categories{
+        id
+        name
+    }
+    recommended
+    updated_day
+    vip_color:vip_color {
+        color
+    }
+    cover_background_color:cover_background_color {
+        color
+    }
+    price
+    trademark{
+        name
+        image{
+            url
+        }
+    }
+    currency{
+        ...Currency
+    }
+    author {
+        id
+        fullName
+        role{
+            name
+        }
+    }
+    vipText
+    entityRawId
+    entityType
+    prePrice
+    rating
+    needShipping
+}
+
+fragment PostComponentSimple on ComponentContentPost{
+    id
+    title
+    subtitle
+    medias:image{
+        __typename
+        id
+        url
+        formats
+        width
+        height
+        ext
+        caption
+        name
+        size
+    }
+    categories{
+        __typename
+        id
+        name
+    }
+    recommended
+    updated_day
+    vip_color:vip_color {
+        color
+    }
+    cover_background_color:cover_background_color {
+        color
+    }
+    price
+    trademark{
+        id
+        name
+        image{
+            url
+        }
+    }
+    currency{
+        ...Currency
+    }
+    author {
+        id
+        fullName
+        role{
+            name
+        }
+    }
+    vipText
+    prePrice
+    rating
+    needShipping
+}
+
+fragment ArticleSimple on Article{
+#    __typename
+    id
+    name
+    media {
+        __typename
+        id
+        url
+        formats
+        width
+        height
+        ext
+        caption
+        name
+        size
+    }
+    published_at
+    post{
+        ...PostComponentSimple
+    }
+}
+
+fragment AssessmentQuestionnaireSimple on AssessmentQuestionnaire{
+#    __typename
+    name
+    id
+    post{
+        ...PostComponentSimple
+    }
+    questionnaireOnly
+}
+
+fragment AssessmentQuestionnaireDetail on AssessmentQuestionnaire{
+    #    __typename
+    ...AssessmentQuestionnaireSimple
+    name
+    id
+    media{
+        __typename
+        id
+        url
+        formats
+        width
+        height
+        ext
+        caption
+        name
+        size
+    }
+    content
+    questionnaire{
+        __typename
+        id
+        provider
+        data
+        displayName
+    }
+    #    created_at
+    #    updated_at
+    post{
+        ...PostComponentSimple
+    }
+    forPerson{
+        type
+    }
+    subject{
+        type
+    }
+}
+
+
+fragment  UserSimple on UsersPermissionsUser{
+    id
+    username
+    fullName,
+    email,
+    name,
+    sex,
+    birthday,
+    image{
+        url
+    }
+    role{
+        name
+    }
+    confirmed
+}
+
+fragment UserDetail on UsersPermissionsUser {
+    id
+    fullName,
+    sex,
+    username,
+    name,
+    birthday,
+    email,
+    image{
+        url
+    }
+    blocked
+    confirmed
+    countryCode
+    created_at
+    organization_units {
+        id
+        displayName
+    }
+    phone
+    provider
+    qrUrl
+    second_email
+    updated_at
+    role{
+        name
+    }
+    content
+}
+
+fragment UserMe on UsersPermissionsMe{
+    id
+    username
+    fullName,
+    email,
+    name,
+    sex,
+    phone,
+    birthday,
+    countryCode
+    second_email
+    image{
+        url
+    }
+    role{
+        name
+    }
+    accountInfo{
+        id
+        name
+        orders{
+            ...OrderSimple
+        }
+    }
+    authorInfo{
+        ...AuthorInfoSimple
+    }
+    teacherInfo{
+        ...TeacherInfoSimple
+    }
+    parentInfo{
+        ...ParentInfoWithChildren
+    }
+    childInfo{
+        ...ChildInfoSimple
+    }
+    counselorInfo{
+        ...CounselorInfoSimple
+    }
+    doctorInfo{
+        ...DoctorInfoSimple
+    }
+    nurseInfo{
+        ...NurseInfoSimple
+    }
+    patientInfo{
+        ...PatientInfoSimple
+    }
+    user_agreements{
+        id
+        termOfServiceType
+        lastVersionDate
+        value
+    }
+}
+
+
+fragment ChildInfoSimple on ComponentUserChild {
+    id
+    relationToUser,
+    teacher{
+        ...UserSimple
+        teacherInfo{
+            __typename
+        }
+    },
+    parent{
+        __typename
+        ...UserSimple
+    }
+}
+
+fragment PatientInfoDetail on Patient {
+    id
+    doctor {
+        ...UserSimple
+        doctorInfo{
+            ...DoctorInfoSimple
+        }
+    }
+    nurse {
+        ...UserSimple
+        nurseInfo{
+            ...NurseInfoSimple
+        }
+    }
+    counselor {
+        ...UserSimple
+        counselorInfo{
+            ...CounselorInfoSimple
+        }
+    }
+    ehrs{
+        ...EhrSimple
+    }
+}
+
+fragment PatientInfoSimple on Patient {
+    id
+    name
+    doctor {
+        ...UserSimple
+        doctorInfo{
+            ...DoctorInfoSimple
+        }
+    }
+    nurse {
+        ...UserSimple
+        nurseInfo{
+            ...NurseInfoSimple
+        }
+    }
+    counselor {
+        ...UserSimple
+        counselorInfo{
+            ...CounselorInfoSimple
+        }
+    }
+    meetingId
+    ehrs {
+        ...EhrSimple
+    }
+    user {
+        ...UserSimple
+    }
+}
+
+
+fragment  DoctorInfoSimple on ComponentUserDoctor {
+    id
+    location{
+        ...LocationSimple
+    }
+    subject
+}
+
+
+fragment NurseInfoSimple on ComponentUserNurse {
+    id
+    location {
+        ...LocationSimple
+    }
+}
+
+fragment LocationSimple on Location {
+    id
+    name
+    address
+}
+
+fragment CounselorInfoSimple on ComponentUserCounselor {
+    id
+    location {
+        ...LocationSimple
+    }
+}
+
+
+fragment TeacherInfoSimple on ComponentUserTeacher {
+    id
+    school
+}
+
+
+fragment  ParentInfoSimple on ComponentUserParent{
+    id
+    children{
+        ...UserSimple
+    }
+}
+
+fragment  ParentInfoDetail on ComponentUserParent{
+    id
+}
+
+fragment  ParentInfoWithChildren on ComponentUserParent{
+    id
+    ...ParentInfoSimple
+    children{
+        ...UserSimple
+        childInfo{
+            relationToUser
+        }
+    }
+}
+
+fragment  AuthorInfoSimple on ComponentUserAuthor{
+    id
+    __typename
+}
+
+fragment  Currency on PaymentCurrency{
+    code,
+    decimal_digits,
+    id,
+    name,
+    name_plural,
+    rounding,
+    symbol,
+    symbol_native
+}
+
+fragment  OrderItemSimple on PaymentOrderItem{
+    additional,
+    id,
+    name,
+    picture{
+        url,
+    }
+    preUnitPrice,
+    quantity,
+    sourceId,
+    sourceType,
+    unitPrice,
+    updated_at,
+    currency{
+        ...Currency
+    }
+}
+fragment OrderItemDetail on PaymentOrderItem{
+    ...OrderItemSimple
+    #TODO related
+}
+
+
+fragment OrderSimple on PaymentOrder{
+    id,
+    uuid,
+    description,
+    currency{
+        ...Currency
+    },
+    expire,
+    needpayPrice
+    price,
+    paiedPrice,
+    status,
+    updated_at,
+    created_at,
+    items{
+        ...OrderItemSimple
+    }
+}
+
+fragment OrderDetail on PaymentOrder{
+    ...OrderSimple
+    additional,
+    shippingAddress{
+        ...Address
+    }
+}
+
+fragment OrderSimpleWithUser on PaymentOrder{
+    ...OrderSimple
+    user{
+        ...UserSimple
+    }
+}
+
+fragment  ReminderSimple on Reminder {
+    id
+    name
+    body
+    type
+    user {
+        ...UserSimple
+    }
+    related{
+        __typename
+    }
+}
+
+fragment Address on ComponentDataAddress{
+    address1
+    address2
+    address3
+    city
+    country
+    state
+    postalCode
+    fullName
+}
+
+fragment MyAddress on UserAddress{
+    id
+    tag
+    address{
+        ...Address
+    }
+}
+
+fragment  UserAddress on UserAddress{
+    ...MyAddress
+    user{
+        ...UserSimple
+    }
+}
+
+fragment EhrSimple on Ehr {
+    id
+    updated_at
+    created_at
+    user{
+        ...UserSimple
+    }
+    patient{
+        id
+        meetingId
+        name
+    }
+    type {
+        type
+    }
+    subject {
+        type
+    }
+    status
+}
+
+fragment PlanSimple on Plan {
+    name
+    id
+    assessment {
+        ...AssessmentQuestionnaireSimple
+    }
+    exercises {
+        ...ExerciseSimple
+    }
+    post{
+        ...PostComponentSimple
+    }
+    supplements {
+        ...SupplementSimple
+    }
+    parentings {
+        ...ParentingSimple
+    }
+    articles {
+        ...ArticleSimple
+    }
+    books {
+        ...BookSimple
+    }
+}
+
+fragment BookSimple on Book {
+    name
+    id
+    post{
+        ...PostComponentSimple
+    }
+}
+
+fragment BookDetail on Book {
+    ...BookSimple
+    content
+}
+
+fragment PlanDetail on Plan {
+    ...PlanSimple
+    content
+}
+
+fragment ExerciseSimple on Exercise {
+    id
+    updated_at
+    post {
+        ...PostComponentSimple
+    }
+}
+
+fragment SupplementSimple on Supplement {
+    __typename
+    name
+    id
+    post{
+        ...PostComponentSimple
+    }
+}
+
+fragment SupplementDetaile on Supplement {
+    ...SupplementSimple
+    provider
+    content
+    subject{
+        type
+    }
+    forPerson{
+        type
+    }
+}
+
+fragment ParentingSimple on Parenting {
+    id
+    name
+    __typename
+    post{
+        ...PostComponentSimple
+    }
+}
+
+fragment ParentingDetail on Parenting {
+    ...ParentingSimple
+    pdfFiles{
+        url
+    }
+    media{
+        url
+    }
+    content
+    questionnaire{
+        name
+        id
+        data
+        displayName
+        provider
+    }
+    subject{
+        type
+    }
+}
+
+fragment UserAgreementSimple on UserAgreement {
+    id
+    lastVersionDate
+    termOfServiceType
+    value
+    updated_at
+}
+
+fragment UserAgreementDetail on UserAgreement {
+    content
+    ...UserAgreementSimple
+}
+
+fragment WebinarSimple on Webinar {
+    id
+    schedule
+    meetingId
+    post{
+        ...PostComponentSimple
+    }
+}
+
+fragment QuestionnaireSimple on Questionnaire {
+    id
+    __typename
+    provider
+    data
+    name
+    displayName
+}
+
+fragment  QuestionnaireAnswerSimple on QuestionnaireAnswer {
+    created_at
+    id,
+    name,
+    questionnaire{
+        ...QuestionnaireSimple
+    }
+    updated_at
+    user {
+        ...UserSimple
+    }
+    submitted
+    data
+}
+
+fragment MediaSimple on UploadFile {
+    id
+    url
+}
+
+fragment  CreditCardSimple on CreditCard {
+    address {
+        ...UserAddress
+    }
+    cvc
+    expMonth
+    expYear
+    id
+    name
+    number
+}
+
+fragment  PaymentMethodSimple on PaymentMethod {
+    billingAddress{
+        ...UserAddress
+    }
+    creditCard{
+        ...CreditCardSimple
+    }
+    id
+    livemode
+    stripeId
+    type
+    user{
+        ...UserSimple
+    }
+}
+

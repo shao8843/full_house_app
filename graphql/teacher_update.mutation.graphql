@@ -1,0 +1,10 @@
+mutation TeacherUpdate($input: updateUserInput) {
+    updateUser(input: $input){
+        user{
+            ...UserDetail
+            teacherInfo{
+                ...TeacherInfoSimple
+            }
+        }
+    }
+}

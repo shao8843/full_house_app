@@ -1,0 +1,10 @@
+mutation DoctorUpdate($input: updateUserInput) {
+    updateUser(input: $input){
+        user{
+            ...UserDetail
+            doctorInfo{
+                ...DoctorInfoSimple
+            }
+        }
+    }
+}

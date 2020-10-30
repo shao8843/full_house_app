@@ -1,0 +1,5 @@
+query OrderStatus ($id:ID!){
+    order(id:$id){
+        status
+    }
+}

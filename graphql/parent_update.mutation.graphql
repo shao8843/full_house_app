@@ -1,0 +1,10 @@
+mutation ParentUpdate($input: updateUserInput) {
+    updateUser(input: $input){
+        user{
+            ...UserDetail
+            parentInfo{
+                ...ParentInfoSimple
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+mutation UpdateMe($input:updateMeInput){
+    updateMe(input: $input){
+        ...UserMe
+    }
+}

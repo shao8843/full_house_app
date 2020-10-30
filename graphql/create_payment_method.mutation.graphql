@@ -1,0 +1,7 @@
+mutation CreatePaymentMethod($input:createPaymentMethodInput!) {
+    createPaymentMethod(input: $input){
+        paymentMethod{
+            ...PaymentMethodSimple
+        }
+    }
+}

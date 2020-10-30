@@ -1,0 +1,7 @@
+query Version {
+    version {
+        number
+        updated_at
+        description
+    }
+}

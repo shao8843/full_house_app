@@ -1,0 +1,8 @@
+query Child($id:ID!){
+    user(id: $id){
+        ...UserDetail
+        childInfo{
+            ...ChildInfoSimple
+        }
+    }
+}

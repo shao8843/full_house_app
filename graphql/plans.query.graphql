@@ -1,0 +1,5 @@
+query Plans($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    plans(sort: $sort, limit: $limit, start: $start, where: $where) {
+        ...PlanSimple
+    }
+}

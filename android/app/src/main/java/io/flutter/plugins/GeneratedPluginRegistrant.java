@@ -18,7 +18,11 @@ public final class GeneratedPluginRegistrant {
     flutterEngine.getPlugins().add(new io.flutter.plugins.connectivity.ConnectivityPlugin());
       com.saltechsystems.couchbase_lite.CouchbaseLitePlugin.registerWith(shimPluginRegistry.registrarFor("com.saltechsystems.couchbase_lite.CouchbaseLitePlugin"));
     flutterEngine.getPlugins().add(new com.dexterous.flutterlocalnotifications.FlutterLocalNotificationsPlugin());
+    flutterEngine.getPlugins().add(new com.it_nomads.fluttersecurestorage.FlutterSecureStoragePlugin());
+      com.cloudwebrtc.webrtc.FlutterWebRTCPlugin.registerWith(shimPluginRegistry.registrarFor("com.cloudwebrtc.webrtc.FlutterWebRTCPlugin"));
+    flutterEngine.getPlugins().add(new io.github.ponnamkarthik.toast.fluttertoast.FlutterToastPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.packageinfo.PackageInfoPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.pathprovider.PathProviderPlugin());
+      de.jonasbark.stripepayment.StripePaymentPlugin.registerWith(shimPluginRegistry.registrarFor("de.jonasbark.stripepayment.StripePaymentPlugin"));
   }
 }

@@ -1,0 +1,12 @@
+mutation UpdateUserAggreement($input: updateUserAgreementInput) {
+    updateUserAgreement(input: $input) {
+        userAgreement{
+            user{
+                ...UserSimple
+            }
+            lastVersionDate
+            value
+            termOfServiceType
+        }
+    }
+}

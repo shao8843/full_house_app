@@ -1,0 +1,12 @@
+mutation CreateUserAggreement($input: createUserAgreementInput) {
+    createUserAgreement(input: $input) {
+        userAgreement{
+            user{
+                ...UserSimple
+            }
+            lastVersionDate
+            value
+            termOfServiceType
+        }
+    }
+}

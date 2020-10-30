@@ -1,0 +1,5 @@
+query Parentings($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    parentings(sort: $sort, limit: $limit, start: $start, where: $where) {
+        ...ParentingSimple
+    }
+}

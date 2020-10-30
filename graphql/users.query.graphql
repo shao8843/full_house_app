@@ -1,0 +1,26 @@
+query Users($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    users(sort: $sort, limit: $limit, start: $start, where: $where){
+        ...UserSimple
+        teacherInfo{
+            ...TeacherInfoSimple
+        }
+        doctorInfo{
+            ...DoctorInfoSimple
+        }
+        nurseInfo {
+            ...NurseInfoSimple
+        }
+        counselorInfo{
+            ...CounselorInfoSimple
+        }
+        parentInfo {
+            ...ParentInfoSimple
+        }
+        patientInfo {
+            ...PatientInfoSimple
+        }
+        childInfo{
+            ...ChildInfoSimple
+        }
+    }
+}

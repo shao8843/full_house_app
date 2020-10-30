@@ -1,0 +1,7 @@
+mutation CreateCreditCard($input:createCreditCardInput!) {
+    createCreditCard(input: $input){
+        creditCard{
+            ...CreditCardSimple
+        }
+    }
+}

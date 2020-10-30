@@ -1,0 +1,11 @@
+query FindMyChild($id:ID!){
+    myChild(id:$id){
+        ...UserDetail
+        childInfo{
+            ...ChildInfoSimple
+        }
+        patientInfo{
+            ...PatientInfoSimple
+        }
+    }
+}

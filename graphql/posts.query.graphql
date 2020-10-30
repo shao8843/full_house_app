@@ -1,0 +1,5 @@
+query Posts($sort: String, $limit: Int, $start: Int,$where:JSON){
+    posts(sort: $sort, limit: $limit, start: $start, where: $where) {
+        ...PostSimple
+    }
+}

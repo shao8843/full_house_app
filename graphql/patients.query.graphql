@@ -1,0 +1,5 @@
+query Patients($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    patients(sort: $sort, limit: $limit, start: $start, where: $where){
+        ...PatientInfoSimple
+    }
+}

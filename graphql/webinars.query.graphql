@@ -1,0 +1,5 @@
+query Webinars($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    webinars(sort: $sort, limit: $limit, start: $start, where: $where) {
+        ...WebinarSimple
+    }
+}

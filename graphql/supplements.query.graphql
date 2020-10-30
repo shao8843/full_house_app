@@ -1,0 +1,5 @@
+query Supplements($sort: String, $limit: Int, $start: Int, $where:JSON) {
+    supplements(sort: $sort, limit: $limit, start: $start, where: $where) {
+        ...SupplementSimple
+    }
+}

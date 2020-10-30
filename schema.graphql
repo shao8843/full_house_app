@@ -1,0 +1,6520 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: Query
+    mutation: Mutation
+}
+
+union Morph = AboutFastBraiin | Account | AccountAggregator | AccountConnection | AccountConnectionCreated_at | AccountConnectionCreated_by | AccountConnectionId | AccountConnectionName | AccountConnectionUpdated_at | AccountConnectionUpdated_by | AccountConnectionUser | AccountGroupBy | AppTermOfService | Article | ArticleAggregator | ArticleConnection | ArticleConnectionContent | ArticleConnectionCreated_at | ArticleConnectionCreated_by | ArticleConnectionForPerson | ArticleConnectionId | ArticleConnectionName | ArticleConnectionPost | ArticleConnectionPublished_at | ArticleConnectionQuestionnaire | ArticleConnectionSubject | ArticleConnectionUpdated_at | ArticleConnectionUpdated_by | ArticleGroupBy | AssessmentQuestionnaire | AssessmentQuestionnaireAggregator | AssessmentQuestionnaireAggregatorAvg | AssessmentQuestionnaireAggregatorMax | AssessmentQuestionnaireAggregatorMin | AssessmentQuestionnaireAggregatorSum | AssessmentQuestionnaireConnection | AssessmentQuestionnaireConnectionContent | AssessmentQuestionnaireConnectionCreated_at | AssessmentQuestionnaireConnectionCreated_by | AssessmentQuestionnaireConnectionForPerson | AssessmentQuestionnaireConnectionId | AssessmentQuestionnaireConnectionLevel | AssessmentQuestionnaireConnectionName | AssessmentQuestionnaireConnectionPeriod_length | AssessmentQuestionnaireConnectionPost | AssessmentQuestionnaireConnectionQuestionnaire | AssessmentQuestionnaireConnectionQuestionnaireOnly | AssessmentQuestionnaireConnectionSubject | AssessmentQuestionnaireConnectionUpdated_at | AssessmentQuestionnaireConnectionUpdated_by | AssessmentQuestionnaireGroupBy | AssessmentTermOfService | Book | BookAggregator | BookConnection | BookConnectionContent | BookConnectionCreated_at | BookConnectionCreated_by | BookConnectionId | BookConnectionName | BookConnectionPost | BookConnectionType | BookConnectionUpdated_at | BookConnectionUpdated_by | BookGroupBy | Category | CategoryAggregator | CategoryConnection | CategoryConnectionCreated_at | CategoryConnectionCreated_by | CategoryConnectionId | CategoryConnectionName | CategoryConnectionUpdated_at | CategoryConnectionUpdated_by | CategoryGroupBy | Color | ColorAggregator | ColorConnection | ColorConnectionColor | ColorConnectionCreated_at | ColorConnectionCreated_by | ColorConnectionId | ColorConnectionUpdated_at | ColorConnectionUpdated_by | ColorGroupBy | ComponentContentEpisode | ComponentContentPost | ComponentContentSummary | ComponentDataAddress | ComponentDataEhrSubject | ComponentDataEhrType | ComponentDataFor | ComponentDataPosition | ComponentUserAuthor | ComponentUserChild | ComponentUserCounselor | ComponentUserDoctor | ComponentUserNurse | ComponentUserParent | ComponentUserPatient | ComponentUserTeacher | Course | CourseAggregator | CourseConnection | CourseConnectionContent | CourseConnectionContentType | CourseConnectionCreated_at | CourseConnectionCreated_by | CourseConnectionId | CourseConnectionPicture | CourseConnectionSubtitle | CourseConnectionTitle | CourseConnectionUpdated_at | CourseConnectionUpdated_by | CourseGroupBy | CreditCard | CreditCardAggregator | CreditCardAggregatorAvg | CreditCardAggregatorMax | CreditCardAggregatorMin | CreditCardAggregatorSum | CreditCardConnection | CreditCardConnectionAddress | CreditCardConnectionCreated_at | CreditCardConnectionCreated_by | CreditCardConnectionCvc | CreditCardConnectionExpMonth | CreditCardConnectionExpYear | CreditCardConnectionId | CreditCardConnectionName | CreditCardConnectionNumber | CreditCardConnectionUpdated_at | CreditCardConnectionUpdated_by | CreditCardConnectionUser | CreditCardGroupBy | Ehr | EhrAggregator | EhrConnection | EhrConnectionCreated_at | EhrConnectionCreated_by | EhrConnectionData | EhrConnectionId | EhrConnectionOffice_comments | EhrConnectionPatient | EhrConnectionPosition | EhrConnectionQuestionnaire_answer | EhrConnectionSource | EhrConnectionSource_id | EhrConnectionStatus | EhrConnectionSubject | EhrConnectionType | EhrConnectionUpdated_at | EhrConnectionUpdated_by | EhrConnectionUser | EhrGroupBy | Exercise | ExerciseAggregator | ExerciseAggregatorAvg | ExerciseAggregatorMax | ExerciseAggregatorMin | ExerciseAggregatorSum | ExerciseConnection | ExerciseConnectionAge | ExerciseConnectionContent | ExerciseConnectionCreated_at | ExerciseConnectionCreated_by | ExerciseConnectionForPerson | ExerciseConnectionId | ExerciseConnectionLevel | ExerciseConnectionPost | ExerciseConnectionQuestionnaire | ExerciseConnectionSubject | ExerciseConnectionType | ExerciseConnectionUpdated_at | ExerciseConnectionUpdated_by | ExerciseGroupBy | FlowchartTest | Location | LocationAggregator | LocationConnection | LocationConnectionAddress | LocationConnectionContent | LocationConnectionCreated_at | LocationConnectionCreated_by | LocationConnectionDescription | LocationConnectionEmail | LocationConnectionId | LocationConnectionName | LocationConnectionPhone | LocationConnectionPost | LocationConnectionQrCode | LocationConnectionType | LocationConnectionUpdated_at | LocationConnectionUpdated_by | LocationConnectionWeb | LocationGroupBy | Parenting | ParentingAggregator | ParentingConnection | ParentingConnectionContent | ParentingConnectionCreated_at | ParentingConnectionCreated_by | ParentingConnectionId | ParentingConnectionName | ParentingConnectionPdfFiles | ParentingConnectionPost | ParentingConnectionQuestionnaire | ParentingConnectionSubject | ParentingConnectionUpdated_at | ParentingConnectionUpdated_by | ParentingGroupBy | Patient | PatientAggregator | PatientConnection | PatientConnectionCounselor | PatientConnectionCreated_at | PatientConnectionCreated_by | PatientConnectionDoctor | PatientConnectionId | PatientConnectionMeetingId | PatientConnectionName | PatientConnectionNurse | PatientConnectionUpdated_at | PatientConnectionUpdated_by | PatientConnectionUser | PatientGroupBy | PaymentCurrency | PaymentCurrencyAggregator | PaymentCurrencyAggregatorAvg | PaymentCurrencyAggregatorMax | PaymentCurrencyAggregatorMin | PaymentCurrencyAggregatorSum | PaymentCurrencyConnection | PaymentCurrencyConnectionCode | PaymentCurrencyConnectionCreated_at | PaymentCurrencyConnectionCreated_by | PaymentCurrencyConnectionDecimal_digits | PaymentCurrencyConnectionId | PaymentCurrencyConnectionName | PaymentCurrencyConnectionName_plural | PaymentCurrencyConnectionRounding | PaymentCurrencyConnectionSymbol | PaymentCurrencyConnectionSymbol_native | PaymentCurrencyConnectionUpdated_at | PaymentCurrencyConnectionUpdated_by | PaymentCurrencyGroupBy | PaymentMethod | PaymentMethodAggregator | PaymentMethodConnection | PaymentMethodConnectionBillingAddress | PaymentMethodConnectionCreated_at | PaymentMethodConnectionCreated_by | PaymentMethodConnectionCreditCard | PaymentMethodConnectionId | PaymentMethodConnectionLivemode | PaymentMethodConnectionStripeId | PaymentMethodConnectionType | PaymentMethodConnectionUpdated_at | PaymentMethodConnectionUpdated_by | PaymentMethodConnectionUser | PaymentMethodGroupBy | PaymentOrder | PaymentOrderAggregator | PaymentOrderAggregatorAvg | PaymentOrderAggregatorMax | PaymentOrderAggregatorMin | PaymentOrderAggregatorSum | PaymentOrderConnection | PaymentOrderConnectionAdditional | PaymentOrderConnectionCreated_at | PaymentOrderConnectionCreated_by | PaymentOrderConnectionCurrency | PaymentOrderConnectionDescription | PaymentOrderConnectionExpire | PaymentOrderConnectionId | PaymentOrderConnectionNeedpayPrice | PaymentOrderConnectionOutTradeId | PaymentOrderConnectionOutTradeProvider | PaymentOrderConnectionPaiedPrice | PaymentOrderConnectionPrice | PaymentOrderConnectionShippingAddress | PaymentOrderConnectionStatus | PaymentOrderConnectionUpdated_at | PaymentOrderConnectionUpdated_by | PaymentOrderConnectionUser | PaymentOrderConnectionUuid | PaymentOrderGroupBy | PaymentOrderItem | PaymentPolicy | PaymentSetting | Plan | PlanAggregator | PlanConnection | PlanConnectionContent | PlanConnectionCreated_at | PlanConnectionCreated_by | PlanConnectionForPerson | PlanConnectionId | PlanConnectionName | PlanConnectionPost | PlanConnectionQuestionnaire | PlanConnectionUpdated_at | PlanConnectionUpdated_by | PlanGroupBy | Post | PostAggregator | PostAggregatorAvg | PostAggregatorMax | PostAggregatorMin | PostAggregatorSum | PostConnection | PostConnectionAuthor | PostConnectionCover_background_color | PostConnectionCreated_at | PostConnectionCreated_by | PostConnectionCurrency | PostConnectionEntityRawId | PostConnectionEntityType | PostConnectionId | PostConnectionNeedShipping | PostConnectionPrePrice | PostConnectionPrice | PostConnectionRating | PostConnectionRawPostId | PostConnectionRecommended | PostConnectionStatus | PostConnectionSubtitle | PostConnectionTitle | PostConnectionTrademark | PostConnectionUpdated_at | PostConnectionUpdated_by | PostConnectionUpdated_day | PostConnectionVipText | PostConnectionVip_color | PostGroupBy | Questionnaire | QuestionnaireAggregator | QuestionnaireAnswer | QuestionnaireAnswerAggregator | QuestionnaireAnswerConnection | QuestionnaireAnswerConnectionCreated_at | QuestionnaireAnswerConnectionCreated_by | QuestionnaireAnswerConnectionData | QuestionnaireAnswerConnectionId | QuestionnaireAnswerConnectionName | QuestionnaireAnswerConnectionQuestionnaire | QuestionnaireAnswerConnectionSubmitted | QuestionnaireAnswerConnectionUpdated_at | QuestionnaireAnswerConnectionUpdated_by | QuestionnaireAnswerConnectionUser | QuestionnaireAnswerGroupBy | QuestionnaireConnection | QuestionnaireConnectionCreated_at | QuestionnaireConnectionCreated_by | QuestionnaireConnectionData | QuestionnaireConnectionDisplayName | QuestionnaireConnectionId | QuestionnaireConnectionName | QuestionnaireConnectionProvider | QuestionnaireConnectionUpdated_at | QuestionnaireConnectionUpdated_by | QuestionnaireGroupBy | Reminder | ReminderAggregator | ReminderConnection | ReminderConnectionBody | ReminderConnectionCreated_at | ReminderConnectionCreated_by | ReminderConnectionDateTime | ReminderConnectionId | ReminderConnectionName | ReminderConnectionSource | ReminderConnectionSourceId | ReminderConnectionType | ReminderConnectionUpdated_at | ReminderConnectionUpdated_by | ReminderConnectionUser | ReminderGroupBy | Supplement | SupplementAggregator | SupplementConnection | SupplementConnectionContent | SupplementConnectionCreated_at | SupplementConnectionCreated_by | SupplementConnectionForPerson | SupplementConnectionId | SupplementConnectionName | SupplementConnectionPost | SupplementConnectionProvider | SupplementConnectionSubject | SupplementConnectionUpdated_at | SupplementConnectionUpdated_by | SupplementGroupBy | Telemetry | TelemetryAggregator | TelemetryConnection | TelemetryConnectionCreated_at | TelemetryConnectionCreated_by | TelemetryConnectionId | TelemetryConnectionRaw | TelemetryConnectionUpdated_at | TelemetryConnectionUpdated_by | TelemetryGroupBy | Trademark | TrademarkAggregator | TrademarkConnection | TrademarkConnectionCreated_at | TrademarkConnectionCreated_by | TrademarkConnectionId | TrademarkConnectionImage | TrademarkConnectionName | TrademarkConnectionUpdated_at | TrademarkConnectionUpdated_by | TrademarkGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreated_at | UploadFileConnectionCreated_by | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdated_at | UploadFileConnectionUpdated_by | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileGroupBy | UserAddress | UserAddressAggregator | UserAddressConnection | UserAddressConnectionAddress | UserAddressConnectionCreated_at | UserAddressConnectionCreated_by | UserAddressConnectionId | UserAddressConnectionTag | UserAddressConnectionUpdated_at | UserAddressConnectionUpdated_by | UserAddressConnectionUser | UserAddressGroupBy | UserAgreement | UserAgreementAggregator | UserAgreementConnection | UserAgreementConnectionContent | UserAgreementConnectionCreated_at | UserAgreementConnectionCreated_by | UserAgreementConnectionId | UserAgreementConnectionLastVersionDate | UserAgreementConnectionTermOfServiceType | UserAgreementConnectionUpdated_at | UserAgreementConnectionUpdated_by | UserAgreementConnectionUser | UserAgreementConnectionValue | UserAgreementGroupBy | UserAssessment | UserAssessmentAggregator | UserAssessmentConnection | UserAssessmentConnectionAssessment_questionnaire | UserAssessmentConnectionCreated_at | UserAssessmentConnectionCreated_by | UserAssessmentConnectionId | UserAssessmentConnectionUpdated_at | UserAssessmentConnectionUpdated_by | UserAssessmentConnectionUser | UserAssessmentGroupBy | UserExercise | UserExerciseAggregator | UserExerciseConnection | UserExerciseConnectionCreated_at | UserExerciseConnectionCreated_by | UserExerciseConnectionExercise | UserExerciseConnectionId | UserExerciseConnectionUpdated_at | UserExerciseConnectionUpdated_by | UserExerciseConnectionUser | UserExerciseGroupBy | UserParenting | UserParentingAggregator | UserParentingConnection | UserParentingConnectionCreated_at | UserParentingConnectionCreated_by | UserParentingConnectionId | UserParentingConnectionParenting | UserParentingConnectionUpdated_at | UserParentingConnectionUpdated_by | UserParentingConnectionUser | UserParentingGroupBy | UserPermissionsPasswordPayload | UserPlan | UserPlanAggregator | UserPlanConnection | UserPlanConnectionCreated_at | UserPlanConnectionCreated_by | UserPlanConnectionId | UserPlanConnectionStatus | UserPlanConnectionUpdated_at | UserPlanConnectionUpdated_by | UserPlanConnectionUser | UserPlanGroupBy | UsersOrganizationunitsOrganizationUnit | UsersOrganizationunitsOrganizationUnitAggregator | UsersOrganizationunitsOrganizationUnitConnection | UsersOrganizationunitsOrganizationUnitConnectionCode | UsersOrganizationunitsOrganizationUnitConnectionCreated_at | UsersOrganizationunitsOrganizationUnitConnectionCreated_by | UsersOrganizationunitsOrganizationUnitConnectionDisplayName | UsersOrganizationunitsOrganizationUnitConnectionId | UsersOrganizationunitsOrganizationUnitConnectionParent | UsersOrganizationunitsOrganizationUnitConnectionUpdated_at | UsersOrganizationunitsOrganizationUnitConnectionUpdated_by | UsersOrganizationunitsOrganizationUnitGroupBy | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionCreated_by | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnectionUpdated_by | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionAccountInfo | UsersPermissionsUserConnectionAuthorInfo | UsersPermissionsUserConnectionBirthday | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionChildInfo | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionContent | UsersPermissionsUserConnectionCounselorInfo | UsersPermissionsUserConnectionCountryCode | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionCreated_by | UsersPermissionsUserConnectionDoctorInfo | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionFullName | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionImage | UsersPermissionsUserConnectionName | UsersPermissionsUserConnectionNurseInfo | UsersPermissionsUserConnectionParentInfo | UsersPermissionsUserConnectionPatientInfo | UsersPermissionsUserConnectionPhone | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionQrUrl | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionSecond_email | UsersPermissionsUserConnectionSex | UsersPermissionsUserConnectionStatus | UsersPermissionsUserConnectionTeacherInfo | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUpdated_by | UsersPermissionsUserConnectionUsername | UsersPermissionsUserGroupBy | Version | Webinar | WebinarAggregator | WebinarConnection | WebinarConnectionContent | WebinarConnectionCreated_at | WebinarConnectionCreated_by | WebinarConnectionId | WebinarConnectionMeetingId | WebinarConnectionPost | WebinarConnectionSchedule | WebinarConnectionSubject | WebinarConnectionUpdated_at | WebinarConnectionUpdated_by | WebinarGroupBy | batchTelemetryPayload | cancelOrderPayload | createAccountPayload | createArticlePayload | createAssessmentQuestionnairePayload | createBookPayload | createCategoryPayload | createColorPayload | createCoursePayload | createCreditCardPayload | createCurrencyPayload | createEhrPayload | createExercisePayload | createLocationPayload | createOrderPayload | createOrganizationUnitPayload | createParentingPayload | createPatientPayload | createPaymentMethodPayload | createPlanPayload | createPostPayload | createQuestionnaireAnswerPayload | createQuestionnairePayload | createReminderPayload | createRolePayload | createSupplementPayload | createTelemetryPayload | createTrademarkPayload | createUserAddressPayload | createUserAgreementPayload | createUserAssessmentPayload | createUserExercisePayload | createUserParentingPayload | createUserPayload | createUserPlanPayload | createWebinarPayload | deleteAboutFastBraiinPayload | deleteAccountPayload | deleteAppTermOfServicePayload | deleteArticlePayload | deleteAssessmentQuestionnairePayload | deleteAssessmentTermOfServicePayload | deleteBookPayload | deleteCategoryPayload | deleteColorPayload | deleteCoursePayload | deleteCreditCardPayload | deleteCurrencyPayload | deleteEhrPayload | deleteExercisePayload | deleteLocationPayload | deleteOrderPayload | deleteOrganizationUnitPayload | deleteParentingPayload | deletePatientPayload | deletePaymentMethodPayload | deletePaymentPolicyPayload | deletePlanPayload | deletePostPayload | deleteQuestionnaireAnswerPayload | deleteQuestionnairePayload | deleteReminderPayload | deleteRolePayload | deleteSupplementPayload | deleteTelemetryPayload | deleteTrademarkPayload | deleteUserAddressPayload | deleteUserAgreementPayload | deleteUserAssessmentPayload | deleteUserExercisePayload | deleteUserParentingPayload | deleteUserPayload | deleteUserPlanPayload | deleteVersionPayload | deleteWebinarPayload | requestOrderPayPayload | updateAboutFastBraiinPayload | updateAccountPayload | updateAppTermOfServicePayload | updateArticlePayload | updateAssessmentQuestionnairePayload | updateAssessmentTermOfServicePayload | updateBookPayload | updateCategoryPayload | updateColorPayload | updateCoursePayload | updateCreditCardPayload | updateCurrencyPayload | updateEhrPayload | updateExercisePayload | updateLocationPayload | updateOrderPayload | updateOrganizationUnitPayload | updateParentingPayload | updatePatientPayload | updatePaymentMethodPayload | updatePaymentPolicyPayload | updatePlanPayload | updatePostPayload | updateQuestionnaireAnswerPayload | updateQuestionnairePayload | updateReminderPayload | updateRolePayload | updateSupplementPayload | updateTelemetryPayload | updateTrademarkPayload | updateUserAddressPayload | updateUserAgreementPayload | updateUserAssessmentPayload | updateUserExercisePayload | updateUserParentingPayload | updateUserPayload | updateUserPlanPayload | updateVersionPayload | updateWebinarPayload
+
+type AboutFastBraiin {
+    content: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type Account {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    name: String!
+    orders(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrder]
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type AccountAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type AccountConnection {
+    aggregate: AccountAggregator
+    groupBy: AccountGroupBy
+    values: [Account]
+}
+
+type AccountConnectionCreated_at {
+    connection: AccountConnection
+    key: DateTime
+}
+
+type AccountConnectionCreated_by {
+    connection: AccountConnection
+    key: ID
+}
+
+type AccountConnectionId {
+    connection: AccountConnection
+    key: ID
+}
+
+type AccountConnectionName {
+    connection: AccountConnection
+    key: String
+}
+
+type AccountConnectionUpdated_at {
+    connection: AccountConnection
+    key: DateTime
+}
+
+type AccountConnectionUpdated_by {
+    connection: AccountConnection
+    key: ID
+}
+
+type AccountConnectionUser {
+    connection: AccountConnection
+    key: ID
+}
+
+type AccountGroupBy {
+    created_at: [AccountConnectionCreated_at]
+    created_by: [AccountConnectionCreated_by]
+    id: [AccountConnectionId]
+    name: [AccountConnectionName]
+    updated_at: [AccountConnectionUpdated_at]
+    updated_by: [AccountConnectionUpdated_by]
+    user: [AccountConnectionUser]
+}
+
+type AdminUser {
+    id: ID!
+    username: String
+}
+
+type AppTermOfService {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    term_of_service: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type Article {
+    content: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    episodes: [ComponentContentEpisode]
+    forPerson: ComponentDataFor
+    id: ID!
+    media(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    name: String!
+    order_items(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrderItem]
+    post: ComponentContentPost
+    published_at: Date
+    questionnaire: Questionnaire
+    subject: ComponentDataEhrSubject
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type ArticleAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ArticleConnection {
+    aggregate: ArticleAggregator
+    groupBy: ArticleGroupBy
+    values: [Article]
+}
+
+type ArticleConnectionContent {
+    connection: ArticleConnection
+    key: String
+}
+
+type ArticleConnectionCreated_at {
+    connection: ArticleConnection
+    key: DateTime
+}
+
+type ArticleConnectionCreated_by {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionForPerson {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionId {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionName {
+    connection: ArticleConnection
+    key: String
+}
+
+type ArticleConnectionPost {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionPublished_at {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionQuestionnaire {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionSubject {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleConnectionUpdated_at {
+    connection: ArticleConnection
+    key: DateTime
+}
+
+type ArticleConnectionUpdated_by {
+    connection: ArticleConnection
+    key: ID
+}
+
+type ArticleGroupBy {
+    content: [ArticleConnectionContent]
+    created_at: [ArticleConnectionCreated_at]
+    created_by: [ArticleConnectionCreated_by]
+    forPerson: [ArticleConnectionForPerson]
+    id: [ArticleConnectionId]
+    name: [ArticleConnectionName]
+    post: [ArticleConnectionPost]
+    published_at: [ArticleConnectionPublished_at]
+    questionnaire: [ArticleConnectionQuestionnaire]
+    subject: [ArticleConnectionSubject]
+    updated_at: [ArticleConnectionUpdated_at]
+    updated_by: [ArticleConnectionUpdated_by]
+}
+
+type AssessmentQuestionnaire {
+    content: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    forPerson: ComponentDataFor
+    id: ID!
+    level: Int
+    media(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    name: String!
+    period_length: Int!
+    post: ComponentContentPost
+    questionnaire: Questionnaire
+    questionnaireOnly: Boolean!
+    subject: ComponentDataEhrSubject
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type AssessmentQuestionnaireAggregator {
+    avg: AssessmentQuestionnaireAggregatorAvg
+    count: Int
+    max: AssessmentQuestionnaireAggregatorMax
+    min: AssessmentQuestionnaireAggregatorMin
+    sum: AssessmentQuestionnaireAggregatorSum
+    totalCount: Int
+}
+
+type AssessmentQuestionnaireAggregatorAvg {
+    level: Float
+    period_length: Float
+}
+
+type AssessmentQuestionnaireAggregatorMax {
+    level: Float
+    period_length: Float
+}
+
+type AssessmentQuestionnaireAggregatorMin {
+    level: Float
+    period_length: Float
+}
+
+type AssessmentQuestionnaireAggregatorSum {
+    level: Float
+    period_length: Float
+}
+
+type AssessmentQuestionnaireConnection {
+    aggregate: AssessmentQuestionnaireAggregator
+    groupBy: AssessmentQuestionnaireGroupBy
+    values: [AssessmentQuestionnaire]
+}
+
+type AssessmentQuestionnaireConnectionContent {
+    connection: AssessmentQuestionnaireConnection
+    key: String
+}
+
+type AssessmentQuestionnaireConnectionCreated_at {
+    connection: AssessmentQuestionnaireConnection
+    key: DateTime
+}
+
+type AssessmentQuestionnaireConnectionCreated_by {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireConnectionForPerson {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireConnectionId {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireConnectionLevel {
+    connection: AssessmentQuestionnaireConnection
+    key: Int
+}
+
+type AssessmentQuestionnaireConnectionName {
+    connection: AssessmentQuestionnaireConnection
+    key: String
+}
+
+type AssessmentQuestionnaireConnectionPeriod_length {
+    connection: AssessmentQuestionnaireConnection
+    key: Int
+}
+
+type AssessmentQuestionnaireConnectionPost {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireConnectionQuestionnaire {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireConnectionQuestionnaireOnly {
+    connection: AssessmentQuestionnaireConnection
+    key: Boolean
+}
+
+type AssessmentQuestionnaireConnectionSubject {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireConnectionUpdated_at {
+    connection: AssessmentQuestionnaireConnection
+    key: DateTime
+}
+
+type AssessmentQuestionnaireConnectionUpdated_by {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
+type AssessmentQuestionnaireGroupBy {
+    content: [AssessmentQuestionnaireConnectionContent]
+    created_at: [AssessmentQuestionnaireConnectionCreated_at]
+    created_by: [AssessmentQuestionnaireConnectionCreated_by]
+    forPerson: [AssessmentQuestionnaireConnectionForPerson]
+    id: [AssessmentQuestionnaireConnectionId]
+    level: [AssessmentQuestionnaireConnectionLevel]
+    name: [AssessmentQuestionnaireConnectionName]
+    period_length: [AssessmentQuestionnaireConnectionPeriod_length]
+    post: [AssessmentQuestionnaireConnectionPost]
+    questionnaire: [AssessmentQuestionnaireConnectionQuestionnaire]
+    questionnaireOnly: [AssessmentQuestionnaireConnectionQuestionnaireOnly]
+    subject: [AssessmentQuestionnaireConnectionSubject]
+    updated_at: [AssessmentQuestionnaireConnectionUpdated_at]
+    updated_by: [AssessmentQuestionnaireConnectionUpdated_by]
+}
+
+type AssessmentTermOfService {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    term_of_service: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type Book {
+    content: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    episodes: [ComponentContentEpisode]
+    id: ID!
+    name: String!
+    post: ComponentContentPost
+    type: BookType
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type BookAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type BookConnection {
+    aggregate: BookAggregator
+    groupBy: BookGroupBy
+    values: [Book]
+}
+
+type BookConnectionContent {
+    connection: BookConnection
+    key: String
+}
+
+type BookConnectionCreated_at {
+    connection: BookConnection
+    key: DateTime
+}
+
+type BookConnectionCreated_by {
+    connection: BookConnection
+    key: ID
+}
+
+type BookConnectionId {
+    connection: BookConnection
+    key: ID
+}
+
+type BookConnectionName {
+    connection: BookConnection
+    key: String
+}
+
+type BookConnectionPost {
+    connection: BookConnection
+    key: ID
+}
+
+type BookConnectionType {
+    connection: BookConnection
+    key: String
+}
+
+type BookConnectionUpdated_at {
+    connection: BookConnection
+    key: DateTime
+}
+
+type BookConnectionUpdated_by {
+    connection: BookConnection
+    key: ID
+}
+
+type BookGroupBy {
+    content: [BookConnectionContent]
+    created_at: [BookConnectionCreated_at]
+    created_by: [BookConnectionCreated_by]
+    id: [BookConnectionId]
+    name: [BookConnectionName]
+    post: [BookConnectionPost]
+    type: [BookConnectionType]
+    updated_at: [BookConnectionUpdated_at]
+    updated_by: [BookConnectionUpdated_by]
+}
+
+type Category {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    name: String!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type CategoryAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type CategoryConnection {
+    aggregate: CategoryAggregator
+    groupBy: CategoryGroupBy
+    values: [Category]
+}
+
+type CategoryConnectionCreated_at {
+    connection: CategoryConnection
+    key: DateTime
+}
+
+type CategoryConnectionCreated_by {
+    connection: CategoryConnection
+    key: ID
+}
+
+type CategoryConnectionId {
+    connection: CategoryConnection
+    key: ID
+}
+
+type CategoryConnectionName {
+    connection: CategoryConnection
+    key: String
+}
+
+type CategoryConnectionUpdated_at {
+    connection: CategoryConnection
+    key: DateTime
+}
+
+type CategoryConnectionUpdated_by {
+    connection: CategoryConnection
+    key: ID
+}
+
+type CategoryGroupBy {
+    created_at: [CategoryConnectionCreated_at]
+    created_by: [CategoryConnectionCreated_by]
+    id: [CategoryConnectionId]
+    name: [CategoryConnectionName]
+    updated_at: [CategoryConnectionUpdated_at]
+    updated_by: [CategoryConnectionUpdated_by]
+}
+
+type Color {
+    color: String
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type ColorAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ColorConnection {
+    aggregate: ColorAggregator
+    groupBy: ColorGroupBy
+    values: [Color]
+}
+
+type ColorConnectionColor {
+    connection: ColorConnection
+    key: String
+}
+
+type ColorConnectionCreated_at {
+    connection: ColorConnection
+    key: DateTime
+}
+
+type ColorConnectionCreated_by {
+    connection: ColorConnection
+    key: ID
+}
+
+type ColorConnectionId {
+    connection: ColorConnection
+    key: ID
+}
+
+type ColorConnectionUpdated_at {
+    connection: ColorConnection
+    key: DateTime
+}
+
+type ColorConnectionUpdated_by {
+    connection: ColorConnection
+    key: ID
+}
+
+type ColorGroupBy {
+    color: [ColorConnectionColor]
+    created_at: [ColorConnectionCreated_at]
+    created_by: [ColorConnectionCreated_by]
+    id: [ColorConnectionId]
+    updated_at: [ColorConnectionUpdated_at]
+    updated_by: [ColorConnectionUpdated_by]
+}
+
+type ComponentContentEpisode {
+    content: String
+    id: ID!
+    subtitle: String
+    title: String
+}
+
+type ComponentContentPost {
+    author: UsersPermissionsUser
+    categories(limit: Int, sort: String, start: Int, where: JSON): [Category]
+    cover_background_color: Color
+    currency: PaymentCurrency
+    id: ID!
+    image(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    needShipping: Boolean
+    prePrice: Float
+    price: Float
+    rating: Int
+    recommended: Boolean
+    status: PostStatus!
+    subtitle: String
+    title: String!
+    trademark: Trademark
+    updated_day: Date!
+    vipText: String
+    vip_color: Color
+}
+
+type ComponentContentSummary {
+    id: ID!
+    rating: Int
+    subject: SummarySubject!
+    type: SummaryType!
+}
+
+type ComponentDataAddress {
+    address1: String
+    address2: String
+    address3: String
+    city: String
+    country: String
+    fullName: String
+    id: ID!
+    postalCode: String
+    state: String
+}
+
+type ComponentDataEhrSubject {
+    id: ID!
+    type: EhrSubject
+}
+
+type ComponentDataEhrType {
+    id: ID!
+    type: EhrType!
+}
+
+type ComponentDataFor {
+    id: ID!
+    type: ForType!
+}
+
+type ComponentDataPosition {
+    altitude: Float
+    head: Float
+    id: ID!
+    latitude: Float
+    longitude: Float
+    speed: Float
+    timestamp: DateTime
+}
+
+type ComponentUserAuthor {
+    foo: String
+    id: ID!
+}
+
+type ComponentUserChild {
+    id: ID!
+    parent: UsersPermissionsUser
+    relationToUser: RelationType!
+    reminder: Reminder
+    teacher: UsersPermissionsUser
+}
+
+type ComponentUserCounselor {
+    id: ID!
+    location: Location
+}
+
+type ComponentUserDoctor {
+    id: ID!
+    location: Location
+    subject: DoctorSubject!
+}
+
+type ComponentUserNurse {
+    id: ID!
+    location: Location
+}
+
+type ComponentUserParent {
+    children(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+    id: ID!
+}
+
+type ComponentUserPatient {
+    counselor: UsersPermissionsUser
+    doctor: UsersPermissionsUser
+    id: ID!
+    nurse: UsersPermissionsUser
+}
+
+type ComponentUserTeacher {
+    id: ID!
+    school: String
+}
+
+type Course {
+    content: String
+    contentType: ContentType
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    medias(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    picture: UploadFile
+    subtitle: String
+    title: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type CourseAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type CourseConnection {
+    aggregate: CourseAggregator
+    groupBy: CourseGroupBy
+    values: [Course]
+}
+
+type CourseConnectionContent {
+    connection: CourseConnection
+    key: String
+}
+
+type CourseConnectionContentType {
+    connection: CourseConnection
+    key: String
+}
+
+type CourseConnectionCreated_at {
+    connection: CourseConnection
+    key: DateTime
+}
+
+type CourseConnectionCreated_by {
+    connection: CourseConnection
+    key: ID
+}
+
+type CourseConnectionId {
+    connection: CourseConnection
+    key: ID
+}
+
+type CourseConnectionPicture {
+    connection: CourseConnection
+    key: ID
+}
+
+type CourseConnectionSubtitle {
+    connection: CourseConnection
+    key: String
+}
+
+type CourseConnectionTitle {
+    connection: CourseConnection
+    key: String
+}
+
+type CourseConnectionUpdated_at {
+    connection: CourseConnection
+    key: DateTime
+}
+
+type CourseConnectionUpdated_by {
+    connection: CourseConnection
+    key: ID
+}
+
+type CourseGroupBy {
+    content: [CourseConnectionContent]
+    contentType: [CourseConnectionContentType]
+    created_at: [CourseConnectionCreated_at]
+    created_by: [CourseConnectionCreated_by]
+    id: [CourseConnectionId]
+    picture: [CourseConnectionPicture]
+    subtitle: [CourseConnectionSubtitle]
+    title: [CourseConnectionTitle]
+    updated_at: [CourseConnectionUpdated_at]
+    updated_by: [CourseConnectionUpdated_by]
+}
+
+type CreditCard {
+    address: UserAddress
+    created_at: DateTime!
+    created_by: AdminUser
+    cvc: String!
+    expMonth: Int!
+    expYear: Int!
+    id: ID!
+    name: String!
+    number: String!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type CreditCardAggregator {
+    avg: CreditCardAggregatorAvg
+    count: Int
+    max: CreditCardAggregatorMax
+    min: CreditCardAggregatorMin
+    sum: CreditCardAggregatorSum
+    totalCount: Int
+}
+
+type CreditCardAggregatorAvg {
+    expMonth: Float
+    expYear: Float
+}
+
+type CreditCardAggregatorMax {
+    expMonth: Float
+    expYear: Float
+}
+
+type CreditCardAggregatorMin {
+    expMonth: Float
+    expYear: Float
+}
+
+type CreditCardAggregatorSum {
+    expMonth: Float
+    expYear: Float
+}
+
+type CreditCardConnection {
+    aggregate: CreditCardAggregator
+    groupBy: CreditCardGroupBy
+    values: [CreditCard]
+}
+
+type CreditCardConnectionAddress {
+    connection: CreditCardConnection
+    key: ID
+}
+
+type CreditCardConnectionCreated_at {
+    connection: CreditCardConnection
+    key: DateTime
+}
+
+type CreditCardConnectionCreated_by {
+    connection: CreditCardConnection
+    key: ID
+}
+
+type CreditCardConnectionCvc {
+    connection: CreditCardConnection
+    key: String
+}
+
+type CreditCardConnectionExpMonth {
+    connection: CreditCardConnection
+    key: Int
+}
+
+type CreditCardConnectionExpYear {
+    connection: CreditCardConnection
+    key: Int
+}
+
+type CreditCardConnectionId {
+    connection: CreditCardConnection
+    key: ID
+}
+
+type CreditCardConnectionName {
+    connection: CreditCardConnection
+    key: String
+}
+
+type CreditCardConnectionNumber {
+    connection: CreditCardConnection
+    key: String
+}
+
+type CreditCardConnectionUpdated_at {
+    connection: CreditCardConnection
+    key: DateTime
+}
+
+type CreditCardConnectionUpdated_by {
+    connection: CreditCardConnection
+    key: ID
+}
+
+type CreditCardConnectionUser {
+    connection: CreditCardConnection
+    key: ID
+}
+
+type CreditCardGroupBy {
+    address: [CreditCardConnectionAddress]
+    created_at: [CreditCardConnectionCreated_at]
+    created_by: [CreditCardConnectionCreated_by]
+    cvc: [CreditCardConnectionCvc]
+    expMonth: [CreditCardConnectionExpMonth]
+    expYear: [CreditCardConnectionExpYear]
+    id: [CreditCardConnectionId]
+    name: [CreditCardConnectionName]
+    number: [CreditCardConnectionNumber]
+    updated_at: [CreditCardConnectionUpdated_at]
+    updated_by: [CreditCardConnectionUpdated_by]
+    user: [CreditCardConnectionUser]
+}
+
+type Ehr {
+    created_at: DateTime!
+    created_by: AdminUser
+    data: JSON
+    id: ID!
+    medias(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    office_comments: String
+    patient: Patient
+    position: ComponentDataPosition
+    questionnaire_answer: QuestionnaireAnswer
+    source: String!
+    source_id: String!
+    status: EhrStatus!
+    subject: ComponentDataEhrSubject
+    summaries: [ComponentContentSummary]
+    type: ComponentDataEhrType
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type EhrAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type EhrConnection {
+    aggregate: EhrAggregator
+    groupBy: EhrGroupBy
+    values: [Ehr]
+}
+
+type EhrConnectionCreated_at {
+    connection: EhrConnection
+    key: DateTime
+}
+
+type EhrConnectionCreated_by {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionData {
+    connection: EhrConnection
+    key: JSON
+}
+
+type EhrConnectionId {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionOffice_comments {
+    connection: EhrConnection
+    key: String
+}
+
+type EhrConnectionPatient {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionPosition {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionQuestionnaire_answer {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionSource {
+    connection: EhrConnection
+    key: String
+}
+
+type EhrConnectionSource_id {
+    connection: EhrConnection
+    key: String
+}
+
+type EhrConnectionStatus {
+    connection: EhrConnection
+    key: String
+}
+
+type EhrConnectionSubject {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionType {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionUpdated_at {
+    connection: EhrConnection
+    key: DateTime
+}
+
+type EhrConnectionUpdated_by {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrConnectionUser {
+    connection: EhrConnection
+    key: ID
+}
+
+type EhrGroupBy {
+    created_at: [EhrConnectionCreated_at]
+    created_by: [EhrConnectionCreated_by]
+    data: [EhrConnectionData]
+    id: [EhrConnectionId]
+    office_comments: [EhrConnectionOffice_comments]
+    patient: [EhrConnectionPatient]
+    position: [EhrConnectionPosition]
+    questionnaire_answer: [EhrConnectionQuestionnaire_answer]
+    source: [EhrConnectionSource]
+    source_id: [EhrConnectionSource_id]
+    status: [EhrConnectionStatus]
+    subject: [EhrConnectionSubject]
+    type: [EhrConnectionType]
+    updated_at: [EhrConnectionUpdated_at]
+    updated_by: [EhrConnectionUpdated_by]
+    user: [EhrConnectionUser]
+}
+
+type Exercise {
+    age: Int
+    content: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    forPerson: ComponentDataFor
+    id: ID!
+    level: Int
+    post: ComponentContentPost
+    questionnaire: Questionnaire
+    subject: ComponentDataEhrSubject
+    type: ExerciseType!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type ExerciseAggregator {
+    avg: ExerciseAggregatorAvg
+    count: Int
+    max: ExerciseAggregatorMax
+    min: ExerciseAggregatorMin
+    sum: ExerciseAggregatorSum
+    totalCount: Int
+}
+
+type ExerciseAggregatorAvg {
+    age: Float
+    level: Float
+}
+
+type ExerciseAggregatorMax {
+    age: Float
+    level: Float
+}
+
+type ExerciseAggregatorMin {
+    age: Float
+    level: Float
+}
+
+type ExerciseAggregatorSum {
+    age: Float
+    level: Float
+}
+
+type ExerciseConnection {
+    aggregate: ExerciseAggregator
+    groupBy: ExerciseGroupBy
+    values: [Exercise]
+}
+
+type ExerciseConnectionAge {
+    connection: ExerciseConnection
+    key: Int
+}
+
+type ExerciseConnectionContent {
+    connection: ExerciseConnection
+    key: String
+}
+
+type ExerciseConnectionCreated_at {
+    connection: ExerciseConnection
+    key: DateTime
+}
+
+type ExerciseConnectionCreated_by {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseConnectionForPerson {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseConnectionId {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseConnectionLevel {
+    connection: ExerciseConnection
+    key: Int
+}
+
+type ExerciseConnectionPost {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseConnectionQuestionnaire {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseConnectionSubject {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseConnectionType {
+    connection: ExerciseConnection
+    key: String
+}
+
+type ExerciseConnectionUpdated_at {
+    connection: ExerciseConnection
+    key: DateTime
+}
+
+type ExerciseConnectionUpdated_by {
+    connection: ExerciseConnection
+    key: ID
+}
+
+type ExerciseGroupBy {
+    age: [ExerciseConnectionAge]
+    content: [ExerciseConnectionContent]
+    created_at: [ExerciseConnectionCreated_at]
+    created_by: [ExerciseConnectionCreated_by]
+    forPerson: [ExerciseConnectionForPerson]
+    id: [ExerciseConnectionId]
+    level: [ExerciseConnectionLevel]
+    post: [ExerciseConnectionPost]
+    questionnaire: [ExerciseConnectionQuestionnaire]
+    subject: [ExerciseConnectionSubject]
+    type: [ExerciseConnectionType]
+    updated_at: [ExerciseConnectionUpdated_at]
+    updated_by: [ExerciseConnectionUpdated_by]
+}
+
+type FlowchartTest {
+    chart: String
+    created_by: AdminUser
+    id: ID!
+    updated_by: AdminUser
+}
+
+type Location {
+    address: String!
+    content: String
+    created_at: DateTime!
+    created_by: AdminUser
+    description: String
+    email: String
+    id: ID!
+    name: String!
+    phone: String
+    post: ComponentContentPost
+    qrCode: UploadFile
+    type: LocationType!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    web: String
+}
+
+type LocationAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type LocationConnection {
+    aggregate: LocationAggregator
+    groupBy: LocationGroupBy
+    values: [Location]
+}
+
+type LocationConnectionAddress {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionContent {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionCreated_at {
+    connection: LocationConnection
+    key: DateTime
+}
+
+type LocationConnectionCreated_by {
+    connection: LocationConnection
+    key: ID
+}
+
+type LocationConnectionDescription {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionEmail {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionId {
+    connection: LocationConnection
+    key: ID
+}
+
+type LocationConnectionName {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionPhone {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionPost {
+    connection: LocationConnection
+    key: ID
+}
+
+type LocationConnectionQrCode {
+    connection: LocationConnection
+    key: ID
+}
+
+type LocationConnectionType {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationConnectionUpdated_at {
+    connection: LocationConnection
+    key: DateTime
+}
+
+type LocationConnectionUpdated_by {
+    connection: LocationConnection
+    key: ID
+}
+
+type LocationConnectionWeb {
+    connection: LocationConnection
+    key: String
+}
+
+type LocationGroupBy {
+    address: [LocationConnectionAddress]
+    content: [LocationConnectionContent]
+    created_at: [LocationConnectionCreated_at]
+    created_by: [LocationConnectionCreated_by]
+    description: [LocationConnectionDescription]
+    email: [LocationConnectionEmail]
+    id: [LocationConnectionId]
+    name: [LocationConnectionName]
+    phone: [LocationConnectionPhone]
+    post: [LocationConnectionPost]
+    qrCode: [LocationConnectionQrCode]
+    type: [LocationConnectionType]
+    updated_at: [LocationConnectionUpdated_at]
+    updated_by: [LocationConnectionUpdated_by]
+    web: [LocationConnectionWeb]
+}
+
+type Mutation {
+    agreeTermOfService(input: agreeTermOfServiceInput): [UserAgreement]
+    batchTelemetry(input: batchTelemetryInput!): batchTelemetryPayload!
+    cancelOrder(input: cancelOrderInput): cancelOrderPayload
+    createAccount(input: createAccountInput): createAccountPayload
+    createArticle(input: createArticleInput): createArticlePayload
+    createAssessmentQuestionnaire(input: createAssessmentQuestionnaireInput): createAssessmentQuestionnairePayload
+    createBook(input: createBookInput): createBookPayload
+    createCategory(input: createCategoryInput): createCategoryPayload
+    createChild(input: createChildInput!): createUserPayload!
+    createColor(input: createColorInput): createColorPayload
+    createCourse(input: createCourseInput): createCoursePayload
+    createCreditCard(input: createCreditCardInput): createCreditCardPayload
+    createCurrency(input: createCurrencyInput): createCurrencyPayload
+    createEhr(input: createEhrInput): createEhrPayload
+    createExercise(input: createExerciseInput): createExercisePayload
+    createLocation(input: createLocationInput): createLocationPayload
+    createMyAddress(input: createMyAddressInput): createUserAddressPayload
+    createMyOrder(input: createMyOrderInput): createOrderPayload
+    createOrganizationUnit(input: createOrganizationUnitInput): createOrganizationUnitPayload
+    createParenting(input: createParentingInput): createParentingPayload
+    createPatient(input: createPatientInput): createPatientPayload
+    createPaymentMethod(input: createPaymentMethodInput): createPaymentMethodPayload
+    createPlan(input: createPlanInput): createPlanPayload
+    createPost(input: createPostInput): createPostPayload
+    createQuestionnaire(input: createQuestionnaireInput): createQuestionnairePayload
+    createQuestionnaireAnswer(input: createQuestionnaireAnswerInput): createQuestionnaireAnswerPayload
+    createReminder(input: createReminderInput): createReminderPayload
+    "Create a new role"
+    createRole(input: createRoleInput): createRolePayload
+    createSupplement(input: createSupplementInput): createSupplementPayload
+    createTelemetry(input: createTelemetryInput): createTelemetryPayload
+    createTrademark(input: createTrademarkInput): createTrademarkPayload
+    createUnifiedOrder(input: createUnifiedOrderInput): createOrderPayload
+    "Create a new user"
+    createUser(input: createUserInput): createUserPayload
+    createUserAddress(input: createUserAddressInput): createUserAddressPayload
+    createUserAgreement(input: createUserAgreementInput): createUserAgreementPayload
+    createUserAssessment(input: createUserAssessmentInput): createUserAssessmentPayload
+    createUserExercise(input: createUserExerciseInput): createUserExercisePayload
+    createUserParenting(input: createUserParentingInput): createUserParentingPayload
+    createUserPlan(input: createUserPlanInput): createUserPlanPayload
+    createWebinar(input: createWebinarInput): createWebinarPayload
+    deleteAboutFastBraiin: deleteAboutFastBraiinPayload
+    deleteAccount(input: deleteAccountInput): deleteAccountPayload
+    deleteAppTermOfService: deleteAppTermOfServicePayload
+    deleteArticle(input: deleteArticleInput): deleteArticlePayload
+    deleteAssessmentQuestionnaire(input: deleteAssessmentQuestionnaireInput): deleteAssessmentQuestionnairePayload
+    deleteAssessmentTermOfService: deleteAssessmentTermOfServicePayload
+    deleteBook(input: deleteBookInput): deleteBookPayload
+    deleteCategory(input: deleteCategoryInput): deleteCategoryPayload
+    deleteColor(input: deleteColorInput): deleteColorPayload
+    deleteCourse(input: deleteCourseInput): deleteCoursePayload
+    deleteCreditCard(input: deleteCreditCardInput): deleteCreditCardPayload
+    deleteCurrency(input: deleteCurrencyInput): deleteCurrencyPayload
+    deleteEhr(input: deleteEhrInput): deleteEhrPayload
+    deleteExercise(input: deleteExerciseInput): deleteExercisePayload
+    deleteLocation(input: deleteLocationInput): deleteLocationPayload
+    deleteMyAddress(input: deleteUserAddressInput): deleteUserAddressPayload
+    deleteOrder(input: deleteOrderInput): deleteOrderPayload
+    deleteOrganizationUnit(input: deleteOrganizationUnitInput): deleteOrganizationUnitPayload
+    deleteParenting(input: deleteParentingInput): deleteParentingPayload
+    deletePatient(input: deletePatientInput): deletePatientPayload
+    deletePaymentMethod(input: deletePaymentMethodInput): deletePaymentMethodPayload
+    deletePaymentPolicy: deletePaymentPolicyPayload
+    deletePlan(input: deletePlanInput): deletePlanPayload
+    deletePost(input: deletePostInput): deletePostPayload
+    deleteQuestionnaire(input: deleteQuestionnaireInput): deleteQuestionnairePayload
+    deleteQuestionnaireAnswer(input: deleteQuestionnaireAnswerInput): deleteQuestionnaireAnswerPayload
+    deleteReminder(input: deleteReminderInput): deleteReminderPayload
+    "Delete an existing role"
+    deleteRole(input: deleteRoleInput): deleteRolePayload
+    deleteSupplement(input: deleteSupplementInput): deleteSupplementPayload
+    deleteTelemetry(input: deleteTelemetryInput): deleteTelemetryPayload
+    deleteTrademark(input: deleteTrademarkInput): deleteTrademarkPayload
+    "Delete an existing user"
+    deleteUser(input: deleteUserInput): deleteUserPayload
+    deleteUserAddress(input: deleteUserAddressInput): deleteUserAddressPayload
+    deleteUserAgreement(input: deleteUserAgreementInput): deleteUserAgreementPayload
+    deleteUserAssessment(input: deleteUserAssessmentInput): deleteUserAssessmentPayload
+    deleteUserExercise(input: deleteUserExerciseInput): deleteUserExercisePayload
+    deleteUserParenting(input: deleteUserParentingInput): deleteUserParentingPayload
+    deleteUserPlan(input: deleteUserPlanInput): deleteUserPlanPayload
+    deleteVersion: deleteVersionPayload
+    deleteWebinar(input: deleteWebinarInput): deleteWebinarPayload
+    emailConfirmation(confirmation: String!): UsersPermissionsLoginPayload
+    forgotPassword(email: String!): UserPermissionsPasswordPayload
+    login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
+    multipleUpload(field: String, files: [Upload]!, ref: String, refId: ID, source: String): [UploadFile]!
+    register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
+    requestOrderPay(input: requestOrderPayInput): requestOrderPayPayload
+    resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
+    updateAboutFastBraiin(input: updateAboutFastBraiinInput): updateAboutFastBraiinPayload
+    updateAccount(input: updateAccountInput): updateAccountPayload
+    updateAppTermOfService(input: updateAppTermOfServiceInput): updateAppTermOfServicePayload
+    updateArticle(input: updateArticleInput): updateArticlePayload
+    updateAssessmentQuestionnaire(input: updateAssessmentQuestionnaireInput): updateAssessmentQuestionnairePayload
+    updateAssessmentTermOfService(input: updateAssessmentTermOfServiceInput): updateAssessmentTermOfServicePayload
+    updateBook(input: updateBookInput): updateBookPayload
+    updateCategory(input: updateCategoryInput): updateCategoryPayload
+    updateChild(input: updateChildInput!): updateUserPayload!
+    updateColor(input: updateColorInput): updateColorPayload
+    updateCourse(input: updateCourseInput): updateCoursePayload
+    updateCreditCard(input: updateCreditCardInput): updateCreditCardPayload
+    updateCurrency(input: updateCurrencyInput): updateCurrencyPayload
+    updateEhr(input: updateEhrInput): updateEhrPayload
+    updateExercise(input: updateExerciseInput): updateExercisePayload
+    updateFileInfo(id: ID!, info: FileInfoInput!): UploadFile!
+    updateLocation(input: updateLocationInput): updateLocationPayload
+    updateMe(input: updateMeInput): UsersPermissionsMe
+    updateMyAddress(input: updateMyAddressInput): updateUserAddressPayload
+    updateOrganizationUnit(input: updateOrganizationUnitInput): updateOrganizationUnitPayload
+    updateParenting(input: updateParentingInput): updateParentingPayload
+    updatePatient(input: updatePatientInput): updatePatientPayload
+    updatePaymentMethod(input: updatePaymentMethodInput): updatePaymentMethodPayload
+    updatePaymentPolicy(input: updatePaymentPolicyInput): updatePaymentPolicyPayload
+    updatePlan(input: updatePlanInput): updatePlanPayload
+    updatePost(input: updatePostInput): updatePostPayload
+    updateQuestionnaire(input: updateQuestionnaireInput): updateQuestionnairePayload
+    updateQuestionnaireAnswer(input: updateQuestionnaireAnswerInput): updateQuestionnaireAnswerPayload
+    updateReminder(input: updateReminderInput): updateReminderPayload
+    "Update an existing role"
+    updateRole(input: updateRoleInput): updateRolePayload
+    updateSupplement(input: updateSupplementInput): updateSupplementPayload
+    updateTelemetry(input: updateTelemetryInput): updateTelemetryPayload
+    updateTrademark(input: updateTrademarkInput): updateTrademarkPayload
+    "Update an existing user"
+    updateUser(input: updateUserInput): updateUserPayload
+    updateUserAddress(input: updateUserAddressInput): updateUserAddressPayload
+    updateUserAgreement(input: updateUserAgreementInput): updateUserAgreementPayload
+    updateUserAssessment(input: updateUserAssessmentInput): updateUserAssessmentPayload
+    updateUserExercise(input: updateUserExerciseInput): updateUserExercisePayload
+    updateUserParenting(input: updateUserParentingInput): updateUserParentingPayload
+    updateUserPlan(input: updateUserPlanInput): updateUserPlanPayload
+    updateVersion(input: updateVersionInput): updateVersionPayload
+    updateWebinar(input: updateWebinarInput): updateWebinarPayload
+    upload(field: String, file: Upload!, ref: String, refId: ID, source: String): UploadFile!
+}
+
+type Parenting {
+    content: String
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    media(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    name: String!
+    pdfFiles: UploadFile
+    post: ComponentContentPost
+    questionnaire: Questionnaire
+    subject: ComponentDataEhrSubject
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type ParentingAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ParentingConnection {
+    aggregate: ParentingAggregator
+    groupBy: ParentingGroupBy
+    values: [Parenting]
+}
+
+type ParentingConnectionContent {
+    connection: ParentingConnection
+    key: String
+}
+
+type ParentingConnectionCreated_at {
+    connection: ParentingConnection
+    key: DateTime
+}
+
+type ParentingConnectionCreated_by {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingConnectionId {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingConnectionName {
+    connection: ParentingConnection
+    key: String
+}
+
+type ParentingConnectionPdfFiles {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingConnectionPost {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingConnectionQuestionnaire {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingConnectionSubject {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingConnectionUpdated_at {
+    connection: ParentingConnection
+    key: DateTime
+}
+
+type ParentingConnectionUpdated_by {
+    connection: ParentingConnection
+    key: ID
+}
+
+type ParentingGroupBy {
+    content: [ParentingConnectionContent]
+    created_at: [ParentingConnectionCreated_at]
+    created_by: [ParentingConnectionCreated_by]
+    id: [ParentingConnectionId]
+    name: [ParentingConnectionName]
+    pdfFiles: [ParentingConnectionPdfFiles]
+    post: [ParentingConnectionPost]
+    questionnaire: [ParentingConnectionQuestionnaire]
+    subject: [ParentingConnectionSubject]
+    updated_at: [ParentingConnectionUpdated_at]
+    updated_by: [ParentingConnectionUpdated_by]
+}
+
+type Patient {
+    counselor: UsersPermissionsUser
+    created_at: DateTime!
+    created_by: AdminUser
+    doctor: UsersPermissionsUser
+    ehrs(limit: Int, sort: String, start: Int, where: JSON): [Ehr]
+    id: ID!
+    meetingId: String
+    name: String!
+    nurse: UsersPermissionsUser
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type PatientAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type PatientConnection {
+    aggregate: PatientAggregator
+    groupBy: PatientGroupBy
+    values: [Patient]
+}
+
+type PatientConnectionCounselor {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionCreated_at {
+    connection: PatientConnection
+    key: DateTime
+}
+
+type PatientConnectionCreated_by {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionDoctor {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionId {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionMeetingId {
+    connection: PatientConnection
+    key: String
+}
+
+type PatientConnectionName {
+    connection: PatientConnection
+    key: String
+}
+
+type PatientConnectionNurse {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionUpdated_at {
+    connection: PatientConnection
+    key: DateTime
+}
+
+type PatientConnectionUpdated_by {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionUser {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientGroupBy {
+    counselor: [PatientConnectionCounselor]
+    created_at: [PatientConnectionCreated_at]
+    created_by: [PatientConnectionCreated_by]
+    doctor: [PatientConnectionDoctor]
+    id: [PatientConnectionId]
+    meetingId: [PatientConnectionMeetingId]
+    name: [PatientConnectionName]
+    nurse: [PatientConnectionNurse]
+    updated_at: [PatientConnectionUpdated_at]
+    updated_by: [PatientConnectionUpdated_by]
+    user: [PatientConnectionUser]
+}
+
+type PaymentCurrency {
+    code: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    decimal_digits: Int!
+    id: ID!
+    name: String!
+    name_plural: String
+    rounding: Int!
+    symbol: String!
+    symbol_native: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type PaymentCurrencyAggregator {
+    avg: PaymentCurrencyAggregatorAvg
+    count: Int
+    max: PaymentCurrencyAggregatorMax
+    min: PaymentCurrencyAggregatorMin
+    sum: PaymentCurrencyAggregatorSum
+    totalCount: Int
+}
+
+type PaymentCurrencyAggregatorAvg {
+    decimal_digits: Float
+    rounding: Float
+}
+
+type PaymentCurrencyAggregatorMax {
+    decimal_digits: Float
+    rounding: Float
+}
+
+type PaymentCurrencyAggregatorMin {
+    decimal_digits: Float
+    rounding: Float
+}
+
+type PaymentCurrencyAggregatorSum {
+    decimal_digits: Float
+    rounding: Float
+}
+
+type PaymentCurrencyConnection {
+    aggregate: PaymentCurrencyAggregator
+    groupBy: PaymentCurrencyGroupBy
+    values: [PaymentCurrency]
+}
+
+type PaymentCurrencyConnectionCode {
+    connection: PaymentCurrencyConnection
+    key: String
+}
+
+type PaymentCurrencyConnectionCreated_at {
+    connection: PaymentCurrencyConnection
+    key: DateTime
+}
+
+type PaymentCurrencyConnectionCreated_by {
+    connection: PaymentCurrencyConnection
+    key: ID
+}
+
+type PaymentCurrencyConnectionDecimal_digits {
+    connection: PaymentCurrencyConnection
+    key: Int
+}
+
+type PaymentCurrencyConnectionId {
+    connection: PaymentCurrencyConnection
+    key: ID
+}
+
+type PaymentCurrencyConnectionName {
+    connection: PaymentCurrencyConnection
+    key: String
+}
+
+type PaymentCurrencyConnectionName_plural {
+    connection: PaymentCurrencyConnection
+    key: String
+}
+
+type PaymentCurrencyConnectionRounding {
+    connection: PaymentCurrencyConnection
+    key: Int
+}
+
+type PaymentCurrencyConnectionSymbol {
+    connection: PaymentCurrencyConnection
+    key: String
+}
+
+type PaymentCurrencyConnectionSymbol_native {
+    connection: PaymentCurrencyConnection
+    key: String
+}
+
+type PaymentCurrencyConnectionUpdated_at {
+    connection: PaymentCurrencyConnection
+    key: DateTime
+}
+
+type PaymentCurrencyConnectionUpdated_by {
+    connection: PaymentCurrencyConnection
+    key: ID
+}
+
+type PaymentCurrencyGroupBy {
+    code: [PaymentCurrencyConnectionCode]
+    created_at: [PaymentCurrencyConnectionCreated_at]
+    created_by: [PaymentCurrencyConnectionCreated_by]
+    decimal_digits: [PaymentCurrencyConnectionDecimal_digits]
+    id: [PaymentCurrencyConnectionId]
+    name: [PaymentCurrencyConnectionName]
+    name_plural: [PaymentCurrencyConnectionName_plural]
+    rounding: [PaymentCurrencyConnectionRounding]
+    symbol: [PaymentCurrencyConnectionSymbol]
+    symbol_native: [PaymentCurrencyConnectionSymbol_native]
+    updated_at: [PaymentCurrencyConnectionUpdated_at]
+    updated_by: [PaymentCurrencyConnectionUpdated_by]
+}
+
+type PaymentMethod {
+    billingAddress: UserAddress
+    created_at: DateTime!
+    created_by: AdminUser
+    creditCard: CreditCard
+    id: ID!
+    livemode: Boolean
+    stripeId: String!
+    type: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type PaymentMethodAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type PaymentMethodConnection {
+    aggregate: PaymentMethodAggregator
+    groupBy: PaymentMethodGroupBy
+    values: [PaymentMethod]
+}
+
+type PaymentMethodConnectionBillingAddress {
+    connection: PaymentMethodConnection
+    key: ID
+}
+
+type PaymentMethodConnectionCreated_at {
+    connection: PaymentMethodConnection
+    key: DateTime
+}
+
+type PaymentMethodConnectionCreated_by {
+    connection: PaymentMethodConnection
+    key: ID
+}
+
+type PaymentMethodConnectionCreditCard {
+    connection: PaymentMethodConnection
+    key: ID
+}
+
+type PaymentMethodConnectionId {
+    connection: PaymentMethodConnection
+    key: ID
+}
+
+type PaymentMethodConnectionLivemode {
+    connection: PaymentMethodConnection
+    key: Boolean
+}
+
+type PaymentMethodConnectionStripeId {
+    connection: PaymentMethodConnection
+    key: String
+}
+
+type PaymentMethodConnectionType {
+    connection: PaymentMethodConnection
+    key: String
+}
+
+type PaymentMethodConnectionUpdated_at {
+    connection: PaymentMethodConnection
+    key: DateTime
+}
+
+type PaymentMethodConnectionUpdated_by {
+    connection: PaymentMethodConnection
+    key: ID
+}
+
+type PaymentMethodConnectionUser {
+    connection: PaymentMethodConnection
+    key: ID
+}
+
+type PaymentMethodGroupBy {
+    billingAddress: [PaymentMethodConnectionBillingAddress]
+    created_at: [PaymentMethodConnectionCreated_at]
+    created_by: [PaymentMethodConnectionCreated_by]
+    creditCard: [PaymentMethodConnectionCreditCard]
+    id: [PaymentMethodConnectionId]
+    livemode: [PaymentMethodConnectionLivemode]
+    stripeId: [PaymentMethodConnectionStripeId]
+    type: [PaymentMethodConnectionType]
+    updated_at: [PaymentMethodConnectionUpdated_at]
+    updated_by: [PaymentMethodConnectionUpdated_by]
+    user: [PaymentMethodConnectionUser]
+}
+
+type PaymentOrder {
+    additional: JSON
+    created_at: DateTime!
+    created_by: AdminUser
+    currency: PaymentCurrency
+    description: String
+    expire: DateTime
+    id: ID!
+    items(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrderItem]
+    needpayPrice: Float
+    outTradeId: String
+    outTradeProvider: String
+    paiedPrice: Float
+    price: Float
+    shippingAddress: ComponentDataAddress
+    status: OrderStatusType
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+    uuid: String
+}
+
+type PaymentOrderAggregator {
+    avg: PaymentOrderAggregatorAvg
+    count: Int
+    max: PaymentOrderAggregatorMax
+    min: PaymentOrderAggregatorMin
+    sum: PaymentOrderAggregatorSum
+    totalCount: Int
+}
+
+type PaymentOrderAggregatorAvg {
+    needpayPrice: Float
+    paiedPrice: Float
+    price: Float
+}
+
+type PaymentOrderAggregatorMax {
+    needpayPrice: Float
+    paiedPrice: Float
+    price: Float
+}
+
+type PaymentOrderAggregatorMin {
+    needpayPrice: Float
+    paiedPrice: Float
+    price: Float
+}
+
+type PaymentOrderAggregatorSum {
+    needpayPrice: Float
+    paiedPrice: Float
+    price: Float
+}
+
+type PaymentOrderConnection {
+    aggregate: PaymentOrderAggregator
+    groupBy: PaymentOrderGroupBy
+    values: [PaymentOrder]
+}
+
+type PaymentOrderConnectionAdditional {
+    connection: PaymentOrderConnection
+    key: JSON
+}
+
+type PaymentOrderConnectionCreated_at {
+    connection: PaymentOrderConnection
+    key: DateTime
+}
+
+type PaymentOrderConnectionCreated_by {
+    connection: PaymentOrderConnection
+    key: ID
+}
+
+type PaymentOrderConnectionCurrency {
+    connection: PaymentOrderConnection
+    key: ID
+}
+
+type PaymentOrderConnectionDescription {
+    connection: PaymentOrderConnection
+    key: String
+}
+
+type PaymentOrderConnectionExpire {
+    connection: PaymentOrderConnection
+    key: DateTime
+}
+
+type PaymentOrderConnectionId {
+    connection: PaymentOrderConnection
+    key: ID
+}
+
+type PaymentOrderConnectionNeedpayPrice {
+    connection: PaymentOrderConnection
+    key: Float
+}
+
+type PaymentOrderConnectionOutTradeId {
+    connection: PaymentOrderConnection
+    key: String
+}
+
+type PaymentOrderConnectionOutTradeProvider {
+    connection: PaymentOrderConnection
+    key: String
+}
+
+type PaymentOrderConnectionPaiedPrice {
+    connection: PaymentOrderConnection
+    key: Float
+}
+
+type PaymentOrderConnectionPrice {
+    connection: PaymentOrderConnection
+    key: Float
+}
+
+type PaymentOrderConnectionShippingAddress {
+    connection: PaymentOrderConnection
+    key: ID
+}
+
+type PaymentOrderConnectionStatus {
+    connection: PaymentOrderConnection
+    key: String
+}
+
+type PaymentOrderConnectionUpdated_at {
+    connection: PaymentOrderConnection
+    key: DateTime
+}
+
+type PaymentOrderConnectionUpdated_by {
+    connection: PaymentOrderConnection
+    key: ID
+}
+
+type PaymentOrderConnectionUser {
+    connection: PaymentOrderConnection
+    key: ID
+}
+
+type PaymentOrderConnectionUuid {
+    connection: PaymentOrderConnection
+    key: String
+}
+
+type PaymentOrderGroupBy {
+    additional: [PaymentOrderConnectionAdditional]
+    created_at: [PaymentOrderConnectionCreated_at]
+    created_by: [PaymentOrderConnectionCreated_by]
+    currency: [PaymentOrderConnectionCurrency]
+    description: [PaymentOrderConnectionDescription]
+    expire: [PaymentOrderConnectionExpire]
+    id: [PaymentOrderConnectionId]
+    needpayPrice: [PaymentOrderConnectionNeedpayPrice]
+    outTradeId: [PaymentOrderConnectionOutTradeId]
+    outTradeProvider: [PaymentOrderConnectionOutTradeProvider]
+    paiedPrice: [PaymentOrderConnectionPaiedPrice]
+    price: [PaymentOrderConnectionPrice]
+    shippingAddress: [PaymentOrderConnectionShippingAddress]
+    status: [PaymentOrderConnectionStatus]
+    updated_at: [PaymentOrderConnectionUpdated_at]
+    updated_by: [PaymentOrderConnectionUpdated_by]
+    user: [PaymentOrderConnectionUser]
+    uuid: [PaymentOrderConnectionUuid]
+}
+
+type PaymentOrderItem {
+    additional: JSON
+    created_at: DateTime!
+    created_by: AdminUser
+    currency: PaymentCurrency
+    id: ID!
+    name: String!
+    order: PaymentOrder
+    picture: UploadFile
+    preUnitPrice: Float
+    quantity: Int!
+    related: Morph
+    sourceId: String
+    sourceType: String
+    unitPrice: Float
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type PaymentPolicy {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    policy: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type PaymentSetting {
+    created_at: DateTime!
+    created_by: AdminUser
+    data: JSON
+    id: ID!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type Plan {
+    articles(limit: Int, sort: String, start: Int, where: JSON): [Article]
+    assessment(limit: Int, sort: String, start: Int, where: JSON): [AssessmentQuestionnaire]
+    books(limit: Int, sort: String, start: Int, where: JSON): [Book]
+    content: String
+    created_at: DateTime!
+    created_by: AdminUser
+    exercises(limit: Int, sort: String, start: Int, where: JSON): [Exercise]
+    forPerson: ComponentDataFor
+    id: ID!
+    name: String!
+    parentings(limit: Int, sort: String, start: Int, where: JSON): [Parenting]
+    post: ComponentContentPost
+    questionnaire: Questionnaire
+    supplements(limit: Int, sort: String, start: Int, where: JSON): [Supplement]
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type PlanAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type PlanConnection {
+    aggregate: PlanAggregator
+    groupBy: PlanGroupBy
+    values: [Plan]
+}
+
+type PlanConnectionContent {
+    connection: PlanConnection
+    key: String
+}
+
+type PlanConnectionCreated_at {
+    connection: PlanConnection
+    key: DateTime
+}
+
+type PlanConnectionCreated_by {
+    connection: PlanConnection
+    key: ID
+}
+
+type PlanConnectionForPerson {
+    connection: PlanConnection
+    key: ID
+}
+
+type PlanConnectionId {
+    connection: PlanConnection
+    key: ID
+}
+
+type PlanConnectionName {
+    connection: PlanConnection
+    key: String
+}
+
+type PlanConnectionPost {
+    connection: PlanConnection
+    key: ID
+}
+
+type PlanConnectionQuestionnaire {
+    connection: PlanConnection
+    key: ID
+}
+
+type PlanConnectionUpdated_at {
+    connection: PlanConnection
+    key: DateTime
+}
+
+type PlanConnectionUpdated_by {
+    connection: PlanConnection
+    key: ID
+}
+
+type PlanGroupBy {
+    content: [PlanConnectionContent]
+    created_at: [PlanConnectionCreated_at]
+    created_by: [PlanConnectionCreated_by]
+    forPerson: [PlanConnectionForPerson]
+    id: [PlanConnectionId]
+    name: [PlanConnectionName]
+    post: [PlanConnectionPost]
+    questionnaire: [PlanConnectionQuestionnaire]
+    updated_at: [PlanConnectionUpdated_at]
+    updated_by: [PlanConnectionUpdated_by]
+}
+
+type Post {
+    author: UsersPermissionsUser
+    categories(limit: Int, sort: String, start: Int, where: JSON): [Category]
+    cover_background_color: Color
+    created_at: DateTime!
+    created_by: AdminUser
+    currency: PaymentCurrency
+    entityRawId: String
+    entityType: String
+    id: ID!
+    image(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    needShipping: Boolean
+    prePrice: Float
+    price: Float
+    rating: Int
+    rawPostId: Int
+    recommended: Boolean
+    status: PosterStatus
+    subtitle: String
+    title: String!
+    trademark: Trademark
+    updated_at: DateTime!
+    updated_by: AdminUser
+    updated_day: Date
+    vipText: String
+    vip_color: Color
+}
+
+type PostAggregator {
+    avg: PostAggregatorAvg
+    count: Int
+    max: PostAggregatorMax
+    min: PostAggregatorMin
+    sum: PostAggregatorSum
+    totalCount: Int
+}
+
+type PostAggregatorAvg {
+    prePrice: Float
+    price: Float
+    rating: Float
+    rawPostId: Float
+}
+
+type PostAggregatorMax {
+    prePrice: Float
+    price: Float
+    rating: Float
+    rawPostId: Float
+}
+
+type PostAggregatorMin {
+    prePrice: Float
+    price: Float
+    rating: Float
+    rawPostId: Float
+}
+
+type PostAggregatorSum {
+    prePrice: Float
+    price: Float
+    rating: Float
+    rawPostId: Float
+}
+
+type PostConnection {
+    aggregate: PostAggregator
+    groupBy: PostGroupBy
+    values: [Post]
+}
+
+type PostConnectionAuthor {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionCover_background_color {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionCreated_at {
+    connection: PostConnection
+    key: DateTime
+}
+
+type PostConnectionCreated_by {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionCurrency {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionEntityRawId {
+    connection: PostConnection
+    key: String
+}
+
+type PostConnectionEntityType {
+    connection: PostConnection
+    key: String
+}
+
+type PostConnectionId {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionNeedShipping {
+    connection: PostConnection
+    key: Boolean
+}
+
+type PostConnectionPrePrice {
+    connection: PostConnection
+    key: Float
+}
+
+type PostConnectionPrice {
+    connection: PostConnection
+    key: Float
+}
+
+type PostConnectionRating {
+    connection: PostConnection
+    key: Int
+}
+
+type PostConnectionRawPostId {
+    connection: PostConnection
+    key: Int
+}
+
+type PostConnectionRecommended {
+    connection: PostConnection
+    key: Boolean
+}
+
+type PostConnectionStatus {
+    connection: PostConnection
+    key: String
+}
+
+type PostConnectionSubtitle {
+    connection: PostConnection
+    key: String
+}
+
+type PostConnectionTitle {
+    connection: PostConnection
+    key: String
+}
+
+type PostConnectionTrademark {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionUpdated_at {
+    connection: PostConnection
+    key: DateTime
+}
+
+type PostConnectionUpdated_by {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionUpdated_day {
+    connection: PostConnection
+    key: ID
+}
+
+type PostConnectionVipText {
+    connection: PostConnection
+    key: String
+}
+
+type PostConnectionVip_color {
+    connection: PostConnection
+    key: ID
+}
+
+type PostGroupBy {
+    author: [PostConnectionAuthor]
+    cover_background_color: [PostConnectionCover_background_color]
+    created_at: [PostConnectionCreated_at]
+    created_by: [PostConnectionCreated_by]
+    currency: [PostConnectionCurrency]
+    entityRawId: [PostConnectionEntityRawId]
+    entityType: [PostConnectionEntityType]
+    id: [PostConnectionId]
+    needShipping: [PostConnectionNeedShipping]
+    prePrice: [PostConnectionPrePrice]
+    price: [PostConnectionPrice]
+    rating: [PostConnectionRating]
+    rawPostId: [PostConnectionRawPostId]
+    recommended: [PostConnectionRecommended]
+    status: [PostConnectionStatus]
+    subtitle: [PostConnectionSubtitle]
+    title: [PostConnectionTitle]
+    trademark: [PostConnectionTrademark]
+    updated_at: [PostConnectionUpdated_at]
+    updated_by: [PostConnectionUpdated_by]
+    updated_day: [PostConnectionUpdated_day]
+    vipText: [PostConnectionVipText]
+    vip_color: [PostConnectionVip_color]
+}
+
+type Query {
+    aboutFastBraiin: AboutFastBraiin
+    account(id: ID!): Account
+    accounts(limit: Int, sort: String, start: Int, where: JSON): [Account]
+    accountsConnection(limit: Int, sort: String, start: Int, where: JSON): AccountConnection
+    appTermOfService: AppTermOfService
+    article(id: ID!): Article
+    articles(limit: Int, sort: String, start: Int, where: JSON): [Article]
+    articlesConnection(limit: Int, sort: String, start: Int, where: JSON): ArticleConnection
+    assessmentQuestionnaire(id: ID!): AssessmentQuestionnaire
+    assessmentQuestionnaires(limit: Int, sort: String, start: Int, where: JSON): [AssessmentQuestionnaire]
+    assessmentQuestionnairesConnection(limit: Int, sort: String, start: Int, where: JSON): AssessmentQuestionnaireConnection
+    assessmentTermOfService: AssessmentTermOfService
+    book(id: ID!): Book
+    books(limit: Int, sort: String, start: Int, where: JSON): [Book]
+    booksConnection(limit: Int, sort: String, start: Int, where: JSON): BookConnection
+    categories(limit: Int, sort: String, start: Int, where: JSON): [Category]
+    categoriesConnection(limit: Int, sort: String, start: Int, where: JSON): CategoryConnection
+    category(id: ID!): Category
+    color(id: ID!): Color
+    colors(limit: Int, sort: String, start: Int, where: JSON): [Color]
+    colorsConnection(limit: Int, sort: String, start: Int, where: JSON): ColorConnection
+    course(id: ID!): Course
+    courses(limit: Int, sort: String, start: Int, where: JSON): [Course]
+    coursesConnection(limit: Int, sort: String, start: Int, where: JSON): CourseConnection
+    creditCard(id: ID!): CreditCard
+    creditCards(limit: Int, sort: String, start: Int, where: JSON): [CreditCard]
+    creditCardsConnection(limit: Int, sort: String, start: Int, where: JSON): CreditCardConnection
+    currencies(limit: Int, sort: String, start: Int, where: JSON): [PaymentCurrency]
+    currenciesConnection(limit: Int, sort: String, start: Int, where: JSON): PaymentCurrencyConnection
+    currency(id: ID!): PaymentCurrency
+    ehr(id: ID!): Ehr
+    ehrs(limit: Int, sort: String, start: Int, where: JSON): [Ehr]
+    ehrsConnection(limit: Int, sort: String, start: Int, where: JSON): EhrConnection
+    exercise(id: ID!): Exercise
+    exercises(limit: Int, sort: String, start: Int, where: JSON): [Exercise]
+    exercisesConnection(limit: Int, sort: String, start: Int, where: JSON): ExerciseConnection
+    files(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    filesConnection(limit: Int, sort: String, start: Int, where: JSON): UploadFileConnection
+    findMyAddress(limit: Int, sort: String, start: Int, where: JSON): [UserAddress]
+    location(id: ID!): Location
+    locations(limit: Int, sort: String, start: Int, where: JSON): [Location]
+    locationsConnection(limit: Int, sort: String, start: Int, where: JSON): LocationConnection
+    me: UsersPermissionsMe
+    myChild(id: ID!): UsersPermissionsUser
+    myOrders(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrder]
+    myOrdersCount(where: JSON): Int!
+    order(id: ID!): PaymentOrder
+    orders(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrder]
+    ordersConnection(limit: Int, sort: String, start: Int, where: JSON): PaymentOrderConnection
+    organizationUnit(id: ID!): UsersOrganizationunitsOrganizationUnit
+    organizationUnits(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
+    organizationUnitsConnection(limit: Int, sort: String, start: Int, where: JSON): UsersOrganizationunitsOrganizationUnitConnection
+    parenting(id: ID!): Parenting
+    parentings(limit: Int, sort: String, start: Int, where: JSON): [Parenting]
+    parentingsConnection(limit: Int, sort: String, start: Int, where: JSON): ParentingConnection
+    patient(id: ID!): Patient
+    patients(limit: Int, sort: String, start: Int, where: JSON): [Patient]
+    patientsConnection(limit: Int, sort: String, start: Int, where: JSON): PatientConnection
+    paymentMethod(id: ID!): PaymentMethod
+    paymentMethods(limit: Int, sort: String, start: Int, where: JSON): [PaymentMethod]
+    paymentMethodsConnection(limit: Int, sort: String, start: Int, where: JSON): PaymentMethodConnection
+    paymentPolicy: PaymentPolicy
+    plan(id: ID!): Plan
+    plans(limit: Int, sort: String, start: Int, where: JSON): [Plan]
+    plansConnection(limit: Int, sort: String, start: Int, where: JSON): PlanConnection
+    post(id: ID!): Post
+    posts(limit: Int, sort: String, start: Int, where: JSON): [Post]
+    postsConnection(limit: Int, sort: String, start: Int, where: JSON): PostConnection
+    questionnaire(id: ID!): Questionnaire
+    questionnaireAnswer(id: ID!): QuestionnaireAnswer
+    questionnaireAnswers(limit: Int, sort: String, start: Int, where: JSON): [QuestionnaireAnswer]
+    questionnaireAnswersConnection(limit: Int, sort: String, start: Int, where: JSON): QuestionnaireAnswerConnection
+    questionnaires(limit: Int, sort: String, start: Int, where: JSON): [Questionnaire]
+    questionnairesConnection(limit: Int, sort: String, start: Int, where: JSON): QuestionnaireConnection
+    reminder(id: ID!): Reminder
+    reminders(limit: Int, sort: String, start: Int, where: JSON): [Reminder]
+    remindersConnection(limit: Int, sort: String, start: Int, where: JSON): ReminderConnection
+    role(id: ID!): UsersPermissionsRole
+    "Retrieve all the existing roles. You can't apply filters on this query."
+    roles(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
+    rolesConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsRoleConnection
+    supplement(id: ID!): Supplement
+    supplements(limit: Int, sort: String, start: Int, where: JSON): [Supplement]
+    supplementsConnection(limit: Int, sort: String, start: Int, where: JSON): SupplementConnection
+    telemetries(limit: Int, sort: String, start: Int, where: JSON): [Telemetry]
+    telemetriesConnection(limit: Int, sort: String, start: Int, where: JSON): TelemetryConnection
+    telemetry(id: ID!): Telemetry
+    trademark(id: ID!): Trademark
+    trademarks(limit: Int, sort: String, start: Int, where: JSON): [Trademark]
+    trademarksConnection(limit: Int, sort: String, start: Int, where: JSON): TrademarkConnection
+    user(id: ID!): UsersPermissionsUser
+    userAddress(id: ID!): UserAddress
+    userAddresses(limit: Int, sort: String, start: Int, where: JSON): [UserAddress]
+    userAddressesConnection(limit: Int, sort: String, start: Int, where: JSON): UserAddressConnection
+    userAgreement(id: ID!): UserAgreement
+    userAgreements(limit: Int, sort: String, start: Int, where: JSON): [UserAgreement]
+    userAgreementsConnection(limit: Int, sort: String, start: Int, where: JSON): UserAgreementConnection
+    userAssessment(id: ID!): UserAssessment
+    userAssessments(limit: Int, sort: String, start: Int, where: JSON): [UserAssessment]
+    userAssessmentsConnection(limit: Int, sort: String, start: Int, where: JSON): UserAssessmentConnection
+    userExercise(id: ID!): UserExercise
+    userExercises(limit: Int, sort: String, start: Int, where: JSON): [UserExercise]
+    userExercisesConnection(limit: Int, sort: String, start: Int, where: JSON): UserExerciseConnection
+    userParenting(id: ID!): UserParenting
+    userParentings(limit: Int, sort: String, start: Int, where: JSON): [UserParenting]
+    userParentingsConnection(limit: Int, sort: String, start: Int, where: JSON): UserParentingConnection
+    userPlan(id: ID!): UserPlan
+    userPlans(limit: Int, sort: String, start: Int, where: JSON): [UserPlan]
+    userPlansConnection(limit: Int, sort: String, start: Int, where: JSON): UserPlanConnection
+    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+    usersConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsUserConnection
+    version: Version
+    webinar(id: ID!): Webinar
+    webinars(limit: Int, sort: String, start: Int, where: JSON): [Webinar]
+    webinarsConnection(limit: Int, sort: String, start: Int, where: JSON): WebinarConnection
+}
+
+type Questionnaire {
+    assessment_questionnaires(limit: Int, sort: String, start: Int, where: JSON): [AssessmentQuestionnaire]
+    created_at: DateTime!
+    created_by: AdminUser
+    data: String
+    displayName: String
+    id: ID!
+    name: String!
+    provider: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type QuestionnaireAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type QuestionnaireAnswer {
+    created_at: DateTime!
+    created_by: AdminUser
+    data: JSON
+    id: ID!
+    name: String!
+    questionnaire: Questionnaire
+    submitted: Boolean!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type QuestionnaireAnswerAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type QuestionnaireAnswerConnection {
+    aggregate: QuestionnaireAnswerAggregator
+    groupBy: QuestionnaireAnswerGroupBy
+    values: [QuestionnaireAnswer]
+}
+
+type QuestionnaireAnswerConnectionCreated_at {
+    connection: QuestionnaireAnswerConnection
+    key: DateTime
+}
+
+type QuestionnaireAnswerConnectionCreated_by {
+    connection: QuestionnaireAnswerConnection
+    key: ID
+}
+
+type QuestionnaireAnswerConnectionData {
+    connection: QuestionnaireAnswerConnection
+    key: JSON
+}
+
+type QuestionnaireAnswerConnectionId {
+    connection: QuestionnaireAnswerConnection
+    key: ID
+}
+
+type QuestionnaireAnswerConnectionName {
+    connection: QuestionnaireAnswerConnection
+    key: String
+}
+
+type QuestionnaireAnswerConnectionQuestionnaire {
+    connection: QuestionnaireAnswerConnection
+    key: ID
+}
+
+type QuestionnaireAnswerConnectionSubmitted {
+    connection: QuestionnaireAnswerConnection
+    key: Boolean
+}
+
+type QuestionnaireAnswerConnectionUpdated_at {
+    connection: QuestionnaireAnswerConnection
+    key: DateTime
+}
+
+type QuestionnaireAnswerConnectionUpdated_by {
+    connection: QuestionnaireAnswerConnection
+    key: ID
+}
+
+type QuestionnaireAnswerConnectionUser {
+    connection: QuestionnaireAnswerConnection
+    key: ID
+}
+
+type QuestionnaireAnswerGroupBy {
+    created_at: [QuestionnaireAnswerConnectionCreated_at]
+    created_by: [QuestionnaireAnswerConnectionCreated_by]
+    data: [QuestionnaireAnswerConnectionData]
+    id: [QuestionnaireAnswerConnectionId]
+    name: [QuestionnaireAnswerConnectionName]
+    questionnaire: [QuestionnaireAnswerConnectionQuestionnaire]
+    submitted: [QuestionnaireAnswerConnectionSubmitted]
+    updated_at: [QuestionnaireAnswerConnectionUpdated_at]
+    updated_by: [QuestionnaireAnswerConnectionUpdated_by]
+    user: [QuestionnaireAnswerConnectionUser]
+}
+
+type QuestionnaireConnection {
+    aggregate: QuestionnaireAggregator
+    groupBy: QuestionnaireGroupBy
+    values: [Questionnaire]
+}
+
+type QuestionnaireConnectionCreated_at {
+    connection: QuestionnaireConnection
+    key: DateTime
+}
+
+type QuestionnaireConnectionCreated_by {
+    connection: QuestionnaireConnection
+    key: ID
+}
+
+type QuestionnaireConnectionData {
+    connection: QuestionnaireConnection
+    key: String
+}
+
+type QuestionnaireConnectionDisplayName {
+    connection: QuestionnaireConnection
+    key: String
+}
+
+type QuestionnaireConnectionId {
+    connection: QuestionnaireConnection
+    key: ID
+}
+
+type QuestionnaireConnectionName {
+    connection: QuestionnaireConnection
+    key: String
+}
+
+type QuestionnaireConnectionProvider {
+    connection: QuestionnaireConnection
+    key: String
+}
+
+type QuestionnaireConnectionUpdated_at {
+    connection: QuestionnaireConnection
+    key: DateTime
+}
+
+type QuestionnaireConnectionUpdated_by {
+    connection: QuestionnaireConnection
+    key: ID
+}
+
+type QuestionnaireGroupBy {
+    created_at: [QuestionnaireConnectionCreated_at]
+    created_by: [QuestionnaireConnectionCreated_by]
+    data: [QuestionnaireConnectionData]
+    displayName: [QuestionnaireConnectionDisplayName]
+    id: [QuestionnaireConnectionId]
+    name: [QuestionnaireConnectionName]
+    provider: [QuestionnaireConnectionProvider]
+    updated_at: [QuestionnaireConnectionUpdated_at]
+    updated_by: [QuestionnaireConnectionUpdated_by]
+}
+
+type Reminder {
+    body: String
+    created_at: DateTime!
+    created_by: AdminUser
+    dateTime: DateTime
+    id: ID!
+    name: String!
+    related(limit: Int, sort: String, start: Int, where: JSON): [Morph]
+    source: String
+    sourceId: String
+    type: ReminderType!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type ReminderAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type ReminderConnection {
+    aggregate: ReminderAggregator
+    groupBy: ReminderGroupBy
+    values: [Reminder]
+}
+
+type ReminderConnectionBody {
+    connection: ReminderConnection
+    key: String
+}
+
+type ReminderConnectionCreated_at {
+    connection: ReminderConnection
+    key: DateTime
+}
+
+type ReminderConnectionCreated_by {
+    connection: ReminderConnection
+    key: ID
+}
+
+type ReminderConnectionDateTime {
+    connection: ReminderConnection
+    key: DateTime
+}
+
+type ReminderConnectionId {
+    connection: ReminderConnection
+    key: ID
+}
+
+type ReminderConnectionName {
+    connection: ReminderConnection
+    key: String
+}
+
+type ReminderConnectionSource {
+    connection: ReminderConnection
+    key: String
+}
+
+type ReminderConnectionSourceId {
+    connection: ReminderConnection
+    key: String
+}
+
+type ReminderConnectionType {
+    connection: ReminderConnection
+    key: String
+}
+
+type ReminderConnectionUpdated_at {
+    connection: ReminderConnection
+    key: DateTime
+}
+
+type ReminderConnectionUpdated_by {
+    connection: ReminderConnection
+    key: ID
+}
+
+type ReminderConnectionUser {
+    connection: ReminderConnection
+    key: ID
+}
+
+type ReminderGroupBy {
+    body: [ReminderConnectionBody]
+    created_at: [ReminderConnectionCreated_at]
+    created_by: [ReminderConnectionCreated_by]
+    dateTime: [ReminderConnectionDateTime]
+    id: [ReminderConnectionId]
+    name: [ReminderConnectionName]
+    source: [ReminderConnectionSource]
+    sourceId: [ReminderConnectionSourceId]
+    type: [ReminderConnectionType]
+    updated_at: [ReminderConnectionUpdated_at]
+    updated_by: [ReminderConnectionUpdated_by]
+    user: [ReminderConnectionUser]
+}
+
+type Supplement {
+    content: String
+    created_at: DateTime!
+    created_by: AdminUser
+    forPerson: ComponentDataFor
+    id: ID!
+    name: String!
+    post: ComponentContentPost
+    provider: String!
+    subject: ComponentDataEhrSubject
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type SupplementAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type SupplementConnection {
+    aggregate: SupplementAggregator
+    groupBy: SupplementGroupBy
+    values: [Supplement]
+}
+
+type SupplementConnectionContent {
+    connection: SupplementConnection
+    key: String
+}
+
+type SupplementConnectionCreated_at {
+    connection: SupplementConnection
+    key: DateTime
+}
+
+type SupplementConnectionCreated_by {
+    connection: SupplementConnection
+    key: ID
+}
+
+type SupplementConnectionForPerson {
+    connection: SupplementConnection
+    key: ID
+}
+
+type SupplementConnectionId {
+    connection: SupplementConnection
+    key: ID
+}
+
+type SupplementConnectionName {
+    connection: SupplementConnection
+    key: String
+}
+
+type SupplementConnectionPost {
+    connection: SupplementConnection
+    key: ID
+}
+
+type SupplementConnectionProvider {
+    connection: SupplementConnection
+    key: String
+}
+
+type SupplementConnectionSubject {
+    connection: SupplementConnection
+    key: ID
+}
+
+type SupplementConnectionUpdated_at {
+    connection: SupplementConnection
+    key: DateTime
+}
+
+type SupplementConnectionUpdated_by {
+    connection: SupplementConnection
+    key: ID
+}
+
+type SupplementGroupBy {
+    content: [SupplementConnectionContent]
+    created_at: [SupplementConnectionCreated_at]
+    created_by: [SupplementConnectionCreated_by]
+    forPerson: [SupplementConnectionForPerson]
+    id: [SupplementConnectionId]
+    name: [SupplementConnectionName]
+    post: [SupplementConnectionPost]
+    provider: [SupplementConnectionProvider]
+    subject: [SupplementConnectionSubject]
+    updated_at: [SupplementConnectionUpdated_at]
+    updated_by: [SupplementConnectionUpdated_by]
+}
+
+type Telemetry {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    raw: JSON
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type TelemetryAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type TelemetryConnection {
+    aggregate: TelemetryAggregator
+    groupBy: TelemetryGroupBy
+    values: [Telemetry]
+}
+
+type TelemetryConnectionCreated_at {
+    connection: TelemetryConnection
+    key: DateTime
+}
+
+type TelemetryConnectionCreated_by {
+    connection: TelemetryConnection
+    key: ID
+}
+
+type TelemetryConnectionId {
+    connection: TelemetryConnection
+    key: ID
+}
+
+type TelemetryConnectionRaw {
+    connection: TelemetryConnection
+    key: JSON
+}
+
+type TelemetryConnectionUpdated_at {
+    connection: TelemetryConnection
+    key: DateTime
+}
+
+type TelemetryConnectionUpdated_by {
+    connection: TelemetryConnection
+    key: ID
+}
+
+type TelemetryGroupBy {
+    created_at: [TelemetryConnectionCreated_at]
+    created_by: [TelemetryConnectionCreated_by]
+    id: [TelemetryConnectionId]
+    raw: [TelemetryConnectionRaw]
+    updated_at: [TelemetryConnectionUpdated_at]
+    updated_by: [TelemetryConnectionUpdated_by]
+}
+
+type Trademark {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    image: UploadFile
+    name: String!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type TrademarkAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type TrademarkConnection {
+    aggregate: TrademarkAggregator
+    groupBy: TrademarkGroupBy
+    values: [Trademark]
+}
+
+type TrademarkConnectionCreated_at {
+    connection: TrademarkConnection
+    key: DateTime
+}
+
+type TrademarkConnectionCreated_by {
+    connection: TrademarkConnection
+    key: ID
+}
+
+type TrademarkConnectionId {
+    connection: TrademarkConnection
+    key: ID
+}
+
+type TrademarkConnectionImage {
+    connection: TrademarkConnection
+    key: ID
+}
+
+type TrademarkConnectionName {
+    connection: TrademarkConnection
+    key: String
+}
+
+type TrademarkConnectionUpdated_at {
+    connection: TrademarkConnection
+    key: DateTime
+}
+
+type TrademarkConnectionUpdated_by {
+    connection: TrademarkConnection
+    key: ID
+}
+
+type TrademarkGroupBy {
+    created_at: [TrademarkConnectionCreated_at]
+    created_by: [TrademarkConnectionCreated_by]
+    id: [TrademarkConnectionId]
+    image: [TrademarkConnectionImage]
+    name: [TrademarkConnectionName]
+    updated_at: [TrademarkConnectionUpdated_at]
+    updated_by: [TrademarkConnectionUpdated_by]
+}
+
+type UploadFile {
+    alternativeText: String
+    caption: String
+    created_at: DateTime!
+    created_by: AdminUser
+    ext: String
+    formats: JSON
+    hash: String!
+    height: Int
+    id: ID!
+    mime: String!
+    name: String!
+    previewUrl: String
+    provider: String!
+    provider_metadata: JSON
+    related(limit: Int, sort: String, start: Int, where: JSON): [Morph]
+    size: Float!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    url: String!
+    width: Int
+}
+
+type UploadFileAggregator {
+    avg: UploadFileAggregatorAvg
+    count: Int
+    max: UploadFileAggregatorMax
+    min: UploadFileAggregatorMin
+    sum: UploadFileAggregatorSum
+    totalCount: Int
+}
+
+type UploadFileAggregatorAvg {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileAggregatorMax {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileAggregatorMin {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileAggregatorSum {
+    height: Float
+    size: Float
+    width: Float
+}
+
+type UploadFileConnection {
+    aggregate: UploadFileAggregator
+    groupBy: UploadFileGroupBy
+    values: [UploadFile]
+}
+
+type UploadFileConnectionAlternativeText {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionCaption {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionCreated_at {
+    connection: UploadFileConnection
+    key: DateTime
+}
+
+type UploadFileConnectionCreated_by {
+    connection: UploadFileConnection
+    key: ID
+}
+
+type UploadFileConnectionExt {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionFormats {
+    connection: UploadFileConnection
+    key: JSON
+}
+
+type UploadFileConnectionHash {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionHeight {
+    connection: UploadFileConnection
+    key: Int
+}
+
+type UploadFileConnectionId {
+    connection: UploadFileConnection
+    key: ID
+}
+
+type UploadFileConnectionMime {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionName {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionPreviewUrl {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionProvider {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionProvider_metadata {
+    connection: UploadFileConnection
+    key: JSON
+}
+
+type UploadFileConnectionSize {
+    connection: UploadFileConnection
+    key: Float
+}
+
+type UploadFileConnectionUpdated_at {
+    connection: UploadFileConnection
+    key: DateTime
+}
+
+type UploadFileConnectionUpdated_by {
+    connection: UploadFileConnection
+    key: ID
+}
+
+type UploadFileConnectionUrl {
+    connection: UploadFileConnection
+    key: String
+}
+
+type UploadFileConnectionWidth {
+    connection: UploadFileConnection
+    key: Int
+}
+
+type UploadFileGroupBy {
+    alternativeText: [UploadFileConnectionAlternativeText]
+    caption: [UploadFileConnectionCaption]
+    created_at: [UploadFileConnectionCreated_at]
+    created_by: [UploadFileConnectionCreated_by]
+    ext: [UploadFileConnectionExt]
+    formats: [UploadFileConnectionFormats]
+    hash: [UploadFileConnectionHash]
+    height: [UploadFileConnectionHeight]
+    id: [UploadFileConnectionId]
+    mime: [UploadFileConnectionMime]
+    name: [UploadFileConnectionName]
+    previewUrl: [UploadFileConnectionPreviewUrl]
+    provider: [UploadFileConnectionProvider]
+    provider_metadata: [UploadFileConnectionProvider_metadata]
+    size: [UploadFileConnectionSize]
+    updated_at: [UploadFileConnectionUpdated_at]
+    updated_by: [UploadFileConnectionUpdated_by]
+    url: [UploadFileConnectionUrl]
+    width: [UploadFileConnectionWidth]
+}
+
+type UserAddress {
+    address: ComponentDataAddress
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    tag: String
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type UserAddressAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UserAddressConnection {
+    aggregate: UserAddressAggregator
+    groupBy: UserAddressGroupBy
+    values: [UserAddress]
+}
+
+type UserAddressConnectionAddress {
+    connection: UserAddressConnection
+    key: ID
+}
+
+type UserAddressConnectionCreated_at {
+    connection: UserAddressConnection
+    key: DateTime
+}
+
+type UserAddressConnectionCreated_by {
+    connection: UserAddressConnection
+    key: ID
+}
+
+type UserAddressConnectionId {
+    connection: UserAddressConnection
+    key: ID
+}
+
+type UserAddressConnectionTag {
+    connection: UserAddressConnection
+    key: String
+}
+
+type UserAddressConnectionUpdated_at {
+    connection: UserAddressConnection
+    key: DateTime
+}
+
+type UserAddressConnectionUpdated_by {
+    connection: UserAddressConnection
+    key: ID
+}
+
+type UserAddressConnectionUser {
+    connection: UserAddressConnection
+    key: ID
+}
+
+type UserAddressGroupBy {
+    address: [UserAddressConnectionAddress]
+    created_at: [UserAddressConnectionCreated_at]
+    created_by: [UserAddressConnectionCreated_by]
+    id: [UserAddressConnectionId]
+    tag: [UserAddressConnectionTag]
+    updated_at: [UserAddressConnectionUpdated_at]
+    updated_by: [UserAddressConnectionUpdated_by]
+    user: [UserAddressConnectionUser]
+}
+
+type UserAgreement {
+    content: String!
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    lastVersionDate: DateTime!
+    termOfServiceType: TermOfServiceType!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+    value: Boolean
+}
+
+type UserAgreementAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UserAgreementConnection {
+    aggregate: UserAgreementAggregator
+    groupBy: UserAgreementGroupBy
+    values: [UserAgreement]
+}
+
+type UserAgreementConnectionContent {
+    connection: UserAgreementConnection
+    key: String
+}
+
+type UserAgreementConnectionCreated_at {
+    connection: UserAgreementConnection
+    key: DateTime
+}
+
+type UserAgreementConnectionCreated_by {
+    connection: UserAgreementConnection
+    key: ID
+}
+
+type UserAgreementConnectionId {
+    connection: UserAgreementConnection
+    key: ID
+}
+
+type UserAgreementConnectionLastVersionDate {
+    connection: UserAgreementConnection
+    key: DateTime
+}
+
+type UserAgreementConnectionTermOfServiceType {
+    connection: UserAgreementConnection
+    key: String
+}
+
+type UserAgreementConnectionUpdated_at {
+    connection: UserAgreementConnection
+    key: DateTime
+}
+
+type UserAgreementConnectionUpdated_by {
+    connection: UserAgreementConnection
+    key: ID
+}
+
+type UserAgreementConnectionUser {
+    connection: UserAgreementConnection
+    key: ID
+}
+
+type UserAgreementConnectionValue {
+    connection: UserAgreementConnection
+    key: Boolean
+}
+
+type UserAgreementGroupBy {
+    content: [UserAgreementConnectionContent]
+    created_at: [UserAgreementConnectionCreated_at]
+    created_by: [UserAgreementConnectionCreated_by]
+    id: [UserAgreementConnectionId]
+    lastVersionDate: [UserAgreementConnectionLastVersionDate]
+    termOfServiceType: [UserAgreementConnectionTermOfServiceType]
+    updated_at: [UserAgreementConnectionUpdated_at]
+    updated_by: [UserAgreementConnectionUpdated_by]
+    user: [UserAgreementConnectionUser]
+    value: [UserAgreementConnectionValue]
+}
+
+type UserAssessment {
+    assessment_questionnaire: AssessmentQuestionnaire
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type UserAssessmentAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UserAssessmentConnection {
+    aggregate: UserAssessmentAggregator
+    groupBy: UserAssessmentGroupBy
+    values: [UserAssessment]
+}
+
+type UserAssessmentConnectionAssessment_questionnaire {
+    connection: UserAssessmentConnection
+    key: ID
+}
+
+type UserAssessmentConnectionCreated_at {
+    connection: UserAssessmentConnection
+    key: DateTime
+}
+
+type UserAssessmentConnectionCreated_by {
+    connection: UserAssessmentConnection
+    key: ID
+}
+
+type UserAssessmentConnectionId {
+    connection: UserAssessmentConnection
+    key: ID
+}
+
+type UserAssessmentConnectionUpdated_at {
+    connection: UserAssessmentConnection
+    key: DateTime
+}
+
+type UserAssessmentConnectionUpdated_by {
+    connection: UserAssessmentConnection
+    key: ID
+}
+
+type UserAssessmentConnectionUser {
+    connection: UserAssessmentConnection
+    key: ID
+}
+
+type UserAssessmentGroupBy {
+    assessment_questionnaire: [UserAssessmentConnectionAssessment_questionnaire]
+    created_at: [UserAssessmentConnectionCreated_at]
+    created_by: [UserAssessmentConnectionCreated_by]
+    id: [UserAssessmentConnectionId]
+    updated_at: [UserAssessmentConnectionUpdated_at]
+    updated_by: [UserAssessmentConnectionUpdated_by]
+    user: [UserAssessmentConnectionUser]
+}
+
+type UserExercise {
+    created_at: DateTime!
+    created_by: AdminUser
+    exercise: Exercise
+    id: ID!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type UserExerciseAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UserExerciseConnection {
+    aggregate: UserExerciseAggregator
+    groupBy: UserExerciseGroupBy
+    values: [UserExercise]
+}
+
+type UserExerciseConnectionCreated_at {
+    connection: UserExerciseConnection
+    key: DateTime
+}
+
+type UserExerciseConnectionCreated_by {
+    connection: UserExerciseConnection
+    key: ID
+}
+
+type UserExerciseConnectionExercise {
+    connection: UserExerciseConnection
+    key: ID
+}
+
+type UserExerciseConnectionId {
+    connection: UserExerciseConnection
+    key: ID
+}
+
+type UserExerciseConnectionUpdated_at {
+    connection: UserExerciseConnection
+    key: DateTime
+}
+
+type UserExerciseConnectionUpdated_by {
+    connection: UserExerciseConnection
+    key: ID
+}
+
+type UserExerciseConnectionUser {
+    connection: UserExerciseConnection
+    key: ID
+}
+
+type UserExerciseGroupBy {
+    created_at: [UserExerciseConnectionCreated_at]
+    created_by: [UserExerciseConnectionCreated_by]
+    exercise: [UserExerciseConnectionExercise]
+    id: [UserExerciseConnectionId]
+    updated_at: [UserExerciseConnectionUpdated_at]
+    updated_by: [UserExerciseConnectionUpdated_by]
+    user: [UserExerciseConnectionUser]
+}
+
+type UserParenting {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    parenting: Parenting
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+}
+
+type UserParentingAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UserParentingConnection {
+    aggregate: UserParentingAggregator
+    groupBy: UserParentingGroupBy
+    values: [UserParenting]
+}
+
+type UserParentingConnectionCreated_at {
+    connection: UserParentingConnection
+    key: DateTime
+}
+
+type UserParentingConnectionCreated_by {
+    connection: UserParentingConnection
+    key: ID
+}
+
+type UserParentingConnectionId {
+    connection: UserParentingConnection
+    key: ID
+}
+
+type UserParentingConnectionParenting {
+    connection: UserParentingConnection
+    key: ID
+}
+
+type UserParentingConnectionUpdated_at {
+    connection: UserParentingConnection
+    key: DateTime
+}
+
+type UserParentingConnectionUpdated_by {
+    connection: UserParentingConnection
+    key: ID
+}
+
+type UserParentingConnectionUser {
+    connection: UserParentingConnection
+    key: ID
+}
+
+type UserParentingGroupBy {
+    created_at: [UserParentingConnectionCreated_at]
+    created_by: [UserParentingConnectionCreated_by]
+    id: [UserParentingConnectionId]
+    parenting: [UserParentingConnectionParenting]
+    updated_at: [UserParentingConnectionUpdated_at]
+    updated_by: [UserParentingConnectionUpdated_by]
+    user: [UserParentingConnectionUser]
+}
+
+type UserPermissionsPasswordPayload {
+    ok: Boolean!
+}
+
+type UserPlan {
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    parentings(limit: Int, sort: String, start: Int, where: JSON): [Parenting]
+    status: PlanStatus!
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user: UsersPermissionsUser
+    user_assessments(limit: Int, sort: String, start: Int, where: JSON): [UserAssessment]
+    user_exercises(limit: Int, sort: String, start: Int, where: JSON): [UserExercise]
+}
+
+type UserPlanAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UserPlanConnection {
+    aggregate: UserPlanAggregator
+    groupBy: UserPlanGroupBy
+    values: [UserPlan]
+}
+
+type UserPlanConnectionCreated_at {
+    connection: UserPlanConnection
+    key: DateTime
+}
+
+type UserPlanConnectionCreated_by {
+    connection: UserPlanConnection
+    key: ID
+}
+
+type UserPlanConnectionId {
+    connection: UserPlanConnection
+    key: ID
+}
+
+type UserPlanConnectionStatus {
+    connection: UserPlanConnection
+    key: String
+}
+
+type UserPlanConnectionUpdated_at {
+    connection: UserPlanConnection
+    key: DateTime
+}
+
+type UserPlanConnectionUpdated_by {
+    connection: UserPlanConnection
+    key: ID
+}
+
+type UserPlanConnectionUser {
+    connection: UserPlanConnection
+    key: ID
+}
+
+type UserPlanGroupBy {
+    created_at: [UserPlanConnectionCreated_at]
+    created_by: [UserPlanConnectionCreated_by]
+    id: [UserPlanConnectionId]
+    status: [UserPlanConnectionStatus]
+    updated_at: [UserPlanConnectionUpdated_at]
+    updated_by: [UserPlanConnectionUpdated_by]
+    user: [UserPlanConnectionUser]
+}
+
+type UsersOrganizationunitsOrganizationUnit {
+    children(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
+    code: String
+    created_at: DateTime!
+    created_by: AdminUser
+    displayName: String!
+    id: ID!
+    parent: UsersOrganizationunitsOrganizationUnit
+    roles(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
+    updated_at: DateTime!
+    updated_by: AdminUser
+    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersOrganizationunitsOrganizationUnitAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UsersOrganizationunitsOrganizationUnitConnection {
+    aggregate: UsersOrganizationunitsOrganizationUnitAggregator
+    groupBy: UsersOrganizationunitsOrganizationUnitGroupBy
+    values: [UsersOrganizationunitsOrganizationUnit]
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionCode {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: String
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionCreated_at {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: DateTime
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionCreated_by {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: ID
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionDisplayName {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: String
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionId {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: ID
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionParent {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: ID
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionUpdated_at {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: DateTime
+}
+
+type UsersOrganizationunitsOrganizationUnitConnectionUpdated_by {
+    connection: UsersOrganizationunitsOrganizationUnitConnection
+    key: ID
+}
+
+type UsersOrganizationunitsOrganizationUnitGroupBy {
+    code: [UsersOrganizationunitsOrganizationUnitConnectionCode]
+    created_at: [UsersOrganizationunitsOrganizationUnitConnectionCreated_at]
+    created_by: [UsersOrganizationunitsOrganizationUnitConnectionCreated_by]
+    displayName: [UsersOrganizationunitsOrganizationUnitConnectionDisplayName]
+    id: [UsersOrganizationunitsOrganizationUnitConnectionId]
+    parent: [UsersOrganizationunitsOrganizationUnitConnectionParent]
+    updated_at: [UsersOrganizationunitsOrganizationUnitConnectionUpdated_at]
+    updated_by: [UsersOrganizationunitsOrganizationUnitConnectionUpdated_by]
+}
+
+type UsersPermissionsLoginPayload {
+    jwt: String
+    user: UsersPermissionsMe!
+}
+
+type UsersPermissionsMe {
+    accountInfo: Account
+    authorInfo: ComponentUserAuthor
+    birthday: Date
+    blocked: Boolean
+    childInfo: ComponentUserChild
+    confirmed: Boolean
+    counselorInfo: ComponentUserCounselor
+    countryCode: String
+    created_at: DateTime!
+    created_by: AdminUser
+    doctorInfo: ComponentUserDoctor
+    email: String!
+    fullName: String
+    id: ID!
+    image: UploadFile
+    name: String
+    nurseInfo: ComponentUserNurse
+    organization_units(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
+    parentInfo: ComponentUserParent
+    patientInfo: Patient
+    phone: String
+    provider: String
+    qrUrl: String
+    role: UsersPermissionsMeRole
+    second_email: String
+    sex: SexType
+    status: UserStatus!
+    teacherInfo: ComponentUserTeacher
+    updated_at: DateTime!
+    user_agreements(limit: Int, sort: String, start: Int, where: JSON): [UserAgreement]
+    username: String!
+}
+
+type UsersPermissionsMeRole {
+    description: String
+    id: ID!
+    name: String!
+    type: String
+}
+
+type UsersPermissionsPermission {
+    action: String!
+    controller: String!
+    created_by: AdminUser
+    enabled: Boolean!
+    id: ID!
+    policy: String
+    role: UsersPermissionsRole
+    type: String!
+    updated_by: AdminUser
+}
+
+type UsersPermissionsRole {
+    created_by: AdminUser
+    description: String
+    id: ID!
+    name: String!
+    permissions(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsPermission]
+    type: String
+    updated_by: AdminUser
+    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+}
+
+type UsersPermissionsRoleAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UsersPermissionsRoleConnection {
+    aggregate: UsersPermissionsRoleAggregator
+    groupBy: UsersPermissionsRoleGroupBy
+    values: [UsersPermissionsRole]
+}
+
+type UsersPermissionsRoleConnectionCreated_by {
+    connection: UsersPermissionsRoleConnection
+    key: ID
+}
+
+type UsersPermissionsRoleConnectionDescription {
+    connection: UsersPermissionsRoleConnection
+    key: String
+}
+
+type UsersPermissionsRoleConnectionId {
+    connection: UsersPermissionsRoleConnection
+    key: ID
+}
+
+type UsersPermissionsRoleConnectionName {
+    connection: UsersPermissionsRoleConnection
+    key: String
+}
+
+type UsersPermissionsRoleConnectionType {
+    connection: UsersPermissionsRoleConnection
+    key: String
+}
+
+type UsersPermissionsRoleConnectionUpdated_by {
+    connection: UsersPermissionsRoleConnection
+    key: ID
+}
+
+type UsersPermissionsRoleGroupBy {
+    created_by: [UsersPermissionsRoleConnectionCreated_by]
+    description: [UsersPermissionsRoleConnectionDescription]
+    id: [UsersPermissionsRoleConnectionId]
+    name: [UsersPermissionsRoleConnectionName]
+    type: [UsersPermissionsRoleConnectionType]
+    updated_by: [UsersPermissionsRoleConnectionUpdated_by]
+}
+
+type UsersPermissionsUser {
+    accountInfo: Account
+    authorInfo: ComponentUserAuthor
+    birthday: Date
+    blocked: Boolean
+    childInfo: ComponentUserChild
+    confirmed: Boolean
+    content: String
+    counselorInfo: ComponentUserCounselor
+    countryCode: String
+    created_at: DateTime!
+    created_by: AdminUser
+    doctorInfo: ComponentUserDoctor
+    email: String
+    fullName: String
+    id: ID!
+    image: UploadFile
+    name: String
+    nurseInfo: ComponentUserNurse
+    organization_units(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
+    parentInfo: ComponentUserParent
+    patientInfo: Patient
+    phone: String
+    provider: String
+    qrUrl: String
+    role: UsersPermissionsRole
+    second_email: String
+    sex: SexType
+    status: UserStatus!
+    teacherInfo: ComponentUserTeacher
+    updated_at: DateTime!
+    updated_by: AdminUser
+    user_agreements(limit: Int, sort: String, start: Int, where: JSON): [UserAgreement]
+    username: String!
+}
+
+type UsersPermissionsUserAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type UsersPermissionsUserConnection {
+    aggregate: UsersPermissionsUserAggregator
+    groupBy: UsersPermissionsUserGroupBy
+    values: [UsersPermissionsUser]
+}
+
+type UsersPermissionsUserConnectionAccountInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionAuthorInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionBirthday {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionBlocked {
+    connection: UsersPermissionsUserConnection
+    key: Boolean
+}
+
+type UsersPermissionsUserConnectionChildInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionConfirmed {
+    connection: UsersPermissionsUserConnection
+    key: Boolean
+}
+
+type UsersPermissionsUserConnectionContent {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionCounselorInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionCountryCode {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionCreated_at {
+    connection: UsersPermissionsUserConnection
+    key: DateTime
+}
+
+type UsersPermissionsUserConnectionCreated_by {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionDoctorInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionEmail {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionFullName {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionId {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionImage {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionName {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionNurseInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionParentInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionPatientInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionPhone {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionProvider {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionQrUrl {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionRole {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionSecond_email {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionSex {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionStatus {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserConnectionTeacherInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionUpdated_at {
+    connection: UsersPermissionsUserConnection
+    key: DateTime
+}
+
+type UsersPermissionsUserConnectionUpdated_by {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionUsername {
+    connection: UsersPermissionsUserConnection
+    key: String
+}
+
+type UsersPermissionsUserGroupBy {
+    accountInfo: [UsersPermissionsUserConnectionAccountInfo]
+    authorInfo: [UsersPermissionsUserConnectionAuthorInfo]
+    birthday: [UsersPermissionsUserConnectionBirthday]
+    blocked: [UsersPermissionsUserConnectionBlocked]
+    childInfo: [UsersPermissionsUserConnectionChildInfo]
+    confirmed: [UsersPermissionsUserConnectionConfirmed]
+    content: [UsersPermissionsUserConnectionContent]
+    counselorInfo: [UsersPermissionsUserConnectionCounselorInfo]
+    countryCode: [UsersPermissionsUserConnectionCountryCode]
+    created_at: [UsersPermissionsUserConnectionCreated_at]
+    created_by: [UsersPermissionsUserConnectionCreated_by]
+    doctorInfo: [UsersPermissionsUserConnectionDoctorInfo]
+    email: [UsersPermissionsUserConnectionEmail]
+    fullName: [UsersPermissionsUserConnectionFullName]
+    id: [UsersPermissionsUserConnectionId]
+    image: [UsersPermissionsUserConnectionImage]
+    name: [UsersPermissionsUserConnectionName]
+    nurseInfo: [UsersPermissionsUserConnectionNurseInfo]
+    parentInfo: [UsersPermissionsUserConnectionParentInfo]
+    patientInfo: [UsersPermissionsUserConnectionPatientInfo]
+    phone: [UsersPermissionsUserConnectionPhone]
+    provider: [UsersPermissionsUserConnectionProvider]
+    qrUrl: [UsersPermissionsUserConnectionQrUrl]
+    role: [UsersPermissionsUserConnectionRole]
+    second_email: [UsersPermissionsUserConnectionSecond_email]
+    sex: [UsersPermissionsUserConnectionSex]
+    status: [UsersPermissionsUserConnectionStatus]
+    teacherInfo: [UsersPermissionsUserConnectionTeacherInfo]
+    updated_at: [UsersPermissionsUserConnectionUpdated_at]
+    updated_by: [UsersPermissionsUserConnectionUpdated_by]
+    username: [UsersPermissionsUserConnectionUsername]
+}
+
+type Version {
+    created_at: DateTime!
+    created_by: AdminUser
+    description: String!
+    id: ID!
+    number: String!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type Webinar {
+    content: String
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    meetingId: String
+    post: ComponentContentPost
+    schedule: DateTime
+    subject: ComponentDataEhrSubject
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type WebinarAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type WebinarConnection {
+    aggregate: WebinarAggregator
+    groupBy: WebinarGroupBy
+    values: [Webinar]
+}
+
+type WebinarConnectionContent {
+    connection: WebinarConnection
+    key: String
+}
+
+type WebinarConnectionCreated_at {
+    connection: WebinarConnection
+    key: DateTime
+}
+
+type WebinarConnectionCreated_by {
+    connection: WebinarConnection
+    key: ID
+}
+
+type WebinarConnectionId {
+    connection: WebinarConnection
+    key: ID
+}
+
+type WebinarConnectionMeetingId {
+    connection: WebinarConnection
+    key: String
+}
+
+type WebinarConnectionPost {
+    connection: WebinarConnection
+    key: ID
+}
+
+type WebinarConnectionSchedule {
+    connection: WebinarConnection
+    key: DateTime
+}
+
+type WebinarConnectionSubject {
+    connection: WebinarConnection
+    key: ID
+}
+
+type WebinarConnectionUpdated_at {
+    connection: WebinarConnection
+    key: DateTime
+}
+
+type WebinarConnectionUpdated_by {
+    connection: WebinarConnection
+    key: ID
+}
+
+type WebinarGroupBy {
+    content: [WebinarConnectionContent]
+    created_at: [WebinarConnectionCreated_at]
+    created_by: [WebinarConnectionCreated_by]
+    id: [WebinarConnectionId]
+    meetingId: [WebinarConnectionMeetingId]
+    post: [WebinarConnectionPost]
+    schedule: [WebinarConnectionSchedule]
+    subject: [WebinarConnectionSubject]
+    updated_at: [WebinarConnectionUpdated_at]
+    updated_by: [WebinarConnectionUpdated_by]
+}
+
+type batchTelemetryPayload {
+    successCount: Int!
+}
+
+type cancelOrderPayload {
+    order: PaymentOrder
+}
+
+type createAccountPayload {
+    account: Account
+}
+
+type createArticlePayload {
+    article: Article
+}
+
+type createAssessmentQuestionnairePayload {
+    assessmentQuestionnaire: AssessmentQuestionnaire
+}
+
+type createBookPayload {
+    book: Book
+}
+
+type createCategoryPayload {
+    category: Category
+}
+
+type createColorPayload {
+    color: Color
+}
+
+type createCoursePayload {
+    course: Course
+}
+
+type createCreditCardPayload {
+    creditCard: CreditCard
+}
+
+type createCurrencyPayload {
+    currency: PaymentCurrency
+}
+
+type createEhrPayload {
+    ehr: Ehr
+}
+
+type createExercisePayload {
+    exercise: Exercise
+}
+
+type createLocationPayload {
+    location: Location
+}
+
+type createOrderPayload {
+    order: PaymentOrder
+}
+
+type createOrganizationUnitPayload {
+    organizationUnit: UsersOrganizationunitsOrganizationUnit
+}
+
+type createParentingPayload {
+    parenting: Parenting
+}
+
+type createPatientPayload {
+    patient: Patient
+}
+
+type createPaymentMethodPayload {
+    paymentMethod: PaymentMethod
+}
+
+type createPlanPayload {
+    plan: Plan
+}
+
+type createPostPayload {
+    post: Post
+}
+
+type createQuestionnaireAnswerPayload {
+    questionnaireAnswer: QuestionnaireAnswer
+}
+
+type createQuestionnairePayload {
+    questionnaire: Questionnaire
+}
+
+type createReminderPayload {
+    reminder: Reminder
+}
+
+type createRolePayload {
+    role: UsersPermissionsRole
+}
+
+type createSupplementPayload {
+    supplement: Supplement
+}
+
+type createTelemetryPayload {
+    telemetry: Telemetry
+}
+
+type createTrademarkPayload {
+    trademark: Trademark
+}
+
+type createUserAddressPayload {
+    userAddress: UserAddress
+}
+
+type createUserAgreementPayload {
+    userAgreement: UserAgreement
+}
+
+type createUserAssessmentPayload {
+    userAssessment: UserAssessment
+}
+
+type createUserExercisePayload {
+    userExercise: UserExercise
+}
+
+type createUserParentingPayload {
+    userParenting: UserParenting
+}
+
+type createUserPayload {
+    user: UsersPermissionsUser
+}
+
+type createUserPlanPayload {
+    userPlan: UserPlan
+}
+
+type createWebinarPayload {
+    webinar: Webinar
+}
+
+type deleteAboutFastBraiinPayload {
+    aboutFastBraiin: AboutFastBraiin
+}
+
+type deleteAccountPayload {
+    account: Account
+}
+
+type deleteAppTermOfServicePayload {
+    appTermOfService: AppTermOfService
+}
+
+type deleteArticlePayload {
+    article: Article
+}
+
+type deleteAssessmentQuestionnairePayload {
+    assessmentQuestionnaire: AssessmentQuestionnaire
+}
+
+type deleteAssessmentTermOfServicePayload {
+    assessmentTermOfService: AssessmentTermOfService
+}
+
+type deleteBookPayload {
+    book: Book
+}
+
+type deleteCategoryPayload {
+    category: Category
+}
+
+type deleteColorPayload {
+    color: Color
+}
+
+type deleteCoursePayload {
+    course: Course
+}
+
+type deleteCreditCardPayload {
+    creditCard: CreditCard
+}
+
+type deleteCurrencyPayload {
+    currency: PaymentCurrency
+}
+
+type deleteEhrPayload {
+    ehr: Ehr
+}
+
+type deleteExercisePayload {
+    exercise: Exercise
+}
+
+type deleteLocationPayload {
+    location: Location
+}
+
+type deleteOrderPayload {
+    order: PaymentOrder
+}
+
+type deleteOrganizationUnitPayload {
+    organizationUnit: UsersOrganizationunitsOrganizationUnit
+}
+
+type deleteParentingPayload {
+    parenting: Parenting
+}
+
+type deletePatientPayload {
+    patient: Patient
+}
+
+type deletePaymentMethodPayload {
+    paymentMethod: PaymentMethod
+}
+
+type deletePaymentPolicyPayload {
+    paymentPolicy: PaymentPolicy
+}
+
+type deletePlanPayload {
+    plan: Plan
+}
+
+type deletePostPayload {
+    post: Post
+}
+
+type deleteQuestionnaireAnswerPayload {
+    questionnaireAnswer: QuestionnaireAnswer
+}
+
+type deleteQuestionnairePayload {
+    questionnaire: Questionnaire
+}
+
+type deleteReminderPayload {
+    reminder: Reminder
+}
+
+type deleteRolePayload {
+    role: UsersPermissionsRole
+}
+
+type deleteSupplementPayload {
+    supplement: Supplement
+}
+
+type deleteTelemetryPayload {
+    telemetry: Telemetry
+}
+
+type deleteTrademarkPayload {
+    trademark: Trademark
+}
+
+type deleteUserAddressPayload {
+    userAddress: UserAddress
+}
+
+type deleteUserAgreementPayload {
+    userAgreement: UserAgreement
+}
+
+type deleteUserAssessmentPayload {
+    userAssessment: UserAssessment
+}
+
+type deleteUserExercisePayload {
+    userExercise: UserExercise
+}
+
+type deleteUserParentingPayload {
+    userParenting: UserParenting
+}
+
+type deleteUserPayload {
+    user: UsersPermissionsUser
+}
+
+type deleteUserPlanPayload {
+    userPlan: UserPlan
+}
+
+type deleteVersionPayload {
+    version: Version
+}
+
+type deleteWebinarPayload {
+    webinar: Webinar
+}
+
+type requestOrderPayPayload {
+    order: PaymentOrder
+    ret: JSON
+}
+
+type updateAboutFastBraiinPayload {
+    aboutFastBraiin: AboutFastBraiin
+}
+
+type updateAccountPayload {
+    account: Account
+}
+
+type updateAppTermOfServicePayload {
+    appTermOfService: AppTermOfService
+}
+
+type updateArticlePayload {
+    article: Article
+}
+
+type updateAssessmentQuestionnairePayload {
+    assessmentQuestionnaire: AssessmentQuestionnaire
+}
+
+type updateAssessmentTermOfServicePayload {
+    assessmentTermOfService: AssessmentTermOfService
+}
+
+type updateBookPayload {
+    book: Book
+}
+
+type updateCategoryPayload {
+    category: Category
+}
+
+type updateColorPayload {
+    color: Color
+}
+
+type updateCoursePayload {
+    course: Course
+}
+
+type updateCreditCardPayload {
+    creditCard: CreditCard
+}
+
+type updateCurrencyPayload {
+    currency: PaymentCurrency
+}
+
+type updateEhrPayload {
+    ehr: Ehr
+}
+
+type updateExercisePayload {
+    exercise: Exercise
+}
+
+type updateLocationPayload {
+    location: Location
+}
+
+type updateOrderPayload {
+    order: PaymentOrder
+}
+
+type updateOrganizationUnitPayload {
+    organizationUnit: UsersOrganizationunitsOrganizationUnit
+}
+
+type updateParentingPayload {
+    parenting: Parenting
+}
+
+type updatePatientPayload {
+    patient: Patient
+}
+
+type updatePaymentMethodPayload {
+    paymentMethod: PaymentMethod
+}
+
+type updatePaymentPolicyPayload {
+    paymentPolicy: PaymentPolicy
+}
+
+type updatePlanPayload {
+    plan: Plan
+}
+
+type updatePostPayload {
+    post: Post
+}
+
+type updateQuestionnaireAnswerPayload {
+    questionnaireAnswer: QuestionnaireAnswer
+}
+
+type updateQuestionnairePayload {
+    questionnaire: Questionnaire
+}
+
+type updateReminderPayload {
+    reminder: Reminder
+}
+
+type updateRolePayload {
+    role: UsersPermissionsRole
+}
+
+type updateSupplementPayload {
+    supplement: Supplement
+}
+
+type updateTelemetryPayload {
+    telemetry: Telemetry
+}
+
+type updateTrademarkPayload {
+    trademark: Trademark
+}
+
+type updateUserAddressPayload {
+    userAddress: UserAddress
+}
+
+type updateUserAgreementPayload {
+    userAgreement: UserAgreement
+}
+
+type updateUserAssessmentPayload {
+    userAssessment: UserAssessment
+}
+
+type updateUserExercisePayload {
+    userExercise: UserExercise
+}
+
+type updateUserParentingPayload {
+    userParenting: UserParenting
+}
+
+type updateUserPayload {
+    user: UsersPermissionsUser
+}
+
+type updateUserPlanPayload {
+    userPlan: UserPlan
+}
+
+type updateVersionPayload {
+    version: Version
+}
+
+type updateWebinarPayload {
+    webinar: Webinar
+}
+
+enum BookType {
+    online
+    printed
+}
+
+enum CacheControlScope {
+    PRIVATE
+    PUBLIC
+}
+
+enum ContentType {
+    Private
+    Public
+}
+
+enum DoctorSubject {
+    Family
+    Pediatrician
+    Psychiatrist
+    Psychologist
+    other
+}
+
+enum EhrStatus {
+    closed
+    inProgress
+    open
+}
+
+enum EhrSubject {
+    ADHD
+    cpt
+    grade
+    health
+    math
+    memory
+    music
+    nutrition
+    parenting
+    sleep
+    social_skill
+    spelling
+}
+
+enum EhrType {
+    assessment
+    diagnose
+    education
+    exercise
+    medicine
+    supplement
+}
+
+enum ExerciseType {
+    home
+    online
+    school
+    site
+}
+
+enum ForType {
+    adult
+    all
+    child
+}
+
+enum LocationType {
+    clinic
+    school
+}
+
+enum OrderStatusType {
+    Closed
+    Paid
+    Refunded
+    Refunding
+    RequestRefund
+    Unpaied
+}
+
+enum PlanStatus {
+    canceled
+    closed
+    open
+    started
+    suspended
+}
+
+enum PostStatus {
+    hidden
+    published
+    removed
+}
+
+enum PosterStatus {
+    hidden
+    published
+    removed
+}
+
+enum RelationType {
+    father
+    grandparent
+    mother
+    other
+    sibling
+}
+
+enum ReminderType {
+    daily
+    normal
+    scheduled
+    weekly
+}
+
+enum SexType {
+    female
+    male
+    other
+}
+
+enum SummarySubject {
+    cpt
+}
+
+enum SummaryType {
+    measurable
+}
+
+enum TermOfServiceType {
+    App
+    Assessment
+    Payment
+}
+
+enum UserStatus {
+    active
+    inactive
+    removed
+}
+
+input AboutFastBraiinInput {
+    content: String!
+    created_by: ID
+    updated_by: ID
+}
+
+input AccountInput {
+    created_by: ID
+    name: String!
+    orders: [ID]
+    updated_by: ID
+    user: ID
+}
+
+input AppTermOfServiceInput {
+    created_by: ID
+    term_of_service: String
+    updated_by: ID
+}
+
+input ArticleInput {
+    content: String!
+    created_by: ID
+    episodes: [ComponentContentEpisodeInput]
+    forPerson: ComponentDataForInput
+    media: [ID]
+    name: String
+    order_items: [ID]
+    post: ComponentContentPostInput!
+    published_at: Date
+    questionnaire: ID
+    subject: ComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input AssessmentQuestionnaireInput {
+    content: String!
+    created_by: ID
+    forPerson: ComponentDataForInput
+    level: Int
+    media: [ID]
+    name: String!
+    period_length: Int
+    post: ComponentContentPostInput!
+    questionnaire: ID
+    questionnaireOnly: Boolean
+    subject: ComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input AssessmentTermOfServiceInput {
+    created_by: ID
+    term_of_service: String
+    updated_by: ID
+}
+
+input BookInput {
+    content: String!
+    created_by: ID
+    episodes: [ComponentContentEpisodeInput]
+    name: String!
+    post: ComponentContentPostInput!
+    type: BookType
+    updated_by: ID
+}
+
+input CategoryInput {
+    created_by: ID
+    name: String!
+    preserved: Boolean
+    updated_by: ID
+}
+
+input ColorInput {
+    color: String
+    created_by: ID
+    updated_by: ID
+}
+
+input ComponentContentEpisodeInput {
+    content: String
+    subtitle: String
+    title: String
+}
+
+input ComponentContentPostInput {
+    author: ID
+    categories: [ID]
+    cover_background_color: ID
+    currency: ID
+    image: [ID]
+    needShipping: Boolean
+    prePrice: Float
+    price: Float
+    rating: Int
+    recommended: Boolean
+    status: PostStatus
+    subtitle: String
+    title: String!
+    trademark: ID
+    updated_day: Date!
+    vipText: String
+    vip_color: ID
+}
+
+input ComponentContentSummaryInput {
+    rating: Int
+    subject: SummarySubject!
+    type: SummaryType!
+}
+
+input ComponentDataAddressInput {
+    address1: String
+    address2: String
+    address3: String
+    city: String
+    country: String
+    fullName: String
+    postalCode: String
+    state: String
+}
+
+input ComponentDataEhrSubjectInput {
+    type: EhrSubject
+}
+
+input ComponentDataEhrTypeInput {
+    type: EhrType
+}
+
+input ComponentDataForInput {
+    type: ForType
+}
+
+input ComponentDataPositionInput {
+    altitude: Float
+    head: Float
+    latitude: Float
+    longitude: Float
+    speed: Float
+    timestamp: DateTime
+}
+
+input ComponentUserAuthorInput {
+    foo: String
+}
+
+input ComponentUserChildInput {
+    parent: ID
+    relationToUser: RelationType!
+    reminder: ID
+    teacher: ID
+}
+
+input ComponentUserCounselorInput {
+    location: ID
+}
+
+input ComponentUserDoctorInput {
+    location: ID
+    subject: DoctorSubject!
+}
+
+input ComponentUserNurseInput {
+    location: ID
+}
+
+input ComponentUserParentInput {
+    children: [ID]
+}
+
+input ComponentUserPatientInput {
+    counselor: ID
+    doctor: ID
+    nurse: ID
+}
+
+input ComponentUserTeacherInput {
+    school: String
+}
+
+input CourseInput {
+    content: String
+    contentType: ContentType
+    created_by: ID
+    medias: [ID]
+    picture: ID
+    subtitle: String
+    title: String
+    updated_by: ID
+}
+
+input CreditCardInput {
+    address: ID
+    created_by: ID
+    cvc: String!
+    expMonth: Int!
+    expYear: Int!
+    name: String!
+    number: String!
+    updated_by: ID
+    user: ID
+}
+
+input CurrencyInput {
+    code: String
+    created_by: ID
+    decimal_digits: Int!
+    name: String!
+    name_plural: String
+    rounding: Int
+    symbol: String
+    symbol_native: String
+    updated_by: ID
+}
+
+input EhrInput {
+    created_by: ID
+    data: JSON
+    medias: [ID]
+    office_comments: String
+    patient: ID
+    position: ComponentDataPositionInput
+    questionnaire_answer: ID
+    source: String!
+    source_id: String!
+    status: EhrStatus
+    subject: ComponentDataEhrSubjectInput!
+    summaries: [ComponentContentSummaryInput]
+    type: ComponentDataEhrTypeInput!
+    updated_by: ID
+    user: ID
+}
+
+input ExerciseInput {
+    age: Int
+    content: String!
+    created_by: ID
+    forPerson: ComponentDataForInput
+    level: Int
+    post: ComponentContentPostInput!
+    questionnaire: ID
+    subject: ComponentDataEhrSubjectInput
+    type: ExerciseType
+    updated_by: ID
+}
+
+input FileInfoInput {
+    alternativeText: String
+    caption: String
+    name: String
+}
+
+input FileInput {
+    alternativeText: String
+    caption: String
+    created_by: ID
+    ext: String
+    formats: JSON
+    hash: String!
+    height: Int
+    mime: String!
+    name: String!
+    previewUrl: String
+    provider: String!
+    provider_metadata: JSON
+    related: [ID]
+    size: Float!
+    updated_by: ID
+    url: String!
+    width: Int
+}
+
+input InputID {
+    id: ID!
+}
+
+input LocationInput {
+    address: String!
+    content: String
+    created_by: ID
+    description: String
+    email: String
+    name: String!
+    phone: String
+    post: ComponentContentPostInput!
+    qrCode: ID
+    type: LocationType!
+    updated_by: ID
+    web: String
+}
+
+input MyAddressInput {
+    address: ComponentDataAddressInput
+    tag: String
+}
+
+input OrderInput {
+    additional: JSON
+    created_by: ID
+    currency: ID
+    description: String
+    expire: DateTime
+    extra: JSON
+    items: [ID]
+    needpayPrice: Float
+    outTradeId: String
+    outTradeProvider: String
+    paiedPrice: Float
+    price: Float
+    shippingAddress: ComponentDataAddressInput
+    status: OrderStatusType
+    updated_by: ID
+    user: ID
+    uuid: String
+}
+
+input OrderItemInput {
+    additional: JSON
+    created_by: ID
+    currency: ID
+    extra: JSON
+    name: String!
+    order: ID
+    picture: ID
+    preUnitPrice: Float
+    quantity: Int
+    related: ID
+    sourceId: String
+    sourceType: String
+    unitPrice: Float
+    updated_by: ID
+}
+
+input OrganizationUnitInput {
+    children: [ID]
+    code: String
+    created_by: ID
+    displayName: String!
+    parent: ID
+    roles: [ID]
+    updated_by: ID
+    users: [ID]
+}
+
+input ParentingInput {
+    content: String
+    created_by: ID
+    media: [ID]
+    name: String!
+    pdfFiles: ID
+    post: ComponentContentPostInput!
+    questionnaire: ID
+    subject: ComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input PatientInput {
+    counselor: ID
+    created_by: ID
+    doctor: ID
+    ehrs: [ID]
+    meetingId: String
+    name: String!
+    nurse: ID
+    updated_by: ID
+    user: ID
+}
+
+input PaymentMethodInput {
+    billingAddress: ID
+    created_by: ID
+    creditCard: ID
+    livemode: Boolean
+    stripeId: String!
+    type: String
+    updated_by: ID
+    user: ID
+}
+
+input PaymentPolicyInput {
+    created_by: ID
+    policy: String
+    updated_by: ID
+}
+
+input PlanInput {
+    articles: [ID]
+    assessment: [ID]
+    books: [ID]
+    content: String
+    created_by: ID
+    exercises: [ID]
+    forPerson: ComponentDataForInput
+    name: String!
+    parentings: [ID]
+    post: ComponentContentPostInput!
+    questionnaire: ID
+    supplements: [ID]
+    updated_by: ID
+}
+
+input PostInput {
+    author: ID
+    categories: [ID]
+    cover_background_color: ID
+    created_by: ID
+    currency: ID
+    entityRawId: String
+    entityType: String
+    image: [ID]
+    needShipping: Boolean
+    prePrice: Float
+    price: Float
+    rating: Int
+    rawPostId: Int
+    recommended: Boolean
+    status: PosterStatus
+    subtitle: String
+    title: String!
+    trademark: ID
+    updated_by: ID
+    updated_day: Date
+    vipText: String
+    vip_color: ID
+}
+
+input QuestionnaireAnswerInput {
+    created_by: ID
+    data: JSON
+    name: String!
+    questionnaire: ID
+    submitted: Boolean
+    updated_by: ID
+    user: ID
+}
+
+input QuestionnaireInput {
+    assessment_questionnaires: [ID]
+    created_by: ID
+    data: String
+    displayName: String
+    name: String!
+    provider: String
+    updated_by: ID
+}
+
+input ReminderInput {
+    body: String
+    created_by: ID
+    dateTime: DateTime
+    name: String!
+    related: [ID]
+    source: String
+    sourceId: String
+    type: ReminderType
+    updated_by: ID
+    user: ID
+}
+
+input RoleInput {
+    created_by: ID
+    description: String
+    name: String!
+    permissions: [ID]
+    type: String
+    updated_by: ID
+    users: [ID]
+}
+
+input SettingInput {
+    created_by: ID
+    data: JSON
+    updated_by: ID
+    user: ID
+}
+
+input SupplementInput {
+    content: String
+    created_by: ID
+    forPerson: ComponentDataForInput
+    name: String!
+    post: ComponentContentPostInput!
+    provider: String!
+    subject: ComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input TelemetryInput {
+    created_by: ID
+    raw: JSON
+    updated_by: ID
+}
+
+input TestInput {
+    chart: String
+    created_by: ID
+    updated_by: ID
+}
+
+input TrademarkInput {
+    created_by: ID
+    image: ID
+    name: String!
+    updated_by: ID
+}
+
+input UserAddressInput {
+    address: ComponentDataAddressInput
+    created_by: ID
+    tag: String
+    updated_by: ID
+    user: ID
+}
+
+input UserAgreementInput {
+    content: String!
+    created_by: ID
+    lastVersionDate: DateTime!
+    termOfServiceType: TermOfServiceType!
+    updated_by: ID
+    user: ID
+    value: Boolean
+}
+
+input UserAssessmentInput {
+    assessment_questionnaire: ID
+    created_by: ID
+    updated_by: ID
+    user: ID
+}
+
+input UserExerciseInput {
+    created_by: ID
+    exercise: ID
+    updated_by: ID
+    user: ID
+}
+
+input UserInput {
+    accountInfo: ID
+    authorInfo: ComponentUserAuthorInput
+    birthday: Date
+    blocked: Boolean
+    childInfo: ComponentUserChildInput
+    confirmed: Boolean
+    content: String
+    counselorInfo: ComponentUserCounselorInput
+    countryCode: String
+    created_by: ID
+    doctorInfo: ComponentUserDoctorInput
+    email: String
+    fullName: String
+    image: ID
+    name: String
+    nurseInfo: ComponentUserNurseInput
+    organization_units: [ID]
+    parentInfo: ComponentUserParentInput
+    password: String
+    patientInfo: ID
+    phone: String
+    provider: String
+    qrUrl: String
+    resetPasswordToken: String
+    role: ID
+    second_email: String
+    sex: SexType
+    status: UserStatus
+    teacherInfo: ComponentUserTeacherInput
+    updated_by: ID
+    user_agreements: [ID]
+    username: String!
+}
+
+input UserParentingInput {
+    created_by: ID
+    parenting: ID
+    updated_by: ID
+    user: ID
+}
+
+input UserPlanInput {
+    created_by: ID
+    parentings: [ID]
+    status: PlanStatus
+    updated_by: ID
+    user: ID
+    user_assessments: [ID]
+    user_exercises: [ID]
+}
+
+input UsersPermissionsLoginInput {
+    identifier: String!
+    password: String!
+    provider: String = "local"
+}
+
+input UsersPermissionsRegisterInput {
+    email: String!
+    password: String!
+    username: String!
+}
+
+input VersionInput {
+    created_by: ID
+    description: String!
+    number: String
+    updated_by: ID
+}
+
+input WebinarInput {
+    content: String
+    created_by: ID
+    meetingId: String
+    post: ComponentContentPostInput
+    schedule: DateTime
+    subject: ComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input agreeTermOfServiceInput {
+    content: String!
+    lastVersionDate: DateTime!
+    termOfServiceType: TermOfServiceType!
+}
+
+input batchTelemetryInput {
+    data: [TelemetryInput]
+}
+
+input cancelOrderInput {
+    where: InputID
+}
+
+input childInput {
+    birthday: Date!
+    childInfo: ComponentUserChildInput!
+    fullName: String!
+    image: ID
+    name: String
+    sex: SexType!
+}
+
+input createAccountInput {
+    data: AccountInput
+}
+
+input createArticleInput {
+    data: ArticleInput
+}
+
+input createAssessmentQuestionnaireInput {
+    data: AssessmentQuestionnaireInput
+}
+
+input createBookInput {
+    data: BookInput
+}
+
+input createCategoryInput {
+    data: CategoryInput
+}
+
+input createChildInput {
+    data: childInput
+}
+
+input createColorInput {
+    data: ColorInput
+}
+
+input createCourseInput {
+    data: CourseInput
+}
+
+input createCreditCardInput {
+    data: CreditCardInput
+}
+
+input createCurrencyInput {
+    data: CurrencyInput
+}
+
+input createEhrInput {
+    data: EhrInput
+}
+
+input createExerciseInput {
+    data: ExerciseInput
+}
+
+input createLocationInput {
+    data: LocationInput
+}
+
+input createMyAddressInput {
+    data: MyAddressInput
+}
+
+input createMyOrderInput {
+    data: myOrderInput
+}
+
+input createOrderInput {
+    data: OrderInput
+}
+
+input createOrganizationUnitInput {
+    data: OrganizationUnitInput
+}
+
+input createParentingInput {
+    data: ParentingInput
+}
+
+input createPatientInput {
+    data: PatientInput
+}
+
+input createPaymentMethodInput {
+    data: PaymentMethodInput
+}
+
+input createPlanInput {
+    data: PlanInput
+}
+
+input createPostInput {
+    data: PostInput
+}
+
+input createQuestionnaireAnswerInput {
+    data: QuestionnaireAnswerInput
+}
+
+input createQuestionnaireInput {
+    data: QuestionnaireInput
+}
+
+input createReminderInput {
+    data: ReminderInput
+}
+
+input createRoleInput {
+    data: RoleInput
+}
+
+input createSupplementInput {
+    data: SupplementInput
+}
+
+input createTelemetryInput {
+    data: TelemetryInput
+}
+
+input createTrademarkInput {
+    data: TrademarkInput
+}
+
+input createUnifiedOrderInput {
+    data: unifiedOrderInput
+}
+
+input createUserAddressInput {
+    data: UserAddressInput
+}
+
+input createUserAgreementInput {
+    data: UserAgreementInput
+}
+
+input createUserAssessmentInput {
+    data: UserAssessmentInput
+}
+
+input createUserExerciseInput {
+    data: UserExerciseInput
+}
+
+input createUserInput {
+    data: UserInput
+}
+
+input createUserParentingInput {
+    data: UserParentingInput
+}
+
+input createUserPlanInput {
+    data: UserPlanInput
+}
+
+input createWebinarInput {
+    data: WebinarInput
+}
+
+input deleteAccountInput {
+    where: InputID
+}
+
+input deleteArticleInput {
+    where: InputID
+}
+
+input deleteAssessmentQuestionnaireInput {
+    where: InputID
+}
+
+input deleteBookInput {
+    where: InputID
+}
+
+input deleteCategoryInput {
+    where: InputID
+}
+
+input deleteColorInput {
+    where: InputID
+}
+
+input deleteCourseInput {
+    where: InputID
+}
+
+input deleteCreditCardInput {
+    where: InputID
+}
+
+input deleteCurrencyInput {
+    where: InputID
+}
+
+input deleteEhrInput {
+    where: InputID
+}
+
+input deleteExerciseInput {
+    where: InputID
+}
+
+input deleteLocationInput {
+    where: InputID
+}
+
+input deleteOrderInput {
+    where: InputID
+}
+
+input deleteOrganizationUnitInput {
+    where: InputID
+}
+
+input deleteParentingInput {
+    where: InputID
+}
+
+input deletePatientInput {
+    where: InputID
+}
+
+input deletePaymentMethodInput {
+    where: InputID
+}
+
+input deletePlanInput {
+    where: InputID
+}
+
+input deletePostInput {
+    where: InputID
+}
+
+input deleteQuestionnaireAnswerInput {
+    where: InputID
+}
+
+input deleteQuestionnaireInput {
+    where: InputID
+}
+
+input deleteReminderInput {
+    where: InputID
+}
+
+input deleteRoleInput {
+    where: InputID
+}
+
+input deleteSupplementInput {
+    where: InputID
+}
+
+input deleteTelemetryInput {
+    where: InputID
+}
+
+input deleteTrademarkInput {
+    where: InputID
+}
+
+input deleteUserAddressInput {
+    where: InputID
+}
+
+input deleteUserAgreementInput {
+    where: InputID
+}
+
+input deleteUserAssessmentInput {
+    where: InputID
+}
+
+input deleteUserExerciseInput {
+    where: InputID
+}
+
+input deleteUserInput {
+    where: InputID
+}
+
+input deleteUserParentingInput {
+    where: InputID
+}
+
+input deleteUserPlanInput {
+    where: InputID
+}
+
+input deleteWebinarInput {
+    where: InputID
+}
+
+input editAboutFastBraiinInput {
+    content: String
+    created_by: ID
+    updated_by: ID
+}
+
+input editAccountInput {
+    created_by: ID
+    name: String
+    orders: [ID]
+    updated_by: ID
+    user: ID
+}
+
+input editAppTermOfServiceInput {
+    created_by: ID
+    term_of_service: String
+    updated_by: ID
+}
+
+input editArticleInput {
+    content: String
+    created_by: ID
+    episodes: [editComponentContentEpisodeInput]
+    forPerson: editComponentDataForInput
+    media: [ID]
+    name: String
+    order_items: [ID]
+    post: editComponentContentPostInput
+    published_at: Date
+    questionnaire: ID
+    subject: editComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input editAssessmentQuestionnaireInput {
+    content: String
+    created_by: ID
+    forPerson: editComponentDataForInput
+    level: Int
+    media: [ID]
+    name: String
+    period_length: Int
+    post: editComponentContentPostInput
+    questionnaire: ID
+    questionnaireOnly: Boolean
+    subject: editComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input editAssessmentTermOfServiceInput {
+    created_by: ID
+    term_of_service: String
+    updated_by: ID
+}
+
+input editBookInput {
+    content: String
+    created_by: ID
+    episodes: [editComponentContentEpisodeInput]
+    name: String
+    post: editComponentContentPostInput
+    type: BookType
+    updated_by: ID
+}
+
+input editCategoryInput {
+    created_by: ID
+    name: String
+    preserved: Boolean
+    updated_by: ID
+}
+
+input editChildInput {
+    birthday: Date
+    childInfo: ComponentUserChildInput
+    fullName: String
+    image: ID
+    name: String
+    sex: SexType
+}
+
+input editColorInput {
+    color: String
+    created_by: ID
+    updated_by: ID
+}
+
+input editComponentContentEpisodeInput {
+    content: String
+    id: ID
+    subtitle: String
+    title: String
+}
+
+input editComponentContentPostInput {
+    author: ID
+    categories: [ID]
+    cover_background_color: ID
+    currency: ID
+    id: ID
+    image: [ID]
+    needShipping: Boolean
+    prePrice: Float
+    price: Float
+    rating: Int
+    recommended: Boolean
+    status: PostStatus
+    subtitle: String
+    title: String
+    trademark: ID
+    updated_day: Date
+    vipText: String
+    vip_color: ID
+}
+
+input editComponentContentSummaryInput {
+    id: ID
+    rating: Int
+    subject: SummarySubject
+    type: SummaryType
+}
+
+input editComponentDataAddressInput {
+    address1: String
+    address2: String
+    address3: String
+    city: String
+    country: String
+    fullName: String
+    id: ID
+    postalCode: String
+    state: String
+}
+
+input editComponentDataEhrSubjectInput {
+    id: ID
+    type: EhrSubject
+}
+
+input editComponentDataEhrTypeInput {
+    id: ID
+    type: EhrType
+}
+
+input editComponentDataForInput {
+    id: ID
+    type: ForType
+}
+
+input editComponentDataPositionInput {
+    altitude: Float
+    head: Float
+    id: ID
+    latitude: Float
+    longitude: Float
+    speed: Float
+    timestamp: DateTime
+}
+
+input editComponentUserAuthorInput {
+    foo: String
+    id: ID
+}
+
+input editComponentUserChildInput {
+    id: ID
+    parent: ID
+    relationToUser: RelationType
+    reminder: ID
+    teacher: ID
+}
+
+input editComponentUserCounselorInput {
+    id: ID
+    location: ID
+}
+
+input editComponentUserDoctorInput {
+    id: ID
+    location: ID
+    subject: DoctorSubject
+}
+
+input editComponentUserNurseInput {
+    id: ID
+    location: ID
+}
+
+input editComponentUserParentInput {
+    children: [ID]
+    id: ID
+}
+
+input editComponentUserPatientInput {
+    counselor: ID
+    doctor: ID
+    id: ID
+    nurse: ID
+}
+
+input editComponentUserTeacherInput {
+    id: ID
+    school: String
+}
+
+input editCourseInput {
+    content: String
+    contentType: ContentType
+    created_by: ID
+    medias: [ID]
+    picture: ID
+    subtitle: String
+    title: String
+    updated_by: ID
+}
+
+input editCreditCardInput {
+    address: ID
+    created_by: ID
+    cvc: String
+    expMonth: Int
+    expYear: Int
+    name: String
+    number: String
+    updated_by: ID
+    user: ID
+}
+
+input editCurrencyInput {
+    code: String
+    created_by: ID
+    decimal_digits: Int
+    name: String
+    name_plural: String
+    rounding: Int
+    symbol: String
+    symbol_native: String
+    updated_by: ID
+}
+
+input editEhrInput {
+    created_by: ID
+    data: JSON
+    medias: [ID]
+    office_comments: String
+    patient: ID
+    position: editComponentDataPositionInput
+    questionnaire_answer: ID
+    source: String
+    source_id: String
+    status: EhrStatus
+    subject: editComponentDataEhrSubjectInput
+    summaries: [editComponentContentSummaryInput]
+    type: editComponentDataEhrTypeInput
+    updated_by: ID
+    user: ID
+}
+
+input editExerciseInput {
+    age: Int
+    content: String
+    created_by: ID
+    forPerson: editComponentDataForInput
+    level: Int
+    post: editComponentContentPostInput
+    questionnaire: ID
+    subject: editComponentDataEhrSubjectInput
+    type: ExerciseType
+    updated_by: ID
+}
+
+input editFileInput {
+    alternativeText: String
+    caption: String
+    created_by: ID
+    ext: String
+    formats: JSON
+    hash: String
+    height: Int
+    mime: String
+    name: String
+    previewUrl: String
+    provider: String
+    provider_metadata: JSON
+    related: [ID]
+    size: Float
+    updated_by: ID
+    url: String
+    width: Int
+}
+
+input editLocationInput {
+    address: String
+    content: String
+    created_by: ID
+    description: String
+    email: String
+    name: String
+    phone: String
+    post: editComponentContentPostInput
+    qrCode: ID
+    type: LocationType
+    updated_by: ID
+    web: String
+}
+
+input editMyAddressInput {
+    address: ComponentDataAddressInput
+    tag: String
+}
+
+input editOrderInput {
+    additional: JSON
+    created_by: ID
+    currency: ID
+    description: String
+    expire: DateTime
+    extra: JSON
+    items: [ID]
+    needpayPrice: Float
+    outTradeId: String
+    outTradeProvider: String
+    paiedPrice: Float
+    price: Float
+    shippingAddress: editComponentDataAddressInput
+    status: OrderStatusType
+    updated_by: ID
+    user: ID
+    uuid: String
+}
+
+input editOrderItemInput {
+    additional: JSON
+    created_by: ID
+    currency: ID
+    extra: JSON
+    name: String
+    order: ID
+    picture: ID
+    preUnitPrice: Float
+    quantity: Int
+    related: ID
+    sourceId: String
+    sourceType: String
+    unitPrice: Float
+    updated_by: ID
+}
+
+input editOrganizationUnitInput {
+    children: [ID]
+    code: String
+    created_by: ID
+    displayName: String
+    parent: ID
+    roles: [ID]
+    updated_by: ID
+    users: [ID]
+}
+
+input editParentingInput {
+    content: String
+    created_by: ID
+    media: [ID]
+    name: String
+    pdfFiles: ID
+    post: editComponentContentPostInput
+    questionnaire: ID
+    subject: editComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input editPatientInput {
+    counselor: ID
+    created_by: ID
+    doctor: ID
+    ehrs: [ID]
+    meetingId: String
+    name: String
+    nurse: ID
+    updated_by: ID
+    user: ID
+}
+
+input editPaymentMethodInput {
+    billingAddress: ID
+    created_by: ID
+    creditCard: ID
+    livemode: Boolean
+    stripeId: String
+    type: String
+    updated_by: ID
+    user: ID
+}
+
+input editPaymentPolicyInput {
+    created_by: ID
+    policy: String
+    updated_by: ID
+}
+
+input editPlanInput {
+    articles: [ID]
+    assessment: [ID]
+    books: [ID]
+    content: String
+    created_by: ID
+    exercises: [ID]
+    forPerson: editComponentDataForInput
+    name: String
+    parentings: [ID]
+    post: editComponentContentPostInput
+    questionnaire: ID
+    supplements: [ID]
+    updated_by: ID
+}
+
+input editPostInput {
+    author: ID
+    categories: [ID]
+    cover_background_color: ID
+    created_by: ID
+    currency: ID
+    entityRawId: String
+    entityType: String
+    image: [ID]
+    needShipping: Boolean
+    prePrice: Float
+    price: Float
+    rating: Int
+    rawPostId: Int
+    recommended: Boolean
+    status: PosterStatus
+    subtitle: String
+    title: String
+    trademark: ID
+    updated_by: ID
+    updated_day: Date
+    vipText: String
+    vip_color: ID
+}
+
+input editQuestionnaireAnswerInput {
+    created_by: ID
+    data: JSON
+    name: String
+    questionnaire: ID
+    submitted: Boolean
+    updated_by: ID
+    user: ID
+}
+
+input editQuestionnaireInput {
+    assessment_questionnaires: [ID]
+    created_by: ID
+    data: String
+    displayName: String
+    name: String
+    provider: String
+    updated_by: ID
+}
+
+input editReminderInput {
+    body: String
+    created_by: ID
+    dateTime: DateTime
+    name: String
+    related: [ID]
+    source: String
+    sourceId: String
+    type: ReminderType
+    updated_by: ID
+    user: ID
+}
+
+input editRoleInput {
+    created_by: ID
+    description: String
+    name: String
+    permissions: [ID]
+    type: String
+    updated_by: ID
+    users: [ID]
+}
+
+input editSettingInput {
+    created_by: ID
+    data: JSON
+    updated_by: ID
+    user: ID
+}
+
+input editSupplementInput {
+    content: String
+    created_by: ID
+    forPerson: editComponentDataForInput
+    name: String
+    post: editComponentContentPostInput
+    provider: String
+    subject: editComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input editTelemetryInput {
+    created_by: ID
+    raw: JSON
+    updated_by: ID
+}
+
+input editTestInput {
+    chart: String
+    created_by: ID
+    updated_by: ID
+}
+
+input editTrademarkInput {
+    created_by: ID
+    image: ID
+    name: String
+    updated_by: ID
+}
+
+input editUserAddressInput {
+    address: editComponentDataAddressInput
+    created_by: ID
+    tag: String
+    updated_by: ID
+    user: ID
+}
+
+input editUserAgreementInput {
+    content: String
+    created_by: ID
+    lastVersionDate: DateTime
+    termOfServiceType: TermOfServiceType
+    updated_by: ID
+    user: ID
+    value: Boolean
+}
+
+input editUserAssessmentInput {
+    assessment_questionnaire: ID
+    created_by: ID
+    updated_by: ID
+    user: ID
+}
+
+input editUserExerciseInput {
+    created_by: ID
+    exercise: ID
+    updated_by: ID
+    user: ID
+}
+
+input editUserInput {
+    accountInfo: ID
+    authorInfo: editComponentUserAuthorInput
+    birthday: Date
+    blocked: Boolean
+    childInfo: editComponentUserChildInput
+    confirmed: Boolean
+    content: String
+    counselorInfo: editComponentUserCounselorInput
+    countryCode: String
+    created_by: ID
+    doctorInfo: editComponentUserDoctorInput
+    email: String
+    fullName: String
+    image: ID
+    name: String
+    nurseInfo: editComponentUserNurseInput
+    organization_units: [ID]
+    parentInfo: editComponentUserParentInput
+    password: String
+    patientInfo: ID
+    phone: String
+    provider: String
+    qrUrl: String
+    resetPasswordToken: String
+    role: ID
+    second_email: String
+    sex: SexType
+    status: UserStatus
+    teacherInfo: editComponentUserTeacherInput
+    updated_by: ID
+    user_agreements: [ID]
+    username: String
+}
+
+input editUserParentingInput {
+    created_by: ID
+    parenting: ID
+    updated_by: ID
+    user: ID
+}
+
+input editUserPlanInput {
+    created_by: ID
+    parentings: [ID]
+    status: PlanStatus
+    updated_by: ID
+    user: ID
+    user_assessments: [ID]
+    user_exercises: [ID]
+}
+
+input editVersionInput {
+    created_by: ID
+    description: String
+    number: String
+    updated_by: ID
+}
+
+input editWebinarInput {
+    content: String
+    created_by: ID
+    meetingId: String
+    post: editComponentContentPostInput
+    schedule: DateTime
+    subject: editComponentDataEhrSubjectInput
+    updated_by: ID
+}
+
+input myOrderInput {
+    additional: JSON
+    currency: ID!
+    description: String
+    items: [orderItemInput]
+    shippingAddress: ComponentDataAddressInput
+}
+
+input orderItemInput {
+    additional: JSON
+    name: String!
+    picture: ID
+    preUnitPrice: Float!
+    quantity: Int!
+    related: relatedInput
+    sourceId: String
+    sourceType: String
+    unitPrice: Float!
+}
+
+input orderPayInput {
+    options: JSON
+    provider: String!
+}
+
+input relatedInput {
+    field: String
+    ref: String
+    refId: String
+    source: String
+}
+
+input requestOrderPayInput {
+    data: orderPayInput
+    where: InputID
+}
+
+input unifiedOrderInput {
+    additional: JSON
+    currency: ID!
+    description: String
+    items: [orderItemInput]
+    shippingAddress: ComponentDataAddressInput
+    user: ID
+}
+
+input updateAboutFastBraiinInput {
+    data: editAboutFastBraiinInput
+}
+
+input updateAccountInput {
+    data: editAccountInput
+    where: InputID
+}
+
+input updateAppTermOfServiceInput {
+    data: editAppTermOfServiceInput
+}
+
+input updateArticleInput {
+    data: editArticleInput
+    where: InputID
+}
+
+input updateAssessmentQuestionnaireInput {
+    data: editAssessmentQuestionnaireInput
+    where: InputID
+}
+
+input updateAssessmentTermOfServiceInput {
+    data: editAssessmentTermOfServiceInput
+}
+
+input updateBookInput {
+    data: editBookInput
+    where: InputID
+}
+
+input updateCategoryInput {
+    data: editCategoryInput
+    where: InputID
+}
+
+input updateChildInput {
+    data: editChildInput
+    where: InputID
+}
+
+input updateColorInput {
+    data: editColorInput
+    where: InputID
+}
+
+input updateCourseInput {
+    data: editCourseInput
+    where: InputID
+}
+
+input updateCreditCardInput {
+    data: editCreditCardInput
+    where: InputID
+}
+
+input updateCurrencyInput {
+    data: editCurrencyInput
+    where: InputID
+}
+
+input updateEhrInput {
+    data: editEhrInput
+    where: InputID
+}
+
+input updateExerciseInput {
+    data: editExerciseInput
+    where: InputID
+}
+
+input updateLocationInput {
+    data: editLocationInput
+    where: InputID
+}
+
+input updateMe {
+    birthday: Date
+    content: String
+    countryCode: String
+    email: String
+    fullName: String
+    image: ID
+    name: String
+    phone: String
+    second_email: String
+    sex: SexType
+    username: String
+}
+
+input updateMeInput {
+    data: updateMe
+}
+
+input updateMyAddressInput {
+    data: editMyAddressInput
+    where: InputID
+}
+
+input updateOrderInput {
+    data: editOrderInput
+    where: InputID
+}
+
+input updateOrganizationUnitInput {
+    data: editOrganizationUnitInput
+    where: InputID
+}
+
+input updateParentingInput {
+    data: editParentingInput
+    where: InputID
+}
+
+input updatePatientInput {
+    data: editPatientInput
+    where: InputID
+}
+
+input updatePaymentMethodInput {
+    data: editPaymentMethodInput
+    where: InputID
+}
+
+input updatePaymentPolicyInput {
+    data: editPaymentPolicyInput
+}
+
+input updatePlanInput {
+    data: editPlanInput
+    where: InputID
+}
+
+input updatePostInput {
+    data: editPostInput
+    where: InputID
+}
+
+input updateQuestionnaireAnswerInput {
+    data: editQuestionnaireAnswerInput
+    where: InputID
+}
+
+input updateQuestionnaireInput {
+    data: editQuestionnaireInput
+    where: InputID
+}
+
+input updateReminderInput {
+    data: editReminderInput
+    where: InputID
+}
+
+input updateRoleInput {
+    data: editRoleInput
+    where: InputID
+}
+
+input updateSupplementInput {
+    data: editSupplementInput
+    where: InputID
+}
+
+input updateTelemetryInput {
+    data: editTelemetryInput
+    where: InputID
+}
+
+input updateTrademarkInput {
+    data: editTrademarkInput
+    where: InputID
+}
+
+input updateUserAddressInput {
+    data: editUserAddressInput
+    where: InputID
+}
+
+input updateUserAgreementInput {
+    data: editUserAgreementInput
+    where: InputID
+}
+
+input updateUserAssessmentInput {
+    data: editUserAssessmentInput
+    where: InputID
+}
+
+input updateUserExerciseInput {
+    data: editUserExerciseInput
+    where: InputID
+}
+
+input updateUserInput {
+    data: editUserInput
+    where: InputID
+}
+
+input updateUserParentingInput {
+    data: editUserParentingInput
+    where: InputID
+}
+
+input updateUserPlanInput {
+    data: editUserPlanInput
+    where: InputID
+}
+
+input updateVersionInput {
+    data: editVersionInput
+}
+
+input updateWebinarInput {
+    data: editWebinarInput
+    where: InputID
+}
+
+
+"A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar DateTime
+
+"The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
+scalar JSON
+
+"A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar Date
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload
+
+"A time string with format: HH:mm:ss.SSS"
+scalar Time
+
+"The `Long` scalar type represents 52-bit integers"
+scalar Long

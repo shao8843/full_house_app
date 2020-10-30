@@ -1,0 +1,7 @@
+query PaymentPolicy {
+    paymentPolicy{
+        id
+        policy
+        updated_at,
+    }
+}

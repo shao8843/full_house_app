@@ -1,0 +1,10 @@
+mutation CounselorUpdate($input: updateUserInput) {
+    updateUser(input: $input){
+        user{
+            ...UserDetail
+            counselorInfo{
+                ...CounselorInfoSimple
+            }
+        }
+    }
+}

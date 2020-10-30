@@ -1,0 +1,33 @@
+targets:
+  $default:
+    sources:
+      - lib/**
+      - graphql/**
+      - schema.graphql
+    builders:
+      artemis:
+        options:
+          fragments_glob: graphql/**.fragment.graphql
+          schema_mapping:
+            - schema: schema.graphql
+              queries_glob: graphql/*.{query,subscription,mutation}.graphql
+              output: lib/api/graphql_api.dart
+              naming_scheme: pathedWithFields
+          scalar_mapping:
+            - custom_parser_import: 'package:full_house_app/utils/coercers.dart'
+              graphql_type: Date
+              dart_type: DateTime
+            - custom_parser_import: 'package:full_house_app/utils/coercers.dart'
+              graphql_type: DateTime
+              dart_type: DateTime
+            - graphql_type: JSON
+              dart_type: object
+            - custom_parser_import: 'package:full_house_app/utils/coercers.dart'
+              graphql_type: Upload
+              dart_type:
+                name: MultipartFile
+                imports:
+                  - 'package:http/http.dart'
+      json_serializable:
+        options:
+          include_if_null: false
