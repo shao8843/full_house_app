@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_artech/flutter_arteck.dart';
+import 'package:flutter_artech/flutter_artech.dart';
 import 'package:flutter_artech/locale/locales.dart';
 import 'package:full_house_app/pages/me_page.dart';
 

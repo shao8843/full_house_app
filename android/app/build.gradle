@@ -41,6 +41,7 @@ android {
         applicationId "com.artech.full_house_app"
         minSdkVersion 19
         targetSdkVersion 28
+        multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
