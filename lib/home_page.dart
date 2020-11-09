@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
-import 'package:flutter_artech/locale/locales.dart';
 import 'package:full_house_app/pages/me_page.dart';
 
 class HomePage extends HomeBase {
@@ -12,11 +11,11 @@ class HomePage extends HomeBase {
     return {
       BottomNavigationBarItem(
         icon: Icon(Icons.home),
-        title: Text('Home'),
+        label: 'Home',
       ): Container(),
       BottomNavigationBarItem(
         icon: Icon(Icons.person),
-        title: Text(ArtechLocalizations().userCenter),
+        label: ArtechLocalizations().userCenter,
       ): MePage()
     };
   }

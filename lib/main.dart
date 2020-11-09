@@ -25,7 +25,7 @@ void main() async {
   print('App Server:${GlobalConfiguration().getValue("ServerUrl")}');
   print('App graphql:${GlobalConfiguration().getValue("graphql")}');
 
-  await MyDatabase().initialization();
+  await ArtechDatabase().initialization();
 
   runApp(ArtechApp(
       home: HomePage(),
