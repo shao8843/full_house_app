@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/home_page.dart';
+import 'package:full_house_app/repository/login_repo.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await ApplicationConfig.globalConfigurationInitial();
 
-  await ArtechDatabase().initialization();
-
   runApp(ArtechApp(
+      register: LoginRepository.emailPasswordSignUp,
+      passwordLogin: LoginRepository.passwordSignIn,
+      getLoginUser: LoginRepository.getLoginUser,
+      title: '满堂彩',
       home: HomePage(),
       themeData: ThemeData(
     // This is the theme of your application.

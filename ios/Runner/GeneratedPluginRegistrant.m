@@ -40,6 +40,12 @@
 @import fluttertoast;
 #endif
 
+#if __has_include(<libphonenumber/LibphonenumberPlugin.h>)
+#import <libphonenumber/LibphonenumberPlugin.h>
+#else
+@import libphonenumber;
+#endif
+
 #if __has_include(<package_info/FLTPackageInfoPlugin.h>)
 #import <package_info/FLTPackageInfoPlugin.h>
 #else
@@ -91,6 +97,7 @@
   [FlutterSecureStoragePlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterSecureStoragePlugin"]];
   [FlutterWebRTCPlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterWebRTCPlugin"]];
   [FluttertoastPlugin registerWithRegistrar:[registry registrarForPlugin:@"FluttertoastPlugin"]];
+  [LibphonenumberPlugin registerWithRegistrar:[registry registrarForPlugin:@"LibphonenumberPlugin"]];
   [FLTPackageInfoPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPackageInfoPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];

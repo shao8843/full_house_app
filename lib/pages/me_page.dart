@@ -17,12 +17,12 @@ class MePage extends MePageBase {
   }
 
   @override
-  Future<void> pushLoginPage(BuildContext context, LoginInfo loginInfo) async {
+  Future<void> pushLoginPage(BuildContext context) async {
     await Navigator.of(context).push(MaterialPageRoute(
-      settings: RouteSettings(
-        name: '\LoginPage',
-      ),
-      builder: (_)=>LoginPage()
+        settings: RouteSettings(
+          name: '\LoginPage',
+        ),
+        builder: (_)=>LoginPage()
     ));
   }
 }
