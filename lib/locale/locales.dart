@@ -31,6 +31,11 @@ class FullHouseLocalizations {
         name: 'userCenter', desc: 'userCenter');
   }
 
+  String get fullHouse {
+    return Intl.message('Full House',
+        name: 'fullHouse', desc: 'fullHouse');
+  }
+
 }
 
 class FullHouseLocalizationDelegate extends
