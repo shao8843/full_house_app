@@ -50,6 +50,15 @@ class _FullHousePageState extends State<FullHousePage> with SingleTickerProvider
                 Tab(text: ArtechLocalizations().article,),
               ],),
           ),
+          Expanded(
+            child: TabBarView(
+              controller: _tabController,
+              children: [
+                Container(),
+                Container(),
+              ],
+            ),
+          ),
         ],
       ),
     );
