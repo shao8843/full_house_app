@@ -2,11 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/home_page.dart';
 import 'package:full_house_app/repository/login_repo.dart';
+import 'package:graphql_flutter/graphql_flutter.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await ApplicationConfig.globalConfigurationInitial();
+
+  await initHiveForFlutter();
 
   runApp(ArtechApp(
       register: LoginRepository.emailPasswordSignUp,

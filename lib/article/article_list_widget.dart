@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
+import 'package:full_house_app/mixins/minxin_post_widget.dart';
 
-class ArticleListWidget extends PostListWidget {
+class ArticleListWidget extends PostListWidget with MixinPostWidget {
+
+  const ArticleListWidget({Key key}):super(key: key,category:'Article');
+
   @override
   List<SortText> getSortTextList() {
     // TODO: implement getSortTextList
-    throw UnimplementedError();
-  }
-
-  @override
-  Future<List<PostData>> listResult({String sort, int limit, int start, String searchField, String search}) {
-    // TODO: implement listResult
-    throw UnimplementedError();
+    return [];
   }
 
   @override

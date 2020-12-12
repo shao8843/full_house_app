@@ -25,6 +25,7 @@
 
     <application
         xmlns:tools="http://schemas.android.com/tools"
+        android:usesCleartextTraffic="true"
         tools:replace="android:label"
         android:name="io.flutter.app.FlutterApplication"
         android:label="full_house_app"

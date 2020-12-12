@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
+import 'package:full_house_app/article/article_list_widget.dart';
 
 class FullHousePage extends StatefulWidget {
 
@@ -55,7 +56,7 @@ class _FullHousePageState extends State<FullHousePage> with SingleTickerProvider
               controller: _tabController,
               children: [
                 Container(),
-                Container(),
+                ArticleListWidget(),
               ],
             ),
           ),
