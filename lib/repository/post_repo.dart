@@ -132,7 +132,7 @@ class PostRepository extends RemoteRepositoryBase<PostData> {
           where: {
             'recommended': 'true'
           }));
-      return await client.watchQuery(q.toWatchQuery(fetchResults: false));
+      return client.watchQuery(q.toWatchQuery(fetchResults: false));
     } catch (error) {
       logger.severe(error);
       rethrow;
