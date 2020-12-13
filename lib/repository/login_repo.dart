@@ -1,13 +1,37 @@
 import 'package:flutter_artech/flutter_artech.dart';
+import 'package:full_house_app/api/graphql_api.dart';
+import 'package:uuid/uuid.dart';
+import 'package:full_house_app/repository/user_repo.dart';
+import 'package:logging/logging.dart';
 
 class LoginRepository {
 
+  static Logger _logger = Logger('LoginRepository');
+
   static Future<LoginUser> emailPasswordSignUp(String identifier,
       String password,
-      AgreementData agreementData
-      ) async {
+      AgreementData agreementData) async {
     ArgumentError.checkNotNull(identifier);
     ArgumentError.checkNotNull(password);
+
+    try {
+      var q = RegisterMutation(
+          variables: RegisterArguments(
+              input: UsersPermissionsRegisterInput(
+                  email: identifier,
+                  password: password,
+                  username: Uuid().v4().toString())));
+
+      var ret = await RemoteRepositoryBase.artemisStaticClient().execute(q);
+      if (ret.hasErrors) {
+        throw ret.errors;
+      }
+      final token = ret.data.register.jwt;
+
+      return null;
+    } catch (error) {
+      rethrow;
+    }
 
 //     try {
 //       var q = RegisterMutation(
@@ -52,33 +76,36 @@ class LoginRepository {
   }
 
   static Future<LoginUser> getLoginUser() async {
-
+      return await UserRepository().getMe();
   }
 
-  static Future<LoginUser> passwordSignIn(
-      String identifier, String password) async {
+  static Future<LoginUser> passwordSignIn(String identifier,
+      String password) async {
     ArgumentError.checkNotNull(identifier);
     ArgumentError.checkNotNull(password);
-//     try {
-//       final ret = await currentFbArtemisClient.execute(LoginMutation(
-//           variables: LoginArguments(
-//               input: UsersPermissionsLoginInput(
-//                   identifier: identifier,
-//                   password: password,
-//                   provider: 'local'))));
-//       if (ret.hasErrors) {
-//         //TODO error handling
-//         _logger.severe(ret.errors);
-//         throw ret.errors;
-//       }
-//       final token = ret.data.login.jwt;
-//       var u = ret.data.login.user;
-// //      var meData;
-// //      try {
-// //        meData = await UserRepository().getMe();
-// //      } catch (error) {
-// //        _logger.severe(error);
-// //      }
+
+    try {
+      final ret = await RemoteRepositoryBase.artemisStaticClient().execute(
+          LoginMutation(
+              variables: LoginArguments(
+                  input: UsersPermissionsLoginInput(
+                      identifier: identifier,
+                      password: password,
+                      provider: 'local'))));
+      if (ret.hasErrors) {
+        await ArtechSecureStorage.clearToken();
+        //_logger.severe(ret.errors);
+        throw ret.errors;
+      }
+      final token = ret.data.login.jwt;
+      await ArtechSecureStorage.setToken(token);
+
+      var u = ret.data.login.user;
+
+      var me = await UserRepository().getMe();
+      _logger.info(me.toString());
+      return me;
+
 //       var userInfo = UserInfo(
 //           //meData: meData,
 //           creditCard: null,
@@ -89,11 +116,12 @@ class LoginRepository {
 //           reminderList: [], source: null);
 //       await _signIn(context,token, userInfo);
 //       return userInfo;
-//     } catch (error) {
-//       _logger.severe(error);
-//       await MyDatabase().logout(context);
-//       rethrow;
-//     }
+      return null;
+    } catch (error) {
+      //_logger.severe(error);
+      //await MyDatabase().logout(context);
+      rethrow;
+    }
   }
 
 }

@@ -13,8 +13,6 @@ class HomePage extends HomeBase {
   Map<BottomNavigationBarItem, Widget> bottomNavigationBarMap(
       BuildContext context) {
 
-    final User user = ArtechApp.of(context).loginUser;
-
     Map<BottomNavigationBarItem, Widget> map = {};
 
     map[BottomNavigationBarItem(
@@ -26,7 +24,7 @@ class HomePage extends HomeBase {
       map[BottomNavigationBarItem(
         icon: Icon(Icons.group_sharp),
         label: ArtechLocalizations().meeting,
-      )] = MeetingLoginPage(user: user,);
+      )] = MeetingLoginPage();
     }
 
     map[BottomNavigationBarItem(
