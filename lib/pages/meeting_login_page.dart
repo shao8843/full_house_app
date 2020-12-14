@@ -3,10 +3,14 @@ import 'package:artech_meeting/artech_meeting.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/login_page.dart';
+import 'package:full_house_app/repository/login_repo.dart';
 
 class MeetingLoginPage extends OnlineMeetingLoginPage {
 
-  const MeetingLoginPage({Key key, User user}) :super(key: key, user: user);
+  const MeetingLoginPage({Key key,})
+      :super(key: key,
+      getLoginUser: LoginRepository.getLoginUser,
+      pushLoginPage: pushPage);
 
   @override
   Future<List<User>> getUserFriends() async {
@@ -14,10 +18,13 @@ class MeetingLoginPage extends OnlineMeetingLoginPage {
     return <User>[];
   }
 
-  @override
-  Future<User> pushLoginPage(BuildContext context) async {
-    return await Navigator.of(context).push(MaterialPageRoute(
-      builder: (_)=>LoginPage()
+  static Future<LoginUser> pushPage(BuildContext context) async {
+    return await Navigator.of(context).push<LoginUser>(MaterialPageRoute(
+        settings: RouteSettings(
+          name: '\LoginPage',
+        ),
+        builder: (_) => LoginPage()
     ));
   }
+
 }

@@ -1,7 +1,6 @@
 
 import 'package:json_annotation/json_annotation.dart';
 import 'package:flutter_artech/flutter_artech.dart' hide AuthorData;
-import 'package:full_house_app/api/graphql_api.dart';
 
 part 'me_data.g.dart';
 

@@ -100,7 +100,7 @@ class LoginRepository {
       final token = ret.data.login.jwt;
       await ArtechSecureStorage.setToken(token);
 
-      var u = ret.data.login.user;
+      // var u = ret.data.login.user;
 
       var me = await UserRepository().getMe();
       _logger.info(me.toString());
@@ -116,12 +116,12 @@ class LoginRepository {
 //           reminderList: [], source: null);
 //       await _signIn(context,token, userInfo);
 //       return userInfo;
-      return null;
+//      return null;
     } catch (error) {
       //_logger.severe(error);
       //await MyDatabase().logout(context);
       rethrow;
     }
   }
-
+  
 }
