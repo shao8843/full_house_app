@@ -51,7 +51,7 @@ class UserRepository extends RemoteRepositoryBase<User> {
     var result = await artemisClient.execute(q);
     if (result.hasErrors) {
       this.logger.severe(result.errors.toString());
-      throw result.errors;
+      throw RemoteRepositoryBase.parseGraphQLError(result.errors.first);
     }
     if (result.data?.me != null) {
       return MeData.fromJson(result.data.me.toJson());

@@ -19,3 +19,6 @@ samples, guidance on mobile development, and a full API reference.
 flutter clean
 flutter packages pub upgrade
 flutter pub run build_runner build
+
+
+- run `flutter pub run build_runner build --delete-conflicting-outputs` to generate query ast tree and strong-typed query

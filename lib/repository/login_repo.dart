@@ -14,24 +14,22 @@ class LoginRepository {
     ArgumentError.checkNotNull(identifier);
     ArgumentError.checkNotNull(password);
 
-    try {
-      var q = RegisterMutation(
-          variables: RegisterArguments(
-              input: UsersPermissionsRegisterInput(
-                  email: identifier,
-                  password: password,
-                  username: Uuid().v4().toString())));
 
-      var ret = await RemoteRepositoryBase.artemisStaticClient().execute(q);
-      if (ret.hasErrors) {
-        throw ret.errors;
-      }
-      final token = ret.data.register.jwt;
+    var q = RegisterMutation(
+        variables: RegisterArguments(
+            input: UsersPermissionsRegisterInput(
+                email: identifier,
+                password: password,
+                username: Uuid().v4().toString())));
 
-      return null;
-    } catch (error) {
-      rethrow;
+    var ret = await RemoteRepositoryBase.artemisStaticClient().execute(q);
+    if (ret.hasErrors) {
+      throw RemoteRepositoryBase.parseGraphQLError(ret.errors.first);
     }
+    final token = ret.data.register.jwt;
+
+    return null;
+
 
 //     try {
 //       var q = RegisterMutation(
@@ -95,7 +93,7 @@ class LoginRepository {
       if (ret.hasErrors) {
         await ArtechSecureStorage.clearToken();
         //_logger.severe(ret.errors);
-        throw ret.errors;
+        throw RemoteRepositoryBase.parseGraphQLError(ret.errors.first);
       }
       final token = ret.data.login.jwt;
       await ArtechSecureStorage.setToken(token);
@@ -123,5 +121,5 @@ class LoginRepository {
       rethrow;
     }
   }
-  
+
 }

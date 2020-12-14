@@ -11,7 +11,8 @@ class ArticleData extends DataHasPost {
   final String content;
   QuestionnaireData questionnaire;
   List<EpisodeData> episodes;
-  DateTime published_at;
+  @JsonValue("published_at")
+  DateTime published;
 
   //final PostData post;
 

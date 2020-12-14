@@ -28,9 +28,9 @@ ArticleData _$ArticleDataFromJson(Map<String, dynamic> json) {
         ?.map((e) =>
             e == null ? null : EpisodeData.fromJson(e as Map<String, dynamic>))
         ?.toList()
-    ..published_at = json['published_at'] == null
+    ..published = json['published'] == null
         ? null
-        : DateTime.parse(json['published_at'] as String);
+        : DateTime.parse(json['published'] as String);
 }
 
 Map<String, dynamic> _$ArticleDataToJson(ArticleData instance) {
@@ -47,7 +47,7 @@ Map<String, dynamic> _$ArticleDataToJson(ArticleData instance) {
   writeNotNull('content', instance.content);
   writeNotNull('questionnaire', instance.questionnaire);
   writeNotNull('episodes', instance.episodes);
-  writeNotNull('published_at', instance.published_at?.toIso8601String());
+  writeNotNull('published', instance.published?.toIso8601String());
   writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
   return val;
