@@ -30,4 +30,10 @@ class MePage extends MePageBase {
   Future<User> getLoginUser() async  {
     return await UserRepository().getMe();
   }
+
+  @override
+  Future<User> pushUserEditor(BuildContext context) {
+    // TODO: implement pushUserEditor
+    throw UnimplementedError();
+  }
 }
