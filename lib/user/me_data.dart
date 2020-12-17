@@ -5,7 +5,7 @@ import 'package:flutter_artech/flutter_artech.dart' hide AuthorData;
 part 'me_data.g.dart';
 
 @JsonSerializable()
-class MeData extends LoginUser {
+class MeData extends User {
 
   bool get isParent=>role.name=='Parent';
 

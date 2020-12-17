@@ -12,8 +12,11 @@ void main() async {
   await initHiveForFlutter();
 
   runApp(ArtechApp(
-      register: LoginRepository.emailPasswordSignUp,
+      registerPassword: LoginRepository.emailPasswordSignUp,
+      registerCode: LoginRepository.codeSignUp,
       passwordLogin: LoginRepository.passwordSignIn,
+      codeLogin: LoginRepository.codeSignIn,
+      sendCodeRequestByPhone: LoginRepository.sendCodeRequestByPhone,
       getLoginUser: LoginRepository.getLoginUser,
       title: '满堂彩',
       home: HomePage(),

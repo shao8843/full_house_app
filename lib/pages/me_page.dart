@@ -17,8 +17,8 @@ class MePage extends MePageBase {
   }
 
   @override
-  Future<LoginUser> pushLoginPage(BuildContext context) async {
-    return await Navigator.of(context).push<LoginUser>(MaterialPageRoute(
+  Future<User> pushLoginPage(BuildContext context) async {
+    return await Navigator.of(context).push<User>(MaterialPageRoute(
         settings: RouteSettings(
           name: '\LoginPage',
         ),
@@ -27,7 +27,7 @@ class MePage extends MePageBase {
   }
 
   @override
-  Future<LoginUser> getLoginUser() async  {
+  Future<User> getLoginUser() async  {
     return await UserRepository().getMe();
   }
 }

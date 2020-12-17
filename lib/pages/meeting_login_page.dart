@@ -18,8 +18,8 @@ class MeetingLoginPage extends OnlineMeetingLoginPage {
     return <User>[];
   }
 
-  static Future<LoginUser> pushPage(BuildContext context) async {
-    return await Navigator.of(context).push<LoginUser>(MaterialPageRoute(
+  static Future<User> pushPage(BuildContext context) async {
+    return await Navigator.of(context).push<User>(MaterialPageRoute(
         settings: RouteSettings(
           name: '\LoginPage',
         ),
