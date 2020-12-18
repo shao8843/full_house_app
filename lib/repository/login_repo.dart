@@ -1,5 +1,6 @@
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/api/graphql_api.dart';
+import 'package:full_house_app/user/me_data.dart';
 import 'package:uuid/uuid.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:logging/logging.dart';
@@ -36,7 +37,7 @@ class LoginRepository {
     throw UnimplementedError();
   }
 
-  static Future<User> getLoginUser() async {
+  static Future<MeData> getLoginUser() async {
       return await UserRepository().getMe();
   }
 

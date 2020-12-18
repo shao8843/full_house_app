@@ -28,12 +28,12 @@ class MePage extends MePageBase<MeData> {
   }
 
   @override
-  Future<User> getLoginUser() async  {
+  Future<MeData> getLoginUser() async  {
     return await UserRepository().getMe();
   }
 
   @override
-  Future<User> pushUserEditor(BuildContext context,MeData user) async {
+  Future<MeData> pushUserEditor(BuildContext context,MeData user) async {
     return await Navigator.of(context).push<User>(MaterialPageRoute(
       builder: (_)=>UserEditPage(user: user)
     ));

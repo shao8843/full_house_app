@@ -3,6 +3,7 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/home_page.dart';
 import 'package:full_house_app/repository/login_repo.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:full_house_app/user/me_data.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,7 +12,7 @@ void main() async {
 
   await initHiveForFlutter();
 
-  runApp(ArtechApp(
+  runApp(ArtechApp<MeData>(
       registerPassword: LoginRepository.emailPasswordSignUp,
       registerCode: LoginRepository.codeSignUp,
       passwordLogin: LoginRepository.passwordSignIn,
