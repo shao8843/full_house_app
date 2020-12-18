@@ -1,13 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/pages/setting_page.dart';
+import 'package:full_house_app/pages/user_edit_page.dart';
 import 'package:full_house_app/repository/user_repo.dart';
+import 'package:full_house_app/user/me_data.dart';
 
-class MePage extends MePageBase {
+class MePage extends MePageBase<MeData> {
 
-  const MePage() :super();
+  const MePage({Key key}) :super(key: key);
 
   @override
   Future<bool> pushSettingPage(BuildContext context) async {
@@ -32,8 +33,9 @@ class MePage extends MePageBase {
   }
 
   @override
-  Future<User> pushUserEditor(BuildContext context) {
-    // TODO: implement pushUserEditor
-    throw UnimplementedError();
+  Future<User> pushUserEditor(BuildContext context,MeData user) async {
+    return await Navigator.of(context).push<User>(MaterialPageRoute(
+      builder: (_)=>UserEditPage(user: user)
+    ));
   }
 }
