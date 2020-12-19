@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_artech/flutter_artech.dart';
+import 'package:full_house_app/repository/login_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/api/graphql_api.dart';
@@ -7,8 +8,8 @@ import 'package:full_house_app/api/extensions.dart';
 
 class UserEditPage extends UserEditPageBase<MeData> {
 
-  const UserEditPage({Key key, @required MeData user})
-      :super(key: key,user: user);
+  const UserEditPage({Key key,})
+      :super(key: key);
 
   @override
   List<Widget> customList(MeData user) {
@@ -33,6 +34,11 @@ class UserEditPage extends UserEditPageBase<MeData> {
           username:user.username,
       ),
     ));
+  }
+
+  @override
+  Future<MeData> getLoginUser() async {
+    return await LoginRepository.getLoginUser();
   }
 
 }

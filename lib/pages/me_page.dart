@@ -35,7 +35,7 @@ class MePage extends MePageBase<MeData> {
   @override
   Future<MeData> pushUserEditor(BuildContext context,MeData user) async {
     return await Navigator.of(context).push<User>(MaterialPageRoute(
-      builder: (_)=>UserEditPage(user: user)
+      builder: (_)=>UserEditPage()
     ));
   }
 }
