@@ -7,18 +7,10 @@ import 'package:full_house_app/user/me_data.dart';
 class UserRepository extends RemoteRepositoryBase<User> {
 
   Future<User> getAsync({String id}) async {
-    try {
-      var result = await client
-          .query(UserQuery(variables: UserArguments(id: id)).toQueryOption());
-      if (result.hasException) {
-        logger.severe(result.exception.toString());
-        throw result.exception;
-      }
-      return toUser(result);
-    } catch (error) {
-      logger.severe(error);
-      rethrow;
-    }
+    var result = await query(
+        UserQuery(variables: UserArguments(id: id)).toQueryOption());
+
+    return toUser(result);
   }
 
   Future<List<User>> getListAsync(
@@ -26,33 +18,21 @@ class UserRepository extends RemoteRepositoryBase<User> {
         String searchField}) async {
     assert(search == null || searchField != null);
     // TODO implement where
-    try {
-      var q = UsersQuery(
-          variables: UsersArguments(
-            sort: sort,
-            limit: limit,
-            start: start,
-            where: null,
-          ));
-      var result = await client.query(q.toQueryOption());
-      if (result.hasException) {
-        logger.severe(result.exception.toString());
-        throw result.exception;
-      }
-      return toUserList(result);
-    } catch (error) {
-      logger.severe(error);
-      rethrow;
-    }
+
+    var q = UsersQuery(
+        variables: UsersArguments(
+          sort: sort,
+          limit: limit,
+          start: start,
+          where: null,
+        ));
+    var result = await query(q.toQueryOption());
+    return toUserList(result);
   }
 
   Future<MeData> getMe() async {
     var q = MeQuery();
-    var result = await artemisClient.execute(q);
-    if (result.hasErrors) {
-      this.logger.severe(result.errors.toString());
-      throw RemoteRepositoryBase.parseGraphQLError(result.errors.first);
-    }
+    var result = await execute(q);
     if (result.data?.me != null) {
       return MeData.fromJson(result.data.me.toJson());
     }
@@ -61,17 +41,13 @@ class UserRepository extends RemoteRepositoryBase<User> {
 
   Future<MeData> updateMe(UpdateMeInput input) async {
     var q = UpdateMeMutation(variables: UpdateMeArguments(input: input));
-    var result = await client.mutate(q.toMutationOption());
-    if (result.hasException) {
-      this.logger.severe(result.exception.toString());
-      throw result.exception;
-    }
+    var result = await mutate(q.toMutationOption());
     return toMeData(result, key: "updateMe");
   }
 
-  Future<ObservableQuery> getMeResultStream() async {
+  ObservableQuery getMeResultStream() {
     var q = MeQuery();
-    var ret = client.watchQuery(q.toWatchQuery());
+    var ret = watchQuery(q.toWatchQuery());
     ret.stream.listen((event) {
       if (event.hasException) {
         print(event.exception);

@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/repository/login_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
+import 'package:full_house_app/repository/upload_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/api/graphql_api.dart';
 import 'package:full_house_app/api/extensions.dart';
@@ -12,7 +15,7 @@ class UserEditPage extends UserEditPageBase<MeData> {
       :super(key: key);
 
   @override
-  List<Widget> customList(MeData user) {
+  List<Widget> customersList(MeData user) {
     // TODO: implement customList
     return [];
   }
@@ -24,14 +27,11 @@ class UserEditPage extends UserEditPageBase<MeData> {
           birthday:user.birthday,
           content:user.content,
           countryCode:user.countryCode,
-          email:user.email,
           fullName:user.fullName,
-          image:user.image.url,
           name:user.name,
           phone:user.phone,
           secondEmail:user.secondEmail,
           sex:user.sex.toGraphQL(),
-          username:user.username,
       ),
     ));
   }
@@ -39,6 +39,11 @@ class UserEditPage extends UserEditPageBase<MeData> {
   @override
   Future<MeData> getLoginUser() async {
     return await LoginRepository.getLoginUser();
+  }
+
+  @override
+  Future<MediaFileInfo> updateUserImage(MeData user,File file) async {
+    return await UploadRepo().uploadAccountImage(file,userId: user.id);
   }
 
 }

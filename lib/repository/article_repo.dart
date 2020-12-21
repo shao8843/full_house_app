@@ -6,38 +6,30 @@ import 'package:full_house_app/api/graphql_api.dart';
 class ArticleRepository extends RemoteRepositoryBase<ArticleData> {
 
   Future<ArticleData> getAsync({String id}) async {
-    try {
-      var result = await client.query(
-          ArticleQuery(variables: ArticleArguments(id: id)).toQueryOption());
-      if (result.hasException) {
-        logger.severe(result.exception.toString());
-        throw result.exception;
-      }
-      return toArticleData(result);
-    } catch (error) {
-      logger.severe(error);
-      rethrow;
-    }
+    var result = await query(
+        ArticleQuery(variables: ArticleArguments(id: id)).toQueryOption());
+    return toArticleData(result);
   }
 
 
-  Future<ObservableQuery> getResultStreamAsync({String id}) async{
-    var q=ArticleQuery(variables: ArticleArguments(id: id));
-    return client.watchQuery(q.toWatchQuery());
+  ObservableQuery getResultStreamAsync({String id}) {
+    var q = ArticleQuery(variables: ArticleArguments(id: id));
+    return watchQuery(q.toWatchQuery());
   }
+
   ///Query list
   Future<QueryResult> getListResultAsync({String sort,
     int limit,
     int start,
     String search,
-    String categorySearch}) async{
+    String categorySearch}) async {
     var q = ArticlesQuery(
         variables:
         ArticlesArguments(sort: sort, limit: limit, start: start, where: {
           "title_contains": search,
           "categories": {"name_containss": categorySearch}
         }));
-    var result = await client.query(q.toQueryOption());
+    var result = await query(q.toQueryOption());
     return result;
   }
 

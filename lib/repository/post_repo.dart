@@ -67,8 +67,7 @@ class PostRepository extends RemoteRepositoryBase<PostData> {
     String searchField = 'title',
     String search,
     String categorySearch}) async {
-
-    assert(search==null || searchField!=null);
+    assert(search == null || searchField != null);
 
     var _where = {
       "${searchField}_contains": search,
@@ -80,25 +79,16 @@ class PostRepository extends RemoteRepositoryBase<PostData> {
     //   _where['status'] = 'published';
     // }
 
-    try {
-      var q = PostsQuery(variables: PostsArguments(sort: sort,
-          limit: limit,
-          start: start,
-          where: {
-            'status': 'published',
-            "title_contains": search,
-            "categories": {"name_containss": categorySearch}
-          }));
-      var result = await client.query(q.toQueryOption());
-      if(result.hasException) {
-        logger.severe(result.exception);
-        throw result.exception;
-      }
-      return result;
-    } catch (error) {
-      logger.severe(error);
-      rethrow;
-    }
+    var q = PostsQuery(variables: PostsArguments(sort: sort,
+        limit: limit,
+        start: start,
+        where: {
+          'status': 'published',
+          "title_contains": search,
+          "categories": {"name_containss": categorySearch}
+        }));
+    var result = query(q.toQueryOption());
+    return result;
   }
 
   Future<QueryResult> getRecommendedListResultAsync({
@@ -106,38 +96,27 @@ class PostRepository extends RemoteRepositoryBase<PostData> {
     int limit,
     String search,
     String searchField,
-    int start}) async{
-
-    assert(search==null || searchField!=null);
+    int start}) async {
+    assert(search == null || searchField != null);
     // TODO: implement where
-    try {
-      var q = PostsQuery(variables: PostsArguments(sort: sort,
-          limit: limit,
-          start: start,
-          where: {
-            'recommended': 'true'
-          }));
-      return await client.query(q.toQueryOption());
-    } catch (error) {
-      logger.info(error);
-      rethrow;
-    }
+
+    var q = PostsQuery(variables: PostsArguments(sort: sort,
+        limit: limit,
+        start: start,
+        where: {
+          'recommended': 'true'
+        }));
+    return await query(q.toQueryOption());
   }
 
-  Future<ObservableQuery> getRecommendedListStreamAsync({String sort,int limit,int start}) async{
-    try {
-      var q = PostsQuery(variables: PostsArguments(sort: sort,
-          limit: limit,
-          start: start,
-          where: {
-            'recommended': 'true'
-          }));
-      return client.watchQuery(q.toWatchQuery(fetchResults: false));
-    } catch (error) {
-      logger.severe(error);
-      rethrow;
-    }
-
+  ObservableQuery getRecommendedListStreamAsync({String sort,int limit,int start}) {
+    var q = PostsQuery(variables: PostsArguments(sort: sort,
+        limit: limit,
+        start: start,
+        where: {
+          'recommended': 'true'
+        }));
+    return watchQuery(q.toWatchQuery(fetchResults: false));
   }
 
   static Stream<PostData> toPostDataStream(Stream<QueryResult> queryResult){
