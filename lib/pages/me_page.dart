@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/login_page.dart';
@@ -37,5 +39,11 @@ class MePage extends MePageBase<MeData> {
     return await Navigator.of(context).push<User>(MaterialPageRoute(
       builder: (_)=>UserEditPage()
     ));
+  }
+
+  @override
+  Future<MediaFileInfo> saveImage(File file, bool isVideo) async {
+    // TODO: implement saveImage
+    throw UnimplementedError();
   }
 }
