@@ -9,25 +9,24 @@ import Flutter
   ) -> Bool {
     GeneratedPluginRegistrant.register(with: self)
 
-    if(![[NSUserDefaults standardUserDefaults]objectForKey:@"Notification"]){
-            [[UIApplication sharedApplication] cancelAllLocalNotifications];
-            [[NSUserDefaults standardUserDefaults]setBool:YES forKey:@"Notification"];
+    if(!UserDefaults.standard.bool(forKey: "Notification")) {
+        UIApplication.shared.cancelAllLocalNotifications()
+        UserDefaults.standard.set(true, forKey: "Notification")
+    }
+    
+    let controller:FlutterViewController = window?.rootViewController as! FlutterViewController
+    
+    let customChannel = FlutterMethodChannel(name: "flutter_artech/flutter_local_notifications", binaryMessenger: controller.binaryMessenger)
+    
+    customChannel.setMethodCallHandler { [weak self] (call:FlutterMethodCall, result:FlutterResult) in
+        switch(call.method) {
+        case "getTimeZoneName":
+            result(String(TimeZone.current.identifier))
+            break;
+        default:
+            result(FlutterMethodNotImplemented)
         }
-        if(@available(iOS 10.0, *)) {
-            [UNUserNotificationCenter currentNotificationCenter].delegate = (id<UNUserNotificationCenterDelegate>) self;
-        }
-
-        FlutterViewController* controller = (FlutterViewController*)self.window.rootViewController;
-
-        FlutterMethodChannel* channel = [FlutterMethodChannel
-                                                methodChannelWithName:@"fluter_artech/flutter_local_notifications"
-                                                binaryMessenger:controller.binaryMessenger];
-
-        [channel setMethodCallHandler:^(FlutterMethodCall* call, FlutterResult result) {
-            if([@"getTimeZoneName" isEqualToString:call.method]) {
-                result([[NSTimeZone localTimeZone] name]);
-            }
-        }];
+    }
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
