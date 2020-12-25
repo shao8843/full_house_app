@@ -25,7 +25,7 @@ class MainActivity: FlutterActivity() {
     fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         GeneratedPluginRegistrant.registerWith(flutterEngine)
         MethodChannel(flutterEngine.getDartExecutor(),
-                "fluter_artech/flutter_local_notifications").setMethodCallHandler { call, result ->
+                "flutter_artech.dev/method_channel").setMethodCallHandler { call, result ->
             if ("drawableToUri" == call.method) {
                 val resourceId: Int = this@MainActivity.getResources().
                 getIdentifier(call.arguments as String, "drawable",

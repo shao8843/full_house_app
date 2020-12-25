@@ -16,7 +16,7 @@ import Flutter
     
     let controller:FlutterViewController = window?.rootViewController as! FlutterViewController
     
-    let customChannel = FlutterMethodChannel(name: "flutter_artech/flutter_local_notifications", binaryMessenger: controller.binaryMessenger)
+    let customChannel = FlutterMethodChannel(name: "flutter_artech.dev/method_channel", binaryMessenger: controller.binaryMessenger)
     
     customChannel.setMethodCallHandler { [weak self] (call:FlutterMethodCall, result:FlutterResult) in
         switch(call.method) {
