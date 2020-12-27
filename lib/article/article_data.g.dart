@@ -33,22 +33,14 @@ ArticleData _$ArticleDataFromJson(Map<String, dynamic> json) {
         : DateTime.parse(json['published'] as String);
 }
 
-Map<String, dynamic> _$ArticleDataToJson(ArticleData instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('post', instance.post);
-  writeNotNull('media', instance.media);
-  writeNotNull('content', instance.content);
-  writeNotNull('questionnaire', instance.questionnaire);
-  writeNotNull('episodes', instance.episodes);
-  writeNotNull('published', instance.published?.toIso8601String());
-  writeNotNull('id', instance.id);
-  writeNotNull('name', instance.name);
-  return val;
-}
+Map<String, dynamic> _$ArticleDataToJson(ArticleData instance) =>
+    <String, dynamic>{
+      'post': instance.post,
+      'media': instance.media,
+      'content': instance.content,
+      'questionnaire': instance.questionnaire,
+      'episodes': instance.episodes,
+      'published': instance.published?.toIso8601String(),
+      'id': instance.id,
+      'name': instance.name,
+    };
