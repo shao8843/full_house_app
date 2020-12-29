@@ -7,7 +7,6 @@ targets:
     builders:
       artemis:
         options:
-          import: flutter_artech
           fragments_glob: graphql/**.fragment.graphql
           schema_mapping:
             - schema: schema.graphql
@@ -15,10 +14,10 @@ targets:
               output: lib/api/graphql_api.dart
               naming_scheme: pathedWithFields
           scalar_mapping:
-            - custom_parser_import: 'package:flutter_artech/flutter_artech.dart'
+            - custom_parser_import: 'package:full_house_app/utils/coercers.dart'
               graphql_type: Date
               dart_type: DateTime
-            - custom_parser_import: 'package:flutter_artech/flutter_artech.dart'
+            - custom_parser_import: 'package:full_house_app/utils/coercers.dart'
               graphql_type: DateTime
               dart_type: DateTime
             - graphql_type: JSON
@@ -31,14 +30,4 @@ targets:
                   - 'package:http/http.dart'
       json_serializable:
         options:
-          any_map: false
-          checked: false
-          create_factory: true
-          create_to_json: true
-          disallow_unrecognized_keys: false
-          explicit_to_json: false
-          field_rename: none
-          generic_argument_factories: false
-          ignore_unannotated: false
-          include_if_null: true
-          nullable: true
+          include_if_null: false

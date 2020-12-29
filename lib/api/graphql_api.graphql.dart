@@ -5,9 +5,8 @@ import 'package:artemis/artemis.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:equatable/equatable.dart';
 import 'package:gql/ast.dart';
-import 'package:flutter_artech/flutter_artech.dart';
-import 'package:http/http.dart';
 import 'package:full_house_app/utils/coercers.dart';
+import 'package:http/http.dart';
 part 'graphql_api.graphql.g.dart';
 
 mixin UserAgreementSimpleMixin {

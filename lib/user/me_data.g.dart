@@ -38,26 +38,35 @@ MeData _$MeDataFromJson(Map<String, dynamic> json) {
         ?.toList();
 }
 
-Map<String, dynamic> _$MeDataToJson(MeData instance) => <String, dynamic>{
-      'id': instance.id,
-      'name': instance.name,
-      'username': instance.username,
-      'phone': instance.phone,
-      'address': instance.address,
-      'email': instance.email,
-      'meetingId': instance.meetingId,
-      'second_email': instance.secondEmail,
-      'birthday': instance.birthday?.toIso8601String(),
-      'sex': _$GenderEnumMap[instance.sex],
-      'fullName': instance.fullName,
-      'countryCode': instance.countryCode,
-      'qrUrl': instance.qrUrl,
-      'role': instance.role,
-      'image': instance.image,
-      'content': instance.content,
-      'confirmed': instance.confirmed,
-      'user_agreements': instance.userAgreements,
-    };
+Map<String, dynamic> _$MeDataToJson(MeData instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('username', instance.username);
+  writeNotNull('phone', instance.phone);
+  writeNotNull('address', instance.address);
+  writeNotNull('email', instance.email);
+  writeNotNull('meetingId', instance.meetingId);
+  writeNotNull('second_email', instance.secondEmail);
+  writeNotNull('birthday', instance.birthday?.toIso8601String());
+  writeNotNull('sex', _$GenderEnumMap[instance.sex]);
+  writeNotNull('fullName', instance.fullName);
+  writeNotNull('countryCode', instance.countryCode);
+  writeNotNull('qrUrl', instance.qrUrl);
+  writeNotNull('role', instance.role);
+  writeNotNull('image', instance.image);
+  writeNotNull('content', instance.content);
+  writeNotNull('confirmed', instance.confirmed);
+  writeNotNull('user_agreements', instance.userAgreements);
+  return val;
+}
 
 T _$enumDecode<T>(
   Map<T, dynamic> enumValues,
