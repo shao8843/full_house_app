@@ -1,5 +1,6 @@
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:flutter/material.dart';
+import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/repository/version_repo.dart';
 
 class AboutPage extends AboutPageBase {
@@ -15,5 +16,10 @@ class AboutPage extends AboutPageBase {
   Image image() {
     return Image(image: AssetImage('assets/icons/app_launch_icon.jpg'),
       fit: BoxFit.cover,);
+  }
+
+  @override
+  Future<AppPolicyData> getTermOfService() async {
+    return await TermOfServiceRepository().getAppPolicyAsync();
   }
 }
