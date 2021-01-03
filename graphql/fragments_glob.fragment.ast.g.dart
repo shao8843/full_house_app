@@ -98,18 +98,8 @@ const PostSimple = _i1.FragmentDefinitionNode(
           arguments: [],
           directives: [],
           selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-                name: _i1.NameNode(value: 'id'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null),
-            _i1.FieldNode(
-                name: _i1.NameNode(value: 'name'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null)
+            _i1.FragmentSpreadNode(
+                name: _i1.NameNode(value: 'CategoryDetail'), directives: [])
           ])),
       _i1.FieldNode(
           name: _i1.NameNode(value: 'recommended'),
@@ -358,24 +348,8 @@ const PostComponentSimple = _i1.FragmentDefinitionNode(
           arguments: [],
           directives: [],
           selectionSet: _i1.SelectionSetNode(selections: [
-            _i1.FieldNode(
-                name: _i1.NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null),
-            _i1.FieldNode(
-                name: _i1.NameNode(value: 'id'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null),
-            _i1.FieldNode(
-                name: _i1.NameNode(value: 'name'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null)
+            _i1.FragmentSpreadNode(
+                name: _i1.NameNode(value: 'CategoryDetail'), directives: [])
           ])),
       _i1.FieldNode(
           name: _i1.NameNode(value: 'recommended'),
@@ -1894,7 +1868,13 @@ const OrderItemSimple = _i1.FragmentDefinitionNode(
           selectionSet: _i1.SelectionSetNode(selections: [
             _i1.FragmentSpreadNode(
                 name: _i1.NameNode(value: 'Currency'), directives: [])
-          ]))
+          ])),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'created_at'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null)
     ]));
 const OrderItemDetail = _i1.FragmentDefinitionNode(
     name: _i1.NameNode(value: 'OrderItemDetail'),
@@ -2007,6 +1987,15 @@ const OrderDetail = _i1.FragmentDefinitionNode(
           arguments: [],
           directives: [],
           selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'user'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FragmentSpreadNode(
+                name: _i1.NameNode(value: 'UserSimple'), directives: [])
+          ])),
       _i1.FieldNode(
           name: _i1.NameNode(value: 'shippingAddress'),
           alias: null,
@@ -3006,6 +2995,255 @@ const PaymentMethodSimple = _i1.FragmentDefinitionNode(
                 name: _i1.NameNode(value: 'UserSimple'), directives: [])
           ]))
     ]));
+const GameSimple = _i1.FragmentDefinitionNode(
+    name: _i1.NameNode(value: 'GameSimple'),
+    typeCondition: _i1.TypeConditionNode(
+        on: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'Game'), isNonNull: false)),
+    directives: [],
+    selectionSet: _i1.SelectionSetNode(selections: [
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'id'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'name'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'cptLevel'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'type'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'trademark'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FieldNode(
+                name: _i1.NameNode(value: 'name'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: null),
+            _i1.FieldNode(
+                name: _i1.NameNode(value: 'image'),
+                alias: null,
+                arguments: [],
+                directives: [],
+                selectionSet: _i1.SelectionSetNode(selections: [
+                  _i1.FieldNode(
+                      name: _i1.NameNode(value: 'url'),
+                      alias: null,
+                      arguments: [],
+                      directives: [],
+                      selectionSet: null)
+                ]))
+          ])),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'provider'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'updated_at'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null)
+    ]));
+const GameDetail = _i1.FragmentDefinitionNode(
+    name: _i1.NameNode(value: 'GameDetail'),
+    typeCondition: _i1.TypeConditionNode(
+        on: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'Game'), isNonNull: false)),
+    directives: [],
+    selectionSet: _i1.SelectionSetNode(selections: [
+      _i1.FragmentSpreadNode(
+          name: _i1.NameNode(value: 'GameSimple'), directives: []),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'content'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'medias'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FragmentSpreadNode(
+                name: _i1.NameNode(value: 'UploadFileDetail'), directives: [])
+          ]))
+    ]));
+const UploadFileDetail = _i1.FragmentDefinitionNode(
+    name: _i1.NameNode(value: 'UploadFileDetail'),
+    typeCondition: _i1.TypeConditionNode(
+        on: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'UploadFile'), isNonNull: false)),
+    directives: [],
+    selectionSet: _i1.SelectionSetNode(selections: [
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'id'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'url'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'formats'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'width'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'height'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'ext'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'caption'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'name'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'size'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null)
+    ]));
+const CategoryDetail = _i1.FragmentDefinitionNode(
+    name: _i1.NameNode(value: 'CategoryDetail'),
+    typeCondition: _i1.TypeConditionNode(
+        on: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'Category'), isNonNull: false)),
+    directives: [],
+    selectionSet: _i1.SelectionSetNode(selections: [
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'id'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'name'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'type'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null)
+    ]));
+const EventSimple = _i1.FragmentDefinitionNode(
+    name: _i1.NameNode(value: 'EventSimple'),
+    typeCondition: _i1.TypeConditionNode(
+        on: _i1.NamedTypeNode(
+            name: _i1.NameNode(value: 'Event'), isNonNull: false)),
+    directives: [],
+    selectionSet: _i1.SelectionSetNode(selections: [
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'id'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'eventDateTime'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'eventType'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'location'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'address'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'host'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'updated_at'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'contentType'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: null),
+      _i1.FieldNode(
+          name: _i1.NameNode(value: 'post'),
+          alias: null,
+          arguments: [],
+          directives: [],
+          selectionSet: _i1.SelectionSetNode(selections: [
+            _i1.FragmentSpreadNode(
+                name: _i1.NameNode(value: 'PostComponentSimple'),
+                directives: [])
+          ]))
+    ]));
 const document = _i1.DocumentNode(definitions: [
   PostSimple,
   PostComponentSimple,
@@ -3054,5 +3292,10 @@ const document = _i1.DocumentNode(definitions: [
   QuestionnaireAnswerSimple,
   MediaSimple,
   CreditCardSimple,
-  PaymentMethodSimple
+  PaymentMethodSimple,
+  GameSimple,
+  GameDetail,
+  UploadFileDetail,
+  CategoryDetail,
+  EventSimple
 ]);

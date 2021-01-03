@@ -15,8 +15,7 @@ fragment PostSimple on Post{
         size
     }
     categories{
-        id
-        name
+        ...CategoryDetail
     }
     recommended
     updated_day
@@ -68,9 +67,7 @@ fragment PostComponentSimple on ComponentContentPost{
         size
     }
     categories{
-        __typename
-        id
-        name
+        ...CategoryDetail
     }
     recommended
     updated_day
@@ -440,6 +437,7 @@ fragment  OrderItemSimple on PaymentOrderItem{
     currency{
         ...Currency
     }
+    created_at
 }
 fragment OrderItemDetail on PaymentOrderItem{
     ...OrderItemSimple
@@ -469,6 +467,9 @@ fragment OrderSimple on PaymentOrder{
 fragment OrderDetail on PaymentOrder{
     ...OrderSimple
     additional,
+    user{
+        ...UserSimple
+    }
     shippingAddress{
         ...Address
     }
@@ -720,6 +721,62 @@ fragment  PaymentMethodSimple on PaymentMethod {
     type
     user{
         ...UserSimple
+    }
+}
+
+fragment  GameSimple on Game {
+    id
+    name
+    cptLevel
+    type
+    trademark {
+        name
+        image{
+            url
+        }
+    }
+    provider
+    updated_at
+}
+
+fragment GameDetail on Game {
+
+    ...GameSimple
+    content
+    medias{
+        ...UploadFileDetail
+    }
+}
+
+fragment UploadFileDetail on UploadFile {
+    id
+    url
+    formats
+    width
+    height
+    ext
+    caption
+    name
+    size
+}
+
+fragment CategoryDetail on Category {
+    id
+    name
+    type
+}
+
+fragment EventSimple on Event {
+    id
+    eventDateTime
+    eventType
+    location
+    address
+    host
+    updated_at
+    contentType
+    post {
+        ...PostComponentSimple
     }
 }
 

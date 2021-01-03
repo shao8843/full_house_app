@@ -1,0 +1,13 @@
+query Event($id:ID!) {
+    event (id:$id){
+        ...EventSimple
+        price1
+        price2
+        price3
+        price4
+        price5
+        dicount
+        password
+        eventDetails
+    }
+}

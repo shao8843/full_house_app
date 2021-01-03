@@ -103,6 +103,12 @@ mixin PostComponentSimpleMixin {
   int rating;
   bool needShipping;
 }
+mixin CategoryDetailMixin {
+  String id;
+  String name;
+  @JsonKey(unknownEnumValue: CategoryType.artemisUnknown)
+  CategoryType type;
+}
 mixin CurrencyMixin {
   String code;
   @JsonKey(name: 'decimal_digits')
@@ -254,6 +260,7 @@ mixin MediaSimpleMixin {
 }
 mixin OrderDetailMixin {
   Object additional;
+  OrderDetailMixin$User user;
   OrderDetailMixin$ShippingAddress shippingAddress;
 }
 mixin OrderSimpleMixin {
@@ -298,6 +305,11 @@ mixin OrderItemSimpleMixin {
       toJson: fromDartDateTimeToGraphQLDateTime)
   DateTime updatedAt;
   OrderItemSimpleMixin$Currency currency;
+  @JsonKey(
+      name: 'created_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime createdAt;
 }
 mixin PatientInfoDetailMixin {
   String id;
@@ -314,6 +326,25 @@ mixin PaymentMethodSimpleMixin {
   String stripeId;
   String type;
   PaymentMethodSimpleMixin$User user;
+}
+mixin EventSimpleMixin {
+  String id;
+  @JsonKey(
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime eventDateTime;
+  @JsonKey(unknownEnumValue: EventType.artemisUnknown)
+  EventType eventType;
+  String location;
+  String address;
+  String host;
+  @JsonKey(
+      name: 'updated_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime updatedAt;
+  String contentType;
+  EventSimpleMixin$Post post;
 }
 mixin ExerciseSimpleMixin {
   String id;
@@ -1118,22 +1149,16 @@ class PostComponentSimpleMixin$Medias with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class PostComponentSimpleMixin$Categories with EquatableMixin {
+class PostComponentSimpleMixin$Categories
+    with EquatableMixin, CategoryDetailMixin {
   PostComponentSimpleMixin$Categories();
 
   factory PostComponentSimpleMixin$Categories.fromJson(
           Map<String, dynamic> json) =>
       _$PostComponentSimpleMixin$CategoriesFromJson(json);
 
-  @JsonKey(name: '__typename')
-  String $$typename;
-
-  String id;
-
-  String name;
-
   @override
-  List<Object> get props => [$$typename, id, name];
+  List<Object> get props => [id, name, type];
   Map<String, dynamic> toJson() =>
       _$PostComponentSimpleMixin$CategoriesToJson(this);
 }
@@ -3493,6 +3518,7 @@ class CreateMyOrder$Mutation$CreateMyOrder$Order
   @override
   List<Object> get props => [
         additional,
+        user,
         shippingAddress,
         id,
         uuid,
@@ -3539,6 +3565,29 @@ class CreateMyOrder$Mutation with EquatableMixin {
   @override
   List<Object> get props => [createMyOrder];
   Map<String, dynamic> toJson() => _$CreateMyOrder$MutationToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class OrderDetailMixin$User with EquatableMixin, UserSimpleMixin {
+  OrderDetailMixin$User();
+
+  factory OrderDetailMixin$User.fromJson(Map<String, dynamic> json) =>
+      _$OrderDetailMixin$UserFromJson(json);
+
+  @override
+  List<Object> get props => [
+        id,
+        username,
+        fullName,
+        email,
+        name,
+        sex,
+        birthday,
+        image,
+        role,
+        confirmed
+      ];
+  Map<String, dynamic> toJson() => _$OrderDetailMixin$UserToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -3604,7 +3653,8 @@ class OrderSimpleMixin$Items with EquatableMixin, OrderItemSimpleMixin {
         sourceType,
         unitPrice,
         updatedAt,
-        currency
+        currency,
+        createdAt
       ];
   Map<String, dynamic> toJson() => _$OrderSimpleMixin$ItemsToJson(this);
 }
@@ -4631,6 +4681,132 @@ class Ehrs$Query with EquatableMixin {
   @override
   List<Object> get props => [ehrs];
   Map<String, dynamic> toJson() => _$Ehrs$QueryToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Event$Query$Event with EquatableMixin, EventSimpleMixin {
+  Event$Query$Event();
+
+  factory Event$Query$Event.fromJson(Map<String, dynamic> json) =>
+      _$Event$Query$EventFromJson(json);
+
+  double price1;
+
+  double price2;
+
+  double price3;
+
+  double price4;
+
+  double price5;
+
+  double dicount;
+
+  String password;
+
+  String eventDetails;
+
+  @override
+  List<Object> get props => [
+        id,
+        eventDateTime,
+        eventType,
+        location,
+        address,
+        host,
+        updatedAt,
+        contentType,
+        post,
+        price1,
+        price2,
+        price3,
+        price4,
+        price5,
+        dicount,
+        password,
+        eventDetails
+      ];
+  Map<String, dynamic> toJson() => _$Event$Query$EventToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Event$Query with EquatableMixin {
+  Event$Query();
+
+  factory Event$Query.fromJson(Map<String, dynamic> json) =>
+      _$Event$QueryFromJson(json);
+
+  Event$Query$Event event;
+
+  @override
+  List<Object> get props => [event];
+  Map<String, dynamic> toJson() => _$Event$QueryToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class EventSimpleMixin$Post with EquatableMixin, PostComponentSimpleMixin {
+  EventSimpleMixin$Post();
+
+  factory EventSimpleMixin$Post.fromJson(Map<String, dynamic> json) =>
+      _$EventSimpleMixin$PostFromJson(json);
+
+  @override
+  List<Object> get props => [
+        id,
+        title,
+        subtitle,
+        medias,
+        categories,
+        recommended,
+        updatedDay,
+        vipColor,
+        coverBackgroundColor,
+        price,
+        trademark,
+        currency,
+        author,
+        vipText,
+        prePrice,
+        rating,
+        needShipping
+      ];
+  Map<String, dynamic> toJson() => _$EventSimpleMixin$PostToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Events$Query$Events with EquatableMixin, EventSimpleMixin {
+  Events$Query$Events();
+
+  factory Events$Query$Events.fromJson(Map<String, dynamic> json) =>
+      _$Events$Query$EventsFromJson(json);
+
+  @override
+  List<Object> get props => [
+        id,
+        eventDateTime,
+        eventType,
+        location,
+        address,
+        host,
+        updatedAt,
+        contentType,
+        post
+      ];
+  Map<String, dynamic> toJson() => _$Events$Query$EventsToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Events$Query with EquatableMixin {
+  Events$Query();
+
+  factory Events$Query.fromJson(Map<String, dynamic> json) =>
+      _$Events$QueryFromJson(json);
+
+  List<Events$Query$Events> events;
+
+  @override
+  List<Object> get props => [events];
+  Map<String, dynamic> toJson() => _$Events$QueryToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -5662,6 +5838,7 @@ class Order$Query$Order
   @override
   List<Object> get props => [
         additional,
+        user,
         shippingAddress,
         id,
         uuid,
@@ -6686,18 +6863,14 @@ class PostSimpleMixin$Medias with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class PostSimpleMixin$Categories with EquatableMixin {
+class PostSimpleMixin$Categories with EquatableMixin, CategoryDetailMixin {
   PostSimpleMixin$Categories();
 
   factory PostSimpleMixin$Categories.fromJson(Map<String, dynamic> json) =>
       _$PostSimpleMixin$CategoriesFromJson(json);
 
-  String id;
-
-  String name;
-
   @override
-  List<Object> get props => [id, name];
+  List<Object> get props => [id, name, type];
   Map<String, dynamic> toJson() => _$PostSimpleMixin$CategoriesToJson(this);
 }
 
@@ -7111,6 +7284,7 @@ class RequestPayment$Mutation$RequestOrderPay$Order
   @override
   List<Object> get props => [
         additional,
+        user,
         shippingAddress,
         id,
         uuid,
@@ -9590,6 +9764,14 @@ enum SexType {
   @JsonValue('ARTEMIS_UNKNOWN')
   artemisUnknown,
 }
+enum CategoryType {
+  @JsonValue('app')
+  app,
+  @JsonValue('subject')
+  subject,
+  @JsonValue('ARTEMIS_UNKNOWN')
+  artemisUnknown,
+}
 enum EhrSubject {
   @JsonValue('ADHD')
   adhd,
@@ -9709,6 +9891,14 @@ enum SummarySubject {
 enum SummaryType {
   @JsonValue('measurable')
   measurable,
+  @JsonValue('ARTEMIS_UNKNOWN')
+  artemisUnknown,
+}
+enum EventType {
+  @JsonValue('offline')
+  offline,
+  @JsonValue('online')
+  online,
   @JsonValue('ARTEMIS_UNKNOWN')
   artemisUnknown,
 }
@@ -11145,24 +11335,8 @@ class ArticleQuery extends GraphQLQuery<Article$Query, ArticleArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -11301,6 +11475,32 @@ class ArticleQuery extends GraphQLQuery<Article$Query, ArticleArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -11660,24 +11860,8 @@ class ArticlesQuery extends GraphQLQuery<Articles$Query, ArticlesArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -11816,6 +12000,32 @@ class ArticlesQuery extends GraphQLQuery<Articles$Query, ArticlesArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -12245,24 +12455,8 @@ class AssessmentQuestionnaireQuery extends GraphQLQuery<
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -12401,6 +12595,32 @@ class AssessmentQuestionnaireQuery extends GraphQLQuery<
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -12700,24 +12920,8 @@ class AssessmentQuestionnairesQuery extends GraphQLQuery<
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -12856,6 +13060,32 @@ class AssessmentQuestionnairesQuery extends GraphQLQuery<
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -13159,24 +13389,8 @@ class BookQuery extends GraphQLQuery<Book$Query, BookArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -13315,6 +13529,32 @@ class BookQuery extends GraphQLQuery<Book$Query, BookArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -13599,24 +13839,8 @@ class BooksQuery extends GraphQLQuery<Books$Query, BooksArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -13755,6 +13979,32 @@ class BooksQuery extends GraphQLQuery<Books$Query, BooksArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -17065,6 +17315,15 @@ class CreateMyOrderMutation
               directives: [],
               selectionSet: null),
           FieldNode(
+              name: NameNode(value: 'user'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'UserSimple'), directives: [])
+              ])),
+          FieldNode(
               name: NameNode(value: 'shippingAddress'),
               alias: null,
               arguments: [],
@@ -17073,6 +17332,89 @@ class CreateMyOrderMutation
                 FragmentSpreadNode(
                     name: NameNode(value: 'Address'), directives: [])
               ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'UserSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'UsersPermissionsUser'),
+                isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'username'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'fullName'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'email'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'sex'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'birthday'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'image'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'url'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'role'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'confirmed'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'Address'),
@@ -17355,7 +17697,13 @@ class CreateMyOrderMutation
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ]))
   ]);
 
@@ -20575,6 +20923,994 @@ class EhrsQuery extends GraphQLQuery<Ehrs$Query, EhrsArguments> {
 }
 
 @JsonSerializable(explicitToJson: true)
+class EventArguments extends JsonSerializable with EquatableMixin {
+  EventArguments({@required this.id});
+
+  @override
+  factory EventArguments.fromJson(Map<String, dynamic> json) =>
+      _$EventArgumentsFromJson(json);
+
+  final String id;
+
+  @override
+  List<Object> get props => [id];
+  @override
+  Map<String, dynamic> toJson() => _$EventArgumentsToJson(this);
+}
+
+class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
+  EventQuery({this.variables});
+
+  @override
+  final DocumentNode document = DocumentNode(definitions: [
+    OperationDefinitionNode(
+        type: OperationType.query,
+        name: NameNode(value: 'Event'),
+        variableDefinitions: [
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'id')),
+              type: NamedTypeNode(name: NameNode(value: 'ID'), isNonNull: true),
+              defaultValue: DefaultValueNode(value: null),
+              directives: [])
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'event'),
+              alias: null,
+              arguments: [
+                ArgumentNode(
+                    name: NameNode(value: 'id'),
+                    value: VariableNode(name: NameNode(value: 'id')))
+              ],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'EventSimple'), directives: []),
+                FieldNode(
+                    name: NameNode(value: 'price1'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'price2'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'price3'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'price4'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'price5'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'dicount'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'password'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'eventDetails'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'EventSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Event'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'eventDateTime'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'eventType'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'location'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'address'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'host'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'updated_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'contentType'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'post'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'PostComponentSimple'),
+                    directives: [])
+              ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'PostComponentSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'ComponentContentPost'),
+                isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'title'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'subtitle'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'image'),
+              alias: NameNode(value: 'medias'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'url'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'formats'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'width'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'height'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'ext'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'caption'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'size'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'categories'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
+              ])),
+          FieldNode(
+              name: NameNode(value: 'recommended'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'updated_day'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'vip_color'),
+              alias: NameNode(value: 'vip_color'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'color'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'cover_background_color'),
+              alias: NameNode(value: 'cover_background_color'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'color'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'price'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'trademark'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'image'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                          name: NameNode(value: 'url'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null)
+                    ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'currency'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'Currency'), directives: [])
+              ])),
+          FieldNode(
+              name: NameNode(value: 'author'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'fullName'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'role'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                          name: NameNode(value: 'name'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null)
+                    ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'vipText'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'prePrice'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'rating'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'Currency'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'PaymentCurrency'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'code'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'decimal_digits'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name_plural'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'rounding'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'symbol'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'symbol_native'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ]))
+  ]);
+
+  @override
+  final String operationName = 'Event';
+
+  @override
+  final EventArguments variables;
+
+  @override
+  List<Object> get props => [document, operationName, variables];
+  @override
+  Event$Query parse(Map<String, dynamic> json) => Event$Query.fromJson(json);
+}
+
+@JsonSerializable(explicitToJson: true)
+class EventsArguments extends JsonSerializable with EquatableMixin {
+  EventsArguments({this.sort, this.limit, this.start, this.where});
+
+  @override
+  factory EventsArguments.fromJson(Map<String, dynamic> json) =>
+      _$EventsArgumentsFromJson(json);
+
+  final String sort;
+
+  final int limit;
+
+  final int start;
+
+  final Object where;
+
+  @override
+  List<Object> get props => [sort, limit, start, where];
+  @override
+  Map<String, dynamic> toJson() => _$EventsArgumentsToJson(this);
+}
+
+class EventsQuery extends GraphQLQuery<Events$Query, EventsArguments> {
+  EventsQuery({this.variables});
+
+  @override
+  final DocumentNode document = DocumentNode(definitions: [
+    OperationDefinitionNode(
+        type: OperationType.query,
+        name: NameNode(value: 'Events'),
+        variableDefinitions: [
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'sort')),
+              type: NamedTypeNode(
+                  name: NameNode(value: 'String'), isNonNull: false),
+              defaultValue: DefaultValueNode(value: null),
+              directives: []),
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'limit')),
+              type:
+                  NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+              defaultValue: DefaultValueNode(value: null),
+              directives: []),
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'start')),
+              type:
+                  NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+              defaultValue: DefaultValueNode(value: null),
+              directives: []),
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'where')),
+              type: NamedTypeNode(
+                  name: NameNode(value: 'JSON'), isNonNull: false),
+              defaultValue: DefaultValueNode(value: null),
+              directives: [])
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'events'),
+              alias: null,
+              arguments: [
+                ArgumentNode(
+                    name: NameNode(value: 'sort'),
+                    value: VariableNode(name: NameNode(value: 'sort'))),
+                ArgumentNode(
+                    name: NameNode(value: 'limit'),
+                    value: VariableNode(name: NameNode(value: 'limit'))),
+                ArgumentNode(
+                    name: NameNode(value: 'start'),
+                    value: VariableNode(name: NameNode(value: 'start'))),
+                ArgumentNode(
+                    name: NameNode(value: 'where'),
+                    value: VariableNode(name: NameNode(value: 'where')))
+              ],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'EventSimple'), directives: [])
+              ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'EventSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Event'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'eventDateTime'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'eventType'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'location'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'address'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'host'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'updated_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'contentType'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'post'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'PostComponentSimple'),
+                    directives: [])
+              ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'PostComponentSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'ComponentContentPost'),
+                isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'title'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'subtitle'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'image'),
+              alias: NameNode(value: 'medias'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: '__typename'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'url'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'formats'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'width'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'height'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'ext'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'caption'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'size'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'categories'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
+              ])),
+          FieldNode(
+              name: NameNode(value: 'recommended'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'updated_day'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'vip_color'),
+              alias: NameNode(value: 'vip_color'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'color'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'cover_background_color'),
+              alias: NameNode(value: 'cover_background_color'),
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'color'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'price'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'trademark'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'image'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                          name: NameNode(value: 'url'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null)
+                    ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'currency'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'Currency'), directives: [])
+              ])),
+          FieldNode(
+              name: NameNode(value: 'author'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'id'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'fullName'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'role'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                          name: NameNode(value: 'name'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null)
+                    ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'vipText'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'prePrice'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'rating'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'Currency'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'PaymentCurrency'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'code'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'decimal_digits'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name_plural'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'rounding'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'symbol'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'symbol_native'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ]))
+  ]);
+
+  @override
+  final String operationName = 'Events';
+
+  @override
+  final EventsArguments variables;
+
+  @override
+  List<Object> get props => [document, operationName, variables];
+  @override
+  Events$Query parse(Map<String, dynamic> json) => Events$Query.fromJson(json);
+}
+
+@JsonSerializable(explicitToJson: true)
 class ExerciseArguments extends JsonSerializable with EquatableMixin {
   ExerciseArguments({@required this.id});
 
@@ -20841,24 +22177,8 @@ class ExerciseQuery extends GraphQLQuery<Exercise$Query, ExerciseArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -20997,6 +22317,32 @@ class ExerciseQuery extends GraphQLQuery<Exercise$Query, ExerciseArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -21283,24 +22629,8 @@ class ExercisesQuery extends GraphQLQuery<Exercises$Query, ExercisesArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -21439,6 +22769,32 @@ class ExercisesQuery extends GraphQLQuery<Exercises$Query, ExercisesArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -22410,24 +23766,8 @@ class LocationQuery extends GraphQLQuery<Location$Query, LocationArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -22566,6 +23906,32 @@ class LocationQuery extends GraphQLQuery<Location$Query, LocationArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -23277,7 +24643,13 @@ class LoginMutation extends GraphQLQuery<Login$Mutation, LoginArguments> {
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'AuthorInfoSimple'),
@@ -24312,7 +25684,13 @@ class MeQuery extends GraphQLQuery<Me$Query, JsonSerializable> {
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'AuthorInfoSimple'),
@@ -25353,7 +26731,13 @@ class MyOrdersQuery extends GraphQLQuery<MyOrders$Query, MyOrdersArguments> {
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ]))
   ]);
 
@@ -26571,6 +27955,15 @@ class OrderQuery extends GraphQLQuery<Order$Query, OrderArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
+              name: NameNode(value: 'user'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'UserSimple'), directives: [])
+              ])),
+          FieldNode(
               name: NameNode(value: 'shippingAddress'),
               alias: null,
               arguments: [],
@@ -26579,6 +27972,89 @@ class OrderQuery extends GraphQLQuery<Order$Query, OrderArguments> {
                 FragmentSpreadNode(
                     name: NameNode(value: 'Address'), directives: [])
               ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'UserSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'UsersPermissionsUser'),
+                isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'username'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'fullName'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'email'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'sex'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'birthday'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'image'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'url'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'role'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'confirmed'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'Address'),
@@ -26861,7 +28337,13 @@ class OrderQuery extends GraphQLQuery<Order$Query, OrderArguments> {
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ]))
   ]);
 
@@ -27285,7 +28767,13 @@ class OrdersQuery extends GraphQLQuery<Orders$Query, OrdersArguments> {
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ]))
   ]);
 
@@ -28260,24 +29748,8 @@ class ParentingQuery extends GraphQLQuery<Parenting$Query, ParentingArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -28416,6 +29888,32 @@ class ParentingQuery extends GraphQLQuery<Parenting$Query, ParentingArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -28709,24 +30207,8 @@ class ParentingsQuery
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -28865,6 +30347,32 @@ class ParentingsQuery
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -32022,24 +33530,8 @@ class PlanQuery extends GraphQLQuery<Plan$Query, PlanArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -32178,6 +33670,32 @@ class PlanQuery extends GraphQLQuery<Plan$Query, PlanArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -32788,24 +34306,8 @@ class PlansQuery extends GraphQLQuery<Plans$Query, PlansArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -32944,6 +34446,32 @@ class PlansQuery extends GraphQLQuery<Plans$Query, PlansArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -33397,18 +34925,8 @@ class PostQuery extends GraphQLQuery<Post$Query, PostArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -33553,6 +35071,32 @@ class PostQuery extends GraphQLQuery<Post$Query, PostArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -33806,18 +35350,8 @@ class PostsQuery extends GraphQLQuery<Posts$Query, PostsArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -33962,6 +35496,32 @@ class PostsQuery extends GraphQLQuery<Posts$Query, PostsArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -34551,7 +36111,13 @@ class RegisterMutation
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'AuthorInfoSimple'),
@@ -35623,6 +37189,15 @@ class RequestPaymentMutation
               directives: [],
               selectionSet: null),
           FieldNode(
+              name: NameNode(value: 'user'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'UserSimple'), directives: [])
+              ])),
+          FieldNode(
               name: NameNode(value: 'shippingAddress'),
               alias: null,
               arguments: [],
@@ -35631,6 +37206,89 @@ class RequestPaymentMutation
                 FragmentSpreadNode(
                     name: NameNode(value: 'Address'), directives: [])
               ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'UserSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'UsersPermissionsUser'),
+                isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'username'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'fullName'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'email'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'sex'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'birthday'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'image'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'url'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'role'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'name'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ])),
+          FieldNode(
+              name: NameNode(value: 'confirmed'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'Address'),
@@ -35913,7 +37571,13 @@ class RequestPaymentMutation
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ]))
   ]);
 
@@ -36161,24 +37825,8 @@ class SupplementQuery
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -36317,6 +37965,32 @@ class SupplementQuery
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -36610,24 +38284,8 @@ class SupplementsQuery
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -36766,6 +38424,32 @@ class SupplementsQuery
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -39543,7 +41227,13 @@ class UpdateMeMutation
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'Currency'), directives: [])
-              ]))
+              ])),
+          FieldNode(
+              name: NameNode(value: 'created_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'AuthorInfoSimple'),
@@ -43851,24 +45541,8 @@ class WebinarQuery extends GraphQLQuery<Webinar$Query, WebinarArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -44007,6 +45681,32 @@ class WebinarQuery extends GraphQLQuery<Webinar$Query, WebinarArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],
@@ -44299,24 +45999,8 @@ class WebinarsQuery extends GraphQLQuery<Webinars$Query, WebinarsArguments> {
               arguments: [],
               directives: [],
               selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'id'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
+                FragmentSpreadNode(
+                    name: NameNode(value: 'CategoryDetail'), directives: [])
               ])),
           FieldNode(
               name: NameNode(value: 'recommended'),
@@ -44455,6 +46139,32 @@ class WebinarsQuery extends GraphQLQuery<Webinars$Query, WebinarsArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'CategoryDetail'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Category'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'type'),
               alias: null,
               arguments: [],
               directives: [],

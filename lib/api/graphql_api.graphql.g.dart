@@ -1077,9 +1077,10 @@ Map<String, dynamic> _$PostComponentSimpleMixin$MediasToJson(
 PostComponentSimpleMixin$Categories
     _$PostComponentSimpleMixin$CategoriesFromJson(Map<String, dynamic> json) {
   return PostComponentSimpleMixin$Categories()
-    ..$$typename = json['__typename'] as String
     ..id = json['id'] as String
-    ..name = json['name'] as String;
+    ..name = json['name'] as String
+    ..type = _$enumDecodeNullable(_$CategoryTypeEnumMap, json['type'],
+        unknownValue: CategoryType.artemisUnknown);
 }
 
 Map<String, dynamic> _$PostComponentSimpleMixin$CategoriesToJson(
@@ -1092,11 +1093,17 @@ Map<String, dynamic> _$PostComponentSimpleMixin$CategoriesToJson(
     }
   }
 
-  writeNotNull('__typename', instance.$$typename);
   writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
+  writeNotNull('type', _$CategoryTypeEnumMap[instance.type]);
   return val;
 }
+
+const _$CategoryTypeEnumMap = {
+  CategoryType.app: 'app',
+  CategoryType.subject: 'subject',
+  CategoryType.artemisUnknown: 'ARTEMIS_UNKNOWN',
+};
 
 PostComponentSimpleMixin$VipColor _$PostComponentSimpleMixin$VipColorFromJson(
     Map<String, dynamic> json) {
@@ -4755,6 +4762,9 @@ CreateMyOrder$Mutation$CreateMyOrder$Order
         Map<String, dynamic> json) {
   return CreateMyOrder$Mutation$CreateMyOrder$Order()
     ..additional = json['additional']
+    ..user = json['user'] == null
+        ? null
+        : OrderDetailMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..shippingAddress = json['shippingAddress'] == null
         ? null
         : OrderDetailMixin$ShippingAddress.fromJson(
@@ -4794,6 +4804,7 @@ Map<String, dynamic> _$CreateMyOrder$Mutation$CreateMyOrder$OrderToJson(
   }
 
   writeNotNull('additional', instance.additional);
+  writeNotNull('user', instance.user?.toJson());
   writeNotNull('shippingAddress', instance.shippingAddress?.toJson());
   writeNotNull('id', instance.id);
   writeNotNull('uuid', instance.uuid);
@@ -4855,6 +4866,49 @@ Map<String, dynamic> _$CreateMyOrder$MutationToJson(
   }
 
   writeNotNull('createMyOrder', instance.createMyOrder?.toJson());
+  return val;
+}
+
+OrderDetailMixin$User _$OrderDetailMixin$UserFromJson(
+    Map<String, dynamic> json) {
+  return OrderDetailMixin$User()
+    ..id = json['id'] as String
+    ..username = json['username'] as String
+    ..fullName = json['fullName'] as String
+    ..email = json['email'] as String
+    ..name = json['name'] as String
+    ..sex = _$enumDecodeNullable(_$SexTypeEnumMap, json['sex'],
+        unknownValue: SexType.artemisUnknown)
+    ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
+    ..image = json['image'] == null
+        ? null
+        : UserSimpleMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
+    ..role = json['role'] == null
+        ? null
+        : UserSimpleMixin$Role.fromJson(json['role'] as Map<String, dynamic>)
+    ..confirmed = json['confirmed'] as bool;
+}
+
+Map<String, dynamic> _$OrderDetailMixin$UserToJson(
+    OrderDetailMixin$User instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('username', instance.username);
+  writeNotNull('fullName', instance.fullName);
+  writeNotNull('email', instance.email);
+  writeNotNull('name', instance.name);
+  writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
+  writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
+  writeNotNull('image', instance.image?.toJson());
+  writeNotNull('role', instance.role?.toJson());
+  writeNotNull('confirmed', instance.confirmed);
   return val;
 }
 
@@ -4946,7 +5000,9 @@ OrderSimpleMixin$Items _$OrderSimpleMixin$ItemsFromJson(
     ..currency = json['currency'] == null
         ? null
         : OrderItemSimpleMixin$Currency.fromJson(
-            json['currency'] as Map<String, dynamic>);
+            json['currency'] as Map<String, dynamic>)
+    ..createdAt =
+        fromGraphQLDateTimeToDartDateTime(json['created_at'] as String);
 }
 
 Map<String, dynamic> _$OrderSimpleMixin$ItemsToJson(
@@ -4971,6 +5027,8 @@ Map<String, dynamic> _$OrderSimpleMixin$ItemsToJson(
   writeNotNull(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull('currency', instance.currency?.toJson());
+  writeNotNull(
+      'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   return val;
 }
 
@@ -6683,6 +6741,232 @@ Map<String, dynamic> _$Ehrs$QueryToJson(Ehrs$Query instance) {
   }
 
   writeNotNull('ehrs', instance.ehrs?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
+Event$Query$Event _$Event$Query$EventFromJson(Map<String, dynamic> json) {
+  return Event$Query$Event()
+    ..id = json['id'] as String
+    ..eventDateTime =
+        fromGraphQLDateTimeToDartDateTime(json['eventDateTime'] as String)
+    ..eventType = _$enumDecodeNullable(_$EventTypeEnumMap, json['eventType'],
+        unknownValue: EventType.artemisUnknown)
+    ..location = json['location'] as String
+    ..address = json['address'] as String
+    ..host = json['host'] as String
+    ..updatedAt =
+        fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
+    ..contentType = json['contentType'] as String
+    ..post = json['post'] == null
+        ? null
+        : EventSimpleMixin$Post.fromJson(json['post'] as Map<String, dynamic>)
+    ..price1 = (json['price1'] as num)?.toDouble()
+    ..price2 = (json['price2'] as num)?.toDouble()
+    ..price3 = (json['price3'] as num)?.toDouble()
+    ..price4 = (json['price4'] as num)?.toDouble()
+    ..price5 = (json['price5'] as num)?.toDouble()
+    ..dicount = (json['dicount'] as num)?.toDouble()
+    ..password = json['password'] as String
+    ..eventDetails = json['eventDetails'] as String;
+}
+
+Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('eventDateTime',
+      fromDartDateTimeToGraphQLDateTime(instance.eventDateTime));
+  writeNotNull('eventType', _$EventTypeEnumMap[instance.eventType]);
+  writeNotNull('location', instance.location);
+  writeNotNull('address', instance.address);
+  writeNotNull('host', instance.host);
+  writeNotNull(
+      'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
+  writeNotNull('contentType', instance.contentType);
+  writeNotNull('post', instance.post?.toJson());
+  writeNotNull('price1', instance.price1);
+  writeNotNull('price2', instance.price2);
+  writeNotNull('price3', instance.price3);
+  writeNotNull('price4', instance.price4);
+  writeNotNull('price5', instance.price5);
+  writeNotNull('dicount', instance.dicount);
+  writeNotNull('password', instance.password);
+  writeNotNull('eventDetails', instance.eventDetails);
+  return val;
+}
+
+const _$EventTypeEnumMap = {
+  EventType.offline: 'offline',
+  EventType.online: 'online',
+  EventType.artemisUnknown: 'ARTEMIS_UNKNOWN',
+};
+
+Event$Query _$Event$QueryFromJson(Map<String, dynamic> json) {
+  return Event$Query()
+    ..event = json['event'] == null
+        ? null
+        : Event$Query$Event.fromJson(json['event'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$Event$QueryToJson(Event$Query instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('event', instance.event?.toJson());
+  return val;
+}
+
+EventSimpleMixin$Post _$EventSimpleMixin$PostFromJson(
+    Map<String, dynamic> json) {
+  return EventSimpleMixin$Post()
+    ..id = json['id'] as String
+    ..title = json['title'] as String
+    ..subtitle = json['subtitle'] as String
+    ..medias = (json['medias'] as List)
+        ?.map((e) => e == null
+            ? null
+            : PostComponentSimpleMixin$Medias.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList()
+    ..categories = (json['categories'] as List)
+        ?.map((e) => e == null
+            ? null
+            : PostComponentSimpleMixin$Categories.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList()
+    ..recommended = json['recommended'] as bool
+    ..updatedDay = fromGraphQLDateToDartDateTime(json['updated_day'] as String)
+    ..vipColor = json['vip_color'] == null
+        ? null
+        : PostComponentSimpleMixin$VipColor.fromJson(
+            json['vip_color'] as Map<String, dynamic>)
+    ..coverBackgroundColor = json['cover_background_color'] == null
+        ? null
+        : PostComponentSimpleMixin$CoverBackgroundColor.fromJson(
+            json['cover_background_color'] as Map<String, dynamic>)
+    ..price = (json['price'] as num)?.toDouble()
+    ..trademark = json['trademark'] == null
+        ? null
+        : PostComponentSimpleMixin$Trademark.fromJson(
+            json['trademark'] as Map<String, dynamic>)
+    ..currency = json['currency'] == null
+        ? null
+        : PostComponentSimpleMixin$Currency.fromJson(
+            json['currency'] as Map<String, dynamic>)
+    ..author = json['author'] == null
+        ? null
+        : PostComponentSimpleMixin$Author.fromJson(
+            json['author'] as Map<String, dynamic>)
+    ..vipText = json['vipText'] as String
+    ..prePrice = (json['prePrice'] as num)?.toDouble()
+    ..rating = json['rating'] as int
+    ..needShipping = json['needShipping'] as bool;
+}
+
+Map<String, dynamic> _$EventSimpleMixin$PostToJson(
+    EventSimpleMixin$Post instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('title', instance.title);
+  writeNotNull('subtitle', instance.subtitle);
+  writeNotNull('medias', instance.medias?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'categories', instance.categories?.map((e) => e?.toJson())?.toList());
+  writeNotNull('recommended', instance.recommended);
+  writeNotNull(
+      'updated_day', fromDartDateTimeToGraphQLDate(instance.updatedDay));
+  writeNotNull('vip_color', instance.vipColor?.toJson());
+  writeNotNull(
+      'cover_background_color', instance.coverBackgroundColor?.toJson());
+  writeNotNull('price', instance.price);
+  writeNotNull('trademark', instance.trademark?.toJson());
+  writeNotNull('currency', instance.currency?.toJson());
+  writeNotNull('author', instance.author?.toJson());
+  writeNotNull('vipText', instance.vipText);
+  writeNotNull('prePrice', instance.prePrice);
+  writeNotNull('rating', instance.rating);
+  writeNotNull('needShipping', instance.needShipping);
+  return val;
+}
+
+Events$Query$Events _$Events$Query$EventsFromJson(Map<String, dynamic> json) {
+  return Events$Query$Events()
+    ..id = json['id'] as String
+    ..eventDateTime =
+        fromGraphQLDateTimeToDartDateTime(json['eventDateTime'] as String)
+    ..eventType = _$enumDecodeNullable(_$EventTypeEnumMap, json['eventType'],
+        unknownValue: EventType.artemisUnknown)
+    ..location = json['location'] as String
+    ..address = json['address'] as String
+    ..host = json['host'] as String
+    ..updatedAt =
+        fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
+    ..contentType = json['contentType'] as String
+    ..post = json['post'] == null
+        ? null
+        : EventSimpleMixin$Post.fromJson(json['post'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$Events$Query$EventsToJson(Events$Query$Events instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('eventDateTime',
+      fromDartDateTimeToGraphQLDateTime(instance.eventDateTime));
+  writeNotNull('eventType', _$EventTypeEnumMap[instance.eventType]);
+  writeNotNull('location', instance.location);
+  writeNotNull('address', instance.address);
+  writeNotNull('host', instance.host);
+  writeNotNull(
+      'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
+  writeNotNull('contentType', instance.contentType);
+  writeNotNull('post', instance.post?.toJson());
+  return val;
+}
+
+Events$Query _$Events$QueryFromJson(Map<String, dynamic> json) {
+  return Events$Query()
+    ..events = (json['events'] as List)
+        ?.map((e) => e == null
+            ? null
+            : Events$Query$Events.fromJson(e as Map<String, dynamic>))
+        ?.toList();
+}
+
+Map<String, dynamic> _$Events$QueryToJson(Events$Query instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('events', instance.events?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
@@ -8689,6 +8973,9 @@ Map<String, dynamic> _$NurseUpdate$MutationToJson(
 Order$Query$Order _$Order$Query$OrderFromJson(Map<String, dynamic> json) {
   return Order$Query$Order()
     ..additional = json['additional']
+    ..user = json['user'] == null
+        ? null
+        : OrderDetailMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..shippingAddress = json['shippingAddress'] == null
         ? null
         : OrderDetailMixin$ShippingAddress.fromJson(
@@ -8727,6 +9014,7 @@ Map<String, dynamic> _$Order$Query$OrderToJson(Order$Query$Order instance) {
   }
 
   writeNotNull('additional', instance.additional);
+  writeNotNull('user', instance.user?.toJson());
   writeNotNull('shippingAddress', instance.shippingAddress?.toJson());
   writeNotNull('id', instance.id);
   writeNotNull('uuid', instance.uuid);
@@ -10798,7 +11086,9 @@ PostSimpleMixin$Categories _$PostSimpleMixin$CategoriesFromJson(
     Map<String, dynamic> json) {
   return PostSimpleMixin$Categories()
     ..id = json['id'] as String
-    ..name = json['name'] as String;
+    ..name = json['name'] as String
+    ..type = _$enumDecodeNullable(_$CategoryTypeEnumMap, json['type'],
+        unknownValue: CategoryType.artemisUnknown);
 }
 
 Map<String, dynamic> _$PostSimpleMixin$CategoriesToJson(
@@ -10813,6 +11103,7 @@ Map<String, dynamic> _$PostSimpleMixin$CategoriesToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
+  writeNotNull('type', _$CategoryTypeEnumMap[instance.type]);
   return val;
 }
 
@@ -11519,6 +11810,9 @@ RequestPayment$Mutation$RequestOrderPay$Order
         Map<String, dynamic> json) {
   return RequestPayment$Mutation$RequestOrderPay$Order()
     ..additional = json['additional']
+    ..user = json['user'] == null
+        ? null
+        : OrderDetailMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..shippingAddress = json['shippingAddress'] == null
         ? null
         : OrderDetailMixin$ShippingAddress.fromJson(
@@ -11558,6 +11852,7 @@ Map<String, dynamic> _$RequestPayment$Mutation$RequestOrderPay$OrderToJson(
   }
 
   writeNotNull('additional', instance.additional);
+  writeNotNull('user', instance.user?.toJson());
   writeNotNull('shippingAddress', instance.shippingAddress?.toJson());
   writeNotNull('id', instance.id);
   writeNotNull('uuid', instance.uuid);
@@ -16043,6 +16338,50 @@ EhrsArguments _$EhrsArgumentsFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$EhrsArgumentsToJson(EhrsArguments instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('sort', instance.sort);
+  writeNotNull('limit', instance.limit);
+  writeNotNull('start', instance.start);
+  writeNotNull('where', instance.where);
+  return val;
+}
+
+EventArguments _$EventArgumentsFromJson(Map<String, dynamic> json) {
+  return EventArguments(
+    id: json['id'] as String,
+  );
+}
+
+Map<String, dynamic> _$EventArgumentsToJson(EventArguments instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  return val;
+}
+
+EventsArguments _$EventsArgumentsFromJson(Map<String, dynamic> json) {
+  return EventsArguments(
+    sort: json['sort'] as String,
+    limit: json['limit'] as int,
+    start: json['start'] as int,
+    where: json['where'],
+  );
+}
+
+Map<String, dynamic> _$EventsArgumentsToJson(EventsArguments instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

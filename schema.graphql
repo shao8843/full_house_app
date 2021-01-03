@@ -5,7 +5,7 @@ schema {
     mutation: Mutation
 }
 
-union Morph = AboutFastBraiin | Account | AccountAggregator | AccountConnection | AccountConnectionCreated_at | AccountConnectionCreated_by | AccountConnectionId | AccountConnectionName | AccountConnectionUpdated_at | AccountConnectionUpdated_by | AccountConnectionUser | AccountGroupBy | AppTermOfService | Article | ArticleAggregator | ArticleConnection | ArticleConnectionContent | ArticleConnectionCreated_at | ArticleConnectionCreated_by | ArticleConnectionForPerson | ArticleConnectionId | ArticleConnectionName | ArticleConnectionPost | ArticleConnectionPublished_at | ArticleConnectionQuestionnaire | ArticleConnectionSubject | ArticleConnectionUpdated_at | ArticleConnectionUpdated_by | ArticleGroupBy | AssessmentQuestionnaire | AssessmentQuestionnaireAggregator | AssessmentQuestionnaireAggregatorAvg | AssessmentQuestionnaireAggregatorMax | AssessmentQuestionnaireAggregatorMin | AssessmentQuestionnaireAggregatorSum | AssessmentQuestionnaireConnection | AssessmentQuestionnaireConnectionContent | AssessmentQuestionnaireConnectionCreated_at | AssessmentQuestionnaireConnectionCreated_by | AssessmentQuestionnaireConnectionForPerson | AssessmentQuestionnaireConnectionId | AssessmentQuestionnaireConnectionLevel | AssessmentQuestionnaireConnectionName | AssessmentQuestionnaireConnectionPeriod_length | AssessmentQuestionnaireConnectionPost | AssessmentQuestionnaireConnectionQuestionnaire | AssessmentQuestionnaireConnectionQuestionnaireOnly | AssessmentQuestionnaireConnectionSubject | AssessmentQuestionnaireConnectionUpdated_at | AssessmentQuestionnaireConnectionUpdated_by | AssessmentQuestionnaireGroupBy | AssessmentTermOfService | Book | BookAggregator | BookConnection | BookConnectionContent | BookConnectionCreated_at | BookConnectionCreated_by | BookConnectionId | BookConnectionName | BookConnectionPost | BookConnectionType | BookConnectionUpdated_at | BookConnectionUpdated_by | BookGroupBy | Category | CategoryAggregator | CategoryConnection | CategoryConnectionCreated_at | CategoryConnectionCreated_by | CategoryConnectionId | CategoryConnectionName | CategoryConnectionUpdated_at | CategoryConnectionUpdated_by | CategoryGroupBy | Color | ColorAggregator | ColorConnection | ColorConnectionColor | ColorConnectionCreated_at | ColorConnectionCreated_by | ColorConnectionId | ColorConnectionUpdated_at | ColorConnectionUpdated_by | ColorGroupBy | ComponentContentEpisode | ComponentContentPost | ComponentContentSummary | ComponentDataAddress | ComponentDataEhrSubject | ComponentDataEhrType | ComponentDataFor | ComponentDataPosition | ComponentUserAuthor | ComponentUserChild | ComponentUserCounselor | ComponentUserDoctor | ComponentUserNurse | ComponentUserParent | ComponentUserPatient | ComponentUserTeacher | Course | CourseAggregator | CourseConnection | CourseConnectionContent | CourseConnectionContentType | CourseConnectionCreated_at | CourseConnectionCreated_by | CourseConnectionId | CourseConnectionPicture | CourseConnectionSubtitle | CourseConnectionTitle | CourseConnectionUpdated_at | CourseConnectionUpdated_by | CourseGroupBy | CreditCard | CreditCardAggregator | CreditCardAggregatorAvg | CreditCardAggregatorMax | CreditCardAggregatorMin | CreditCardAggregatorSum | CreditCardConnection | CreditCardConnectionAddress | CreditCardConnectionCreated_at | CreditCardConnectionCreated_by | CreditCardConnectionCvc | CreditCardConnectionExpMonth | CreditCardConnectionExpYear | CreditCardConnectionId | CreditCardConnectionName | CreditCardConnectionNumber | CreditCardConnectionUpdated_at | CreditCardConnectionUpdated_by | CreditCardConnectionUser | CreditCardGroupBy | Ehr | EhrAggregator | EhrConnection | EhrConnectionCreated_at | EhrConnectionCreated_by | EhrConnectionData | EhrConnectionId | EhrConnectionOffice_comments | EhrConnectionPatient | EhrConnectionPosition | EhrConnectionQuestionnaire_answer | EhrConnectionSource | EhrConnectionSource_id | EhrConnectionStatus | EhrConnectionSubject | EhrConnectionType | EhrConnectionUpdated_at | EhrConnectionUpdated_by | EhrConnectionUser | EhrGroupBy | Exercise | ExerciseAggregator | ExerciseAggregatorAvg | ExerciseAggregatorMax | ExerciseAggregatorMin | ExerciseAggregatorSum | ExerciseConnection | ExerciseConnectionAge | ExerciseConnectionContent | ExerciseConnectionCreated_at | ExerciseConnectionCreated_by | ExerciseConnectionForPerson | ExerciseConnectionId | ExerciseConnectionLevel | ExerciseConnectionPost | ExerciseConnectionQuestionnaire | ExerciseConnectionSubject | ExerciseConnectionType | ExerciseConnectionUpdated_at | ExerciseConnectionUpdated_by | ExerciseGroupBy | FlowchartTest | Location | LocationAggregator | LocationConnection | LocationConnectionAddress | LocationConnectionContent | LocationConnectionCreated_at | LocationConnectionCreated_by | LocationConnectionDescription | LocationConnectionEmail | LocationConnectionId | LocationConnectionName | LocationConnectionPhone | LocationConnectionPost | LocationConnectionQrCode | LocationConnectionType | LocationConnectionUpdated_at | LocationConnectionUpdated_by | LocationConnectionWeb | LocationGroupBy | Parenting | ParentingAggregator | ParentingConnection | ParentingConnectionContent | ParentingConnectionCreated_at | ParentingConnectionCreated_by | ParentingConnectionId | ParentingConnectionName | ParentingConnectionPdfFiles | ParentingConnectionPost | ParentingConnectionQuestionnaire | ParentingConnectionSubject | ParentingConnectionUpdated_at | ParentingConnectionUpdated_by | ParentingGroupBy | Patient | PatientAggregator | PatientConnection | PatientConnectionCounselor | PatientConnectionCreated_at | PatientConnectionCreated_by | PatientConnectionDoctor | PatientConnectionId | PatientConnectionMeetingId | PatientConnectionName | PatientConnectionNurse | PatientConnectionUpdated_at | PatientConnectionUpdated_by | PatientConnectionUser | PatientGroupBy | PaymentCurrency | PaymentCurrencyAggregator | PaymentCurrencyAggregatorAvg | PaymentCurrencyAggregatorMax | PaymentCurrencyAggregatorMin | PaymentCurrencyAggregatorSum | PaymentCurrencyConnection | PaymentCurrencyConnectionCode | PaymentCurrencyConnectionCreated_at | PaymentCurrencyConnectionCreated_by | PaymentCurrencyConnectionDecimal_digits | PaymentCurrencyConnectionId | PaymentCurrencyConnectionName | PaymentCurrencyConnectionName_plural | PaymentCurrencyConnectionRounding | PaymentCurrencyConnectionSymbol | PaymentCurrencyConnectionSymbol_native | PaymentCurrencyConnectionUpdated_at | PaymentCurrencyConnectionUpdated_by | PaymentCurrencyGroupBy | PaymentMethod | PaymentMethodAggregator | PaymentMethodConnection | PaymentMethodConnectionBillingAddress | PaymentMethodConnectionCreated_at | PaymentMethodConnectionCreated_by | PaymentMethodConnectionCreditCard | PaymentMethodConnectionId | PaymentMethodConnectionLivemode | PaymentMethodConnectionStripeId | PaymentMethodConnectionType | PaymentMethodConnectionUpdated_at | PaymentMethodConnectionUpdated_by | PaymentMethodConnectionUser | PaymentMethodGroupBy | PaymentOrder | PaymentOrderAggregator | PaymentOrderAggregatorAvg | PaymentOrderAggregatorMax | PaymentOrderAggregatorMin | PaymentOrderAggregatorSum | PaymentOrderConnection | PaymentOrderConnectionAdditional | PaymentOrderConnectionCreated_at | PaymentOrderConnectionCreated_by | PaymentOrderConnectionCurrency | PaymentOrderConnectionDescription | PaymentOrderConnectionExpire | PaymentOrderConnectionId | PaymentOrderConnectionNeedpayPrice | PaymentOrderConnectionOutTradeId | PaymentOrderConnectionOutTradeProvider | PaymentOrderConnectionPaiedPrice | PaymentOrderConnectionPrice | PaymentOrderConnectionShippingAddress | PaymentOrderConnectionStatus | PaymentOrderConnectionUpdated_at | PaymentOrderConnectionUpdated_by | PaymentOrderConnectionUser | PaymentOrderConnectionUuid | PaymentOrderGroupBy | PaymentOrderItem | PaymentPolicy | PaymentSetting | Plan | PlanAggregator | PlanConnection | PlanConnectionContent | PlanConnectionCreated_at | PlanConnectionCreated_by | PlanConnectionForPerson | PlanConnectionId | PlanConnectionName | PlanConnectionPost | PlanConnectionQuestionnaire | PlanConnectionUpdated_at | PlanConnectionUpdated_by | PlanGroupBy | Post | PostAggregator | PostAggregatorAvg | PostAggregatorMax | PostAggregatorMin | PostAggregatorSum | PostConnection | PostConnectionAuthor | PostConnectionCover_background_color | PostConnectionCreated_at | PostConnectionCreated_by | PostConnectionCurrency | PostConnectionEntityRawId | PostConnectionEntityType | PostConnectionId | PostConnectionNeedShipping | PostConnectionPrePrice | PostConnectionPrice | PostConnectionRating | PostConnectionRawPostId | PostConnectionRecommended | PostConnectionStatus | PostConnectionSubtitle | PostConnectionTitle | PostConnectionTrademark | PostConnectionUpdated_at | PostConnectionUpdated_by | PostConnectionUpdated_day | PostConnectionVipText | PostConnectionVip_color | PostGroupBy | Questionnaire | QuestionnaireAggregator | QuestionnaireAnswer | QuestionnaireAnswerAggregator | QuestionnaireAnswerConnection | QuestionnaireAnswerConnectionCreated_at | QuestionnaireAnswerConnectionCreated_by | QuestionnaireAnswerConnectionData | QuestionnaireAnswerConnectionId | QuestionnaireAnswerConnectionName | QuestionnaireAnswerConnectionQuestionnaire | QuestionnaireAnswerConnectionSubmitted | QuestionnaireAnswerConnectionUpdated_at | QuestionnaireAnswerConnectionUpdated_by | QuestionnaireAnswerConnectionUser | QuestionnaireAnswerGroupBy | QuestionnaireConnection | QuestionnaireConnectionCreated_at | QuestionnaireConnectionCreated_by | QuestionnaireConnectionData | QuestionnaireConnectionDisplayName | QuestionnaireConnectionId | QuestionnaireConnectionName | QuestionnaireConnectionProvider | QuestionnaireConnectionUpdated_at | QuestionnaireConnectionUpdated_by | QuestionnaireGroupBy | Reminder | ReminderAggregator | ReminderConnection | ReminderConnectionBody | ReminderConnectionCreated_at | ReminderConnectionCreated_by | ReminderConnectionDateTime | ReminderConnectionId | ReminderConnectionName | ReminderConnectionSource | ReminderConnectionSourceId | ReminderConnectionType | ReminderConnectionUpdated_at | ReminderConnectionUpdated_by | ReminderConnectionUser | ReminderGroupBy | Supplement | SupplementAggregator | SupplementConnection | SupplementConnectionContent | SupplementConnectionCreated_at | SupplementConnectionCreated_by | SupplementConnectionForPerson | SupplementConnectionId | SupplementConnectionName | SupplementConnectionPost | SupplementConnectionProvider | SupplementConnectionSubject | SupplementConnectionUpdated_at | SupplementConnectionUpdated_by | SupplementGroupBy | Telemetry | TelemetryAggregator | TelemetryConnection | TelemetryConnectionCreated_at | TelemetryConnectionCreated_by | TelemetryConnectionId | TelemetryConnectionRaw | TelemetryConnectionUpdated_at | TelemetryConnectionUpdated_by | TelemetryGroupBy | Trademark | TrademarkAggregator | TrademarkConnection | TrademarkConnectionCreated_at | TrademarkConnectionCreated_by | TrademarkConnectionId | TrademarkConnectionImage | TrademarkConnectionName | TrademarkConnectionUpdated_at | TrademarkConnectionUpdated_by | TrademarkGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreated_at | UploadFileConnectionCreated_by | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdated_at | UploadFileConnectionUpdated_by | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileGroupBy | UserAddress | UserAddressAggregator | UserAddressConnection | UserAddressConnectionAddress | UserAddressConnectionCreated_at | UserAddressConnectionCreated_by | UserAddressConnectionId | UserAddressConnectionTag | UserAddressConnectionUpdated_at | UserAddressConnectionUpdated_by | UserAddressConnectionUser | UserAddressGroupBy | UserAgreement | UserAgreementAggregator | UserAgreementConnection | UserAgreementConnectionContent | UserAgreementConnectionCreated_at | UserAgreementConnectionCreated_by | UserAgreementConnectionId | UserAgreementConnectionLastVersionDate | UserAgreementConnectionTermOfServiceType | UserAgreementConnectionUpdated_at | UserAgreementConnectionUpdated_by | UserAgreementConnectionUser | UserAgreementConnectionValue | UserAgreementGroupBy | UserAssessment | UserAssessmentAggregator | UserAssessmentConnection | UserAssessmentConnectionAssessment_questionnaire | UserAssessmentConnectionCreated_at | UserAssessmentConnectionCreated_by | UserAssessmentConnectionId | UserAssessmentConnectionUpdated_at | UserAssessmentConnectionUpdated_by | UserAssessmentConnectionUser | UserAssessmentGroupBy | UserExercise | UserExerciseAggregator | UserExerciseConnection | UserExerciseConnectionCreated_at | UserExerciseConnectionCreated_by | UserExerciseConnectionExercise | UserExerciseConnectionId | UserExerciseConnectionUpdated_at | UserExerciseConnectionUpdated_by | UserExerciseConnectionUser | UserExerciseGroupBy | UserParenting | UserParentingAggregator | UserParentingConnection | UserParentingConnectionCreated_at | UserParentingConnectionCreated_by | UserParentingConnectionId | UserParentingConnectionParenting | UserParentingConnectionUpdated_at | UserParentingConnectionUpdated_by | UserParentingConnectionUser | UserParentingGroupBy | UserPermissionsPasswordPayload | UserPlan | UserPlanAggregator | UserPlanConnection | UserPlanConnectionCreated_at | UserPlanConnectionCreated_by | UserPlanConnectionId | UserPlanConnectionStatus | UserPlanConnectionUpdated_at | UserPlanConnectionUpdated_by | UserPlanConnectionUser | UserPlanGroupBy | UsersOrganizationunitsOrganizationUnit | UsersOrganizationunitsOrganizationUnitAggregator | UsersOrganizationunitsOrganizationUnitConnection | UsersOrganizationunitsOrganizationUnitConnectionCode | UsersOrganizationunitsOrganizationUnitConnectionCreated_at | UsersOrganizationunitsOrganizationUnitConnectionCreated_by | UsersOrganizationunitsOrganizationUnitConnectionDisplayName | UsersOrganizationunitsOrganizationUnitConnectionId | UsersOrganizationunitsOrganizationUnitConnectionParent | UsersOrganizationunitsOrganizationUnitConnectionUpdated_at | UsersOrganizationunitsOrganizationUnitConnectionUpdated_by | UsersOrganizationunitsOrganizationUnitGroupBy | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionCreated_by | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnectionUpdated_by | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionAccountInfo | UsersPermissionsUserConnectionAuthorInfo | UsersPermissionsUserConnectionBirthday | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionChildInfo | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionContent | UsersPermissionsUserConnectionCounselorInfo | UsersPermissionsUserConnectionCountryCode | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionCreated_by | UsersPermissionsUserConnectionDoctorInfo | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionFullName | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionImage | UsersPermissionsUserConnectionName | UsersPermissionsUserConnectionNurseInfo | UsersPermissionsUserConnectionParentInfo | UsersPermissionsUserConnectionPatientInfo | UsersPermissionsUserConnectionPhone | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionQrUrl | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionSecond_email | UsersPermissionsUserConnectionSex | UsersPermissionsUserConnectionStatus | UsersPermissionsUserConnectionTeacherInfo | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUpdated_by | UsersPermissionsUserConnectionUsername | UsersPermissionsUserGroupBy | Version | Webinar | WebinarAggregator | WebinarConnection | WebinarConnectionContent | WebinarConnectionCreated_at | WebinarConnectionCreated_by | WebinarConnectionId | WebinarConnectionMeetingId | WebinarConnectionPost | WebinarConnectionSchedule | WebinarConnectionSubject | WebinarConnectionUpdated_at | WebinarConnectionUpdated_by | WebinarGroupBy | batchTelemetryPayload | cancelOrderPayload | createAccountPayload | createArticlePayload | createAssessmentQuestionnairePayload | createBookPayload | createCategoryPayload | createColorPayload | createCoursePayload | createCreditCardPayload | createCurrencyPayload | createEhrPayload | createExercisePayload | createLocationPayload | createOrderPayload | createOrganizationUnitPayload | createParentingPayload | createPatientPayload | createPaymentMethodPayload | createPlanPayload | createPostPayload | createQuestionnaireAnswerPayload | createQuestionnairePayload | createReminderPayload | createRolePayload | createSupplementPayload | createTelemetryPayload | createTrademarkPayload | createUserAddressPayload | createUserAgreementPayload | createUserAssessmentPayload | createUserExercisePayload | createUserParentingPayload | createUserPayload | createUserPlanPayload | createWebinarPayload | deleteAboutFastBraiinPayload | deleteAccountPayload | deleteAppTermOfServicePayload | deleteArticlePayload | deleteAssessmentQuestionnairePayload | deleteAssessmentTermOfServicePayload | deleteBookPayload | deleteCategoryPayload | deleteColorPayload | deleteCoursePayload | deleteCreditCardPayload | deleteCurrencyPayload | deleteEhrPayload | deleteExercisePayload | deleteLocationPayload | deleteOrderPayload | deleteOrganizationUnitPayload | deleteParentingPayload | deletePatientPayload | deletePaymentMethodPayload | deletePaymentPolicyPayload | deletePlanPayload | deletePostPayload | deleteQuestionnaireAnswerPayload | deleteQuestionnairePayload | deleteReminderPayload | deleteRolePayload | deleteSupplementPayload | deleteTelemetryPayload | deleteTrademarkPayload | deleteUserAddressPayload | deleteUserAgreementPayload | deleteUserAssessmentPayload | deleteUserExercisePayload | deleteUserParentingPayload | deleteUserPayload | deleteUserPlanPayload | deleteVersionPayload | deleteWebinarPayload | requestOrderPayPayload | updateAboutFastBraiinPayload | updateAccountPayload | updateAppTermOfServicePayload | updateArticlePayload | updateAssessmentQuestionnairePayload | updateAssessmentTermOfServicePayload | updateBookPayload | updateCategoryPayload | updateColorPayload | updateCoursePayload | updateCreditCardPayload | updateCurrencyPayload | updateEhrPayload | updateExercisePayload | updateLocationPayload | updateOrderPayload | updateOrganizationUnitPayload | updateParentingPayload | updatePatientPayload | updatePaymentMethodPayload | updatePaymentPolicyPayload | updatePlanPayload | updatePostPayload | updateQuestionnaireAnswerPayload | updateQuestionnairePayload | updateReminderPayload | updateRolePayload | updateSupplementPayload | updateTelemetryPayload | updateTrademarkPayload | updateUserAddressPayload | updateUserAgreementPayload | updateUserAssessmentPayload | updateUserExercisePayload | updateUserParentingPayload | updateUserPayload | updateUserPlanPayload | updateVersionPayload | updateWebinarPayload
+union Morph = AboutFastBraiin | Account | AccountAggregator | AccountConnection | AccountConnectionCreated_at | AccountConnectionCreated_by | AccountConnectionId | AccountConnectionName | AccountConnectionUpdated_at | AccountConnectionUpdated_by | AccountConnectionUser | AccountGroupBy | AppTermOfService | Article | ArticleAggregator | ArticleConnection | ArticleConnectionContent | ArticleConnectionCreated_at | ArticleConnectionCreated_by | ArticleConnectionForPerson | ArticleConnectionId | ArticleConnectionName | ArticleConnectionPost | ArticleConnectionPublished_at | ArticleConnectionQuestionnaire | ArticleConnectionSubject | ArticleConnectionUpdated_at | ArticleConnectionUpdated_by | ArticleGroupBy | AssessmentQuestionnaire | AssessmentQuestionnaireAggregator | AssessmentQuestionnaireAggregatorAvg | AssessmentQuestionnaireAggregatorMax | AssessmentQuestionnaireAggregatorMin | AssessmentQuestionnaireAggregatorSum | AssessmentQuestionnaireConnection | AssessmentQuestionnaireConnectionContent | AssessmentQuestionnaireConnectionCreated_at | AssessmentQuestionnaireConnectionCreated_by | AssessmentQuestionnaireConnectionForPerson | AssessmentQuestionnaireConnectionGame | AssessmentQuestionnaireConnectionId | AssessmentQuestionnaireConnectionLevel | AssessmentQuestionnaireConnectionName | AssessmentQuestionnaireConnectionPeriod_length | AssessmentQuestionnaireConnectionPost | AssessmentQuestionnaireConnectionQuestionnaire | AssessmentQuestionnaireConnectionQuestionnaireOnly | AssessmentQuestionnaireConnectionSubject | AssessmentQuestionnaireConnectionUpdated_at | AssessmentQuestionnaireConnectionUpdated_by | AssessmentQuestionnaireGroupBy | AssessmentTermOfService | Book | BookAggregator | BookConnection | BookConnectionContent | BookConnectionCreated_at | BookConnectionCreated_by | BookConnectionId | BookConnectionName | BookConnectionPost | BookConnectionType | BookConnectionUpdated_at | BookConnectionUpdated_by | BookGroupBy | Category | CategoryAggregator | CategoryConnection | CategoryConnectionCreated_at | CategoryConnectionCreated_by | CategoryConnectionId | CategoryConnectionName | CategoryConnectionType | CategoryConnectionUpdated_at | CategoryConnectionUpdated_by | CategoryGroupBy | Color | ColorAggregator | ColorConnection | ColorConnectionColor | ColorConnectionCreated_at | ColorConnectionCreated_by | ColorConnectionId | ColorConnectionUpdated_at | ColorConnectionUpdated_by | ColorGroupBy | ComponentContentEpisode | ComponentContentPost | ComponentContentSummary | ComponentDataAddress | ComponentDataEhrSubject | ComponentDataEhrType | ComponentDataFor | ComponentDataPosition | ComponentUserAuthor | ComponentUserChild | ComponentUserCounselor | ComponentUserDoctor | ComponentUserNurse | ComponentUserParent | ComponentUserPatient | ComponentUserTeacher | Course | CourseAggregator | CourseConnection | CourseConnectionContent | CourseConnectionContentType | CourseConnectionCreated_at | CourseConnectionCreated_by | CourseConnectionId | CourseConnectionPicture | CourseConnectionSubtitle | CourseConnectionTitle | CourseConnectionUpdated_at | CourseConnectionUpdated_by | CourseGroupBy | CreditCard | CreditCardAggregator | CreditCardAggregatorAvg | CreditCardAggregatorMax | CreditCardAggregatorMin | CreditCardAggregatorSum | CreditCardConnection | CreditCardConnectionAddress | CreditCardConnectionCreated_at | CreditCardConnectionCreated_by | CreditCardConnectionCvc | CreditCardConnectionExpMonth | CreditCardConnectionExpYear | CreditCardConnectionId | CreditCardConnectionName | CreditCardConnectionNumber | CreditCardConnectionUpdated_at | CreditCardConnectionUpdated_by | CreditCardConnectionUser | CreditCardGroupBy | Ehr | EhrAggregator | EhrConnection | EhrConnectionCreated_at | EhrConnectionCreated_by | EhrConnectionData | EhrConnectionId | EhrConnectionOffice_comments | EhrConnectionPatient | EhrConnectionPosition | EhrConnectionQuestionnaire_answer | EhrConnectionSource | EhrConnectionSource_id | EhrConnectionStatus | EhrConnectionSubject | EhrConnectionType | EhrConnectionUpdated_at | EhrConnectionUpdated_by | EhrConnectionUser | EhrGroupBy | Event | EventAggregator | EventAggregatorAvg | EventAggregatorMax | EventAggregatorMin | EventAggregatorSum | EventConnection | EventConnectionAddress | EventConnectionContentType | EventConnectionCreated_at | EventConnectionCreated_by | EventConnectionDicount | EventConnectionEventDateTime | EventConnectionEventDetails | EventConnectionEventType | EventConnectionHost | EventConnectionId | EventConnectionLocation | EventConnectionPassword | EventConnectionPost | EventConnectionPrice1 | EventConnectionPrice2 | EventConnectionPrice3 | EventConnectionPrice4 | EventConnectionPrice5 | EventConnectionUpdated_at | EventConnectionUpdated_by | EventGroupBy | Exercise | ExerciseAggregator | ExerciseAggregatorAvg | ExerciseAggregatorMax | ExerciseAggregatorMin | ExerciseAggregatorSum | ExerciseConnection | ExerciseConnectionAge | ExerciseConnectionContent | ExerciseConnectionCreated_at | ExerciseConnectionCreated_by | ExerciseConnectionForPerson | ExerciseConnectionGame | ExerciseConnectionId | ExerciseConnectionLevel | ExerciseConnectionPost | ExerciseConnectionQuestionnaire | ExerciseConnectionSubject | ExerciseConnectionType | ExerciseConnectionUpdated_at | ExerciseConnectionUpdated_by | ExerciseGroupBy | FlowchartTest | Game | GameAggregator | GameAggregatorAvg | GameAggregatorMax | GameAggregatorMin | GameAggregatorSum | GameConnection | GameConnectionContent | GameConnectionCptLevel | GameConnectionCreated_at | GameConnectionCreated_by | GameConnectionId | GameConnectionName | GameConnectionProvider | GameConnectionTrademark | GameConnectionType | GameConnectionUpdated_at | GameConnectionUpdated_by | GameGroupBy | Location | LocationAggregator | LocationConnection | LocationConnectionAddress | LocationConnectionContent | LocationConnectionCreated_at | LocationConnectionCreated_by | LocationConnectionDescription | LocationConnectionEmail | LocationConnectionId | LocationConnectionName | LocationConnectionPhone | LocationConnectionPost | LocationConnectionQrCode | LocationConnectionType | LocationConnectionUpdated_at | LocationConnectionUpdated_by | LocationConnectionWeb | LocationGroupBy | Parenting | ParentingAggregator | ParentingConnection | ParentingConnectionContent | ParentingConnectionCreated_at | ParentingConnectionCreated_by | ParentingConnectionId | ParentingConnectionName | ParentingConnectionPdfFiles | ParentingConnectionPost | ParentingConnectionQuestionnaire | ParentingConnectionSubject | ParentingConnectionUpdated_at | ParentingConnectionUpdated_by | ParentingGroupBy | Patient | PatientAggregator | PatientConnection | PatientConnectionCounselor | PatientConnectionCreated_at | PatientConnectionCreated_by | PatientConnectionDoctor | PatientConnectionId | PatientConnectionMeetingId | PatientConnectionName | PatientConnectionNurse | PatientConnectionUpdated_at | PatientConnectionUpdated_by | PatientConnectionUser | PatientGroupBy | PaymentCurrency | PaymentCurrencyAggregator | PaymentCurrencyAggregatorAvg | PaymentCurrencyAggregatorMax | PaymentCurrencyAggregatorMin | PaymentCurrencyAggregatorSum | PaymentCurrencyConnection | PaymentCurrencyConnectionCode | PaymentCurrencyConnectionCreated_at | PaymentCurrencyConnectionCreated_by | PaymentCurrencyConnectionDecimal_digits | PaymentCurrencyConnectionId | PaymentCurrencyConnectionName | PaymentCurrencyConnectionName_plural | PaymentCurrencyConnectionRounding | PaymentCurrencyConnectionSymbol | PaymentCurrencyConnectionSymbol_native | PaymentCurrencyConnectionUpdated_at | PaymentCurrencyConnectionUpdated_by | PaymentCurrencyGroupBy | PaymentMethod | PaymentMethodAggregator | PaymentMethodConnection | PaymentMethodConnectionBillingAddress | PaymentMethodConnectionCreated_at | PaymentMethodConnectionCreated_by | PaymentMethodConnectionCreditCard | PaymentMethodConnectionId | PaymentMethodConnectionLivemode | PaymentMethodConnectionStripeId | PaymentMethodConnectionType | PaymentMethodConnectionUpdated_at | PaymentMethodConnectionUpdated_by | PaymentMethodConnectionUser | PaymentMethodGroupBy | PaymentOrder | PaymentOrderAggregator | PaymentOrderAggregatorAvg | PaymentOrderAggregatorMax | PaymentOrderAggregatorMin | PaymentOrderAggregatorSum | PaymentOrderConnection | PaymentOrderConnectionAdditional | PaymentOrderConnectionCreated_at | PaymentOrderConnectionCreated_by | PaymentOrderConnectionCurrency | PaymentOrderConnectionDescription | PaymentOrderConnectionExpire | PaymentOrderConnectionId | PaymentOrderConnectionNeedpayPrice | PaymentOrderConnectionOutTradeId | PaymentOrderConnectionOutTradeProvider | PaymentOrderConnectionPaiedPrice | PaymentOrderConnectionPrice | PaymentOrderConnectionShippingAddress | PaymentOrderConnectionStatus | PaymentOrderConnectionUpdated_at | PaymentOrderConnectionUpdated_by | PaymentOrderConnectionUser | PaymentOrderConnectionUuid | PaymentOrderGroupBy | PaymentOrderItem | PaymentPolicy | PaymentSetting | Plan | PlanAggregator | PlanConnection | PlanConnectionContent | PlanConnectionCreated_at | PlanConnectionCreated_by | PlanConnectionForPerson | PlanConnectionId | PlanConnectionName | PlanConnectionPost | PlanConnectionQuestionnaire | PlanConnectionUpdated_at | PlanConnectionUpdated_by | PlanGroupBy | Post | PostAggregator | PostAggregatorAvg | PostAggregatorMax | PostAggregatorMin | PostAggregatorSum | PostConnection | PostConnectionAuthor | PostConnectionCover_background_color | PostConnectionCreated_at | PostConnectionCreated_by | PostConnectionCurrency | PostConnectionEntityRawId | PostConnectionEntityType | PostConnectionId | PostConnectionNeedShipping | PostConnectionPrePrice | PostConnectionPrice | PostConnectionRating | PostConnectionRawPostId | PostConnectionRecommended | PostConnectionStatus | PostConnectionSubtitle | PostConnectionTitle | PostConnectionTrademark | PostConnectionUpdated_at | PostConnectionUpdated_by | PostConnectionUpdated_day | PostConnectionVipText | PostConnectionVip_color | PostGroupBy | Questionnaire | QuestionnaireAggregator | QuestionnaireAnswer | QuestionnaireAnswerAggregator | QuestionnaireAnswerConnection | QuestionnaireAnswerConnectionCreated_at | QuestionnaireAnswerConnectionCreated_by | QuestionnaireAnswerConnectionData | QuestionnaireAnswerConnectionId | QuestionnaireAnswerConnectionName | QuestionnaireAnswerConnectionQuestionnaire | QuestionnaireAnswerConnectionSubmitted | QuestionnaireAnswerConnectionUpdated_at | QuestionnaireAnswerConnectionUpdated_by | QuestionnaireAnswerConnectionUser | QuestionnaireAnswerGroupBy | QuestionnaireConnection | QuestionnaireConnectionCreated_at | QuestionnaireConnectionCreated_by | QuestionnaireConnectionData | QuestionnaireConnectionDisplayName | QuestionnaireConnectionId | QuestionnaireConnectionName | QuestionnaireConnectionProvider | QuestionnaireConnectionUpdated_at | QuestionnaireConnectionUpdated_by | QuestionnaireGroupBy | Reminder | ReminderAggregator | ReminderConnection | ReminderConnectionBody | ReminderConnectionCreated_at | ReminderConnectionCreated_by | ReminderConnectionDateTime | ReminderConnectionId | ReminderConnectionName | ReminderConnectionSource | ReminderConnectionSourceId | ReminderConnectionType | ReminderConnectionUpdated_at | ReminderConnectionUpdated_by | ReminderConnectionUser | ReminderGroupBy | Supplement | SupplementAggregator | SupplementConnection | SupplementConnectionContent | SupplementConnectionCreated_at | SupplementConnectionCreated_by | SupplementConnectionForPerson | SupplementConnectionId | SupplementConnectionName | SupplementConnectionPost | SupplementConnectionProvider | SupplementConnectionSubject | SupplementConnectionUpdated_at | SupplementConnectionUpdated_by | SupplementGroupBy | Telemetry | TelemetryAggregator | TelemetryConnection | TelemetryConnectionCreated_at | TelemetryConnectionCreated_by | TelemetryConnectionId | TelemetryConnectionRaw | TelemetryConnectionUpdated_at | TelemetryConnectionUpdated_by | TelemetryGroupBy | Trademark | TrademarkAggregator | TrademarkConnection | TrademarkConnectionCreated_at | TrademarkConnectionCreated_by | TrademarkConnectionId | TrademarkConnectionImage | TrademarkConnectionName | TrademarkConnectionUpdated_at | TrademarkConnectionUpdated_by | TrademarkGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreated_at | UploadFileConnectionCreated_by | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdated_at | UploadFileConnectionUpdated_by | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileGroupBy | UserAddress | UserAddressAggregator | UserAddressConnection | UserAddressConnectionAddress | UserAddressConnectionCreated_at | UserAddressConnectionCreated_by | UserAddressConnectionId | UserAddressConnectionTag | UserAddressConnectionUpdated_at | UserAddressConnectionUpdated_by | UserAddressConnectionUser | UserAddressGroupBy | UserAgreement | UserAgreementAggregator | UserAgreementConnection | UserAgreementConnectionContent | UserAgreementConnectionCreated_at | UserAgreementConnectionCreated_by | UserAgreementConnectionId | UserAgreementConnectionLastVersionDate | UserAgreementConnectionTermOfServiceType | UserAgreementConnectionUpdated_at | UserAgreementConnectionUpdated_by | UserAgreementConnectionUser | UserAgreementConnectionValue | UserAgreementGroupBy | UserAssessment | UserAssessmentAggregator | UserAssessmentConnection | UserAssessmentConnectionAssessment_questionnaire | UserAssessmentConnectionCreated_at | UserAssessmentConnectionCreated_by | UserAssessmentConnectionId | UserAssessmentConnectionUpdated_at | UserAssessmentConnectionUpdated_by | UserAssessmentConnectionUser | UserAssessmentGroupBy | UserExercise | UserExerciseAggregator | UserExerciseConnection | UserExerciseConnectionCreated_at | UserExerciseConnectionCreated_by | UserExerciseConnectionExercise | UserExerciseConnectionId | UserExerciseConnectionUpdated_at | UserExerciseConnectionUpdated_by | UserExerciseConnectionUser | UserExerciseGroupBy | UserParenting | UserParentingAggregator | UserParentingConnection | UserParentingConnectionCreated_at | UserParentingConnectionCreated_by | UserParentingConnectionId | UserParentingConnectionParenting | UserParentingConnectionUpdated_at | UserParentingConnectionUpdated_by | UserParentingConnectionUser | UserParentingGroupBy | UserPermissionsPasswordPayload | UserPlan | UserPlanAggregator | UserPlanConnection | UserPlanConnectionCreated_at | UserPlanConnectionCreated_by | UserPlanConnectionId | UserPlanConnectionStatus | UserPlanConnectionUpdated_at | UserPlanConnectionUpdated_by | UserPlanConnectionUser | UserPlanGroupBy | UsersOrganizationunitsOrganizationUnit | UsersOrganizationunitsOrganizationUnitAggregator | UsersOrganizationunitsOrganizationUnitConnection | UsersOrganizationunitsOrganizationUnitConnectionCode | UsersOrganizationunitsOrganizationUnitConnectionCreated_at | UsersOrganizationunitsOrganizationUnitConnectionCreated_by | UsersOrganizationunitsOrganizationUnitConnectionDisplayName | UsersOrganizationunitsOrganizationUnitConnectionId | UsersOrganizationunitsOrganizationUnitConnectionParent | UsersOrganizationunitsOrganizationUnitConnectionUpdated_at | UsersOrganizationunitsOrganizationUnitConnectionUpdated_by | UsersOrganizationunitsOrganizationUnitGroupBy | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionCreated_by | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnectionUpdated_by | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionAccountInfo | UsersPermissionsUserConnectionAuthorInfo | UsersPermissionsUserConnectionBirthday | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionChildInfo | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionContent | UsersPermissionsUserConnectionCounselorInfo | UsersPermissionsUserConnectionCountryCode | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionCreated_by | UsersPermissionsUserConnectionDoctorInfo | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionFullName | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionImage | UsersPermissionsUserConnectionName | UsersPermissionsUserConnectionNurseInfo | UsersPermissionsUserConnectionParentInfo | UsersPermissionsUserConnectionPatientInfo | UsersPermissionsUserConnectionPhone | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionQrUrl | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionSecond_email | UsersPermissionsUserConnectionSex | UsersPermissionsUserConnectionStatus | UsersPermissionsUserConnectionTeacherInfo | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUpdated_by | UsersPermissionsUserConnectionUsername | UsersPermissionsUserGroupBy | Version | Webinar | WebinarAggregator | WebinarConnection | WebinarConnectionContent | WebinarConnectionCreated_at | WebinarConnectionCreated_by | WebinarConnectionId | WebinarConnectionMeetingId | WebinarConnectionPost | WebinarConnectionSchedule | WebinarConnectionSubject | WebinarConnectionUpdated_at | WebinarConnectionUpdated_by | WebinarGroupBy | batchTelemetryPayload | cancelOrderPayload | createAccountPayload | createArticlePayload | createAssessmentQuestionnairePayload | createBookPayload | createCategoryPayload | createColorPayload | createCoursePayload | createCreditCardPayload | createCurrencyPayload | createEhrPayload | createEventPayload | createExercisePayload | createGamePayload | createLocationPayload | createOrderPayload | createOrganizationUnitPayload | createParentingPayload | createPatientPayload | createPaymentMethodPayload | createPlanPayload | createPostPayload | createQuestionnaireAnswerPayload | createQuestionnairePayload | createReminderPayload | createRolePayload | createSupplementPayload | createTelemetryPayload | createTrademarkPayload | createUserAddressPayload | createUserAgreementPayload | createUserAssessmentPayload | createUserExercisePayload | createUserParentingPayload | createUserPayload | createUserPlanPayload | createWebinarPayload | deleteAboutFastBraiinPayload | deleteAccountPayload | deleteAppTermOfServicePayload | deleteArticlePayload | deleteAssessmentQuestionnairePayload | deleteAssessmentTermOfServicePayload | deleteBookPayload | deleteCategoryPayload | deleteColorPayload | deleteCoursePayload | deleteCreditCardPayload | deleteCurrencyPayload | deleteEhrPayload | deleteEventPayload | deleteExercisePayload | deleteGamePayload | deleteLocationPayload | deleteOrderPayload | deleteOrganizationUnitPayload | deleteParentingPayload | deletePatientPayload | deletePaymentMethodPayload | deletePaymentPolicyPayload | deletePlanPayload | deletePostPayload | deleteQuestionnaireAnswerPayload | deleteQuestionnairePayload | deleteReminderPayload | deleteRolePayload | deleteSupplementPayload | deleteTelemetryPayload | deleteTrademarkPayload | deleteUserAddressPayload | deleteUserAgreementPayload | deleteUserAssessmentPayload | deleteUserExercisePayload | deleteUserParentingPayload | deleteUserPayload | deleteUserPlanPayload | deleteVersionPayload | deleteWebinarPayload | requestOrderPayPayload | updateAboutFastBraiinPayload | updateAccountPayload | updateAppTermOfServicePayload | updateArticlePayload | updateAssessmentQuestionnairePayload | updateAssessmentTermOfServicePayload | updateBookPayload | updateCategoryPayload | updateColorPayload | updateCoursePayload | updateCreditCardPayload | updateCurrencyPayload | updateEhrPayload | updateEventPayload | updateExercisePayload | updateGamePayload | updateLocationPayload | updateOrderPayload | updateOrganizationUnitPayload | updateParentingPayload | updatePatientPayload | updatePaymentMethodPayload | updatePaymentPolicyPayload | updatePlanPayload | updatePostPayload | updateQuestionnaireAnswerPayload | updateQuestionnairePayload | updateReminderPayload | updateRolePayload | updateSupplementPayload | updateTelemetryPayload | updateTrademarkPayload | updateUserAddressPayload | updateUserAgreementPayload | updateUserAssessmentPayload | updateUserExercisePayload | updateUserParentingPayload | updateUserPayload | updateUserPlanPayload | updateVersionPayload | updateWebinarPayload
 
 type AboutFastBraiin {
     content: String!
@@ -206,6 +206,7 @@ type AssessmentQuestionnaire {
     created_at: DateTime!
     created_by: AdminUser
     forPerson: ComponentDataFor
+    game: Game
     id: ID!
     level: Int
     media(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
@@ -274,6 +275,11 @@ type AssessmentQuestionnaireConnectionForPerson {
     key: ID
 }
 
+type AssessmentQuestionnaireConnectionGame {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
 type AssessmentQuestionnaireConnectionId {
     connection: AssessmentQuestionnaireConnection
     key: ID
@@ -329,6 +335,7 @@ type AssessmentQuestionnaireGroupBy {
     created_at: [AssessmentQuestionnaireConnectionCreated_at]
     created_by: [AssessmentQuestionnaireConnectionCreated_by]
     forPerson: [AssessmentQuestionnaireConnectionForPerson]
+    game: [AssessmentQuestionnaireConnectionGame]
     id: [AssessmentQuestionnaireConnectionId]
     level: [AssessmentQuestionnaireConnectionLevel]
     name: [AssessmentQuestionnaireConnectionName]
@@ -436,6 +443,7 @@ type Category {
     created_by: AdminUser
     id: ID!
     name: String!
+    type: CategoryType
     updated_at: DateTime!
     updated_by: AdminUser
 }
@@ -471,6 +479,11 @@ type CategoryConnectionName {
     key: String
 }
 
+type CategoryConnectionType {
+    connection: CategoryConnection
+    key: String
+}
+
 type CategoryConnectionUpdated_at {
     connection: CategoryConnection
     key: DateTime
@@ -486,6 +499,7 @@ type CategoryGroupBy {
     created_by: [CategoryConnectionCreated_by]
     id: [CategoryConnectionId]
     name: [CategoryConnectionName]
+    type: [CategoryConnectionType]
     updated_at: [CategoryConnectionUpdated_at]
     updated_by: [CategoryConnectionUpdated_by]
 }
@@ -1011,12 +1025,210 @@ type EhrGroupBy {
     user: [EhrConnectionUser]
 }
 
+type Event {
+    address: String
+    contentType: String
+    created_at: DateTime!
+    created_by: AdminUser
+    dicount: Float
+    eventDateTime: DateTime!
+    eventDetails: String
+    eventType: EventType!
+    host: String
+    id: ID!
+    location: String
+    password: String
+    post: ComponentContentPost
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type EventAggregator {
+    avg: EventAggregatorAvg
+    count: Int
+    max: EventAggregatorMax
+    min: EventAggregatorMin
+    sum: EventAggregatorSum
+    totalCount: Int
+}
+
+type EventAggregatorAvg {
+    dicount: Float
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+}
+
+type EventAggregatorMax {
+    dicount: Float
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+}
+
+type EventAggregatorMin {
+    dicount: Float
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+}
+
+type EventAggregatorSum {
+    dicount: Float
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+}
+
+type EventConnection {
+    aggregate: EventAggregator
+    groupBy: EventGroupBy
+    values: [Event]
+}
+
+type EventConnectionAddress {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionContentType {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionCreated_at {
+    connection: EventConnection
+    key: DateTime
+}
+
+type EventConnectionCreated_by {
+    connection: EventConnection
+    key: ID
+}
+
+type EventConnectionDicount {
+    connection: EventConnection
+    key: Float
+}
+
+type EventConnectionEventDateTime {
+    connection: EventConnection
+    key: DateTime
+}
+
+type EventConnectionEventDetails {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionEventType {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionHost {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionId {
+    connection: EventConnection
+    key: ID
+}
+
+type EventConnectionLocation {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionPassword {
+    connection: EventConnection
+    key: String
+}
+
+type EventConnectionPost {
+    connection: EventConnection
+    key: ID
+}
+
+type EventConnectionPrice1 {
+    connection: EventConnection
+    key: Float
+}
+
+type EventConnectionPrice2 {
+    connection: EventConnection
+    key: Float
+}
+
+type EventConnectionPrice3 {
+    connection: EventConnection
+    key: Float
+}
+
+type EventConnectionPrice4 {
+    connection: EventConnection
+    key: Float
+}
+
+type EventConnectionPrice5 {
+    connection: EventConnection
+    key: Float
+}
+
+type EventConnectionUpdated_at {
+    connection: EventConnection
+    key: DateTime
+}
+
+type EventConnectionUpdated_by {
+    connection: EventConnection
+    key: ID
+}
+
+type EventGroupBy {
+    address: [EventConnectionAddress]
+    contentType: [EventConnectionContentType]
+    created_at: [EventConnectionCreated_at]
+    created_by: [EventConnectionCreated_by]
+    dicount: [EventConnectionDicount]
+    eventDateTime: [EventConnectionEventDateTime]
+    eventDetails: [EventConnectionEventDetails]
+    eventType: [EventConnectionEventType]
+    host: [EventConnectionHost]
+    id: [EventConnectionId]
+    location: [EventConnectionLocation]
+    password: [EventConnectionPassword]
+    post: [EventConnectionPost]
+    price1: [EventConnectionPrice1]
+    price2: [EventConnectionPrice2]
+    price3: [EventConnectionPrice3]
+    price4: [EventConnectionPrice4]
+    price5: [EventConnectionPrice5]
+    updated_at: [EventConnectionUpdated_at]
+    updated_by: [EventConnectionUpdated_by]
+}
+
 type Exercise {
     age: Int
     content: String!
     created_at: DateTime!
     created_by: AdminUser
     forPerson: ComponentDataFor
+    game: Game
     id: ID!
     level: Int
     post: ComponentContentPost
@@ -1087,6 +1299,11 @@ type ExerciseConnectionForPerson {
     key: ID
 }
 
+type ExerciseConnectionGame {
+    connection: ExerciseConnection
+    key: ID
+}
+
 type ExerciseConnectionId {
     connection: ExerciseConnection
     key: ID
@@ -1133,6 +1350,7 @@ type ExerciseGroupBy {
     created_at: [ExerciseConnectionCreated_at]
     created_by: [ExerciseConnectionCreated_by]
     forPerson: [ExerciseConnectionForPerson]
+    game: [ExerciseConnectionGame]
     id: [ExerciseConnectionId]
     level: [ExerciseConnectionLevel]
     post: [ExerciseConnectionPost]
@@ -1148,6 +1366,121 @@ type FlowchartTest {
     created_by: AdminUser
     id: ID!
     updated_by: AdminUser
+}
+
+type Game {
+    content: String
+    cptLevel: Int!
+    created_at: DateTime!
+    created_by: AdminUser
+    id: ID!
+    medias(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    name: String!
+    provider: String
+    trademark: Trademark
+    type: GameType!
+    updated_at: DateTime!
+    updated_by: AdminUser
+}
+
+type GameAggregator {
+    avg: GameAggregatorAvg
+    count: Int
+    max: GameAggregatorMax
+    min: GameAggregatorMin
+    sum: GameAggregatorSum
+    totalCount: Int
+}
+
+type GameAggregatorAvg {
+    cptLevel: Float
+}
+
+type GameAggregatorMax {
+    cptLevel: Float
+}
+
+type GameAggregatorMin {
+    cptLevel: Float
+}
+
+type GameAggregatorSum {
+    cptLevel: Float
+}
+
+type GameConnection {
+    aggregate: GameAggregator
+    groupBy: GameGroupBy
+    values: [Game]
+}
+
+type GameConnectionContent {
+    connection: GameConnection
+    key: String
+}
+
+type GameConnectionCptLevel {
+    connection: GameConnection
+    key: Int
+}
+
+type GameConnectionCreated_at {
+    connection: GameConnection
+    key: DateTime
+}
+
+type GameConnectionCreated_by {
+    connection: GameConnection
+    key: ID
+}
+
+type GameConnectionId {
+    connection: GameConnection
+    key: ID
+}
+
+type GameConnectionName {
+    connection: GameConnection
+    key: String
+}
+
+type GameConnectionProvider {
+    connection: GameConnection
+    key: String
+}
+
+type GameConnectionTrademark {
+    connection: GameConnection
+    key: ID
+}
+
+type GameConnectionType {
+    connection: GameConnection
+    key: String
+}
+
+type GameConnectionUpdated_at {
+    connection: GameConnection
+    key: DateTime
+}
+
+type GameConnectionUpdated_by {
+    connection: GameConnection
+    key: ID
+}
+
+type GameGroupBy {
+    content: [GameConnectionContent]
+    cptLevel: [GameConnectionCptLevel]
+    created_at: [GameConnectionCreated_at]
+    created_by: [GameConnectionCreated_by]
+    id: [GameConnectionId]
+    name: [GameConnectionName]
+    provider: [GameConnectionProvider]
+    trademark: [GameConnectionTrademark]
+    type: [GameConnectionType]
+    updated_at: [GameConnectionUpdated_at]
+    updated_by: [GameConnectionUpdated_by]
 }
 
 type Location {
@@ -1287,7 +1620,9 @@ type Mutation {
     createCreditCard(input: createCreditCardInput): createCreditCardPayload
     createCurrency(input: createCurrencyInput): createCurrencyPayload
     createEhr(input: createEhrInput): createEhrPayload
+    createEvent(input: createEventInput): createEventPayload
     createExercise(input: createExerciseInput): createExercisePayload
+    createGame(input: createGameInput): createGamePayload
     createLocation(input: createLocationInput): createLocationPayload
     createMyAddress(input: createMyAddressInput): createUserAddressPayload
     createMyOrder(input: createMyOrderInput): createOrderPayload
@@ -1328,7 +1663,9 @@ type Mutation {
     deleteCreditCard(input: deleteCreditCardInput): deleteCreditCardPayload
     deleteCurrency(input: deleteCurrencyInput): deleteCurrencyPayload
     deleteEhr(input: deleteEhrInput): deleteEhrPayload
+    deleteEvent(input: deleteEventInput): deleteEventPayload
     deleteExercise(input: deleteExerciseInput): deleteExercisePayload
+    deleteGame(input: deleteGameInput): deleteGamePayload
     deleteLocation(input: deleteLocationInput): deleteLocationPayload
     deleteMyAddress(input: deleteUserAddressInput): deleteUserAddressPayload
     deleteOrder(input: deleteOrderInput): deleteOrderPayload
@@ -1378,8 +1715,10 @@ type Mutation {
     updateCreditCard(input: updateCreditCardInput): updateCreditCardPayload
     updateCurrency(input: updateCurrencyInput): updateCurrencyPayload
     updateEhr(input: updateEhrInput): updateEhrPayload
+    updateEvent(input: updateEventInput): updateEventPayload
     updateExercise(input: updateExerciseInput): updateExercisePayload
     updateFileInfo(id: ID!, info: FileInfoInput!): UploadFile!
+    updateGame(input: updateGameInput): updateGamePayload
     updateLocation(input: updateLocationInput): updateLocationPayload
     updateMe(input: updateMeInput): UsersPermissionsMe
     updateMyAddress(input: updateMyAddressInput): updateUserAddressPayload
@@ -2369,12 +2708,18 @@ type Query {
     ehr(id: ID!): Ehr
     ehrs(limit: Int, sort: String, start: Int, where: JSON): [Ehr]
     ehrsConnection(limit: Int, sort: String, start: Int, where: JSON): EhrConnection
+    event(id: ID!): Event
+    events(limit: Int, sort: String, start: Int, where: JSON): [Event]
+    eventsConnection(limit: Int, sort: String, start: Int, where: JSON): EventConnection
     exercise(id: ID!): Exercise
     exercises(limit: Int, sort: String, start: Int, where: JSON): [Exercise]
     exercisesConnection(limit: Int, sort: String, start: Int, where: JSON): ExerciseConnection
     files(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
     filesConnection(limit: Int, sort: String, start: Int, where: JSON): UploadFileConnection
     findMyAddress(limit: Int, sort: String, start: Int, where: JSON): [UserAddress]
+    game(id: ID!): Game
+    games(limit: Int, sort: String, start: Int, where: JSON): [Game]
+    gamesConnection(limit: Int, sort: String, start: Int, where: JSON): GameConnection
     location(id: ID!): Location
     locations(limit: Int, sort: String, start: Int, where: JSON): [Location]
     locationsConnection(limit: Int, sort: String, start: Int, where: JSON): LocationConnection
@@ -4128,8 +4473,16 @@ type createEhrPayload {
     ehr: Ehr
 }
 
+type createEventPayload {
+    event: Event
+}
+
 type createExercisePayload {
     exercise: Exercise
+}
+
+type createGamePayload {
+    game: Game
 }
 
 type createLocationPayload {
@@ -4276,8 +4629,16 @@ type deleteEhrPayload {
     ehr: Ehr
 }
 
+type deleteEventPayload {
+    event: Event
+}
+
 type deleteExercisePayload {
     exercise: Exercise
+}
+
+type deleteGamePayload {
+    game: Game
 }
 
 type deleteLocationPayload {
@@ -4437,8 +4798,16 @@ type updateEhrPayload {
     ehr: Ehr
 }
 
+type updateEventPayload {
+    event: Event
+}
+
 type updateExercisePayload {
     exercise: Exercise
+}
+
+type updateGamePayload {
+    game: Game
 }
 
 type updateLocationPayload {
@@ -4551,6 +4920,11 @@ enum CacheControlScope {
     PUBLIC
 }
 
+enum CategoryType {
+    app
+    subject
+}
+
 enum ContentType {
     Private
     Public
@@ -4594,6 +4968,11 @@ enum EhrType {
     supplement
 }
 
+enum EventType {
+    offline
+    online
+}
+
 enum ExerciseType {
     home
     online
@@ -4605,6 +4984,10 @@ enum ForType {
     adult
     all
     child
+}
+
+enum GameType {
+    appOnline
 }
 
 enum LocationType {
@@ -4721,6 +5104,7 @@ input AssessmentQuestionnaireInput {
     content: String!
     created_by: ID
     forPerson: ComponentDataForInput
+    game: ID
     level: Int
     media: [ID]
     name: String!
@@ -4752,6 +5136,7 @@ input CategoryInput {
     created_by: ID
     name: String!
     preserved: Boolean
+    type: CategoryType
     updated_by: ID
 }
 
@@ -4916,11 +5301,32 @@ input EhrInput {
     user: ID
 }
 
+input EventInput {
+    address: String
+    contentType: String
+    created_by: ID
+    dicount: Float
+    eventDateTime: DateTime!
+    eventDetails: String
+    eventType: EventType
+    host: String
+    location: String
+    password: String
+    post: ComponentContentPostInput
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+    updated_by: ID
+}
+
 input ExerciseInput {
     age: Int
     content: String!
     created_by: ID
     forPerson: ComponentDataForInput
+    game: ID
     level: Int
     post: ComponentContentPostInput!
     questionnaire: ID
@@ -4953,6 +5359,18 @@ input FileInput {
     updated_by: ID
     url: String!
     width: Int
+}
+
+input GameInput {
+    content: String
+    cptLevel: Int
+    created_by: ID
+    medias: [ID]
+    name: String!
+    provider: String
+    trademark: ID
+    type: GameType!
+    updated_by: ID
 }
 
 input InputID {
@@ -5369,8 +5787,16 @@ input createEhrInput {
     data: EhrInput
 }
 
+input createEventInput {
+    data: EventInput
+}
+
 input createExerciseInput {
     data: ExerciseInput
+}
+
+input createGameInput {
+    data: GameInput
 }
 
 input createLocationInput {
@@ -5517,7 +5943,15 @@ input deleteEhrInput {
     where: InputID
 }
 
+input deleteEventInput {
+    where: InputID
+}
+
 input deleteExerciseInput {
+    where: InputID
+}
+
+input deleteGameInput {
     where: InputID
 }
 
@@ -5652,6 +6086,7 @@ input editAssessmentQuestionnaireInput {
     content: String
     created_by: ID
     forPerson: editComponentDataForInput
+    game: ID
     level: Int
     media: [ID]
     name: String
@@ -5683,6 +6118,7 @@ input editCategoryInput {
     created_by: ID
     name: String
     preserved: Boolean
+    type: CategoryType
     updated_by: ID
 }
 
@@ -5872,11 +6308,32 @@ input editEhrInput {
     user: ID
 }
 
+input editEventInput {
+    address: String
+    contentType: String
+    created_by: ID
+    dicount: Float
+    eventDateTime: DateTime
+    eventDetails: String
+    eventType: EventType
+    host: String
+    location: String
+    password: String
+    post: editComponentContentPostInput
+    price1: Float
+    price2: Float
+    price3: Float
+    price4: Float
+    price5: Float
+    updated_by: ID
+}
+
 input editExerciseInput {
     age: Int
     content: String
     created_by: ID
     forPerson: editComponentDataForInput
+    game: ID
     level: Int
     post: editComponentContentPostInput
     questionnaire: ID
@@ -5903,6 +6360,18 @@ input editFileInput {
     updated_by: ID
     url: String
     width: Int
+}
+
+input editGameInput {
+    content: String
+    cptLevel: Int
+    created_by: ID
+    medias: [ID]
+    name: String
+    provider: String
+    trademark: ID
+    type: GameType
+    updated_by: ID
 }
 
 input editLocationInput {
@@ -6349,8 +6818,18 @@ input updateEhrInput {
     where: InputID
 }
 
+input updateEventInput {
+    data: editEventInput
+    where: InputID
+}
+
 input updateExerciseInput {
     data: editExerciseInput
+    where: InputID
+}
+
+input updateGameInput {
+    data: editGameInput
     where: InputID
 }
 
