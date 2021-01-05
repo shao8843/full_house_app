@@ -22,6 +22,8 @@ public final class GeneratedPluginRegistrant {
     flutterEngine.getPlugins().add(new com.it_nomads.fluttersecurestorage.FlutterSecureStoragePlugin());
       com.cloudwebrtc.webrtc.FlutterWebRTCPlugin.registerWith(shimPluginRegistry.registrarFor("com.cloudwebrtc.webrtc.FlutterWebRTCPlugin"));
     flutterEngine.getPlugins().add(new io.github.ponnamkarthik.toast.fluttertoast.FlutterToastPlugin());
+      com.aloisdeniel.geocoder.GeocoderPlugin.registerWith(shimPluginRegistry.registrarFor("com.aloisdeniel.geocoder.GeocoderPlugin"));
+    flutterEngine.getPlugins().add(new io.flutter.plugins.googlemaps.GoogleMapsPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.imagepicker.ImagePickerPlugin());
       com.codeheadlabs.libphonenumber.LibphonenumberPlugin.registerWith(shimPluginRegistry.registrarFor("com.codeheadlabs.libphonenumber.LibphonenumberPlugin"));
     flutterEngine.getPlugins().add(new com.lyokone.location.LocationPlugin());

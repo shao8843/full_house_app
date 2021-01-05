@@ -4704,7 +4704,7 @@ class Event$Query$Event with EquatableMixin, EventSimpleMixin {
 
   String password;
 
-  String eventDetails;
+  String content;
 
   @override
   List<Object> get props => [
@@ -4724,7 +4724,7 @@ class Event$Query$Event with EquatableMixin, EventSimpleMixin {
         price5,
         dicount,
         password,
-        eventDetails
+        content
       ];
   Map<String, dynamic> toJson() => _$Event$Query$EventToJson(this);
 }
@@ -21010,7 +21010,7 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                     directives: [],
                     selectionSet: null),
                 FieldNode(
-                    name: NameNode(value: 'eventDetails'),
+                    name: NameNode(value: 'content'),
                     alias: null,
                     arguments: [],
                     directives: [],

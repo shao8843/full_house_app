@@ -8,6 +8,6 @@ query Event($id:ID!) {
         price5
         dicount
         password
-        eventDetails
+        content
     }
 }

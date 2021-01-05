@@ -14,11 +14,11 @@ class EventDetailPage extends DataHasPostPage<EventData> {
     return data != null ? Container(
       child: Column(
         children: <Widget>[
-          data.eventDetails != null
+          data.content != null
               ? Padding(
             padding: const EdgeInsets.symmetric(
                 horizontal: kHorizontalPadding),
-            child: ContentWidget(content: data.eventDetails,),
+            child: ContentWidget(content: data.content,),
           ) : Container(),
           // data.media != null
           //     ? new MediaWidget(medias: data.media,) : Container(),

@@ -6767,7 +6767,7 @@ Event$Query$Event _$Event$Query$EventFromJson(Map<String, dynamic> json) {
     ..price5 = (json['price5'] as num)?.toDouble()
     ..dicount = (json['dicount'] as num)?.toDouble()
     ..password = json['password'] as String
-    ..eventDetails = json['eventDetails'] as String;
+    ..content = json['content'] as String;
 }
 
 Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
@@ -6797,7 +6797,7 @@ Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
   writeNotNull('price5', instance.price5);
   writeNotNull('dicount', instance.dicount);
   writeNotNull('password', instance.password);
-  writeNotNull('eventDetails', instance.eventDetails);
+  writeNotNull('content', instance.content);
   return val;
 }
 
