@@ -1,5 +1,6 @@
 import UIKit
 import Flutter
+import GoogleMaps
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -27,6 +28,8 @@ import Flutter
             result(FlutterMethodNotImplemented)
         }
     }
+
+    GMSServices.provideAPIKey("YOUR KEY HERE")
 
     return super.application(application, didFinishLaunchingWithOptions: launchOptions)
   }
