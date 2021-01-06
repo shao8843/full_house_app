@@ -10,22 +10,18 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData> {
       :super(key: key,id: id,name:name,supportPayment:false);
 
   @override
-  Widget detailWidget(BuildContext context, ArticleData data) {
+  List<Widget> detailWidget(BuildContext context, ArticleData data) {
     ArgumentError.checkNotNull(data);
-    return data != null ? Container(
-      child: Column(
-        children: <Widget>[
-          data.content != null
-              ? Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: kHorizontalPadding),
-            child: ContentWidget(content: data.content,),
-          ) : Container(),
-          data.media != null
-              ? new MediaWidget(medias: data.media,) : Container(),
-        ],
-      ),
-    ) : Container();
+    return [
+      data.content != null
+          ? Padding(
+        padding: const EdgeInsets.symmetric(
+            horizontal: kHorizontalPadding),
+        child: ContentWidget(content: data.content,),
+      ) : Container(),
+      data.media != null
+          ? new MediaWidget(medias: data.media,) : Container(),
+    ];
   }
 
   @override

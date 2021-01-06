@@ -329,21 +329,12 @@ mixin PaymentMethodSimpleMixin {
 }
 mixin EventSimpleMixin {
   String id;
-  @JsonKey(
-      fromJson: fromGraphQLDateTimeToDartDateTime,
-      toJson: fromDartDateTimeToGraphQLDateTime)
-  DateTime eventDateTime;
-  @JsonKey(unknownEnumValue: EventType.artemisUnknown)
-  EventType eventType;
-  String location;
-  String address;
-  String host;
+  String name;
   @JsonKey(
       name: 'updated_at',
       fromJson: fromGraphQLDateTimeToDartDateTime,
       toJson: fromDartDateTimeToGraphQLDateTime)
   DateTime updatedAt;
-  String contentType;
   EventSimpleMixin$Post post;
 }
 mixin ExerciseSimpleMixin {
@@ -4684,21 +4675,80 @@ class Ehrs$Query with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Event$Query$Event$EventPrices with EquatableMixin {
-  Event$Query$Event$EventPrices();
+class Event$Query$Event$EventComponent$EventPrices$Currency
+    with EquatableMixin, CurrencyMixin {
+  Event$Query$Event$EventComponent$EventPrices$Currency();
 
-  factory Event$Query$Event$EventPrices.fromJson(Map<String, dynamic> json) =>
-      _$Event$Query$Event$EventPricesFromJson(json);
+  factory Event$Query$Event$EventComponent$EventPrices$Currency.fromJson(
+          Map<String, dynamic> json) =>
+      _$Event$Query$Event$EventComponent$EventPrices$CurrencyFromJson(json);
+
+  @override
+  List<Object> get props => [
+        code,
+        decimalDigits,
+        id,
+        name,
+        namePlural,
+        rounding,
+        symbol,
+        symbolNative
+      ];
+  Map<String, dynamic> toJson() =>
+      _$Event$Query$Event$EventComponent$EventPrices$CurrencyToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Event$Query$Event$EventComponent$EventPrices with EquatableMixin {
+  Event$Query$Event$EventComponent$EventPrices();
+
+  factory Event$Query$Event$EventComponent$EventPrices.fromJson(
+          Map<String, dynamic> json) =>
+      _$Event$Query$Event$EventComponent$EventPricesFromJson(json);
+
+  Event$Query$Event$EventComponent$EventPrices$Currency currency;
 
   String name;
 
-  double price;
-
   double prePrice;
 
+  double price;
+
   @override
-  List<Object> get props => [name, price, prePrice];
-  Map<String, dynamic> toJson() => _$Event$Query$Event$EventPricesToJson(this);
+  List<Object> get props => [currency, name, prePrice, price];
+  Map<String, dynamic> toJson() =>
+      _$Event$Query$Event$EventComponent$EventPricesToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class Event$Query$Event$EventComponent with EquatableMixin {
+  Event$Query$Event$EventComponent();
+
+  factory Event$Query$Event$EventComponent.fromJson(
+          Map<String, dynamic> json) =>
+      _$Event$Query$Event$EventComponentFromJson(json);
+
+  String address;
+
+  @JsonKey(
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime dateTime;
+
+  @JsonKey(unknownEnumValue: EventLocation.artemisUnknown)
+  EventLocation eventLocation;
+
+  List<Event$Query$Event$EventComponent$EventPrices> eventPrices;
+
+  String meetingId;
+
+  String venue;
+
+  @override
+  List<Object> get props =>
+      [address, dateTime, eventLocation, eventPrices, meetingId, venue];
+  Map<String, dynamic> toJson() =>
+      _$Event$Query$Event$EventComponentToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -4708,45 +4758,15 @@ class Event$Query$Event with EquatableMixin, EventSimpleMixin {
   factory Event$Query$Event.fromJson(Map<String, dynamic> json) =>
       _$Event$Query$EventFromJson(json);
 
-  double price1;
-
-  double price2;
-
-  double price3;
-
-  double price4;
-
-  double price5;
-
   double dicount;
-
-  String password;
 
   String content;
 
-  List<Event$Query$Event$EventPrices> eventPrices;
+  Event$Query$Event$EventComponent eventComponent;
 
   @override
-  List<Object> get props => [
-        id,
-        eventDateTime,
-        eventType,
-        location,
-        address,
-        host,
-        updatedAt,
-        contentType,
-        post,
-        price1,
-        price2,
-        price3,
-        price4,
-        price5,
-        dicount,
-        password,
-        content,
-        eventPrices
-      ];
+  List<Object> get props =>
+      [id, name, updatedAt, post, dicount, content, eventComponent];
   Map<String, dynamic> toJson() => _$Event$Query$EventToJson(this);
 }
 
@@ -4802,17 +4822,7 @@ class Events$Query$Events with EquatableMixin, EventSimpleMixin {
       _$Events$Query$EventsFromJson(json);
 
   @override
-  List<Object> get props => [
-        id,
-        eventDateTime,
-        eventType,
-        location,
-        address,
-        host,
-        updatedAt,
-        contentType,
-        post
-      ];
+  List<Object> get props => [id, name, updatedAt, post];
   Map<String, dynamic> toJson() => _$Events$Query$EventsToJson(this);
 }
 
@@ -9915,7 +9925,7 @@ enum SummaryType {
   @JsonValue('ARTEMIS_UNKNOWN')
   artemisUnknown,
 }
-enum EventType {
+enum EventLocation {
   @JsonValue('offline')
   offline,
   @JsonValue('online')
@@ -20989,43 +20999,7 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                 FragmentSpreadNode(
                     name: NameNode(value: 'EventSimple'), directives: []),
                 FieldNode(
-                    name: NameNode(value: 'price1'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'price2'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'price3'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'price4'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'price5'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
                     name: NameNode(value: 'dicount'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'password'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -21037,31 +21011,134 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                     directives: [],
                     selectionSet: null),
                 FieldNode(
-                    name: NameNode(value: 'eventPrices'),
+                    name: NameNode(value: 'eventComponent'),
                     alias: null,
                     arguments: [],
                     directives: [],
                     selectionSet: SelectionSetNode(selections: [
                       FieldNode(
-                          name: NameNode(value: 'name'),
+                          name: NameNode(value: 'address'),
                           alias: null,
                           arguments: [],
                           directives: [],
                           selectionSet: null),
                       FieldNode(
-                          name: NameNode(value: 'price'),
+                          name: NameNode(value: 'dateTime'),
                           alias: null,
                           arguments: [],
                           directives: [],
                           selectionSet: null),
                       FieldNode(
-                          name: NameNode(value: 'prePrice'),
+                          name: NameNode(value: 'eventLocation'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'eventPrices'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: SelectionSetNode(selections: [
+                            FieldNode(
+                                name: NameNode(value: 'currency'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: SelectionSetNode(selections: [
+                                  FragmentSpreadNode(
+                                      name: NameNode(value: 'Currency'),
+                                      directives: [])
+                                ])),
+                            FieldNode(
+                                name: NameNode(value: 'name'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null),
+                            FieldNode(
+                                name: NameNode(value: 'prePrice'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null),
+                            FieldNode(
+                                name: NameNode(value: 'price'),
+                                alias: null,
+                                arguments: [],
+                                directives: [],
+                                selectionSet: null)
+                          ])),
+                      FieldNode(
+                          name: NameNode(value: 'meetingId'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'venue'),
                           alias: null,
                           arguments: [],
                           directives: [],
                           selectionSet: null)
                     ]))
               ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'Currency'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'PaymentCurrency'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'code'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'decimal_digits'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name_plural'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'rounding'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'symbol'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'symbol_native'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
         ])),
     FragmentDefinitionNode(
         name: NameNode(value: 'EventSimple'),
@@ -21077,43 +21154,13 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'eventDateTime'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'eventType'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'location'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'address'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'host'),
+              name: NameNode(value: 'name'),
               alias: null,
               arguments: [],
               directives: [],
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'updated_at'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'contentType'),
               alias: null,
               arguments: [],
               directives: [],
@@ -21398,62 +21445,6 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
               arguments: [],
               directives: [],
               selectionSet: null)
-        ])),
-    FragmentDefinitionNode(
-        name: NameNode(value: 'Currency'),
-        typeCondition: TypeConditionNode(
-            on: NamedTypeNode(
-                name: NameNode(value: 'PaymentCurrency'), isNonNull: false)),
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-              name: NameNode(value: 'code'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'decimal_digits'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'name'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'name_plural'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'rounding'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'symbol'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'symbol_native'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null)
         ]))
   ]);
 
@@ -21564,43 +21555,13 @@ class EventsQuery extends GraphQLQuery<Events$Query, EventsArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'eventDateTime'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'eventType'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'location'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'address'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'host'),
+              name: NameNode(value: 'name'),
               alias: null,
               arguments: [],
               directives: [],
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'updated_at'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'contentType'),
               alias: null,
               arguments: [],
               directives: [],

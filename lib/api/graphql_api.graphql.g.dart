@@ -6744,16 +6744,23 @@ Map<String, dynamic> _$Ehrs$QueryToJson(Ehrs$Query instance) {
   return val;
 }
 
-Event$Query$Event$EventPrices _$Event$Query$Event$EventPricesFromJson(
-    Map<String, dynamic> json) {
-  return Event$Query$Event$EventPrices()
+Event$Query$Event$EventComponent$EventPrices$Currency
+    _$Event$Query$Event$EventComponent$EventPrices$CurrencyFromJson(
+        Map<String, dynamic> json) {
+  return Event$Query$Event$EventComponent$EventPrices$Currency()
+    ..code = json['code'] as String
+    ..decimalDigits = json['decimal_digits'] as int
+    ..id = json['id'] as String
     ..name = json['name'] as String
-    ..price = (json['price'] as num)?.toDouble()
-    ..prePrice = (json['prePrice'] as num)?.toDouble();
+    ..namePlural = json['name_plural'] as String
+    ..rounding = json['rounding'] as int
+    ..symbol = json['symbol'] as String
+    ..symbolNative = json['symbol_native'] as String;
 }
 
-Map<String, dynamic> _$Event$Query$Event$EventPricesToJson(
-    Event$Query$Event$EventPrices instance) {
+Map<String, dynamic>
+    _$Event$Query$Event$EventComponent$EventPrices$CurrencyToJson(
+        Event$Query$Event$EventComponent$EventPrices$Currency instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -6762,41 +6769,107 @@ Map<String, dynamic> _$Event$Query$Event$EventPricesToJson(
     }
   }
 
+  writeNotNull('code', instance.code);
+  writeNotNull('decimal_digits', instance.decimalDigits);
+  writeNotNull('id', instance.id);
   writeNotNull('name', instance.name);
-  writeNotNull('price', instance.price);
-  writeNotNull('prePrice', instance.prePrice);
+  writeNotNull('name_plural', instance.namePlural);
+  writeNotNull('rounding', instance.rounding);
+  writeNotNull('symbol', instance.symbol);
+  writeNotNull('symbol_native', instance.symbolNative);
   return val;
 }
+
+Event$Query$Event$EventComponent$EventPrices
+    _$Event$Query$Event$EventComponent$EventPricesFromJson(
+        Map<String, dynamic> json) {
+  return Event$Query$Event$EventComponent$EventPrices()
+    ..currency = json['currency'] == null
+        ? null
+        : Event$Query$Event$EventComponent$EventPrices$Currency.fromJson(
+            json['currency'] as Map<String, dynamic>)
+    ..name = json['name'] as String
+    ..prePrice = (json['prePrice'] as num)?.toDouble()
+    ..price = (json['price'] as num)?.toDouble();
+}
+
+Map<String, dynamic> _$Event$Query$Event$EventComponent$EventPricesToJson(
+    Event$Query$Event$EventComponent$EventPrices instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('currency', instance.currency?.toJson());
+  writeNotNull('name', instance.name);
+  writeNotNull('prePrice', instance.prePrice);
+  writeNotNull('price', instance.price);
+  return val;
+}
+
+Event$Query$Event$EventComponent _$Event$Query$Event$EventComponentFromJson(
+    Map<String, dynamic> json) {
+  return Event$Query$Event$EventComponent()
+    ..address = json['address'] as String
+    ..dateTime = fromGraphQLDateTimeToDartDateTime(json['dateTime'] as String)
+    ..eventLocation = _$enumDecodeNullable(
+        _$EventLocationEnumMap, json['eventLocation'],
+        unknownValue: EventLocation.artemisUnknown)
+    ..eventPrices = (json['eventPrices'] as List)
+        ?.map((e) => e == null
+            ? null
+            : Event$Query$Event$EventComponent$EventPrices.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList()
+    ..meetingId = json['meetingId'] as String
+    ..venue = json['venue'] as String;
+}
+
+Map<String, dynamic> _$Event$Query$Event$EventComponentToJson(
+    Event$Query$Event$EventComponent instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('address', instance.address);
+  writeNotNull(
+      'dateTime', fromDartDateTimeToGraphQLDateTime(instance.dateTime));
+  writeNotNull('eventLocation', _$EventLocationEnumMap[instance.eventLocation]);
+  writeNotNull(
+      'eventPrices', instance.eventPrices?.map((e) => e?.toJson())?.toList());
+  writeNotNull('meetingId', instance.meetingId);
+  writeNotNull('venue', instance.venue);
+  return val;
+}
+
+const _$EventLocationEnumMap = {
+  EventLocation.offline: 'offline',
+  EventLocation.online: 'online',
+  EventLocation.artemisUnknown: 'ARTEMIS_UNKNOWN',
+};
 
 Event$Query$Event _$Event$Query$EventFromJson(Map<String, dynamic> json) {
   return Event$Query$Event()
     ..id = json['id'] as String
-    ..eventDateTime =
-        fromGraphQLDateTimeToDartDateTime(json['eventDateTime'] as String)
-    ..eventType = _$enumDecodeNullable(_$EventTypeEnumMap, json['eventType'],
-        unknownValue: EventType.artemisUnknown)
-    ..location = json['location'] as String
-    ..address = json['address'] as String
-    ..host = json['host'] as String
+    ..name = json['name'] as String
     ..updatedAt =
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
-    ..contentType = json['contentType'] as String
     ..post = json['post'] == null
         ? null
         : EventSimpleMixin$Post.fromJson(json['post'] as Map<String, dynamic>)
-    ..price1 = (json['price1'] as num)?.toDouble()
-    ..price2 = (json['price2'] as num)?.toDouble()
-    ..price3 = (json['price3'] as num)?.toDouble()
-    ..price4 = (json['price4'] as num)?.toDouble()
-    ..price5 = (json['price5'] as num)?.toDouble()
     ..dicount = (json['dicount'] as num)?.toDouble()
-    ..password = json['password'] as String
     ..content = json['content'] as String
-    ..eventPrices = (json['eventPrices'] as List)
-        ?.map((e) => e == null
-            ? null
-            : Event$Query$Event$EventPrices.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+    ..eventComponent = json['eventComponent'] == null
+        ? null
+        : Event$Query$Event$EventComponent.fromJson(
+            json['eventComponent'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
@@ -6809,34 +6882,15 @@ Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('eventDateTime',
-      fromDartDateTimeToGraphQLDateTime(instance.eventDateTime));
-  writeNotNull('eventType', _$EventTypeEnumMap[instance.eventType]);
-  writeNotNull('location', instance.location);
-  writeNotNull('address', instance.address);
-  writeNotNull('host', instance.host);
+  writeNotNull('name', instance.name);
   writeNotNull(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
-  writeNotNull('contentType', instance.contentType);
   writeNotNull('post', instance.post?.toJson());
-  writeNotNull('price1', instance.price1);
-  writeNotNull('price2', instance.price2);
-  writeNotNull('price3', instance.price3);
-  writeNotNull('price4', instance.price4);
-  writeNotNull('price5', instance.price5);
   writeNotNull('dicount', instance.dicount);
-  writeNotNull('password', instance.password);
   writeNotNull('content', instance.content);
-  writeNotNull(
-      'eventPrices', instance.eventPrices?.map((e) => e?.toJson())?.toList());
+  writeNotNull('eventComponent', instance.eventComponent?.toJson());
   return val;
 }
-
-const _$EventTypeEnumMap = {
-  EventType.offline: 'offline',
-  EventType.online: 'online',
-  EventType.artemisUnknown: 'ARTEMIS_UNKNOWN',
-};
 
 Event$Query _$Event$QueryFromJson(Map<String, dynamic> json) {
   return Event$Query()
@@ -6941,16 +6995,9 @@ Map<String, dynamic> _$EventSimpleMixin$PostToJson(
 Events$Query$Events _$Events$Query$EventsFromJson(Map<String, dynamic> json) {
   return Events$Query$Events()
     ..id = json['id'] as String
-    ..eventDateTime =
-        fromGraphQLDateTimeToDartDateTime(json['eventDateTime'] as String)
-    ..eventType = _$enumDecodeNullable(_$EventTypeEnumMap, json['eventType'],
-        unknownValue: EventType.artemisUnknown)
-    ..location = json['location'] as String
-    ..address = json['address'] as String
-    ..host = json['host'] as String
+    ..name = json['name'] as String
     ..updatedAt =
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
-    ..contentType = json['contentType'] as String
     ..post = json['post'] == null
         ? null
         : EventSimpleMixin$Post.fromJson(json['post'] as Map<String, dynamic>);
@@ -6966,15 +7013,9 @@ Map<String, dynamic> _$Events$Query$EventsToJson(Events$Query$Events instance) {
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('eventDateTime',
-      fromDartDateTimeToGraphQLDateTime(instance.eventDateTime));
-  writeNotNull('eventType', _$EventTypeEnumMap[instance.eventType]);
-  writeNotNull('location', instance.location);
-  writeNotNull('address', instance.address);
-  writeNotNull('host', instance.host);
+  writeNotNull('name', instance.name);
   writeNotNull(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
-  writeNotNull('contentType', instance.contentType);
   writeNotNull('post', instance.post?.toJson());
   return val;
 }

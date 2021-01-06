@@ -1,18 +1,22 @@
 query Event($id:ID!) {
     event (id:$id){
         ...EventSimple
-        price1
-        price2
-        price3
-        price4
-        price5
         dicount
-        password
         content
-        eventPrices{
-            name
-            price
-            prePrice
+        eventComponent {
+            address
+            dateTime
+            eventLocation
+            eventPrices{
+                currency{
+                    ...Currency
+                }
+                name
+                prePrice
+                price
+            }
+            meetingId
+            venue
         }
     }
 }

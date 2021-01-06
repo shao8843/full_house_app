@@ -2,29 +2,23 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/repository/event_repo.dart';
 import 'package:flutter/material.dart';
 
-class EventDetailPage extends DataHasPostPage<EventData> {
+class EventDetailPage extends DataHasEventPostPage<EventData> {
 
   const EventDetailPage({Key key,
-    @required String id,@required String name})
-      :super(key: key,id: id,name:name,supportPayment:true);
+    @required String id, @required String name})
+      :super(key: key, id: id, name: name, supportPayment: true);
 
   @override
-  Widget detailWidget(BuildContext context, EventData data) {
+  List<Widget> detailWidget(BuildContext context, EventData data) {
     ArgumentError.checkNotNull(data);
-    return data != null ? Container(
-      child: Column(
-        children: <Widget>[
-          data.content != null
-              ? Padding(
-            padding: const EdgeInsets.symmetric(
-                horizontal: kHorizontalPadding),
-            child: ContentWidget(content: data.content,),
-          ) : Container(),
-          // data.media != null
-          //     ? new MediaWidget(medias: data.media,) : Container(),
-        ],
-      ),
-    ) : Container();
+    List list = super.detailWidget(context, data);
+    list.add(Divider());
+    if (data.content != null)
+      list.add(Padding(
+        padding: const EdgeInsets.symmetric(
+            horizontal: kHorizontalPadding),
+        child: ContentWidget(content: data.content,),));
+    return list;
   }
 
   @override

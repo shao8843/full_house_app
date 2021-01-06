@@ -768,13 +768,8 @@ fragment CategoryDetail on Category {
 
 fragment EventSimple on Event {
     id
-    eventDateTime
-    eventType
-    location
-    address
-    host
+    name
     updated_at
-    contentType
     post {
         ...PostComponentSimple
     }
