@@ -9,5 +9,10 @@ query Event($id:ID!) {
         dicount
         password
         content
+        eventPrices{
+            name
+            price
+            prePrice
+        }
     }
 }

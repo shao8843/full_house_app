@@ -4684,6 +4684,24 @@ class Ehrs$Query with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
+class Event$Query$Event$EventPrices with EquatableMixin {
+  Event$Query$Event$EventPrices();
+
+  factory Event$Query$Event$EventPrices.fromJson(Map<String, dynamic> json) =>
+      _$Event$Query$Event$EventPricesFromJson(json);
+
+  String name;
+
+  double price;
+
+  double prePrice;
+
+  @override
+  List<Object> get props => [name, price, prePrice];
+  Map<String, dynamic> toJson() => _$Event$Query$Event$EventPricesToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
 class Event$Query$Event with EquatableMixin, EventSimpleMixin {
   Event$Query$Event();
 
@@ -4706,6 +4724,8 @@ class Event$Query$Event with EquatableMixin, EventSimpleMixin {
 
   String content;
 
+  List<Event$Query$Event$EventPrices> eventPrices;
+
   @override
   List<Object> get props => [
         id,
@@ -4724,7 +4744,8 @@ class Event$Query$Event with EquatableMixin, EventSimpleMixin {
         price5,
         dicount,
         password,
-        content
+        content,
+        eventPrices
       ];
   Map<String, dynamic> toJson() => _$Event$Query$EventToJson(this);
 }
@@ -21014,7 +21035,32 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                     alias: null,
                     arguments: [],
                     directives: [],
-                    selectionSet: null)
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'eventPrices'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                          name: NameNode(value: 'name'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'price'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'prePrice'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null)
+                    ]))
               ]))
         ])),
     FragmentDefinitionNode(

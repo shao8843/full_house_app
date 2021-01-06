@@ -6744,6 +6744,30 @@ Map<String, dynamic> _$Ehrs$QueryToJson(Ehrs$Query instance) {
   return val;
 }
 
+Event$Query$Event$EventPrices _$Event$Query$Event$EventPricesFromJson(
+    Map<String, dynamic> json) {
+  return Event$Query$Event$EventPrices()
+    ..name = json['name'] as String
+    ..price = (json['price'] as num)?.toDouble()
+    ..prePrice = (json['prePrice'] as num)?.toDouble();
+}
+
+Map<String, dynamic> _$Event$Query$Event$EventPricesToJson(
+    Event$Query$Event$EventPrices instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('name', instance.name);
+  writeNotNull('price', instance.price);
+  writeNotNull('prePrice', instance.prePrice);
+  return val;
+}
+
 Event$Query$Event _$Event$Query$EventFromJson(Map<String, dynamic> json) {
   return Event$Query$Event()
     ..id = json['id'] as String
@@ -6767,7 +6791,12 @@ Event$Query$Event _$Event$Query$EventFromJson(Map<String, dynamic> json) {
     ..price5 = (json['price5'] as num)?.toDouble()
     ..dicount = (json['dicount'] as num)?.toDouble()
     ..password = json['password'] as String
-    ..content = json['content'] as String;
+    ..content = json['content'] as String
+    ..eventPrices = (json['eventPrices'] as List)
+        ?.map((e) => e == null
+            ? null
+            : Event$Query$Event$EventPrices.fromJson(e as Map<String, dynamic>))
+        ?.toList();
 }
 
 Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
@@ -6798,6 +6827,8 @@ Map<String, dynamic> _$Event$Query$EventToJson(Event$Query$Event instance) {
   writeNotNull('dicount', instance.dicount);
   writeNotNull('password', instance.password);
   writeNotNull('content', instance.content);
+  writeNotNull(
+      'eventPrices', instance.eventPrices?.map((e) => e?.toJson())?.toList());
   return val;
 }
 
