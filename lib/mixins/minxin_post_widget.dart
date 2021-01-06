@@ -1,5 +1,7 @@
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/repository/post_repo.dart';
+import 'package:flutter/material.dart';
+import 'package:full_house_app/pages/general_post_list_page.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -24,6 +26,13 @@ mixin MixinPostWidget on PostListWidget {
     } catch (error) {
       rethrow;
     }
+  }
+
+  @override
+  void onCategoryClicked(BuildContext context, Category category) {
+    Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => GeneralPostListPage(category: category.name,)
+    ));
   }
 
 }
