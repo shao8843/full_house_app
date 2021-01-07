@@ -38,4 +38,10 @@ class EventDetailPage extends DataHasEventPostPage<EventData> {
     // TODO: implement onTimer
   }
 
+  @override
+  Future<User> pushLoginPage(BuildContext context) {
+    // TODO: implement pushLoginPage
+    throw UnimplementedError();
+  }
+
 }

@@ -3,7 +3,7 @@ import 'package:full_house_app/repository/post_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:full_house_app/pages/general_post_list_page.dart';
 
-mixin MixinPostWidget on PostListWidget {
+mixin MixinPostListWidget on PostListWidget {
 
   @override
   Future<List<PostData>> listResult({

@@ -2,8 +2,9 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/article/article_data.dart';
 import 'package:full_house_app/repository/article_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:full_house_app/pages/post_login_page.dart';
 
-class ArticleDetailPage extends DataHasPostPage<ArticleData> {
+class ArticleDetailPage extends PostLoginPage<ArticleData> {
 
   const ArticleDetailPage({Key key,
     @required String id,@required String name})

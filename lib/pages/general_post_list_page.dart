@@ -5,7 +5,7 @@ import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/article/article_detail_page.dart';
 import 'package:full_house_app/event/event_detail_page.dart';
 
-class GeneralPostListPage extends PostListWidget with MixinPostWidget {
+class GeneralPostListPage extends PostListWidget with MixinPostListWidget {
 
   const GeneralPostListPage({@required String category})
       :super(category: category);
