@@ -7,8 +7,9 @@ import 'package:full_house_app/pages/post_login_page.dart';
 class ArticleDetailPage extends PostLoginPage<ArticleData> {
 
   const ArticleDetailPage({Key key,
-    @required String id,@required String name})
-      :super(key: key,id: id,name:name,supportPayment:false);
+    @required String id,@required String entityType,@required String name})
+      :super(key: key,
+      id: id,entityType:entityType,name:name,supportPayment:false);
 
   @override
   List<Widget> detailWidget(BuildContext context, ArticleData data) {

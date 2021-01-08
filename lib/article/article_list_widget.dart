@@ -20,6 +20,7 @@ class ArticleListWidget extends PostListWidget with MixinPostListWidget {
           builder: (_) =>
               ArticleDetailPage(
                 id: postData.id,
+                entityType: postData.entityType,
                 name: postData.title,)));
     } else {
       assert(false, 'postData is null');

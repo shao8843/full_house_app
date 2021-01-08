@@ -1,12 +1,17 @@
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/repository/event_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:full_house_app/pages/post_login_page.dart';
 
-class EventDetailPage extends DataHasEventPostPage<EventData> {
+class EventDetailPage extends EventLoginPage<EventData> {
 
   const EventDetailPage({Key key,
-    @required String id, @required String name})
-      :super(key: key, id: id, name: name, supportPayment: true);
+    @required String id, @required String entityType, @required String name})
+      :super(key: key,
+      id: id,
+      entityType: entityType,
+      name: name,
+      supportPayment: true);
 
   @override
   List<Widget> detailWidget(BuildContext context, EventData data) {

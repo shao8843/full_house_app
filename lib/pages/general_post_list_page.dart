@@ -18,18 +18,24 @@ class GeneralPostListPage extends PostListWidget with MixinPostListWidget {
 
   @override
   void onClicked(BuildContext context, PostData postData) {
-    if(postData!=null) {
+    if (postData != null) {
       switch (postData.entityType) {
         case 'article':
           Navigator.of(context).push(MaterialPageRoute(
-            builder: (_)=>ArticleDetailPage(
-                id:postData.entityRawId,name: postData.title,)
+              builder: (_) =>
+                  ArticleDetailPage(
+                    id: postData.entityRawId,
+                    name: postData.title,
+                    entityType: postData.entityType,)
           ));
           break;
         case 'event':
           Navigator.of(context).push(MaterialPageRoute(
-              builder: (_)=>EventDetailPage(
-                  id:postData.entityRawId,name: postData.title,)
+              builder: (_) =>
+                  EventDetailPage(
+                    id: postData.entityRawId,
+                    name: postData.title,
+                    entityType: postData.entityType,)
           ));
           break;
         default:
