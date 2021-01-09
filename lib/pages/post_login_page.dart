@@ -33,6 +33,13 @@ abstract class PostLoginPage<T extends DataHasPost> extends DataHasPostPage<T> {
     );
   }
 
+  @override
+  Future<OrderData> saveOrder(String userId, OrderData orderData) async {
+    return await OrderRepository().saveOrder(
+        orderData: orderData, userId: userId
+    );
+  }
+
 }
 
 abstract class EventLoginPage<T extends DataHasEvent> extends DataHasEventPostPage<T> {
@@ -59,6 +66,13 @@ abstract class EventLoginPage<T extends DataHasEvent> extends DataHasEventPostPa
   Future<List<OrderData>> getMyOrderList({String id, String entityType}) async {
     return await OrderRepository().getMyListAsync(
         postDataId: id, entityType: entityType
+    );
+  }
+
+  @override
+  Future<OrderData> saveOrder(String userId, OrderData orderData) async {
+    return await OrderRepository().saveOrder(
+        orderData: orderData, userId: userId
     );
   }
 }

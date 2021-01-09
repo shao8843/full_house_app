@@ -2,8 +2,34 @@
 import 'package:full_house_app/api/graphql_api.graphql.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
+import 'package:flutter/services.dart';
 
 class OrderRepository extends RemoteRepositoryBase<OrderData> {
+
+  Future<OrderData> saveOrder({String userId,OrderData orderData}) async {
+    if (orderData.total() == 0.00 || orderData.currency == null) {
+      throw PlatformException(
+          code: 'GrahpqlDataError',
+          message: 'OrderItemData converting:' + orderData.toString()
+      );
+    }
+
+    var list = orderData.items.where((element) =>
+    element.quantity != null && element.quantity > 0);
+
+    return await createMyOrder(CreateMyOrderInput(
+
+        data: MyOrderInput(
+          additional: null,
+          currency: orderData.currency.id,
+          description: null,
+          items: list.map<OrderItemInput>((e) =>
+              e.toInput()).toList(),
+          shippingAddress: null,
+        )
+    ));
+  }
+
   Future<OrderData> getAsync({String id}) async {
     var result = await query(
         OrderQuery(variables: OrderArguments(id: id)).toQueryOption());
@@ -122,3 +148,28 @@ class OrderRepository extends RemoteRepositoryBase<OrderData> {
     return toOrderData(queryResult)?.status;
   }
 }
+
+extension OrderItemDataGraphql on OrderItemData {
+
+  OrderItemInput toInput() {
+    if (picture == null || name == null || sourceId == null ||
+        sourceTitle == null || unitPrice == null || quantity == null) {
+      throw PlatformException(
+          code: 'GrahpqlDataError',
+          message: 'OrderItemData converting:'+this.toString()
+      );
+    }
+    return OrderItemInput(
+        additional: additional,
+        name: name,
+        picture: picture.id,
+        preUnitPrice: preUnitPrice,
+        quantity: quantity,
+        related: null,
+        sourceId: sourceId,
+        sourceType: sourceTitle,
+        unitPrice: unitPrice
+    );
+  }
+}
+

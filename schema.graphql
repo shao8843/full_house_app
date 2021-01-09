@@ -572,11 +572,15 @@ type ComponentContentEpisode {
 
 type ComponentContentEventComponent {
     address: String
+    contacts: String
     dateTime: DateTime!
+    email: String
     eventLocation: EventLocation!
     eventPrices: [ComponentContentEventPrice]
+    host: String
     id: ID!
     meetingId: String
+    phoneNumber: String
     venue: String
 }
 
@@ -5082,10 +5086,14 @@ input ComponentContentEpisodeInput {
 
 input ComponentContentEventComponentInput {
     address: String
+    contacts: String
     dateTime: DateTime!
+    email: String
     eventLocation: EventLocation!
     eventPrices: [ComponentContentEventPriceInput]
+    host: String
     meetingId: String
+    phoneNumber: String
     venue: String
 }
 
@@ -6080,11 +6088,15 @@ input editComponentContentEpisodeInput {
 
 input editComponentContentEventComponentInput {
     address: String
+    contacts: String
     dateTime: DateTime
+    email: String
     eventLocation: EventLocation
     eventPrices: [editComponentContentEventPriceInput]
+    host: String
     id: ID
     meetingId: String
+    phoneNumber: String
     venue: String
 }
 
