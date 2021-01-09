@@ -6813,6 +6813,10 @@ Map<String, dynamic> _$Event$Query$Event$EventComponent$EventPricesToJson(
 Event$Query$Event$EventComponent _$Event$Query$Event$EventComponentFromJson(
     Map<String, dynamic> json) {
   return Event$Query$Event$EventComponent()
+    ..email = json['email'] as String
+    ..phoneNumber = json['phoneNumber'] as String
+    ..contacts = json['contacts'] as String
+    ..host = json['host'] as String
     ..address = json['address'] as String
     ..dateTime = fromGraphQLDateTimeToDartDateTime(json['dateTime'] as String)
     ..eventLocation = _$enumDecodeNullable(
@@ -6838,6 +6842,10 @@ Map<String, dynamic> _$Event$Query$Event$EventComponentToJson(
     }
   }
 
+  writeNotNull('email', instance.email);
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  writeNotNull('contacts', instance.contacts);
+  writeNotNull('host', instance.host);
   writeNotNull('address', instance.address);
   writeNotNull(
       'dateTime', fromDartDateTimeToGraphQLDateTime(instance.dateTime));

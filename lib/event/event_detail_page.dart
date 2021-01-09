@@ -2,6 +2,7 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/repository/event_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:full_house_app/pages/post_login_page.dart';
+import 'package:full_house_app/pages/login_page.dart';
 
 class EventDetailPage extends EventLoginPage<EventData> {
 
@@ -44,9 +45,9 @@ class EventDetailPage extends EventLoginPage<EventData> {
   }
 
   @override
-  Future<User> pushLoginPage(BuildContext context) {
-    // TODO: implement pushLoginPage
-    throw UnimplementedError();
+  Future<User> pushLoginPage(BuildContext context) async  {
+    return await Navigator.of(context).push(MaterialPageRoute(
+      builder: (_)=>LoginPage()
+    ));
   }
-
 }

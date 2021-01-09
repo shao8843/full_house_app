@@ -4728,6 +4728,14 @@ class Event$Query$Event$EventComponent with EquatableMixin {
           Map<String, dynamic> json) =>
       _$Event$Query$Event$EventComponentFromJson(json);
 
+  String email;
+
+  String phoneNumber;
+
+  String contacts;
+
+  String host;
+
   String address;
 
   @JsonKey(
@@ -4745,8 +4753,18 @@ class Event$Query$Event$EventComponent with EquatableMixin {
   String venue;
 
   @override
-  List<Object> get props =>
-      [address, dateTime, eventLocation, eventPrices, meetingId, venue];
+  List<Object> get props => [
+        email,
+        phoneNumber,
+        contacts,
+        host,
+        address,
+        dateTime,
+        eventLocation,
+        eventPrices,
+        meetingId,
+        venue
+      ];
   Map<String, dynamic> toJson() =>
       _$Event$Query$Event$EventComponentToJson(this);
 }
@@ -21016,6 +21034,30 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                     arguments: [],
                     directives: [],
                     selectionSet: SelectionSetNode(selections: [
+                      FieldNode(
+                          name: NameNode(value: 'email'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'phoneNumber'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'contacts'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
+                      FieldNode(
+                          name: NameNode(value: 'host'),
+                          alias: null,
+                          arguments: [],
+                          directives: [],
+                          selectionSet: null),
                       FieldNode(
                           name: NameNode(value: 'address'),
                           alias: null,

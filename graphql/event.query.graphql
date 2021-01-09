@@ -4,6 +4,10 @@ query Event($id:ID!) {
         dicount
         content
         eventComponent {
+            email
+            phoneNumber
+            contacts
+            host
             address
             dateTime
             eventLocation
