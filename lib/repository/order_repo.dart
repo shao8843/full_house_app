@@ -22,7 +22,7 @@ class OrderRepository extends RemoteRepositoryBase<OrderData> {
         data: MyOrderInput(
           additional: null,
           currency: orderData.currency.id,
-          description: null,
+          description: orderData.description,
           items: list.map<OrderItemInput>((e) =>
               e.toInput()).toList(),
           shippingAddress: null,
