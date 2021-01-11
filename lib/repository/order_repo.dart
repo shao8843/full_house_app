@@ -54,26 +54,30 @@ class OrderRepository extends RemoteRepositoryBase<OrderData> {
 
   Future<List<OrderData>> getMyListAsync(
       {String sort, int limit, int start,String postDataId,
+        String searchField, String search,
         String entityType}) async {
-
-      var result = await getMyListQueryResultAsync(
-          sort: sort, limit: limit,
-          start: start,postDataId:postDataId,entityType:entityType);
-      var list = toOrderDataList(result, key: "myOrders");
-      logger.info('Order List: ${list.length>0?list.first.id:0}');
-      return list;
+    var result = await _getMyListQueryResultAsync(
+        sort: sort,
+        limit: limit,
+        searchField: searchField,
+        search: search,
+        start: start,
+        postDataId: postDataId,
+        entityType: entityType);
+    var list = toOrderDataList(result, key: "myOrders");
+    logger.info('Order List: ${list.length > 0 ? list.first.id : 0}');
+    return list;
   }
 
-  Future<QueryResult> getMyListQueryResultAsync(
+  Future<QueryResult> _getMyListQueryResultAsync(
       {String sort,
         int limit,
         int start,
         String searchField,
         String search,String postDataId,String entityType}) async {
-    sort = sort ?? "created_at:desc";
     var q = MyOrdersQuery(
         variables: MyOrdersArguments(
-            sort: sort, limit: limit, start: start,
+            sort: sort??'updated_at:desc', limit: limit, start: start,
             where: postDataId != null ? {"items": {
               'sourceId': postDataId, 'sourceType': entityType},} : null
         ));

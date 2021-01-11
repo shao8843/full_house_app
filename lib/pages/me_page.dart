@@ -5,6 +5,7 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/pages/setting_page.dart';
 import 'package:full_house_app/pages/user_edit_page.dart';
+import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
 
@@ -25,19 +26,19 @@ class MePage extends MePageBase<MeData> {
         settings: RouteSettings(
           name: '\LoginPage',
         ),
-        builder: (_)=>LoginPage()
+        builder: (_) => LoginPage()
     ));
   }
 
   @override
-  Future<MeData> getLoginUser() async  {
+  Future<MeData> getLoginUser() async {
     return await UserRepository().getMe();
   }
 
   @override
-  Future<MeData> pushUserEditor(BuildContext context,MeData user) async {
+  Future<MeData> pushUserEditor(BuildContext context, MeData user) async {
     return await Navigator.of(context).push<User>(MaterialPageRoute(
-      builder: (_)=>UserEditPage()
+        builder: (_) => UserEditPage()
     ));
   }
 
@@ -45,5 +46,17 @@ class MePage extends MePageBase<MeData> {
   Future<MediaFileInfo> saveImage(File file, bool isVideo) async {
     // TODO: implement saveImage
     throw UnimplementedError();
+  }
+
+  @override
+  Future<List<OrderData>> getMyOrders(
+      {int start, int limit, String sort, String searchField, String search}) async {
+    return await OrderRepository().getMyListAsync(
+        start: start,
+        limit: limit,
+        sort: sort,
+        searchField: searchField,
+        search: search
+    );
   }
 }

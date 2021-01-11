@@ -1,23 +1,19 @@
-import 'package:intl/intl.dart';
 import 'package:http/http.dart';
-final dateFormatter = DateFormat('yyyy-MM-dd');
-final timeFormatter = DateFormat('HH:mm:ss');
+import 'package:flutter_artech/flutter_artech.dart';
+
 
 DateTime fromGraphQLDateTimeToDartDateTime(String date) =>
-    date == null ? null : DateTime.parse(date);
+    date == null ? null : DateTimeParser.fromGraphQLDateTime(date);
 DateTime fromGraphQLDateToDartDateTime(String date) =>
-    date == null ? null : DateTime.parse(date);
+    date == null ? null : DateTimeParser.fromGraphQLDate(date);
 String fromDartDateTimeToGraphQLDate(DateTime date) =>
-    date == null ? null : dateFormatter.format(date);
+    date == null ? null : DateTimeParser.toGraphQlDate(date);
 DateTime fromGraphQLTimeToDartDateTime(String time) =>
-    time == null ? null : DateTime.parse('1970-01-01T${time}Z');
+    time == null ? null : DateTimeParser.fromGraphQLTime(time);
 String fromDartDateTimeToGraphQLTime(DateTime date) =>
-    date == null ? null : timeFormatter.format(date);
+    date == null ? null : DateTimeParser.toGraphQlTime(date);
 String fromDartDateTimeToGraphQLDateTime(DateTime dateTime) {
-  if (dateTime != null) {
-    return dateTime.toIso8601String();
-  }
-  return null;
+  return DateTimeParser.toGraphQlDateTime(dateTime);
 }
 
 MultipartFile fromGraphQLUploadToDartMultipartFile(MultipartFile file) => file;
