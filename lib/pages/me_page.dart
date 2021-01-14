@@ -1,5 +1,4 @@
 import 'dart:io';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/login_page.dart';
@@ -58,5 +57,11 @@ class MePage extends MePageBase<MeData> {
         searchField: searchField,
         search: search
     );
+  }
+
+  @override
+  Future<String> getClientSecret(OrderData orderData) async {
+    return await OrderRepository().requestStripePayment(
+        orderData.id, options: null);
   }
 }

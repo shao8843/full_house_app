@@ -1,4 +1,5 @@
 
+import 'package:flutter/services.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:flutter/material.dart';
 import 'package:full_house_app/repository/order_repo.dart';
@@ -40,6 +41,17 @@ abstract class PostLoginPage<T extends DataHasPost> extends DataHasPostPage<T> {
     );
   }
 
+  @override
+  Future<String> clientSecret(OrderData order) async {
+    if (order != null && order.id != null) {
+      return await OrderRepository().requestStripePayment(
+          order.id, options: null);
+    } else {
+      throw PlatformException(code: kArtechErrorCode,
+          message: 'Order object error');
+    }
+  }
+
 }
 
 abstract class EventLoginPage<T extends DataHasEvent> extends DataHasEventPostPage<T> {
@@ -74,5 +86,16 @@ abstract class EventLoginPage<T extends DataHasEvent> extends DataHasEventPostPa
     return await OrderRepository().saveOrder(
         orderData: orderData, userId: userId
     );
+  }
+
+  @override
+  Future<String> clientSecret(OrderData order) async {
+    if (order != null && order.id != null) {
+      return await OrderRepository().requestStripePayment(
+          order.id, options: null);
+    } else {
+      throw PlatformException(code: kArtechErrorCode,
+          message: 'Order object error');
+    }
   }
 }
