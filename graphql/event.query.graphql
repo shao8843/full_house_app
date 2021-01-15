@@ -8,9 +8,7 @@ query Event($id:ID!) {
             phoneNumber
             contacts
             host
-            address
             dateTime
-            eventLocation
             eventPrices{
                 currency{
                     ...Currency
@@ -20,7 +18,9 @@ query Event($id:ID!) {
                 price
             }
             meetingId
-            venue
+            eventVenue {
+                ...VenueSimple
+            }
         }
     }
 }

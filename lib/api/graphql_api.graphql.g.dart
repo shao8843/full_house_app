@@ -6902,6 +6902,36 @@ Map<String, dynamic> _$Event$Query$Event$EventComponent$EventPricesToJson(
   return val;
 }
 
+Event$Query$Event$EventComponent$Venue
+    _$Event$Query$Event$EventComponent$VenueFromJson(
+        Map<String, dynamic> json) {
+  return Event$Query$Event$EventComponent$Venue()
+    ..id = json['id'] as String
+    ..name = json['name'] as String
+    ..address = json['address'] as String
+    ..picture = json['picture'] == null
+        ? null
+        : VenueSimpleMixin$Picture.fromJson(
+            json['picture'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$Event$Query$Event$EventComponent$VenueToJson(
+    Event$Query$Event$EventComponent$Venue instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('address', instance.address);
+  writeNotNull('picture', instance.picture?.toJson());
+  return val;
+}
+
 Event$Query$Event$EventComponent _$Event$Query$Event$EventComponentFromJson(
     Map<String, dynamic> json) {
   return Event$Query$Event$EventComponent()
@@ -6909,11 +6939,7 @@ Event$Query$Event$EventComponent _$Event$Query$Event$EventComponentFromJson(
     ..phoneNumber = json['phoneNumber'] as String
     ..contacts = json['contacts'] as String
     ..host = json['host'] as String
-    ..address = json['address'] as String
     ..dateTime = fromGraphQLDateTimeToDartDateTime(json['dateTime'] as String)
-    ..eventLocation = _$enumDecodeNullable(
-        _$EventLocationEnumMap, json['eventLocation'],
-        unknownValue: EventLocation.artemisUnknown)
     ..eventPrices = (json['eventPrices'] as List)
         ?.map((e) => e == null
             ? null
@@ -6921,7 +6947,10 @@ Event$Query$Event$EventComponent _$Event$Query$Event$EventComponentFromJson(
                 e as Map<String, dynamic>))
         ?.toList()
     ..meetingId = json['meetingId'] as String
-    ..venue = json['venue'] as String;
+    ..venue = json['venue'] == null
+        ? null
+        : Event$Query$Event$EventComponent$Venue.fromJson(
+            json['venue'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$Event$Query$Event$EventComponentToJson(
@@ -6938,22 +6967,14 @@ Map<String, dynamic> _$Event$Query$Event$EventComponentToJson(
   writeNotNull('phoneNumber', instance.phoneNumber);
   writeNotNull('contacts', instance.contacts);
   writeNotNull('host', instance.host);
-  writeNotNull('address', instance.address);
   writeNotNull(
       'dateTime', fromDartDateTimeToGraphQLDateTime(instance.dateTime));
-  writeNotNull('eventLocation', _$EventLocationEnumMap[instance.eventLocation]);
   writeNotNull(
       'eventPrices', instance.eventPrices?.map((e) => e?.toJson())?.toList());
   writeNotNull('meetingId', instance.meetingId);
-  writeNotNull('venue', instance.venue);
+  writeNotNull('venue', instance.venue?.toJson());
   return val;
 }
-
-const _$EventLocationEnumMap = {
-  EventLocation.offline: 'offline',
-  EventLocation.online: 'online',
-  EventLocation.artemisUnknown: 'ARTEMIS_UNKNOWN',
-};
 
 Event$Query$Event _$Event$Query$EventFromJson(Map<String, dynamic> json) {
   return Event$Query$Event()
@@ -7009,6 +7030,42 @@ Map<String, dynamic> _$Event$QueryToJson(Event$Query instance) {
   }
 
   writeNotNull('event', instance.event?.toJson());
+  return val;
+}
+
+VenueSimpleMixin$Picture _$VenueSimpleMixin$PictureFromJson(
+    Map<String, dynamic> json) {
+  return VenueSimpleMixin$Picture()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
+}
+
+Map<String, dynamic> _$VenueSimpleMixin$PictureToJson(
+    VenueSimpleMixin$Picture instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 

@@ -334,6 +334,12 @@ mixin PaymentMethodSimpleMixin {
   String type;
   PaymentMethodSimpleMixin$User user;
 }
+mixin VenueSimpleMixin {
+  String id;
+  String name;
+  String address;
+  VenueSimpleMixin$Picture picture;
+}
 mixin EventSimpleMixin {
   String id;
   String name;
@@ -4685,6 +4691,21 @@ class Event$Query$Event$EventComponent$EventPrices with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
+class Event$Query$Event$EventComponent$EventVenue
+    with EquatableMixin, VenueSimpleMixin {
+  Event$Query$Event$EventComponent$EventVenue();
+
+  factory Event$Query$Event$EventComponent$EventVenue.fromJson(
+          Map<String, dynamic> json) =>
+      _$Event$Query$Event$EventComponent$EventVenueFromJson(json);
+
+  @override
+  List<Object> get props => [id, name, address, picture];
+  Map<String, dynamic> toJson() =>
+      _$Event$Query$Event$EventComponent$EventVenueToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
 class Event$Query$Event$EventComponent with EquatableMixin {
   Event$Query$Event$EventComponent();
 
@@ -4700,21 +4721,16 @@ class Event$Query$Event$EventComponent with EquatableMixin {
 
   String host;
 
-  String address;
-
   @JsonKey(
       fromJson: fromGraphQLDateTimeToDartDateTime,
       toJson: fromDartDateTimeToGraphQLDateTime)
   DateTime dateTime;
 
-  @JsonKey(unknownEnumValue: EventLocation.artemisUnknown)
-  EventLocation eventLocation;
-
   List<Event$Query$Event$EventComponent$EventPrices> eventPrices;
 
   String meetingId;
 
-  String venue;
+  Event$Query$Event$EventComponent$EventVenue eventVenue;
 
   @override
   List<Object> get props => [
@@ -4722,12 +4738,10 @@ class Event$Query$Event$EventComponent with EquatableMixin {
         phoneNumber,
         contacts,
         host,
-        address,
         dateTime,
-        eventLocation,
         eventPrices,
         meetingId,
-        venue
+        eventVenue
       ];
   Map<String, dynamic> toJson() =>
       _$Event$Query$Event$EventComponentToJson(this);
@@ -4764,6 +4778,19 @@ class Event$Query with EquatableMixin {
   @override
   List<Object> get props => [event];
   Map<String, dynamic> toJson() => _$Event$QueryToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class VenueSimpleMixin$Picture with EquatableMixin, MediaSimpleMixin {
+  VenueSimpleMixin$Picture();
+
+  factory VenueSimpleMixin$Picture.fromJson(Map<String, dynamic> json) =>
+      _$VenueSimpleMixin$PictureFromJson(json);
+
+  @override
+  List<Object> get props =>
+      [id, url, formats, width, height, ext, caption, name, size];
+  Map<String, dynamic> toJson() => _$VenueSimpleMixin$PictureToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -9982,14 +10009,6 @@ enum SummarySubject {
 enum SummaryType {
   @JsonValue('measurable')
   measurable,
-  @JsonValue('ARTEMIS_UNKNOWN')
-  artemisUnknown,
-}
-enum EventLocation {
-  @JsonValue('offline')
-  offline,
-  @JsonValue('online')
-  online,
   @JsonValue('ARTEMIS_UNKNOWN')
   artemisUnknown,
 }
@@ -22089,19 +22108,7 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                           directives: [],
                           selectionSet: null),
                       FieldNode(
-                          name: NameNode(value: 'address'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null),
-                      FieldNode(
                           name: NameNode(value: 'dateTime'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null),
-                      FieldNode(
-                          name: NameNode(value: 'eventLocation'),
                           alias: null,
                           arguments: [],
                           directives: [],
@@ -22148,11 +22155,15 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
                           directives: [],
                           selectionSet: null),
                       FieldNode(
-                          name: NameNode(value: 'venue'),
+                          name: NameNode(value: 'eventVenue'),
                           alias: null,
                           arguments: [],
                           directives: [],
-                          selectionSet: null)
+                          selectionSet: SelectionSetNode(selections: [
+                            FragmentSpreadNode(
+                                name: NameNode(value: 'VenueSimple'),
+                                directives: [])
+                          ]))
                     ]))
               ]))
         ])),
@@ -22207,6 +22218,103 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'symbol_native'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'VenueSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'Venue'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'address'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'picture'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'MediaSimple'), directives: [])
+              ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'MediaSimple'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'UploadFile'), isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'id'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'url'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'formats'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'width'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'height'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'ext'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'caption'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'name'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'size'),
               alias: null,
               arguments: [],
               directives: [],
@@ -22425,68 +22533,6 @@ class EventQuery extends GraphQLQuery<Event$Query, EventArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'needShipping'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null)
-        ])),
-    FragmentDefinitionNode(
-        name: NameNode(value: 'MediaSimple'),
-        typeCondition: TypeConditionNode(
-            on: NamedTypeNode(
-                name: NameNode(value: 'UploadFile'), isNonNull: false)),
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-              name: NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'url'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'formats'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'width'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'height'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'ext'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'caption'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'name'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'size'),
               alias: null,
               arguments: [],
               directives: [],

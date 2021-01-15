@@ -571,17 +571,15 @@ type ComponentContentEpisode {
 }
 
 type ComponentContentEventComponent {
-    address: String
     contacts: String
     dateTime: DateTime!
     email: String
-    eventLocation: EventLocation!
     eventPrices: [ComponentContentEventPrice]
+    eventVenue: Venue
     host: String
     id: ID!
     meetingId: String
     phoneNumber: String
-    venue: String
 }
 
 type ComponentContentEventPrice {
@@ -5053,11 +5051,6 @@ enum EhrType {
     supplement
 }
 
-enum EventLocation {
-    offline
-    online
-}
-
 enum ExerciseType {
     home
     online
@@ -5239,16 +5232,14 @@ input ComponentContentEpisodeInput {
 }
 
 input ComponentContentEventComponentInput {
-    address: String
     contacts: String
     dateTime: DateTime!
     email: String
-    eventLocation: EventLocation!
     eventPrices: [ComponentContentEventPriceInput]
+    eventVenue: ID
     host: String
     meetingId: String
     phoneNumber: String
-    venue: String
 }
 
 input ComponentContentEventPriceInput {
@@ -6263,17 +6254,15 @@ input editComponentContentEpisodeInput {
 }
 
 input editComponentContentEventComponentInput {
-    address: String
     contacts: String
     dateTime: DateTime
     email: String
-    eventLocation: EventLocation
     eventPrices: [editComponentContentEventPriceInput]
+    eventVenue: ID
     host: String
     id: ID
     meetingId: String
     phoneNumber: String
-    venue: String
 }
 
 input editComponentContentEventPriceInput {
