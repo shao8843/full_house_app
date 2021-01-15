@@ -731,7 +731,6 @@ fragment UploadFileDetail on UploadFile {
     name
     size
     alternativeText
-    formats
     hash
     mime
     previewUrl
