@@ -3,16 +3,7 @@ fragment PostSimple on Post{
     title
     subtitle
     medias:image{
-        __typename
-        id
-        url
-        formats
-        width
-        height
-        ext
-        caption
-        name
-        size
+        ...MediaSimple
     }
     categories{
         ...CategoryDetail
@@ -29,7 +20,7 @@ fragment PostSimple on Post{
     trademark{
         name
         image{
-            url
+            ...MediaSimple
         }
     }
     currency{
@@ -55,16 +46,7 @@ fragment PostComponentSimple on ComponentContentPost{
     title
     subtitle
     medias:image{
-        __typename
-        id
-        url
-        formats
-        width
-        height
-        ext
-        caption
-        name
-        size
+        ...MediaSimple
     }
     categories{
         ...CategoryDetail
@@ -82,7 +64,7 @@ fragment PostComponentSimple on ComponentContentPost{
         id
         name
         image{
-            url
+            ...MediaSimple
         }
     }
     currency{
@@ -106,16 +88,7 @@ fragment ArticleSimple on Article{
     id
     name
     media {
-        __typename
-        id
-        url
-        formats
-        width
-        height
-        ext
-        caption
-        name
-        size
+        ...MediaSimple
     }
     published_at
     post{
@@ -139,16 +112,7 @@ fragment AssessmentQuestionnaireDetail on AssessmentQuestionnaire{
     name
     id
     media{
-        __typename
-        id
-        url
-        formats
-        width
-        height
-        ext
-        caption
-        name
-        size
+        ...UploadFileDetail
     }
     content
     questionnaire{
@@ -181,7 +145,8 @@ fragment  UserSimple on UsersPermissionsUser{
     sex,
     birthday,
     image{
-        url
+
+        ...MediaSimple
     }
     role{
         name
@@ -198,7 +163,7 @@ fragment UserDetail on UsersPermissionsUser {
     birthday,
     email,
     image{
-        url
+        ...MediaSimple
     }
     blocked
     confirmed
@@ -231,7 +196,7 @@ fragment UserMe on UsersPermissionsMe{
     countryCode
     second_email
     image{
-        url
+        ...MediaSimple
     }
     role{
         name
@@ -426,7 +391,7 @@ fragment  OrderItemSimple on PaymentOrderItem{
     id,
     name,
     picture{
-        url,
+        ...MediaSimple,
     }
     preUnitPrice,
     quantity,
@@ -627,10 +592,10 @@ fragment ParentingSimple on Parenting {
 fragment ParentingDetail on Parenting {
     ...ParentingSimple
     pdfFiles{
-        url
+        ...MediaSimple
     }
     media{
-        url
+        ...MediaSimple
     }
     content
     questionnaire{
@@ -694,6 +659,13 @@ fragment  QuestionnaireAnswerSimple on QuestionnaireAnswer {
 fragment MediaSimple on UploadFile {
     id
     url
+    formats
+    width
+    height
+    ext
+    caption
+    name
+    size
 }
 
 fragment  CreditCardSimple on CreditCard {
@@ -732,7 +704,7 @@ fragment  GameSimple on Game {
     trademark {
         name
         image{
-            url
+            ...MediaSimple
         }
     }
     provider
@@ -758,6 +730,14 @@ fragment UploadFileDetail on UploadFile {
     caption
     name
     size
+    alternativeText
+    formats
+    hash
+    mime
+    previewUrl
+    provider
+    provider_metadata
+    updated_at
 }
 
 fragment CategoryDetail on Category {
@@ -772,6 +752,15 @@ fragment EventSimple on Event {
     updated_at
     post {
         ...PostComponentSimple
+    }
+}
+
+fragment VenueSimple on Venue {
+    id
+    name
+    address
+    picture {
+        ...MediaSimple
     }
 }
 

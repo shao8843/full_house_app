@@ -31,7 +31,7 @@ void main() async {
     // or simply save your changes to "hot reload" in a Flutter IDE).
     // Notice that the counter didn't reset back to zero; the application
     // is not restarted.
-    primarySwatch: Colors.deepOrange,
+    primarySwatch: _myColor,
     // This makes the visual density adapt to the platform that you run
     // the app on. For desktop platforms, the controls will be smaller and
     // closer together (more dense) than on mobile platforms.
@@ -39,5 +39,25 @@ void main() async {
 
   )));
 }
+
+
+const MaterialColor _myColor = MaterialColor(
+  _myPrimaryValue,
+  <int, Color>{
+    50: Color(0xFFFBE9E7),
+    100: Color(0xFFFFCCBC),
+    200: Color(0xFFFFAB91),
+    300: Color(0xFFFF8A65),
+    400: Color(0xFFFF7043),
+    500: Color(_myPrimaryValue),
+    600: Color(0xFFF4511E),
+    700: Color(0xFFE64A19),
+    800: Color(0xFFD84315),
+    900: Color(0xFFBF360C),
+  },
+);
+const int _myPrimaryValue = 0xFF892929;
+
+
 
 

@@ -1,0 +1,18 @@
+query Venue($id:ID!) {
+    venue(id: $id) {
+        address
+        capacity
+        contacts
+        content
+        email
+        id
+        name
+        phoneNumber
+        picture {
+            ...MediaSimple
+        }
+        post{
+            ...PostComponentSimple
+        }
+    }
+}

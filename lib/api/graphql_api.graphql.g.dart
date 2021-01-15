@@ -76,6 +76,7 @@ const _$OrderStatusTypeEnumMap = {
   OrderStatusType.paid: 'Paid',
   OrderStatusType.refunded: 'Refunded',
   OrderStatusType.refunding: 'Refunding',
+  OrderStatusType.removed: 'Removed',
   OrderStatusType.requestRefund: 'RequestRefund',
   OrderStatusType.unpaied: 'Unpaied',
   OrderStatusType.artemisUnknown: 'ARTEMIS_UNKNOWN',
@@ -562,7 +563,16 @@ const _$SexTypeEnumMap = {
 
 UserSimpleMixin$Image _$UserSimpleMixin$ImageFromJson(
     Map<String, dynamic> json) {
-  return UserSimpleMixin$Image()..url = json['url'] as String;
+  return UserSimpleMixin$Image()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$UserSimpleMixin$ImageToJson(
@@ -575,7 +585,15 @@ Map<String, dynamic> _$UserSimpleMixin$ImageToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -921,7 +939,6 @@ Map<String, dynamic> _$Article$QueryToJson(Article$Query instance) {
 ArticleSimpleMixin$Media _$ArticleSimpleMixin$MediaFromJson(
     Map<String, dynamic> json) {
   return ArticleSimpleMixin$Media()
-    ..$$typename = json['__typename'] as String
     ..id = json['id'] as String
     ..url = json['url'] as String
     ..formats = json['formats']
@@ -943,7 +960,6 @@ Map<String, dynamic> _$ArticleSimpleMixin$MediaToJson(
     }
   }
 
-  writeNotNull('__typename', instance.$$typename);
   writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
   writeNotNull('formats', instance.formats);
@@ -1039,7 +1055,6 @@ Map<String, dynamic> _$ArticleSimpleMixin$PostToJson(
 PostComponentSimpleMixin$Medias _$PostComponentSimpleMixin$MediasFromJson(
     Map<String, dynamic> json) {
   return PostComponentSimpleMixin$Medias()
-    ..$$typename = json['__typename'] as String
     ..id = json['id'] as String
     ..url = json['url'] as String
     ..formats = json['formats']
@@ -1061,7 +1076,6 @@ Map<String, dynamic> _$PostComponentSimpleMixin$MediasToJson(
     }
   }
 
-  writeNotNull('__typename', instance.$$typename);
   writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
   writeNotNull('formats', instance.formats);
@@ -1149,7 +1163,15 @@ PostComponentSimpleMixin$Trademark$Image
     _$PostComponentSimpleMixin$Trademark$ImageFromJson(
         Map<String, dynamic> json) {
   return PostComponentSimpleMixin$Trademark$Image()
-    ..url = json['url'] as String;
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$PostComponentSimpleMixin$Trademark$ImageToJson(
@@ -1162,7 +1184,15 @@ Map<String, dynamic> _$PostComponentSimpleMixin$Trademark$ImageToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -2144,7 +2174,16 @@ Map<String, dynamic> _$ChildInfoSimpleMixin$ParentToJson(
 
 UserDetailMixin$Image _$UserDetailMixin$ImageFromJson(
     Map<String, dynamic> json) {
-  return UserDetailMixin$Image()..url = json['url'] as String;
+  return UserDetailMixin$Image()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$UserDetailMixin$ImageToJson(
@@ -2157,7 +2196,15 @@ Map<String, dynamic> _$UserDetailMixin$ImageToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -4190,7 +4237,14 @@ CreateEhr$Mutation$CreateEhr$Ehr$Medias
         Map<String, dynamic> json) {
   return CreateEhr$Mutation$CreateEhr$Ehr$Medias()
     ..id = json['id'] as String
-    ..url = json['url'] as String;
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$CreateEhr$Mutation$CreateEhr$Ehr$MediasToJson(
@@ -4205,6 +4259,13 @@ Map<String, dynamic> _$CreateEhr$Mutation$CreateEhr$Ehr$MediasToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -5034,7 +5095,16 @@ Map<String, dynamic> _$OrderSimpleMixin$ItemsToJson(
 
 OrderItemSimpleMixin$Picture _$OrderItemSimpleMixin$PictureFromJson(
     Map<String, dynamic> json) {
-  return OrderItemSimpleMixin$Picture()..url = json['url'] as String;
+  return OrderItemSimpleMixin$Picture()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$OrderItemSimpleMixin$PictureToJson(
@@ -5047,7 +5117,15 @@ Map<String, dynamic> _$OrderItemSimpleMixin$PictureToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -6456,7 +6534,14 @@ Map<String, dynamic> _$DoctorUpdate$MutationToJson(
 Ehr$Query$Ehr$Medias _$Ehr$Query$Ehr$MediasFromJson(Map<String, dynamic> json) {
   return Ehr$Query$Ehr$Medias()
     ..id = json['id'] as String
-    ..url = json['url'] as String;
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$Ehr$Query$Ehr$MediasToJson(
@@ -6471,6 +6556,13 @@ Map<String, dynamic> _$Ehr$Query$Ehr$MediasToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -7863,7 +7955,16 @@ Map<String, dynamic> _$Login$MutationToJson(Login$Mutation instance) {
 }
 
 UserMeMixin$Image _$UserMeMixin$ImageFromJson(Map<String, dynamic> json) {
-  return UserMeMixin$Image()..url = json['url'] as String;
+  return UserMeMixin$Image()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$UserMeMixin$ImageToJson(UserMeMixin$Image instance) {
@@ -7875,7 +7976,15 @@ Map<String, dynamic> _$UserMeMixin$ImageToJson(UserMeMixin$Image instance) {
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -9542,7 +9651,16 @@ Map<String, dynamic> _$Parenting$QueryToJson(Parenting$Query instance) {
 
 ParentingDetailMixin$PdfFiles _$ParentingDetailMixin$PdfFilesFromJson(
     Map<String, dynamic> json) {
-  return ParentingDetailMixin$PdfFiles()..url = json['url'] as String;
+  return ParentingDetailMixin$PdfFiles()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$ParentingDetailMixin$PdfFilesToJson(
@@ -9555,13 +9673,30 @@ Map<String, dynamic> _$ParentingDetailMixin$PdfFilesToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
 ParentingDetailMixin$Media _$ParentingDetailMixin$MediaFromJson(
     Map<String, dynamic> json) {
-  return ParentingDetailMixin$Media()..url = json['url'] as String;
+  return ParentingDetailMixin$Media()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$ParentingDetailMixin$MediaToJson(
@@ -9574,7 +9709,15 @@ Map<String, dynamic> _$ParentingDetailMixin$MediaToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -11127,7 +11270,6 @@ Map<String, dynamic> _$Post$QueryToJson(Post$Query instance) {
 PostSimpleMixin$Medias _$PostSimpleMixin$MediasFromJson(
     Map<String, dynamic> json) {
   return PostSimpleMixin$Medias()
-    ..$$typename = json['__typename'] as String
     ..id = json['id'] as String
     ..url = json['url'] as String
     ..formats = json['formats']
@@ -11149,7 +11291,6 @@ Map<String, dynamic> _$PostSimpleMixin$MediasToJson(
     }
   }
 
-  writeNotNull('__typename', instance.$$typename);
   writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
   writeNotNull('formats', instance.formats);
@@ -11228,7 +11369,16 @@ Map<String, dynamic> _$PostSimpleMixin$CoverBackgroundColorToJson(
 
 PostSimpleMixin$Trademark$Image _$PostSimpleMixin$Trademark$ImageFromJson(
     Map<String, dynamic> json) {
-  return PostSimpleMixin$Trademark$Image()..url = json['url'] as String;
+  return PostSimpleMixin$Trademark$Image()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$PostSimpleMixin$Trademark$ImageToJson(
@@ -11241,7 +11391,15 @@ Map<String, dynamic> _$PostSimpleMixin$Trademark$ImageToJson(
     }
   }
 
+  writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -13014,7 +13172,14 @@ UpdateEhr$Mutation$UpdateEhr$Ehr$Medias
         Map<String, dynamic> json) {
   return UpdateEhr$Mutation$UpdateEhr$Ehr$Medias()
     ..id = json['id'] as String
-    ..url = json['url'] as String;
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
 }
 
 Map<String, dynamic> _$UpdateEhr$Mutation$UpdateEhr$Ehr$MediasToJson(
@@ -13029,6 +13194,13 @@ Map<String, dynamic> _$UpdateEhr$Mutation$UpdateEhr$Ehr$MediasToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
   return val;
 }
 
@@ -15468,6 +15640,183 @@ Map<String, dynamic> _$UpdateUserAgreementInputToJson(
   return val;
 }
 
+Venue$Query$Venue$Picture _$Venue$Query$Venue$PictureFromJson(
+    Map<String, dynamic> json) {
+  return Venue$Query$Venue$Picture()
+    ..id = json['id'] as String
+    ..url = json['url'] as String
+    ..formats = json['formats']
+    ..width = json['width'] as int
+    ..height = json['height'] as int
+    ..ext = json['ext'] as String
+    ..caption = json['caption'] as String
+    ..name = json['name'] as String
+    ..size = (json['size'] as num)?.toDouble();
+}
+
+Map<String, dynamic> _$Venue$Query$Venue$PictureToJson(
+    Venue$Query$Venue$Picture instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('url', instance.url);
+  writeNotNull('formats', instance.formats);
+  writeNotNull('width', instance.width);
+  writeNotNull('height', instance.height);
+  writeNotNull('ext', instance.ext);
+  writeNotNull('caption', instance.caption);
+  writeNotNull('name', instance.name);
+  writeNotNull('size', instance.size);
+  return val;
+}
+
+Venue$Query$Venue$Post _$Venue$Query$Venue$PostFromJson(
+    Map<String, dynamic> json) {
+  return Venue$Query$Venue$Post()
+    ..id = json['id'] as String
+    ..title = json['title'] as String
+    ..subtitle = json['subtitle'] as String
+    ..medias = (json['medias'] as List)
+        ?.map((e) => e == null
+            ? null
+            : PostComponentSimpleMixin$Medias.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList()
+    ..categories = (json['categories'] as List)
+        ?.map((e) => e == null
+            ? null
+            : PostComponentSimpleMixin$Categories.fromJson(
+                e as Map<String, dynamic>))
+        ?.toList()
+    ..recommended = json['recommended'] as bool
+    ..updatedDay = fromGraphQLDateToDartDateTime(json['updated_day'] as String)
+    ..vipColor = json['vip_color'] == null
+        ? null
+        : PostComponentSimpleMixin$VipColor.fromJson(
+            json['vip_color'] as Map<String, dynamic>)
+    ..coverBackgroundColor = json['cover_background_color'] == null
+        ? null
+        : PostComponentSimpleMixin$CoverBackgroundColor.fromJson(
+            json['cover_background_color'] as Map<String, dynamic>)
+    ..price = (json['price'] as num)?.toDouble()
+    ..trademark = json['trademark'] == null
+        ? null
+        : PostComponentSimpleMixin$Trademark.fromJson(
+            json['trademark'] as Map<String, dynamic>)
+    ..currency = json['currency'] == null
+        ? null
+        : PostComponentSimpleMixin$Currency.fromJson(
+            json['currency'] as Map<String, dynamic>)
+    ..author = json['author'] == null
+        ? null
+        : PostComponentSimpleMixin$Author.fromJson(
+            json['author'] as Map<String, dynamic>)
+    ..vipText = json['vipText'] as String
+    ..prePrice = (json['prePrice'] as num)?.toDouble()
+    ..rating = json['rating'] as int
+    ..needShipping = json['needShipping'] as bool;
+}
+
+Map<String, dynamic> _$Venue$Query$Venue$PostToJson(
+    Venue$Query$Venue$Post instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
+  writeNotNull('title', instance.title);
+  writeNotNull('subtitle', instance.subtitle);
+  writeNotNull('medias', instance.medias?.map((e) => e?.toJson())?.toList());
+  writeNotNull(
+      'categories', instance.categories?.map((e) => e?.toJson())?.toList());
+  writeNotNull('recommended', instance.recommended);
+  writeNotNull(
+      'updated_day', fromDartDateTimeToGraphQLDate(instance.updatedDay));
+  writeNotNull('vip_color', instance.vipColor?.toJson());
+  writeNotNull(
+      'cover_background_color', instance.coverBackgroundColor?.toJson());
+  writeNotNull('price', instance.price);
+  writeNotNull('trademark', instance.trademark?.toJson());
+  writeNotNull('currency', instance.currency?.toJson());
+  writeNotNull('author', instance.author?.toJson());
+  writeNotNull('vipText', instance.vipText);
+  writeNotNull('prePrice', instance.prePrice);
+  writeNotNull('rating', instance.rating);
+  writeNotNull('needShipping', instance.needShipping);
+  return val;
+}
+
+Venue$Query$Venue _$Venue$Query$VenueFromJson(Map<String, dynamic> json) {
+  return Venue$Query$Venue()
+    ..address = json['address'] as String
+    ..capacity = json['capacity'] as int
+    ..contacts = json['contacts'] as String
+    ..content = json['content'] as String
+    ..email = json['email'] as String
+    ..id = json['id'] as String
+    ..name = json['name'] as String
+    ..phoneNumber = json['phoneNumber'] as String
+    ..picture = json['picture'] == null
+        ? null
+        : Venue$Query$Venue$Picture.fromJson(
+            json['picture'] as Map<String, dynamic>)
+    ..post = json['post'] == null
+        ? null
+        : Venue$Query$Venue$Post.fromJson(json['post'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$Venue$Query$VenueToJson(Venue$Query$Venue instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('address', instance.address);
+  writeNotNull('capacity', instance.capacity);
+  writeNotNull('contacts', instance.contacts);
+  writeNotNull('content', instance.content);
+  writeNotNull('email', instance.email);
+  writeNotNull('id', instance.id);
+  writeNotNull('name', instance.name);
+  writeNotNull('phoneNumber', instance.phoneNumber);
+  writeNotNull('picture', instance.picture?.toJson());
+  writeNotNull('post', instance.post?.toJson());
+  return val;
+}
+
+Venue$Query _$Venue$QueryFromJson(Map<String, dynamic> json) {
+  return Venue$Query()
+    ..venue = json['venue'] == null
+        ? null
+        : Venue$Query$Venue.fromJson(json['venue'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$Venue$QueryToJson(Venue$Query instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('venue', instance.venue?.toJson());
+  return val;
+}
+
 Version$Query$Version _$Version$Query$VersionFromJson(
     Map<String, dynamic> json) {
   return Version$Query$Version()
@@ -17629,6 +17978,25 @@ Map<String, dynamic> _$UpdateUserAggreementArgumentsToJson(
   }
 
   writeNotNull('input', instance.input?.toJson());
+  return val;
+}
+
+VenueArguments _$VenueArgumentsFromJson(Map<String, dynamic> json) {
+  return VenueArguments(
+    id: json['id'] as String,
+  );
+}
+
+Map<String, dynamic> _$VenueArgumentsToJson(VenueArguments instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', instance.id);
   return val;
 }
 
