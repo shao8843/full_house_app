@@ -2,6 +2,7 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:flutter/material.dart';
+import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 
 
@@ -22,9 +23,9 @@ abstract class PostLoginPage<T extends DataHasPost> extends DataHasPostPage<T> {
 
   @override
   Future<User> pushLoginPage(BuildContext context) async {
-    // return await Navigator.of(context).push(MaterialPageRoute(
-    //     builder: (_) => LoginPage()
-    // ));
+    return await Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => LoginPage()
+    ));
   }
 
   @override
@@ -73,9 +74,9 @@ abstract class EventLoginPage<T extends DataHasEvent> extends DataHasEventPostPa
 
   @override
   Future<User> pushLoginPage(BuildContext context) async {
-    // return await Navigator.of(context).push(MaterialPageRoute(
-    //     builder: (_) => LoginPage()
-    // ));
+    return await Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => LoginPage()
+    ));
   }
 
   @override
