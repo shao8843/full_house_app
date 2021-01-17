@@ -6902,10 +6902,10 @@ Map<String, dynamic> _$Event$Query$Event$EventComponent$EventPricesToJson(
   return val;
 }
 
-Event$Query$Event$EventComponent$Venue
-    _$Event$Query$Event$EventComponent$VenueFromJson(
+Event$Query$Event$EventComponent$EventVenue
+    _$Event$Query$Event$EventComponent$EventVenueFromJson(
         Map<String, dynamic> json) {
-  return Event$Query$Event$EventComponent$Venue()
+  return Event$Query$Event$EventComponent$EventVenue()
     ..id = json['id'] as String
     ..name = json['name'] as String
     ..address = json['address'] as String
@@ -6915,8 +6915,8 @@ Event$Query$Event$EventComponent$Venue
             json['picture'] as Map<String, dynamic>);
 }
 
-Map<String, dynamic> _$Event$Query$Event$EventComponent$VenueToJson(
-    Event$Query$Event$EventComponent$Venue instance) {
+Map<String, dynamic> _$Event$Query$Event$EventComponent$EventVenueToJson(
+    Event$Query$Event$EventComponent$EventVenue instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -6947,10 +6947,10 @@ Event$Query$Event$EventComponent _$Event$Query$Event$EventComponentFromJson(
                 e as Map<String, dynamic>))
         ?.toList()
     ..meetingId = json['meetingId'] as String
-    ..venue = json['venue'] == null
+    ..eventVenue = json['eventVenue'] == null
         ? null
-        : Event$Query$Event$EventComponent$Venue.fromJson(
-            json['venue'] as Map<String, dynamic>);
+        : Event$Query$Event$EventComponent$EventVenue.fromJson(
+            json['eventVenue'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$Event$Query$Event$EventComponentToJson(
@@ -6972,7 +6972,7 @@ Map<String, dynamic> _$Event$Query$Event$EventComponentToJson(
   writeNotNull(
       'eventPrices', instance.eventPrices?.map((e) => e?.toJson())?.toList());
   writeNotNull('meetingId', instance.meetingId);
-  writeNotNull('venue', instance.venue?.toJson());
+  writeNotNull('eventVenue', instance.eventVenue?.toJson());
   return val;
 }
 

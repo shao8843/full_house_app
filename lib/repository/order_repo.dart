@@ -3,13 +3,19 @@ import 'package:full_house_app/api/graphql_api.graphql.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:flutter/services.dart';
+import 'package:full_house_app/api/extensions.dart';
 
 class OrderRepository extends RemoteRepositoryBase<OrderData> {
 
-  Future<OrderData> saveOrder({String userId,OrderData orderData}) async {
+  Future<OrderData> saveOrder({String userId,
+    OrderData orderData,
+    AddressData addressData}) async {
+    ArgumentError.checkNotNull(orderData);
+    logger.info("saveOrder");
+
     if (orderData.total() == 0.00 || orderData.currency == null) {
       throw PlatformException(
-          code: 'GrahpqlDataError',
+          code: kArtechErrorCode,
           message: 'OrderItemData converting:' + orderData.toString()
       );
     }
@@ -17,7 +23,9 @@ class OrderRepository extends RemoteRepositoryBase<OrderData> {
     var list = orderData.items.where((element) =>
     element.quantity != null && element.quantity > 0);
 
-    return await createMyOrder(CreateMyOrderInput(
+    logger.info('Source Type:${list.first.sourceType}');
+
+    return await _createMyOrder(CreateMyOrderInput(
 
         data: MyOrderInput(
           additional: null,
@@ -25,7 +33,7 @@ class OrderRepository extends RemoteRepositoryBase<OrderData> {
           description: orderData.description,
           items: list.map<OrderItemInput>((e) =>
               e.toInput()).toList(),
-          shippingAddress: null,
+          shippingAddress: addressData?.toGraphqlInput(),
         )
     ));
   }
@@ -85,7 +93,7 @@ class OrderRepository extends RemoteRepositoryBase<OrderData> {
     return result;
   }
 
-  Future<OrderData> createMyOrder(CreateMyOrderInput input) async {
+  Future<OrderData> _createMyOrder(CreateMyOrderInput input) async {
     var q =
     CreateMyOrderMutation(variables: CreateMyOrderArguments(input: input));
     var result = await mutate(q.toMutationOption());

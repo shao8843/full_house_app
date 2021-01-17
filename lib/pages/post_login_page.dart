@@ -35,9 +35,13 @@ abstract class PostLoginPage<T extends DataHasPost> extends DataHasPostPage<T> {
   }
 
   @override
-  Future<OrderData> saveOrder(String userId, OrderData orderData) async {
+  Future<OrderData> saveOrder(String userId,
+      OrderData orderData,
+      AddressData addressData) async {
     return await OrderRepository().saveOrder(
-        orderData: orderData, userId: userId
+        orderData: orderData,
+        userId: userId,
+        addressData: addressData
     );
   }
 
@@ -82,9 +86,13 @@ abstract class EventLoginPage<T extends DataHasEvent> extends DataHasEventPostPa
   }
 
   @override
-  Future<OrderData> saveOrder(String userId, OrderData orderData) async {
+  Future<OrderData> saveOrder(String userId,
+      OrderData orderData,
+      AddressData addressData) async {
     return await OrderRepository().saveOrder(
-        orderData: orderData, userId: userId
+        orderData: orderData,
+        userId: userId,
+        addressData: addressData
     );
   }
 
