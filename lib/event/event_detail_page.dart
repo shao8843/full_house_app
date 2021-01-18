@@ -1,10 +1,11 @@
 import 'package:flutter_artech/flutter_artech.dart';
+import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/repository/event_repo.dart';
 import 'package:flutter/material.dart';
-import 'package:full_house_app/pages/post_login_page.dart';
 import 'package:full_house_app/pages/login_page.dart';
 
-class EventDetailPage extends EventLoginPage<EventData> {
+class EventDetailPage extends DataHasEventPostPage<EventData>
+    with MixinDataHasPost {
 
   const EventDetailPage({Key key,
     @required String id, @required String entityType, @required String name})

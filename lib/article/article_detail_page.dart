@@ -1,10 +1,11 @@
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/article/article_data.dart';
+import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/repository/article_repo.dart';
 import 'package:flutter/material.dart';
-import 'package:full_house_app/pages/post_login_page.dart';
 
-class ArticleDetailPage extends PostLoginPage<ArticleData> {
+class ArticleDetailPage extends DataHasPostPage<ArticleData>
+    with MixinDataHasPost{
 
   const ArticleDetailPage({Key key,
     @required String id,@required String entityType,@required String name})
