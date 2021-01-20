@@ -84,22 +84,10 @@ mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {
   }
 
   @override
-  Future<UserAddressData> deleteShippingAddress(
-      UserAddressData userAddressData) async {
-    return UserAddressRepo().deleteMy(userAddressData.id);
-  }
-
-  @override
   Future<CreditCardData> saveUserCreditCard(CreditCardData creditCardData) {
     ArgumentError.checkNotNull(creditCardData);
     // TODO: implement saveUserCreditCard
     throw UnimplementedError();
-  }
-
-  @override
-  Future<UserAddressData> createShippingAddress(AddressData addressData) async {
-    ArgumentError.checkNotNull(addressData);
-    return await UserAddressRepo().createMy(addressData, 'shipping');
   }
 
   @override

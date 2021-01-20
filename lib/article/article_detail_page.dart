@@ -33,13 +33,6 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData>
   }
 
   @override
-  Future<List<OrderData>> getOrders(BuildContext context,
-      ArticleData dataHasPost) async {
-    // TODO: implement getOrders
-    return [];
-  }
-
-  @override
   void onTimer(int seconds) {
     // TODO: implement onTimer
   }

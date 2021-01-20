@@ -34,13 +34,6 @@ class EventDetailPage extends DataHasEventPostPage<EventData>
   }
 
   @override
-  Future<List<OrderData>> getOrders(BuildContext context,
-      EventData dataHasPost) async {
-    // TODO: implement getOrders
-    return [];
-  }
-
-  @override
   void onTimer(int seconds) {
     // TODO: implement onTimer
   }

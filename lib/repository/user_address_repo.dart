@@ -54,11 +54,16 @@ class UserAddressRepo  extends RemoteRepositoryBase<UserAddressData> {
 
   Future<UserAddressData> updateMy(
       UserAddressData userAddressData) async {
+    ArgumentError.checkNotNull(userAddressData);
+    ArgumentError.checkNotNull(userAddressData.address);
     try {
-      return await _updateMy(userAddressData.id, EditMyAddressInput(
-          address: userAddressData.address.toGraphqlInput(),
-          tag: userAddressData.tag
-      ));
+      if (userAddressData.id != null)
+        return await _updateMy(userAddressData.id, EditMyAddressInput(
+            address: userAddressData.address.toGraphqlInput(),
+            tag: userAddressData.tag
+        ));
+      else
+        return await createMy(userAddressData.address, userAddressData.tag);
     } catch (error) {
       logger.severe(error);
       rethrow;
