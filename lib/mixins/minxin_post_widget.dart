@@ -7,6 +7,7 @@ import 'package:flutter/services.dart';
 import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_address_repo.dart';
+import 'package:full_house_app/repository/term_of_service_repo.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -114,6 +115,11 @@ mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {
       UserAddressData userAddressData) async {
     ArgumentError.checkNotNull(userAddressData);
     return UserAddressRepo().updateMy(userAddressData);
+  }
+
+  @override
+  Future<PaymentPolicyData> getPaymentAgreement() async {
+    return await TermOfServiceRepository().getPaymentPolicyAsync();
   }
 
 }

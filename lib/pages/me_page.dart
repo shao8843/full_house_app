@@ -7,6 +7,7 @@ import 'package:full_house_app/pages/user_edit_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
+import 'package:full_house_app/repository/term_of_service_repo.dart';
 
 class MePage extends MePageBase<MeData> {
 
@@ -63,5 +64,10 @@ class MePage extends MePageBase<MeData> {
   Future<String> getClientSecret(OrderData orderData) async {
     return await OrderRepository().requestStripePayment(
         orderData.id, options: null);
+  }
+
+  @override
+  Future<PaymentPolicyData> getPaymentPolicy() async {
+    return await TermOfServiceRepository().getPaymentPolicyAsync();
   }
 }
