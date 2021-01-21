@@ -1,6 +1,7 @@
 
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/general_post_list_page.dart';
+import 'package:full_house_app/repository/credit_card_repo.dart';
 import 'package:full_house_app/repository/post_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -8,6 +9,7 @@ import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_address_repo.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
+import 'package:full_house_app/repository/user_repo.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -84,18 +86,17 @@ mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {
   }
 
   @override
-  Future<CreditCardData> saveUserCreditCard(CreditCardData creditCardData) {
+  Future<CreditCardData> saveUserCreditCard(CreditCardData creditCardData,
+      User user) async {
     ArgumentError.checkNotNull(creditCardData);
-    // TODO: implement saveUserCreditCard
-    throw UnimplementedError();
+    return await CreditCardRepository().saveUserCreditCard(
+        creditCardData: creditCardData, user: user);
   }
 
   @override
-  Future<List<CreditCardData>> getUserCreditCards(
-      CreditCardData creditCardData) {
-    ArgumentError.checkNotNull(creditCardData);
-    // TODO: implement getUserCreditCards
-    throw UnimplementedError();
+  Future<List<CreditCardData>> getUserCreditCards(User user) async {
+    ArgumentError.checkNotNull(user);
+    return await CreditCardRepository().getCreditCardListAsync(user: user);
   }
 
   @override
@@ -108,6 +109,11 @@ mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {
   @override
   Future<PaymentPolicyData> getPaymentAgreement() async {
     return await TermOfServiceRepository().getPaymentPolicyAsync();
+  }
+
+  @override
+  Future<User> getUser() async {
+    return await UserRepository().getMe();
   }
 
 }

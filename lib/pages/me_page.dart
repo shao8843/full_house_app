@@ -8,6 +8,7 @@ import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
+import 'package:full_house_app/repository/credit_card_repo.dart';
 
 class MePage extends MePageBase<MeData> {
 
@@ -69,5 +70,17 @@ class MePage extends MePageBase<MeData> {
   @override
   Future<PaymentPolicyData> getPaymentPolicy() async {
     return await TermOfServiceRepository().getPaymentPolicyAsync();
+  }
+
+  @override
+  Future<List<CreditCardData>> getUserCreditCards(User user) async {
+    return await CreditCardRepository().getCreditCardListAsync(user: user);
+  }
+
+  @override
+  Future<CreditCardData> saveUserCreditCard(CreditCardData creditCardData,
+      User user) async {
+    return await CreditCardRepository().saveUserCreditCard(
+        creditCardData: creditCardData, user: user);
   }
 }

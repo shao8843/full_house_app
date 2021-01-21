@@ -44,4 +44,5 @@ class EventDetailPage extends DataHasEventPostPage<EventData>
       builder: (_)=>LoginPage()
     ));
   }
+
 }
