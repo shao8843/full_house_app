@@ -10,6 +10,7 @@ import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_address_repo.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
+import 'package:full_house_app/pages/meeting_login_page.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -43,6 +44,15 @@ mixin MixinPostWidget on PostListWidget {
     ));
   }
 
+}
+
+mixin MixinDataHasEvent<T extends DataHasEvent> on DataHasEventPostPage<T> {
+  @override
+  Future<void> pushMeetingLogin(BuildContext context,
+      {String meetingId, String entityType, T data}) async {
+    await Navigator.of(context).push(MaterialPageRoute(
+        builder: (_) => MeetingLoginPage(meetingId: meetingId,)));
+  }
 }
 
 mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {

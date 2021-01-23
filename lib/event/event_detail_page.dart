@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:full_house_app/pages/login_page.dart';
 
 class EventDetailPage extends DataHasEventPostPage<EventData>
-    with MixinDataHasPost {
+    with MixinDataHasPost,MixinDataHasEvent {
 
   const EventDetailPage({Key key,
     @required String id, @required String entityType, @required String name})
