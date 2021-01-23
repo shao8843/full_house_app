@@ -112,7 +112,7 @@ mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {
   }
 
   @override
-  Future<User> getUser() async {
+  Future<User> getLoginUser() async {
     return await UserRepository().getMe();
   }
 

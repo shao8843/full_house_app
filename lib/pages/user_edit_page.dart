@@ -9,19 +9,19 @@ import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/api/graphql_api.dart';
 import 'package:full_house_app/api/extensions.dart';
 
-class UserEditPage extends UserEditPageBase<MeData> {
+class UserEditPage extends UserEditPageBase {
 
   const UserEditPage({Key key,})
       :super(key: key);
 
   @override
-  List<Widget> customersList(MeData user) {
+  List<Widget> customersList(User user) {
     // TODO: implement customList
     return [];
   }
 
   @override
-  Future<MeData> updateUser(MeData user) async {
+  Future<User> updateUser(User user) async {
     return UserRepository().updateMe(UpdateMeInput(
       data: UpdateMe(
           birthday:user.birthday,
@@ -42,7 +42,7 @@ class UserEditPage extends UserEditPageBase<MeData> {
   }
 
   @override
-  Future<MediaFileInfo> updateUserImage(MeData user,File file) async {
+  Future<MediaFileInfo> updateUserImage(User user,File file) async {
     return await UploadRepo().uploadAccountImage(file,userId: user.id);
   }
 

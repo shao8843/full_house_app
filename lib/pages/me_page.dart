@@ -10,7 +10,7 @@ import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/repository/credit_card_repo.dart';
 
-class MePage extends MePageBase<MeData> {
+class MePage extends MePageBase {
 
   const MePage({Key key}) :super(key: key);
 
@@ -37,7 +37,7 @@ class MePage extends MePageBase<MeData> {
   }
 
   @override
-  Future<MeData> pushUserEditor(BuildContext context, MeData user) async {
+  Future<User> pushUserEditor(BuildContext context, User user) async {
     return await Navigator.of(context).push<User>(MaterialPageRoute(
         builder: (_) => UserEditPage()
     ));
