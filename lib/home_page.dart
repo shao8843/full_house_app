@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/me_page.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
+import 'package:full_house_app/repository/user_repo.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:full_house_app/pages/full_house_page.dart';
 
@@ -11,7 +12,7 @@ class HomePage extends HomeBase {
 
   @override
   Map<BottomNavigationBarItem, Widget> bottomNavigationBarMap(
-      BuildContext context) {
+      BuildContext context,User user) {
 
     Map<BottomNavigationBarItem, Widget> map = {};
 
@@ -35,6 +36,8 @@ class HomePage extends HomeBase {
     return map;
   }
 
-
-
+  @override
+  Future<User> getLoginUser() async {
+    return await UserRepository().getMe();
+  }
 }
