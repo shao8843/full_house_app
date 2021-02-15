@@ -2,6 +2,7 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:full_house_app/article/article_data.dart';
 import 'package:full_house_app/api/graphql_api.dart';
+import 'package:artech_api/api.dart';
 
 class ArticleRepository extends RemoteRepositoryBase<ArticleData> {
 

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:artech_core/core.dart';
+import 'package:artech_account/account.dart';
 
 part 'article_data.g.dart';
 

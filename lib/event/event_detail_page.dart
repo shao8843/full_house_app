@@ -38,11 +38,4 @@ class EventDetailPage extends DataHasEventPostPage<EventData>
     // TODO: implement onTimer
   }
 
-  @override
-  Future<User> pushLoginPage(BuildContext context) async  {
-    return await Navigator.of(context).push(MaterialPageRoute(
-      builder: (_)=>LoginPage()
-    ));
-  }
-
 }

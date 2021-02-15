@@ -11,6 +11,7 @@ import 'package:full_house_app/repository/user_address_repo.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
+import 'package:artech_account/account.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -119,11 +120,6 @@ mixin MixinDataHasPost<T extends DataHasPost> on DataHasPostPage<T> {
   @override
   Future<PaymentPolicyData> getPaymentAgreement() async {
     return await TermOfServiceRepository().getPaymentPolicyAsync();
-  }
-
-  @override
-  Future<User> getLoginUser() async {
-    return await UserRepository().getMe();
   }
 
 }

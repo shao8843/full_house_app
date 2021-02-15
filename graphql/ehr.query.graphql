@@ -6,7 +6,7 @@ query Ehr($id:ID!) {
         medias{
             ...MediaSimple
         }
-        data
+        record
         questionnaire_answer{
             ...QuestionnaireAnswerSimple
         }

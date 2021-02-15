@@ -9,8 +9,9 @@ import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/repository/credit_card_repo.dart';
+import 'package:artech_account/account.dart';
 
-class MePage extends MePageBase {
+class MePage extends MePageBase<MeData> {
 
   const MePage({Key key}) :super(key: key);
 
@@ -22,8 +23,8 @@ class MePage extends MePageBase {
   }
 
   @override
-  Future<User> pushLoginPage(BuildContext context) async {
-    return await Navigator.of(context).push<User>(MaterialPageRoute(
+  Future<MeData> pushLoginPage(BuildContext context) async {
+    return await Navigator.of(context).push<MeData>(MaterialPageRoute(
         settings: RouteSettings(
           name: '\LoginPage',
         ),
@@ -32,12 +33,12 @@ class MePage extends MePageBase {
   }
 
   @override
-  Future<MeData> getLoginUser() async {
+  Future<MeData> getLoginUser({memory: true}) async {
     return await UserRepository().getMe();
   }
 
   @override
-  Future<User> pushUserEditor(BuildContext context, User user) async {
+  Future<MeData> pushUserEditor(BuildContext context, User user) async {
     return await Navigator.of(context).push<User>(MaterialPageRoute(
         builder: (_) => UserEditPage()
     ));

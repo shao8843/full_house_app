@@ -1,6 +1,8 @@
 
 import 'package:json_annotation/json_annotation.dart';
-import 'package:flutter_artech/flutter_artech.dart' hide AuthorData;
+import 'package:flutter_artech/flutter_artech.dart';
+import 'package:artech_account/account.dart';
+import 'package:artech_core/core.dart';
 
 part 'me_data.g.dart';
 
@@ -11,8 +13,17 @@ class MeData extends User {
 
   @JsonKey(name: 'user_agreements')
   List<AgreementData> userAgreements;
+  int orderCount;
 
   MeData();
+
+  factory MeData.fromJsonAndOrderCount(
+      Map<String, dynamic> json,int orderCount){
+    var ret= MeData.fromJson(json);
+    //ret could be null
+    ret?.orderCount = orderCount;
+    return ret;
+  }
 
   factory MeData.fromJson(Map<String, dynamic> json) =>
       json.toData(_$MeDataFromJson);

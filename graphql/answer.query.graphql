@@ -1,14 +1,7 @@
 query QuestionnaireAnswer ($id:ID!) {
     questionnaireAnswer(id:$id) {
         ...QuestionnaireAnswerSimple
-        created_by {
-            id
-            username
-        }
-        updated_by {
-            id
-            username
-        }
+
     }
 }
 

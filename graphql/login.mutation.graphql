@@ -1,5 +1,6 @@
 mutation login($input:UsersPermissionsLoginInput!){
     login(input: $input){
+        expire_at,
         jwt,
         user{
             ...UserMe

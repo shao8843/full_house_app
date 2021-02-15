@@ -1,5 +1,5 @@
 import 'package:http/http.dart';
-import 'package:flutter_artech/flutter_artech.dart';
+import 'package:artech_api/graphql/date_time_parser.dart';
 
 
 DateTime fromGraphQLDateTimeToDartDateTime(String date) =>

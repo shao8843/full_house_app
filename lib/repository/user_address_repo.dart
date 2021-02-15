@@ -2,6 +2,8 @@ import 'package:full_house_app/api/graphql_api.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/api/extensions.dart';
+import 'package:artech_api/api.dart';
+import 'package:artech_account/account.dart';
 
 class UserAddressRepo  extends RemoteRepositoryBase<UserAddressData> {
 

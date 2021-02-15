@@ -1,43 +1,29 @@
+import 'package:full_house_app/full_house_module.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_artech/flutter_artech.dart';
-import 'package:full_house_app/home_page.dart';
-import 'package:full_house_app/repository/login_repo.dart';
-import 'package:graphql_flutter/graphql_flutter.dart';
-import 'package:full_house_app/user/me_data.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:artech_core/core.dart';
+import 'package:logging/logging.dart';
 
 void main() async {
+  //init logging
+  Logger.root.level = Level.ALL;
+  //init logger
+  Logger.root.onRecord.listen((LogRecord rec) {
+    var levelText = rec.level.compareTo(Level.SEVERE)>=0?"ERROR" :rec.level.name;
+    print(
+        '[${levelText}][${rec.time}][${rec.loggerName}]: ${rec.message}');
+  });
+
   WidgetsFlutterBinding.ensureInitialized();
 
-  await ApplicationConfig.globalConfigurationInitial();
+  var module = FullHouseModule();
+  var bootStrap=AppBootstrap(module);
+  await bootStrap.executeBeforeApplicationInit();
+  bootStrap.configureAllServices();
+  //TODO load splash
+  await bootStrap.executeApplicationInit();
 
-  await initHiveForFlutter();
-
-  runApp(ArtechApp<MeData>(
-      registerPassword: LoginRepository.emailPasswordSignUp,
-      registerCode: LoginRepository.codeSignUp,
-      passwordLogin: LoginRepository.passwordSignIn,
-      codeLogin: LoginRepository.codeSignIn,
-      sendCodeRequestByPhone: LoginRepository.sendCodeRequestByPhone,
-      getLoginUser: LoginRepository.getLoginUser,
-      title: '满堂彩',
-      home: HomePage(),
-      themeData: ThemeData(
-    // This is the theme of your application.
-    //
-    // Try running your application with "flutter run". You'll see the
-    // application has a blue toolbar. Then, without quitting the app, try
-    // changing the primarySwatch below to Colors.green and then invoke
-    // "hot reload" (press "r" in the console where you ran "flutter run",
-    // or simply save your changes to "hot reload" in a Flutter IDE).
-    // Notice that the counter didn't reset back to zero; the application
-    // is not restarted.
-    primarySwatch: _myColor,
-    // This makes the visual density adapt to the platform that you run
-    // the app on. For desktop platforms, the controls will be smaller and
-    // closer together (more dense) than on mobile platforms.
-    visualDensity: VisualDensity.adaptivePlatformDensity,
-
-  )));
+  runApp(ModularApp(module:module ));
 }
 
 

@@ -5,25 +5,21 @@ schema {
     mutation: Mutation
 }
 
-union Morph = AboutFastBraiin | Account | AccountAggregator | AccountConnection | AccountConnectionCreated_at | AccountConnectionCreated_by | AccountConnectionId | AccountConnectionName | AccountConnectionUpdated_at | AccountConnectionUpdated_by | AccountConnectionUser | AccountGroupBy | AppTermOfService | Article | ArticleAggregator | ArticleConnection | ArticleConnectionContent | ArticleConnectionCreated_at | ArticleConnectionCreated_by | ArticleConnectionForPerson | ArticleConnectionId | ArticleConnectionName | ArticleConnectionPost | ArticleConnectionPublished_at | ArticleConnectionQuestionnaire | ArticleConnectionSubject | ArticleConnectionUpdated_at | ArticleConnectionUpdated_by | ArticleGroupBy | AssessmentQuestionnaire | AssessmentQuestionnaireAggregator | AssessmentQuestionnaireAggregatorAvg | AssessmentQuestionnaireAggregatorMax | AssessmentQuestionnaireAggregatorMin | AssessmentQuestionnaireAggregatorSum | AssessmentQuestionnaireConnection | AssessmentQuestionnaireConnectionContent | AssessmentQuestionnaireConnectionCreated_at | AssessmentQuestionnaireConnectionCreated_by | AssessmentQuestionnaireConnectionForPerson | AssessmentQuestionnaireConnectionGame | AssessmentQuestionnaireConnectionId | AssessmentQuestionnaireConnectionLevel | AssessmentQuestionnaireConnectionName | AssessmentQuestionnaireConnectionPeriod_length | AssessmentQuestionnaireConnectionPost | AssessmentQuestionnaireConnectionQuestionnaire | AssessmentQuestionnaireConnectionQuestionnaireOnly | AssessmentQuestionnaireConnectionSubject | AssessmentQuestionnaireConnectionUpdated_at | AssessmentQuestionnaireConnectionUpdated_by | AssessmentQuestionnaireGroupBy | AssessmentTermOfService | Book | BookAggregator | BookConnection | BookConnectionContent | BookConnectionCreated_at | BookConnectionCreated_by | BookConnectionId | BookConnectionName | BookConnectionPost | BookConnectionType | BookConnectionUpdated_at | BookConnectionUpdated_by | BookGroupBy | Category | CategoryAggregator | CategoryConnection | CategoryConnectionCreated_at | CategoryConnectionCreated_by | CategoryConnectionId | CategoryConnectionName | CategoryConnectionType | CategoryConnectionUpdated_at | CategoryConnectionUpdated_by | CategoryGroupBy | Color | ColorAggregator | ColorConnection | ColorConnectionColor | ColorConnectionCreated_at | ColorConnectionCreated_by | ColorConnectionId | ColorConnectionUpdated_at | ColorConnectionUpdated_by | ColorGroupBy | ComponentContentEpisode | ComponentContentEventComponent | ComponentContentEventPrice | ComponentContentPost | ComponentContentProduct | ComponentContentSummary | ComponentDataAddress | ComponentDataEhrSubject | ComponentDataEhrType | ComponentDataFor | ComponentDataPosition | ComponentUserAuthor | ComponentUserChild | ComponentUserCounselor | ComponentUserDoctor | ComponentUserNurse | ComponentUserParent | ComponentUserPatient | ComponentUserTeacher | Course | CourseAggregator | CourseConnection | CourseConnectionContent | CourseConnectionContentType | CourseConnectionCreated_at | CourseConnectionCreated_by | CourseConnectionId | CourseConnectionPicture | CourseConnectionSubtitle | CourseConnectionTitle | CourseConnectionUpdated_at | CourseConnectionUpdated_by | CourseGroupBy | CreditCard | CreditCardAggregator | CreditCardAggregatorAvg | CreditCardAggregatorMax | CreditCardAggregatorMin | CreditCardAggregatorSum | CreditCardConnection | CreditCardConnectionAddress | CreditCardConnectionCreated_at | CreditCardConnectionCreated_by | CreditCardConnectionCvc | CreditCardConnectionExpMonth | CreditCardConnectionExpYear | CreditCardConnectionId | CreditCardConnectionName | CreditCardConnectionNumber | CreditCardConnectionUpdated_at | CreditCardConnectionUpdated_by | CreditCardConnectionUser | CreditCardGroupBy | Ehr | EhrAggregator | EhrConnection | EhrConnectionCreated_at | EhrConnectionCreated_by | EhrConnectionData | EhrConnectionId | EhrConnectionOffice_comments | EhrConnectionPatient | EhrConnectionPosition | EhrConnectionQuestionnaire_answer | EhrConnectionSource | EhrConnectionSource_id | EhrConnectionStatus | EhrConnectionSubject | EhrConnectionType | EhrConnectionUpdated_at | EhrConnectionUpdated_by | EhrConnectionUser | EhrGroupBy | Event | EventAggregator | EventAggregatorAvg | EventAggregatorMax | EventAggregatorMin | EventAggregatorSum | EventConnection | EventConnectionContent | EventConnectionCreated_at | EventConnectionCreated_by | EventConnectionDicount | EventConnectionEventComponent | EventConnectionId | EventConnectionName | EventConnectionPost | EventConnectionUpdated_at | EventConnectionUpdated_by | EventGroupBy | Exercise | ExerciseAggregator | ExerciseAggregatorAvg | ExerciseAggregatorMax | ExerciseAggregatorMin | ExerciseAggregatorSum | ExerciseConnection | ExerciseConnectionAge | ExerciseConnectionContent | ExerciseConnectionCreated_at | ExerciseConnectionCreated_by | ExerciseConnectionForPerson | ExerciseConnectionGame | ExerciseConnectionId | ExerciseConnectionLevel | ExerciseConnectionPost | ExerciseConnectionQuestionnaire | ExerciseConnectionSubject | ExerciseConnectionType | ExerciseConnectionUpdated_at | ExerciseConnectionUpdated_by | ExerciseGroupBy | FlowchartTest | Game | GameAggregator | GameAggregatorAvg | GameAggregatorMax | GameAggregatorMin | GameAggregatorSum | GameConnection | GameConnectionContent | GameConnectionCptLevel | GameConnectionCreated_at | GameConnectionCreated_by | GameConnectionId | GameConnectionName | GameConnectionProvider | GameConnectionTrademark | GameConnectionType | GameConnectionUpdated_at | GameConnectionUpdated_by | GameGroupBy | Location | LocationAggregator | LocationConnection | LocationConnectionAddress | LocationConnectionContent | LocationConnectionCreated_at | LocationConnectionCreated_by | LocationConnectionDescription | LocationConnectionEmail | LocationConnectionId | LocationConnectionName | LocationConnectionPhone | LocationConnectionPost | LocationConnectionQrCode | LocationConnectionType | LocationConnectionUpdated_at | LocationConnectionUpdated_by | LocationConnectionWeb | LocationGroupBy | Parenting | ParentingAggregator | ParentingConnection | ParentingConnectionContent | ParentingConnectionCreated_at | ParentingConnectionCreated_by | ParentingConnectionId | ParentingConnectionName | ParentingConnectionPdfFiles | ParentingConnectionPost | ParentingConnectionQuestionnaire | ParentingConnectionSubject | ParentingConnectionUpdated_at | ParentingConnectionUpdated_by | ParentingGroupBy | Patient | PatientAggregator | PatientConnection | PatientConnectionCounselor | PatientConnectionCreated_at | PatientConnectionCreated_by | PatientConnectionDoctor | PatientConnectionId | PatientConnectionMeetingId | PatientConnectionName | PatientConnectionNurse | PatientConnectionUpdated_at | PatientConnectionUpdated_by | PatientConnectionUser | PatientGroupBy | PaymentCurrency | PaymentCurrencyAggregator | PaymentCurrencyAggregatorAvg | PaymentCurrencyAggregatorMax | PaymentCurrencyAggregatorMin | PaymentCurrencyAggregatorSum | PaymentCurrencyConnection | PaymentCurrencyConnectionCode | PaymentCurrencyConnectionCreated_at | PaymentCurrencyConnectionCreated_by | PaymentCurrencyConnectionDecimal_digits | PaymentCurrencyConnectionId | PaymentCurrencyConnectionName | PaymentCurrencyConnectionName_plural | PaymentCurrencyConnectionRounding | PaymentCurrencyConnectionSymbol | PaymentCurrencyConnectionSymbol_native | PaymentCurrencyConnectionUpdated_at | PaymentCurrencyConnectionUpdated_by | PaymentCurrencyGroupBy | PaymentMethod | PaymentMethodAggregator | PaymentMethodConnection | PaymentMethodConnectionBillingAddress | PaymentMethodConnectionCreated_at | PaymentMethodConnectionCreated_by | PaymentMethodConnectionCreditCard | PaymentMethodConnectionId | PaymentMethodConnectionLivemode | PaymentMethodConnectionStripeId | PaymentMethodConnectionType | PaymentMethodConnectionUpdated_at | PaymentMethodConnectionUpdated_by | PaymentMethodConnectionUser | PaymentMethodGroupBy | PaymentOrder | PaymentOrderAggregator | PaymentOrderAggregatorAvg | PaymentOrderAggregatorMax | PaymentOrderAggregatorMin | PaymentOrderAggregatorSum | PaymentOrderConnection | PaymentOrderConnectionAdditional | PaymentOrderConnectionCreated_at | PaymentOrderConnectionCreated_by | PaymentOrderConnectionCurrency | PaymentOrderConnectionDescription | PaymentOrderConnectionExpire | PaymentOrderConnectionId | PaymentOrderConnectionNeedpayPrice | PaymentOrderConnectionOutTradeId | PaymentOrderConnectionOutTradeProvider | PaymentOrderConnectionPaiedPrice | PaymentOrderConnectionPrice | PaymentOrderConnectionShippingAddress | PaymentOrderConnectionStatus | PaymentOrderConnectionUpdated_at | PaymentOrderConnectionUpdated_by | PaymentOrderConnectionUser | PaymentOrderConnectionUuid | PaymentOrderGroupBy | PaymentOrderItem | PaymentPolicy | PaymentSetting | Plan | PlanAggregator | PlanConnection | PlanConnectionContent | PlanConnectionCreated_at | PlanConnectionCreated_by | PlanConnectionForPerson | PlanConnectionId | PlanConnectionName | PlanConnectionPost | PlanConnectionQuestionnaire | PlanConnectionUpdated_at | PlanConnectionUpdated_by | PlanGroupBy | Post | PostAggregator | PostAggregatorAvg | PostAggregatorMax | PostAggregatorMin | PostAggregatorSum | PostConnection | PostConnectionAuthor | PostConnectionCover_background_color | PostConnectionCreated_at | PostConnectionCreated_by | PostConnectionCurrency | PostConnectionEntityRawId | PostConnectionEntityType | PostConnectionId | PostConnectionNeedShipping | PostConnectionPrePrice | PostConnectionPrice | PostConnectionRating | PostConnectionRawPostId | PostConnectionRecommended | PostConnectionStatus | PostConnectionSubtitle | PostConnectionTitle | PostConnectionTrademark | PostConnectionUpdated_at | PostConnectionUpdated_by | PostConnectionUpdated_day | PostConnectionVipText | PostConnectionVip_color | PostGroupBy | Provider | ProviderAggregator | ProviderConnection | ProviderConnectionAddress | ProviderConnectionContent | ProviderConnectionCreated_at | ProviderConnectionCreated_by | ProviderConnectionEmail | ProviderConnectionId | ProviderConnectionName | ProviderConnectionPhoneNumber | ProviderConnectionTrademark | ProviderConnectionUpdated_at | ProviderConnectionUpdated_by | ProviderGroupBy | Questionnaire | QuestionnaireAggregator | QuestionnaireAnswer | QuestionnaireAnswerAggregator | QuestionnaireAnswerConnection | QuestionnaireAnswerConnectionCreated_at | QuestionnaireAnswerConnectionCreated_by | QuestionnaireAnswerConnectionData | QuestionnaireAnswerConnectionId | QuestionnaireAnswerConnectionName | QuestionnaireAnswerConnectionQuestionnaire | QuestionnaireAnswerConnectionSubmitted | QuestionnaireAnswerConnectionUpdated_at | QuestionnaireAnswerConnectionUpdated_by | QuestionnaireAnswerConnectionUser | QuestionnaireAnswerGroupBy | QuestionnaireConnection | QuestionnaireConnectionCreated_at | QuestionnaireConnectionCreated_by | QuestionnaireConnectionData | QuestionnaireConnectionDisplayName | QuestionnaireConnectionId | QuestionnaireConnectionName | QuestionnaireConnectionProvider | QuestionnaireConnectionUpdated_at | QuestionnaireConnectionUpdated_by | QuestionnaireGroupBy | Reminder | ReminderAggregator | ReminderConnection | ReminderConnectionBody | ReminderConnectionCreated_at | ReminderConnectionCreated_by | ReminderConnectionDateTime | ReminderConnectionId | ReminderConnectionName | ReminderConnectionSource | ReminderConnectionSourceId | ReminderConnectionType | ReminderConnectionUpdated_at | ReminderConnectionUpdated_by | ReminderConnectionUser | ReminderGroupBy | Supplement | SupplementAggregator | SupplementConnection | SupplementConnectionContent | SupplementConnectionCreated_at | SupplementConnectionCreated_by | SupplementConnectionForPerson | SupplementConnectionId | SupplementConnectionName | SupplementConnectionPost | SupplementConnectionProvider | SupplementConnectionSubject | SupplementConnectionUpdated_at | SupplementConnectionUpdated_by | SupplementGroupBy | Telemetry | TelemetryAggregator | TelemetryConnection | TelemetryConnectionCreated_at | TelemetryConnectionCreated_by | TelemetryConnectionId | TelemetryConnectionRaw | TelemetryConnectionUpdated_at | TelemetryConnectionUpdated_by | TelemetryGroupBy | Trademark | TrademarkAggregator | TrademarkConnection | TrademarkConnectionCreated_at | TrademarkConnectionCreated_by | TrademarkConnectionId | TrademarkConnectionImage | TrademarkConnectionName | TrademarkConnectionUpdated_at | TrademarkConnectionUpdated_by | TrademarkGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreated_at | UploadFileConnectionCreated_by | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdated_at | UploadFileConnectionUpdated_by | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileGroupBy | UserAddress | UserAddressAggregator | UserAddressConnection | UserAddressConnectionAddress | UserAddressConnectionCreated_at | UserAddressConnectionCreated_by | UserAddressConnectionId | UserAddressConnectionTag | UserAddressConnectionUpdated_at | UserAddressConnectionUpdated_by | UserAddressConnectionUser | UserAddressGroupBy | UserAgreement | UserAgreementAggregator | UserAgreementConnection | UserAgreementConnectionContent | UserAgreementConnectionCreated_at | UserAgreementConnectionCreated_by | UserAgreementConnectionId | UserAgreementConnectionLastVersionDate | UserAgreementConnectionTermOfServiceType | UserAgreementConnectionUpdated_at | UserAgreementConnectionUpdated_by | UserAgreementConnectionUser | UserAgreementConnectionValue | UserAgreementGroupBy | UserAssessment | UserAssessmentAggregator | UserAssessmentConnection | UserAssessmentConnectionAssessment_questionnaire | UserAssessmentConnectionCreated_at | UserAssessmentConnectionCreated_by | UserAssessmentConnectionId | UserAssessmentConnectionUpdated_at | UserAssessmentConnectionUpdated_by | UserAssessmentConnectionUser | UserAssessmentGroupBy | UserExercise | UserExerciseAggregator | UserExerciseConnection | UserExerciseConnectionCreated_at | UserExerciseConnectionCreated_by | UserExerciseConnectionExercise | UserExerciseConnectionId | UserExerciseConnectionUpdated_at | UserExerciseConnectionUpdated_by | UserExerciseConnectionUser | UserExerciseGroupBy | UserParenting | UserParentingAggregator | UserParentingConnection | UserParentingConnectionCreated_at | UserParentingConnectionCreated_by | UserParentingConnectionId | UserParentingConnectionParenting | UserParentingConnectionUpdated_at | UserParentingConnectionUpdated_by | UserParentingConnectionUser | UserParentingGroupBy | UserPermissionsPasswordPayload | UserPlan | UserPlanAggregator | UserPlanConnection | UserPlanConnectionCreated_at | UserPlanConnectionCreated_by | UserPlanConnectionId | UserPlanConnectionStatus | UserPlanConnectionUpdated_at | UserPlanConnectionUpdated_by | UserPlanConnectionUser | UserPlanGroupBy | UsersOrganizationunitsOrganizationUnit | UsersOrganizationunitsOrganizationUnitAggregator | UsersOrganizationunitsOrganizationUnitConnection | UsersOrganizationunitsOrganizationUnitConnectionCode | UsersOrganizationunitsOrganizationUnitConnectionCreated_at | UsersOrganizationunitsOrganizationUnitConnectionCreated_by | UsersOrganizationunitsOrganizationUnitConnectionDisplayName | UsersOrganizationunitsOrganizationUnitConnectionId | UsersOrganizationunitsOrganizationUnitConnectionParent | UsersOrganizationunitsOrganizationUnitConnectionUpdated_at | UsersOrganizationunitsOrganizationUnitConnectionUpdated_by | UsersOrganizationunitsOrganizationUnitGroupBy | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionCreated_by | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleConnectionUpdated_by | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionAccountInfo | UsersPermissionsUserConnectionAuthorInfo | UsersPermissionsUserConnectionBirthday | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionChildInfo | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionContent | UsersPermissionsUserConnectionCounselorInfo | UsersPermissionsUserConnectionCountryCode | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionCreated_by | UsersPermissionsUserConnectionDoctorInfo | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionFullName | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionImage | UsersPermissionsUserConnectionName | UsersPermissionsUserConnectionNurseInfo | UsersPermissionsUserConnectionParentInfo | UsersPermissionsUserConnectionPatientInfo | UsersPermissionsUserConnectionPhone | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionQrUrl | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionSecond_email | UsersPermissionsUserConnectionSex | UsersPermissionsUserConnectionStatus | UsersPermissionsUserConnectionTeacherInfo | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUpdated_by | UsersPermissionsUserConnectionUsername | UsersPermissionsUserGroupBy | Venue | VenueAggregator | VenueAggregatorAvg | VenueAggregatorMax | VenueAggregatorMin | VenueAggregatorSum | VenueConnection | VenueConnectionAddress | VenueConnectionCapacity | VenueConnectionContacts | VenueConnectionContent | VenueConnectionCreated_at | VenueConnectionCreated_by | VenueConnectionEmail | VenueConnectionId | VenueConnectionName | VenueConnectionPhoneNumber | VenueConnectionPicture | VenueConnectionPost | VenueConnectionUpdated_at | VenueConnectionUpdated_by | VenueGroupBy | Version | Webinar | WebinarAggregator | WebinarConnection | WebinarConnectionContent | WebinarConnectionCreated_at | WebinarConnectionCreated_by | WebinarConnectionId | WebinarConnectionMeetingId | WebinarConnectionPost | WebinarConnectionSchedule | WebinarConnectionSubject | WebinarConnectionUpdated_at | WebinarConnectionUpdated_by | WebinarGroupBy | batchTelemetryPayload | cancelOrderPayload | createAccountPayload | createArticlePayload | createAssessmentQuestionnairePayload | createBookPayload | createCategoryPayload | createColorPayload | createCoursePayload | createCreditCardPayload | createCurrencyPayload | createEhrPayload | createEventPayload | createExercisePayload | createGamePayload | createLocationPayload | createOrderPayload | createOrganizationUnitPayload | createParentingPayload | createPatientPayload | createPaymentMethodPayload | createPlanPayload | createPostPayload | createProviderPayload | createQuestionnaireAnswerPayload | createQuestionnairePayload | createReminderPayload | createRolePayload | createSupplementPayload | createTelemetryPayload | createTrademarkPayload | createUserAddressPayload | createUserAgreementPayload | createUserAssessmentPayload | createUserExercisePayload | createUserParentingPayload | createUserPayload | createUserPlanPayload | createVenuePayload | createWebinarPayload | deleteAboutFastBraiinPayload | deleteAccountPayload | deleteAppTermOfServicePayload | deleteArticlePayload | deleteAssessmentQuestionnairePayload | deleteAssessmentTermOfServicePayload | deleteBookPayload | deleteCategoryPayload | deleteColorPayload | deleteCoursePayload | deleteCreditCardPayload | deleteCurrencyPayload | deleteEhrPayload | deleteEventPayload | deleteExercisePayload | deleteGamePayload | deleteLocationPayload | deleteOrderPayload | deleteOrganizationUnitPayload | deleteParentingPayload | deletePatientPayload | deletePaymentMethodPayload | deletePaymentPolicyPayload | deletePlanPayload | deletePostPayload | deleteProviderPayload | deleteQuestionnaireAnswerPayload | deleteQuestionnairePayload | deleteReminderPayload | deleteRolePayload | deleteSupplementPayload | deleteTelemetryPayload | deleteTrademarkPayload | deleteUserAddressPayload | deleteUserAgreementPayload | deleteUserAssessmentPayload | deleteUserExercisePayload | deleteUserParentingPayload | deleteUserPayload | deleteUserPlanPayload | deleteVenuePayload | deleteVersionPayload | deleteWebinarPayload | requestOrderPayPayload | updateAboutFastBraiinPayload | updateAccountPayload | updateAppTermOfServicePayload | updateArticlePayload | updateAssessmentQuestionnairePayload | updateAssessmentTermOfServicePayload | updateBookPayload | updateCategoryPayload | updateColorPayload | updateCoursePayload | updateCreditCardPayload | updateCurrencyPayload | updateEhrPayload | updateEventPayload | updateExercisePayload | updateGamePayload | updateLocationPayload | updateOrderPayload | updateOrganizationUnitPayload | updateParentingPayload | updatePatientPayload | updatePaymentMethodPayload | updatePaymentPolicyPayload | updatePlanPayload | updatePostPayload | updateProviderPayload | updateQuestionnaireAnswerPayload | updateQuestionnairePayload | updateReminderPayload | updateRolePayload | updateSupplementPayload | updateTelemetryPayload | updateTrademarkPayload | updateUserAddressPayload | updateUserAgreementPayload | updateUserAssessmentPayload | updateUserExercisePayload | updateUserParentingPayload | updateUserPayload | updateUserPlanPayload | updateVenuePayload | updateVersionPayload | updateWebinarPayload
+union Morph = AboutFastBraiin | Account | AccountAggregator | AccountConnection | AccountConnectionCreated_at | AccountConnectionId | AccountConnectionName | AccountConnectionUpdated_at | AccountConnectionUser | AccountGroupBy | AppTermOfService | Article | ArticleAggregator | ArticleConnection | ArticleConnectionContent | ArticleConnectionCreated_at | ArticleConnectionForPerson | ArticleConnectionId | ArticleConnectionName | ArticleConnectionPost | ArticleConnectionPublished_at | ArticleConnectionQuestionnaire | ArticleConnectionSubject | ArticleConnectionUpdated_at | ArticleGroupBy | AssessmentQuestionnaire | AssessmentQuestionnaireAggregator | AssessmentQuestionnaireAggregatorAvg | AssessmentQuestionnaireAggregatorMax | AssessmentQuestionnaireAggregatorMin | AssessmentQuestionnaireAggregatorSum | AssessmentQuestionnaireConnection | AssessmentQuestionnaireConnectionContent | AssessmentQuestionnaireConnectionCreated_at | AssessmentQuestionnaireConnectionForPerson | AssessmentQuestionnaireConnectionGame | AssessmentQuestionnaireConnectionId | AssessmentQuestionnaireConnectionLevel | AssessmentQuestionnaireConnectionName | AssessmentQuestionnaireConnectionPeriod_length | AssessmentQuestionnaireConnectionPost | AssessmentQuestionnaireConnectionProduct | AssessmentQuestionnaireConnectionQuestionnaire | AssessmentQuestionnaireConnectionQuestionnaireOnly | AssessmentQuestionnaireConnectionSubject | AssessmentQuestionnaireConnectionUpdated_at | AssessmentQuestionnaireGroupBy | AssessmentTermOfService | Book | BookAggregator | BookConnection | BookConnectionContent | BookConnectionCreated_at | BookConnectionId | BookConnectionName | BookConnectionPost | BookConnectionProduct | BookConnectionType | BookConnectionUpdated_at | BookGroupBy | Category | CategoryAggregator | CategoryConnection | CategoryConnectionCreated_at | CategoryConnectionId | CategoryConnectionName | CategoryConnectionType | CategoryConnectionUpdated_at | CategoryGroupBy | Classification | ClassificationAggregator | ClassificationAggregatorAvg | ClassificationAggregatorMax | ClassificationAggregatorMin | ClassificationAggregatorSum | ClassificationConnection | ClassificationConnectionCreated_at | ClassificationConnectionId | ClassificationConnectionName | ClassificationConnectionPublished_at | ClassificationConnectionSortIndex | ClassificationConnectionUpdated_at | ClassificationGroupBy | Color | ColorAggregator | ColorConnection | ColorConnectionColor | ColorConnectionCreated_at | ColorConnectionId | ColorConnectionUpdated_at | ColorGroupBy | ComponentContentEpisode | ComponentContentEventComponent | ComponentContentEventPrice | ComponentContentPost | ComponentContentProduct | ComponentContentSummary | ComponentDataAddress | ComponentDataEhrSubject | ComponentDataEhrType | ComponentDataFor | ComponentDataPosition | ComponentUserAuthor | ComponentUserChild | ComponentUserCounselor | ComponentUserDoctor | ComponentUserNurse | ComponentUserParent | ComponentUserPatient | ComponentUserTeacher | Course | CourseAggregator | CourseConnection | CourseConnectionContent | CourseConnectionContentType | CourseConnectionCreated_at | CourseConnectionId | CourseConnectionPicture | CourseConnectionSubtitle | CourseConnectionTitle | CourseConnectionUpdated_at | CourseGroupBy | CreditCard | CreditCardAggregator | CreditCardAggregatorAvg | CreditCardAggregatorMax | CreditCardAggregatorMin | CreditCardAggregatorSum | CreditCardConnection | CreditCardConnectionAddress | CreditCardConnectionCreated_at | CreditCardConnectionCvc | CreditCardConnectionExpMonth | CreditCardConnectionExpYear | CreditCardConnectionId | CreditCardConnectionName | CreditCardConnectionNumber | CreditCardConnectionUpdated_at | CreditCardConnectionUser | CreditCardGroupBy | Ehr | EhrAggregator | EhrConnection | EhrConnectionClassification | EhrConnectionCreated_at | EhrConnectionId | EhrConnectionOffice_comments | EhrConnectionPatient | EhrConnectionPosition | EhrConnectionQuestionnaire_answer | EhrConnectionRecord | EhrConnectionSource | EhrConnectionSource_id | EhrConnectionStatus | EhrConnectionSubject | EhrConnectionUpdated_at | EhrGroupBy | Event | EventAggregator | EventAggregatorAvg | EventAggregatorMax | EventAggregatorMin | EventAggregatorSum | EventConnection | EventConnectionContent | EventConnectionCreated_at | EventConnectionDicount | EventConnectionEventComponent | EventConnectionId | EventConnectionName | EventConnectionPost | EventConnectionUpdated_at | EventGroupBy | Exercise | ExerciseAggregator | ExerciseAggregatorAvg | ExerciseAggregatorMax | ExerciseAggregatorMin | ExerciseAggregatorSum | ExerciseConnection | ExerciseConnectionAge | ExerciseConnectionContent | ExerciseConnectionCreated_at | ExerciseConnectionForPerson | ExerciseConnectionGame | ExerciseConnectionId | ExerciseConnectionLevel | ExerciseConnectionPost | ExerciseConnectionQuestionnaire | ExerciseConnectionSubject | ExerciseConnectionType | ExerciseConnectionUpdated_at | ExerciseGroupBy | FlowchartTest | Game | GameAggregator | GameAggregatorAvg | GameAggregatorMax | GameAggregatorMin | GameAggregatorSum | GameConnection | GameConnectionContent | GameConnectionCptLevel | GameConnectionCreated_at | GameConnectionId | GameConnectionName | GameConnectionProvider | GameConnectionTrademark | GameConnectionType | GameConnectionUpdated_at | GameGroupBy | Location | LocationAggregator | LocationConnection | LocationConnectionAddress | LocationConnectionContent | LocationConnectionCreated_at | LocationConnectionDescription | LocationConnectionEmail | LocationConnectionId | LocationConnectionName | LocationConnectionPhone | LocationConnectionPost | LocationConnectionQrCode | LocationConnectionType | LocationConnectionUpdated_at | LocationConnectionWeb | LocationGroupBy | Parenting | ParentingAggregator | ParentingConnection | ParentingConnectionContent | ParentingConnectionCreated_at | ParentingConnectionId | ParentingConnectionName | ParentingConnectionPdfFiles | ParentingConnectionPost | ParentingConnectionQuestionnaire | ParentingConnectionSubject | ParentingConnectionUpdated_at | ParentingGroupBy | Patient | PatientAggregator | PatientConnection | PatientConnectionCounselor | PatientConnectionCreated_at | PatientConnectionDoctor | PatientConnectionId | PatientConnectionLocation | PatientConnectionMeetingId | PatientConnectionName | PatientConnectionNurse | PatientConnectionStatus | PatientConnectionTeacher | PatientConnectionUpdated_at | PatientConnectionUser | PatientGroupBy | PaymentCurrency | PaymentCurrencyAggregator | PaymentCurrencyAggregatorAvg | PaymentCurrencyAggregatorMax | PaymentCurrencyAggregatorMin | PaymentCurrencyAggregatorSum | PaymentCurrencyConnection | PaymentCurrencyConnectionCode | PaymentCurrencyConnectionCreated_at | PaymentCurrencyConnectionDecimal_digits | PaymentCurrencyConnectionId | PaymentCurrencyConnectionName | PaymentCurrencyConnectionName_plural | PaymentCurrencyConnectionRounding | PaymentCurrencyConnectionSymbol | PaymentCurrencyConnectionSymbol_native | PaymentCurrencyConnectionUpdated_at | PaymentCurrencyGroupBy | PaymentMethod | PaymentMethodAggregator | PaymentMethodConnection | PaymentMethodConnectionBillingAddress | PaymentMethodConnectionCreated_at | PaymentMethodConnectionCreditCard | PaymentMethodConnectionId | PaymentMethodConnectionLivemode | PaymentMethodConnectionStripeId | PaymentMethodConnectionType | PaymentMethodConnectionUpdated_at | PaymentMethodConnectionUser | PaymentMethodGroupBy | PaymentOrder | PaymentOrderAggregator | PaymentOrderAggregatorAvg | PaymentOrderAggregatorMax | PaymentOrderAggregatorMin | PaymentOrderAggregatorSum | PaymentOrderConnection | PaymentOrderConnectionAdditional | PaymentOrderConnectionCreated_at | PaymentOrderConnectionCurrency | PaymentOrderConnectionDescription | PaymentOrderConnectionExpire | PaymentOrderConnectionId | PaymentOrderConnectionNeedpayPrice | PaymentOrderConnectionOutTradeId | PaymentOrderConnectionOutTradeProvider | PaymentOrderConnectionPaiedPrice | PaymentOrderConnectionPrice | PaymentOrderConnectionShippingAddress | PaymentOrderConnectionStatus | PaymentOrderConnectionUpdated_at | PaymentOrderConnectionUser | PaymentOrderConnectionUuid | PaymentOrderGroupBy | PaymentOrderItem | PaymentPolicy | PaymentSetting | Plan | PlanAggregator | PlanConnection | PlanConnectionContent | PlanConnectionCreated_at | PlanConnectionForPerson | PlanConnectionId | PlanConnectionName | PlanConnectionPost | PlanConnectionQuestionnaire | PlanConnectionUpdated_at | PlanGroupBy | Post | PostAggregator | PostAggregatorAvg | PostAggregatorMax | PostAggregatorMin | PostAggregatorSum | PostConnection | PostConnectionAuthor | PostConnectionCover_background_color | PostConnectionCreated_at | PostConnectionCurrency | PostConnectionEntityRawId | PostConnectionEntityType | PostConnectionId | PostConnectionNeedShipping | PostConnectionPrePrice | PostConnectionPrice | PostConnectionPublished_at | PostConnectionRating | PostConnectionRawPostId | PostConnectionRecommended | PostConnectionStatus | PostConnectionSubtitle | PostConnectionTitle | PostConnectionTrademark | PostConnectionUpdated_at | PostConnectionUpdated_day | PostConnectionVipText | PostConnectionVip_color | PostGroupBy | Provider | ProviderAggregator | ProviderConnection | ProviderConnectionAddress | ProviderConnectionContent | ProviderConnectionCreated_at | ProviderConnectionEmail | ProviderConnectionId | ProviderConnectionName | ProviderConnectionPhoneNumber | ProviderConnectionTrademark | ProviderConnectionUpdated_at | ProviderGroupBy | Questionnaire | QuestionnaireAggregator | QuestionnaireAnswer | QuestionnaireAnswerAggregator | QuestionnaireAnswerConnection | QuestionnaireAnswerConnectionCreated_at | QuestionnaireAnswerConnectionData | QuestionnaireAnswerConnectionId | QuestionnaireAnswerConnectionName | QuestionnaireAnswerConnectionQuestionnaire | QuestionnaireAnswerConnectionSubmitted | QuestionnaireAnswerConnectionUpdated_at | QuestionnaireAnswerConnectionUser | QuestionnaireAnswerGroupBy | QuestionnaireConnection | QuestionnaireConnectionCreated_at | QuestionnaireConnectionData | QuestionnaireConnectionDisplayName | QuestionnaireConnectionId | QuestionnaireConnectionName | QuestionnaireConnectionProvider | QuestionnaireConnectionUpdated_at | QuestionnaireGroupBy | Reminder | ReminderAggregator | ReminderConnection | ReminderConnectionBody | ReminderConnectionCreated_at | ReminderConnectionDateTime | ReminderConnectionId | ReminderConnectionName | ReminderConnectionSource | ReminderConnectionSourceId | ReminderConnectionType | ReminderConnectionUpdated_at | ReminderConnectionUser | ReminderGroupBy | School | SchoolAggregator | SchoolConnection | SchoolConnectionAddress | SchoolConnectionCreated_at | SchoolConnectionEmail | SchoolConnectionId | SchoolConnectionName | SchoolConnectionPhone | SchoolConnectionPicture | SchoolConnectionType | SchoolConnectionUpdated_at | SchoolGroupBy | Supplement | SupplementAggregator | SupplementConnection | SupplementConnectionContent | SupplementConnectionCreated_at | SupplementConnectionForPerson | SupplementConnectionId | SupplementConnectionName | SupplementConnectionPost | SupplementConnectionProduct | SupplementConnectionSubject | SupplementConnectionUpdated_at | SupplementGroupBy | Telemetry | TelemetryAggregator | TelemetryConnection | TelemetryConnectionCreated_at | TelemetryConnectionId | TelemetryConnectionRaw | TelemetryConnectionUpdated_at | TelemetryGroupBy | Trademark | TrademarkAggregator | TrademarkConnection | TrademarkConnectionCreated_at | TrademarkConnectionId | TrademarkConnectionImage | TrademarkConnectionName | TrademarkConnectionUpdated_at | TrademarkGroupBy | UploadFile | UploadFileAggregator | UploadFileAggregatorAvg | UploadFileAggregatorMax | UploadFileAggregatorMin | UploadFileAggregatorSum | UploadFileConnection | UploadFileConnectionAlternativeText | UploadFileConnectionCaption | UploadFileConnectionCreated_at | UploadFileConnectionExt | UploadFileConnectionFormats | UploadFileConnectionHash | UploadFileConnectionHeight | UploadFileConnectionId | UploadFileConnectionMime | UploadFileConnectionName | UploadFileConnectionPreviewUrl | UploadFileConnectionProvider | UploadFileConnectionProvider_metadata | UploadFileConnectionSize | UploadFileConnectionUpdated_at | UploadFileConnectionUrl | UploadFileConnectionWidth | UploadFileGroupBy | UserAddress | UserAddressAggregator | UserAddressConnection | UserAddressConnectionAddress | UserAddressConnectionCreated_at | UserAddressConnectionId | UserAddressConnectionTag | UserAddressConnectionUpdated_at | UserAddressConnectionUser | UserAddressGroupBy | UserAgreement | UserAgreementAggregator | UserAgreementConnection | UserAgreementConnectionContent | UserAgreementConnectionCreated_at | UserAgreementConnectionId | UserAgreementConnectionLastVersionDate | UserAgreementConnectionTermOfServiceType | UserAgreementConnectionUpdated_at | UserAgreementConnectionUser | UserAgreementConnectionValue | UserAgreementGroupBy | UserAssessment | UserAssessmentAggregator | UserAssessmentConnection | UserAssessmentConnectionAssessment_questionnaire | UserAssessmentConnectionCreated_at | UserAssessmentConnectionId | UserAssessmentConnectionUpdated_at | UserAssessmentConnectionUser | UserAssessmentGroupBy | UserExercise | UserExerciseAggregator | UserExerciseConnection | UserExerciseConnectionCreated_at | UserExerciseConnectionExercise | UserExerciseConnectionId | UserExerciseConnectionUpdated_at | UserExerciseConnectionUser | UserExerciseGroupBy | UserParenting | UserParentingAggregator | UserParentingConnection | UserParentingConnectionCreated_at | UserParentingConnectionId | UserParentingConnectionParenting | UserParentingConnectionUpdated_at | UserParentingConnectionUser | UserParentingGroupBy | UserPermissionsPasswordPayload | UserPlan | UserPlanAggregator | UserPlanConnection | UserPlanConnectionCreated_at | UserPlanConnectionId | UserPlanConnectionStatus | UserPlanConnectionUpdated_at | UserPlanConnectionUser | UserPlanGroupBy | UsersOrganizationunitsOrganizationUnit | UsersOrganizationunitsOrganizationUnitAggregator | UsersOrganizationunitsOrganizationUnitConnection | UsersOrganizationunitsOrganizationUnitConnectionCode | UsersOrganizationunitsOrganizationUnitConnectionCreated_at | UsersOrganizationunitsOrganizationUnitConnectionDisplayName | UsersOrganizationunitsOrganizationUnitConnectionId | UsersOrganizationunitsOrganizationUnitConnectionParent | UsersOrganizationunitsOrganizationUnitConnectionUpdated_at | UsersOrganizationunitsOrganizationUnitGroupBy | UsersPermissionsLoginPayload | UsersPermissionsMe | UsersPermissionsMeRole | UsersPermissionsPermission | UsersPermissionsRefreshTokenPayload | UsersPermissionsRole | UsersPermissionsRoleAggregator | UsersPermissionsRoleConnection | UsersPermissionsRoleConnectionDescription | UsersPermissionsRoleConnectionId | UsersPermissionsRoleConnectionName | UsersPermissionsRoleConnectionType | UsersPermissionsRoleGroupBy | UsersPermissionsUser | UsersPermissionsUserAggregator | UsersPermissionsUserConnection | UsersPermissionsUserConnectionAccountInfo | UsersPermissionsUserConnectionAuthorInfo | UsersPermissionsUserConnectionBirthday | UsersPermissionsUserConnectionBlocked | UsersPermissionsUserConnectionChildInfo | UsersPermissionsUserConnectionConfirmed | UsersPermissionsUserConnectionContent | UsersPermissionsUserConnectionCounselorInfo | UsersPermissionsUserConnectionCreated_at | UsersPermissionsUserConnectionDoctorInfo | UsersPermissionsUserConnectionEmail | UsersPermissionsUserConnectionFullName | UsersPermissionsUserConnectionId | UsersPermissionsUserConnectionImage | UsersPermissionsUserConnectionName | UsersPermissionsUserConnectionNurseInfo | UsersPermissionsUserConnectionParent | UsersPermissionsUserConnectionParentInfo | UsersPermissionsUserConnectionPatientInfo | UsersPermissionsUserConnectionPhone | UsersPermissionsUserConnectionProvider | UsersPermissionsUserConnectionQrUrl | UsersPermissionsUserConnectionRole | UsersPermissionsUserConnectionSecond_email | UsersPermissionsUserConnectionSex | UsersPermissionsUserConnectionStatus | UsersPermissionsUserConnectionTeacherInfo | UsersPermissionsUserConnectionUpdated_at | UsersPermissionsUserConnectionUsername | UsersPermissionsUserGroupBy | Venue | VenueAggregator | VenueAggregatorAvg | VenueAggregatorMax | VenueAggregatorMin | VenueAggregatorSum | VenueConnection | VenueConnectionAddress | VenueConnectionCapacity | VenueConnectionContacts | VenueConnectionContent | VenueConnectionCreated_at | VenueConnectionEmail | VenueConnectionId | VenueConnectionName | VenueConnectionPhoneNumber | VenueConnectionPicture | VenueConnectionPost | VenueConnectionUpdated_at | VenueGroupBy | Version | Webinar | WebinarAggregator | WebinarConnection | WebinarConnectionContent | WebinarConnectionCreated_at | WebinarConnectionId | WebinarConnectionMeetingId | WebinarConnectionPost | WebinarConnectionSchedule | WebinarConnectionSubject | WebinarConnectionUpdated_at | WebinarGroupBy | batchTelemetryPayload | cancelOrderPayload | createAccountPayload | createArticlePayload | createAssessmentQuestionnairePayload | createBookPayload | createCategoryPayload | createClassificationPayload | createColorPayload | createCoursePayload | createCreditCardPayload | createCurrencyPayload | createEhrPayload | createEventPayload | createExercisePayload | createGamePayload | createLocationPayload | createOrderPayload | createOrganizationUnitPayload | createParentingPayload | createPatientPayload | createPaymentMethodPayload | createPlanPayload | createPostPayload | createProviderPayload | createQuestionnaireAnswerPayload | createQuestionnairePayload | createReminderPayload | createRolePayload | createSchoolPayload | createSupplementPayload | createTelemetryPayload | createTrademarkPayload | createUserAddressPayload | createUserAgreementPayload | createUserAssessmentPayload | createUserExercisePayload | createUserParentingPayload | createUserPayload | createUserPlanPayload | createVenuePayload | createWebinarPayload | deleteAboutFastBraiinPayload | deleteAccountPayload | deleteAppTermOfServicePayload | deleteArticlePayload | deleteAssessmentQuestionnairePayload | deleteAssessmentTermOfServicePayload | deleteBookPayload | deleteCategoryPayload | deleteClassificationPayload | deleteColorPayload | deleteCoursePayload | deleteCreditCardPayload | deleteCurrencyPayload | deleteEhrPayload | deleteEventPayload | deleteExercisePayload | deleteFilePayload | deleteGamePayload | deleteLocationPayload | deleteOrderPayload | deleteOrganizationUnitPayload | deleteParentingPayload | deletePatientPayload | deletePaymentMethodPayload | deletePaymentPolicyPayload | deletePlanPayload | deletePostPayload | deleteProviderPayload | deleteQuestionnaireAnswerPayload | deleteQuestionnairePayload | deleteReminderPayload | deleteRolePayload | deleteSchoolPayload | deleteSupplementPayload | deleteTelemetryPayload | deleteTrademarkPayload | deleteUserAddressPayload | deleteUserAgreementPayload | deleteUserAssessmentPayload | deleteUserExercisePayload | deleteUserParentingPayload | deleteUserPayload | deleteUserPlanPayload | deleteVenuePayload | deleteVersionPayload | deleteWebinarPayload | requestOrderPayPayload | updateAboutFastBraiinPayload | updateAccountPayload | updateAppTermOfServicePayload | updateArticlePayload | updateAssessmentQuestionnairePayload | updateAssessmentTermOfServicePayload | updateBookPayload | updateCategoryPayload | updateClassificationPayload | updateColorPayload | updateCoursePayload | updateCreditCardPayload | updateCurrencyPayload | updateEhrPayload | updateEventPayload | updateExercisePayload | updateGamePayload | updateLocationPayload | updateOrderPayload | updateOrganizationUnitPayload | updateParentingPayload | updatePatientPayload | updatePaymentMethodPayload | updatePaymentPolicyPayload | updatePlanPayload | updatePostPayload | updateProviderPayload | updateQuestionnaireAnswerPayload | updateQuestionnairePayload | updateReminderPayload | updateRolePayload | updateSchoolPayload | updateSupplementPayload | updateTelemetryPayload | updateTrademarkPayload | updateUserAddressPayload | updateUserAgreementPayload | updateUserAssessmentPayload | updateUserExercisePayload | updateUserParentingPayload | updateUserPayload | updateUserPlanPayload | updateVenuePayload | updateVersionPayload | updateWebinarPayload
 
 type AboutFastBraiin {
     content: String!
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type Account {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     name: String!
     orders(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrder]
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -43,11 +39,6 @@ type AccountConnectionCreated_at {
     key: DateTime
 }
 
-type AccountConnectionCreated_by {
-    connection: AccountConnection
-    key: ID
-}
-
 type AccountConnectionId {
     connection: AccountConnection
     key: ID
@@ -63,11 +54,6 @@ type AccountConnectionUpdated_at {
     key: DateTime
 }
 
-type AccountConnectionUpdated_by {
-    connection: AccountConnection
-    key: ID
-}
-
 type AccountConnectionUser {
     connection: AccountConnection
     key: ID
@@ -75,32 +61,29 @@ type AccountConnectionUser {
 
 type AccountGroupBy {
     created_at: [AccountConnectionCreated_at]
-    created_by: [AccountConnectionCreated_by]
     id: [AccountConnectionId]
     name: [AccountConnectionName]
     updated_at: [AccountConnectionUpdated_at]
-    updated_by: [AccountConnectionUpdated_by]
     user: [AccountConnectionUser]
 }
 
 type AdminUser {
+    firstname: String!
     id: ID!
+    lastname: String!
     username: String
 }
 
 type AppTermOfService {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     term_of_service: String
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type Article {
     content: String!
     created_at: DateTime!
-    created_by: AdminUser
     episodes: [ComponentContentEpisode]
     forPerson: ComponentDataFor
     id: ID!
@@ -108,11 +91,10 @@ type Article {
     name: String!
     order_items(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrderItem]
     post: ComponentContentPost
-    published_at: Date
+    published_at: DateTime
     questionnaire: Questionnaire
     subject: ComponentDataEhrSubject
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type ArticleAggregator {
@@ -134,11 +116,6 @@ type ArticleConnectionContent {
 type ArticleConnectionCreated_at {
     connection: ArticleConnection
     key: DateTime
-}
-
-type ArticleConnectionCreated_by {
-    connection: ArticleConnection
-    key: ID
 }
 
 type ArticleConnectionForPerson {
@@ -163,7 +140,7 @@ type ArticleConnectionPost {
 
 type ArticleConnectionPublished_at {
     connection: ArticleConnection
-    key: ID
+    key: DateTime
 }
 
 type ArticleConnectionQuestionnaire {
@@ -181,15 +158,9 @@ type ArticleConnectionUpdated_at {
     key: DateTime
 }
 
-type ArticleConnectionUpdated_by {
-    connection: ArticleConnection
-    key: ID
-}
-
 type ArticleGroupBy {
     content: [ArticleConnectionContent]
     created_at: [ArticleConnectionCreated_at]
-    created_by: [ArticleConnectionCreated_by]
     forPerson: [ArticleConnectionForPerson]
     id: [ArticleConnectionId]
     name: [ArticleConnectionName]
@@ -198,13 +169,11 @@ type ArticleGroupBy {
     questionnaire: [ArticleConnectionQuestionnaire]
     subject: [ArticleConnectionSubject]
     updated_at: [ArticleConnectionUpdated_at]
-    updated_by: [ArticleConnectionUpdated_by]
 }
 
 type AssessmentQuestionnaire {
     content: String!
     created_at: DateTime!
-    created_by: AdminUser
     forPerson: ComponentDataFor
     game: Game
     id: ID!
@@ -213,11 +182,11 @@ type AssessmentQuestionnaire {
     name: String!
     period_length: Int!
     post: ComponentContentPost
+    product: ComponentContentProduct
     questionnaire: Questionnaire
     questionnaireOnly: Boolean!
     subject: ComponentDataEhrSubject
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type AssessmentQuestionnaireAggregator {
@@ -265,11 +234,6 @@ type AssessmentQuestionnaireConnectionCreated_at {
     key: DateTime
 }
 
-type AssessmentQuestionnaireConnectionCreated_by {
-    connection: AssessmentQuestionnaireConnection
-    key: ID
-}
-
 type AssessmentQuestionnaireConnectionForPerson {
     connection: AssessmentQuestionnaireConnection
     key: ID
@@ -305,6 +269,11 @@ type AssessmentQuestionnaireConnectionPost {
     key: ID
 }
 
+type AssessmentQuestionnaireConnectionProduct {
+    connection: AssessmentQuestionnaireConnection
+    key: ID
+}
+
 type AssessmentQuestionnaireConnectionQuestionnaire {
     connection: AssessmentQuestionnaireConnection
     key: ID
@@ -325,15 +294,9 @@ type AssessmentQuestionnaireConnectionUpdated_at {
     key: DateTime
 }
 
-type AssessmentQuestionnaireConnectionUpdated_by {
-    connection: AssessmentQuestionnaireConnection
-    key: ID
-}
-
 type AssessmentQuestionnaireGroupBy {
     content: [AssessmentQuestionnaireConnectionContent]
     created_at: [AssessmentQuestionnaireConnectionCreated_at]
-    created_by: [AssessmentQuestionnaireConnectionCreated_by]
     forPerson: [AssessmentQuestionnaireConnectionForPerson]
     game: [AssessmentQuestionnaireConnectionGame]
     id: [AssessmentQuestionnaireConnectionId]
@@ -341,33 +304,30 @@ type AssessmentQuestionnaireGroupBy {
     name: [AssessmentQuestionnaireConnectionName]
     period_length: [AssessmentQuestionnaireConnectionPeriod_length]
     post: [AssessmentQuestionnaireConnectionPost]
+    product: [AssessmentQuestionnaireConnectionProduct]
     questionnaire: [AssessmentQuestionnaireConnectionQuestionnaire]
     questionnaireOnly: [AssessmentQuestionnaireConnectionQuestionnaireOnly]
     subject: [AssessmentQuestionnaireConnectionSubject]
     updated_at: [AssessmentQuestionnaireConnectionUpdated_at]
-    updated_by: [AssessmentQuestionnaireConnectionUpdated_by]
 }
 
 type AssessmentTermOfService {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     term_of_service: String
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type Book {
     content: String!
     created_at: DateTime!
-    created_by: AdminUser
     episodes: [ComponentContentEpisode]
     id: ID!
     name: String!
     post: ComponentContentPost
+    product: ComponentContentProduct
     type: BookType
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type BookAggregator {
@@ -391,11 +351,6 @@ type BookConnectionCreated_at {
     key: DateTime
 }
 
-type BookConnectionCreated_by {
-    connection: BookConnection
-    key: ID
-}
-
 type BookConnectionId {
     connection: BookConnection
     key: ID
@@ -411,6 +366,11 @@ type BookConnectionPost {
     key: ID
 }
 
+type BookConnectionProduct {
+    connection: BookConnection
+    key: ID
+}
+
 type BookConnectionType {
     connection: BookConnection
     key: String
@@ -421,31 +381,23 @@ type BookConnectionUpdated_at {
     key: DateTime
 }
 
-type BookConnectionUpdated_by {
-    connection: BookConnection
-    key: ID
-}
-
 type BookGroupBy {
     content: [BookConnectionContent]
     created_at: [BookConnectionCreated_at]
-    created_by: [BookConnectionCreated_by]
     id: [BookConnectionId]
     name: [BookConnectionName]
     post: [BookConnectionPost]
+    product: [BookConnectionProduct]
     type: [BookConnectionType]
     updated_at: [BookConnectionUpdated_at]
-    updated_by: [BookConnectionUpdated_by]
 }
 
 type Category {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     name: String!
     type: CategoryType
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type CategoryAggregator {
@@ -462,11 +414,6 @@ type CategoryConnection {
 type CategoryConnectionCreated_at {
     connection: CategoryConnection
     key: DateTime
-}
-
-type CategoryConnectionCreated_by {
-    connection: CategoryConnection
-    key: ID
 }
 
 type CategoryConnectionId {
@@ -489,28 +436,98 @@ type CategoryConnectionUpdated_at {
     key: DateTime
 }
 
-type CategoryConnectionUpdated_by {
-    connection: CategoryConnection
-    key: ID
-}
-
 type CategoryGroupBy {
     created_at: [CategoryConnectionCreated_at]
-    created_by: [CategoryConnectionCreated_by]
     id: [CategoryConnectionId]
     name: [CategoryConnectionName]
     type: [CategoryConnectionType]
     updated_at: [CategoryConnectionUpdated_at]
-    updated_by: [CategoryConnectionUpdated_by]
+}
+
+type Classification {
+    created_at: DateTime!
+    id: ID!
+    name: String
+    published_at: DateTime
+    sortIndex: Int
+    updated_at: DateTime!
+}
+
+type ClassificationAggregator {
+    avg: ClassificationAggregatorAvg
+    count: Int
+    max: ClassificationAggregatorMax
+    min: ClassificationAggregatorMin
+    sum: ClassificationAggregatorSum
+    totalCount: Int
+}
+
+type ClassificationAggregatorAvg {
+    sortIndex: Float
+}
+
+type ClassificationAggregatorMax {
+    sortIndex: Float
+}
+
+type ClassificationAggregatorMin {
+    sortIndex: Float
+}
+
+type ClassificationAggregatorSum {
+    sortIndex: Float
+}
+
+type ClassificationConnection {
+    aggregate: ClassificationAggregator
+    groupBy: ClassificationGroupBy
+    values: [Classification]
+}
+
+type ClassificationConnectionCreated_at {
+    connection: ClassificationConnection
+    key: DateTime
+}
+
+type ClassificationConnectionId {
+    connection: ClassificationConnection
+    key: ID
+}
+
+type ClassificationConnectionName {
+    connection: ClassificationConnection
+    key: String
+}
+
+type ClassificationConnectionPublished_at {
+    connection: ClassificationConnection
+    key: DateTime
+}
+
+type ClassificationConnectionSortIndex {
+    connection: ClassificationConnection
+    key: Int
+}
+
+type ClassificationConnectionUpdated_at {
+    connection: ClassificationConnection
+    key: DateTime
+}
+
+type ClassificationGroupBy {
+    created_at: [ClassificationConnectionCreated_at]
+    id: [ClassificationConnectionId]
+    name: [ClassificationConnectionName]
+    published_at: [ClassificationConnectionPublished_at]
+    sortIndex: [ClassificationConnectionSortIndex]
+    updated_at: [ClassificationConnectionUpdated_at]
 }
 
 type Color {
     color: String
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type ColorAggregator {
@@ -534,11 +551,6 @@ type ColorConnectionCreated_at {
     key: DateTime
 }
 
-type ColorConnectionCreated_by {
-    connection: ColorConnection
-    key: ID
-}
-
 type ColorConnectionId {
     connection: ColorConnection
     key: ID
@@ -549,18 +561,11 @@ type ColorConnectionUpdated_at {
     key: DateTime
 }
 
-type ColorConnectionUpdated_by {
-    connection: ColorConnection
-    key: ID
-}
-
 type ColorGroupBy {
     color: [ColorConnectionColor]
     created_at: [ColorConnectionCreated_at]
-    created_by: [ColorConnectionCreated_by]
     id: [ColorConnectionId]
     updated_at: [ColorConnectionUpdated_at]
-    updated_by: [ColorConnectionUpdated_by]
 }
 
 type ComponentContentEpisode {
@@ -674,26 +679,28 @@ type ComponentUserAuthor {
 
 type ComponentUserChild {
     id: ID!
-    parent: UsersPermissionsUser
     relationToUser: RelationType!
-    reminder: Reminder
+    schools(limit: Int, sort: String, start: Int, where: JSON): [School]
     teacher: UsersPermissionsUser
 }
 
 type ComponentUserCounselor {
     id: ID!
     location: Location
+    patients(limit: Int, sort: String, start: Int, where: JSON): [Patient]
 }
 
 type ComponentUserDoctor {
     id: ID!
     location: Location
+    patients(limit: Int, sort: String, start: Int, where: JSON): [Patient]
     subject: DoctorSubject!
 }
 
 type ComponentUserNurse {
     id: ID!
     location: Location
+    patients(limit: Int, sort: String, start: Int, where: JSON): [Patient]
 }
 
 type ComponentUserParent {
@@ -709,7 +716,10 @@ type ComponentUserPatient {
 }
 
 type ComponentUserTeacher {
+    atSchool: School
+    children(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
     id: ID!
+    role: String
     school: String
 }
 
@@ -717,14 +727,12 @@ type Course {
     content: String
     contentType: ContentType
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     medias(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
     picture: UploadFile
     subtitle: String
     title: String
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type CourseAggregator {
@@ -753,11 +761,6 @@ type CourseConnectionCreated_at {
     key: DateTime
 }
 
-type CourseConnectionCreated_by {
-    connection: CourseConnection
-    key: ID
-}
-
 type CourseConnectionId {
     connection: CourseConnection
     key: ID
@@ -783,28 +786,20 @@ type CourseConnectionUpdated_at {
     key: DateTime
 }
 
-type CourseConnectionUpdated_by {
-    connection: CourseConnection
-    key: ID
-}
-
 type CourseGroupBy {
     content: [CourseConnectionContent]
     contentType: [CourseConnectionContentType]
     created_at: [CourseConnectionCreated_at]
-    created_by: [CourseConnectionCreated_by]
     id: [CourseConnectionId]
     picture: [CourseConnectionPicture]
     subtitle: [CourseConnectionSubtitle]
     title: [CourseConnectionTitle]
     updated_at: [CourseConnectionUpdated_at]
-    updated_by: [CourseConnectionUpdated_by]
 }
 
 type CreditCard {
     address: UserAddress
     created_at: DateTime!
-    created_by: AdminUser
     cvc: String!
     expMonth: Int!
     expYear: Int!
@@ -812,7 +807,6 @@ type CreditCard {
     name: String!
     number: String!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -861,11 +855,6 @@ type CreditCardConnectionCreated_at {
     key: DateTime
 }
 
-type CreditCardConnectionCreated_by {
-    connection: CreditCardConnection
-    key: ID
-}
-
 type CreditCardConnectionCvc {
     connection: CreditCardConnection
     key: String
@@ -901,11 +890,6 @@ type CreditCardConnectionUpdated_at {
     key: DateTime
 }
 
-type CreditCardConnectionUpdated_by {
-    connection: CreditCardConnection
-    key: ID
-}
-
 type CreditCardConnectionUser {
     connection: CreditCardConnection
     key: ID
@@ -914,7 +898,6 @@ type CreditCardConnectionUser {
 type CreditCardGroupBy {
     address: [CreditCardConnectionAddress]
     created_at: [CreditCardConnectionCreated_at]
-    created_by: [CreditCardConnectionCreated_by]
     cvc: [CreditCardConnectionCvc]
     expMonth: [CreditCardConnectionExpMonth]
     expYear: [CreditCardConnectionExpYear]
@@ -922,29 +905,25 @@ type CreditCardGroupBy {
     name: [CreditCardConnectionName]
     number: [CreditCardConnectionNumber]
     updated_at: [CreditCardConnectionUpdated_at]
-    updated_by: [CreditCardConnectionUpdated_by]
     user: [CreditCardConnectionUser]
 }
 
 type Ehr {
+    classification: Classification
     created_at: DateTime!
-    created_by: AdminUser
-    data: JSON
     id: ID!
     medias(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
     office_comments: String
     patient: Patient
     position: ComponentDataPosition
     questionnaire_answer: QuestionnaireAnswer
+    record: JSON
     source: String!
     source_id: String!
     status: EhrStatus!
     subject: ComponentDataEhrSubject
     summaries: [ComponentContentSummary]
-    type: ComponentDataEhrType
     updated_at: DateTime!
-    updated_by: AdminUser
-    user: UsersPermissionsUser
 }
 
 type EhrAggregator {
@@ -958,19 +937,14 @@ type EhrConnection {
     values: [Ehr]
 }
 
-type EhrConnectionCreated_at {
-    connection: EhrConnection
-    key: DateTime
-}
-
-type EhrConnectionCreated_by {
+type EhrConnectionClassification {
     connection: EhrConnection
     key: ID
 }
 
-type EhrConnectionData {
+type EhrConnectionCreated_at {
     connection: EhrConnection
-    key: JSON
+    key: DateTime
 }
 
 type EhrConnectionId {
@@ -998,6 +972,11 @@ type EhrConnectionQuestionnaire_answer {
     key: ID
 }
 
+type EhrConnectionRecord {
+    connection: EhrConnection
+    key: JSON
+}
+
 type EhrConnectionSource {
     connection: EhrConnection
     key: String
@@ -1018,56 +997,36 @@ type EhrConnectionSubject {
     key: ID
 }
 
-type EhrConnectionType {
-    connection: EhrConnection
-    key: ID
-}
-
 type EhrConnectionUpdated_at {
     connection: EhrConnection
     key: DateTime
 }
 
-type EhrConnectionUpdated_by {
-    connection: EhrConnection
-    key: ID
-}
-
-type EhrConnectionUser {
-    connection: EhrConnection
-    key: ID
-}
-
 type EhrGroupBy {
+    classification: [EhrConnectionClassification]
     created_at: [EhrConnectionCreated_at]
-    created_by: [EhrConnectionCreated_by]
-    data: [EhrConnectionData]
     id: [EhrConnectionId]
     office_comments: [EhrConnectionOffice_comments]
     patient: [EhrConnectionPatient]
     position: [EhrConnectionPosition]
     questionnaire_answer: [EhrConnectionQuestionnaire_answer]
+    record: [EhrConnectionRecord]
     source: [EhrConnectionSource]
     source_id: [EhrConnectionSource_id]
     status: [EhrConnectionStatus]
     subject: [EhrConnectionSubject]
-    type: [EhrConnectionType]
     updated_at: [EhrConnectionUpdated_at]
-    updated_by: [EhrConnectionUpdated_by]
-    user: [EhrConnectionUser]
 }
 
 type Event {
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     dicount: Float
     eventComponent: ComponentContentEventComponent
     id: ID!
     name: String!
     post: ComponentContentPost
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type EventAggregator {
@@ -1111,11 +1070,6 @@ type EventConnectionCreated_at {
     key: DateTime
 }
 
-type EventConnectionCreated_by {
-    connection: EventConnection
-    key: ID
-}
-
 type EventConnectionDicount {
     connection: EventConnection
     key: Float
@@ -1146,29 +1100,21 @@ type EventConnectionUpdated_at {
     key: DateTime
 }
 
-type EventConnectionUpdated_by {
-    connection: EventConnection
-    key: ID
-}
-
 type EventGroupBy {
     content: [EventConnectionContent]
     created_at: [EventConnectionCreated_at]
-    created_by: [EventConnectionCreated_by]
     dicount: [EventConnectionDicount]
     eventComponent: [EventConnectionEventComponent]
     id: [EventConnectionId]
     name: [EventConnectionName]
     post: [EventConnectionPost]
     updated_at: [EventConnectionUpdated_at]
-    updated_by: [EventConnectionUpdated_by]
 }
 
 type Exercise {
     age: Int
     content: String!
     created_at: DateTime!
-    created_by: AdminUser
     forPerson: ComponentDataFor
     game: Game
     id: ID!
@@ -1178,7 +1124,6 @@ type Exercise {
     subject: ComponentDataEhrSubject
     type: ExerciseType!
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type ExerciseAggregator {
@@ -1231,11 +1176,6 @@ type ExerciseConnectionCreated_at {
     key: DateTime
 }
 
-type ExerciseConnectionCreated_by {
-    connection: ExerciseConnection
-    key: ID
-}
-
 type ExerciseConnectionForPerson {
     connection: ExerciseConnection
     key: ID
@@ -1281,16 +1221,10 @@ type ExerciseConnectionUpdated_at {
     key: DateTime
 }
 
-type ExerciseConnectionUpdated_by {
-    connection: ExerciseConnection
-    key: ID
-}
-
 type ExerciseGroupBy {
     age: [ExerciseConnectionAge]
     content: [ExerciseConnectionContent]
     created_at: [ExerciseConnectionCreated_at]
-    created_by: [ExerciseConnectionCreated_by]
     forPerson: [ExerciseConnectionForPerson]
     game: [ExerciseConnectionGame]
     id: [ExerciseConnectionId]
@@ -1300,21 +1234,17 @@ type ExerciseGroupBy {
     subject: [ExerciseConnectionSubject]
     type: [ExerciseConnectionType]
     updated_at: [ExerciseConnectionUpdated_at]
-    updated_by: [ExerciseConnectionUpdated_by]
 }
 
 type FlowchartTest {
     chart: String
-    created_by: AdminUser
     id: ID!
-    updated_by: AdminUser
 }
 
 type Game {
     content: String
     cptLevel: Int!
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     medias(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
     name: String!
@@ -1322,7 +1252,6 @@ type Game {
     trademark: Trademark
     type: GameType!
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type GameAggregator {
@@ -1371,11 +1300,6 @@ type GameConnectionCreated_at {
     key: DateTime
 }
 
-type GameConnectionCreated_by {
-    connection: GameConnection
-    key: ID
-}
-
 type GameConnectionId {
     connection: GameConnection
     key: ID
@@ -1406,40 +1330,34 @@ type GameConnectionUpdated_at {
     key: DateTime
 }
 
-type GameConnectionUpdated_by {
-    connection: GameConnection
-    key: ID
-}
-
 type GameGroupBy {
     content: [GameConnectionContent]
     cptLevel: [GameConnectionCptLevel]
     created_at: [GameConnectionCreated_at]
-    created_by: [GameConnectionCreated_by]
     id: [GameConnectionId]
     name: [GameConnectionName]
     provider: [GameConnectionProvider]
     trademark: [GameConnectionTrademark]
     type: [GameConnectionType]
     updated_at: [GameConnectionUpdated_at]
-    updated_by: [GameConnectionUpdated_by]
 }
 
 type Location {
     address: String!
     content: String
+    counselors(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
     created_at: DateTime!
-    created_by: AdminUser
     description: String
+    doctors(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
     email: String
     id: ID!
     name: String!
+    nurses(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
     phone: String
     post: ComponentContentPost
     qrCode: UploadFile
     type: LocationType!
     updated_at: DateTime!
-    updated_by: AdminUser
     web: String
 }
 
@@ -1467,11 +1385,6 @@ type LocationConnectionContent {
 type LocationConnectionCreated_at {
     connection: LocationConnection
     key: DateTime
-}
-
-type LocationConnectionCreated_by {
-    connection: LocationConnection
-    key: ID
 }
 
 type LocationConnectionDescription {
@@ -1519,11 +1432,6 @@ type LocationConnectionUpdated_at {
     key: DateTime
 }
 
-type LocationConnectionUpdated_by {
-    connection: LocationConnection
-    key: ID
-}
-
 type LocationConnectionWeb {
     connection: LocationConnection
     key: String
@@ -1533,7 +1441,6 @@ type LocationGroupBy {
     address: [LocationConnectionAddress]
     content: [LocationConnectionContent]
     created_at: [LocationConnectionCreated_at]
-    created_by: [LocationConnectionCreated_by]
     description: [LocationConnectionDescription]
     email: [LocationConnectionEmail]
     id: [LocationConnectionId]
@@ -1543,7 +1450,6 @@ type LocationGroupBy {
     qrCode: [LocationConnectionQrCode]
     type: [LocationConnectionType]
     updated_at: [LocationConnectionUpdated_at]
-    updated_by: [LocationConnectionUpdated_by]
     web: [LocationConnectionWeb]
 }
 
@@ -1557,6 +1463,7 @@ type Mutation {
     createBook(input: createBookInput): createBookPayload
     createCategory(input: createCategoryInput): createCategoryPayload
     createChild(input: createChildInput!): createUserPayload!
+    createClassification(input: createClassificationInput): createClassificationPayload
     createColor(input: createColorInput): createColorPayload
     createCourse(input: createCourseInput): createCoursePayload
     createCreditCard(input: createCreditCardInput): createCreditCardPayload
@@ -1580,6 +1487,7 @@ type Mutation {
     createReminder(input: createReminderInput): createReminderPayload
     "Create a new role"
     createRole(input: createRoleInput): createRolePayload
+    createSchool(input: createSchoolInput): createSchoolPayload
     createSupplement(input: createSupplementInput): createSupplementPayload
     createTelemetry(input: createTelemetryInput): createTelemetryPayload
     createTrademark(input: createTrademarkInput): createTrademarkPayload
@@ -1602,6 +1510,7 @@ type Mutation {
     deleteAssessmentTermOfService: deleteAssessmentTermOfServicePayload
     deleteBook(input: deleteBookInput): deleteBookPayload
     deleteCategory(input: deleteCategoryInput): deleteCategoryPayload
+    deleteClassification(input: deleteClassificationInput): deleteClassificationPayload
     deleteColor(input: deleteColorInput): deleteColorPayload
     deleteCourse(input: deleteCourseInput): deleteCoursePayload
     deleteCreditCard(input: deleteCreditCardInput): deleteCreditCardPayload
@@ -1609,6 +1518,8 @@ type Mutation {
     deleteEhr(input: deleteEhrInput): deleteEhrPayload
     deleteEvent(input: deleteEventInput): deleteEventPayload
     deleteExercise(input: deleteExerciseInput): deleteExercisePayload
+    "Delete one file"
+    deleteFile(input: deleteFileInput): deleteFilePayload
     deleteGame(input: deleteGameInput): deleteGamePayload
     deleteLocation(input: deleteLocationInput): deleteLocationPayload
     deleteMyAddress(input: deleteUserAddressInput): deleteUserAddressPayload
@@ -1626,6 +1537,7 @@ type Mutation {
     deleteReminder(input: deleteReminderInput): deleteReminderPayload
     "Delete an existing role"
     deleteRole(input: deleteRoleInput): deleteRolePayload
+    deleteSchool(input: deleteSchoolInput): deleteSchoolPayload
     deleteSupplement(input: deleteSupplementInput): deleteSupplementPayload
     deleteTelemetry(input: deleteTelemetryInput): deleteTelemetryPayload
     deleteTrademark(input: deleteTrademarkInput): deleteTrademarkPayload
@@ -1644,6 +1556,7 @@ type Mutation {
     forgotPassword(email: String!): UserPermissionsPasswordPayload
     login(input: UsersPermissionsLoginInput!): UsersPermissionsLoginPayload!
     multipleUpload(field: String, files: [Upload]!, ref: String, refId: ID, source: String): [UploadFile]!
+    refreshToken(jwt: String!): UsersPermissionsRefreshTokenPayload!
     register(input: UsersPermissionsRegisterInput!): UsersPermissionsLoginPayload!
     requestOrderPay(input: requestOrderPayInput): requestOrderPayPayload
     resetPassword(code: String!, password: String!, passwordConfirmation: String!): UsersPermissionsLoginPayload
@@ -1656,6 +1569,7 @@ type Mutation {
     updateBook(input: updateBookInput): updateBookPayload
     updateCategory(input: updateCategoryInput): updateCategoryPayload
     updateChild(input: updateChildInput!): updateUserPayload!
+    updateClassification(input: updateClassificationInput): updateClassificationPayload
     updateColor(input: updateColorInput): updateColorPayload
     updateCourse(input: updateCourseInput): updateCoursePayload
     updateCreditCard(input: updateCreditCardInput): updateCreditCardPayload
@@ -1681,6 +1595,7 @@ type Mutation {
     updateReminder(input: updateReminderInput): updateReminderPayload
     "Update an existing role"
     updateRole(input: updateRoleInput): updateRolePayload
+    updateSchool(input: updateSchoolInput): updateSchoolPayload
     updateSupplement(input: updateSupplementInput): updateSupplementPayload
     updateTelemetry(input: updateTelemetryInput): updateTelemetryPayload
     updateTrademark(input: updateTrademarkInput): updateTrademarkPayload
@@ -1695,13 +1610,12 @@ type Mutation {
     updateVenue(input: updateVenueInput): updateVenuePayload
     updateVersion(input: updateVersionInput): updateVersionPayload
     updateWebinar(input: updateWebinarInput): updateWebinarPayload
-    upload(field: String, file: Upload!, ref: String, refId: ID, source: String): UploadFile!
+    upload(field: String, file: Upload!, info: FileInfoInput, ref: String, refId: ID, source: String): UploadFile!
 }
 
 type Parenting {
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     media(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
     name: String!
@@ -1710,7 +1624,6 @@ type Parenting {
     questionnaire: Questionnaire
     subject: ComponentDataEhrSubject
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type ParentingAggregator {
@@ -1732,11 +1645,6 @@ type ParentingConnectionContent {
 type ParentingConnectionCreated_at {
     connection: ParentingConnection
     key: DateTime
-}
-
-type ParentingConnectionCreated_by {
-    connection: ParentingConnection
-    key: ID
 }
 
 type ParentingConnectionId {
@@ -1774,15 +1682,9 @@ type ParentingConnectionUpdated_at {
     key: DateTime
 }
 
-type ParentingConnectionUpdated_by {
-    connection: ParentingConnection
-    key: ID
-}
-
 type ParentingGroupBy {
     content: [ParentingConnectionContent]
     created_at: [ParentingConnectionCreated_at]
-    created_by: [ParentingConnectionCreated_by]
     id: [ParentingConnectionId]
     name: [ParentingConnectionName]
     pdfFiles: [ParentingConnectionPdfFiles]
@@ -1790,21 +1692,21 @@ type ParentingGroupBy {
     questionnaire: [ParentingConnectionQuestionnaire]
     subject: [ParentingConnectionSubject]
     updated_at: [ParentingConnectionUpdated_at]
-    updated_by: [ParentingConnectionUpdated_by]
 }
 
 type Patient {
     counselor: UsersPermissionsUser
     created_at: DateTime!
-    created_by: AdminUser
     doctor: UsersPermissionsUser
     ehrs(limit: Int, sort: String, start: Int, where: JSON): [Ehr]
     id: ID!
+    location: Location
     meetingId: String
     name: String!
     nurse: UsersPermissionsUser
+    status: PatientStatus
+    teacher: UsersPermissionsUser
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -1829,17 +1731,17 @@ type PatientConnectionCreated_at {
     key: DateTime
 }
 
-type PatientConnectionCreated_by {
-    connection: PatientConnection
-    key: ID
-}
-
 type PatientConnectionDoctor {
     connection: PatientConnection
     key: ID
 }
 
 type PatientConnectionId {
+    connection: PatientConnection
+    key: ID
+}
+
+type PatientConnectionLocation {
     connection: PatientConnection
     key: ID
 }
@@ -1859,14 +1761,19 @@ type PatientConnectionNurse {
     key: ID
 }
 
+type PatientConnectionStatus {
+    connection: PatientConnection
+    key: String
+}
+
+type PatientConnectionTeacher {
+    connection: PatientConnection
+    key: ID
+}
+
 type PatientConnectionUpdated_at {
     connection: PatientConnection
     key: DateTime
-}
-
-type PatientConnectionUpdated_by {
-    connection: PatientConnection
-    key: ID
 }
 
 type PatientConnectionUser {
@@ -1877,21 +1784,21 @@ type PatientConnectionUser {
 type PatientGroupBy {
     counselor: [PatientConnectionCounselor]
     created_at: [PatientConnectionCreated_at]
-    created_by: [PatientConnectionCreated_by]
     doctor: [PatientConnectionDoctor]
     id: [PatientConnectionId]
+    location: [PatientConnectionLocation]
     meetingId: [PatientConnectionMeetingId]
     name: [PatientConnectionName]
     nurse: [PatientConnectionNurse]
+    status: [PatientConnectionStatus]
+    teacher: [PatientConnectionTeacher]
     updated_at: [PatientConnectionUpdated_at]
-    updated_by: [PatientConnectionUpdated_by]
     user: [PatientConnectionUser]
 }
 
 type PaymentCurrency {
     code: String!
     created_at: DateTime!
-    created_by: AdminUser
     decimal_digits: Int!
     id: ID!
     name: String!
@@ -1900,7 +1807,6 @@ type PaymentCurrency {
     symbol: String!
     symbol_native: String
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type PaymentCurrencyAggregator {
@@ -1948,11 +1854,6 @@ type PaymentCurrencyConnectionCreated_at {
     key: DateTime
 }
 
-type PaymentCurrencyConnectionCreated_by {
-    connection: PaymentCurrencyConnection
-    key: ID
-}
-
 type PaymentCurrencyConnectionDecimal_digits {
     connection: PaymentCurrencyConnection
     key: Int
@@ -1993,15 +1894,9 @@ type PaymentCurrencyConnectionUpdated_at {
     key: DateTime
 }
 
-type PaymentCurrencyConnectionUpdated_by {
-    connection: PaymentCurrencyConnection
-    key: ID
-}
-
 type PaymentCurrencyGroupBy {
     code: [PaymentCurrencyConnectionCode]
     created_at: [PaymentCurrencyConnectionCreated_at]
-    created_by: [PaymentCurrencyConnectionCreated_by]
     decimal_digits: [PaymentCurrencyConnectionDecimal_digits]
     id: [PaymentCurrencyConnectionId]
     name: [PaymentCurrencyConnectionName]
@@ -2010,20 +1905,17 @@ type PaymentCurrencyGroupBy {
     symbol: [PaymentCurrencyConnectionSymbol]
     symbol_native: [PaymentCurrencyConnectionSymbol_native]
     updated_at: [PaymentCurrencyConnectionUpdated_at]
-    updated_by: [PaymentCurrencyConnectionUpdated_by]
 }
 
 type PaymentMethod {
     billingAddress: UserAddress
     created_at: DateTime!
-    created_by: AdminUser
     creditCard: CreditCard
     id: ID!
     livemode: Boolean
     stripeId: String!
     type: String
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -2046,11 +1938,6 @@ type PaymentMethodConnectionBillingAddress {
 type PaymentMethodConnectionCreated_at {
     connection: PaymentMethodConnection
     key: DateTime
-}
-
-type PaymentMethodConnectionCreated_by {
-    connection: PaymentMethodConnection
-    key: ID
 }
 
 type PaymentMethodConnectionCreditCard {
@@ -2083,11 +1970,6 @@ type PaymentMethodConnectionUpdated_at {
     key: DateTime
 }
 
-type PaymentMethodConnectionUpdated_by {
-    connection: PaymentMethodConnection
-    key: ID
-}
-
 type PaymentMethodConnectionUser {
     connection: PaymentMethodConnection
     key: ID
@@ -2096,21 +1978,18 @@ type PaymentMethodConnectionUser {
 type PaymentMethodGroupBy {
     billingAddress: [PaymentMethodConnectionBillingAddress]
     created_at: [PaymentMethodConnectionCreated_at]
-    created_by: [PaymentMethodConnectionCreated_by]
     creditCard: [PaymentMethodConnectionCreditCard]
     id: [PaymentMethodConnectionId]
     livemode: [PaymentMethodConnectionLivemode]
     stripeId: [PaymentMethodConnectionStripeId]
     type: [PaymentMethodConnectionType]
     updated_at: [PaymentMethodConnectionUpdated_at]
-    updated_by: [PaymentMethodConnectionUpdated_by]
     user: [PaymentMethodConnectionUser]
 }
 
 type PaymentOrder {
     additional: JSON
     created_at: DateTime!
-    created_by: AdminUser
     currency: PaymentCurrency
     description: String
     expire: DateTime
@@ -2124,7 +2003,6 @@ type PaymentOrder {
     shippingAddress: ComponentDataAddress
     status: OrderStatusType
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
     uuid: String
 }
@@ -2176,11 +2054,6 @@ type PaymentOrderConnectionAdditional {
 type PaymentOrderConnectionCreated_at {
     connection: PaymentOrderConnection
     key: DateTime
-}
-
-type PaymentOrderConnectionCreated_by {
-    connection: PaymentOrderConnection
-    key: ID
 }
 
 type PaymentOrderConnectionCurrency {
@@ -2243,11 +2116,6 @@ type PaymentOrderConnectionUpdated_at {
     key: DateTime
 }
 
-type PaymentOrderConnectionUpdated_by {
-    connection: PaymentOrderConnection
-    key: ID
-}
-
 type PaymentOrderConnectionUser {
     connection: PaymentOrderConnection
     key: ID
@@ -2261,7 +2129,6 @@ type PaymentOrderConnectionUuid {
 type PaymentOrderGroupBy {
     additional: [PaymentOrderConnectionAdditional]
     created_at: [PaymentOrderConnectionCreated_at]
-    created_by: [PaymentOrderConnectionCreated_by]
     currency: [PaymentOrderConnectionCurrency]
     description: [PaymentOrderConnectionDescription]
     expire: [PaymentOrderConnectionExpire]
@@ -2274,7 +2141,6 @@ type PaymentOrderGroupBy {
     shippingAddress: [PaymentOrderConnectionShippingAddress]
     status: [PaymentOrderConnectionStatus]
     updated_at: [PaymentOrderConnectionUpdated_at]
-    updated_by: [PaymentOrderConnectionUpdated_by]
     user: [PaymentOrderConnectionUser]
     uuid: [PaymentOrderConnectionUuid]
 }
@@ -2282,7 +2148,6 @@ type PaymentOrderGroupBy {
 type PaymentOrderItem {
     additional: JSON
     created_at: DateTime!
-    created_by: AdminUser
     currency: PaymentCurrency
     id: ID!
     name: String!
@@ -2295,25 +2160,20 @@ type PaymentOrderItem {
     sourceType: String
     unitPrice: Float
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type PaymentPolicy {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     policy: String
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type PaymentSetting {
     created_at: DateTime!
-    created_by: AdminUser
     data: JSON
     id: ID!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -2323,7 +2183,6 @@ type Plan {
     books(limit: Int, sort: String, start: Int, where: JSON): [Book]
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     exercises(limit: Int, sort: String, start: Int, where: JSON): [Exercise]
     forPerson: ComponentDataFor
     id: ID!
@@ -2333,7 +2192,6 @@ type Plan {
     questionnaire: Questionnaire
     supplements(limit: Int, sort: String, start: Int, where: JSON): [Supplement]
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type PlanAggregator {
@@ -2355,11 +2213,6 @@ type PlanConnectionContent {
 type PlanConnectionCreated_at {
     connection: PlanConnection
     key: DateTime
-}
-
-type PlanConnectionCreated_by {
-    connection: PlanConnection
-    key: ID
 }
 
 type PlanConnectionForPerson {
@@ -2392,22 +2245,15 @@ type PlanConnectionUpdated_at {
     key: DateTime
 }
 
-type PlanConnectionUpdated_by {
-    connection: PlanConnection
-    key: ID
-}
-
 type PlanGroupBy {
     content: [PlanConnectionContent]
     created_at: [PlanConnectionCreated_at]
-    created_by: [PlanConnectionCreated_by]
     forPerson: [PlanConnectionForPerson]
     id: [PlanConnectionId]
     name: [PlanConnectionName]
     post: [PlanConnectionPost]
     questionnaire: [PlanConnectionQuestionnaire]
     updated_at: [PlanConnectionUpdated_at]
-    updated_by: [PlanConnectionUpdated_by]
 }
 
 type Post {
@@ -2415,7 +2261,6 @@ type Post {
     categories(limit: Int, sort: String, start: Int, where: JSON): [Category]
     cover_background_color: Color
     created_at: DateTime!
-    created_by: AdminUser
     currency: PaymentCurrency
     entityRawId: String
     entityType: String
@@ -2424,6 +2269,7 @@ type Post {
     needShipping: Boolean
     prePrice: Float
     price: Float
+    published_at: DateTime
     rating: Int
     rawPostId: Int
     recommended: Boolean
@@ -2432,7 +2278,6 @@ type Post {
     title: String!
     trademark: Trademark
     updated_at: DateTime!
-    updated_by: AdminUser
     updated_day: Date
     vipText: String
     vip_color: Color
@@ -2496,11 +2341,6 @@ type PostConnectionCreated_at {
     key: DateTime
 }
 
-type PostConnectionCreated_by {
-    connection: PostConnection
-    key: ID
-}
-
 type PostConnectionCurrency {
     connection: PostConnection
     key: ID
@@ -2534,6 +2374,11 @@ type PostConnectionPrePrice {
 type PostConnectionPrice {
     connection: PostConnection
     key: Float
+}
+
+type PostConnectionPublished_at {
+    connection: PostConnection
+    key: DateTime
 }
 
 type PostConnectionRating {
@@ -2576,11 +2421,6 @@ type PostConnectionUpdated_at {
     key: DateTime
 }
 
-type PostConnectionUpdated_by {
-    connection: PostConnection
-    key: ID
-}
-
 type PostConnectionUpdated_day {
     connection: PostConnection
     key: ID
@@ -2600,7 +2440,6 @@ type PostGroupBy {
     author: [PostConnectionAuthor]
     cover_background_color: [PostConnectionCover_background_color]
     created_at: [PostConnectionCreated_at]
-    created_by: [PostConnectionCreated_by]
     currency: [PostConnectionCurrency]
     entityRawId: [PostConnectionEntityRawId]
     entityType: [PostConnectionEntityType]
@@ -2608,6 +2447,7 @@ type PostGroupBy {
     needShipping: [PostConnectionNeedShipping]
     prePrice: [PostConnectionPrePrice]
     price: [PostConnectionPrice]
+    published_at: [PostConnectionPublished_at]
     rating: [PostConnectionRating]
     rawPostId: [PostConnectionRawPostId]
     recommended: [PostConnectionRecommended]
@@ -2616,7 +2456,6 @@ type PostGroupBy {
     title: [PostConnectionTitle]
     trademark: [PostConnectionTrademark]
     updated_at: [PostConnectionUpdated_at]
-    updated_by: [PostConnectionUpdated_by]
     updated_day: [PostConnectionUpdated_day]
     vipText: [PostConnectionVipText]
     vip_color: [PostConnectionVip_color]
@@ -2626,14 +2465,12 @@ type Provider {
     address: String
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     email: String
     id: ID!
     name: String
     phoneNumber: String
     trademark: UploadFile
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type ProviderAggregator {
@@ -2660,11 +2497,6 @@ type ProviderConnectionContent {
 type ProviderConnectionCreated_at {
     connection: ProviderConnection
     key: DateTime
-}
-
-type ProviderConnectionCreated_by {
-    connection: ProviderConnection
-    key: ID
 }
 
 type ProviderConnectionEmail {
@@ -2697,166 +2529,163 @@ type ProviderConnectionUpdated_at {
     key: DateTime
 }
 
-type ProviderConnectionUpdated_by {
-    connection: ProviderConnection
-    key: ID
-}
-
 type ProviderGroupBy {
     address: [ProviderConnectionAddress]
     content: [ProviderConnectionContent]
     created_at: [ProviderConnectionCreated_at]
-    created_by: [ProviderConnectionCreated_by]
     email: [ProviderConnectionEmail]
     id: [ProviderConnectionId]
     name: [ProviderConnectionName]
     phoneNumber: [ProviderConnectionPhoneNumber]
     trademark: [ProviderConnectionTrademark]
     updated_at: [ProviderConnectionUpdated_at]
-    updated_by: [ProviderConnectionUpdated_by]
 }
 
 type Query {
-    aboutFastBraiin: AboutFastBraiin
-    account(id: ID!): Account
-    accounts(limit: Int, sort: String, start: Int, where: JSON): [Account]
+    aboutFastBraiin(publicationState: PublicationState): AboutFastBraiin
+    account(id: ID!, publicationState: PublicationState): Account
+    accounts(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Account]
     accountsConnection(limit: Int, sort: String, start: Int, where: JSON): AccountConnection
-    appTermOfService: AppTermOfService
-    article(id: ID!): Article
-    articles(limit: Int, sort: String, start: Int, where: JSON): [Article]
+    appTermOfService(publicationState: PublicationState): AppTermOfService
+    article(id: ID!, publicationState: PublicationState): Article
+    articles(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Article]
     articlesConnection(limit: Int, sort: String, start: Int, where: JSON): ArticleConnection
-    assessmentQuestionnaire(id: ID!): AssessmentQuestionnaire
-    assessmentQuestionnaires(limit: Int, sort: String, start: Int, where: JSON): [AssessmentQuestionnaire]
+    assessmentQuestionnaire(id: ID!, publicationState: PublicationState): AssessmentQuestionnaire
+    assessmentQuestionnaires(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [AssessmentQuestionnaire]
     assessmentQuestionnairesConnection(limit: Int, sort: String, start: Int, where: JSON): AssessmentQuestionnaireConnection
-    assessmentTermOfService: AssessmentTermOfService
-    book(id: ID!): Book
-    books(limit: Int, sort: String, start: Int, where: JSON): [Book]
+    assessmentTermOfService(publicationState: PublicationState): AssessmentTermOfService
+    book(id: ID!, publicationState: PublicationState): Book
+    books(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Book]
     booksConnection(limit: Int, sort: String, start: Int, where: JSON): BookConnection
-    categories(limit: Int, sort: String, start: Int, where: JSON): [Category]
+    categories(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Category]
     categoriesConnection(limit: Int, sort: String, start: Int, where: JSON): CategoryConnection
-    category(id: ID!): Category
-    color(id: ID!): Color
-    colors(limit: Int, sort: String, start: Int, where: JSON): [Color]
+    category(id: ID!, publicationState: PublicationState): Category
+    classification(id: ID!, publicationState: PublicationState): Classification
+    classifications(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Classification]
+    classificationsConnection(limit: Int, sort: String, start: Int, where: JSON): ClassificationConnection
+    color(id: ID!, publicationState: PublicationState): Color
+    colors(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Color]
     colorsConnection(limit: Int, sort: String, start: Int, where: JSON): ColorConnection
-    course(id: ID!): Course
-    courses(limit: Int, sort: String, start: Int, where: JSON): [Course]
+    course(id: ID!, publicationState: PublicationState): Course
+    courses(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Course]
     coursesConnection(limit: Int, sort: String, start: Int, where: JSON): CourseConnection
-    creditCard(id: ID!): CreditCard
-    creditCards(limit: Int, sort: String, start: Int, where: JSON): [CreditCard]
+    creditCard(id: ID!, publicationState: PublicationState): CreditCard
+    creditCards(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [CreditCard]
     creditCardsConnection(limit: Int, sort: String, start: Int, where: JSON): CreditCardConnection
-    currencies(limit: Int, sort: String, start: Int, where: JSON): [PaymentCurrency]
+    currencies(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [PaymentCurrency]
     currenciesConnection(limit: Int, sort: String, start: Int, where: JSON): PaymentCurrencyConnection
-    currency(id: ID!): PaymentCurrency
-    ehr(id: ID!): Ehr
-    ehrs(limit: Int, sort: String, start: Int, where: JSON): [Ehr]
+    currency(id: ID!, publicationState: PublicationState): PaymentCurrency
+    ehr(id: ID!, publicationState: PublicationState): Ehr
+    ehrs(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Ehr]
     ehrsConnection(limit: Int, sort: String, start: Int, where: JSON): EhrConnection
-    event(id: ID!): Event
-    events(limit: Int, sort: String, start: Int, where: JSON): [Event]
+    event(id: ID!, publicationState: PublicationState): Event
+    events(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Event]
     eventsConnection(limit: Int, sort: String, start: Int, where: JSON): EventConnection
-    exercise(id: ID!): Exercise
-    exercises(limit: Int, sort: String, start: Int, where: JSON): [Exercise]
+    exercise(id: ID!, publicationState: PublicationState): Exercise
+    exercises(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Exercise]
     exercisesConnection(limit: Int, sort: String, start: Int, where: JSON): ExerciseConnection
-    files(limit: Int, sort: String, start: Int, where: JSON): [UploadFile]
+    files(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UploadFile]
     filesConnection(limit: Int, sort: String, start: Int, where: JSON): UploadFileConnection
     findMyAddress(limit: Int, sort: String, start: Int, where: JSON): [UserAddress]
-    game(id: ID!): Game
-    games(limit: Int, sort: String, start: Int, where: JSON): [Game]
+    game(id: ID!, publicationState: PublicationState): Game
+    games(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Game]
     gamesConnection(limit: Int, sort: String, start: Int, where: JSON): GameConnection
-    location(id: ID!): Location
-    locations(limit: Int, sort: String, start: Int, where: JSON): [Location]
+    location(id: ID!, publicationState: PublicationState): Location
+    locations(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Location]
     locationsConnection(limit: Int, sort: String, start: Int, where: JSON): LocationConnection
     me: UsersPermissionsMe
     myChild(id: ID!): UsersPermissionsUser
     myOrders(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrder]
     myOrdersCount(where: JSON): Int!
-    order(id: ID!): PaymentOrder
-    orders(limit: Int, sort: String, start: Int, where: JSON): [PaymentOrder]
+    order(id: ID!, publicationState: PublicationState): PaymentOrder
+    orders(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [PaymentOrder]
     ordersConnection(limit: Int, sort: String, start: Int, where: JSON): PaymentOrderConnection
-    organizationUnit(id: ID!): UsersOrganizationunitsOrganizationUnit
-    organizationUnits(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
+    organizationUnit(id: ID!, publicationState: PublicationState): UsersOrganizationunitsOrganizationUnit
+    organizationUnits(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
     organizationUnitsConnection(limit: Int, sort: String, start: Int, where: JSON): UsersOrganizationunitsOrganizationUnitConnection
-    parenting(id: ID!): Parenting
-    parentings(limit: Int, sort: String, start: Int, where: JSON): [Parenting]
+    parenting(id: ID!, publicationState: PublicationState): Parenting
+    parentings(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Parenting]
     parentingsConnection(limit: Int, sort: String, start: Int, where: JSON): ParentingConnection
-    patient(id: ID!): Patient
-    patients(limit: Int, sort: String, start: Int, where: JSON): [Patient]
+    patient(id: ID!, publicationState: PublicationState): Patient
+    patients(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Patient]
     patientsConnection(limit: Int, sort: String, start: Int, where: JSON): PatientConnection
-    paymentMethod(id: ID!): PaymentMethod
-    paymentMethods(limit: Int, sort: String, start: Int, where: JSON): [PaymentMethod]
+    paymentMethod(id: ID!, publicationState: PublicationState): PaymentMethod
+    paymentMethods(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [PaymentMethod]
     paymentMethodsConnection(limit: Int, sort: String, start: Int, where: JSON): PaymentMethodConnection
-    paymentPolicy: PaymentPolicy
-    plan(id: ID!): Plan
-    plans(limit: Int, sort: String, start: Int, where: JSON): [Plan]
+    paymentPolicy(publicationState: PublicationState): PaymentPolicy
+    plan(id: ID!, publicationState: PublicationState): Plan
+    plans(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Plan]
     plansConnection(limit: Int, sort: String, start: Int, where: JSON): PlanConnection
-    post(id: ID!): Post
-    posts(limit: Int, sort: String, start: Int, where: JSON): [Post]
+    post(id: ID!, publicationState: PublicationState): Post
+    posts(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Post]
     postsConnection(limit: Int, sort: String, start: Int, where: JSON): PostConnection
-    provider(id: ID!): Provider
-    providers(limit: Int, sort: String, start: Int, where: JSON): [Provider]
+    provider(id: ID!, publicationState: PublicationState): Provider
+    providers(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Provider]
     providersConnection(limit: Int, sort: String, start: Int, where: JSON): ProviderConnection
-    questionnaire(id: ID!): Questionnaire
-    questionnaireAnswer(id: ID!): QuestionnaireAnswer
-    questionnaireAnswers(limit: Int, sort: String, start: Int, where: JSON): [QuestionnaireAnswer]
+    questionnaire(id: ID!, publicationState: PublicationState): Questionnaire
+    questionnaireAnswer(id: ID!, publicationState: PublicationState): QuestionnaireAnswer
+    questionnaireAnswers(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [QuestionnaireAnswer]
     questionnaireAnswersConnection(limit: Int, sort: String, start: Int, where: JSON): QuestionnaireAnswerConnection
-    questionnaires(limit: Int, sort: String, start: Int, where: JSON): [Questionnaire]
+    questionnaires(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Questionnaire]
     questionnairesConnection(limit: Int, sort: String, start: Int, where: JSON): QuestionnaireConnection
-    reminder(id: ID!): Reminder
-    reminders(limit: Int, sort: String, start: Int, where: JSON): [Reminder]
+    reminder(id: ID!, publicationState: PublicationState): Reminder
+    reminders(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Reminder]
     remindersConnection(limit: Int, sort: String, start: Int, where: JSON): ReminderConnection
-    role(id: ID!): UsersPermissionsRole
+    role(id: ID!, publicationState: PublicationState): UsersPermissionsRole
     "Retrieve all the existing roles. You can't apply filters on this query."
-    roles(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
+    roles(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
     rolesConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsRoleConnection
-    supplement(id: ID!): Supplement
-    supplements(limit: Int, sort: String, start: Int, where: JSON): [Supplement]
+    school(id: ID!, publicationState: PublicationState): School
+    schools(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [School]
+    schoolsConnection(limit: Int, sort: String, start: Int, where: JSON): SchoolConnection
+    supplement(id: ID!, publicationState: PublicationState): Supplement
+    supplements(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Supplement]
     supplementsConnection(limit: Int, sort: String, start: Int, where: JSON): SupplementConnection
-    telemetries(limit: Int, sort: String, start: Int, where: JSON): [Telemetry]
+    telemetries(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Telemetry]
     telemetriesConnection(limit: Int, sort: String, start: Int, where: JSON): TelemetryConnection
-    telemetry(id: ID!): Telemetry
-    trademark(id: ID!): Trademark
-    trademarks(limit: Int, sort: String, start: Int, where: JSON): [Trademark]
+    telemetry(id: ID!, publicationState: PublicationState): Telemetry
+    trademark(id: ID!, publicationState: PublicationState): Trademark
+    trademarks(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Trademark]
     trademarksConnection(limit: Int, sort: String, start: Int, where: JSON): TrademarkConnection
-    user(id: ID!): UsersPermissionsUser
-    userAddress(id: ID!): UserAddress
-    userAddresses(limit: Int, sort: String, start: Int, where: JSON): [UserAddress]
+    user(id: ID!, publicationState: PublicationState): UsersPermissionsUser
+    userAddress(id: ID!, publicationState: PublicationState): UserAddress
+    userAddresses(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UserAddress]
     userAddressesConnection(limit: Int, sort: String, start: Int, where: JSON): UserAddressConnection
-    userAgreement(id: ID!): UserAgreement
-    userAgreements(limit: Int, sort: String, start: Int, where: JSON): [UserAgreement]
+    userAgreement(id: ID!, publicationState: PublicationState): UserAgreement
+    userAgreements(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UserAgreement]
     userAgreementsConnection(limit: Int, sort: String, start: Int, where: JSON): UserAgreementConnection
-    userAssessment(id: ID!): UserAssessment
-    userAssessments(limit: Int, sort: String, start: Int, where: JSON): [UserAssessment]
+    userAssessment(id: ID!, publicationState: PublicationState): UserAssessment
+    userAssessments(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UserAssessment]
     userAssessmentsConnection(limit: Int, sort: String, start: Int, where: JSON): UserAssessmentConnection
-    userExercise(id: ID!): UserExercise
-    userExercises(limit: Int, sort: String, start: Int, where: JSON): [UserExercise]
+    userExercise(id: ID!, publicationState: PublicationState): UserExercise
+    userExercises(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UserExercise]
     userExercisesConnection(limit: Int, sort: String, start: Int, where: JSON): UserExerciseConnection
-    userParenting(id: ID!): UserParenting
-    userParentings(limit: Int, sort: String, start: Int, where: JSON): [UserParenting]
+    userParenting(id: ID!, publicationState: PublicationState): UserParenting
+    userParentings(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UserParenting]
     userParentingsConnection(limit: Int, sort: String, start: Int, where: JSON): UserParentingConnection
-    userPlan(id: ID!): UserPlan
-    userPlans(limit: Int, sort: String, start: Int, where: JSON): [UserPlan]
+    userPlan(id: ID!, publicationState: PublicationState): UserPlan
+    userPlans(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UserPlan]
     userPlansConnection(limit: Int, sort: String, start: Int, where: JSON): UserPlanConnection
-    users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+    users(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
     usersConnection(limit: Int, sort: String, start: Int, where: JSON): UsersPermissionsUserConnection
-    venue(id: ID!): Venue
-    venues(limit: Int, sort: String, start: Int, where: JSON): [Venue]
+    venue(id: ID!, publicationState: PublicationState): Venue
+    venues(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Venue]
     venuesConnection(limit: Int, sort: String, start: Int, where: JSON): VenueConnection
-    version: Version
-    webinar(id: ID!): Webinar
-    webinars(limit: Int, sort: String, start: Int, where: JSON): [Webinar]
+    version(publicationState: PublicationState): Version
+    webinar(id: ID!, publicationState: PublicationState): Webinar
+    webinars(limit: Int, publicationState: PublicationState, sort: String, start: Int, where: JSON): [Webinar]
     webinarsConnection(limit: Int, sort: String, start: Int, where: JSON): WebinarConnection
 }
 
 type Questionnaire {
     assessment_questionnaires(limit: Int, sort: String, start: Int, where: JSON): [AssessmentQuestionnaire]
     created_at: DateTime!
-    created_by: AdminUser
     data: String
     displayName: String
     id: ID!
     name: String!
     provider: String
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type QuestionnaireAggregator {
@@ -2866,14 +2695,12 @@ type QuestionnaireAggregator {
 
 type QuestionnaireAnswer {
     created_at: DateTime!
-    created_by: AdminUser
     data: JSON
     id: ID!
     name: String!
     questionnaire: Questionnaire
     submitted: Boolean!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -2891,11 +2718,6 @@ type QuestionnaireAnswerConnection {
 type QuestionnaireAnswerConnectionCreated_at {
     connection: QuestionnaireAnswerConnection
     key: DateTime
-}
-
-type QuestionnaireAnswerConnectionCreated_by {
-    connection: QuestionnaireAnswerConnection
-    key: ID
 }
 
 type QuestionnaireAnswerConnectionData {
@@ -2928,11 +2750,6 @@ type QuestionnaireAnswerConnectionUpdated_at {
     key: DateTime
 }
 
-type QuestionnaireAnswerConnectionUpdated_by {
-    connection: QuestionnaireAnswerConnection
-    key: ID
-}
-
 type QuestionnaireAnswerConnectionUser {
     connection: QuestionnaireAnswerConnection
     key: ID
@@ -2940,14 +2757,12 @@ type QuestionnaireAnswerConnectionUser {
 
 type QuestionnaireAnswerGroupBy {
     created_at: [QuestionnaireAnswerConnectionCreated_at]
-    created_by: [QuestionnaireAnswerConnectionCreated_by]
     data: [QuestionnaireAnswerConnectionData]
     id: [QuestionnaireAnswerConnectionId]
     name: [QuestionnaireAnswerConnectionName]
     questionnaire: [QuestionnaireAnswerConnectionQuestionnaire]
     submitted: [QuestionnaireAnswerConnectionSubmitted]
     updated_at: [QuestionnaireAnswerConnectionUpdated_at]
-    updated_by: [QuestionnaireAnswerConnectionUpdated_by]
     user: [QuestionnaireAnswerConnectionUser]
 }
 
@@ -2960,11 +2775,6 @@ type QuestionnaireConnection {
 type QuestionnaireConnectionCreated_at {
     connection: QuestionnaireConnection
     key: DateTime
-}
-
-type QuestionnaireConnectionCreated_by {
-    connection: QuestionnaireConnection
-    key: ID
 }
 
 type QuestionnaireConnectionData {
@@ -2997,27 +2807,19 @@ type QuestionnaireConnectionUpdated_at {
     key: DateTime
 }
 
-type QuestionnaireConnectionUpdated_by {
-    connection: QuestionnaireConnection
-    key: ID
-}
-
 type QuestionnaireGroupBy {
     created_at: [QuestionnaireConnectionCreated_at]
-    created_by: [QuestionnaireConnectionCreated_by]
     data: [QuestionnaireConnectionData]
     displayName: [QuestionnaireConnectionDisplayName]
     id: [QuestionnaireConnectionId]
     name: [QuestionnaireConnectionName]
     provider: [QuestionnaireConnectionProvider]
     updated_at: [QuestionnaireConnectionUpdated_at]
-    updated_by: [QuestionnaireConnectionUpdated_by]
 }
 
 type Reminder {
     body: String
     created_at: DateTime!
-    created_by: AdminUser
     dateTime: DateTime
     id: ID!
     name: String!
@@ -3026,7 +2828,6 @@ type Reminder {
     sourceId: String
     type: ReminderType!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -3049,11 +2850,6 @@ type ReminderConnectionBody {
 type ReminderConnectionCreated_at {
     connection: ReminderConnection
     key: DateTime
-}
-
-type ReminderConnectionCreated_by {
-    connection: ReminderConnection
-    key: ID
 }
 
 type ReminderConnectionDateTime {
@@ -3091,11 +2887,6 @@ type ReminderConnectionUpdated_at {
     key: DateTime
 }
 
-type ReminderConnectionUpdated_by {
-    connection: ReminderConnection
-    key: ID
-}
-
 type ReminderConnectionUser {
     connection: ReminderConnection
     key: ID
@@ -3104,7 +2895,6 @@ type ReminderConnectionUser {
 type ReminderGroupBy {
     body: [ReminderConnectionBody]
     created_at: [ReminderConnectionCreated_at]
-    created_by: [ReminderConnectionCreated_by]
     dateTime: [ReminderConnectionDateTime]
     id: [ReminderConnectionId]
     name: [ReminderConnectionName]
@@ -3112,22 +2902,100 @@ type ReminderGroupBy {
     sourceId: [ReminderConnectionSourceId]
     type: [ReminderConnectionType]
     updated_at: [ReminderConnectionUpdated_at]
-    updated_by: [ReminderConnectionUpdated_by]
     user: [ReminderConnectionUser]
+}
+
+type School {
+    address: String
+    created_at: DateTime!
+    email: String
+    id: ID!
+    name: String!
+    phone: String
+    picture: UploadFile
+    teachers(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
+    type: SchoolType!
+    updated_at: DateTime!
+}
+
+type SchoolAggregator {
+    count: Int
+    totalCount: Int
+}
+
+type SchoolConnection {
+    aggregate: SchoolAggregator
+    groupBy: SchoolGroupBy
+    values: [School]
+}
+
+type SchoolConnectionAddress {
+    connection: SchoolConnection
+    key: String
+}
+
+type SchoolConnectionCreated_at {
+    connection: SchoolConnection
+    key: DateTime
+}
+
+type SchoolConnectionEmail {
+    connection: SchoolConnection
+    key: String
+}
+
+type SchoolConnectionId {
+    connection: SchoolConnection
+    key: ID
+}
+
+type SchoolConnectionName {
+    connection: SchoolConnection
+    key: String
+}
+
+type SchoolConnectionPhone {
+    connection: SchoolConnection
+    key: String
+}
+
+type SchoolConnectionPicture {
+    connection: SchoolConnection
+    key: ID
+}
+
+type SchoolConnectionType {
+    connection: SchoolConnection
+    key: String
+}
+
+type SchoolConnectionUpdated_at {
+    connection: SchoolConnection
+    key: DateTime
+}
+
+type SchoolGroupBy {
+    address: [SchoolConnectionAddress]
+    created_at: [SchoolConnectionCreated_at]
+    email: [SchoolConnectionEmail]
+    id: [SchoolConnectionId]
+    name: [SchoolConnectionName]
+    phone: [SchoolConnectionPhone]
+    picture: [SchoolConnectionPicture]
+    type: [SchoolConnectionType]
+    updated_at: [SchoolConnectionUpdated_at]
 }
 
 type Supplement {
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     forPerson: ComponentDataFor
     id: ID!
     name: String!
     post: ComponentContentPost
-    provider: String!
+    product: ComponentContentProduct
     subject: ComponentDataEhrSubject
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type SupplementAggregator {
@@ -3151,11 +3019,6 @@ type SupplementConnectionCreated_at {
     key: DateTime
 }
 
-type SupplementConnectionCreated_by {
-    connection: SupplementConnection
-    key: ID
-}
-
 type SupplementConnectionForPerson {
     connection: SupplementConnection
     key: ID
@@ -3176,9 +3039,9 @@ type SupplementConnectionPost {
     key: ID
 }
 
-type SupplementConnectionProvider {
+type SupplementConnectionProduct {
     connection: SupplementConnection
-    key: String
+    key: ID
 }
 
 type SupplementConnectionSubject {
@@ -3191,32 +3054,23 @@ type SupplementConnectionUpdated_at {
     key: DateTime
 }
 
-type SupplementConnectionUpdated_by {
-    connection: SupplementConnection
-    key: ID
-}
-
 type SupplementGroupBy {
     content: [SupplementConnectionContent]
     created_at: [SupplementConnectionCreated_at]
-    created_by: [SupplementConnectionCreated_by]
     forPerson: [SupplementConnectionForPerson]
     id: [SupplementConnectionId]
     name: [SupplementConnectionName]
     post: [SupplementConnectionPost]
-    provider: [SupplementConnectionProvider]
+    product: [SupplementConnectionProduct]
     subject: [SupplementConnectionSubject]
     updated_at: [SupplementConnectionUpdated_at]
-    updated_by: [SupplementConnectionUpdated_by]
 }
 
 type Telemetry {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     raw: JSON
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type TelemetryAggregator {
@@ -3235,11 +3089,6 @@ type TelemetryConnectionCreated_at {
     key: DateTime
 }
 
-type TelemetryConnectionCreated_by {
-    connection: TelemetryConnection
-    key: ID
-}
-
 type TelemetryConnectionId {
     connection: TelemetryConnection
     key: ID
@@ -3255,28 +3104,19 @@ type TelemetryConnectionUpdated_at {
     key: DateTime
 }
 
-type TelemetryConnectionUpdated_by {
-    connection: TelemetryConnection
-    key: ID
-}
-
 type TelemetryGroupBy {
     created_at: [TelemetryConnectionCreated_at]
-    created_by: [TelemetryConnectionCreated_by]
     id: [TelemetryConnectionId]
     raw: [TelemetryConnectionRaw]
     updated_at: [TelemetryConnectionUpdated_at]
-    updated_by: [TelemetryConnectionUpdated_by]
 }
 
 type Trademark {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     image: UploadFile
     name: String!
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type TrademarkAggregator {
@@ -3293,11 +3133,6 @@ type TrademarkConnection {
 type TrademarkConnectionCreated_at {
     connection: TrademarkConnection
     key: DateTime
-}
-
-type TrademarkConnectionCreated_by {
-    connection: TrademarkConnection
-    key: ID
 }
 
 type TrademarkConnectionId {
@@ -3320,26 +3155,18 @@ type TrademarkConnectionUpdated_at {
     key: DateTime
 }
 
-type TrademarkConnectionUpdated_by {
-    connection: TrademarkConnection
-    key: ID
-}
-
 type TrademarkGroupBy {
     created_at: [TrademarkConnectionCreated_at]
-    created_by: [TrademarkConnectionCreated_by]
     id: [TrademarkConnectionId]
     image: [TrademarkConnectionImage]
     name: [TrademarkConnectionName]
     updated_at: [TrademarkConnectionUpdated_at]
-    updated_by: [TrademarkConnectionUpdated_by]
 }
 
 type UploadFile {
     alternativeText: String
     caption: String
     created_at: DateTime!
-    created_by: AdminUser
     ext: String
     formats: JSON
     hash: String!
@@ -3353,7 +3180,6 @@ type UploadFile {
     related(limit: Int, sort: String, start: Int, where: JSON): [Morph]
     size: Float!
     updated_at: DateTime!
-    updated_by: AdminUser
     url: String!
     width: Int
 }
@@ -3410,11 +3236,6 @@ type UploadFileConnectionCaption {
 type UploadFileConnectionCreated_at {
     connection: UploadFileConnection
     key: DateTime
-}
-
-type UploadFileConnectionCreated_by {
-    connection: UploadFileConnection
-    key: ID
 }
 
 type UploadFileConnectionExt {
@@ -3477,11 +3298,6 @@ type UploadFileConnectionUpdated_at {
     key: DateTime
 }
 
-type UploadFileConnectionUpdated_by {
-    connection: UploadFileConnection
-    key: ID
-}
-
 type UploadFileConnectionUrl {
     connection: UploadFileConnection
     key: String
@@ -3496,7 +3312,6 @@ type UploadFileGroupBy {
     alternativeText: [UploadFileConnectionAlternativeText]
     caption: [UploadFileConnectionCaption]
     created_at: [UploadFileConnectionCreated_at]
-    created_by: [UploadFileConnectionCreated_by]
     ext: [UploadFileConnectionExt]
     formats: [UploadFileConnectionFormats]
     hash: [UploadFileConnectionHash]
@@ -3509,7 +3324,6 @@ type UploadFileGroupBy {
     provider_metadata: [UploadFileConnectionProvider_metadata]
     size: [UploadFileConnectionSize]
     updated_at: [UploadFileConnectionUpdated_at]
-    updated_by: [UploadFileConnectionUpdated_by]
     url: [UploadFileConnectionUrl]
     width: [UploadFileConnectionWidth]
 }
@@ -3517,11 +3331,9 @@ type UploadFileGroupBy {
 type UserAddress {
     address: ComponentDataAddress
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     tag: String
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -3546,11 +3358,6 @@ type UserAddressConnectionCreated_at {
     key: DateTime
 }
 
-type UserAddressConnectionCreated_by {
-    connection: UserAddressConnection
-    key: ID
-}
-
 type UserAddressConnectionId {
     connection: UserAddressConnection
     key: ID
@@ -3566,11 +3373,6 @@ type UserAddressConnectionUpdated_at {
     key: DateTime
 }
 
-type UserAddressConnectionUpdated_by {
-    connection: UserAddressConnection
-    key: ID
-}
-
 type UserAddressConnectionUser {
     connection: UserAddressConnection
     key: ID
@@ -3579,23 +3381,19 @@ type UserAddressConnectionUser {
 type UserAddressGroupBy {
     address: [UserAddressConnectionAddress]
     created_at: [UserAddressConnectionCreated_at]
-    created_by: [UserAddressConnectionCreated_by]
     id: [UserAddressConnectionId]
     tag: [UserAddressConnectionTag]
     updated_at: [UserAddressConnectionUpdated_at]
-    updated_by: [UserAddressConnectionUpdated_by]
     user: [UserAddressConnectionUser]
 }
 
 type UserAgreement {
     content: String!
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     lastVersionDate: DateTime!
     termOfServiceType: TermOfServiceType!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
     value: Boolean
 }
@@ -3621,11 +3419,6 @@ type UserAgreementConnectionCreated_at {
     key: DateTime
 }
 
-type UserAgreementConnectionCreated_by {
-    connection: UserAgreementConnection
-    key: ID
-}
-
 type UserAgreementConnectionId {
     connection: UserAgreementConnection
     key: ID
@@ -3646,11 +3439,6 @@ type UserAgreementConnectionUpdated_at {
     key: DateTime
 }
 
-type UserAgreementConnectionUpdated_by {
-    connection: UserAgreementConnection
-    key: ID
-}
-
 type UserAgreementConnectionUser {
     connection: UserAgreementConnection
     key: ID
@@ -3664,12 +3452,10 @@ type UserAgreementConnectionValue {
 type UserAgreementGroupBy {
     content: [UserAgreementConnectionContent]
     created_at: [UserAgreementConnectionCreated_at]
-    created_by: [UserAgreementConnectionCreated_by]
     id: [UserAgreementConnectionId]
     lastVersionDate: [UserAgreementConnectionLastVersionDate]
     termOfServiceType: [UserAgreementConnectionTermOfServiceType]
     updated_at: [UserAgreementConnectionUpdated_at]
-    updated_by: [UserAgreementConnectionUpdated_by]
     user: [UserAgreementConnectionUser]
     value: [UserAgreementConnectionValue]
 }
@@ -3677,10 +3463,8 @@ type UserAgreementGroupBy {
 type UserAssessment {
     assessment_questionnaire: AssessmentQuestionnaire
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -3705,11 +3489,6 @@ type UserAssessmentConnectionCreated_at {
     key: DateTime
 }
 
-type UserAssessmentConnectionCreated_by {
-    connection: UserAssessmentConnection
-    key: ID
-}
-
 type UserAssessmentConnectionId {
     connection: UserAssessmentConnection
     key: ID
@@ -3720,11 +3499,6 @@ type UserAssessmentConnectionUpdated_at {
     key: DateTime
 }
 
-type UserAssessmentConnectionUpdated_by {
-    connection: UserAssessmentConnection
-    key: ID
-}
-
 type UserAssessmentConnectionUser {
     connection: UserAssessmentConnection
     key: ID
@@ -3733,20 +3507,16 @@ type UserAssessmentConnectionUser {
 type UserAssessmentGroupBy {
     assessment_questionnaire: [UserAssessmentConnectionAssessment_questionnaire]
     created_at: [UserAssessmentConnectionCreated_at]
-    created_by: [UserAssessmentConnectionCreated_by]
     id: [UserAssessmentConnectionId]
     updated_at: [UserAssessmentConnectionUpdated_at]
-    updated_by: [UserAssessmentConnectionUpdated_by]
     user: [UserAssessmentConnectionUser]
 }
 
 type UserExercise {
     created_at: DateTime!
-    created_by: AdminUser
     exercise: Exercise
     id: ID!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -3766,11 +3536,6 @@ type UserExerciseConnectionCreated_at {
     key: DateTime
 }
 
-type UserExerciseConnectionCreated_by {
-    connection: UserExerciseConnection
-    key: ID
-}
-
 type UserExerciseConnectionExercise {
     connection: UserExerciseConnection
     key: ID
@@ -3786,11 +3551,6 @@ type UserExerciseConnectionUpdated_at {
     key: DateTime
 }
 
-type UserExerciseConnectionUpdated_by {
-    connection: UserExerciseConnection
-    key: ID
-}
-
 type UserExerciseConnectionUser {
     connection: UserExerciseConnection
     key: ID
@@ -3798,21 +3558,17 @@ type UserExerciseConnectionUser {
 
 type UserExerciseGroupBy {
     created_at: [UserExerciseConnectionCreated_at]
-    created_by: [UserExerciseConnectionCreated_by]
     exercise: [UserExerciseConnectionExercise]
     id: [UserExerciseConnectionId]
     updated_at: [UserExerciseConnectionUpdated_at]
-    updated_by: [UserExerciseConnectionUpdated_by]
     user: [UserExerciseConnectionUser]
 }
 
 type UserParenting {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     parenting: Parenting
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
 }
 
@@ -3832,11 +3588,6 @@ type UserParentingConnectionCreated_at {
     key: DateTime
 }
 
-type UserParentingConnectionCreated_by {
-    connection: UserParentingConnection
-    key: ID
-}
-
 type UserParentingConnectionId {
     connection: UserParentingConnection
     key: ID
@@ -3852,11 +3603,6 @@ type UserParentingConnectionUpdated_at {
     key: DateTime
 }
 
-type UserParentingConnectionUpdated_by {
-    connection: UserParentingConnection
-    key: ID
-}
-
 type UserParentingConnectionUser {
     connection: UserParentingConnection
     key: ID
@@ -3864,11 +3610,9 @@ type UserParentingConnectionUser {
 
 type UserParentingGroupBy {
     created_at: [UserParentingConnectionCreated_at]
-    created_by: [UserParentingConnectionCreated_by]
     id: [UserParentingConnectionId]
     parenting: [UserParentingConnectionParenting]
     updated_at: [UserParentingConnectionUpdated_at]
-    updated_by: [UserParentingConnectionUpdated_by]
     user: [UserParentingConnectionUser]
 }
 
@@ -3878,12 +3622,10 @@ type UserPermissionsPasswordPayload {
 
 type UserPlan {
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     parentings(limit: Int, sort: String, start: Int, where: JSON): [Parenting]
     status: PlanStatus!
     updated_at: DateTime!
-    updated_by: AdminUser
     user: UsersPermissionsUser
     user_assessments(limit: Int, sort: String, start: Int, where: JSON): [UserAssessment]
     user_exercises(limit: Int, sort: String, start: Int, where: JSON): [UserExercise]
@@ -3905,11 +3647,6 @@ type UserPlanConnectionCreated_at {
     key: DateTime
 }
 
-type UserPlanConnectionCreated_by {
-    connection: UserPlanConnection
-    key: ID
-}
-
 type UserPlanConnectionId {
     connection: UserPlanConnection
     key: ID
@@ -3925,11 +3662,6 @@ type UserPlanConnectionUpdated_at {
     key: DateTime
 }
 
-type UserPlanConnectionUpdated_by {
-    connection: UserPlanConnection
-    key: ID
-}
-
 type UserPlanConnectionUser {
     connection: UserPlanConnection
     key: ID
@@ -3937,11 +3669,9 @@ type UserPlanConnectionUser {
 
 type UserPlanGroupBy {
     created_at: [UserPlanConnectionCreated_at]
-    created_by: [UserPlanConnectionCreated_by]
     id: [UserPlanConnectionId]
     status: [UserPlanConnectionStatus]
     updated_at: [UserPlanConnectionUpdated_at]
-    updated_by: [UserPlanConnectionUpdated_by]
     user: [UserPlanConnectionUser]
 }
 
@@ -3949,13 +3679,11 @@ type UsersOrganizationunitsOrganizationUnit {
     children(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
     code: String
     created_at: DateTime!
-    created_by: AdminUser
     displayName: String!
     id: ID!
     parent: UsersOrganizationunitsOrganizationUnit
     roles(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsRole]
     updated_at: DateTime!
-    updated_by: AdminUser
     users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
 }
 
@@ -3980,11 +3708,6 @@ type UsersOrganizationunitsOrganizationUnitConnectionCreated_at {
     key: DateTime
 }
 
-type UsersOrganizationunitsOrganizationUnitConnectionCreated_by {
-    connection: UsersOrganizationunitsOrganizationUnitConnection
-    key: ID
-}
-
 type UsersOrganizationunitsOrganizationUnitConnectionDisplayName {
     connection: UsersOrganizationunitsOrganizationUnitConnection
     key: String
@@ -4005,23 +3728,17 @@ type UsersOrganizationunitsOrganizationUnitConnectionUpdated_at {
     key: DateTime
 }
 
-type UsersOrganizationunitsOrganizationUnitConnectionUpdated_by {
-    connection: UsersOrganizationunitsOrganizationUnitConnection
-    key: ID
-}
-
 type UsersOrganizationunitsOrganizationUnitGroupBy {
     code: [UsersOrganizationunitsOrganizationUnitConnectionCode]
     created_at: [UsersOrganizationunitsOrganizationUnitConnectionCreated_at]
-    created_by: [UsersOrganizationunitsOrganizationUnitConnectionCreated_by]
     displayName: [UsersOrganizationunitsOrganizationUnitConnectionDisplayName]
     id: [UsersOrganizationunitsOrganizationUnitConnectionId]
     parent: [UsersOrganizationunitsOrganizationUnitConnectionParent]
     updated_at: [UsersOrganizationunitsOrganizationUnitConnectionUpdated_at]
-    updated_by: [UsersOrganizationunitsOrganizationUnitConnectionUpdated_by]
 }
 
 type UsersPermissionsLoginPayload {
+    expire_at: DateTime
     jwt: String
     user: UsersPermissionsMe!
 }
@@ -4034,7 +3751,6 @@ type UsersPermissionsMe {
     childInfo: ComponentUserChild
     confirmed: Boolean
     counselorInfo: ComponentUserCounselor
-    countryCode: String
     created_at: DateTime!
     created_by: AdminUser
     doctorInfo: ComponentUserDoctor
@@ -4070,23 +3786,24 @@ type UsersPermissionsMeRole {
 type UsersPermissionsPermission {
     action: String!
     controller: String!
-    created_by: AdminUser
     enabled: Boolean!
     id: ID!
     policy: String
     role: UsersPermissionsRole
     type: String!
-    updated_by: AdminUser
+}
+
+type UsersPermissionsRefreshTokenPayload {
+    expire_at: DateTime
+    jwt: String!
 }
 
 type UsersPermissionsRole {
-    created_by: AdminUser
     description: String
     id: ID!
     name: String!
     permissions(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsPermission]
     type: String
-    updated_by: AdminUser
     users(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
 }
 
@@ -4099,11 +3816,6 @@ type UsersPermissionsRoleConnection {
     aggregate: UsersPermissionsRoleAggregator
     groupBy: UsersPermissionsRoleGroupBy
     values: [UsersPermissionsRole]
-}
-
-type UsersPermissionsRoleConnectionCreated_by {
-    connection: UsersPermissionsRoleConnection
-    key: ID
 }
 
 type UsersPermissionsRoleConnectionDescription {
@@ -4126,18 +3838,11 @@ type UsersPermissionsRoleConnectionType {
     key: String
 }
 
-type UsersPermissionsRoleConnectionUpdated_by {
-    connection: UsersPermissionsRoleConnection
-    key: ID
-}
-
 type UsersPermissionsRoleGroupBy {
-    created_by: [UsersPermissionsRoleConnectionCreated_by]
     description: [UsersPermissionsRoleConnectionDescription]
     id: [UsersPermissionsRoleConnectionId]
     name: [UsersPermissionsRoleConnectionName]
     type: [UsersPermissionsRoleConnectionType]
-    updated_by: [UsersPermissionsRoleConnectionUpdated_by]
 }
 
 type UsersPermissionsUser {
@@ -4146,12 +3851,11 @@ type UsersPermissionsUser {
     birthday: Date
     blocked: Boolean
     childInfo: ComponentUserChild
+    children(limit: Int, sort: String, start: Int, where: JSON): [UsersPermissionsUser]
     confirmed: Boolean
     content: String
     counselorInfo: ComponentUserCounselor
-    countryCode: String
     created_at: DateTime!
-    created_by: AdminUser
     doctorInfo: ComponentUserDoctor
     email: String
     fullName: String
@@ -4160,6 +3864,7 @@ type UsersPermissionsUser {
     name: String
     nurseInfo: ComponentUserNurse
     organization_units(limit: Int, sort: String, start: Int, where: JSON): [UsersOrganizationunitsOrganizationUnit]
+    parent: UsersPermissionsUser
     parentInfo: ComponentUserParent
     patientInfo: Patient
     phone: String
@@ -4171,7 +3876,6 @@ type UsersPermissionsUser {
     status: UserStatus!
     teacherInfo: ComponentUserTeacher
     updated_at: DateTime!
-    updated_by: AdminUser
     user_agreements(limit: Int, sort: String, start: Int, where: JSON): [UserAgreement]
     username: String!
 }
@@ -4227,19 +3931,9 @@ type UsersPermissionsUserConnectionCounselorInfo {
     key: ID
 }
 
-type UsersPermissionsUserConnectionCountryCode {
-    connection: UsersPermissionsUserConnection
-    key: String
-}
-
 type UsersPermissionsUserConnectionCreated_at {
     connection: UsersPermissionsUserConnection
     key: DateTime
-}
-
-type UsersPermissionsUserConnectionCreated_by {
-    connection: UsersPermissionsUserConnection
-    key: ID
 }
 
 type UsersPermissionsUserConnectionDoctorInfo {
@@ -4273,6 +3967,11 @@ type UsersPermissionsUserConnectionName {
 }
 
 type UsersPermissionsUserConnectionNurseInfo {
+    connection: UsersPermissionsUserConnection
+    key: ID
+}
+
+type UsersPermissionsUserConnectionParent {
     connection: UsersPermissionsUserConnection
     key: ID
 }
@@ -4332,11 +4031,6 @@ type UsersPermissionsUserConnectionUpdated_at {
     key: DateTime
 }
 
-type UsersPermissionsUserConnectionUpdated_by {
-    connection: UsersPermissionsUserConnection
-    key: ID
-}
-
 type UsersPermissionsUserConnectionUsername {
     connection: UsersPermissionsUserConnection
     key: String
@@ -4351,9 +4045,7 @@ type UsersPermissionsUserGroupBy {
     confirmed: [UsersPermissionsUserConnectionConfirmed]
     content: [UsersPermissionsUserConnectionContent]
     counselorInfo: [UsersPermissionsUserConnectionCounselorInfo]
-    countryCode: [UsersPermissionsUserConnectionCountryCode]
     created_at: [UsersPermissionsUserConnectionCreated_at]
-    created_by: [UsersPermissionsUserConnectionCreated_by]
     doctorInfo: [UsersPermissionsUserConnectionDoctorInfo]
     email: [UsersPermissionsUserConnectionEmail]
     fullName: [UsersPermissionsUserConnectionFullName]
@@ -4361,6 +4053,7 @@ type UsersPermissionsUserGroupBy {
     image: [UsersPermissionsUserConnectionImage]
     name: [UsersPermissionsUserConnectionName]
     nurseInfo: [UsersPermissionsUserConnectionNurseInfo]
+    parent: [UsersPermissionsUserConnectionParent]
     parentInfo: [UsersPermissionsUserConnectionParentInfo]
     patientInfo: [UsersPermissionsUserConnectionPatientInfo]
     phone: [UsersPermissionsUserConnectionPhone]
@@ -4372,7 +4065,6 @@ type UsersPermissionsUserGroupBy {
     status: [UsersPermissionsUserConnectionStatus]
     teacherInfo: [UsersPermissionsUserConnectionTeacherInfo]
     updated_at: [UsersPermissionsUserConnectionUpdated_at]
-    updated_by: [UsersPermissionsUserConnectionUpdated_by]
     username: [UsersPermissionsUserConnectionUsername]
 }
 
@@ -4382,7 +4074,6 @@ type Venue {
     contacts: String
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     email: String
     id: ID!
     name: String
@@ -4390,7 +4081,6 @@ type Venue {
     picture: UploadFile
     post: ComponentContentPost
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type VenueAggregator {
@@ -4449,11 +4139,6 @@ type VenueConnectionCreated_at {
     key: DateTime
 }
 
-type VenueConnectionCreated_by {
-    connection: VenueConnection
-    key: ID
-}
-
 type VenueConnectionEmail {
     connection: VenueConnection
     key: String
@@ -4489,18 +4174,12 @@ type VenueConnectionUpdated_at {
     key: DateTime
 }
 
-type VenueConnectionUpdated_by {
-    connection: VenueConnection
-    key: ID
-}
-
 type VenueGroupBy {
     address: [VenueConnectionAddress]
     capacity: [VenueConnectionCapacity]
     contacts: [VenueConnectionContacts]
     content: [VenueConnectionContent]
     created_at: [VenueConnectionCreated_at]
-    created_by: [VenueConnectionCreated_by]
     email: [VenueConnectionEmail]
     id: [VenueConnectionId]
     name: [VenueConnectionName]
@@ -4508,30 +4187,25 @@ type VenueGroupBy {
     picture: [VenueConnectionPicture]
     post: [VenueConnectionPost]
     updated_at: [VenueConnectionUpdated_at]
-    updated_by: [VenueConnectionUpdated_by]
 }
 
 type Version {
     created_at: DateTime!
-    created_by: AdminUser
     description: String!
     id: ID!
     number: String!
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type Webinar {
     content: String
     created_at: DateTime!
-    created_by: AdminUser
     id: ID!
     meetingId: String
     post: ComponentContentPost
     schedule: DateTime
     subject: ComponentDataEhrSubject
     updated_at: DateTime!
-    updated_by: AdminUser
 }
 
 type WebinarAggregator {
@@ -4553,11 +4227,6 @@ type WebinarConnectionContent {
 type WebinarConnectionCreated_at {
     connection: WebinarConnection
     key: DateTime
-}
-
-type WebinarConnectionCreated_by {
-    connection: WebinarConnection
-    key: ID
 }
 
 type WebinarConnectionId {
@@ -4590,22 +4259,15 @@ type WebinarConnectionUpdated_at {
     key: DateTime
 }
 
-type WebinarConnectionUpdated_by {
-    connection: WebinarConnection
-    key: ID
-}
-
 type WebinarGroupBy {
     content: [WebinarConnectionContent]
     created_at: [WebinarConnectionCreated_at]
-    created_by: [WebinarConnectionCreated_by]
     id: [WebinarConnectionId]
     meetingId: [WebinarConnectionMeetingId]
     post: [WebinarConnectionPost]
     schedule: [WebinarConnectionSchedule]
     subject: [WebinarConnectionSubject]
     updated_at: [WebinarConnectionUpdated_at]
-    updated_by: [WebinarConnectionUpdated_by]
 }
 
 type batchTelemetryPayload {
@@ -4634,6 +4296,10 @@ type createBookPayload {
 
 type createCategoryPayload {
     category: Category
+}
+
+type createClassificationPayload {
+    classification: Classification
 }
 
 type createColorPayload {
@@ -4720,6 +4386,10 @@ type createRolePayload {
     role: UsersPermissionsRole
 }
 
+type createSchoolPayload {
+    school: School
+}
+
 type createSupplementPayload {
     supplement: Supplement
 }
@@ -4800,6 +4470,10 @@ type deleteCategoryPayload {
     category: Category
 }
 
+type deleteClassificationPayload {
+    classification: Classification
+}
+
 type deleteColorPayload {
     color: Color
 }
@@ -4826,6 +4500,10 @@ type deleteEventPayload {
 
 type deleteExercisePayload {
     exercise: Exercise
+}
+
+type deleteFilePayload {
+    file: UploadFile
 }
 
 type deleteGamePayload {
@@ -4886,6 +4564,10 @@ type deleteReminderPayload {
 
 type deleteRolePayload {
     role: UsersPermissionsRole
+}
+
+type deleteSchoolPayload {
+    school: School
 }
 
 type deleteSupplementPayload {
@@ -4977,6 +4659,10 @@ type updateCategoryPayload {
     category: Category
 }
 
+type updateClassificationPayload {
+    classification: Classification
+}
+
 type updateColorPayload {
     color: Color
 }
@@ -5065,6 +4751,10 @@ type updateRolePayload {
     role: UsersPermissionsRole
 }
 
+type updateSchoolPayload {
+    school: School
+}
+
 type updateSupplementPayload {
     supplement: Supplement
 }
@@ -5122,11 +4812,6 @@ enum BookType {
     printed
 }
 
-enum CacheControlScope {
-    PRIVATE
-    PUBLIC
-}
-
 enum CategoryType {
     app
     subject
@@ -5168,10 +4853,12 @@ enum EhrSubject {
 
 enum EhrType {
     assessment
-    diagnose
+    clinic
     education
     exercise
     medicine
+    nutrition
+    sleep
     supplement
 }
 
@@ -5207,6 +4894,12 @@ enum OrderStatusType {
     Unpaied
 }
 
+enum PatientStatus {
+    active
+    registered
+    removed
+}
+
 enum PlanStatus {
     canceled
     closed
@@ -5227,6 +4920,11 @@ enum PosterStatus {
     removed
 }
 
+enum PublicationState {
+    LIVE
+    PREVIEW
+}
+
 enum RelationType {
     father
     grandparent
@@ -5240,6 +4938,14 @@ enum ReminderType {
     normal
     scheduled
     weekly
+}
+
+enum SchoolType {
+    highSchool
+    k_12
+    k_9
+    kindergarten
+    middleSchool
 }
 
 enum SexType {
@@ -5297,7 +5003,7 @@ input ArticleInput {
     name: String
     order_items: [ID]
     post: ComponentContentPostInput!
-    published_at: Date
+    published_at: DateTime
     questionnaire: ID
     subject: ComponentDataEhrSubjectInput
     updated_by: ID
@@ -5313,6 +5019,7 @@ input AssessmentQuestionnaireInput {
     name: String!
     period_length: Int
     post: ComponentContentPostInput!
+    product: ComponentContentProductInput
     questionnaire: ID
     questionnaireOnly: Boolean
     subject: ComponentDataEhrSubjectInput
@@ -5331,6 +5038,7 @@ input BookInput {
     episodes: [ComponentContentEpisodeInput]
     name: String!
     post: ComponentContentPostInput!
+    product: ComponentContentProductInput
     type: BookType
     updated_by: ID
 }
@@ -5340,6 +5048,14 @@ input CategoryInput {
     name: String!
     preserved: Boolean
     type: CategoryType
+    updated_by: ID
+}
+
+input ClassificationInput {
+    created_by: ID
+    name: String
+    published_at: DateTime
+    sortIndex: Int
     updated_by: ID
 }
 
@@ -5447,23 +5163,25 @@ input ComponentUserAuthorInput {
 }
 
 input ComponentUserChildInput {
-    parent: ID
     relationToUser: RelationType!
-    reminder: ID
+    schools: [ID]
     teacher: ID
 }
 
 input ComponentUserCounselorInput {
     location: ID
+    patients: [ID]
 }
 
 input ComponentUserDoctorInput {
     location: ID
+    patients: [ID]
     subject: DoctorSubject!
 }
 
 input ComponentUserNurseInput {
     location: ID
+    patients: [ID]
 }
 
 input ComponentUserParentInput {
@@ -5477,6 +5195,9 @@ input ComponentUserPatientInput {
 }
 
 input ComponentUserTeacherInput {
+    atSchool: ID
+    children: [ID]
+    role: String
     school: String
 }
 
@@ -5516,21 +5237,20 @@ input CurrencyInput {
 }
 
 input EhrInput {
+    classification: ID
     created_by: ID
-    data: JSON
     medias: [ID]
     office_comments: String
     patient: ID
     position: ComponentDataPositionInput
     questionnaire_answer: ID
+    record: JSON
     source: String!
     source_id: String!
     status: EhrStatus
     subject: ComponentDataEhrSubjectInput!
     summaries: [ComponentContentSummaryInput]
-    type: ComponentDataEhrTypeInput!
     updated_by: ID
-    user: ID
 }
 
 input EventInput {
@@ -5602,10 +5322,13 @@ input InputID {
 input LocationInput {
     address: String!
     content: String
+    counselors: [ID]
     created_by: ID
     description: String
+    doctors: [ID]
     email: String
     name: String!
+    nurses: [ID]
     phone: String
     post: ComponentContentPostInput!
     qrCode: ID
@@ -5684,9 +5407,12 @@ input PatientInput {
     created_by: ID
     doctor: ID
     ehrs: [ID]
+    location: ID
     meetingId: String
     name: String!
     nurse: ID
+    status: PatientStatus
+    teacher: ID
     updated_by: ID
     user: ID
 }
@@ -5736,6 +5462,7 @@ input PostInput {
     needShipping: Boolean
     prePrice: Float
     price: Float
+    published_at: DateTime
     rating: Int
     rawPostId: Int
     recommended: Boolean
@@ -5803,6 +5530,18 @@ input RoleInput {
     users: [ID]
 }
 
+input SchoolInput {
+    address: String
+    created_by: ID
+    email: String
+    name: String!
+    phone: String
+    picture: ID
+    teachers: [ID]
+    type: SchoolType!
+    updated_by: ID
+}
+
 input SettingInput {
     created_by: ID
     data: JSON
@@ -5816,7 +5555,7 @@ input SupplementInput {
     forPerson: ComponentDataForInput
     name: String!
     post: ComponentContentPostInput!
-    provider: String!
+    product: ComponentContentProductInput
     subject: ComponentDataEhrSubjectInput
     updated_by: ID
 }
@@ -5878,10 +5617,11 @@ input UserInput {
     birthday: Date
     blocked: Boolean
     childInfo: ComponentUserChildInput
+    children: [ID]
+    confirmationToken: String
     confirmed: Boolean
     content: String
     counselorInfo: ComponentUserCounselorInput
-    countryCode: String
     created_by: ID
     doctorInfo: ComponentUserDoctorInput
     email: String
@@ -5890,6 +5630,7 @@ input UserInput {
     name: String
     nurseInfo: ComponentUserNurseInput
     organization_units: [ID]
+    parent: ID
     parentInfo: ComponentUserParentInput
     password: String
     patientInfo: ID
@@ -5987,6 +5728,8 @@ input childInput {
     fullName: String!
     image: ID
     name: String
+    parent: ID!
+    phone: String!
     sex: SexType!
 }
 
@@ -6012,6 +5755,10 @@ input createCategoryInput {
 
 input createChildInput {
     data: childInput
+}
+
+input createClassificationInput {
+    data: ClassificationInput
 }
 
 input createColorInput {
@@ -6106,6 +5853,10 @@ input createRoleInput {
     data: RoleInput
 }
 
+input createSchoolInput {
+    data: SchoolInput
+}
+
 input createSupplementInput {
     data: SupplementInput
 }
@@ -6178,6 +5929,10 @@ input deleteCategoryInput {
     where: InputID
 }
 
+input deleteClassificationInput {
+    where: InputID
+}
+
 input deleteColorInput {
     where: InputID
 }
@@ -6203,6 +5958,10 @@ input deleteEventInput {
 }
 
 input deleteExerciseInput {
+    where: InputID
+}
+
+input deleteFileInput {
     where: InputID
 }
 
@@ -6259,6 +6018,10 @@ input deleteReminderInput {
 }
 
 input deleteRoleInput {
+    where: InputID
+}
+
+input deleteSchoolInput {
     where: InputID
 }
 
@@ -6339,7 +6102,7 @@ input editArticleInput {
     name: String
     order_items: [ID]
     post: editComponentContentPostInput
-    published_at: Date
+    published_at: DateTime
     questionnaire: ID
     subject: editComponentDataEhrSubjectInput
     updated_by: ID
@@ -6355,6 +6118,7 @@ input editAssessmentQuestionnaireInput {
     name: String
     period_length: Int
     post: editComponentContentPostInput
+    product: editComponentContentProductInput
     questionnaire: ID
     questionnaireOnly: Boolean
     subject: editComponentDataEhrSubjectInput
@@ -6373,6 +6137,7 @@ input editBookInput {
     episodes: [editComponentContentEpisodeInput]
     name: String
     post: editComponentContentPostInput
+    product: editComponentContentProductInput
     type: BookType
     updated_by: ID
 }
@@ -6391,7 +6156,16 @@ input editChildInput {
     fullName: String
     image: ID
     name: String
+    phone: String
     sex: SexType
+}
+
+input editClassificationInput {
+    created_by: ID
+    name: String
+    published_at: DateTime
+    sortIndex: Int
+    updated_by: ID
 }
 
 input editColorInput {
@@ -6511,26 +6285,28 @@ input editComponentUserAuthorInput {
 
 input editComponentUserChildInput {
     id: ID
-    parent: ID
     relationToUser: RelationType
-    reminder: ID
+    schools: [ID]
     teacher: ID
 }
 
 input editComponentUserCounselorInput {
     id: ID
     location: ID
+    patients: [ID]
 }
 
 input editComponentUserDoctorInput {
     id: ID
     location: ID
+    patients: [ID]
     subject: DoctorSubject
 }
 
 input editComponentUserNurseInput {
     id: ID
     location: ID
+    patients: [ID]
 }
 
 input editComponentUserParentInput {
@@ -6546,7 +6322,10 @@ input editComponentUserPatientInput {
 }
 
 input editComponentUserTeacherInput {
+    atSchool: ID
+    children: [ID]
     id: ID
+    role: String
     school: String
 }
 
@@ -6586,21 +6365,20 @@ input editCurrencyInput {
 }
 
 input editEhrInput {
+    classification: ID
     created_by: ID
-    data: JSON
     medias: [ID]
     office_comments: String
     patient: ID
     position: editComponentDataPositionInput
     questionnaire_answer: ID
+    record: JSON
     source: String
     source_id: String
     status: EhrStatus
     subject: editComponentDataEhrSubjectInput
     summaries: [editComponentContentSummaryInput]
-    type: editComponentDataEhrTypeInput
     updated_by: ID
-    user: ID
 }
 
 input editEventInput {
@@ -6662,10 +6440,13 @@ input editGameInput {
 input editLocationInput {
     address: String
     content: String
+    counselors: [ID]
     created_by: ID
     description: String
+    doctors: [ID]
     email: String
     name: String
+    nurses: [ID]
     phone: String
     post: editComponentContentPostInput
     qrCode: ID
@@ -6744,9 +6525,12 @@ input editPatientInput {
     created_by: ID
     doctor: ID
     ehrs: [ID]
+    location: ID
     meetingId: String
     name: String
     nurse: ID
+    status: PatientStatus
+    teacher: ID
     updated_by: ID
     user: ID
 }
@@ -6796,6 +6580,7 @@ input editPostInput {
     needShipping: Boolean
     prePrice: Float
     price: Float
+    published_at: DateTime
     rating: Int
     rawPostId: Int
     recommended: Boolean
@@ -6863,6 +6648,18 @@ input editRoleInput {
     users: [ID]
 }
 
+input editSchoolInput {
+    address: String
+    created_by: ID
+    email: String
+    name: String
+    phone: String
+    picture: ID
+    teachers: [ID]
+    type: SchoolType
+    updated_by: ID
+}
+
 input editSettingInput {
     created_by: ID
     data: JSON
@@ -6876,7 +6673,7 @@ input editSupplementInput {
     forPerson: editComponentDataForInput
     name: String
     post: editComponentContentPostInput
-    provider: String
+    product: editComponentContentProductInput
     subject: editComponentDataEhrSubjectInput
     updated_by: ID
 }
@@ -6938,10 +6735,11 @@ input editUserInput {
     birthday: Date
     blocked: Boolean
     childInfo: editComponentUserChildInput
+    children: [ID]
+    confirmationToken: String
     confirmed: Boolean
     content: String
     counselorInfo: editComponentUserCounselorInput
-    countryCode: String
     created_by: ID
     doctorInfo: editComponentUserDoctorInput
     email: String
@@ -6950,6 +6748,7 @@ input editUserInput {
     name: String
     nurseInfo: editComponentUserNurseInput
     organization_units: [ID]
+    parent: ID
     parentInfo: editComponentUserParentInput
     password: String
     patientInfo: ID
@@ -7103,6 +6902,11 @@ input updateChildInput {
     where: InputID
 }
 
+input updateClassificationInput {
+    data: editClassificationInput
+    where: InputID
+}
+
 input updateColorInput {
     data: editColorInput
     where: InputID
@@ -7151,7 +6955,6 @@ input updateLocationInput {
 input updateMe {
     birthday: Date
     content: String
-    countryCode: String
     email: String
     fullName: String
     image: ID
@@ -7235,6 +7038,11 @@ input updateRoleInput {
     where: InputID
 }
 
+input updateSchoolInput {
+    data: editSchoolInput
+    where: InputID
+}
+
 input updateSupplementInput {
     data: editSupplementInput
     where: InputID
@@ -7300,20 +7108,20 @@ input updateWebinarInput {
 }
 
 
-"A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
-scalar DateTime
-
 "The `JSON` scalar type represents JSON values as specified by [ECMA-404](http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf)."
 scalar JSON
 
-"A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
-scalar Date
-
-"The `Upload` scalar type represents a file upload."
-scalar Upload
+"A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar DateTime
 
 "A time string with format: HH:mm:ss.SSS"
 scalar Time
 
+"A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar."
+scalar Date
+
 "The `Long` scalar type represents 52-bit integers"
 scalar Long
+
+"The `Upload` scalar type represents a file upload."
+scalar Upload

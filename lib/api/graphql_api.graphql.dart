@@ -84,8 +84,8 @@ mixin ArticleSimpleMixin {
   List<ArticleSimpleMixin$Media> media;
   @JsonKey(
       name: 'published_at',
-      fromJson: fromGraphQLDateToDartDateTime,
-      toJson: fromDartDateTimeToGraphQLDate)
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
   DateTime publishedAt;
   ArticleSimpleMixin$Post post;
 }
@@ -152,7 +152,6 @@ mixin ChildInfoSimpleMixin {
   @JsonKey(unknownEnumValue: RelationType.artemisUnknown)
   RelationType relationToUser;
   ChildInfoSimpleMixin$Teacher teacher;
-  ChildInfoSimpleMixin$Parent parent;
 }
 mixin UserDetailMixin {
   String id;
@@ -169,7 +168,6 @@ mixin UserDetailMixin {
   UserDetailMixin$Image image;
   bool blocked;
   bool confirmed;
-  String countryCode;
   @JsonKey(
       name: 'created_at',
       fromJson: fromGraphQLDateTimeToDartDateTime,
@@ -231,9 +229,7 @@ mixin EhrSimpleMixin {
       fromJson: fromGraphQLDateTimeToDartDateTime,
       toJson: fromDartDateTimeToGraphQLDateTime)
   DateTime createdAt;
-  EhrSimpleMixin$User user;
   EhrSimpleMixin$Patient patient;
-  EhrSimpleMixin$Type type;
   EhrSimpleMixin$Subject subject;
   @JsonKey(unknownEnumValue: EhrStatus.artemisUnknown)
   EhrStatus status;
@@ -372,7 +368,6 @@ mixin UserMeMixin {
       fromJson: fromGraphQLDateToDartDateTime,
       toJson: fromDartDateTimeToGraphQLDate)
   DateTime birthday;
-  String countryCode;
   @JsonKey(name: 'second_email')
   String secondEmail;
   UserMeMixin$Image image;
@@ -481,7 +476,6 @@ mixin ReminderSimpleMixin {
   List<ReminderSimpleMixin$Related> related;
 }
 mixin SupplementDetaileMixin {
-  String provider;
   String content;
   SupplementDetaileMixin$Subject subject;
   SupplementDetaileMixin$ForPerson forPerson;
@@ -642,26 +636,6 @@ class Accounts$Query with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy
-    with EquatableMixin {
-  AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy();
-
-  factory AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy.fromJson(
-          Map<String, dynamic> json) =>
-      _$AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedByFromJson(
-          json);
-
-  String id;
-
-  String username;
-
-  @override
-  List<Object> get props => [id, username];
-  Map<String, dynamic> toJson() =>
-      _$AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedByToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
 class AgreeForTermOfService$Mutation$AgreeTermOfService
     with EquatableMixin, UserAgreementSimpleMixin {
   AgreeForTermOfService$Mutation$AgreeTermOfService();
@@ -670,12 +644,9 @@ class AgreeForTermOfService$Mutation$AgreeTermOfService
           Map<String, dynamic> json) =>
       _$AgreeForTermOfService$Mutation$AgreeTermOfServiceFromJson(json);
 
-  @JsonKey(name: 'created_by')
-  AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy createdBy;
-
   @override
   List<Object> get props =>
-      [id, lastVersionDate, termOfServiceType, value, updatedAt, createdBy];
+      [id, lastVersionDate, termOfServiceType, value, updatedAt];
   Map<String, dynamic> toJson() =>
       _$AgreeForTermOfService$Mutation$AgreeTermOfServiceToJson(this);
 }
@@ -720,44 +691,6 @@ class AgreeTermOfServiceInput with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy
-    with EquatableMixin {
-  QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy();
-
-  factory QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy.fromJson(
-          Map<String, dynamic> json) =>
-      _$QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedByFromJson(json);
-
-  String id;
-
-  String username;
-
-  @override
-  List<Object> get props => [id, username];
-  Map<String, dynamic> toJson() =>
-      _$QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedByToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy
-    with EquatableMixin {
-  QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy();
-
-  factory QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy.fromJson(
-          Map<String, dynamic> json) =>
-      _$QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedByFromJson(json);
-
-  String id;
-
-  String username;
-
-  @override
-  List<Object> get props => [id, username];
-  Map<String, dynamic> toJson() =>
-      _$QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedByToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
 class QuestionnaireAnswer$Query$QuestionnaireAnswer
     with EquatableMixin, QuestionnaireAnswerSimpleMixin {
   QuestionnaireAnswer$Query$QuestionnaireAnswer();
@@ -766,25 +699,9 @@ class QuestionnaireAnswer$Query$QuestionnaireAnswer
           Map<String, dynamic> json) =>
       _$QuestionnaireAnswer$Query$QuestionnaireAnswerFromJson(json);
 
-  @JsonKey(name: 'created_by')
-  QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy createdBy;
-
-  @JsonKey(name: 'updated_by')
-  QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy updatedBy;
-
   @override
-  List<Object> get props => [
-        createdAt,
-        id,
-        name,
-        questionnaire,
-        updatedAt,
-        user,
-        submitted,
-        data,
-        createdBy,
-        updatedBy
-      ];
+  List<Object> get props =>
+      [createdAt, id, name, questionnaire, updatedAt, user, submitted, data];
   Map<String, dynamic> toJson() =>
       _$QuestionnaireAnswer$Query$QuestionnaireAnswerToJson(this);
 }
@@ -1606,7 +1523,7 @@ class Child$Query$User$ChildInfo with EquatableMixin, ChildInfoSimpleMixin {
       _$Child$Query$User$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() => _$Child$Query$User$ChildInfoToJson(this);
 }
 
@@ -1631,7 +1548,6 @@ class Child$Query$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -1704,33 +1620,6 @@ class ChildInfoSimpleMixin$Teacher with EquatableMixin, UserSimpleMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class ChildInfoSimpleMixin$Parent with EquatableMixin, UserSimpleMixin {
-  ChildInfoSimpleMixin$Parent();
-
-  factory ChildInfoSimpleMixin$Parent.fromJson(Map<String, dynamic> json) =>
-      _$ChildInfoSimpleMixin$ParentFromJson(json);
-
-  @JsonKey(name: '__typename')
-  String $$typename;
-
-  @override
-  List<Object> get props => [
-        id,
-        username,
-        fullName,
-        email,
-        name,
-        sex,
-        birthday,
-        image,
-        role,
-        confirmed,
-        $$typename
-      ];
-  Map<String, dynamic> toJson() => _$ChildInfoSimpleMixin$ParentToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
 class UserDetailMixin$Image with EquatableMixin, MediaSimpleMixin {
   UserDetailMixin$Image();
 
@@ -1783,7 +1672,7 @@ class Children$Query$Users$ChildInfo with EquatableMixin, ChildInfoSimpleMixin {
       _$Children$Query$Users$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() => _$Children$Query$Users$ChildInfoToJson(this);
 }
 
@@ -1881,7 +1770,6 @@ class Counselor$Query$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -2060,7 +1948,7 @@ class PatientInfoSimpleMixin$Ehrs with EquatableMixin, EhrSimpleMixin {
 
   @override
   List<Object> get props =>
-      [id, updatedAt, createdAt, user, patient, type, subject, status];
+      [id, updatedAt, createdAt, patient, subject, status];
   Map<String, dynamic> toJson() => _$PatientInfoSimpleMixin$EhrsToJson(this);
 }
 
@@ -2112,29 +2000,6 @@ class NurseInfoSimpleMixin$Location with EquatableMixin, LocationSimpleMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class EhrSimpleMixin$User with EquatableMixin, UserSimpleMixin {
-  EhrSimpleMixin$User();
-
-  factory EhrSimpleMixin$User.fromJson(Map<String, dynamic> json) =>
-      _$EhrSimpleMixin$UserFromJson(json);
-
-  @override
-  List<Object> get props => [
-        id,
-        username,
-        fullName,
-        email,
-        name,
-        sex,
-        birthday,
-        image,
-        role,
-        confirmed
-      ];
-  Map<String, dynamic> toJson() => _$EhrSimpleMixin$UserToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
 class EhrSimpleMixin$Patient with EquatableMixin {
   EhrSimpleMixin$Patient();
 
@@ -2150,21 +2015,6 @@ class EhrSimpleMixin$Patient with EquatableMixin {
   @override
   List<Object> get props => [id, meetingId, name];
   Map<String, dynamic> toJson() => _$EhrSimpleMixin$PatientToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class EhrSimpleMixin$Type with EquatableMixin {
-  EhrSimpleMixin$Type();
-
-  factory EhrSimpleMixin$Type.fromJson(Map<String, dynamic> json) =>
-      _$EhrSimpleMixin$TypeFromJson(json);
-
-  @JsonKey(unknownEnumValue: EhrType.artemisUnknown)
-  EhrType type;
-
-  @override
-  List<Object> get props => [type];
-  Map<String, dynamic> toJson() => _$EhrSimpleMixin$TypeToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
@@ -2275,7 +2125,6 @@ class CounselorUpdate$Mutation$UpdateUser$User
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -2354,30 +2203,28 @@ class EditComponentUserAuthorInput with EquatableMixin {
 @JsonSerializable(explicitToJson: true)
 class EditComponentUserChildInput with EquatableMixin {
   EditComponentUserChildInput(
-      {this.id, this.parent, this.relationToUser, this.reminder, this.teacher});
+      {this.id, this.relationToUser, this.schools, this.teacher});
 
   factory EditComponentUserChildInput.fromJson(Map<String, dynamic> json) =>
       _$EditComponentUserChildInputFromJson(json);
 
   String id;
 
-  String parent;
-
   @JsonKey(unknownEnumValue: RelationType.artemisUnknown)
   RelationType relationToUser;
 
-  String reminder;
+  List<String> schools;
 
   String teacher;
 
   @override
-  List<Object> get props => [id, parent, relationToUser, reminder, teacher];
+  List<Object> get props => [id, relationToUser, schools, teacher];
   Map<String, dynamic> toJson() => _$EditComponentUserChildInputToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
 class EditComponentUserCounselorInput with EquatableMixin {
-  EditComponentUserCounselorInput({this.id, this.location});
+  EditComponentUserCounselorInput({this.id, this.location, this.patients});
 
   factory EditComponentUserCounselorInput.fromJson(Map<String, dynamic> json) =>
       _$EditComponentUserCounselorInputFromJson(json);
@@ -2386,15 +2233,18 @@ class EditComponentUserCounselorInput with EquatableMixin {
 
   String location;
 
+  List<String> patients;
+
   @override
-  List<Object> get props => [id, location];
+  List<Object> get props => [id, location, patients];
   Map<String, dynamic> toJson() =>
       _$EditComponentUserCounselorInputToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
 class EditComponentUserDoctorInput with EquatableMixin {
-  EditComponentUserDoctorInput({this.id, this.location, this.subject});
+  EditComponentUserDoctorInput(
+      {this.id, this.location, this.patients, this.subject});
 
   factory EditComponentUserDoctorInput.fromJson(Map<String, dynamic> json) =>
       _$EditComponentUserDoctorInputFromJson(json);
@@ -2403,17 +2253,19 @@ class EditComponentUserDoctorInput with EquatableMixin {
 
   String location;
 
+  List<String> patients;
+
   @JsonKey(unknownEnumValue: DoctorSubject.artemisUnknown)
   DoctorSubject subject;
 
   @override
-  List<Object> get props => [id, location, subject];
+  List<Object> get props => [id, location, patients, subject];
   Map<String, dynamic> toJson() => _$EditComponentUserDoctorInputToJson(this);
 }
 
 @JsonSerializable(explicitToJson: true)
 class EditComponentUserNurseInput with EquatableMixin {
-  EditComponentUserNurseInput({this.id, this.location});
+  EditComponentUserNurseInput({this.id, this.location, this.patients});
 
   factory EditComponentUserNurseInput.fromJson(Map<String, dynamic> json) =>
       _$EditComponentUserNurseInputFromJson(json);
@@ -2422,8 +2274,10 @@ class EditComponentUserNurseInput with EquatableMixin {
 
   String location;
 
+  List<String> patients;
+
   @override
-  List<Object> get props => [id, location];
+  List<Object> get props => [id, location, patients];
   Map<String, dynamic> toJson() => _$EditComponentUserNurseInputToJson(this);
 }
 
@@ -2445,17 +2299,24 @@ class EditComponentUserParentInput with EquatableMixin {
 
 @JsonSerializable(explicitToJson: true)
 class EditComponentUserTeacherInput with EquatableMixin {
-  EditComponentUserTeacherInput({this.id, this.school});
+  EditComponentUserTeacherInput(
+      {this.atSchool, this.children, this.id, this.role, this.school});
 
   factory EditComponentUserTeacherInput.fromJson(Map<String, dynamic> json) =>
       _$EditComponentUserTeacherInputFromJson(json);
 
+  String atSchool;
+
+  List<String> children;
+
   String id;
+
+  String role;
 
   String school;
 
   @override
-  List<Object> get props => [id, school];
+  List<Object> get props => [atSchool, children, id, role, school];
   Map<String, dynamic> toJson() => _$EditComponentUserTeacherInputToJson(this);
 }
 
@@ -2467,10 +2328,11 @@ class EditUserInput with EquatableMixin {
       this.birthday,
       this.blocked,
       this.childInfo,
+      this.children,
+      this.confirmationToken,
       this.confirmed,
       this.content,
       this.counselorInfo,
-      this.countryCode,
       this.createdBy,
       this.doctorInfo,
       this.email,
@@ -2479,6 +2341,7 @@ class EditUserInput with EquatableMixin {
       this.name,
       this.nurseInfo,
       this.organizationUnits,
+      this.parent,
       this.parentInfo,
       this.password,
       this.patientInfo,
@@ -2511,13 +2374,15 @@ class EditUserInput with EquatableMixin {
 
   EditComponentUserChildInput childInfo;
 
+  List<String> children;
+
+  String confirmationToken;
+
   bool confirmed;
 
   String content;
 
   EditComponentUserCounselorInput counselorInfo;
-
-  String countryCode;
 
   @JsonKey(name: 'created_by')
   String createdBy;
@@ -2536,6 +2401,8 @@ class EditUserInput with EquatableMixin {
 
   @JsonKey(name: 'organization_units')
   List<String> organizationUnits;
+
+  String parent;
 
   EditComponentUserParentInput parentInfo;
 
@@ -2579,10 +2446,11 @@ class EditUserInput with EquatableMixin {
         birthday,
         blocked,
         childInfo,
+        children,
+        confirmationToken,
         confirmed,
         content,
         counselorInfo,
-        countryCode,
         createdBy,
         doctorInfo,
         email,
@@ -2591,6 +2459,7 @@ class EditUserInput with EquatableMixin {
         name,
         nurseInfo,
         organizationUnits,
+        parent,
         parentInfo,
         password,
         patientInfo,
@@ -2735,7 +2604,7 @@ class CreateChild$Mutation$CreateChild$User$ChildInfo
       _$CreateChild$Mutation$CreateChild$User$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() =>
       _$CreateChild$Mutation$CreateChild$User$ChildInfoToJson(this);
 }
@@ -2802,25 +2671,20 @@ class CreateChild$Mutation with EquatableMixin {
 @JsonSerializable(explicitToJson: true)
 class ComponentUserChildInput with EquatableMixin {
   ComponentUserChildInput(
-      {this.parent,
-      @required this.relationToUser,
-      this.reminder,
-      this.teacher});
+      {@required this.relationToUser, this.schools, this.teacher});
 
   factory ComponentUserChildInput.fromJson(Map<String, dynamic> json) =>
       _$ComponentUserChildInputFromJson(json);
 
-  String parent;
-
   @JsonKey(unknownEnumValue: RelationType.artemisUnknown)
   RelationType relationToUser;
 
-  String reminder;
+  List<String> schools;
 
   String teacher;
 
   @override
-  List<Object> get props => [parent, relationToUser, reminder, teacher];
+  List<Object> get props => [relationToUser, schools, teacher];
   Map<String, dynamic> toJson() => _$ComponentUserChildInputToJson(this);
 }
 
@@ -2832,6 +2696,8 @@ class ChildInput with EquatableMixin {
       @required this.fullName,
       this.image,
       this.name,
+      @required this.parent,
+      @required this.phone,
       @required this.sex});
 
   factory ChildInput.fromJson(Map<String, dynamic> json) =>
@@ -2850,11 +2716,16 @@ class ChildInput with EquatableMixin {
 
   String name;
 
+  String parent;
+
+  String phone;
+
   @JsonKey(unknownEnumValue: SexType.artemisUnknown)
   SexType sex;
 
   @override
-  List<Object> get props => [birthday, childInfo, fullName, image, name, sex];
+  List<Object> get props =>
+      [birthday, childInfo, fullName, image, name, parent, phone, sex];
   Map<String, dynamic> toJson() => _$ChildInputToJson(this);
 }
 
@@ -3109,7 +2980,7 @@ class CreateEhr$Mutation$CreateEhr$Ehr with EquatableMixin, EhrSimpleMixin {
 
   List<CreateEhr$Mutation$CreateEhr$Ehr$Medias> medias;
 
-  Object data;
+  Object record;
 
   @JsonKey(name: 'questionnaire_answer')
   CreateEhr$Mutation$CreateEhr$Ehr$QuestionnaireAnswer questionnaireAnswer;
@@ -3124,15 +2995,13 @@ class CreateEhr$Mutation$CreateEhr$Ehr with EquatableMixin, EhrSimpleMixin {
         id,
         updatedAt,
         createdAt,
-        user,
         patient,
-        type,
         subject,
         status,
         source,
         sourceId,
         medias,
-        data,
+        record,
         questionnaireAnswer,
         summaries,
         officeComments
@@ -3206,21 +3075,6 @@ class ComponentDataEhrSubjectInput with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class ComponentDataEhrTypeInput with EquatableMixin {
-  ComponentDataEhrTypeInput({this.type});
-
-  factory ComponentDataEhrTypeInput.fromJson(Map<String, dynamic> json) =>
-      _$ComponentDataEhrTypeInputFromJson(json);
-
-  @JsonKey(unknownEnumValue: EhrType.artemisUnknown)
-  EhrType type;
-
-  @override
-  List<Object> get props => [type];
-  Map<String, dynamic> toJson() => _$ComponentDataEhrTypeInputToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
 class ComponentDataPositionInput with EquatableMixin {
   ComponentDataPositionInput(
       {this.altitude,
@@ -3257,29 +3111,28 @@ class ComponentDataPositionInput with EquatableMixin {
 @JsonSerializable(explicitToJson: true)
 class EhrInput with EquatableMixin {
   EhrInput(
-      {this.createdBy,
-      this.data,
+      {this.classification,
+      this.createdBy,
       this.medias,
       this.officeComments,
       this.patient,
       this.position,
       this.questionnaireAnswer,
+      this.record,
       @required this.source,
       @required this.sourceId,
       this.status,
       @required this.subject,
       this.summaries,
-      @required this.type,
-      this.updatedBy,
-      this.user});
+      this.updatedBy});
 
   factory EhrInput.fromJson(Map<String, dynamic> json) =>
       _$EhrInputFromJson(json);
 
+  String classification;
+
   @JsonKey(name: 'created_by')
   String createdBy;
-
-  Object data;
 
   List<String> medias;
 
@@ -3293,6 +3146,8 @@ class EhrInput with EquatableMixin {
   @JsonKey(name: 'questionnaire_answer')
   String questionnaireAnswer;
 
+  Object record;
+
   String source;
 
   @JsonKey(name: 'source_id')
@@ -3305,30 +3160,25 @@ class EhrInput with EquatableMixin {
 
   List<ComponentContentSummaryInput> summaries;
 
-  ComponentDataEhrTypeInput type;
-
   @JsonKey(name: 'updated_by')
   String updatedBy;
 
-  String user;
-
   @override
   List<Object> get props => [
+        classification,
         createdBy,
-        data,
         medias,
         officeComments,
         patient,
         position,
         questionnaireAnswer,
+        record,
         source,
         sourceId,
         status,
         subject,
         summaries,
-        type,
-        updatedBy,
-        user
+        updatedBy
       ];
   Map<String, dynamic> toJson() => _$EhrInputToJson(this);
 }
@@ -3944,7 +3794,7 @@ class PatientInfoDetailMixin$Ehrs with EquatableMixin, EhrSimpleMixin {
 
   @override
   List<Object> get props =>
-      [id, updatedAt, createdAt, user, patient, type, subject, status];
+      [id, updatedAt, createdAt, patient, subject, status];
   Map<String, dynamic> toJson() => _$PatientInfoDetailMixin$EhrsToJson(this);
 }
 
@@ -3955,9 +3805,12 @@ class PatientInput with EquatableMixin {
       this.createdBy,
       this.doctor,
       this.ehrs,
+      this.location,
       this.meetingId,
       @required this.name,
       this.nurse,
+      this.status,
+      this.teacher,
       this.updatedBy,
       this.user});
 
@@ -3973,11 +3826,18 @@ class PatientInput with EquatableMixin {
 
   List<String> ehrs;
 
+  String location;
+
   String meetingId;
 
   String name;
 
   String nurse;
+
+  @JsonKey(unknownEnumValue: PatientStatus.artemisUnknown)
+  PatientStatus status;
+
+  String teacher;
 
   @JsonKey(name: 'updated_by')
   String updatedBy;
@@ -3990,9 +3850,12 @@ class PatientInput with EquatableMixin {
         createdBy,
         doctor,
         ehrs,
+        location,
         meetingId,
         name,
         nurse,
+        status,
+        teacher,
         updatedBy,
         user
       ];
@@ -4309,7 +4172,6 @@ class Doctor$Query$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -4430,7 +4292,6 @@ class DoctorUpdate$Mutation$UpdateUser$User
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -4569,7 +4430,7 @@ class Ehr$Query$Ehr with EquatableMixin, EhrSimpleMixin {
 
   List<Ehr$Query$Ehr$Medias> medias;
 
-  Object data;
+  Object record;
 
   @JsonKey(name: 'questionnaire_answer')
   Ehr$Query$Ehr$QuestionnaireAnswer questionnaireAnswer;
@@ -4586,15 +4447,13 @@ class Ehr$Query$Ehr with EquatableMixin, EhrSimpleMixin {
         id,
         updatedAt,
         createdAt,
-        user,
         patient,
-        type,
         subject,
         status,
         source,
         sourceId,
         medias,
-        data,
+        record,
         questionnaireAnswer,
         summaries,
         officeComments,
@@ -4626,7 +4485,7 @@ class Ehrs$Query$Ehrs with EquatableMixin, EhrSimpleMixin {
 
   @override
   List<Object> get props =>
-      [id, updatedAt, createdAt, user, patient, type, subject, status];
+      [id, updatedAt, createdAt, patient, subject, status];
   Map<String, dynamic> toJson() => _$Ehrs$Query$EhrsToJson(this);
 }
 
@@ -4986,7 +4845,7 @@ class FindMyChild$Query$MyChild$ChildInfo
       _$FindMyChild$Query$MyChild$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() =>
       _$FindMyChild$Query$MyChild$ChildInfoToJson(this);
 }
@@ -5030,7 +4889,6 @@ class FindMyChild$Query$MyChild with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -5209,7 +5067,6 @@ class Login$Mutation$Login$User with EquatableMixin, UserMeMixin {
         sex,
         phone,
         birthday,
-        countryCode,
         secondEmail,
         image,
         role,
@@ -5234,12 +5091,18 @@ class Login$Mutation$Login with EquatableMixin {
   factory Login$Mutation$Login.fromJson(Map<String, dynamic> json) =>
       _$Login$Mutation$LoginFromJson(json);
 
+  @JsonKey(
+      name: 'expire_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime expireAt;
+
   String jwt;
 
   Login$Mutation$Login$User user;
 
   @override
-  List<Object> get props => [jwt, user];
+  List<Object> get props => [expireAt, jwt, user];
   Map<String, dynamic> toJson() => _$Login$Mutation$LoginToJson(this);
 }
 
@@ -5371,7 +5234,7 @@ class UserMeMixin$ChildInfo with EquatableMixin, ChildInfoSimpleMixin {
       _$UserMeMixin$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() => _$UserMeMixin$ChildInfoToJson(this);
 }
 
@@ -5553,7 +5416,6 @@ class Me$Query$Me with EquatableMixin, UserMeMixin {
         sex,
         phone,
         birthday,
-        countryCode,
         secondEmail,
         image,
         role,
@@ -5701,7 +5563,6 @@ class Nurse$Query$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -5821,7 +5682,6 @@ class NurseUpdate$Mutation$UpdateUser$User
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -6050,7 +5910,6 @@ class Parent$Query$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -6347,7 +6206,6 @@ class ParentUpdate$Mutation$UpdateUser$User
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -6412,7 +6270,6 @@ class Patient$Query$Patient$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -7066,7 +6923,6 @@ class Register$Mutation$Register$User with EquatableMixin, UserMeMixin {
         sex,
         phone,
         birthday,
-        countryCode,
         secondEmail,
         image,
         role,
@@ -7092,12 +6948,18 @@ class Register$Mutation$Register with EquatableMixin {
   factory Register$Mutation$Register.fromJson(Map<String, dynamic> json) =>
       _$Register$Mutation$RegisterFromJson(json);
 
+  @JsonKey(
+      name: 'expire_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime expireAt;
+
   String jwt;
 
   Register$Mutation$Register$User user;
 
   @override
-  List<Object> get props => [jwt, user];
+  List<Object> get props => [expireAt, jwt, user];
   Map<String, dynamic> toJson() => _$Register$Mutation$RegisterToJson(this);
 }
 
@@ -7392,7 +7254,7 @@ class Supplement$Query$Supplement
 
   @override
   List<Object> get props =>
-      [provider, content, subject, forPerson, $$typename, name, id, post];
+      [content, subject, forPerson, $$typename, name, id, post];
   Map<String, dynamic> toJson() => _$Supplement$Query$SupplementToJson(this);
 }
 
@@ -7518,7 +7380,6 @@ class Teacher$Query$User with EquatableMixin, UserDetailMixin {
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -7641,7 +7502,6 @@ class TeacherUpdate$Mutation$UpdateUser$User
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -8035,7 +7895,7 @@ class UpdateEhr$Mutation$UpdateEhr$Ehr with EquatableMixin, EhrSimpleMixin {
 
   List<UpdateEhr$Mutation$UpdateEhr$Ehr$Medias> medias;
 
-  Object data;
+  Object record;
 
   @JsonKey(name: 'questionnaire_answer')
   UpdateEhr$Mutation$UpdateEhr$Ehr$QuestionnaireAnswer questionnaireAnswer;
@@ -8050,15 +7910,13 @@ class UpdateEhr$Mutation$UpdateEhr$Ehr with EquatableMixin, EhrSimpleMixin {
         id,
         updatedAt,
         createdAt,
-        user,
         patient,
-        type,
         subject,
         status,
         source,
         sourceId,
         medias,
-        data,
+        record,
         questionnaireAnswer,
         summaries,
         officeComments
@@ -8140,23 +7998,6 @@ class EditComponentDataEhrSubjectInput with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
-class EditComponentDataEhrTypeInput with EquatableMixin {
-  EditComponentDataEhrTypeInput({this.id, this.type});
-
-  factory EditComponentDataEhrTypeInput.fromJson(Map<String, dynamic> json) =>
-      _$EditComponentDataEhrTypeInputFromJson(json);
-
-  String id;
-
-  @JsonKey(unknownEnumValue: EhrType.artemisUnknown)
-  EhrType type;
-
-  @override
-  List<Object> get props => [id, type];
-  Map<String, dynamic> toJson() => _$EditComponentDataEhrTypeInputToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
 class EditComponentDataPositionInput with EquatableMixin {
   EditComponentDataPositionInput(
       {this.altitude,
@@ -8196,29 +8037,28 @@ class EditComponentDataPositionInput with EquatableMixin {
 @JsonSerializable(explicitToJson: true)
 class EditEhrInput with EquatableMixin {
   EditEhrInput(
-      {this.createdBy,
-      this.data,
+      {this.classification,
+      this.createdBy,
       this.medias,
       this.officeComments,
       this.patient,
       this.position,
       this.questionnaireAnswer,
+      this.record,
       this.source,
       this.sourceId,
       this.status,
       this.subject,
       this.summaries,
-      this.type,
-      this.updatedBy,
-      this.user});
+      this.updatedBy});
 
   factory EditEhrInput.fromJson(Map<String, dynamic> json) =>
       _$EditEhrInputFromJson(json);
 
+  String classification;
+
   @JsonKey(name: 'created_by')
   String createdBy;
-
-  Object data;
 
   List<String> medias;
 
@@ -8232,6 +8072,8 @@ class EditEhrInput with EquatableMixin {
   @JsonKey(name: 'questionnaire_answer')
   String questionnaireAnswer;
 
+  Object record;
+
   String source;
 
   @JsonKey(name: 'source_id')
@@ -8244,30 +8086,25 @@ class EditEhrInput with EquatableMixin {
 
   List<EditComponentContentSummaryInput> summaries;
 
-  EditComponentDataEhrTypeInput type;
-
   @JsonKey(name: 'updated_by')
   String updatedBy;
 
-  String user;
-
   @override
   List<Object> get props => [
+        classification,
         createdBy,
-        data,
         medias,
         officeComments,
         patient,
         position,
         questionnaireAnswer,
+        record,
         source,
         sourceId,
         status,
         subject,
         summaries,
-        type,
-        updatedBy,
-        user
+        updatedBy
       ];
   Map<String, dynamic> toJson() => _$EditEhrInputToJson(this);
 }
@@ -8305,7 +8142,6 @@ class UpdateMe$Mutation$UpdateMe with EquatableMixin, UserMeMixin {
         sex,
         phone,
         birthday,
-        countryCode,
         secondEmail,
         image,
         role,
@@ -8342,7 +8178,6 @@ class UpdateMe with EquatableMixin {
   UpdateMe(
       {this.birthday,
       this.content,
-      this.countryCode,
       this.email,
       this.fullName,
       this.image,
@@ -8361,8 +8196,6 @@ class UpdateMe with EquatableMixin {
   DateTime birthday;
 
   String content;
-
-  String countryCode;
 
   String email;
 
@@ -8386,7 +8219,6 @@ class UpdateMe with EquatableMixin {
   List<Object> get props => [
         birthday,
         content,
-        countryCode,
         email,
         fullName,
         image,
@@ -8500,7 +8332,7 @@ class UpdateMyChild$Mutation$UpdateChild$User$ChildInfo
       _$UpdateMyChild$Mutation$UpdateChild$User$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() =>
       _$UpdateMyChild$Mutation$UpdateChild$User$ChildInfoToJson(this);
 }
@@ -8546,7 +8378,6 @@ class UpdateMyChild$Mutation$UpdateChild$User
         image,
         blocked,
         confirmed,
-        countryCode,
         createdAt,
         organizationUnits,
         phone,
@@ -8601,6 +8432,7 @@ class EditChildInput with EquatableMixin {
       this.fullName,
       this.image,
       this.name,
+      this.phone,
       this.sex});
 
   factory EditChildInput.fromJson(Map<String, dynamic> json) =>
@@ -8619,11 +8451,14 @@ class EditChildInput with EquatableMixin {
 
   String name;
 
+  String phone;
+
   @JsonKey(unknownEnumValue: SexType.artemisUnknown)
   SexType sex;
 
   @override
-  List<Object> get props => [birthday, childInfo, fullName, image, name, sex];
+  List<Object> get props =>
+      [birthday, childInfo, fullName, image, name, phone, sex];
   Map<String, dynamic> toJson() => _$EditChildInputToJson(this);
 }
 
@@ -8695,9 +8530,12 @@ class EditPatientInput with EquatableMixin {
       this.createdBy,
       this.doctor,
       this.ehrs,
+      this.location,
       this.meetingId,
       this.name,
       this.nurse,
+      this.status,
+      this.teacher,
       this.updatedBy,
       this.user});
 
@@ -8713,11 +8551,18 @@ class EditPatientInput with EquatableMixin {
 
   List<String> ehrs;
 
+  String location;
+
   String meetingId;
 
   String name;
 
   String nurse;
+
+  @JsonKey(unknownEnumValue: PatientStatus.artemisUnknown)
+  PatientStatus status;
+
+  String teacher;
 
   @JsonKey(name: 'updated_by')
   String updatedBy;
@@ -8730,9 +8575,12 @@ class EditPatientInput with EquatableMixin {
         createdBy,
         doctor,
         ehrs,
+        location,
         meetingId,
         name,
         nurse,
+        status,
+        teacher,
         updatedBy,
         user
       ];
@@ -8997,7 +8845,7 @@ class User$Query$User$ChildInfo with EquatableMixin, ChildInfoSimpleMixin {
       _$User$Query$User$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() => _$User$Query$User$ChildInfoToJson(this);
 }
 
@@ -9187,7 +9035,7 @@ class Users$Query$Users$ChildInfo with EquatableMixin, ChildInfoSimpleMixin {
       _$Users$Query$Users$ChildInfoFromJson(json);
 
   @override
-  List<Object> get props => [id, relationToUser, teacher, parent];
+  List<Object> get props => [id, relationToUser, teacher];
   Map<String, dynamic> toJson() => _$Users$Query$Users$ChildInfoToJson(this);
 }
 
@@ -9844,6 +9692,42 @@ class Webinars$Query with EquatableMixin {
   Map<String, dynamic> toJson() => _$Webinars$QueryToJson(this);
 }
 
+@JsonSerializable(explicitToJson: true)
+class RefreshToken$Mutation$RefreshToken with EquatableMixin {
+  RefreshToken$Mutation$RefreshToken();
+
+  factory RefreshToken$Mutation$RefreshToken.fromJson(
+          Map<String, dynamic> json) =>
+      _$RefreshToken$Mutation$RefreshTokenFromJson(json);
+
+  String jwt;
+
+  @JsonKey(
+      name: 'expire_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime expireAt;
+
+  @override
+  List<Object> get props => [jwt, expireAt];
+  Map<String, dynamic> toJson() =>
+      _$RefreshToken$Mutation$RefreshTokenToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class RefreshToken$Mutation with EquatableMixin {
+  RefreshToken$Mutation();
+
+  factory RefreshToken$Mutation.fromJson(Map<String, dynamic> json) =>
+      _$RefreshToken$MutationFromJson(json);
+
+  RefreshToken$Mutation$RefreshToken refreshToken;
+
+  @override
+  List<Object> get props => [refreshToken];
+  Map<String, dynamic> toJson() => _$RefreshToken$MutationToJson(this);
+}
+
 enum OrderStatusType {
   @JsonValue('Closed')
   closed,
@@ -9974,22 +9858,6 @@ enum EhrStatus {
   @JsonValue('ARTEMIS_UNKNOWN')
   artemisUnknown,
 }
-enum EhrType {
-  @JsonValue('assessment')
-  assessment,
-  @JsonValue('diagnose')
-  diagnose,
-  @JsonValue('education')
-  education,
-  @JsonValue('exercise')
-  exercise,
-  @JsonValue('medicine')
-  medicine,
-  @JsonValue('supplement')
-  supplement,
-  @JsonValue('ARTEMIS_UNKNOWN')
-  artemisUnknown,
-}
 enum UserStatus {
   @JsonValue('active')
   active,
@@ -10009,6 +9877,16 @@ enum SummarySubject {
 enum SummaryType {
   @JsonValue('measurable')
   measurable,
+  @JsonValue('ARTEMIS_UNKNOWN')
+  artemisUnknown,
+}
+enum PatientStatus {
+  @JsonValue('active')
+  active,
+  @JsonValue('registered')
+  registered,
+  @JsonValue('removed')
+  removed,
   @JsonValue('ARTEMIS_UNKNOWN')
   artemisUnknown,
 }
@@ -10370,26 +10248,7 @@ class AgreeForTermOfServiceMutation extends GraphQLQuery<
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'UserAgreementSimple'),
-                    directives: []),
-                FieldNode(
-                    name: NameNode(value: 'created_by'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
-                      FieldNode(
-                          name: NameNode(value: 'id'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null),
-                      FieldNode(
-                          name: NameNode(value: 'username'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null)
-                    ]))
+                    directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -10492,45 +10351,7 @@ class QuestionnaireAnswerQuery extends GraphQLQuery<QuestionnaireAnswer$Query,
               selectionSet: SelectionSetNode(selections: [
                 FragmentSpreadNode(
                     name: NameNode(value: 'QuestionnaireAnswerSimple'),
-                    directives: []),
-                FieldNode(
-                    name: NameNode(value: 'created_by'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
-                      FieldNode(
-                          name: NameNode(value: 'id'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null),
-                      FieldNode(
-                          name: NameNode(value: 'username'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null)
-                    ])),
-                FieldNode(
-                    name: NameNode(value: 'updated_by'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: SelectionSetNode(selections: [
-                      FieldNode(
-                          name: NameNode(value: 'id'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null),
-                      FieldNode(
-                          name: NameNode(value: 'username'),
-                          alias: null,
-                          arguments: [],
-                          directives: [],
-                          selectionSet: null)
-                    ]))
+                    directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -14287,21 +14108,6 @@ class ChildQuery extends GraphQLQuery<Child$Query, ChildArguments> {
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -14512,12 +14318,6 @@ class ChildQuery extends GraphQLQuery<Child$Query, ChildArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -14742,21 +14542,6 @@ class ChildrenQuery extends GraphQLQuery<Children$Query, ChildrenArguments> {
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -15352,15 +15137,6 @@ class CounselorQuery extends GraphQLQuery<Counselor$Query, CounselorArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -15380,19 +15156,6 @@ class CounselorQuery extends GraphQLQuery<Counselor$Query, CounselorArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -15485,12 +15248,6 @@ class CounselorQuery extends GraphQLQuery<Counselor$Query, CounselorArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -16066,12 +15823,6 @@ class CounselorUpdateMutation
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -16656,21 +16407,6 @@ class CreateChildMutation
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -17277,7 +17013,7 @@ class CreateEhrMutation
                                 directives: [])
                           ])),
                       FieldNode(
-                          name: NameNode(value: 'data'),
+                          name: NameNode(value: 'record'),
                           alias: null,
                           arguments: [],
                           directives: [],
@@ -17607,15 +17343,6 @@ class CreateEhrMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -17635,19 +17362,6 @@ class CreateEhrMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -18785,15 +18499,6 @@ class CreatePatientMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -18813,19 +18518,6 @@ class CreatePatientMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -20289,15 +19981,6 @@ class DoctorQuery extends GraphQLQuery<Doctor$Query, DoctorArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -20317,19 +20000,6 @@ class DoctorQuery extends GraphQLQuery<Doctor$Query, DoctorArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -20422,12 +20092,6 @@ class DoctorQuery extends GraphQLQuery<Doctor$Query, DoctorArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -21018,12 +20682,6 @@ class DoctorUpdateMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'countryCode'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
               name: NameNode(value: 'created_at'),
               alias: null,
               arguments: [],
@@ -21242,7 +20900,7 @@ class EhrQuery extends GraphQLQuery<Ehr$Query, EhrArguments> {
                           name: NameNode(value: 'MediaSimple'), directives: [])
                     ])),
                 FieldNode(
-                    name: NameNode(value: 'data'),
+                    name: NameNode(value: 'record'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -21613,15 +21271,6 @@ class EhrQuery extends GraphQLQuery<Ehr$Query, EhrArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -21641,19 +21290,6 @@ class EhrQuery extends GraphQLQuery<Ehr$Query, EhrArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -21799,15 +21435,6 @@ class EhrsQuery extends GraphQLQuery<Ehrs$Query, EhrsArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -21833,19 +21460,6 @@ class EhrsQuery extends GraphQLQuery<Ehrs$Query, EhrsArguments> {
                     selectionSet: null)
               ])),
           FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
               name: NameNode(value: 'subject'),
               alias: null,
               arguments: [],
@@ -21860,147 +21474,6 @@ class EhrsQuery extends GraphQLQuery<Ehrs$Query, EhrsArguments> {
               ])),
           FieldNode(
               name: NameNode(value: 'status'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null)
-        ])),
-    FragmentDefinitionNode(
-        name: NameNode(value: 'UserSimple'),
-        typeCondition: TypeConditionNode(
-            on: NamedTypeNode(
-                name: NameNode(value: 'UsersPermissionsUser'),
-                isNonNull: false)),
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-              name: NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'username'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'fullName'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'email'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'name'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'sex'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'birthday'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'image'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'MediaSimple'), directives: [])
-              ])),
-          FieldNode(
-              name: NameNode(value: 'role'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null)
-        ])),
-    FragmentDefinitionNode(
-        name: NameNode(value: 'MediaSimple'),
-        typeCondition: TypeConditionNode(
-            on: NamedTypeNode(
-                name: NameNode(value: 'UploadFile'), isNonNull: false)),
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-              name: NameNode(value: 'id'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'url'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'formats'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'width'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'height'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'ext'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'caption'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'name'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'size'),
               alias: null,
               arguments: [],
               directives: [],
@@ -24104,21 +23577,6 @@ class FindMyChildQuery
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -24491,15 +23949,6 @@ class FindMyChildQuery
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -24519,19 +23968,6 @@ class FindMyChildQuery
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -24624,12 +24060,6 @@ class FindMyChildQuery
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -25355,6 +24785,12 @@ class LoginMutation extends GraphQLQuery<Login$Mutation, LoginArguments> {
               directives: [],
               selectionSet: SelectionSetNode(selections: [
                 FieldNode(
+                    name: NameNode(value: 'expire_at'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
                     name: NameNode(value: 'jwt'),
                     alias: null,
                     arguments: [],
@@ -25422,12 +24858,6 @@ class LoginMutation extends GraphQLQuery<Login$Mutation, LoginArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'birthday'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -26108,21 +25538,6 @@ class LoginMutation extends GraphQLQuery<Login$Mutation, LoginArguments> {
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -26354,15 +25769,6 @@ class LoginMutation extends GraphQLQuery<Login$Mutation, LoginArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -26382,19 +25788,6 @@ class LoginMutation extends GraphQLQuery<Login$Mutation, LoginArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -26518,12 +25911,6 @@ class MeQuery extends GraphQLQuery<Me$Query, JsonSerializable> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'countryCode'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
               name: NameNode(value: 'second_email'),
               alias: null,
               arguments: [],
@@ -27199,21 +26586,6 @@ class MeQuery extends GraphQLQuery<Me$Query, JsonSerializable> {
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -27445,15 +26817,6 @@ class MeQuery extends GraphQLQuery<Me$Query, JsonSerializable> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -27473,19 +26836,6 @@ class MeQuery extends GraphQLQuery<Me$Query, JsonSerializable> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -28528,15 +27878,6 @@ class NurseQuery extends GraphQLQuery<Nurse$Query, NurseArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -28556,19 +27897,6 @@ class NurseQuery extends GraphQLQuery<Nurse$Query, NurseArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -28661,12 +27989,6 @@ class NurseQuery extends GraphQLQuery<Nurse$Query, NurseArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -29237,12 +28559,6 @@ class NurseUpdateMutation
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -30911,15 +30227,6 @@ class ParentQuery extends GraphQLQuery<Parent$Query, ParentArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -30939,19 +30246,6 @@ class ParentQuery extends GraphQLQuery<Parent$Query, ParentArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -31044,12 +30338,6 @@ class ParentQuery extends GraphQLQuery<Parent$Query, ParentArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -32581,15 +31869,6 @@ class ParentsQuery extends GraphQLQuery<Parents$Query, ParentsArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -32609,19 +31888,6 @@ class ParentsQuery extends GraphQLQuery<Parents$Query, ParentsArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -32989,12 +32255,6 @@ class ParentUpdateMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'countryCode'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
               name: NameNode(value: 'created_at'),
               alias: null,
               arguments: [],
@@ -33207,12 +32467,6 @@ class PatientQuery extends GraphQLQuery<Patient$Query, PatientArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -33641,15 +32895,6 @@ class PatientQuery extends GraphQLQuery<Patient$Query, PatientArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -33669,19 +32914,6 @@ class PatientQuery extends GraphQLQuery<Patient$Query, PatientArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -34173,15 +33405,6 @@ class PatientsQuery extends GraphQLQuery<Patients$Query, PatientsArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -34201,19 +33424,6 @@ class PatientsQuery extends GraphQLQuery<Patients$Query, PatientsArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -37529,6 +36739,12 @@ class RegisterMutation
               directives: [],
               selectionSet: SelectionSetNode(selections: [
                 FieldNode(
+                    name: NameNode(value: 'expire_at'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
                     name: NameNode(value: 'jwt'),
                     alias: null,
                     arguments: [],
@@ -37596,12 +36812,6 @@ class RegisterMutation
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'birthday'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -38282,21 +37492,6 @@ class RegisterMutation
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -38528,15 +37723,6 @@ class RegisterMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -38556,19 +37742,6 @@ class RegisterMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -39756,12 +38929,6 @@ class SupplementQuery
         selectionSet: SelectionSetNode(selections: [
           FragmentSpreadNode(
               name: NameNode(value: 'SupplementSimple'), directives: []),
-          FieldNode(
-              name: NameNode(value: 'provider'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
           FieldNode(
               name: NameNode(value: 'content'),
               alias: null,
@@ -41089,15 +40256,6 @@ class TeacherQuery extends GraphQLQuery<Teacher$Query, TeacherArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -41117,19 +40275,6 @@ class TeacherQuery extends GraphQLQuery<Teacher$Query, TeacherArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -41222,12 +40367,6 @@ class TeacherQuery extends GraphQLQuery<Teacher$Query, TeacherArguments> {
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -41744,12 +40883,6 @@ class TeacherUpdateMutation
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -42745,7 +41878,7 @@ class UpdateEhrMutation
                                 directives: [])
                           ])),
                       FieldNode(
-                          name: NameNode(value: 'data'),
+                          name: NameNode(value: 'record'),
                           alias: null,
                           arguments: [],
                           directives: [],
@@ -43075,15 +42208,6 @@ class UpdateEhrMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -43103,19 +42227,6 @@ class UpdateEhrMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -43256,12 +42367,6 @@ class UpdateMeMutation
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'birthday'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -43942,21 +43047,6 @@ class UpdateMeMutation
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -44188,15 +43278,6 @@ class UpdateMeMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -44216,19 +43297,6 @@ class UpdateMeMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -44543,21 +43611,6 @@ class UpdateMyChildMutation
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ])),
     FragmentDefinitionNode(
@@ -44930,15 +43983,6 @@ class UpdateMyChildMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -44958,19 +44002,6 @@ class UpdateMyChildMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -45063,12 +44094,6 @@ class UpdateMyChildMutation
               selectionSet: null),
           FieldNode(
               name: NameNode(value: 'confirmed'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: null),
-          FieldNode(
-              name: NameNode(value: 'countryCode'),
               alias: null,
               arguments: [],
               directives: [],
@@ -45570,15 +44595,6 @@ class UpdatePatientMutation
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -45598,19 +44614,6 @@ class UpdatePatientMutation
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -46540,15 +45543,6 @@ class UserQuery extends GraphQLQuery<User$Query, UserArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -46568,19 +45562,6 @@ class UserQuery extends GraphQLQuery<User$Query, UserArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -46646,21 +45627,6 @@ class UserQuery extends GraphQLQuery<User$Query, UserArguments> {
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ]))
   ]);
@@ -47243,15 +46209,6 @@ class UsersQuery extends GraphQLQuery<Users$Query, UsersArguments> {
               directives: [],
               selectionSet: null),
           FieldNode(
-              name: NameNode(value: 'user'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
-              ])),
-          FieldNode(
               name: NameNode(value: 'patient'),
               alias: null,
               arguments: [],
@@ -47271,19 +46228,6 @@ class UsersQuery extends GraphQLQuery<Users$Query, UsersArguments> {
                     selectionSet: null),
                 FieldNode(
                     name: NameNode(value: 'name'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ])),
-          FieldNode(
-              name: NameNode(value: 'type'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'type'),
                     alias: null,
                     arguments: [],
                     directives: [],
@@ -47349,21 +46293,6 @@ class UsersQuery extends GraphQLQuery<Users$Query, UsersArguments> {
                           directives: [],
                           selectionSet: null)
                     ]))
-              ])),
-          FieldNode(
-              name: NameNode(value: 'parent'),
-              alias: null,
-              arguments: [],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: '__typename'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FragmentSpreadNode(
-                    name: NameNode(value: 'UserSimple'), directives: [])
               ]))
         ]))
   ]);
@@ -49514,4 +48443,78 @@ class WebinarsQuery extends GraphQLQuery<Webinars$Query, WebinarsArguments> {
   @override
   Webinars$Query parse(Map<String, dynamic> json) =>
       Webinars$Query.fromJson(json);
+}
+
+@JsonSerializable(explicitToJson: true)
+class RefreshTokenArguments extends JsonSerializable with EquatableMixin {
+  RefreshTokenArguments({@required this.jwt});
+
+  @override
+  factory RefreshTokenArguments.fromJson(Map<String, dynamic> json) =>
+      _$RefreshTokenArgumentsFromJson(json);
+
+  final String jwt;
+
+  @override
+  List<Object> get props => [jwt];
+  @override
+  Map<String, dynamic> toJson() => _$RefreshTokenArgumentsToJson(this);
+}
+
+class RefreshTokenMutation
+    extends GraphQLQuery<RefreshToken$Mutation, RefreshTokenArguments> {
+  RefreshTokenMutation({this.variables});
+
+  @override
+  final DocumentNode document = DocumentNode(definitions: [
+    OperationDefinitionNode(
+        type: OperationType.mutation,
+        name: NameNode(value: 'refreshToken'),
+        variableDefinitions: [
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'jwt')),
+              type: NamedTypeNode(
+                  name: NameNode(value: 'String'), isNonNull: true),
+              defaultValue: DefaultValueNode(value: null),
+              directives: [])
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'refreshToken'),
+              alias: null,
+              arguments: [
+                ArgumentNode(
+                    name: NameNode(value: 'jwt'),
+                    value: VariableNode(name: NameNode(value: 'jwt')))
+              ],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'jwt'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'expire_at'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ]))
+        ]))
+  ]);
+
+  @override
+  final String operationName = 'refreshToken';
+
+  @override
+  final RefreshTokenArguments variables;
+
+  @override
+  List<Object> get props => [document, operationName, variables];
+  @override
+  RefreshToken$Mutation parse(Map<String, dynamic> json) =>
+      RefreshToken$Mutation.fromJson(json);
 }

@@ -167,7 +167,6 @@ fragment UserDetail on UsersPermissionsUser {
     }
     blocked
     confirmed
-    countryCode
     created_at
     organization_units {
         id
@@ -193,7 +192,6 @@ fragment UserMe on UsersPermissionsMe{
     sex,
     phone,
     birthday,
-    countryCode
     second_email
     image{
         ...MediaSimple
@@ -250,10 +248,6 @@ fragment ChildInfoSimple on ComponentUserChild {
             __typename
         }
     },
-    parent{
-        __typename
-        ...UserSimple
-    }
 }
 
 fragment PatientInfoDetail on Patient {
@@ -490,16 +484,10 @@ fragment EhrSimple on Ehr {
     id
     updated_at
     created_at
-    user{
-        ...UserSimple
-    }
     patient{
         id
         meetingId
         name
-    }
-    type {
-        type
     }
     subject {
         type
@@ -570,7 +558,6 @@ fragment SupplementSimple on Supplement {
 
 fragment SupplementDetaile on Supplement {
     ...SupplementSimple
-    provider
     content
     subject{
         type

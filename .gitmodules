@@ -1,0 +1,4 @@
+[submodule "packages/flutter_artech"]
+	path = packages/flutter_artech
+	url = https://github.com/shao8843/flutter_artech.git
+	branch = main

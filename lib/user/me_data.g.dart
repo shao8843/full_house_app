@@ -21,7 +21,6 @@ MeData _$MeDataFromJson(Map<String, dynamic> json) {
         : DateTime.parse(json['birthday'] as String)
     ..sex = _$enumDecodeNullable(_$GenderEnumMap, json['sex'])
     ..fullName = json['fullName'] as String
-    ..countryCode = json['countryCode'] as String
     ..qrUrl = json['qrUrl'] as String
     ..role = json['role'] == null
         ? null
@@ -31,11 +30,28 @@ MeData _$MeDataFromJson(Map<String, dynamic> json) {
         : MediaFileInfo.fromJson(json['image'] as Map<String, dynamic>)
     ..content = json['content'] as String
     ..confirmed = json['confirmed'] as bool
+    ..blocked = json['blocked'] as bool
+    ..created_at = json['created_at'] == null
+        ? null
+        : DateTime.parse(json['created_at'] as String)
+    ..updated_at = json['updated_at'] == null
+        ? null
+        : DateTime.parse(json['updated_at'] as String)
+    ..provider = json['provider'] as String
+    ..organization_units = (json['organization_units'] as List)
+        ?.map((e) => e == null
+            ? null
+            : OrganizationUnitData.fromJson(e as Map<String, dynamic>))
+        ?.toList()
+    ..parent = json['parent'] == null
+        ? null
+        : User.fromJson(json['parent'] as Map<String, dynamic>)
     ..userAgreements = (json['user_agreements'] as List)
         ?.map((e) => e == null
             ? null
             : AgreementData.fromJson(e as Map<String, dynamic>))
-        ?.toList();
+        ?.toList()
+    ..orderCount = json['orderCount'] as int;
 }
 
 Map<String, dynamic> _$MeDataToJson(MeData instance) {
@@ -58,13 +74,19 @@ Map<String, dynamic> _$MeDataToJson(MeData instance) {
   writeNotNull('birthday', instance.birthday?.toIso8601String());
   writeNotNull('sex', _$GenderEnumMap[instance.sex]);
   writeNotNull('fullName', instance.fullName);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('qrUrl', instance.qrUrl);
   writeNotNull('role', instance.role);
   writeNotNull('image', instance.image);
   writeNotNull('content', instance.content);
   writeNotNull('confirmed', instance.confirmed);
+  writeNotNull('blocked', instance.blocked);
+  writeNotNull('created_at', instance.created_at?.toIso8601String());
+  writeNotNull('updated_at', instance.updated_at?.toIso8601String());
+  writeNotNull('provider', instance.provider);
+  writeNotNull('organization_units', instance.organization_units);
+  writeNotNull('parent', instance.parent);
   writeNotNull('user_agreements', instance.userAgreements);
+  writeNotNull('orderCount', instance.orderCount);
   return val;
 }
 
@@ -101,6 +123,7 @@ T _$enumDecodeNullable<T>(
 }
 
 const _$GenderEnumMap = {
+  Gender.unknown: 'unknown',
   Gender.male: 'male',
   Gender.female: 'female',
   Gender.other: 'other',

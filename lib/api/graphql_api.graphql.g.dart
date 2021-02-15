@@ -226,30 +226,6 @@ Map<String, dynamic> _$Accounts$QueryToJson(Accounts$Query instance) {
   return val;
 }
 
-AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy
-    _$AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedByFromJson(
-        Map<String, dynamic> json) {
-  return AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy()
-    ..id = json['id'] as String
-    ..username = json['username'] as String;
-}
-
-Map<String, dynamic>
-    _$AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedByToJson(
-        AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('username', instance.username);
-  return val;
-}
-
 AgreeForTermOfService$Mutation$AgreeTermOfService
     _$AgreeForTermOfService$Mutation$AgreeTermOfServiceFromJson(
         Map<String, dynamic> json) {
@@ -262,11 +238,7 @@ AgreeForTermOfService$Mutation$AgreeTermOfService
         unknownValue: TermOfServiceType.artemisUnknown)
     ..value = json['value'] as bool
     ..updatedAt =
-        fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
-    ..createdBy = json['created_by'] == null
-        ? null
-        : AgreeForTermOfService$Mutation$AgreeTermOfService$CreatedBy.fromJson(
-            json['created_by'] as Map<String, dynamic>);
+        fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String);
 }
 
 Map<String, dynamic> _$AgreeForTermOfService$Mutation$AgreeTermOfServiceToJson(
@@ -287,7 +259,6 @@ Map<String, dynamic> _$AgreeForTermOfService$Mutation$AgreeTermOfServiceToJson(
   writeNotNull('value', instance.value);
   writeNotNull(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
-  writeNotNull('created_by', instance.createdBy?.toJson());
   return val;
 }
 
@@ -354,54 +325,6 @@ Map<String, dynamic> _$AgreeTermOfServiceInputToJson(
   return val;
 }
 
-QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy
-    _$QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedByFromJson(
-        Map<String, dynamic> json) {
-  return QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy()
-    ..id = json['id'] as String
-    ..username = json['username'] as String;
-}
-
-Map<String, dynamic>
-    _$QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedByToJson(
-        QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('username', instance.username);
-  return val;
-}
-
-QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy
-    _$QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedByFromJson(
-        Map<String, dynamic> json) {
-  return QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy()
-    ..id = json['id'] as String
-    ..username = json['username'] as String;
-}
-
-Map<String, dynamic>
-    _$QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedByToJson(
-        QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('username', instance.username);
-  return val;
-}
-
 QuestionnaireAnswer$Query$QuestionnaireAnswer
     _$QuestionnaireAnswer$Query$QuestionnaireAnswerFromJson(
         Map<String, dynamic> json) {
@@ -421,15 +344,7 @@ QuestionnaireAnswer$Query$QuestionnaireAnswer
         : QuestionnaireAnswerSimpleMixin$User.fromJson(
             json['user'] as Map<String, dynamic>)
     ..submitted = json['submitted'] as bool
-    ..data = json['data']
-    ..createdBy = json['created_by'] == null
-        ? null
-        : QuestionnaireAnswer$Query$QuestionnaireAnswer$CreatedBy.fromJson(
-            json['created_by'] as Map<String, dynamic>)
-    ..updatedBy = json['updated_by'] == null
-        ? null
-        : QuestionnaireAnswer$Query$QuestionnaireAnswer$UpdatedBy.fromJson(
-            json['updated_by'] as Map<String, dynamic>);
+    ..data = json['data'];
 }
 
 Map<String, dynamic> _$QuestionnaireAnswer$Query$QuestionnaireAnswerToJson(
@@ -452,8 +367,6 @@ Map<String, dynamic> _$QuestionnaireAnswer$Query$QuestionnaireAnswerToJson(
   writeNotNull('user', instance.user?.toJson());
   writeNotNull('submitted', instance.submitted);
   writeNotNull('data', instance.data);
-  writeNotNull('created_by', instance.createdBy?.toJson());
-  writeNotNull('updated_by', instance.updatedBy?.toJson());
   return val;
 }
 
@@ -865,7 +778,7 @@ Article$Query$Article _$Article$Query$ArticleFromJson(
             : ArticleSimpleMixin$Media.fromJson(e as Map<String, dynamic>))
         ?.toList()
     ..publishedAt =
-        fromGraphQLDateToDartDateTime(json['published_at'] as String)
+        fromGraphQLDateTimeToDartDateTime(json['published_at'] as String)
     ..post = json['post'] == null
         ? null
         : ArticleSimpleMixin$Post.fromJson(json['post'] as Map<String, dynamic>)
@@ -904,7 +817,7 @@ Map<String, dynamic> _$Article$Query$ArticleToJson(
   writeNotNull('name', instance.name);
   writeNotNull('media', instance.media?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'published_at', fromDartDateTimeToGraphQLDate(instance.publishedAt));
+      'published_at', fromDartDateTimeToGraphQLDateTime(instance.publishedAt));
   writeNotNull('post', instance.post?.toJson());
   writeNotNull('content', instance.content);
   writeNotNull(
@@ -1314,7 +1227,7 @@ Articles$Query$Articles _$Articles$Query$ArticlesFromJson(
             : ArticleSimpleMixin$Media.fromJson(e as Map<String, dynamic>))
         ?.toList()
     ..publishedAt =
-        fromGraphQLDateToDartDateTime(json['published_at'] as String)
+        fromGraphQLDateTimeToDartDateTime(json['published_at'] as String)
     ..post = json['post'] == null
         ? null
         : ArticleSimpleMixin$Post.fromJson(
@@ -1335,7 +1248,7 @@ Map<String, dynamic> _$Articles$Query$ArticlesToJson(
   writeNotNull('name', instance.name);
   writeNotNull('media', instance.media?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'published_at', fromDartDateTimeToGraphQLDate(instance.publishedAt));
+      'published_at', fromDartDateTimeToGraphQLDateTime(instance.publishedAt));
   writeNotNull('post', instance.post?.toJson());
   return val;
 }
@@ -1928,11 +1841,7 @@ Child$Query$User$ChildInfo _$Child$Query$User$ChildInfoFromJson(
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$Child$Query$User$ChildInfoToJson(
@@ -1949,7 +1858,6 @@ Map<String, dynamic> _$Child$Query$User$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -1977,7 +1885,6 @@ Child$Query$User _$Child$Query$UserFromJson(Map<String, dynamic> json) {
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -2021,7 +1928,6 @@ Map<String, dynamic> _$Child$Query$UserToJson(Child$Query$User instance) {
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -2127,51 +2033,6 @@ Map<String, dynamic> _$ChildInfoSimpleMixin$TeacherToJson(
   return val;
 }
 
-ChildInfoSimpleMixin$Parent _$ChildInfoSimpleMixin$ParentFromJson(
-    Map<String, dynamic> json) {
-  return ChildInfoSimpleMixin$Parent()
-    ..id = json['id'] as String
-    ..username = json['username'] as String
-    ..fullName = json['fullName'] as String
-    ..email = json['email'] as String
-    ..name = json['name'] as String
-    ..sex = _$enumDecodeNullable(_$SexTypeEnumMap, json['sex'],
-        unknownValue: SexType.artemisUnknown)
-    ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
-    ..image = json['image'] == null
-        ? null
-        : UserSimpleMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
-    ..role = json['role'] == null
-        ? null
-        : UserSimpleMixin$Role.fromJson(json['role'] as Map<String, dynamic>)
-    ..confirmed = json['confirmed'] as bool
-    ..$$typename = json['__typename'] as String;
-}
-
-Map<String, dynamic> _$ChildInfoSimpleMixin$ParentToJson(
-    ChildInfoSimpleMixin$Parent instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('username', instance.username);
-  writeNotNull('fullName', instance.fullName);
-  writeNotNull('email', instance.email);
-  writeNotNull('name', instance.name);
-  writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
-  writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
-  writeNotNull('image', instance.image?.toJson());
-  writeNotNull('role', instance.role?.toJson());
-  writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('__typename', instance.$$typename);
-  return val;
-}
-
 UserDetailMixin$Image _$UserDetailMixin$ImageFromJson(
     Map<String, dynamic> json) {
   return UserDetailMixin$Image()
@@ -2258,11 +2119,7 @@ Children$Query$Users$ChildInfo _$Children$Query$Users$ChildInfoFromJson(
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$Children$Query$Users$ChildInfoToJson(
@@ -2279,7 +2136,6 @@ Map<String, dynamic> _$Children$Query$Users$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -2442,7 +2298,6 @@ Counselor$Query$User _$Counselor$Query$UserFromJson(Map<String, dynamic> json) {
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -2491,7 +2346,6 @@ Map<String, dynamic> _$Counselor$Query$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -2795,16 +2649,10 @@ PatientInfoSimpleMixin$Ehrs _$PatientInfoSimpleMixin$EhrsFromJson(
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
-    ..user = json['user'] == null
-        ? null
-        : EhrSimpleMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..patient = json['patient'] == null
         ? null
         : EhrSimpleMixin$Patient.fromJson(
             json['patient'] as Map<String, dynamic>)
-    ..type = json['type'] == null
-        ? null
-        : EhrSimpleMixin$Type.fromJson(json['type'] as Map<String, dynamic>)
     ..subject = json['subject'] == null
         ? null
         : EhrSimpleMixin$Subject.fromJson(
@@ -2828,9 +2676,7 @@ Map<String, dynamic> _$PatientInfoSimpleMixin$EhrsToJson(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
-  writeNotNull('user', instance.user?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   return val;
@@ -2934,47 +2780,6 @@ Map<String, dynamic> _$NurseInfoSimpleMixin$LocationToJson(
   return val;
 }
 
-EhrSimpleMixin$User _$EhrSimpleMixin$UserFromJson(Map<String, dynamic> json) {
-  return EhrSimpleMixin$User()
-    ..id = json['id'] as String
-    ..username = json['username'] as String
-    ..fullName = json['fullName'] as String
-    ..email = json['email'] as String
-    ..name = json['name'] as String
-    ..sex = _$enumDecodeNullable(_$SexTypeEnumMap, json['sex'],
-        unknownValue: SexType.artemisUnknown)
-    ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
-    ..image = json['image'] == null
-        ? null
-        : UserSimpleMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
-    ..role = json['role'] == null
-        ? null
-        : UserSimpleMixin$Role.fromJson(json['role'] as Map<String, dynamic>)
-    ..confirmed = json['confirmed'] as bool;
-}
-
-Map<String, dynamic> _$EhrSimpleMixin$UserToJson(EhrSimpleMixin$User instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('username', instance.username);
-  writeNotNull('fullName', instance.fullName);
-  writeNotNull('email', instance.email);
-  writeNotNull('name', instance.name);
-  writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
-  writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
-  writeNotNull('image', instance.image?.toJson());
-  writeNotNull('role', instance.role?.toJson());
-  writeNotNull('confirmed', instance.confirmed);
-  return val;
-}
-
 EhrSimpleMixin$Patient _$EhrSimpleMixin$PatientFromJson(
     Map<String, dynamic> json) {
   return EhrSimpleMixin$Patient()
@@ -2998,35 +2803,6 @@ Map<String, dynamic> _$EhrSimpleMixin$PatientToJson(
   writeNotNull('name', instance.name);
   return val;
 }
-
-EhrSimpleMixin$Type _$EhrSimpleMixin$TypeFromJson(Map<String, dynamic> json) {
-  return EhrSimpleMixin$Type()
-    ..type = _$enumDecodeNullable(_$EhrTypeEnumMap, json['type'],
-        unknownValue: EhrType.artemisUnknown);
-}
-
-Map<String, dynamic> _$EhrSimpleMixin$TypeToJson(EhrSimpleMixin$Type instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', _$EhrTypeEnumMap[instance.type]);
-  return val;
-}
-
-const _$EhrTypeEnumMap = {
-  EhrType.assessment: 'assessment',
-  EhrType.diagnose: 'diagnose',
-  EhrType.education: 'education',
-  EhrType.exercise: 'exercise',
-  EhrType.medicine: 'medicine',
-  EhrType.supplement: 'supplement',
-  EhrType.artemisUnknown: 'ARTEMIS_UNKNOWN',
-};
 
 EhrSimpleMixin$Subject _$EhrSimpleMixin$SubjectFromJson(
     Map<String, dynamic> json) {
@@ -3188,7 +2964,6 @@ CounselorUpdate$Mutation$UpdateUser$User
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -3233,7 +3008,6 @@ Map<String, dynamic> _$CounselorUpdate$Mutation$UpdateUser$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -3342,11 +3116,10 @@ EditComponentUserChildInput _$EditComponentUserChildInputFromJson(
     Map<String, dynamic> json) {
   return EditComponentUserChildInput(
     id: json['id'] as String,
-    parent: json['parent'] as String,
     relationToUser: _$enumDecodeNullable(
         _$RelationTypeEnumMap, json['relationToUser'],
         unknownValue: RelationType.artemisUnknown),
-    reminder: json['reminder'] as String,
+    schools: (json['schools'] as List)?.map((e) => e as String)?.toList(),
     teacher: json['teacher'] as String,
   );
 }
@@ -3362,10 +3135,9 @@ Map<String, dynamic> _$EditComponentUserChildInputToJson(
   }
 
   writeNotNull('id', instance.id);
-  writeNotNull('parent', instance.parent);
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
-  writeNotNull('reminder', instance.reminder);
+  writeNotNull('schools', instance.schools);
   writeNotNull('teacher', instance.teacher);
   return val;
 }
@@ -3375,6 +3147,7 @@ EditComponentUserCounselorInput _$EditComponentUserCounselorInputFromJson(
   return EditComponentUserCounselorInput(
     id: json['id'] as String,
     location: json['location'] as String,
+    patients: (json['patients'] as List)?.map((e) => e as String)?.toList(),
   );
 }
 
@@ -3390,6 +3163,7 @@ Map<String, dynamic> _$EditComponentUserCounselorInputToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('location', instance.location);
+  writeNotNull('patients', instance.patients);
   return val;
 }
 
@@ -3398,6 +3172,7 @@ EditComponentUserDoctorInput _$EditComponentUserDoctorInputFromJson(
   return EditComponentUserDoctorInput(
     id: json['id'] as String,
     location: json['location'] as String,
+    patients: (json['patients'] as List)?.map((e) => e as String)?.toList(),
     subject: _$enumDecodeNullable(_$DoctorSubjectEnumMap, json['subject'],
         unknownValue: DoctorSubject.artemisUnknown),
   );
@@ -3415,6 +3190,7 @@ Map<String, dynamic> _$EditComponentUserDoctorInputToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('location', instance.location);
+  writeNotNull('patients', instance.patients);
   writeNotNull('subject', _$DoctorSubjectEnumMap[instance.subject]);
   return val;
 }
@@ -3424,6 +3200,7 @@ EditComponentUserNurseInput _$EditComponentUserNurseInputFromJson(
   return EditComponentUserNurseInput(
     id: json['id'] as String,
     location: json['location'] as String,
+    patients: (json['patients'] as List)?.map((e) => e as String)?.toList(),
   );
 }
 
@@ -3439,6 +3216,7 @@ Map<String, dynamic> _$EditComponentUserNurseInputToJson(
 
   writeNotNull('id', instance.id);
   writeNotNull('location', instance.location);
+  writeNotNull('patients', instance.patients);
   return val;
 }
 
@@ -3468,7 +3246,10 @@ Map<String, dynamic> _$EditComponentUserParentInputToJson(
 EditComponentUserTeacherInput _$EditComponentUserTeacherInputFromJson(
     Map<String, dynamic> json) {
   return EditComponentUserTeacherInput(
+    atSchool: json['atSchool'] as String,
+    children: (json['children'] as List)?.map((e) => e as String)?.toList(),
     id: json['id'] as String,
+    role: json['role'] as String,
     school: json['school'] as String,
   );
 }
@@ -3483,7 +3264,10 @@ Map<String, dynamic> _$EditComponentUserTeacherInputToJson(
     }
   }
 
+  writeNotNull('atSchool', instance.atSchool);
+  writeNotNull('children', instance.children);
   writeNotNull('id', instance.id);
+  writeNotNull('role', instance.role);
   writeNotNull('school', instance.school);
   return val;
 }
@@ -3501,13 +3285,14 @@ EditUserInput _$EditUserInputFromJson(Map<String, dynamic> json) {
         ? null
         : EditComponentUserChildInput.fromJson(
             json['childInfo'] as Map<String, dynamic>),
+    children: (json['children'] as List)?.map((e) => e as String)?.toList(),
+    confirmationToken: json['confirmationToken'] as String,
     confirmed: json['confirmed'] as bool,
     content: json['content'] as String,
     counselorInfo: json['counselorInfo'] == null
         ? null
         : EditComponentUserCounselorInput.fromJson(
             json['counselorInfo'] as Map<String, dynamic>),
-    countryCode: json['countryCode'] as String,
     createdBy: json['created_by'] as String,
     doctorInfo: json['doctorInfo'] == null
         ? null
@@ -3523,6 +3308,7 @@ EditUserInput _$EditUserInputFromJson(Map<String, dynamic> json) {
             json['nurseInfo'] as Map<String, dynamic>),
     organizationUnits:
         (json['organization_units'] as List)?.map((e) => e as String)?.toList(),
+    parent: json['parent'] as String,
     parentInfo: json['parentInfo'] == null
         ? null
         : EditComponentUserParentInput.fromJson(
@@ -3564,10 +3350,11 @@ Map<String, dynamic> _$EditUserInputToJson(EditUserInput instance) {
   writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
   writeNotNull('blocked', instance.blocked);
   writeNotNull('childInfo', instance.childInfo?.toJson());
+  writeNotNull('children', instance.children);
+  writeNotNull('confirmationToken', instance.confirmationToken);
   writeNotNull('confirmed', instance.confirmed);
   writeNotNull('content', instance.content);
   writeNotNull('counselorInfo', instance.counselorInfo?.toJson());
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('created_by', instance.createdBy);
   writeNotNull('doctorInfo', instance.doctorInfo?.toJson());
   writeNotNull('email', instance.email);
@@ -3576,6 +3363,7 @@ Map<String, dynamic> _$EditUserInputToJson(EditUserInput instance) {
   writeNotNull('name', instance.name);
   writeNotNull('nurseInfo', instance.nurseInfo?.toJson());
   writeNotNull('organization_units', instance.organizationUnits);
+  writeNotNull('parent', instance.parent);
   writeNotNull('parentInfo', instance.parentInfo?.toJson());
   writeNotNull('password', instance.password);
   writeNotNull('patientInfo', instance.patientInfo);
@@ -3789,11 +3577,7 @@ CreateChild$Mutation$CreateChild$User$ChildInfo
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$CreateChild$Mutation$CreateChild$User$ChildInfoToJson(
@@ -3810,7 +3594,6 @@ Map<String, dynamic> _$CreateChild$Mutation$CreateChild$User$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -3910,11 +3693,10 @@ Map<String, dynamic> _$CreateChild$MutationToJson(
 ComponentUserChildInput _$ComponentUserChildInputFromJson(
     Map<String, dynamic> json) {
   return ComponentUserChildInput(
-    parent: json['parent'] as String,
     relationToUser: _$enumDecodeNullable(
         _$RelationTypeEnumMap, json['relationToUser'],
         unknownValue: RelationType.artemisUnknown),
-    reminder: json['reminder'] as String,
+    schools: (json['schools'] as List)?.map((e) => e as String)?.toList(),
     teacher: json['teacher'] as String,
   );
 }
@@ -3929,10 +3711,9 @@ Map<String, dynamic> _$ComponentUserChildInputToJson(
     }
   }
 
-  writeNotNull('parent', instance.parent);
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
-  writeNotNull('reminder', instance.reminder);
+  writeNotNull('schools', instance.schools);
   writeNotNull('teacher', instance.teacher);
   return val;
 }
@@ -3947,6 +3728,8 @@ ChildInput _$ChildInputFromJson(Map<String, dynamic> json) {
     fullName: json['fullName'] as String,
     image: json['image'] as String,
     name: json['name'] as String,
+    parent: json['parent'] as String,
+    phone: json['phone'] as String,
     sex: _$enumDecodeNullable(_$SexTypeEnumMap, json['sex'],
         unknownValue: SexType.artemisUnknown),
   );
@@ -3966,6 +3749,8 @@ Map<String, dynamic> _$ChildInputToJson(ChildInput instance) {
   writeNotNull('fullName', instance.fullName);
   writeNotNull('image', instance.image);
   writeNotNull('name', instance.name);
+  writeNotNull('parent', instance.parent);
+  writeNotNull('phone', instance.phone);
   writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
   return val;
 }
@@ -4362,16 +4147,10 @@ CreateEhr$Mutation$CreateEhr$Ehr _$CreateEhr$Mutation$CreateEhr$EhrFromJson(
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
-    ..user = json['user'] == null
-        ? null
-        : EhrSimpleMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..patient = json['patient'] == null
         ? null
         : EhrSimpleMixin$Patient.fromJson(
             json['patient'] as Map<String, dynamic>)
-    ..type = json['type'] == null
-        ? null
-        : EhrSimpleMixin$Type.fromJson(json['type'] as Map<String, dynamic>)
     ..subject = json['subject'] == null
         ? null
         : EhrSimpleMixin$Subject.fromJson(
@@ -4386,7 +4165,7 @@ CreateEhr$Mutation$CreateEhr$Ehr _$CreateEhr$Mutation$CreateEhr$EhrFromJson(
             : CreateEhr$Mutation$CreateEhr$Ehr$Medias.fromJson(
                 e as Map<String, dynamic>))
         ?.toList()
-    ..data = json['data']
+    ..record = json['record']
     ..questionnaireAnswer = json['questionnaire_answer'] == null
         ? null
         : CreateEhr$Mutation$CreateEhr$Ehr$QuestionnaireAnswer.fromJson(
@@ -4415,15 +4194,13 @@ Map<String, dynamic> _$CreateEhr$Mutation$CreateEhr$EhrToJson(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
-  writeNotNull('user', instance.user?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   writeNotNull('source', instance.source);
   writeNotNull('source_id', instance.sourceId);
   writeNotNull('medias', instance.medias?.map((e) => e?.toJson())?.toList());
-  writeNotNull('data', instance.data);
+  writeNotNull('record', instance.record);
   writeNotNull('questionnaire_answer', instance.questionnaireAnswer?.toJson());
   writeNotNull(
       'summaries', instance.summaries?.map((e) => e?.toJson())?.toList());
@@ -4524,28 +4301,6 @@ Map<String, dynamic> _$ComponentDataEhrSubjectInputToJson(
   return val;
 }
 
-ComponentDataEhrTypeInput _$ComponentDataEhrTypeInputFromJson(
-    Map<String, dynamic> json) {
-  return ComponentDataEhrTypeInput(
-    type: _$enumDecodeNullable(_$EhrTypeEnumMap, json['type'],
-        unknownValue: EhrType.artemisUnknown),
-  );
-}
-
-Map<String, dynamic> _$ComponentDataEhrTypeInputToJson(
-    ComponentDataEhrTypeInput instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('type', _$EhrTypeEnumMap[instance.type]);
-  return val;
-}
-
 ComponentDataPositionInput _$ComponentDataPositionInputFromJson(
     Map<String, dynamic> json) {
   return ComponentDataPositionInput(
@@ -4580,8 +4335,8 @@ Map<String, dynamic> _$ComponentDataPositionInputToJson(
 
 EhrInput _$EhrInputFromJson(Map<String, dynamic> json) {
   return EhrInput(
+    classification: json['classification'] as String,
     createdBy: json['created_by'] as String,
-    data: json['data'],
     medias: (json['medias'] as List)?.map((e) => e as String)?.toList(),
     officeComments: json['office_comments'] as String,
     patient: json['patient'] as String,
@@ -4590,6 +4345,7 @@ EhrInput _$EhrInputFromJson(Map<String, dynamic> json) {
         : ComponentDataPositionInput.fromJson(
             json['position'] as Map<String, dynamic>),
     questionnaireAnswer: json['questionnaire_answer'] as String,
+    record: json['record'],
     source: json['source'] as String,
     sourceId: json['source_id'] as String,
     status: _$enumDecodeNullable(_$EhrStatusEnumMap, json['status'],
@@ -4603,12 +4359,7 @@ EhrInput _$EhrInputFromJson(Map<String, dynamic> json) {
             ? null
             : ComponentContentSummaryInput.fromJson(e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] == null
-        ? null
-        : ComponentDataEhrTypeInput.fromJson(
-            json['type'] as Map<String, dynamic>),
     updatedBy: json['updated_by'] as String,
-    user: json['user'] as String,
   );
 }
 
@@ -4621,22 +4372,21 @@ Map<String, dynamic> _$EhrInputToJson(EhrInput instance) {
     }
   }
 
+  writeNotNull('classification', instance.classification);
   writeNotNull('created_by', instance.createdBy);
-  writeNotNull('data', instance.data);
   writeNotNull('medias', instance.medias);
   writeNotNull('office_comments', instance.officeComments);
   writeNotNull('patient', instance.patient);
   writeNotNull('position', instance.position?.toJson());
   writeNotNull('questionnaire_answer', instance.questionnaireAnswer);
+  writeNotNull('record', instance.record);
   writeNotNull('source', instance.source);
   writeNotNull('source_id', instance.sourceId);
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull(
       'summaries', instance.summaries?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('updated_by', instance.updatedBy);
-  writeNotNull('user', instance.user);
   return val;
 }
 
@@ -5601,16 +5351,10 @@ PatientInfoDetailMixin$Ehrs _$PatientInfoDetailMixin$EhrsFromJson(
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
-    ..user = json['user'] == null
-        ? null
-        : EhrSimpleMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..patient = json['patient'] == null
         ? null
         : EhrSimpleMixin$Patient.fromJson(
             json['patient'] as Map<String, dynamic>)
-    ..type = json['type'] == null
-        ? null
-        : EhrSimpleMixin$Type.fromJson(json['type'] as Map<String, dynamic>)
     ..subject = json['subject'] == null
         ? null
         : EhrSimpleMixin$Subject.fromJson(
@@ -5634,9 +5378,7 @@ Map<String, dynamic> _$PatientInfoDetailMixin$EhrsToJson(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
-  writeNotNull('user', instance.user?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   return val;
@@ -5648,9 +5390,13 @@ PatientInput _$PatientInputFromJson(Map<String, dynamic> json) {
     createdBy: json['created_by'] as String,
     doctor: json['doctor'] as String,
     ehrs: (json['ehrs'] as List)?.map((e) => e as String)?.toList(),
+    location: json['location'] as String,
     meetingId: json['meetingId'] as String,
     name: json['name'] as String,
     nurse: json['nurse'] as String,
+    status: _$enumDecodeNullable(_$PatientStatusEnumMap, json['status'],
+        unknownValue: PatientStatus.artemisUnknown),
+    teacher: json['teacher'] as String,
     updatedBy: json['updated_by'] as String,
     user: json['user'] as String,
   );
@@ -5669,13 +5415,23 @@ Map<String, dynamic> _$PatientInputToJson(PatientInput instance) {
   writeNotNull('created_by', instance.createdBy);
   writeNotNull('doctor', instance.doctor);
   writeNotNull('ehrs', instance.ehrs);
+  writeNotNull('location', instance.location);
   writeNotNull('meetingId', instance.meetingId);
   writeNotNull('name', instance.name);
   writeNotNull('nurse', instance.nurse);
+  writeNotNull('status', _$PatientStatusEnumMap[instance.status]);
+  writeNotNull('teacher', instance.teacher);
   writeNotNull('updated_by', instance.updatedBy);
   writeNotNull('user', instance.user);
   return val;
 }
+
+const _$PatientStatusEnumMap = {
+  PatientStatus.active: 'active',
+  PatientStatus.registered: 'registered',
+  PatientStatus.removed: 'removed',
+  PatientStatus.artemisUnknown: 'ARTEMIS_UNKNOWN',
+};
 
 CreatePatientInput _$CreatePatientInputFromJson(Map<String, dynamic> json) {
   return CreatePatientInput(
@@ -6196,7 +5952,6 @@ Doctor$Query$User _$Doctor$Query$UserFromJson(Map<String, dynamic> json) {
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -6244,7 +5999,6 @@ Map<String, dynamic> _$Doctor$Query$UserToJson(Doctor$Query$User instance) {
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -6423,7 +6177,6 @@ DoctorUpdate$Mutation$UpdateUser$User
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -6468,7 +6221,6 @@ Map<String, dynamic> _$DoctorUpdate$Mutation$UpdateUser$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -6676,16 +6428,10 @@ Ehr$Query$Ehr _$Ehr$Query$EhrFromJson(Map<String, dynamic> json) {
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
-    ..user = json['user'] == null
-        ? null
-        : EhrSimpleMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..patient = json['patient'] == null
         ? null
         : EhrSimpleMixin$Patient.fromJson(
             json['patient'] as Map<String, dynamic>)
-    ..type = json['type'] == null
-        ? null
-        : EhrSimpleMixin$Type.fromJson(json['type'] as Map<String, dynamic>)
     ..subject = json['subject'] == null
         ? null
         : EhrSimpleMixin$Subject.fromJson(
@@ -6699,7 +6445,7 @@ Ehr$Query$Ehr _$Ehr$Query$EhrFromJson(Map<String, dynamic> json) {
             ? null
             : Ehr$Query$Ehr$Medias.fromJson(e as Map<String, dynamic>))
         ?.toList()
-    ..data = json['data']
+    ..record = json['record']
     ..questionnaireAnswer = json['questionnaire_answer'] == null
         ? null
         : Ehr$Query$Ehr$QuestionnaireAnswer.fromJson(
@@ -6730,15 +6476,13 @@ Map<String, dynamic> _$Ehr$Query$EhrToJson(Ehr$Query$Ehr instance) {
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
-  writeNotNull('user', instance.user?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   writeNotNull('source', instance.source);
   writeNotNull('source_id', instance.sourceId);
   writeNotNull('medias', instance.medias?.map((e) => e?.toJson())?.toList());
-  writeNotNull('data', instance.data);
+  writeNotNull('record', instance.record);
   writeNotNull('questionnaire_answer', instance.questionnaireAnswer?.toJson());
   writeNotNull(
       'summaries', instance.summaries?.map((e) => e?.toJson())?.toList());
@@ -6774,16 +6518,10 @@ Ehrs$Query$Ehrs _$Ehrs$Query$EhrsFromJson(Map<String, dynamic> json) {
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
-    ..user = json['user'] == null
-        ? null
-        : EhrSimpleMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..patient = json['patient'] == null
         ? null
         : EhrSimpleMixin$Patient.fromJson(
             json['patient'] as Map<String, dynamic>)
-    ..type = json['type'] == null
-        ? null
-        : EhrSimpleMixin$Type.fromJson(json['type'] as Map<String, dynamic>)
     ..subject = json['subject'] == null
         ? null
         : EhrSimpleMixin$Subject.fromJson(
@@ -6806,9 +6544,7 @@ Map<String, dynamic> _$Ehrs$Query$EhrsToJson(Ehrs$Query$Ehrs instance) {
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
-  writeNotNull('user', instance.user?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   return val;
@@ -7469,11 +7205,7 @@ FindMyChild$Query$MyChild$ChildInfo
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$FindMyChild$Query$MyChild$ChildInfoToJson(
@@ -7490,7 +7222,6 @@ Map<String, dynamic> _$FindMyChild$Query$MyChild$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -7560,7 +7291,6 @@ FindMyChild$Query$MyChild _$FindMyChild$Query$MyChildFromJson(
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -7609,7 +7339,6 @@ Map<String, dynamic> _$FindMyChild$Query$MyChildToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -7880,7 +7609,6 @@ Login$Mutation$Login$User _$Login$Mutation$Login$UserFromJson(
         unknownValue: SexType.artemisUnknown)
     ..phone = json['phone'] as String
     ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
-    ..countryCode = json['countryCode'] as String
     ..secondEmail = json['second_email'] as String
     ..image = json['image'] == null
         ? null
@@ -7949,7 +7677,6 @@ Map<String, dynamic> _$Login$Mutation$Login$UserToJson(
   writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
   writeNotNull('phone', instance.phone);
   writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('second_email', instance.secondEmail);
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -7969,6 +7696,7 @@ Map<String, dynamic> _$Login$Mutation$Login$UserToJson(
 
 Login$Mutation$Login _$Login$Mutation$LoginFromJson(Map<String, dynamic> json) {
   return Login$Mutation$Login()
+    ..expireAt = fromGraphQLDateTimeToDartDateTime(json['expire_at'] as String)
     ..jwt = json['jwt'] as String
     ..user = json['user'] == null
         ? null
@@ -7986,6 +7714,8 @@ Map<String, dynamic> _$Login$Mutation$LoginToJson(
     }
   }
 
+  writeNotNull(
+      'expire_at', fromDartDateTimeToGraphQLDateTime(instance.expireAt));
   writeNotNull('jwt', instance.jwt);
   writeNotNull('user', instance.user?.toJson());
   return val;
@@ -8227,11 +7957,7 @@ UserMeMixin$ChildInfo _$UserMeMixin$ChildInfoFromJson(
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$UserMeMixin$ChildInfoToJson(
@@ -8248,7 +7974,6 @@ Map<String, dynamic> _$UserMeMixin$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -8562,7 +8287,6 @@ Me$Query$Me _$Me$Query$MeFromJson(Map<String, dynamic> json) {
         unknownValue: SexType.artemisUnknown)
     ..phone = json['phone'] as String
     ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
-    ..countryCode = json['countryCode'] as String
     ..secondEmail = json['second_email'] as String
     ..image = json['image'] == null
         ? null
@@ -8630,7 +8354,6 @@ Map<String, dynamic> _$Me$Query$MeToJson(Me$Query$Me instance) {
   writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
   writeNotNull('phone', instance.phone);
   writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('second_email', instance.secondEmail);
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -8888,7 +8611,6 @@ Nurse$Query$User _$Nurse$Query$UserFromJson(Map<String, dynamic> json) {
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -8936,7 +8658,6 @@ Map<String, dynamic> _$Nurse$Query$UserToJson(Nurse$Query$User instance) {
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -9109,7 +8830,6 @@ NurseUpdate$Mutation$UpdateUser$User
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -9154,7 +8874,6 @@ Map<String, dynamic> _$NurseUpdate$Mutation$UpdateUser$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -9547,7 +9266,6 @@ Parent$Query$User _$Parent$Query$UserFromJson(Map<String, dynamic> json) {
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -9595,7 +9313,6 @@ Map<String, dynamic> _$Parent$Query$UserToJson(Parent$Query$User instance) {
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -10155,7 +9872,6 @@ ParentUpdate$Mutation$UpdateUser$User
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -10200,7 +9916,6 @@ Map<String, dynamic> _$ParentUpdate$Mutation$UpdateUser$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -10279,7 +9994,6 @@ Patient$Query$Patient$User _$Patient$Query$Patient$UserFromJson(
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -10320,7 +10034,6 @@ Map<String, dynamic> _$Patient$Query$Patient$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -11005,7 +10718,7 @@ PlanSimpleMixin$Articles _$PlanSimpleMixin$ArticlesFromJson(
             : ArticleSimpleMixin$Media.fromJson(e as Map<String, dynamic>))
         ?.toList()
     ..publishedAt =
-        fromGraphQLDateToDartDateTime(json['published_at'] as String)
+        fromGraphQLDateTimeToDartDateTime(json['published_at'] as String)
     ..post = json['post'] == null
         ? null
         : ArticleSimpleMixin$Post.fromJson(
@@ -11026,7 +10739,7 @@ Map<String, dynamic> _$PlanSimpleMixin$ArticlesToJson(
   writeNotNull('name', instance.name);
   writeNotNull('media', instance.media?.map((e) => e?.toJson())?.toList());
   writeNotNull(
-      'published_at', fromDartDateTimeToGraphQLDate(instance.publishedAt));
+      'published_at', fromDartDateTimeToGraphQLDateTime(instance.publishedAt));
   writeNotNull('post', instance.post?.toJson());
   return val;
 }
@@ -11679,7 +11392,6 @@ Register$Mutation$Register$User _$Register$Mutation$Register$UserFromJson(
         unknownValue: SexType.artemisUnknown)
     ..phone = json['phone'] as String
     ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
-    ..countryCode = json['countryCode'] as String
     ..secondEmail = json['second_email'] as String
     ..image = json['image'] == null
         ? null
@@ -11748,7 +11460,6 @@ Map<String, dynamic> _$Register$Mutation$Register$UserToJson(
   writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
   writeNotNull('phone', instance.phone);
   writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('second_email', instance.secondEmail);
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -11769,6 +11480,7 @@ Map<String, dynamic> _$Register$Mutation$Register$UserToJson(
 Register$Mutation$Register _$Register$Mutation$RegisterFromJson(
     Map<String, dynamic> json) {
   return Register$Mutation$Register()
+    ..expireAt = fromGraphQLDateTimeToDartDateTime(json['expire_at'] as String)
     ..jwt = json['jwt'] as String
     ..user = json['user'] == null
         ? null
@@ -11786,6 +11498,8 @@ Map<String, dynamic> _$Register$Mutation$RegisterToJson(
     }
   }
 
+  writeNotNull(
+      'expire_at', fromDartDateTimeToGraphQLDateTime(instance.expireAt));
   writeNotNull('jwt', instance.jwt);
   writeNotNull('user', instance.user?.toJson());
   return val;
@@ -12272,7 +11986,6 @@ Supplement$Query$Supplement _$Supplement$Query$SupplementFromJson(
         ? null
         : SupplementSimpleMixin$Post.fromJson(
             json['post'] as Map<String, dynamic>)
-    ..provider = json['provider'] as String
     ..content = json['content'] as String
     ..subject = json['subject'] == null
         ? null
@@ -12298,7 +12011,6 @@ Map<String, dynamic> _$Supplement$Query$SupplementToJson(
   writeNotNull('name', instance.name);
   writeNotNull('id', instance.id);
   writeNotNull('post', instance.post?.toJson());
-  writeNotNull('provider', instance.provider);
   writeNotNull('content', instance.content);
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('forPerson', instance.forPerson?.toJson());
@@ -12507,7 +12219,6 @@ Teacher$Query$User _$Teacher$Query$UserFromJson(Map<String, dynamic> json) {
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -12555,7 +12266,6 @@ Map<String, dynamic> _$Teacher$Query$UserToJson(Teacher$Query$User instance) {
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -12724,7 +12434,6 @@ TeacherUpdate$Mutation$UpdateUser$User
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -12769,7 +12478,6 @@ Map<String, dynamic> _$TeacherUpdate$Mutation$UpdateUser$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -13344,16 +13052,10 @@ UpdateEhr$Mutation$UpdateEhr$Ehr _$UpdateEhr$Mutation$UpdateEhr$EhrFromJson(
         fromGraphQLDateTimeToDartDateTime(json['updated_at'] as String)
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
-    ..user = json['user'] == null
-        ? null
-        : EhrSimpleMixin$User.fromJson(json['user'] as Map<String, dynamic>)
     ..patient = json['patient'] == null
         ? null
         : EhrSimpleMixin$Patient.fromJson(
             json['patient'] as Map<String, dynamic>)
-    ..type = json['type'] == null
-        ? null
-        : EhrSimpleMixin$Type.fromJson(json['type'] as Map<String, dynamic>)
     ..subject = json['subject'] == null
         ? null
         : EhrSimpleMixin$Subject.fromJson(
@@ -13368,7 +13070,7 @@ UpdateEhr$Mutation$UpdateEhr$Ehr _$UpdateEhr$Mutation$UpdateEhr$EhrFromJson(
             : UpdateEhr$Mutation$UpdateEhr$Ehr$Medias.fromJson(
                 e as Map<String, dynamic>))
         ?.toList()
-    ..data = json['data']
+    ..record = json['record']
     ..questionnaireAnswer = json['questionnaire_answer'] == null
         ? null
         : UpdateEhr$Mutation$UpdateEhr$Ehr$QuestionnaireAnswer.fromJson(
@@ -13397,15 +13099,13 @@ Map<String, dynamic> _$UpdateEhr$Mutation$UpdateEhr$EhrToJson(
       'updated_at', fromDartDateTimeToGraphQLDateTime(instance.updatedAt));
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
-  writeNotNull('user', instance.user?.toJson());
   writeNotNull('patient', instance.patient?.toJson());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   writeNotNull('source', instance.source);
   writeNotNull('source_id', instance.sourceId);
   writeNotNull('medias', instance.medias?.map((e) => e?.toJson())?.toList());
-  writeNotNull('data', instance.data);
+  writeNotNull('record', instance.record);
   writeNotNull('questionnaire_answer', instance.questionnaireAnswer?.toJson());
   writeNotNull(
       'summaries', instance.summaries?.map((e) => e?.toJson())?.toList());
@@ -13510,30 +13210,6 @@ Map<String, dynamic> _$EditComponentDataEhrSubjectInputToJson(
   return val;
 }
 
-EditComponentDataEhrTypeInput _$EditComponentDataEhrTypeInputFromJson(
-    Map<String, dynamic> json) {
-  return EditComponentDataEhrTypeInput(
-    id: json['id'] as String,
-    type: _$enumDecodeNullable(_$EhrTypeEnumMap, json['type'],
-        unknownValue: EhrType.artemisUnknown),
-  );
-}
-
-Map<String, dynamic> _$EditComponentDataEhrTypeInputToJson(
-    EditComponentDataEhrTypeInput instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('id', instance.id);
-  writeNotNull('type', _$EhrTypeEnumMap[instance.type]);
-  return val;
-}
-
 EditComponentDataPositionInput _$EditComponentDataPositionInputFromJson(
     Map<String, dynamic> json) {
   return EditComponentDataPositionInput(
@@ -13570,8 +13246,8 @@ Map<String, dynamic> _$EditComponentDataPositionInputToJson(
 
 EditEhrInput _$EditEhrInputFromJson(Map<String, dynamic> json) {
   return EditEhrInput(
+    classification: json['classification'] as String,
     createdBy: json['created_by'] as String,
-    data: json['data'],
     medias: (json['medias'] as List)?.map((e) => e as String)?.toList(),
     officeComments: json['office_comments'] as String,
     patient: json['patient'] as String,
@@ -13580,6 +13256,7 @@ EditEhrInput _$EditEhrInputFromJson(Map<String, dynamic> json) {
         : EditComponentDataPositionInput.fromJson(
             json['position'] as Map<String, dynamic>),
     questionnaireAnswer: json['questionnaire_answer'] as String,
+    record: json['record'],
     source: json['source'] as String,
     sourceId: json['source_id'] as String,
     status: _$enumDecodeNullable(_$EhrStatusEnumMap, json['status'],
@@ -13594,12 +13271,7 @@ EditEhrInput _$EditEhrInputFromJson(Map<String, dynamic> json) {
             : EditComponentContentSummaryInput.fromJson(
                 e as Map<String, dynamic>))
         ?.toList(),
-    type: json['type'] == null
-        ? null
-        : EditComponentDataEhrTypeInput.fromJson(
-            json['type'] as Map<String, dynamic>),
     updatedBy: json['updated_by'] as String,
-    user: json['user'] as String,
   );
 }
 
@@ -13612,22 +13284,21 @@ Map<String, dynamic> _$EditEhrInputToJson(EditEhrInput instance) {
     }
   }
 
+  writeNotNull('classification', instance.classification);
   writeNotNull('created_by', instance.createdBy);
-  writeNotNull('data', instance.data);
   writeNotNull('medias', instance.medias);
   writeNotNull('office_comments', instance.officeComments);
   writeNotNull('patient', instance.patient);
   writeNotNull('position', instance.position?.toJson());
   writeNotNull('questionnaire_answer', instance.questionnaireAnswer);
+  writeNotNull('record', instance.record);
   writeNotNull('source', instance.source);
   writeNotNull('source_id', instance.sourceId);
   writeNotNull('status', _$EhrStatusEnumMap[instance.status]);
   writeNotNull('subject', instance.subject?.toJson());
   writeNotNull(
       'summaries', instance.summaries?.map((e) => e?.toJson())?.toList());
-  writeNotNull('type', instance.type?.toJson());
   writeNotNull('updated_by', instance.updatedBy);
-  writeNotNull('user', instance.user);
   return val;
 }
 
@@ -13668,7 +13339,6 @@ UpdateMe$Mutation$UpdateMe _$UpdateMe$Mutation$UpdateMeFromJson(
         unknownValue: SexType.artemisUnknown)
     ..phone = json['phone'] as String
     ..birthday = fromGraphQLDateToDartDateTime(json['birthday'] as String)
-    ..countryCode = json['countryCode'] as String
     ..secondEmail = json['second_email'] as String
     ..image = json['image'] == null
         ? null
@@ -13737,7 +13407,6 @@ Map<String, dynamic> _$UpdateMe$Mutation$UpdateMeToJson(
   writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
   writeNotNull('phone', instance.phone);
   writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('second_email', instance.secondEmail);
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('role', instance.role?.toJson());
@@ -13780,7 +13449,6 @@ UpdateMe _$UpdateMeFromJson(Map<String, dynamic> json) {
   return UpdateMe(
     birthday: fromGraphQLDateToDartDateTime(json['birthday'] as String),
     content: json['content'] as String,
-    countryCode: json['countryCode'] as String,
     email: json['email'] as String,
     fullName: json['fullName'] as String,
     image: json['image'] as String,
@@ -13804,7 +13472,6 @@ Map<String, dynamic> _$UpdateMeToJson(UpdateMe instance) {
 
   writeNotNull('birthday', fromDartDateTimeToGraphQLDate(instance.birthday));
   writeNotNull('content', instance.content);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull('email', instance.email);
   writeNotNull('fullName', instance.fullName);
   writeNotNull('image', instance.image);
@@ -13974,11 +13641,7 @@ UpdateMyChild$Mutation$UpdateChild$User$ChildInfo
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$UpdateMyChild$Mutation$UpdateChild$User$ChildInfoToJson(
@@ -13995,7 +13658,6 @@ Map<String, dynamic> _$UpdateMyChild$Mutation$UpdateChild$User$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -14068,7 +13730,6 @@ UpdateMyChild$Mutation$UpdateChild$User
         : UserDetailMixin$Image.fromJson(json['image'] as Map<String, dynamic>)
     ..blocked = json['blocked'] as bool
     ..confirmed = json['confirmed'] as bool
-    ..countryCode = json['countryCode'] as String
     ..createdAt =
         fromGraphQLDateTimeToDartDateTime(json['created_at'] as String)
     ..organizationUnits = (json['organization_units'] as List)
@@ -14117,7 +13778,6 @@ Map<String, dynamic> _$UpdateMyChild$Mutation$UpdateChild$UserToJson(
   writeNotNull('image', instance.image?.toJson());
   writeNotNull('blocked', instance.blocked);
   writeNotNull('confirmed', instance.confirmed);
-  writeNotNull('countryCode', instance.countryCode);
   writeNotNull(
       'created_at', fromDartDateTimeToGraphQLDateTime(instance.createdAt));
   writeNotNull('organization_units',
@@ -14191,6 +13851,7 @@ EditChildInput _$EditChildInputFromJson(Map<String, dynamic> json) {
     fullName: json['fullName'] as String,
     image: json['image'] as String,
     name: json['name'] as String,
+    phone: json['phone'] as String,
     sex: _$enumDecodeNullable(_$SexTypeEnumMap, json['sex'],
         unknownValue: SexType.artemisUnknown),
   );
@@ -14210,6 +13871,7 @@ Map<String, dynamic> _$EditChildInputToJson(EditChildInput instance) {
   writeNotNull('fullName', instance.fullName);
   writeNotNull('image', instance.image);
   writeNotNull('name', instance.name);
+  writeNotNull('phone', instance.phone);
   writeNotNull('sex', _$SexTypeEnumMap[instance.sex]);
   return val;
 }
@@ -14333,9 +13995,13 @@ EditPatientInput _$EditPatientInputFromJson(Map<String, dynamic> json) {
     createdBy: json['created_by'] as String,
     doctor: json['doctor'] as String,
     ehrs: (json['ehrs'] as List)?.map((e) => e as String)?.toList(),
+    location: json['location'] as String,
     meetingId: json['meetingId'] as String,
     name: json['name'] as String,
     nurse: json['nurse'] as String,
+    status: _$enumDecodeNullable(_$PatientStatusEnumMap, json['status'],
+        unknownValue: PatientStatus.artemisUnknown),
+    teacher: json['teacher'] as String,
     updatedBy: json['updated_by'] as String,
     user: json['user'] as String,
   );
@@ -14354,9 +14020,12 @@ Map<String, dynamic> _$EditPatientInputToJson(EditPatientInput instance) {
   writeNotNull('created_by', instance.createdBy);
   writeNotNull('doctor', instance.doctor);
   writeNotNull('ehrs', instance.ehrs);
+  writeNotNull('location', instance.location);
   writeNotNull('meetingId', instance.meetingId);
   writeNotNull('name', instance.name);
   writeNotNull('nurse', instance.nurse);
+  writeNotNull('status', _$PatientStatusEnumMap[instance.status]);
+  writeNotNull('teacher', instance.teacher);
   writeNotNull('updated_by', instance.updatedBy);
   writeNotNull('user', instance.user);
   return val;
@@ -14748,11 +14417,7 @@ User$Query$User$ChildInfo _$User$Query$User$ChildInfoFromJson(
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$User$Query$User$ChildInfoToJson(
@@ -14769,7 +14434,6 @@ Map<String, dynamic> _$User$Query$User$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -15072,11 +14736,7 @@ Users$Query$Users$ChildInfo _$Users$Query$Users$ChildInfoFromJson(
     ..teacher = json['teacher'] == null
         ? null
         : ChildInfoSimpleMixin$Teacher.fromJson(
-            json['teacher'] as Map<String, dynamic>)
-    ..parent = json['parent'] == null
-        ? null
-        : ChildInfoSimpleMixin$Parent.fromJson(
-            json['parent'] as Map<String, dynamic>);
+            json['teacher'] as Map<String, dynamic>);
 }
 
 Map<String, dynamic> _$Users$Query$Users$ChildInfoToJson(
@@ -15093,7 +14753,6 @@ Map<String, dynamic> _$Users$Query$Users$ChildInfoToJson(
   writeNotNull(
       'relationToUser', _$RelationTypeEnumMap[instance.relationToUser]);
   writeNotNull('teacher', instance.teacher?.toJson());
-  writeNotNull('parent', instance.parent?.toJson());
   return val;
 }
 
@@ -16129,6 +15788,52 @@ Map<String, dynamic> _$Webinars$QueryToJson(Webinars$Query instance) {
 
   writeNotNull(
       'webinars', instance.webinars?.map((e) => e?.toJson())?.toList());
+  return val;
+}
+
+RefreshToken$Mutation$RefreshToken _$RefreshToken$Mutation$RefreshTokenFromJson(
+    Map<String, dynamic> json) {
+  return RefreshToken$Mutation$RefreshToken()
+    ..jwt = json['jwt'] as String
+    ..expireAt = fromGraphQLDateTimeToDartDateTime(json['expire_at'] as String);
+}
+
+Map<String, dynamic> _$RefreshToken$Mutation$RefreshTokenToJson(
+    RefreshToken$Mutation$RefreshToken instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('jwt', instance.jwt);
+  writeNotNull(
+      'expire_at', fromDartDateTimeToGraphQLDateTime(instance.expireAt));
+  return val;
+}
+
+RefreshToken$Mutation _$RefreshToken$MutationFromJson(
+    Map<String, dynamic> json) {
+  return RefreshToken$Mutation()
+    ..refreshToken = json['refreshToken'] == null
+        ? null
+        : RefreshToken$Mutation$RefreshToken.fromJson(
+            json['refreshToken'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$RefreshToken$MutationToJson(
+    RefreshToken$Mutation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('refreshToken', instance.refreshToken?.toJson());
   return val;
 }
 
@@ -18098,5 +17803,26 @@ Map<String, dynamic> _$WebinarsArgumentsToJson(WebinarsArguments instance) {
   writeNotNull('limit', instance.limit);
   writeNotNull('start', instance.start);
   writeNotNull('where', instance.where);
+  return val;
+}
+
+RefreshTokenArguments _$RefreshTokenArgumentsFromJson(
+    Map<String, dynamic> json) {
+  return RefreshTokenArguments(
+    jwt: json['jwt'] as String,
+  );
+}
+
+Map<String, dynamic> _$RefreshTokenArgumentsToJson(
+    RefreshTokenArguments instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('jwt', instance.jwt);
   return val;
 }

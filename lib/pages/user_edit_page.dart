@@ -1,13 +1,11 @@
 import 'dart:io';
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_artech/flutter_artech.dart';
-import 'package:full_house_app/repository/login_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/repository/upload_repo.dart';
-import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/api/graphql_api.dart';
 import 'package:full_house_app/api/extensions.dart';
+import 'package:artech_account/account.dart';
 
 class UserEditPage extends UserEditPageBase {
 
@@ -26,7 +24,6 @@ class UserEditPage extends UserEditPageBase {
       data: UpdateMe(
           birthday:user.birthday,
           content:user.content,
-          countryCode:user.countryCode,
           fullName:user.fullName,
           name:user.name,
           phone:user.phone,
@@ -34,11 +31,6 @@ class UserEditPage extends UserEditPageBase {
           sex:user.sex.toGraphQL(),
       ),
     ));
-  }
-
-  @override
-  Future<MeData> getLoginUser() async {
-    return await LoginRepository.getLoginUser();
   }
 
   @override

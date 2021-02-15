@@ -7,7 +7,7 @@ mutation CreateEhr($input:createEhrInput){
             medias{
                 ...MediaSimple
             }
-            data
+            record
             questionnaire_answer{
                 ...QuestionnaireAnswerSimple
             }
