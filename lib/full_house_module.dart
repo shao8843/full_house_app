@@ -45,14 +45,9 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
           )));
 
   @override
-  final List<ModularRoute> routers = [];
-
-  @override
   void configureServices() {
     services.registerSingletonAsync<UserApi<MeData>>(() async {
       var userApi = UserApiImpl();
-      //fire and do not wait
-      await userApi.init();
       return userApi;
     }, dependsOn: [SettingStore]);
     this.registerUserManager<MeData>();

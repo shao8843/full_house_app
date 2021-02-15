@@ -6907,6 +6907,42 @@ class Posts$Query with EquatableMixin {
 }
 
 @JsonSerializable(explicitToJson: true)
+class RefreshToken$Mutation$RefreshToken with EquatableMixin {
+  RefreshToken$Mutation$RefreshToken();
+
+  factory RefreshToken$Mutation$RefreshToken.fromJson(
+          Map<String, dynamic> json) =>
+      _$RefreshToken$Mutation$RefreshTokenFromJson(json);
+
+  String jwt;
+
+  @JsonKey(
+      name: 'expire_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime expireAt;
+
+  @override
+  List<Object> get props => [jwt, expireAt];
+  Map<String, dynamic> toJson() =>
+      _$RefreshToken$Mutation$RefreshTokenToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class RefreshToken$Mutation with EquatableMixin {
+  RefreshToken$Mutation();
+
+  factory RefreshToken$Mutation.fromJson(Map<String, dynamic> json) =>
+      _$RefreshToken$MutationFromJson(json);
+
+  RefreshToken$Mutation$RefreshToken refreshToken;
+
+  @override
+  List<Object> get props => [refreshToken];
+  Map<String, dynamic> toJson() => _$RefreshToken$MutationToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
 class Register$Mutation$Register$User with EquatableMixin, UserMeMixin {
   Register$Mutation$Register$User();
 
@@ -9690,42 +9726,6 @@ class Webinars$Query with EquatableMixin {
   @override
   List<Object> get props => [webinars];
   Map<String, dynamic> toJson() => _$Webinars$QueryToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class RefreshToken$Mutation$RefreshToken with EquatableMixin {
-  RefreshToken$Mutation$RefreshToken();
-
-  factory RefreshToken$Mutation$RefreshToken.fromJson(
-          Map<String, dynamic> json) =>
-      _$RefreshToken$Mutation$RefreshTokenFromJson(json);
-
-  String jwt;
-
-  @JsonKey(
-      name: 'expire_at',
-      fromJson: fromGraphQLDateTimeToDartDateTime,
-      toJson: fromDartDateTimeToGraphQLDateTime)
-  DateTime expireAt;
-
-  @override
-  List<Object> get props => [jwt, expireAt];
-  Map<String, dynamic> toJson() =>
-      _$RefreshToken$Mutation$RefreshTokenToJson(this);
-}
-
-@JsonSerializable(explicitToJson: true)
-class RefreshToken$Mutation with EquatableMixin {
-  RefreshToken$Mutation();
-
-  factory RefreshToken$Mutation.fromJson(Map<String, dynamic> json) =>
-      _$RefreshToken$MutationFromJson(json);
-
-  RefreshToken$Mutation$RefreshToken refreshToken;
-
-  @override
-  List<Object> get props => [refreshToken];
-  Map<String, dynamic> toJson() => _$RefreshToken$MutationToJson(this);
 }
 
 enum OrderStatusType {
@@ -36693,6 +36693,80 @@ class PostsQuery extends GraphQLQuery<Posts$Query, PostsArguments> {
 }
 
 @JsonSerializable(explicitToJson: true)
+class RefreshTokenArguments extends JsonSerializable with EquatableMixin {
+  RefreshTokenArguments({@required this.jwt});
+
+  @override
+  factory RefreshTokenArguments.fromJson(Map<String, dynamic> json) =>
+      _$RefreshTokenArgumentsFromJson(json);
+
+  final String jwt;
+
+  @override
+  List<Object> get props => [jwt];
+  @override
+  Map<String, dynamic> toJson() => _$RefreshTokenArgumentsToJson(this);
+}
+
+class RefreshTokenMutation
+    extends GraphQLQuery<RefreshToken$Mutation, RefreshTokenArguments> {
+  RefreshTokenMutation({this.variables});
+
+  @override
+  final DocumentNode document = DocumentNode(definitions: [
+    OperationDefinitionNode(
+        type: OperationType.mutation,
+        name: NameNode(value: 'refreshToken'),
+        variableDefinitions: [
+          VariableDefinitionNode(
+              variable: VariableNode(name: NameNode(value: 'jwt')),
+              type: NamedTypeNode(
+                  name: NameNode(value: 'String'), isNonNull: true),
+              defaultValue: DefaultValueNode(value: null),
+              directives: [])
+        ],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'refreshToken'),
+              alias: null,
+              arguments: [
+                ArgumentNode(
+                    name: NameNode(value: 'jwt'),
+                    value: VariableNode(name: NameNode(value: 'jwt')))
+              ],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FieldNode(
+                    name: NameNode(value: 'jwt'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null),
+                FieldNode(
+                    name: NameNode(value: 'expire_at'),
+                    alias: null,
+                    arguments: [],
+                    directives: [],
+                    selectionSet: null)
+              ]))
+        ]))
+  ]);
+
+  @override
+  final String operationName = 'refreshToken';
+
+  @override
+  final RefreshTokenArguments variables;
+
+  @override
+  List<Object> get props => [document, operationName, variables];
+  @override
+  RefreshToken$Mutation parse(Map<String, dynamic> json) =>
+      RefreshToken$Mutation.fromJson(json);
+}
+
+@JsonSerializable(explicitToJson: true)
 class RegisterArguments extends JsonSerializable with EquatableMixin {
   RegisterArguments({@required this.input});
 
@@ -48443,78 +48517,4 @@ class WebinarsQuery extends GraphQLQuery<Webinars$Query, WebinarsArguments> {
   @override
   Webinars$Query parse(Map<String, dynamic> json) =>
       Webinars$Query.fromJson(json);
-}
-
-@JsonSerializable(explicitToJson: true)
-class RefreshTokenArguments extends JsonSerializable with EquatableMixin {
-  RefreshTokenArguments({@required this.jwt});
-
-  @override
-  factory RefreshTokenArguments.fromJson(Map<String, dynamic> json) =>
-      _$RefreshTokenArgumentsFromJson(json);
-
-  final String jwt;
-
-  @override
-  List<Object> get props => [jwt];
-  @override
-  Map<String, dynamic> toJson() => _$RefreshTokenArgumentsToJson(this);
-}
-
-class RefreshTokenMutation
-    extends GraphQLQuery<RefreshToken$Mutation, RefreshTokenArguments> {
-  RefreshTokenMutation({this.variables});
-
-  @override
-  final DocumentNode document = DocumentNode(definitions: [
-    OperationDefinitionNode(
-        type: OperationType.mutation,
-        name: NameNode(value: 'refreshToken'),
-        variableDefinitions: [
-          VariableDefinitionNode(
-              variable: VariableNode(name: NameNode(value: 'jwt')),
-              type: NamedTypeNode(
-                  name: NameNode(value: 'String'), isNonNull: true),
-              defaultValue: DefaultValueNode(value: null),
-              directives: [])
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-              name: NameNode(value: 'refreshToken'),
-              alias: null,
-              arguments: [
-                ArgumentNode(
-                    name: NameNode(value: 'jwt'),
-                    value: VariableNode(name: NameNode(value: 'jwt')))
-              ],
-              directives: [],
-              selectionSet: SelectionSetNode(selections: [
-                FieldNode(
-                    name: NameNode(value: 'jwt'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null),
-                FieldNode(
-                    name: NameNode(value: 'expire_at'),
-                    alias: null,
-                    arguments: [],
-                    directives: [],
-                    selectionSet: null)
-              ]))
-        ]))
-  ]);
-
-  @override
-  final String operationName = 'refreshToken';
-
-  @override
-  final RefreshTokenArguments variables;
-
-  @override
-  List<Object> get props => [document, operationName, variables];
-  @override
-  RefreshToken$Mutation parse(Map<String, dynamic> json) =>
-      RefreshToken$Mutation.fromJson(json);
 }

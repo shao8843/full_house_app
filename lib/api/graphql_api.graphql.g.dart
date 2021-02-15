@@ -11380,6 +11380,52 @@ Map<String, dynamic> _$Posts$QueryToJson(Posts$Query instance) {
   return val;
 }
 
+RefreshToken$Mutation$RefreshToken _$RefreshToken$Mutation$RefreshTokenFromJson(
+    Map<String, dynamic> json) {
+  return RefreshToken$Mutation$RefreshToken()
+    ..jwt = json['jwt'] as String
+    ..expireAt = fromGraphQLDateTimeToDartDateTime(json['expire_at'] as String);
+}
+
+Map<String, dynamic> _$RefreshToken$Mutation$RefreshTokenToJson(
+    RefreshToken$Mutation$RefreshToken instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('jwt', instance.jwt);
+  writeNotNull(
+      'expire_at', fromDartDateTimeToGraphQLDateTime(instance.expireAt));
+  return val;
+}
+
+RefreshToken$Mutation _$RefreshToken$MutationFromJson(
+    Map<String, dynamic> json) {
+  return RefreshToken$Mutation()
+    ..refreshToken = json['refreshToken'] == null
+        ? null
+        : RefreshToken$Mutation$RefreshToken.fromJson(
+            json['refreshToken'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$RefreshToken$MutationToJson(
+    RefreshToken$Mutation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('refreshToken', instance.refreshToken?.toJson());
+  return val;
+}
+
 Register$Mutation$Register$User _$Register$Mutation$Register$UserFromJson(
     Map<String, dynamic> json) {
   return Register$Mutation$Register$User()
@@ -15791,52 +15837,6 @@ Map<String, dynamic> _$Webinars$QueryToJson(Webinars$Query instance) {
   return val;
 }
 
-RefreshToken$Mutation$RefreshToken _$RefreshToken$Mutation$RefreshTokenFromJson(
-    Map<String, dynamic> json) {
-  return RefreshToken$Mutation$RefreshToken()
-    ..jwt = json['jwt'] as String
-    ..expireAt = fromGraphQLDateTimeToDartDateTime(json['expire_at'] as String);
-}
-
-Map<String, dynamic> _$RefreshToken$Mutation$RefreshTokenToJson(
-    RefreshToken$Mutation$RefreshToken instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('jwt', instance.jwt);
-  writeNotNull(
-      'expire_at', fromDartDateTimeToGraphQLDateTime(instance.expireAt));
-  return val;
-}
-
-RefreshToken$Mutation _$RefreshToken$MutationFromJson(
-    Map<String, dynamic> json) {
-  return RefreshToken$Mutation()
-    ..refreshToken = json['refreshToken'] == null
-        ? null
-        : RefreshToken$Mutation$RefreshToken.fromJson(
-            json['refreshToken'] as Map<String, dynamic>);
-}
-
-Map<String, dynamic> _$RefreshToken$MutationToJson(
-    RefreshToken$Mutation instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('refreshToken', instance.refreshToken?.toJson());
-  return val;
-}
-
 AccountArguments _$AccountArgumentsFromJson(Map<String, dynamic> json) {
   return AccountArguments(
     id: json['id'] as String,
@@ -17190,6 +17190,27 @@ Map<String, dynamic> _$PostsArgumentsToJson(PostsArguments instance) {
   return val;
 }
 
+RefreshTokenArguments _$RefreshTokenArgumentsFromJson(
+    Map<String, dynamic> json) {
+  return RefreshTokenArguments(
+    jwt: json['jwt'] as String,
+  );
+}
+
+Map<String, dynamic> _$RefreshTokenArgumentsToJson(
+    RefreshTokenArguments instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('jwt', instance.jwt);
+  return val;
+}
+
 RegisterArguments _$RegisterArgumentsFromJson(Map<String, dynamic> json) {
   return RegisterArguments(
     input: json['input'] == null
@@ -17803,26 +17824,5 @@ Map<String, dynamic> _$WebinarsArgumentsToJson(WebinarsArguments instance) {
   writeNotNull('limit', instance.limit);
   writeNotNull('start', instance.start);
   writeNotNull('where', instance.where);
-  return val;
-}
-
-RefreshTokenArguments _$RefreshTokenArgumentsFromJson(
-    Map<String, dynamic> json) {
-  return RefreshTokenArguments(
-    jwt: json['jwt'] as String,
-  );
-}
-
-Map<String, dynamic> _$RefreshTokenArgumentsToJson(
-    RefreshTokenArguments instance) {
-  final val = <String, dynamic>{};
-
-  void writeNotNull(String key, dynamic value) {
-    if (value != null) {
-      val[key] = value;
-    }
-  }
-
-  writeNotNull('jwt', instance.jwt);
   return val;
 }

@@ -7,10 +7,7 @@ import 'package:rxdart/src/streams/value_stream.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:uuid/uuid.dart';
 import 'package:artech_core/core.dart';
-import 'dart:convert';
 
-
-const String userCacheKey = 'currentUserData';
 
 class UserApiImpl extends GraphQLRemoteRepositoryBase<MeData> with UserApi<MeData> implements UserStreamApi<MeData>,UpdateMeApi<MeData,UpdateMeInput>  {
 
@@ -32,6 +29,10 @@ class UserApiImpl extends GraphQLRemoteRepositoryBase<MeData> with UserApi<MeDat
   Future<TokenModel> codeSignUp(String identifier, String code, {Map<String, dynamic> extraData}) {
     // TODO: implement codeSignUp
     throw UnimplementedError();
+  }
+
+  Future<void> forceAdd(MeData user) async{
+    _currentUserStream.add(user);
   }
 
   @override
@@ -90,7 +91,7 @@ class UserApiImpl extends GraphQLRemoteRepositoryBase<MeData> with UserApi<MeDat
     assert(token?.token!=null);
     var q = RefreshTokenMutation(
         variables: RefreshTokenArguments(
-            jwt: token.token));
+          jwt: token.token));
     var ret = await execute(q);
     var t = TokenModel(ret.data.refreshToken.jwt,ret.data.refreshToken.expireAt);
     return  _normalizeToken(t);
@@ -119,30 +120,6 @@ class UserApiImpl extends GraphQLRemoteRepositoryBase<MeData> with UserApi<MeDat
     return me;
   }
 
-  @override
-  Future<void> init() async{
-    var userStr = await settingStore.get<String>(userCacheKey);
-    if(userStr!=null){
-      try{
-        var u = MeData.fromJson(json.decode(userStr));
-        _currentUserStream.add(u);
-        logger.info("Load cached user data ${u}");
-      }catch(e){
-        logger.severe("Get cached userData fail ${e}");
-      }
-    }
-    logger.info("Listen to user stream and prepare for cache");
-    _currentUserStream.listen((value) async {
-      if(value!=null){
-        await settingStore.set<String>(userCacheKey, json.encode(value.toJson()));
-        logger.info("Cached userData ${value.toString()}");
-      }else{
-        await settingStore.delete(userCacheKey);
-        logger.info("Deleted cached userData");
-      }
-    });
-
-  }
 
   TokenModel _normalizeToken(TokenModel token){
     if(token.expireAt!=null){

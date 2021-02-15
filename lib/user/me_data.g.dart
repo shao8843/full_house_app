@@ -31,14 +31,14 @@ MeData _$MeDataFromJson(Map<String, dynamic> json) {
     ..content = json['content'] as String
     ..confirmed = json['confirmed'] as bool
     ..blocked = json['blocked'] as bool
-    ..created_at = json['created_at'] == null
+    ..createdAt = json['created_at'] == null
         ? null
         : DateTime.parse(json['created_at'] as String)
-    ..updated_at = json['updated_at'] == null
+    ..updatedAt = json['updated_at'] == null
         ? null
         : DateTime.parse(json['updated_at'] as String)
     ..provider = json['provider'] as String
-    ..organization_units = (json['organization_units'] as List)
+    ..organizationUnits = (json['organization_units'] as List)
         ?.map((e) => e == null
             ? null
             : OrganizationUnitData.fromJson(e as Map<String, dynamic>))
@@ -80,10 +80,10 @@ Map<String, dynamic> _$MeDataToJson(MeData instance) {
   writeNotNull('content', instance.content);
   writeNotNull('confirmed', instance.confirmed);
   writeNotNull('blocked', instance.blocked);
-  writeNotNull('created_at', instance.created_at?.toIso8601String());
-  writeNotNull('updated_at', instance.updated_at?.toIso8601String());
+  writeNotNull('created_at', instance.createdAt?.toIso8601String());
+  writeNotNull('updated_at', instance.updatedAt?.toIso8601String());
   writeNotNull('provider', instance.provider);
-  writeNotNull('organization_units', instance.organization_units);
+  writeNotNull('organization_units', instance.organizationUnits);
   writeNotNull('parent', instance.parent);
   writeNotNull('user_agreements', instance.userAgreements);
   writeNotNull('orderCount', instance.orderCount);
