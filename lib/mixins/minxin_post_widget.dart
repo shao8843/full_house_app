@@ -9,7 +9,6 @@ import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_address_repo.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
-import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
 import 'package:artech_account/account.dart';
 

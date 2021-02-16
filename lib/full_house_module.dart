@@ -1,7 +1,6 @@
 import 'package:full_house_app/pages/full_house_page.dart';
 import 'package:full_house_app/repository/user_api.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/user/me_data.dart';
 import 'package:artech_core/core.dart';
@@ -37,7 +36,7 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
             // or simply save your changes to "hot reload" in a Flutter IDE).
             // Notice that the counter didn't reset back to zero; the application
             // is not restarted.
-            primarySwatch: Colors.blue,
+            primarySwatch: _myColor,
             // This makes the visual density adapt to the platform that you run
             // the app on. For desktop platforms, the controls will be smaller and
             // closer together (more dense) than on mobile platforms.
@@ -74,3 +73,20 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
     });
   }
 }
+
+const MaterialColor _myColor = MaterialColor(
+  _myPrimaryValue,
+  <int, Color>{
+    50: Color(0xFFFBE9E7),
+    100: Color(0xFFFFCCBC),
+    200: Color(0xFFFFAB91),
+    300: Color(0xFFFF8A65),
+    400: Color(0xFFFF7043),
+    500: Color(_myPrimaryValue),
+    600: Color(0xFFF4511E),
+    700: Color(0xFFE64A19),
+    800: Color(0xFFD84315),
+    900: Color(0xFFBF360C),
+  },
+);
+const int _myPrimaryValue = 0xFF892929;

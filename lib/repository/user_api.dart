@@ -37,7 +37,7 @@ class UserApiImpl extends GraphQLRemoteRepositoryBase<MeData> with UserApi<MeDat
 
   @override
   Future<MeData> fetchMe() async{
-    MeData res= null;
+    MeData res;
     var q = MeQuery();
     var result = await execute(q);
     if (result.data?.me != null) {

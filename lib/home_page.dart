@@ -30,7 +30,7 @@ class OperationApp extends HookWidget with ServiceGetter{
     if(roleName==null){
       mainMenu.removeMenu(operationMenuName);
     }else{
-      WidgetBuilder widgetBuilder = null;
+      WidgetBuilder widgetBuilder;
       switch (user.role.name) {
         // case 'Parent':
         //   widgetBuilder=(_)=> ParentPage(user: user,);
