@@ -10,12 +10,14 @@ import 'package:artech_meeting/artech_meeting.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
 import 'package:full_house_app/pages/me_page.dart';
 import 'package:full_house_app/home_page.dart';
+import 'package:artech_agora/agora_module.dart';
+import 'package:full_house_app/repository/stream_token_provider.dart';
 
 class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
   // TODO: implement dependentOn
   List<AppSubModuleBase> get dependentOn =>
-      [ChatModule(), MeetingModule(), UnifiedModule()];
+      [ChatModule(), MeetingModule(),AgoraModule(),UnifiedModule()];
 
   // Provide the root widget associated with your module
   // In this case, it's the widget you created in the first step
@@ -45,11 +47,12 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
 
   @override
   void configureServices() {
+    services.registerSingleton<StreamTokenProvider>(StreamTokenProviderImpl());
     services.registerSingletonAsync<UserApi<MeData>>(() async {
       var userApi = UserApiImpl();
       return userApi;
     }, dependsOn: [SettingStore]);
-    this.registerUserManager<MeData>();
+    this.registerUserManager<MeData>(fromJson: (d)=> MeData.fromJson(d));
     this.registerUnifiedClient();
 
     this.configTyped<MenuOption>(configurator: (c) {

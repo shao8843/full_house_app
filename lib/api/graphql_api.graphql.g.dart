@@ -15837,6 +15837,52 @@ Map<String, dynamic> _$Webinars$QueryToJson(Webinars$Query instance) {
   return val;
 }
 
+FetchStreamToken$Mutation$StreamToken
+    _$FetchStreamToken$Mutation$StreamTokenFromJson(Map<String, dynamic> json) {
+  return FetchStreamToken$Mutation$StreamToken()
+    ..token = json['token'] as String
+    ..expireAt = fromGraphQLDateTimeToDartDateTime(json['expire_at'] as String);
+}
+
+Map<String, dynamic> _$FetchStreamToken$Mutation$StreamTokenToJson(
+    FetchStreamToken$Mutation$StreamToken instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('token', instance.token);
+  writeNotNull(
+      'expire_at', fromDartDateTimeToGraphQLDateTime(instance.expireAt));
+  return val;
+}
+
+FetchStreamToken$Mutation _$FetchStreamToken$MutationFromJson(
+    Map<String, dynamic> json) {
+  return FetchStreamToken$Mutation()
+    ..streamToken = json['streamToken'] == null
+        ? null
+        : FetchStreamToken$Mutation$StreamToken.fromJson(
+            json['streamToken'] as Map<String, dynamic>);
+}
+
+Map<String, dynamic> _$FetchStreamToken$MutationToJson(
+    FetchStreamToken$Mutation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('streamToken', instance.streamToken?.toJson());
+  return val;
+}
+
 AccountArguments _$AccountArgumentsFromJson(Map<String, dynamic> json) {
   return AccountArguments(
     id: json['id'] as String,

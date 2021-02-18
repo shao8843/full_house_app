@@ -492,6 +492,14 @@ mixin WebinarSimpleMixin {
   String meetingId;
   WebinarSimpleMixin$Post post;
 }
+mixin ThirdPartyTokenMixin {
+  String token;
+  @JsonKey(
+      name: 'expire_at',
+      fromJson: fromGraphQLDateTimeToDartDateTime,
+      toJson: fromDartDateTimeToGraphQLDateTime)
+  DateTime expireAt;
+}
 
 @JsonSerializable(explicitToJson: true)
 class Account$Query$Account$Orders with EquatableMixin {
@@ -9726,6 +9734,35 @@ class Webinars$Query with EquatableMixin {
   @override
   List<Object> get props => [webinars];
   Map<String, dynamic> toJson() => _$Webinars$QueryToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class FetchStreamToken$Mutation$StreamToken
+    with EquatableMixin, ThirdPartyTokenMixin {
+  FetchStreamToken$Mutation$StreamToken();
+
+  factory FetchStreamToken$Mutation$StreamToken.fromJson(
+          Map<String, dynamic> json) =>
+      _$FetchStreamToken$Mutation$StreamTokenFromJson(json);
+
+  @override
+  List<Object> get props => [token, expireAt];
+  Map<String, dynamic> toJson() =>
+      _$FetchStreamToken$Mutation$StreamTokenToJson(this);
+}
+
+@JsonSerializable(explicitToJson: true)
+class FetchStreamToken$Mutation with EquatableMixin {
+  FetchStreamToken$Mutation();
+
+  factory FetchStreamToken$Mutation.fromJson(Map<String, dynamic> json) =>
+      _$FetchStreamToken$MutationFromJson(json);
+
+  FetchStreamToken$Mutation$StreamToken streamToken;
+
+  @override
+  List<Object> get props => [streamToken];
+  Map<String, dynamic> toJson() => _$FetchStreamToken$MutationToJson(this);
 }
 
 enum OrderStatusType {
@@ -48517,4 +48554,59 @@ class WebinarsQuery extends GraphQLQuery<Webinars$Query, WebinarsArguments> {
   @override
   Webinars$Query parse(Map<String, dynamic> json) =>
       Webinars$Query.fromJson(json);
+}
+
+class FetchStreamTokenMutation
+    extends GraphQLQuery<FetchStreamToken$Mutation, JsonSerializable> {
+  FetchStreamTokenMutation();
+
+  @override
+  final DocumentNode document = DocumentNode(definitions: [
+    OperationDefinitionNode(
+        type: OperationType.mutation,
+        name: NameNode(value: 'FetchStreamToken'),
+        variableDefinitions: [],
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'streamToken'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: SelectionSetNode(selections: [
+                FragmentSpreadNode(
+                    name: NameNode(value: 'ThirdPartyToken'), directives: [])
+              ]))
+        ])),
+    FragmentDefinitionNode(
+        name: NameNode(value: 'ThirdPartyToken'),
+        typeCondition: TypeConditionNode(
+            on: NamedTypeNode(
+                name: NameNode(value: 'thirdPartyTokenPayload'),
+                isNonNull: false)),
+        directives: [],
+        selectionSet: SelectionSetNode(selections: [
+          FieldNode(
+              name: NameNode(value: 'token'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null),
+          FieldNode(
+              name: NameNode(value: 'expire_at'),
+              alias: null,
+              arguments: [],
+              directives: [],
+              selectionSet: null)
+        ]))
+  ]);
+
+  @override
+  final String operationName = 'FetchStreamToken';
+
+  @override
+  List<Object> get props => [document, operationName];
+  @override
+  FetchStreamToken$Mutation parse(Map<String, dynamic> json) =>
+      FetchStreamToken$Mutation.fromJson(json);
 }

@@ -750,3 +750,8 @@ fragment VenueSimple on Venue {
     }
 }
 
+fragment ThirdPartyToken on thirdPartyTokenPayload{
+    token
+    expire_at
+}
+
