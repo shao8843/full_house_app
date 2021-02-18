@@ -5,7 +5,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:artech_api/api.dart';
 import 'package:artech_account/account.dart';
 
-class CreditCardRepository extends RemoteRepositoryBase<CreditCardData> {
+class CreditCardRepository extends GraphQLRemoteRepositoryBase {
   
   Future<List<CreditCardData>> getCreditCardListAsync(
       {

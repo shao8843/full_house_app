@@ -6,7 +6,7 @@ import 'package:full_house_app/user/me_data.dart';
 import 'package:artech_account/account.dart';
 import 'package:artech_api/api.dart';
 
-class UserRepository extends RemoteRepositoryBase<User> {
+class UserRepository extends GraphQLRemoteRepositoryBase {
 
   Future<User> getAsync({String id}) async {
     var result = await query(

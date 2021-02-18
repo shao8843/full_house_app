@@ -4,7 +4,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:artech_api/api.dart';
 
 class TermOfServiceRepository
-    extends RemoteRepositoryBase<PaymentPolicyData> {
+    extends GraphQLRemoteRepositoryBase {
 
   Future<PaymentPolicyData> getPaymentPolicyAsync() async {
     var result = await query(

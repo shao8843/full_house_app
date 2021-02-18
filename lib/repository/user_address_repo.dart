@@ -5,7 +5,7 @@ import 'package:full_house_app/api/extensions.dart';
 import 'package:artech_api/api.dart';
 import 'package:artech_account/account.dart';
 
-class UserAddressRepo  extends RemoteRepositoryBase<UserAddressData> {
+class UserAddressRepo  extends GraphQLRemoteRepositoryBase {
 
   Future<List<UserAddressData>> getUserAddressList(String tag) async {
     try {

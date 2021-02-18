@@ -12,7 +12,7 @@ import 'package:path/path.dart';
 import 'package:artech_account/account.dart';
 import 'package:artech_api/api.dart';
 
-class UploadRepo extends RemoteRepositoryBase {
+class UploadRepo extends GraphQLRemoteRepositoryBase {
 
   Future<MediaFileInfo> uploadAccountImage(File file, {String userId}) async {
     if (userId != null) {

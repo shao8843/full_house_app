@@ -3,7 +3,7 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/api/graphql_api.graphql.dart';
 import 'package:artech_api/api.dart';
 
-class PostRepository extends RemoteRepositoryBase<PostData> {
+class PostRepository extends GraphQLRemoteRepositoryBase {
 
 //  @deprecated
 //  Future<PostData> getAsync({String id}) async {

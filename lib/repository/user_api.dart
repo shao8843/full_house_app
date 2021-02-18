@@ -9,7 +9,7 @@ import 'package:uuid/uuid.dart';
 import 'package:artech_core/core.dart';
 
 
-class UserApiImpl extends GraphQLRemoteRepositoryBase<MeData> with UserApi<MeData> implements UserStreamApi<MeData>,UpdateMeApi<MeData,UpdateMeInput>  {
+class UserApiImpl extends GraphQLRemoteRepositoryBase with UserApi<MeData> implements UserStreamApi<MeData>,UpdateMeApi<MeData,UpdateMeInput>  {
 
   SettingStore get settingStore=>services.get<SettingStore>();
 

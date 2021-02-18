@@ -54,22 +54,21 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
 
     this.configTyped<MenuOption>(configurator: (c) {
       c.getOrThrow(mainMenuName)
-          .addMenu(
-          MenuItem("FastBraiinPage",
+          .addIfNotExits(
+          MenuItem("满堂彩",
               widget: (_)=>Icon(Icons.home),
               widget2: (_) => FullHousePage(),
-              label: () => ArtechLocalizations().home),
-          index: 0)
-          .addMenu(MenuItem("Meeting",
+              label: () => ArtechLocalizations().home,priority: 100),)
+          .addIfNotExits(MenuItem("Meeting",
           widget: (_)=> ImageIcon(
               AssetImage('assets/icons/online-meeting.png',package: 'flutter_artech'),
               size: 30.0),
           widget2: (_) => MeetingLoginPage(),
-          label: () => ArtechLocalizations().meeting))
-          .addMenu(MenuItem("Me",
+          label: () => ArtechLocalizations().meeting,priority:50))
+          .addIfNotExits(MenuItem("Me",
           widget:(_)=> Icon(Icons.person),
           widget2: (_) => MePage(),
-          label: () => ArtechLocalizations().userCenter));
+          label: () => ArtechLocalizations().userCenter,priority:-100));
     });
   }
 }

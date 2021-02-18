@@ -47,7 +47,7 @@ class OperationApp extends HookWidget with ServiceGetter{
         default:
           widgetBuilder=(_)=> Container();
       }
-      mainMenu.insertBefore("Meeting", MenuItem(operationMenuName,widget: (_)=> ImageIcon(AssetImage('assets/icons/app_icon.png')),widget2: widgetBuilder,label:()=>ArtechLocalizations().home));
+      //mainMenu.insertBefore("Meeting", MenuItem(operationMenuName,widget: (_)=> ImageIcon(AssetImage('assets/icons/app_icon.png')),widget2: widgetBuilder,label:()=>ArtechLocalizations().home));
     }
   }
 }

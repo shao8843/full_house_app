@@ -3,7 +3,7 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:full_house_app/api/graphql_api.dart';
 import 'package:artech_api/api.dart';
 
-class EventRepository extends RemoteRepositoryBase<EventData> {
+class EventRepository extends GraphQLRemoteRepositoryBase {
 
   Future<EventData> getAsync({String id}) async {
     return toEventData(await query(

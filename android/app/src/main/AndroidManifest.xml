@@ -6,7 +6,6 @@
          In most cases you can leave this as-is, but you if you want to provide
          additional functionality it is fine to subclass or reimplement
          FlutterApplication and put your custom class here. -->
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -24,12 +23,14 @@
 
     <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:icon="@mipmap/launcher_icon"
-        android:label="full_house_app"
+        android:label="满堂彩"
         android:usesCleartextTraffic="true"
-        tools:replace="android:label">
+        tools:replace="android:label"
+        android:allowBackup="true">
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -61,9 +62,6 @@
         </activity>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
-        <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="key=go get my key"/>
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />

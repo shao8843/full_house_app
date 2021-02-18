@@ -7,7 +7,7 @@ import 'package:artech_api/api.dart';
 import 'package:artech_account/account.dart';
 import 'package:full_house_app/api/extensions.dart';
 
-class OrderRepository extends RemoteRepositoryBase<OrderData> {
+class OrderRepository extends GraphQLRemoteRepositoryBase {
 
   Future<OrderData> saveOrder({String userId,
     OrderData orderData,
