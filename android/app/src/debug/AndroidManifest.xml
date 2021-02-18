@@ -25,7 +25,7 @@
         android:usesCleartextTraffic="true"
         tools:replace="android:label"
         android:name="io.flutter.app.FlutterApplication"
-        android:label="full_house_app"
+        android:label="满堂彩"
         android:icon="@mipmap/launcher_icon">
         <activity
             android:name=".MainActivity"

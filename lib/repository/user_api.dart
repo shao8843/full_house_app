@@ -56,45 +56,61 @@ class UserApiImpl extends GraphQLRemoteRepositoryBase with UserApi<MeData> imple
 
   @override
   Future<TokenModel> passwordSignIn(String identifier, String password, {Map<String, dynamic> extraData}) async{
-    final ret = await execute(
-        LoginMutation(
-            variables: LoginArguments(
-                input: UsersPermissionsLoginInput(
-                    identifier: identifier,
-                    password: password,
-                    provider: 'local'))));
+    try {
+      final ret = await execute(
+          LoginMutation(
+              variables: LoginArguments(
+                  input: UsersPermissionsLoginInput(
+                      identifier: identifier,
+                      password: password,
+                      provider: 'local'))));
 
-    var token = TokenModel(ret.data.login.jwt, ret.data.login.expireAt);
-    var me = MeData.fromJson(ret.data.login.user.toJson());
-    _currentUserStream.add(me);
-    return _normalizeToken(token);
+      var token = TokenModel(ret.data.login.jwt, ret.data.login.expireAt);
+      var me = MeData.fromJson(ret.data.login.user.toJson());
+      _currentUserStream.add(me);
+      return _normalizeToken(token);
+    } catch (error) {
+      logger.severe(error);
+      rethrow;
+    }
   }
 
   @override
   Future<TokenModel> passwordSignUp(String identifier, String password, {Map<String, dynamic> extraData})async {
-    var q = RegisterMutation(
-        variables: RegisterArguments(
-            input: UsersPermissionsRegisterInput(
-                email: identifier,
-                password: password,
-                username: Uuid().v4().toString())));
+    try {
+      var q = RegisterMutation(
+          variables: RegisterArguments(
+              input: UsersPermissionsRegisterInput(
+                  email: identifier,
+                  password: password,
+                  username: Uuid().v4().toString())));
 
-    var ret = await execute(q);
-    var token = TokenModel(ret.data.register.jwt, ret.data.register.expireAt);
-    var me = MeData.fromJson(ret.data.register.user.toJson());
-    _currentUserStream.add(me);
-    return  _normalizeToken(token);
+      var ret = await execute(q);
+      var token = TokenModel(ret.data.register.jwt, ret.data.register.expireAt);
+      var me = MeData.fromJson(ret.data.register.user.toJson());
+      _currentUserStream.add(me);
+      return _normalizeToken(token);
+    } catch (error) {
+      logger.severe(error);
+      rethrow;
+    }
   }
 
   @override
   Future<TokenModel> refreshToken(TokenModel token) async{
     assert(token?.token!=null);
-    var q = RefreshTokenMutation(
-        variables: RefreshTokenArguments(
-          jwt: token.token));
-    var ret = await execute(q);
-    var t = TokenModel(ret.data.refreshToken.jwt,ret.data.refreshToken.expireAt);
-    return  _normalizeToken(t);
+    try {
+      var q = RefreshTokenMutation(
+          variables: RefreshTokenArguments(
+              jwt: token.token));
+      var ret = await execute(q);
+      var t = TokenModel(
+          ret.data.refreshToken.jwt, ret.data.refreshToken.expireAt);
+      return _normalizeToken(t);
+    } catch(error) {
+      logger.severe(error);
+      rethrow;
+    }
   }
 
   @override
@@ -113,11 +129,17 @@ class UserApiImpl extends GraphQLRemoteRepositoryBase with UserApi<MeData> imple
 
   @override
   Future<MeData> updateMe(UpdateMeInput updateInput) async{
-    var q = UpdateMeMutation(variables: UpdateMeArguments(input: updateInput));
-    var result = await mutate(q.toMutationOption());
-    var me = toMeData(result, key: "updateMe");
-    _currentUserStream.add(me);
-    return me;
+    try {
+      var q = UpdateMeMutation(
+          variables: UpdateMeArguments(input: updateInput));
+      var result = await mutate(q.toMutationOption());
+      var me = toMeData(result, key: "updateMe");
+      _currentUserStream.add(me);
+      return me;
+    } catch(error) {
+      logger.severe(error);
+      rethrow;
+    }
   }
 
 
