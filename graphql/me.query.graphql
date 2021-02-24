@@ -1,7 +1,0 @@
-#fetch my profile
-query Me{
-    me{
-        ...UserMe
-    }
-    orderCount:myOrdersCount
-}

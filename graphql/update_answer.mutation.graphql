@@ -1,7 +1,0 @@
-mutation UpdateAnswer($input:updateQuestionnaireAnswerInput){
-    updateQuestionnaireAnswer(input: $input){
-        questionnaireAnswer{
-            ...QuestionnaireAnswerSimple
-        }
-    }
-}

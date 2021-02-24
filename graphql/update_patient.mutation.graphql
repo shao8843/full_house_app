@@ -1,7 +1,0 @@
-mutation UpdatePatient($input: updatePatientInput) {
-    updatePatient(input: $input){
-        patient{
-            ...PatientInfoDetail
-        }
-    }
-}

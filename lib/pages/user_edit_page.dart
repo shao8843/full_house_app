@@ -38,4 +38,10 @@ class UserEditPage extends UserEditPageBase {
     return await UploadRepo().uploadAccountImage(file,userId: user.id);
   }
 
+  @override
+  Future<User> getLoginUser({memory = true}) {
+    // TODO: implement getLoginUser
+    throw UnimplementedError();
+  }
+
 }

@@ -8,7 +8,7 @@ import 'package:full_house_app/event/event_detail_page.dart';
 class GeneralPostListPage extends PostListWidget with MixinPostWidget {
 
   const GeneralPostListPage({@required String category})
-      :super(category: category);
+      :super(entityType: null);
 
   @override
   List<SortText> getSortTextList() {

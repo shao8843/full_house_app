@@ -1,5 +1,0 @@
-query MyAddresses($sort: String, $limit: Int, $start: Int, $where:JSON){
-    findMyAddress(sort: $sort, limit: $limit, start: $start, where: $where){
-        ...MyAddress
-    }
-}

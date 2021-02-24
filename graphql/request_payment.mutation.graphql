@@ -1,9 +1,0 @@
-mutation RequestPayment($input:requestOrderPayInput){
-    requestOrderPay(input: $input){
-        ret
-        order{
-            ...OrderDetail
-        }
-    }
-
-}

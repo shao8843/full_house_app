@@ -1,5 +1,0 @@
-mutation FetchStreamToken{
-    streamToken{
-        ...ThirdPartyToken
-    }
-}

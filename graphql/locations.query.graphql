@@ -1,5 +1,0 @@
-query Locations($sort: String, $limit: Int, $start: Int, $where:JSON) {
-    locations(sort: $sort, limit: $limit, start: $start, where: $where) {
-        ...LocationSimple
-    }
-}

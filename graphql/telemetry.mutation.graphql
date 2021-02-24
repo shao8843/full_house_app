@@ -1,5 +1,0 @@
-mutation batchTelemetry($input:batchTelemetryInput!){
-    batchTelemetry(input:$input){
-        successCount
-    }
-}

@@ -1,5 +1,0 @@
-query AssessmentQuestionnaires ($sort: String, $limit: Int, $start: Int,$where:JSON) {
-    assessmentQuestionnaires(sort: $sort, limit: $limit, start: $start, where: $where) {
-        ...AssessmentQuestionnaireSimple
-    }
-}

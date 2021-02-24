@@ -1,7 +1,0 @@
-mutation CreateAnswer($input:createQuestionnaireAnswerInput){
-    createQuestionnaireAnswer(input: $input){
-        questionnaireAnswer{
-            ...QuestionnaireAnswerSimple
-        }
-    }
-}

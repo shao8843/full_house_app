@@ -1,7 +1,0 @@
-mutation CreatePatient($input: createPatientInput) {
-    createPatient(input: $input){
-        patient{
-            ...PatientInfoDetail
-        }
-    }
-}

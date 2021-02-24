@@ -1,5 +1,0 @@
-query Order ($id:ID!){
-    order(id:$id){
-        ...OrderDetail
-    }
-}

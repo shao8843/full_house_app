@@ -14,8 +14,7 @@ MeData _$MeDataFromJson(Map<String, dynamic> json) {
     ..phone = json['phone'] as String
     ..address = json['address'] as String
     ..email = json['email'] as String
-    ..meetingId = json['meetingId'] as String
-    ..secondEmail = json['second_email'] as String
+    ..secondEmail = json['secondEmail'] as String
     ..birthday = json['birthday'] == null
         ? null
         : DateTime.parse(json['birthday'] as String)
@@ -43,9 +42,6 @@ MeData _$MeDataFromJson(Map<String, dynamic> json) {
             ? null
             : OrganizationUnitData.fromJson(e as Map<String, dynamic>))
         ?.toList()
-    ..parent = json['parent'] == null
-        ? null
-        : User.fromJson(json['parent'] as Map<String, dynamic>)
     ..userAgreements = (json['user_agreements'] as List)
         ?.map((e) => e == null
             ? null
@@ -69,8 +65,7 @@ Map<String, dynamic> _$MeDataToJson(MeData instance) {
   writeNotNull('phone', instance.phone);
   writeNotNull('address', instance.address);
   writeNotNull('email', instance.email);
-  writeNotNull('meetingId', instance.meetingId);
-  writeNotNull('second_email', instance.secondEmail);
+  writeNotNull('secondEmail', instance.secondEmail);
   writeNotNull('birthday', instance.birthday?.toIso8601String());
   writeNotNull('sex', _$GenderEnumMap[instance.sex]);
   writeNotNull('fullName', instance.fullName);
@@ -84,7 +79,6 @@ Map<String, dynamic> _$MeDataToJson(MeData instance) {
   writeNotNull('updated_at', instance.updatedAt?.toIso8601String());
   writeNotNull('provider', instance.provider);
   writeNotNull('organization_units', instance.organizationUnits);
-  writeNotNull('parent', instance.parent);
   writeNotNull('user_agreements', instance.userAgreements);
   writeNotNull('orderCount', instance.orderCount);
   return val;

@@ -1,7 +1,0 @@
-query QuestionnaireAnswer ($id:ID!) {
-    questionnaireAnswer(id:$id) {
-        ...QuestionnaireAnswerSimple
-
-    }
-}
-

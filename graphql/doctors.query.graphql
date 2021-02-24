@@ -1,8 +1,0 @@
-query Doctors($sort: String, $limit: Int, $start: Int, $where:JSON) {
-    users(sort: $sort, limit: $limit, start: $start, where: $where){
-        ...UserSimple
-        doctorInfo{
-            ...DoctorInfoSimple
-        }
-    }
-}

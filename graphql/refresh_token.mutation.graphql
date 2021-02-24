@@ -1,6 +1,0 @@
-mutation refreshToken($jwt:String!){
-    refreshToken(jwt: $jwt){
-        jwt,
-        expire_at,
-    }
-}

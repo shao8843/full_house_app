@@ -1,8 +1,0 @@
-mutation UpdateCreditCard($input:updateCreditCardInput!) {
-    updateCreditCard(input: $input){
-        creditCard{
-            ...CreditCardSimple
-        }
-
-    }
-}

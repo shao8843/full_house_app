@@ -1,9 +1,0 @@
-mutation register($input:UsersPermissionsRegisterInput!){
-    register(input:$input){
-        expire_at
-        jwt,
-        user{
-            ...UserMe
-        }
-    }
-}

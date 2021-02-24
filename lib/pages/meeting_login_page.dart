@@ -1,7 +1,6 @@
 
 import 'package:artech_meeting/artech_meeting.dart';
 import 'package:flutter/material.dart';
-import 'package:full_house_app/pages/login_page.dart';
 import 'package:artech_account/account.dart';
 
 class MeetingLoginPage extends OnlineMeetingLoginPage{

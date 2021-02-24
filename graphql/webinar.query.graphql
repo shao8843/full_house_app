@@ -1,9 +1,0 @@
-query Webinar($id:ID!){
-    webinar(id:$id){
-        ...WebinarSimple
-        content
-        subject{
-            type
-        }
-    }
-}

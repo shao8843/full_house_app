@@ -1,7 +1,0 @@
-query AppPolicy {
-    appTermOfService{
-        id
-        term_of_service
-        updated_at,
-    }
-}

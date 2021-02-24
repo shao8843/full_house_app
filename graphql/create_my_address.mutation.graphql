@@ -1,7 +1,0 @@
-mutation CreateMyAddress($input:createMyAddressInput){
-    createMyAddress(input: $input){
-        userAddress{
-            ...MyAddress
-        }
-    }
-}

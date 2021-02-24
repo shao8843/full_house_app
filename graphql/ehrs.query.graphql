@@ -1,5 +1,0 @@
-query Ehrs($sort: String, $limit: Int, $start: Int, $where:JSON) {
-    ehrs(sort: $sort, limit: $limit, start: $start, where: $where){
-        ...EhrSimple
-    }
-}

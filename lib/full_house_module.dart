@@ -1,29 +1,24 @@
 import 'package:full_house_app/pages/full_house_page.dart';
-import 'package:full_house_app/repository/user_api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
-import 'package:full_house_app/user/me_data.dart';
 import 'package:artech_core/core.dart';
 import 'package:artech_account/account.dart';
-import 'package:artech_chat/chat.dart';
 import 'package:artech_meeting/artech_meeting.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
 import 'package:full_house_app/pages/me_page.dart';
 import 'package:full_house_app/home_page.dart';
-import 'package:artech_agora/agora_module.dart';
-import 'package:full_house_app/repository/stream_token_provider.dart';
+import 'package:artech_services/services.dart';
 
 class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
   // TODO: implement dependentOn
   List<AppSubModuleBase> get dependentOn =>
-      [ChatModule(), MeetingModule(),AgoraModule(),UnifiedModule()];
+      [MeetingModule(),UnifiedModule()];
 
   // Provide the root widget associated with your module
   // In this case, it's the widget you created in the first step
   @override
-  final Widget bootstrap = ChatApp(
-      child: ArtechApp<MeData>(
+  final Widget bootstrap = ArtechApp(
           defaultLocale: const Locale('en'),
           // localizationsDelegates:[JtuaaLocalizations.delegate],
           title: '满堂彩',
@@ -43,16 +38,11 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
             // the app on. For desktop platforms, the controls will be smaller and
             // closer together (more dense) than on mobile platforms.
             visualDensity: VisualDensity.adaptivePlatformDensity,
-          )));
+          ));
 
   @override
   void configureServices() {
-    services.registerSingleton<StreamTokenProvider>(StreamTokenProviderImpl());
-    services.registerSingletonAsync<UserApi<MeData>>(() async {
-      var userApi = UserApiImpl();
-      return userApi;
-    }, dependsOn: [SettingStore]);
-    this.registerUserManager<MeData>(fromJson: (d)=> MeData.fromJson(d));
+
     this.registerUnifiedClient();
 
     this.configTyped<MenuOption>(configurator: (c) {
@@ -73,6 +63,11 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
           widget2: (_) => MePage(),
           label: () => ArtechLocalizations().userCenter,priority:-100));
     });
+
+    services.registerSingleton<UserLinkingScopeDataRefresher>(
+            () => UserScopesRepo().getMy());
+    services.registerSingleton<HoldUserLinkingDataRefresher>(
+            (id) => UserLinkingRepo().getMyAsHolder(id));
   }
 }
 

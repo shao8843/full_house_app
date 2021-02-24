@@ -1,9 +1,0 @@
-query QuestionnaireAnswers($sort: String,
-    $limit: Int, $start: Int,$where:JSON) {
-    questionnaireAnswers(sort: $sort,
-        limit: $limit,
-        start: $start,
-        where: $where){
-        ...QuestionnaireAnswerSimple
-    }
-}

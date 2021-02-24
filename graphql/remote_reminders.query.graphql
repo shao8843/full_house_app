@@ -1,5 +1,0 @@
-query RemoteReminders($sort: String, $limit: Int, $start: Int,$where:JSON) {
-    reminders(sort: $sort, limit: $limit, start: $start, where: $where) {
-        ...ReminderSimple
-    }
-}

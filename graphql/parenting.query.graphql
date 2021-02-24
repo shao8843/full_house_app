@@ -1,5 +1,0 @@
-query Parenting($id:ID!){
-    parenting(id:$id){
-        ...ParentingDetail
-    }
-}

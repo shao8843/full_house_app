@@ -1,5 +1,0 @@
-query Articles($sort: String, $limit: Int, $start: Int, $where:JSON) {
-    articles(sort: $sort, limit: $limit, start: $start, where: $where) {
-        ...ArticleSimple
-    }
-}

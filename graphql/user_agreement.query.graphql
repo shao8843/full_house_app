@@ -1,6 +1,0 @@
-query UserAgreement($id:ID!) {
-    userAgreement(id:$id){
-        ...UserAgreementDetail
-    }
-}
-

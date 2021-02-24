@@ -5,12 +5,13 @@ import 'package:full_house_app/repository/credit_card_repo.dart';
 import 'package:full_house_app/repository/post_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:full_house_app/pages/login_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_address_repo.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
 import 'package:artech_account/account.dart';
+import 'package:artech_account/ui/ui.dart';
+import 'package:artech_api/api.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -29,13 +30,29 @@ mixin MixinPostWidget on PostListWidget {
         start: start,
         search: search,
         searchField: searchField,
-        categorySearch: category,
+        categorySearch: entityType,
       );
       return PostRepository.toPostListData(queryResult);
     } catch (error) {
       rethrow;
     }
   }
+
+  AsyncSnapshot<List<PostData>> buildHook(bool cacheFlag,
+      {int start, int limit, String sort, String searchField, String search}) {
+    return useMemoizedWatchQuery(
+            () => PostRepository().getListStream(
+          sort: sort,
+          limit: limit,
+          start: start,
+          search: search,
+          searchField: searchField,
+          entityType: entityType,
+        ),
+        PostRepository.toPostListData,
+        [cacheFlag, start, limit, sort, searchField, search, entityType]);
+  }
+
 
   @override
   void onCategoryClicked(BuildContext context, Category category) {

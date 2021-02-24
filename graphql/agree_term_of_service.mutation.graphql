@@ -1,5 +1,0 @@
-mutation AgreeForTermOfService($input:agreeTermOfServiceInput){
-    agreeTermOfService(input:$input ){
-        ...UserAgreementSimple
-    }
-}

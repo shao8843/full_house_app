@@ -1,5 +1,0 @@
-query Orders($sort: String, $limit: Int, $start: Int, $where:JSON){
-    orders(sort: $sort, limit: $limit, start: $start, where: $where){
-        ...OrderSimpleWithUser
-    }
-}

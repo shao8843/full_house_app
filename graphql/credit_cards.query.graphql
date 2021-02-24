@@ -1,7 +1,0 @@
-query CreditCards($sort: String,
-    $limit: Int, $start: Int, $where:JSON) {
-    creditCards(sort: $sort,
-        limit: $limit, start: $start, where: $where){
-        ...CreditCardSimple
-    }
-}

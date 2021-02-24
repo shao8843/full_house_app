@@ -1,5 +1,0 @@
-query PaymentMethod($id:ID!) {
-    paymentMethod(id:$id) {
-        ...PaymentMethodSimple
-    }
-}

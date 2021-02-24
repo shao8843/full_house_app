@@ -1,7 +1,7 @@
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:flutter_artech/flutter_artech.dart';
-import 'package:full_house_app/api/graphql_api.graphql.dart';
 import 'package:artech_api/api.dart';
+import 'package:full_house_app/api/graphql_api.dart';
 
 class PostRepository extends GraphQLRemoteRepositoryBase {
 
@@ -89,6 +89,52 @@ class PostRepository extends GraphQLRemoteRepositoryBase {
         }));
     var result = query(q.toQueryOption());
     return result;
+  }
+
+  ObservableQuery getListStream(
+      {String sort,
+        int limit,
+        int start,
+        String searchField,
+        String search,
+        String entityType,
+        String categoryNameSearch}) {
+    var q = _buildPostQuery(
+        sort: sort,
+        limit: limit,
+        start: start,
+        search: search,
+        searchField: searchField,
+        entityType: entityType,
+        categoryNameSearch: categoryNameSearch);
+    try {
+      var result = watchQuery(q.toWatchQuery());
+      return result;
+    } catch (error) {
+      logger.severe(error);
+      rethrow;
+    }
+  }
+
+  PostsQuery _buildPostQuery(
+      {String sort,
+        int limit,
+        int start,
+        String searchField,
+        String search,
+        String entityType,
+        String categoryNameSearch}) {
+    assert(search == null || searchField != null);
+    var _where = searchWhere(searchField: searchField, search: search);
+    if (entityType != null) {
+      _where["entityType"] = entityType;
+    }
+    if (categoryNameSearch != null) {
+      _where["categories"] = {"name_contains": categoryNameSearch};
+    }
+    return PostsQuery(
+        variables: PostsArguments(
+            sort: sort, limit: limit, start: start, where: _where));
   }
 
   Future<QueryResult> getRecommendedListResultAsync({

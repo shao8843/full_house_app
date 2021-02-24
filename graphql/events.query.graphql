@@ -1,5 +1,0 @@
-query Events($sort: String, $limit: Int, $start: Int, $where:JSON) {
-    events(sort: $sort, limit: $limit, start: $start, where: $where){
-        ...EventSimple
-    }
-}
