@@ -4,6 +4,7 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/api/extensions.dart';
 import 'package:artech_api/api.dart';
 import 'package:artech_account/account.dart';
+import 'package:artech_payment/payment.dart';
 
 class UserAddressRepo  extends GraphQLRemoteRepositoryBase {
 

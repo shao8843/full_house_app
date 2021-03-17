@@ -18,13 +18,15 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   var module = FullHouseModule();
-  var bootStrap=AppBootstrap(module);
-  await bootStrap.executeBeforeApplicationInit();
-  bootStrap.configureAllServices();
-  await executeWithStopwatch(()=>bootStrap.load(),thresholdMilliseconds: 100,overAction: (t){
-    _logger.warning("Start time $t milliseconds");
-  });
-  runApp(module.bootstrap);
+  var bootStrap = AppBootstrap(module);
+  //TODO load splash
+  await executeWithStopwatch(() => bootStrap.load(), thresholdMilliseconds: 100,
+      overAction: (t) {
+        _logger.warning("Start time ${t} milliseconds");
+      });
+  runApp(ModuleApp(
+    bootstrap: bootStrap,
+  ));
 }
 
 

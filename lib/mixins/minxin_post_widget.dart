@@ -12,6 +12,7 @@ import 'package:full_house_app/pages/meeting_login_page.dart';
 import 'package:artech_account/account.dart';
 import 'package:artech_account/ui/ui.dart';
 import 'package:artech_api/api.dart';
+import 'package:artech_payment/payment.dart';
 
 mixin MixinPostWidget on PostListWidget {
 
@@ -39,20 +40,24 @@ mixin MixinPostWidget on PostListWidget {
   }
 
   AsyncSnapshot<List<PostData>> buildHook(bool cacheFlag,
-      {int start, int limit, String sort, String searchField, String search}) {
+      {int start,
+        int limit,
+        String sort,
+        String searchField,
+        String search,
+        bool networkOnly}) {
     return useMemoizedWatchQuery(
             () => PostRepository().getListStream(
-          sort: sort,
-          limit: limit,
-          start: start,
-          search: search,
-          searchField: searchField,
-          entityType: entityType,
-        ),
+            sort: sort,
+            limit: limit,
+            start: start,
+            search: search,
+            searchField: searchField,
+            entityType: entityType,
+            networkOnly: networkOnly),
         PostRepository.toPostListData,
         [cacheFlag, start, limit, sort, searchField, search, entityType]);
   }
-
 
   @override
   void onCategoryClicked(BuildContext context, Category category) {

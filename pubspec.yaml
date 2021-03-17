@@ -36,16 +36,21 @@ dependencies:
   flutter_native_splash: ^0.3.0
   artech_meeting:
     path: ./packages/flutter_artech/meeting
-#  artech_chat:
-#    path: ./packages/flutter_artech/flutter_artech_licensed/packages/chat
+    #  artech_chat:
+    #      path: ./packages/flutter_artech/flutter_artech_licensed/packages/chat
   flutter_artech:
-    path: ./packages/flutter_artech/unified
-#  artech_game:
-#    path: ./packages/flutter_artech/game
-#  artech_agora:
-#    path: ./packages/flutter_artech/flutter_artech_licensed/packages/agora
+      path: ./packages/flutter_artech/unified
+  artech_payment:
+      path: ./packages/flutter_artech/payment
+  artech_ui_kit:
+      path: ./packages/flutter_artech/flutter_artech_licensed/packages/ui_kit
   artech_services:
-    path: ./packages/flutter_artech/flutter_artech_licensed/packages/services
+      path: ./packages/flutter_artech/flutter_artech_licensed/packages/services
+  artech_media:
+      path: ./packages/flutter_artech/media
+
+  #  artech_agora:
+  #    path: ./packages/flutter_artech/flutter_artech_licensed/packages/agora
 
 dev_dependencies:
   flutter_test:
