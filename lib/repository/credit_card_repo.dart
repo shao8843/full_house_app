@@ -5,6 +5,8 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:artech_api/api.dart';
 import 'package:artech_account/account.dart';
 import 'package:full_house_app/api/graphql_api.dart';
+import 'package:artech_payment/payment.dart';
+
 
 class CreditCardRepository extends GraphQLRemoteRepositoryBase {
   

@@ -8,12 +8,14 @@ import 'package:full_house_app/pages/meeting_login_page.dart';
 import 'package:full_house_app/pages/me_page.dart';
 import 'package:full_house_app/home_page.dart';
 import 'package:artech_services/services.dart';
+import 'package:artech_media/artech_media.dart';
+import 'package:artech_payment/payment.dart';
 
 class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
   // TODO: implement dependentOn
   List<AppSubModuleBase> get dependentOn =>
-      [MeetingModule(),UnifiedModule()];
+      [MeetingModule(),UnifiedModule(),MediaModule(),PaymentModule()];
 
   // Provide the root widget associated with your module
   // In this case, it's the widget you created in the first step
@@ -51,23 +53,24 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
           MenuItem("满堂彩",
               widget: (_)=>Icon(Icons.home),
               widget2: (_) => FullHousePage(),
-              label: () => ArtechLocalizations().home,priority: 100),)
+              label: (_) => ArtechLocalizations().home,priority: 100),)
           .addIfNotExits(MenuItem("Meeting",
           widget: (_)=> ImageIcon(
               AssetImage('assets/icons/online-meeting.png',package: 'flutter_artech'),
               size: 30.0),
           widget2: (_) => MeetingLoginPage(),
-          label: () => ArtechLocalizations().meeting,priority:50))
+          label: (_) => ArtechLocalizations().meeting,priority:50))
           .addIfNotExits(MenuItem("Me",
           widget:(_)=> Icon(Icons.person),
           widget2: (_) => MePage(),
-          label: () => ArtechLocalizations().userCenter,priority:-100));
+          label: (_) => ArtechLocalizations().userCenter,priority:-100));
     });
 
-    services.registerSingleton<UserLinkingScopeDataRefresher>(
-            () => UserScopesRepo().getMy());
-    services.registerSingleton<HoldUserLinkingDataRefresher>(
-            (id) => UserLinkingRepo().getMyAsHolder(id));
+    addModuleVisualization();
+    // services.registerSingleton<UserLinkingScopeDataRefresher>(
+    //         () => UserScopesRepo().getMy());
+    // services.registerSingleton<HoldUserLinkingDataRefresher>(
+    //         (id) => UserLinkingRepo().getMyAsHolder(id));
   }
 }
 

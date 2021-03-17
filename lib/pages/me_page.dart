@@ -2,13 +2,13 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/pages/setting_page.dart';
-import 'package:full_house_app/pages/user_edit_page.dart';
 import 'package:full_house_app/repository/order_repo.dart';
 import 'package:full_house_app/repository/user_repo.dart';
 import 'package:full_house_app/user/me_data.dart';
 import 'package:full_house_app/repository/term_of_service_repo.dart';
 import 'package:full_house_app/repository/credit_card_repo.dart';
 import 'package:artech_account/account.dart';
+import 'package:artech_payment/payment.dart';
 
 class MePage extends MePageBase<User> {
 

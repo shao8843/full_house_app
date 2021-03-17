@@ -98,7 +98,8 @@ class PostRepository extends GraphQLRemoteRepositoryBase {
         String searchField,
         String search,
         String entityType,
-        String categoryNameSearch}) {
+        String categoryNameSearch,
+        bool networkOnly}) {
     var q = _buildPostQuery(
         sort: sort,
         limit: limit,
@@ -108,7 +109,7 @@ class PostRepository extends GraphQLRemoteRepositoryBase {
         entityType: entityType,
         categoryNameSearch: categoryNameSearch);
     try {
-      var result = watchQuery(q.toWatchQuery());
+      var result = watchQuery(q.toWatchQuery(networkOnly: networkOnly));
       return result;
     } catch (error) {
       logger.severe(error);

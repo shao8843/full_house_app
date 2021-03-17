@@ -3,6 +3,7 @@ import 'package:full_house_app/article/article_data.dart';
 import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/repository/article_repo.dart';
 import 'package:flutter/material.dart';
+import 'package:artech_media/artech_media.dart';
 
 class ArticleDetailPage extends DataHasPostPage<ArticleData>
     with MixinDataHasPost{
