@@ -1,3 +1,4 @@
+import 'package:artech_account/data/user_data.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/article/article_data.dart';
 import 'package:full_house_app/mixins/minxin_post_widget.dart';
@@ -36,6 +37,11 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData>
   @override
   void onTimer(int seconds) {
     // TODO: implement onTimer
+  }
+
+  @override
+  Widget getGoButton(BuildContext context, ArticleData entity, User user) {
+    return null;
   }
 
 }

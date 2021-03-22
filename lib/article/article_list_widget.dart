@@ -21,7 +21,7 @@ class ArticleListWidget extends PostListWidget with MixinPostWidget {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (_) =>
               ArticleDetailPage(
-                id: postData.id,
+                id: postData.entityRawId,
                 entityType: postData.entityType,
                 name: postData.title,)));
     } else {

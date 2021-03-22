@@ -19,7 +19,7 @@ class EventListWidget extends PostListWidget with MixinPostWidget {
     if (postData != null) {
       Navigator.of(context).push(MaterialPageRoute(
           builder: (_) =>
-              EventDetailPage(id: postData.id,
+              EventDetailPage(id: postData.entityRawId,
                 name: postData.title,
                 entityType: postData.entityType,)
       ));
