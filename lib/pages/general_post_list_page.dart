@@ -2,46 +2,78 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/mixins/minxin_post_widget.dart';
-import 'package:full_house_app/article/article_detail_page.dart';
-import 'package:full_house_app/event/event_detail_page.dart';
+import 'package:artech_api/api.dart';
+import 'package:full_house_app/repository/post_repo.dart';
+import 'package:full_house_app/page_helper.dart';
 
-class GeneralPostListPage extends PostListWidget with MixinPostWidget {
+class GeneralPostListPage extends StatelessWidget {
+  final String category;
 
-  const GeneralPostListPage({@required String category})
-      :super(entityType: null);
+  const GeneralPostListPage({Key key, @required this.category})
+      : assert(category != null),
+        super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(category),
+      ),
+      body: GeneralPostListWidget(
+        category,
+        entityType: null,
+      ),
+    );
+  }
+}
+
+class GeneralPostListWidget extends PostListWidget with MixinPostWidget {
+  final String categoryName;
+
+  const GeneralPostListWidget(this.categoryName, {@required String entityType})
+      : super(entityType: entityType,categoryName: categoryName);
 
   @override
   List<SortText> getSortTextList() {
-    // TODO: implement getSortTextList
-    return [];
+    var list = super.getSortTextList();
+    return list;
+  }
+
+  @override
+  AsyncSnapshot<List<PostData>> buildHook(bool cacheFlag,
+      {int start,
+        int limit,
+        String sort,
+        String searchField,
+        String search,
+        bool networkOnly}) {
+    return useMemoizedWatchQuery(
+            () => PostRepository().getListStream(
+            sort: sort,
+            limit: limit,
+            start: start,
+            search: search,
+            searchField: searchField,
+            entityType: entityType,
+            categoryNameSearch: categoryName,
+            networkOnly: networkOnly),
+        PostRepository.toPostListData,
+        [
+          cacheFlag,
+          start,
+          limit,
+          sort,
+          searchField,
+          search,
+          entityType,
+          categoryName
+        ]);
   }
 
   @override
   void onClicked(BuildContext context, PostData postData) {
     if (postData != null) {
-      switch (postData.entityType) {
-        case 'article':
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (_) =>
-                  ArticleDetailPage(
-                    id: postData.entityRawId,
-                    name: postData.title,
-                    entityType: postData.entityType,)
-          ));
-          break;
-        case 'event':
-          Navigator.of(context).push(MaterialPageRoute(
-              builder: (_) =>
-                  EventDetailPage(
-                    id: postData.entityRawId,
-                    name: postData.title,
-                    entityType: postData.entityType,)
-          ));
-          break;
-        default:
-          throw UnimplementedError();
-      }
+      PageHelper.pushPostDetailPage(context, postData);
     }
   }
-
 }
