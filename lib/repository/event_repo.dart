@@ -2,6 +2,8 @@ import 'package:flutter_artech/flutter_artech.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:full_house_app/api/graphql_api.dart';
 import 'package:artech_api/api.dart';
+import 'package:artech_cms/cms.dart';
+
 
 class EventRepository extends GraphQLRemoteRepositoryBase {
 

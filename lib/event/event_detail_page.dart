@@ -4,6 +4,7 @@ import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/repository/event_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:artech_media/artech_media.dart';
+import 'package:artech_cms/cms.dart';
 
 class EventDetailPage extends DataHasEventPostPage<EventData>
     with MixinDataHasPost,MixinDataHasEvent {

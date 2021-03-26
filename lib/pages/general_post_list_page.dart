@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:artech_api/api.dart';
-import 'package:full_house_app/repository/post_repo.dart';
 import 'package:full_house_app/page_helper.dart';
+import 'package:artech_cms/cms.dart';
 
 class GeneralPostListPage extends StatelessWidget {
   final String category;

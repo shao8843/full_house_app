@@ -1,9 +1,9 @@
 import 'package:full_house_app/article/article_detail_page.dart';
 import 'package:full_house_app/event/event_detail_page.dart';
-import 'package:flutter_artech/flutter_artech.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'event/event_detail_page.dart';
+import 'package:artech_cms/cms.dart';
 
 class PageHelper {
   static bool _contain(List<Category> categories, String category) {

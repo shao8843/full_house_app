@@ -10,6 +10,7 @@ import 'package:full_house_app/home_page.dart';
 import 'package:artech_services/services.dart';
 import 'package:artech_media/artech_media.dart';
 import 'package:artech_payment/payment.dart';
+import 'package:flutter_artech/generated/l10n.dart' as Unified;
 
 class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
@@ -47,23 +48,27 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
 
     this.registerUnifiedClient();
 
+    configTyped<LocalizationOption>(configurator: (p) {
+      p.defaultLocale = const Locale('en');
+    });
+
     this.configTyped<MenuOption>(configurator: (c) {
       c.getOrThrow(mainMenuName)
           .addIfNotExits(
           MenuItem("满堂彩",
               widget: (_)=>Icon(Icons.home),
               widget2: (_) => FullHousePage(),
-              label: (_) => ArtechLocalizations().home,priority: 100),)
+              label: (_) => Unified.S().home,priority: 100),)
           .addIfNotExits(MenuItem("Meeting",
           widget: (_)=> ImageIcon(
               AssetImage('assets/icons/online-meeting.png',package: 'flutter_artech'),
               size: 30.0),
           widget2: (_) => MeetingLoginPage(),
-          label: (_) => ArtechLocalizations().meeting,priority:50))
+          label: (_) => Unified.S().meeting,priority:50))
           .addIfNotExits(MenuItem("Me",
           widget:(_)=> Icon(Icons.person),
           widget2: (_) => MePage(),
-          label: (_) => ArtechLocalizations().userCenter,priority:-100));
+          label: (_) => Unified.S().userCenter,priority:-100));
     });
 
     addModuleVisualization();

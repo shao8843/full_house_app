@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:artech_core/core.dart';
 import 'package:artech_account/account.dart';
-import 'package:flutter_artech/flutter_artech.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class OperationApp extends HookWidget with ServiceGetter{
