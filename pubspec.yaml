@@ -24,40 +24,18 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   logging: ^0.11.4
   global_configuration: ^1.6.0
-  shared_preferences: ^0.5.12+4
-  universal_platform: ^0.1.3
-  quiver: ^2.1.3
   flutter_native_splash: ^0.3.0
-  artech_meeting:
-    path: ./packages/flutter_artech/meeting
-    #  artech_chat:
-    #      path: ./packages/flutter_artech/flutter_artech_licensed/packages/chat
   flutter_artech:
       path: ./packages/flutter_artech/unified
-  artech_payment:
-      path: ./packages/flutter_artech/payment
-  artech_ui_kit:
-      path: ./packages/flutter_artech/flutter_artech_licensed/packages/ui_kit
-#  artech_services:
-#      path: ./packages/flutter_artech/flutter_artech_licensed/packages/services
-  artech_media:
-      path: ./packages/flutter_artech/media
-
-  #  artech_agora:
-  #    path: ./packages/flutter_artech/flutter_artech_licensed/packages/agora
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  intl_translation:
-    git:
-      url: https://github.com/Goxiaoy/intl_translation.git
 
   flutter_launcher_icons: ^0.8.0
   build_runner: ^1.5.0
@@ -69,6 +47,7 @@ dependency_overrides:
   flutter_svg: ^0.20.0-nullsafety.3
   xml: ^5.0.0-nullsafety.1
   path_drawing: ^0.5.0-nullsafety.0
+  flutter_touch_spin: ^2.0.0-nullsafety.1
 
 flutter_icons:
   image_path: "assets/icons/app_launch_icon.jpg"
@@ -111,3 +90,6 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
+flutter_intl:
+  enabled: true
