@@ -45,4 +45,10 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData>
     return null;
   }
 
+  @override
+  AsyncSnapshot<ArticleData> buildHook() {
+    // TODO: implement buildHook
+    throw UnimplementedError();
+  }
+
 }

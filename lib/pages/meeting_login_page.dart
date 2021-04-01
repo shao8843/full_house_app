@@ -7,8 +7,7 @@ class MeetingLoginPage extends OnlineMeetingLoginPage{
 
   const MeetingLoginPage({Key key,String meetingId})
       :super(key: key,
-      meetingId: meetingId,
-      pushLoginPage: pushPage);
+      meetingId: meetingId);
 
   @override
   Future<List<User>> getUserFriends() async {

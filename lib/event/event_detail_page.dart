@@ -1,4 +1,5 @@
 import 'package:artech_account/data/user_data.dart';
+import 'package:artech_core/ui/menu/menu.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/repository/event_repo.dart';
@@ -44,6 +45,17 @@ class EventDetailPage extends DataHasEventPostPage<EventData>
   @override
   Widget getGoButton(BuildContext context, EventData entity, User user) {
     return null;
+  }
+
+  @override
+  AsyncSnapshot<EventData> buildHook() {
+    // TODO: implement buildHook
+    throw UnimplementedError();
+  }
+
+  @override
+  void useEventMenu(User user, EventData data, MenuGroup menuGroup, bool canContinue) {
+    // TODO: implement useEventMenu
   }
 
 }
