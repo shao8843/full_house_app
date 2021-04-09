@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/article/article_list_widget.dart';
 import 'package:full_house_app/event/event_list_page.dart';
-import 'package:flutter_artech/generated/l10n.dart' as Unified;
+import 'package:full_house_app/generated/l10n.dart';
 
 class FullHousePage extends HousePage {
 
@@ -14,9 +14,9 @@ class FullHousePage extends HousePage {
         Tab(child: Image(height: 30.0,
           image: AssetImage('assets/icons/app_launch_icon.jpg',),),)
             : Container(),
-        Tab(text: Unified.S().event,)
+        Tab(text: S().event,)
             : EventListWidget(),
-        Tab(text: Unified.S().article,)
+        Tab(text: S().article,)
             : ArticleListWidget(),
       };
 }

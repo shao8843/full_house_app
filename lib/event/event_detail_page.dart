@@ -1,6 +1,5 @@
 import 'package:artech_account/data/user_data.dart';
 import 'package:artech_core/ui/menu/menu.dart';
-import 'package:flutter_artech/flutter_artech.dart';
 import 'package:full_house_app/mixins/minxin_post_widget.dart';
 import 'package:full_house_app/repository/event_repo.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +8,7 @@ import 'package:artech_cms/cms.dart';
 import 'package:artech_payment/payment.dart';
 
 class EventDetailPage extends DataHasEventPostPage<EventData>
-    with MixinDataHasPost,MixinDataHasEvent {
+    with MixinDataHasEvent  {
 
   const EventDetailPage({Key key,
     @required String id, @required String entityType, @required String name})

@@ -5,7 +5,6 @@ import 'package:artech_core/core.dart';
 import 'package:artech_account/account.dart';
 import 'package:artech_meeting/artech_meeting.dart';
 import 'package:full_house_app/pages/meeting_login_page.dart';
-import 'package:full_house_app/pages/me_page.dart';
 import 'package:full_house_app/home_page.dart';
 import 'package:artech_services/services.dart';
 import 'package:artech_media/artech_media.dart';

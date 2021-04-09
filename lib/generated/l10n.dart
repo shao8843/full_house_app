@@ -35,7 +35,25 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Event`
+  String get event {
+    return Intl.message(
+      'Event',
+      name: 'event',
+      desc: '',
+      args: [],
+    );
+  }
 
+  /// `Article`
+  String get article {
+    return Intl.message(
+      'Article',
+      name: 'article',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

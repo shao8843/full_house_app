@@ -1,15 +1,10 @@
-import 'package:flutter_artech/flutter_artech.dart';
+
 import 'package:flutter/material.dart';
-import 'package:full_house_app/repository/version_repo.dart';
+import 'package:artech_cms/cms.dart';
 
 class AboutPage extends AboutPageBase {
 
   const AboutPage({Key key}) :super(key: key,);
-
-  @override
-  Future<VersionData> getVersion() async {
-    return await VersionRepository().getAsync();
-  }
 
   @override
   Image image() {

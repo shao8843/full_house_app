@@ -7,8 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:artech_media/artech_media.dart';
 import 'package:artech_cms/cms.dart';
 
-class ArticleDetailPage extends DataHasPostPage<ArticleData>
-    with MixinDataHasPost{
+class ArticleDetailPage extends DataHasPostPage<ArticleData> {
 
   const ArticleDetailPage({Key key,
     @required String id,@required String entityType,@required String name})
