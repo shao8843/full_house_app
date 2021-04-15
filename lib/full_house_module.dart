@@ -15,12 +15,14 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
   // TODO: implement dependentOn
   List<AppSubModuleBase> get dependentOn =>
-      [MeetingModule(),UnifiedModule(),MediaModule(),PaymentModule()];
+      [MeetingModule(), UnifiedModule(), MediaModule(), PaymentModule()];
 
   // Provide the root widget associated with your module
   // In this case, it's the widget you created in the first step
   @override
-  final Widget bootstrap = ArtechApp(
+  final Widget Function(TransitionBuilder innerBuilder) bootstrap =
+      (builder) => ArtechApp(
+          innerBuilder: builder,
           defaultLocale: const Locale('en'),
           // localizationsDelegates:[JtuaaLocalizations.delegate],
           title: '满堂彩',
@@ -44,7 +46,6 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
 
   @override
   void configureServices() {
-
     this.registerUnifiedClient();
 
     configTyped<LocalizationOption>(configurator: (p) {
@@ -52,22 +53,28 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
     });
 
     this.configTyped<MenuOption>(configurator: (c) {
-      c.getOrThrow(mainMenuName)
+      c
+          .getOrThrow(mainMenuName)
           .addIfNotExits(
-          MenuItem("满堂彩",
-              widget: (_)=>Icon(Icons.home),
-              widget2: (_) => FullHousePage(),
-              label: (_) => Unified.S().home,priority: 100),)
+            MenuItem("满堂彩",
+                widget: (_) => Icon(Icons.home),
+                widget2: (_) => FullHousePage(),
+                label: (_) => Unified.S().home,
+                priority: 100),
+          )
           .addIfNotExits(MenuItem("Meeting",
-          widget: (_)=> ImageIcon(
-              AssetImage('assets/icons/online-meeting.png',package: 'flutter_artech'),
-              size: 30.0),
-          widget2: (_) => MeetingLoginPage(),
-          label: (_) => Unified.S().meeting,priority:50))
+              widget: (_) => ImageIcon(
+                  AssetImage('assets/icons/online-meeting.png',
+                      package: 'flutter_artech'),
+                  size: 30.0),
+              widget2: (_) => MeetingLoginPage(),
+              label: (_) => Unified.S().meeting,
+              priority: 50))
           .addIfNotExits(MenuItem("Me",
-          widget:(_)=> Icon(Icons.person),
-          widget2: (_) => MePage(),
-          label: (_) => Unified.S().userCenter,priority:-100));
+              widget: (_) => Icon(Icons.person),
+              widget2: (_) => MePage(),
+              label: (_) => Unified.S().userCenter,
+              priority: -100));
     });
 
     addModuleVisualization();
