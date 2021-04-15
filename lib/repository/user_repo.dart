@@ -2,7 +2,6 @@
 import 'package:flutter_artech/flutter_artech.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
 import 'package:full_house_app/api/graphql_api.dart';
-import 'package:full_house_app/user/me_data.dart';
 import 'package:artech_account/account.dart';
 import 'package:artech_api/api.dart';
 
@@ -32,21 +31,6 @@ class UserRepository extends GraphQLRemoteRepositoryBase {
     return toUserList(result);
   }
 
-  Future<MeData> getMe() async {
-    var q = MeQuery();
-    var result = await execute(q);
-    if (result.data?.me != null) {
-      return MeData.fromJson(result.data.me.toJson());
-    }
-    return null;
-  }
-
-  Future<MeData> updateMe(UpdateMeInput input) async {
-    var q = UpdateMeMutation(variables: UpdateMeArguments(input: input));
-    var result = await mutate(q.toMutationOption());
-    return toMeData(result, key: "updateMe");
-  }
-
   ObservableQuery getMeResultStream() {
     var q = MeQuery();
     var ret = watchQuery(q.toWatchQuery());
@@ -65,10 +49,6 @@ class UserRepository extends GraphQLRemoteRepositoryBase {
   //     return MeData.fromJson(p, orderCount);
   //   }, key);
   // }
-
-  static MeData toMeData(QueryResult queryResult, {String key = "me"}) {
-    return toSingleData(queryResult, (p, q) => MeData.fromJson(p), key);
-  }
 
   static User toUser(QueryResult queryResult) {
     return toSingleData(queryResult, (p, q) => User.fromJson(p), 'user');
