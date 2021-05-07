@@ -1,37 +1,38 @@
-import 'package:artech_account/data/user_data.dart';
-import 'package:flutter_artech/flutter_artech.dart';
-import 'package:full_house_app/article/article_data.dart';
-import 'package:full_house_app/mixins/minxin_post_widget.dart';
-import 'package:full_house_app/repository/article_repo.dart';
-import 'package:flutter/material.dart';
-import 'package:artech_media/artech_media.dart';
+import 'package:artech_account/account.dart';
+import 'package:artech_api/api.dart';
 import 'package:artech_cms/cms.dart';
+import 'package:artech_core/ui/menu/menu.dart';
+import 'package:artech_media/artech_media.dart';
+import 'package:flutter/material.dart';
 
-class ArticleDetailPage extends DataHasPostPage<ArticleData> {
-
-  const ArticleDetailPage({Key key,
-    @required String id,@required String entityType,@required String name})
-      :super(key: key,
-      id: id,entityType:entityType,name:name,supportPayment:false);
+class ArticleDetailPage extends DataHasPostPage<ArticleData?> {
+  const ArticleDetailPage({
+    Key? key,
+    required String id,
+    required String entityType,
+    required String? name,
+  }) : super(key: key, id: id, entityType: entityType, name: name);
 
   @override
-  List<Widget> detailWidget(BuildContext context, ArticleData data) {
+  List<Widget> detailWidget(BuildContext context, ArticleData? data) {
     ArgumentError.checkNotNull(data);
     return [
-      data.content != null
+      data!.content != null
           ? Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: kHorizontalPadding),
-        child: ContentWidget(content: data.content,),
-      ) : Container(),
+        padding:
+        const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+        child: ContentWidget(
+          content: data.content!,
+        ),
+      )
+          : Container(),
       data.media != null
-          ? new MediaWidget(medias: data.media,) : Container(),
+          ? new MediaWidget(
+        medias: data.media!.map((e) => e.file).toList()
+        as List<MediaFileInfo>,
+      )
+          : Container(),
     ];
-  }
-
-  @override
-  Future<ArticleData> getDetail() async {
-    return await ArticleRepository().getAsync(id: id);
   }
 
   @override
@@ -40,14 +41,13 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData> {
   }
 
   @override
-  Widget getGoButton(BuildContext context, ArticleData entity, User user) {
-    return null;
+  AsyncSnapshot<ArticleData?> buildHook() {
+    return useMemoizedStreamProvider(
+            () => ArticleRepository.resolve().getResultStreamAsync(id: id), [id]);
   }
 
   @override
-  AsyncSnapshot<ArticleData> buildHook() {
-    // TODO: implement buildHook
-    throw UnimplementedError();
+  void usePostMenu(User? user, ArticleData? data, MenuGroup menuGroup) {
+    super.usePostMenu(user, data, menuGroup);
   }
-
 }

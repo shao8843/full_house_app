@@ -1,39 +1,45 @@
-import 'package:artech_account/data/user_data.dart';
-import 'package:artech_core/ui/menu/menu.dart';
-import 'package:full_house_app/mixins/minxin_post_widget.dart';
-import 'package:full_house_app/repository/event_repo.dart';
-import 'package:flutter/material.dart';
-import 'package:artech_media/artech_media.dart';
+import 'package:artech_account/account.dart';
+import 'package:artech_api/api.dart';
 import 'package:artech_cms/cms.dart';
-import 'package:artech_payment/payment.dart';
+import 'package:artech_cms/repository/event_repo.dart';
+import 'package:artech_core/ui/menu/menu.dart';
+import 'package:artech_media/artech_media.dart';
+import 'package:flutter/material.dart';
 
-class EventDetailPage extends DataHasEventPostPage<EventData>
-    with MixinDataHasEvent  {
-
-  const EventDetailPage({Key key,
-    @required String id, @required String entityType, @required String name})
-      :super(key: key,
-      id: id,
-      entityType: entityType,
-      name: name,
-      supportPayment: true);
+class EventDetailPage extends DataHasEventPostPage<EventData> {
+  const EventDetailPage({
+    Key? key,
+    required String id,
+    required String entityType,
+    required String? name,
+  }) : super(
+    key: key,
+    id: id,
+    entityType: entityType,
+    name: name,
+  );
 
   @override
   List<Widget> detailWidget(BuildContext context, EventData data) {
     ArgumentError.checkNotNull(data);
-    List list = super.detailWidget(context, data);
-    list.add(Divider());
-    if (data.content != null)
-      list.add(Padding(
-        padding: const EdgeInsets.symmetric(
-            horizontal: kHorizontalPadding),
-        child: ContentWidget(content: data.content,),));
-    return list;
-  }
+    List<Widget> list = super.detailWidget(context, data);
 
-  @override
-  Future<EventData> getDetail() async {
-    return await EventRepository().getAsync(id: id);
+    if (data.content != null) {
+      list.add(
+        Divider(
+          thickness: 8.0,
+          height: 8.0,
+        ),
+      );
+
+      list.add(Padding(
+        padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+        child: ContentWidget(
+          content: data.content!,
+        ),
+      ));
+    }
+    return list;
   }
 
   @override
@@ -42,19 +48,14 @@ class EventDetailPage extends DataHasEventPostPage<EventData>
   }
 
   @override
-  Widget getGoButton(BuildContext context, EventData entity, User user) {
-    return null;
+  AsyncSnapshot<EventData?> buildHook() {
+    return useMemoizedStreamProvider(
+            () => EventRepository.resolve().getAsync(id: id), [id]);
   }
 
   @override
-  AsyncSnapshot<EventData> buildHook() {
-    // TODO: implement buildHook
-    throw UnimplementedError();
-  }
-
-  @override
-  void useEventMenu(User user, EventData data, MenuGroup menuGroup, bool canContinue) {
+  void useEventMenu(
+      User? user, EventData data, MenuGroup menuGroup, bool canContinue) {
     // TODO: implement useEventMenu
   }
-
 }

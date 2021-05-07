@@ -15,36 +15,22 @@ import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 public final class GeneratedPluginRegistrant {
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
     ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
-    flutterEngine.getPlugins().add(new io.agora.agora_rtc_engine.AgoraRtcEnginePlugin());
     flutterEngine.getPlugins().add(new xyz.luan.audioplayers.AudioplayersPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.connectivity.ConnectivityPlugin());
-    flutterEngine.getPlugins().add(new io.flutter.plugins.deviceinfo.DeviceInfoPlugin());
-    flutterEngine.getPlugins().add(new com.mr.flutter.plugin.filepicker.FilePickerPlugin());
-    flutterEngine.getPlugins().add(new com.jrai.flutter_keyboard_visibility.FlutterKeyboardVisibilityPlugin());
-    flutterEngine.getPlugins().add(new com.dexterous.flutterlocalnotifications.FlutterLocalNotificationsPlugin());
     flutterEngine.getPlugins().add(new com.whelksoft.flutter_native_timezone.FlutterNativeTimezonePlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.flutter_plugin_android_lifecycle.FlutterAndroidLifecyclePlugin());
     flutterEngine.getPlugins().add(new com.it_nomads.fluttersecurestorage.FlutterSecureStoragePlugin());
-    flutterEngine.getPlugins().add(new com.cloudwebrtc.webrtc.FlutterWebRTCPlugin());
-      com.aloisdeniel.geocoder.GeocoderPlugin.registerWith(shimPluginRegistry.registrarFor("com.aloisdeniel.geocoder.GeocoderPlugin"));
-    flutterEngine.getPlugins().add(new io.flutter.plugins.googlemaps.GoogleMapsPlugin());
-    flutterEngine.getPlugins().add(new cachet.plugins.health.HealthPlugin());
       com.example.imagegallerysaver.ImageGallerySaverPlugin.registerWith(shimPluginRegistry.registrarFor("com.example.imagegallerysaver.ImageGallerySaverPlugin"));
     flutterEngine.getPlugins().add(new io.flutter.plugins.imagepicker.ImagePickerPlugin());
       com.codeheadlabs.libphonenumber.LibphonenumberPlugin.registerWith(shimPluginRegistry.registrarFor("com.codeheadlabs.libphonenumber.LibphonenumberPlugin"));
-    flutterEngine.getPlugins().add(new com.lyokone.location.LocationPlugin());
+    flutterEngine.getPlugins().add(new com.example.libphonenumber_plugin.LibphonenumberPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.packageinfo.PackageInfoPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.pathprovider.PathProviderPlugin());
-    flutterEngine.getPlugins().add(new com.baseflow.permissionhandler.PermissionHandlerPlugin());
-    flutterEngine.getPlugins().add(new top.kikt.imagescanner.ImageScannerPlugin());
     flutterEngine.getPlugins().add(new dev.fluttercommunity.plus.share.SharePlusPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin());
     flutterEngine.getPlugins().add(new com.tekartik.sqflite.SqflitePlugin());
       de.jonasbark.stripepayment.StripePaymentPlugin.registerWith(shimPluginRegistry.registrarFor("de.jonasbark.stripepayment.StripePaymentPlugin"));
     flutterEngine.getPlugins().add(new io.flutter.plugins.urllauncher.UrlLauncherPlugin());
-    flutterEngine.getPlugins().add(new com.example.video_compress.VideoCompressPlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.videoplayer.VideoPlayerPlugin());
-      xyz.justsoft.video_thumbnail.VideoThumbnailPlugin.registerWith(shimPluginRegistry.registrarFor("xyz.justsoft.video_thumbnail.VideoThumbnailPlugin"));
-    flutterEngine.getPlugins().add(new creativemaybeno.wakelock.WakelockPlugin());
   }
 }
