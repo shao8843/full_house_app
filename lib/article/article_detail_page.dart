@@ -5,7 +5,7 @@ import 'package:artech_core/ui/menu/menu.dart';
 import 'package:artech_media/artech_media.dart';
 import 'package:flutter/material.dart';
 
-class ArticleDetailPage extends DataHasPostPage<ArticleData?> {
+class ArticleDetailPage extends DataHasPostPage<ArticleData> {
   const ArticleDetailPage({
     Key? key,
     required String id,

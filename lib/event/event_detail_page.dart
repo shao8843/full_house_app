@@ -20,11 +20,11 @@ class EventDetailPage extends DataHasEventPostPage<EventData> {
   );
 
   @override
-  List<Widget> detailWidget(BuildContext context, EventData data) {
+  List<Widget> detailWidget(BuildContext context, EventData? data) {
     ArgumentError.checkNotNull(data);
     List<Widget> list = super.detailWidget(context, data);
 
-    if (data.content != null) {
+    if (data?.content != null) {
       list.add(
         Divider(
           thickness: 8.0,
@@ -35,7 +35,7 @@ class EventDetailPage extends DataHasEventPostPage<EventData> {
       list.add(Padding(
         padding: const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: ContentWidget(
-          content: data.content!,
+          content: data!.content!,
         ),
       ));
     }
@@ -55,7 +55,7 @@ class EventDetailPage extends DataHasEventPostPage<EventData> {
 
   @override
   void useEventMenu(
-      User? user, EventData data, MenuGroup menuGroup, bool canContinue) {
+      User? user, EventData? data, MenuGroup menuGroup, bool canContinue) {
     // TODO: implement useEventMenu
   }
 }
