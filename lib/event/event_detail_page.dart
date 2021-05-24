@@ -24,6 +24,17 @@ class EventDetailPage extends DataHasEventPostPage<EventData> {
     ArgumentError.checkNotNull(data);
     List<Widget> list = super.detailWidget(context, data);
 
+
+    if(data?.videos!=null) {
+      list.addAll(data!.videos!.map<Widget>((e){
+        return VideoPlayer(
+          url: e.file!.url,
+          needLogin: false,
+          startPlay: false,
+        );
+      }).toList());
+    }
+
     if (data?.content != null) {
       list.add(
         Divider(

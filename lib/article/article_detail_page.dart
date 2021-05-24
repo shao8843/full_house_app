@@ -17,20 +17,29 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData> {
   List<Widget> detailWidget(BuildContext context, ArticleData? data) {
     ArgumentError.checkNotNull(data);
     return [
+      if (data?.videos != null)
+        ...data!.videos!
+            .map<Widget>((e) => VideoPlayer(
+                  url: e.file!.url,
+                  needLogin: false,
+                  startPlay: false,
+                ))
+            .toList(),
+
       data!.content != null
           ? Padding(
-        padding:
-        const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-        child: ContentWidget(
-          content: data.content!,
-        ),
-      )
+              padding:
+                  const EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+              child: ContentWidget(
+                content: data.content!,
+              ),
+            )
           : Container(),
       data.media != null
           ? new MediaWidget(
-        medias: data.media!.map((e) => e.file).toList()
-        as List<MediaFileInfo>,
-      )
+              medias: data.media!.map((e) => e.file).toList()
+                  as List<MediaFileInfo>,
+            )
           : Container(),
     ];
   }
@@ -43,7 +52,7 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData> {
   @override
   AsyncSnapshot<ArticleData?> buildHook() {
     return useMemoizedStreamProvider(
-            () => ArticleRepository.resolve().getResultStreamAsync(id: id), [id]);
+        () => ArticleRepository.resolve().getResultStreamAsync(id: id), [id]);
   }
 
   @override
