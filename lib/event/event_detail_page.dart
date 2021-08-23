@@ -60,7 +60,7 @@ class EventDetailPage extends DataHasEventPostPage<EventData> {
 
   @override
   AsyncSnapshot<EventData?> buildHook() {
-    return useMemoizedStreamProvider(
+    return useMemoizedStreamProvider<EventData?>(
             () => EventRepository.resolve().getAsync(id: id), [id]);
   }
 

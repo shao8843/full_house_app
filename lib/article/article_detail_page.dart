@@ -51,8 +51,8 @@ class ArticleDetailPage extends DataHasPostPage<ArticleData> {
 
   @override
   AsyncSnapshot<ArticleData?> buildHook() {
-    return useMemoizedStreamProvider(
-        () => ArticleRepository.resolve().getResultStreamAsync(id: id), [id]);
+    return useMemoizedStreamProvider<ArticleData?>(
+            () => ArticleRepository.resolve().getResultStreamAsync(id: id), [id]);
   }
 
   @override
