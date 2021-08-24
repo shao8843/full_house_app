@@ -9,8 +9,6 @@ import 'package:artech_cms/cms.dart';
 import 'package:artech_account/backend/account.dart';
 import 'package:full_house_app/generated/l10n.dart';
 import 'multi_localization_delegate.dart';
-import 'package:full_house_app/article/article_detail_page.dart';
-import 'package:full_house_app/event/event_detail_page.dart';
 import 'package:artech_devices/devices.dart';
 
 class MyHttpOverrides extends HttpOverrides {
