@@ -92,18 +92,6 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
 
   @override
   void preConfigureServices() {
-    PostRoute.pageHandlers['article'] =
-        (_, id, entity, name) => ArticleDetailPage(
-              id: id!,
-              entityType: entity!,
-              name: name,
-            );
-
-    PostRoute.pageHandlers['event'] = (_, id, entity, name) => EventDetailPage(
-          id: id!,
-          entityType: entity!,
-          name: name,
-        );
 
     // addRoute(AccountRoute.account,
     //     handler: Handler(handlerFunc: (context, params) {
