@@ -30,8 +30,6 @@ dependencies:
   cupertino_icons: ^1.0.2
   artech_cms:
     path: ./packages/flutter_artech/cms
-  artech_devices:
-    path: ./packages/flutter_artech/devices
 
 dev_dependencies:
   flutter_test:
