@@ -64,5 +64,7 @@
         <true/>
         <key>NSCameraUsageDescription</key>
         <string>This app needs camera access to scan QR codes</string>
+        <key>NSCalendarsUsageDescription</key>
+        <string>INSERT_REASON_HERE</string>
 	</dict>
 </plist>
