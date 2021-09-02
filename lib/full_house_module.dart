@@ -7,7 +7,6 @@ import 'package:full_house_app/generated/l10n.dart';
 import 'multi_localization_delegate.dart';
 import 'package:artech_account/backend/account.dart';
 import 'package:full_house_app/components/home_page.dart';
-import 'package:artech_reminder/reminder.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -21,7 +20,7 @@ class MyHttpOverrides extends HttpOverrides {
 class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
   List<AppSubModuleBase> get dependentOn =>
-      [CmsModule(), ReminderModule(), AccountBackendModule()];
+      [CmsModule(), AccountBackendModule()];
 
   // Provide the root widget associated with your module
   // In this case, it's the widget you created in the first step
