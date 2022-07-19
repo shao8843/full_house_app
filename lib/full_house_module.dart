@@ -2,14 +2,11 @@ import 'dart:io';
 
 import 'package:full_house_app/pages/full_house_page.dart';
 import 'package:flutter/material.dart';
-import 'package:artech_core/core.dart';
-import 'package:artech_account/account.dart';
 import 'package:full_house_app/home_page.dart';
 import 'package:artech_cms/cms.dart';
 import 'package:artech_account/backend/account.dart';
 import 'package:full_house_app/generated/l10n.dart';
 import 'multi_localization_delegate.dart';
-import 'package:artech_devices/devices.dart';
 
 class MyHttpOverrides extends HttpOverrides {
   @override
@@ -23,7 +20,7 @@ class MyHttpOverrides extends HttpOverrides {
 class FullHouseModule extends AppMainModuleBase with ServiceGetter {
   @override
   List<AppSubModuleBase> get dependentOn =>
-      [CmsModule(), AccountBackendModule(), DevicesModule()];
+      [CmsModule(), AccountBackendModule()];
 
   // Provide the root widget associated with your module
   // In this case, it's the widget you created in the first step
@@ -65,7 +62,7 @@ class FullHouseModule extends AppMainModuleBase with ServiceGetter {
 
     this.configTyped<MenuOption>(configurator: (c) {
       c.getOrThrow(mainMenuName).addIfNotExits(
-                MenuItem("满堂彩",
+                MenuGroupItem("满堂彩",
                     widget: (_) => Icon(Icons.home),
                     widget2: (_) => FullHousePage(),
                     label: (_) => S().home,

@@ -8,7 +8,7 @@ class FullHousePage extends HousePage {
   const FullHousePage() :super();
 
   @override
-  Map<Tab, Widget> get tabWidget =>
+  Map<Tab, Widget> tabWidget(BuildContext context) =>
       {
         Tab(child: Image(height: 30.0,
           image: AssetImage('assets/icons/app_launch_icon.jpg',),),)
